@@ -14,6 +14,7 @@ _civilianVehicle = [
 	// type 1
 	["ivory_190e",3300],
 	["VVV_Chevrolet_Camaro_RS",3300], 
+	["VVV_Aston_Martin_Cygnet",5900], 
 	["VVV_Abarth_500",5900], 
 	["ivory_gti",6000],	
 	["VVV_Abarth_695",6900], 
@@ -39,8 +40,11 @@ _civilianVehicle = [
 
 	// type 4
 	["VVV_Cadillac_DTS",31000], 
+	["VVV_Aston_Martin_DB9",32000], 
 	["VVV_Chevrolet_Cone0",36000], 
+	["VVV_Aston_Martin_Rapide",36000], 
 	["ivory_rs4",40000],
+	["VVV_Aston_Martin_DB5",42000],
 	["ivory_isf",42000],
 	["ivory_m3",46000],	
 	["VVV_Cadillac_XLR_V",46000],	
