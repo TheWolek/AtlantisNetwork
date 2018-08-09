@@ -464,7 +464,7 @@ private["_injurytext","_ui","_food","_water","_health","_money","_cash","_ammo",
 
 			if( (_myInjuries select 8) != 0 ) then {
 				im_hurt = true;
-				_unconcious ctrlSetStructuredText parseText format["<img size='0.07' image='cg_mission_files\icons\foot.paa'/><t size='0.03px'> Your legs are weak. </t>",player];
+				_unconcious ctrlSetStructuredText parseText format["<img size='0.07' image='cg_mission_files\icons\foot.paa'/><t size='0.03px'> Legs weak, mom's spaghetti. </t>",player];
 
 				_chances = round (random 1000);
 				if(_chances > 985) then
