@@ -49,7 +49,7 @@ if((_this select 0) == 1) exitwith {
 	};
 
 	if(myJob == "Mafia") then {
-		if(typeOf _vehicle IN ["ivory_c_2","VVV_Aston_Martin_1964_DB5","VVV_Bentley_Arnage"]) then {
+		if(typeOf _vehicle IN ["ivory_c_2","VVV_Bentley_Arnage"]) then {
 
 			[_vehicle, ["black","glossy"], "default", 0.5, 0.5] remoteExec ["ivory_fnc_initVehicle",2];
 

@@ -41,7 +41,6 @@ _mobster = _this select 29;
 _dmv = _this select 30;
 _da = _this select 31;
 _licenseArray = _this select 32;
-_admin = _this select 33;
 
 
 _higherup = false;
@@ -189,8 +188,6 @@ client_unhealthiness = (_statuses select 6);
 _myInjuries = (_statuses select 7);
 
 licenseArray = _licenseArray;
-
-adminLevel = _admin;
 
 player setVariable ["playerInjuries", _myInjuries, true];
 

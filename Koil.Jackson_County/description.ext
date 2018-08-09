@@ -12,16 +12,16 @@ disableChannels[] = {0,1,2,3,4};
 
 respawn = "BASE";
 disabledAI = 1;
-author = "NoPixel";
-onLoadName = "Silver Lake";
-onLoadMission = "Version 1.00 Beta";
+author = "Hiraeth: A homesickness for a home you can't return to";
+onLoadName = "Hiraeth";
+onLoadMission = "Initial Revision 1.0";
 respawndelay = 99999;
 
 wreckLimit = 2;
 wreckRemovalMaxTime = 300;
 wreckRemovalMinTime = 10;
 
-skipLobby = 0;
+skipLobby = 1;
 joinUnassigned = 1;
 
 class Header

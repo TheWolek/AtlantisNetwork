@@ -189,7 +189,6 @@ if(myJob == "EMS") then {
 
 if(myJob == "Mafia") then {
 	_garage pushback "ivory_c_2";
-	_garage pushback "VVV_Aston_Martin_1964_DB5";
 
 	if(player getvariable "mafia" >= 6) then { 
 	_garage pushback "VVV_Bentley_Arnage";
