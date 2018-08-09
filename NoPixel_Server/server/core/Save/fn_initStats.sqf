@@ -101,7 +101,6 @@ if (_booli) then {
 	_mobster = _res select 21;
 	_dmv = _res select 22;
 	_da = _res select 23;
-	_admin = _res select 24;
 
 
 
@@ -205,7 +204,7 @@ if (_booli) then {
 	_house setVariable ["house", _player, false];
 	_shop setVariable ["shop", _player, false];
 
-	[_items, _position, _cash, _bank, _bankAccount, _cop, _ems, _garage, _inUseVehicles, _phoneBackground, _messages, _statuses, _houselevel, _shopname, (getpos _house), (getpos _shop), _shopcontent, _mail, _phonemessages, _mycarinfo, _mafia, _fire, _legal, _prison, _prisonreason,_mayor,_partner,_doc,_biker,_mobster,_dmv,_da,_licenseArray,_admin] remoteexec ["Client_fnc_loadInventory", _player]; 
+	[_items, _position, _cash, _bank, _bankAccount, _cop, _ems, _garage, _inUseVehicles, _phoneBackground, _messages, _statuses, _houselevel, _shopname, (getpos _house), (getpos _shop), _shopcontent, _mail, _phonemessages, _mycarinfo, _mafia, _fire, _legal, _prison, _prisonreason,_mayor,_partner,_doc,_biker,_mobster,_dmv,_da,_licenseArray] remoteexec ["Client_fnc_loadInventory", _player]; 
 
 } else {
 
@@ -224,7 +223,6 @@ if (_booli) then {
 	_mobster = 0;
 	_dmv = 0;
 	_da = 0;
-	_admin = 0;
 	_prison = 0;
 	_prisonreason = "none";
 	_position = [0,0,0];
@@ -237,7 +235,7 @@ if (_booli) then {
 
 
 	_shopname = format["%1's Store", _name];
-	_insertstr = format ["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18:%19:%20:%21:%22:%23:%24:%25:%26", _uid, _name, _items, _cash, _bank, _cop, _ems, _position, _phoneBackground, _messages, _statuses, _houselevel, _housecontent, _shopcontent, _shopname, _mafia, _fire, _legal, _prison, _prisonreason,_doc,_biker,_mobster,_dmv,_da,_admin];
+	_insertstr = format ["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18:%19:%20:%21:%22:%23:%24:%25", _uid, _name, _items, _cash, _bank, _cop, _ems, _position, _phoneBackground, _messages, _statuses, _houselevel, _housecontent, _shopcontent, _shopname, _mafia, _fire, _legal, _prison, _prisonreason,_doc,_biker,_mobster,_dmv,_da];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 
 	/*
@@ -255,7 +253,7 @@ if (_booli) then {
 	
 	[_player] spawn Server_fnc_initStats;
 
-	_startercars = ["ivory_190e","VVV_Chevrolet_Camaro_RS","VVV_Aston_Martin_Cygnet","VVV_Abarth_500","ivory_gti","VVV_Abarth_695","VVV_Chevrolet_Bel_Air"];
+	_startercars = ["ivory_190e","VVV_Chevrolet_Camaro_RS","VVV_Abarth_500","ivory_gti","VVV_Abarth_695","VVV_Chevrolet_Bel_Air"];
 	_class = selectRandom _startercars;
 	//add a test car for every spawn!
 	_Color = "black"; _finish = "glossy"; _rims = "default"; _windows = 0; _Lights = 0; _owner = getplayeruid _player; _licensePlate = "FrstCar"; _statuses = 1; 
