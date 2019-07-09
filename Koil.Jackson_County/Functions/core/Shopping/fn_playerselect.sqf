@@ -20,8 +20,8 @@ uisleep 15;
 
 [
 	[
-		["It is the year 2053.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],	
-		["You have arrived to Silver Lake.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"]
+		["To jest rok 2019.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],	
+		["Przybyłeś do Atlantis County.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -39,8 +39,8 @@ uisleep 10;
 
 _script = [
 	[
-		["Silver Lake recently seceded from the USA,","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
-		["to claim its independence.","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
+		["Atlantis County niedawno odłączył się od USA,","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
+		["aby twierdzić, że jest niezależny.","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -49,8 +49,8 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["It has a fully functional Government,","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
-		["with a Mayor, Senate, and Judicial Courts.","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
+		["Ma w pełni funkcjonalny rząd,","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
+		["z burmistrzem, senatem i sądami sądowymi.","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -58,8 +58,8 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Your voice can easily be heard,","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
-		["using your right to vote.","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
+		["Twój głos można łatwo usłyszeć,","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
+		["korzystając z prawa do głosowania.","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -67,8 +67,8 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["However, despite being a democratic society,","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
-		["Silver Lake is filled with Criminals and Felons.","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
+		["Jednak pomimo bycia społeczeństwem demokratycznym,","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
+		["Atlantis County jest pełne przestępców i Felonów.","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -76,8 +76,8 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Now is the time to choose your path.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
-		["Stand your ground or claim your empire...","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
+		["Teraz jest czas, aby wybrać ścieżkę.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
+		["Stań na ziemi lub zdobądź swoje imperium...","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -100,8 +100,8 @@ uisleep 15;
 
 _script = [
 	[
-		["Choose your sex","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
-		["This can be changed; Though, it may involve surgery.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
+		["Wybierz swoją płeć","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
+		["Można to zmienić; Chociaż może to obejmować zabieg chirurgiczny.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -117,8 +117,8 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Welcome to Silver Lake!","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
-		["Use your Windows key to interact with everything.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
+		["Witamy w Atlantis County!","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
+		["Użyj swojego klawisza Windows do interakcji ze wszystkim.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -126,8 +126,8 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Start by interacting with your trailer.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
-		["You have mail there. Have fun.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
+		["Zacznij od interakcji z przyczepą.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
+		["Masz tam pocztę. baw się dobrze.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 

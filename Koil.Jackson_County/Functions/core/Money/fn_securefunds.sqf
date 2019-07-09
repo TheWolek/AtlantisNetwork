@@ -6,5 +6,5 @@ _cashadded = 1000 + (count currentcop * 500);
 
 [_cashadded,true,true] call Client_fnc_addMoneyToPlayer;
 
-[format["You secured the cash and were paid %1.",_cashadded], true] spawn domsg;
+[format["Zabezpiecziłeś gotówkę i zapłaciłeś %1.",_cashadded], true] spawn domsg;
 

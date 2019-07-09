@@ -7,7 +7,7 @@ _farmingVehicles = ["vvv_DOD_RamSRT_civ","VVV_Fortransi_civ","vvv_DOD_RamSRT_civ
 playSound3D ["CG_Jobs\sounds\meth\drugBoil.ogg", player, false, getPosasl player, 31, 1, 15];
 
 if(isNil "globalProtection") then { globalProtection = 0; };
-if(globalProtection != 0) exitwith { ["Error - Already processing", true] spawn domsg; };
+if(globalProtection != 0) exitwith { ["Błąd - już trwa przetwarzanie", true] spawn domsg; };
 _localProtection = 0;
 
 
@@ -29,7 +29,7 @@ _n = 0;
 		_i = _i - 1;
 		sleep 0.25;
 		if(dialog) then { closedialog 0; };
-		["You are refining Oil, stay still!", true] spawn domsg;
+		["Przerabiasz olej, nie ruszaj się!", true] spawn domsg;
 	};
 
 	_n = _n + 1;

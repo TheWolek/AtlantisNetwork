@@ -7,42 +7,42 @@ _display = findDisplay 9999;
 _list = _display displayCtrl 9001;
 
 if(0 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Driver's License";
+	_list lbAdd "Prawo jazdy";
 	_list lbSetdata [(lbSize _list)-1,str(0)];
 };
 
 if(1 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Class 1 Weapons License";
+	_list lbAdd "Licencja na broń klasy I";
 	_list lbSetdata [(lbSize _list)-1,str(1)];
 };
 
 if(2 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Mining License";
+	_list lbAdd "Licencja górnicza";
 	_list lbSetdata [(lbSize _list)-1,str(2)];
 };
 
 if(3 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Logging License";
+	_list lbAdd "Licencja logowania";
 	_list lbSetdata [(lbSize _list)-1,str(3)];
 };
 
 if(4 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Fishing License";
+	_list lbAdd "Licencja wędkarska";
 	_list lbSetdata [(lbSize _list)-1,str(4)];
 };
 
 if(5 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Truck License";
+	_list lbAdd "Licencja na ciężarówkę";
 	_list lbSetdata [(lbSize _list)-1,str(5)];
 };
 
 if(6 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Pilot's License";
+	_list lbAdd "Licencja pilota";
 	_list lbSetdata [(lbSize _list)-1,str(6)];
 };
 
 if(7 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Oil Trade License";
+	_list lbAdd "Licencja na handel olejem";
 	_list lbSetdata [(lbSize _list)-1,str(7)];
 };
 

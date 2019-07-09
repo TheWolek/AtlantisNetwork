@@ -1,4 +1,4 @@
-if(count currentcop < 3) exitwith { ["Not enough police",true] spawn domsg; };
+if(count currentcop < 3) exitwith { ["Za mało policji",true] spawn domsg; };
 
 _class1 = ["CG_MethBag100","CG_Cocaine","CG_WeedBag4"];
 _class2 = ["CG_MethBag80","CG_WeedBag3","CG_MethBag90"];
@@ -21,7 +21,7 @@ _cashout = 0;
 
 [_cashout,false,true] call Client_fnc_addMoneyToPlayer;
 
-[format["You made %1 from this drug run.",_cashout call client_fnc_numberText], true] spawn domsg;
+[format["Zrobiłeś %1 z tego biegu narkotyków.",_cashout call client_fnc_numberText], true] spawn domsg;
 	
 ["Add","Karma",random(15),"Stress"] call client_fnc_sustain;
 

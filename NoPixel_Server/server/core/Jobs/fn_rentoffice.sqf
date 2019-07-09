@@ -6,7 +6,7 @@ diag_log ["rent office %1", _player];
 
 if(isNil "rentedshops") then { rentedshops = []; };
 
-if(_shoppos IN rentedshops) exitwith { ["This shop is already rented, find one with out a marker!",true] remoteexec ["domsg",_player]; };
+if(_shoppos IN rentedshops) exitwith { ["Ten sklep jest już wynajęty, znajdź go bez znacznika!",true] remoteexec ["domsg",_player]; };
 
 rentedshops pushback _shoppos;
 

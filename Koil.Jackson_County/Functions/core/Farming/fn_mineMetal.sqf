@@ -18,11 +18,11 @@ if(player getVariable["JailTracked",FALSE] && cursorobject distance player < 25)
 		if(player distance [5545.74,6291.12,0.00143433] > 1500) then { 
 			secondsLeft = secondsLeft - round(45 * _removeamount); ["Your time has been lowered by 45 seconds", true] spawn domsg; 
 			["govtBank",150, "Add"] remoteExec["server_fnc_setValue",2];  
-			["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, 150 call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			["govtBank", format["%1 (%2) dodano %3 na konto bankowe rządu.", name player, getplayeruid player, 150 call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 		} else { 
 			secondsLeft = secondsLeft - round(25 * _removeamount); ["Your time has been lowered by 25 seconds", true] spawn domsg; 
 			["govtBank",70, "Add"] remoteExec["server_fnc_setValue",2];  
-			["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, 70 call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			["govtBank", format["%1 (%2) dodano %3 na konto bankowe rządu.", name player, getplayeruid player, 70 call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 		};	
 	}; 
 
@@ -30,7 +30,7 @@ if(player getVariable["JailTracked",FALSE] && cursorobject distance player < 25)
 
 if((getposATL player) distance (getposATL _rock) > 25) exitwith {};
 if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [2123.79,8750.29,0.00143909] < 3000) then {   
-	if(_rock IN myoil) exitwith { ["There are no resources in this rock!", true] spawn domsg; };
+	if(_rock IN myoil) exitwith { ["W tej skale nie ma żadnych zasobów!", true] spawn domsg; };
 	_sound = round(random 5);
 	switch(_sound) do {
 		case 0: {
@@ -74,7 +74,7 @@ if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 ||
 };
 
 if ( (str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [3925.83,2800.64,0.00206757] < 1000 ) then {   
-	if(_rock IN mymetal) exitwith { ["There are no resources in this rock!", true] spawn domsg;  };
+	if(_rock IN mymetal) exitwith { ["W tej skale nie ma żadnych zasobów!", true] spawn domsg;  };
 	_sound = round(random 5);
 	switch(_sound) do {
 		case 0: {
@@ -122,6 +122,6 @@ if ( (str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 |
 		
 
 
-		["You found some ore!", true] spawn domsg;
+		["Znalazłeś rudę!", true] spawn domsg;
 	};	
 };	

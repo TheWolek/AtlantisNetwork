@@ -22,7 +22,7 @@ _n = 0;
 if(_fuckit) exitwith { ["Invalid Numberplate", true] spawn domsg; };
 
 _cashCheck = [1, 2000] call Client_fnc_checkMoney;
-if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",2000 call client_fnc_numberText], true] spawn domsg; };	
+if!(_cashCheck) exitwith { [format["%1 - Nie masz dość pieniędzy, aby za to zapłacić!",2000 call client_fnc_numberText], true] spawn domsg; };	
 
 [plateChange,_text,player] remoteexec ["server_fnc_platechange",2];
 

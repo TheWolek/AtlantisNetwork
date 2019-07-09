@@ -8,7 +8,7 @@ _barArray = ["np_copperbar1","np_ironbar1","np_silverbar1","NP_Wood","CG_OilCani
 _priceArray = [10,12,15,8,30];
 
 if(isNil "globalProtection") then { globalProtection = 0; };
-if(globalProtection != 0) exitwith { ["Error - Already processing", true] spawn domsg; };
+if(globalProtection != 0) exitwith { ["Błąd - już trwa sprzedawanie", true] spawn domsg; };
 _localProtection = 0;
 
 
@@ -40,4 +40,4 @@ _cashTotal = 0;
 
 globalProtection = 0;
 
-[format["You just earned %1",_cashTotal call client_fnc_numberText], true] spawn domsg;
+[format["Właśnie zdobyłeś %1",_cashTotal call client_fnc_numberText], true] spawn domsg;

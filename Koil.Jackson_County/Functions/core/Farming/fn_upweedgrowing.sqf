@@ -1,8 +1,8 @@
 _required = _this select 0;
-if(checkFinish2) exitwith { ["You need to wait before doing that!", true] spawn domsg; };
+if(checkFinish2) exitwith { ["Musisz poczekać, zanim to zrobisz!", true] spawn domsg; };
 
 if(requiredOutput2 == _required) then { 
-	["Looks like it worked!",false] spawn doquickmsg;
+	["Wygląda na to, że zadziałało!",false] spawn doquickmsg;
 	totalskills = totalskills - 1;
 	playSound3D ["CG_Jobs\sounds\woodchop\woodchop1.ogg", player, false, getPosasl player, 2, 1, 15];
 } else { 

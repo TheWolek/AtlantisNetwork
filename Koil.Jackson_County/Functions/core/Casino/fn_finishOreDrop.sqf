@@ -82,7 +82,7 @@ globalProtection = 0;
 deletevehicle theGunner;
 _price = (_totalvalue*1000);
 
-[format["%1 will be transferred to the casino vault as soon as the pirates have confirmed the grade of the gold.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
+[format["%1 zostanie przeniesiony do skarbca kasyna, gdy tylko piraci potwierdzą stopień złota.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
 
 [_price] spawn {
 
@@ -91,8 +91,8 @@ _price = (_totalvalue*1000);
 	uiSleep (400+(random 400));
 
 	["casinoVault", _price, "Add",true] remoteexec ["server_fnc_setValue",2];
-	["casinoVault", format["%1 (%2) has transferred %3 into the casino vault from the boat.", name player, getplayeruid player, _price call client_fnc_numberText]] remoteexec ["server_fnc_log",2];
+	["casinoVault", format["%1 (%2) przeniósł %3 do skarbca kasyna z łodzi.", name player, getplayeruid player, _price call client_fnc_numberText]] remoteexec ["server_fnc_log",2];
 
-	[format["%1 has been transferred to the casino vault.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
+	[format["%1 został przeniesiony do skarbca kasyna.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
 
 };

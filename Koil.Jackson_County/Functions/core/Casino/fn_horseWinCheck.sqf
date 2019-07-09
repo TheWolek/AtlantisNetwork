@@ -30,7 +30,7 @@ if(_winnings*((0.75)+((1-casinoRate/100)/5)) > _casinoVault) then {
 
 	_winning = _casinoVault;
 
-	[format["You won %1 on the last horse race but only received %2 because the casino ran out of cash.", _winnings call client_fnc_numberText, _winning call client_fnc_numberText],false] spawn domsg;
+	[format["Wygrałeś %1 w ostatnim wyścigu konnym, ale otrzymałeś tylko %2, ponieważ kasyno skończyło się gotówką.", _winnings call client_fnc_numberText, _winning call client_fnc_numberText],false] spawn domsg;
 	
 	["casinoVault",_winning, "Remove",true] remoteexec ["server_fnc_setValue",2];
 
@@ -38,7 +38,7 @@ if(_winnings*((0.75)+((1-casinoRate/100)/5)) > _casinoVault) then {
 
 	_winning = _winnings;
 
-	[format["You won %1 on the last horse race.", _winning call client_fnc_numberText],false] spawn domsg;
+	[format["Wygrałeś %1 w ostatnim wyścigu konnym.", _winning call client_fnc_numberText],false] spawn domsg;
 	
 	["casinoVault",_winning*((0.75)+((1-casinoRate/100)/5)), "Remove",true] remoteexec ["server_fnc_setValue",2];
 
@@ -47,6 +47,6 @@ if(_winnings*((0.75)+((1-casinoRate/100)/5)) > _casinoVault) then {
 if(_winning < 1) exitwith {};
 [_winning,true,true] call Client_fnc_addMoneyToPlayer;
 
-["casinoVault", format["%1 (%2) won %3 and received %4 from horse betting and the casino lost %5.", name player, getplayeruid player, _winnings call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+["casinoVault", format["%1 (%2) wygrałeś %3 i otrzymałeś %4 z zakładów na konie i kasyno przegrało %5.", name player, getplayeruid player, _winnings call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 

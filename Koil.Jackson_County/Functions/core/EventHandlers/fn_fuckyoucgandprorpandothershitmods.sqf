@@ -12,7 +12,7 @@ if (_item == "NP_DrugTable") then {
 	if(player distance [2687.35,1462.83,0.00144196] < 400) then {
 		[] spawn client_fnc_usedrugtable; [_item,0] spawn client_fnc_removeitem; closeDialog 0;
 	} else {
-		["You must be near Deathfall Factory to cook meth!", true] spawn domsg;
+		["Musisz być blisko Fabryki Śmierci, żeby gotować met!", true] spawn domsg;
 	};
 };
 

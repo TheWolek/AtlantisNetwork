@@ -1,8 +1,8 @@
-AcetoneArray = ["WARNING: The substance seems too dark!","WARNING: The substance is turning black!","WARNING: The substance has too much color!"];
-PseudoArray = ["WARNING: The substance is losing color!","WARNING: The substance is faded!","WARNING: The substance is almost see-thru!"];
-CoolArray = ["WARNING: The stove is forcing steam!","WARNING: The stove is burning the table!","WARNING: The room is filling with heat!"];
-HeatArray = ["WARNING: The substance isnt flowing properly!","WARNING: The substance is very thick!","WARNING: The substance is looking sticky!"];
-ReleaseArray = ["WARNING: The substance is flowing too fast!","WARNING: Steam is trying to escape!","WARNING: The vials are looking very foggy!"];
+AcetoneArray = ["OSTRZEŻENIE: Substancja wydaje się zbyt ciemna!","OSTRZEŻENIE: Substancja robi się czarna!","OSTRZEŻENIE: Substancja ma zbyt dużo koloru!"];
+PseudoArray = ["OSTRZEŻENIE: Substancja traci kolor!","OSTRZEŻENIE: Substancja jest wyblakła!","OSTRZEŻENIE: Substancja jest niemal przezroczysta!"];
+CoolArray = ["OSTRZEŻENIE: Piec wymusza parę!","OSTRZEŻENIE: Piec pali stół!","OSTRZEŻENIE: Pokój wypełnia się ciepłem!"];
+HeatArray = ["OSTRZEŻENIE: Substancja nie płynie prawidłowo!","OSTRZEŻENIE: Substancja jest bardzo gruba!","OSTRZEŻENIE: The substance is looking sticky!"];
+ReleaseArray = ["OSTRZEŻENIE: Substancja płynie zbyt szybko!","OSTRZEŻENIE: para się uciec!","OSTRZEŻENIE: wyglądają bardzo mgliste!"];
 
 _count = 0;
 checkFinish = false;
@@ -35,7 +35,7 @@ if(uniform player == "vvv_hazmat") then { _randomValue = _randomValue + _randomV
 
 if(myDrugValue < 50) then { myDrugValue = 50; };
 _item = format["CG_MethBag%1", myDrugValue];
-[format["You cooked %1 bags of meth!",_randomvalue], true] spawn domsg;
+[format["Gotowałeś %1 torebek met!",_randomvalue], true] spawn domsg;
 
 while {_randomValue > 0} do { player additem _item; _randomValue = _randomValue - 1; };
 ["Add","Karma",random(3),"Stress"] call client_fnc_sustain;

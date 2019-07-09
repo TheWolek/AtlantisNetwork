@@ -15,7 +15,7 @@ if(count trackedby > 0) then {
 		_total = myCallOwner getVariable "PhonecallNumber";
 		playSound "cgphone_static";
 		_total = 1;
-		[format["You were just charged %1 dollars for this call!",_total], false] spawn domsg;
+		[format["Właśnie za to połączenie naliczono %1 dolarów!",_total], false] spawn domsg;
 		[_total] spawn client_fnc_removecash;
 		sleep 140;
 	};

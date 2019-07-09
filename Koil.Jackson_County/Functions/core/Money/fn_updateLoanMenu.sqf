@@ -10,5 +10,5 @@ _moneyOwed = _loan select 2;
 _cash = _moneyOwed call client_fnc_numberText;
 
 _TEXT = _display displayCtrl 1001;
-_TEXT ctrlSetStructuredText parsetext format["<t color='#33CC33'>Loan Giver: %1 <t color='#ffffff'> <br/><br/> Owed: %2 <t color='#33CC33'> <br/><br/> Reasoning: %3 <br/><br/> Date Due: %4", _loan select 1, _cash, _loan select 3, _loan select 4];
+_TEXT ctrlSetStructuredText parsetext format["<t color='#33CC33'>Pożyczkodawca: %1 <t color='#ffffff'> <br/><br/> Należny: %2 <t color='#33CC33'> <br/><br/> Rozumowanie: %3 <br/><br/> Data należna: %4", _loan select 1, _cash, _loan select 3, _loan select 4];
 _TEXT ctrlCommit 0;

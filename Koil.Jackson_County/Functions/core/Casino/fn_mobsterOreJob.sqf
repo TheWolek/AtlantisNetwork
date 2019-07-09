@@ -1,7 +1,7 @@
 params ["_vehspawn","_endmission","_mafia","_veh"];
 
 current_cars pushback _veh;
-["A brinks truck has appeared at the garage, take it to the Drop Off Point.", true] spawn domsg;
+["W garażu pojawiła się furgonetka, zabierz ją do punktu wyładunku.", true] spawn domsg;
 
 [_vehspawn,"Drop Off Point","Location", player] spawn client_fnc_hudHelper;
 

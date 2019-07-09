@@ -18,9 +18,9 @@ if(_rate < 0) then { _rate = 0; };
 
     _convert = floor (_convert / 1000) * 1000;
 
-    if(_convert < 1000) exitWith { [format["You need at least %1 in dirty money to convert.", 1000 call client_fnc_numberText], true] spawn domsg; };
+    if(_convert < 1000) exitWith { [format["Konwersja wymaga co najmniej 1% brudnych pieniędzy.", 1000 call client_fnc_numberText], true] spawn domsg; };
 
-    [format["You are converting %1 in dirty money to %2 in clean money using the rate of %3%4.", _convert call client_fnc_numberText, _convert*(1-_rate) call client_fnc_numberText, _rate*100, "%"], true] spawn domsg;
+    [format["Przekształcasz %1 w brudne pieniądze na %2 w czystych pieniądzach, stosując stawkę %3%4.", _convert call client_fnc_numberText, _convert*(1-_rate) call client_fnc_numberText, _rate*100, "%"], true] spawn domsg;
 
     _check = ["Converting",600,0,player,'AinvPknlMstpSnonWnonDnon_medic_1',player,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
 
@@ -32,7 +32,7 @@ if(_rate < 0) then { _rate = 0; };
 
     _convert2 = floor (_convert2 / 1000) * 1000;
 
-    if(_convert != _convert2) exitWith { ["The conversion canceled because you tried to do something naughty.", true] spawn domsg; };
+    if(_convert != _convert2) exitWith { ["Konwersja została anulowana, ponieważ próbowałeś zrobić coś niegrzecznego.", true] spawn domsg; };
 
     [_convert] call client_fnc_removeCash;
 
@@ -40,9 +40,9 @@ if(_rate < 0) then { _rate = 0; };
 
     ["mobsterBank", _convert*_rate, "Add"] remoteexec ["server_fnc_setValue",2];
 
-    [format["Somebody has converted %1 in dirty money to %2 in clean money and mobster bank has received %3.", _convert call client_fnc_numberText, _convert*(1-_rate) call client_fnc_numberText, (_convert*_rate) call client_fnc_numberText], true] remoteExec["domsg", currentMobster];
+    [format["Ktoś dokonał konwersji %1 brudnych pieniędzy na %2 w czystych pieniądzach, a bank gangsterów otrzymał %3.", _convert call client_fnc_numberText, _convert*(1-_rate) call client_fnc_numberText, (_convert*_rate) call client_fnc_numberText], true] remoteExec["domsg", currentMobster];
 
-    [format["You have converted %1 in dirty money to %2 in clean money using the rate of %3%4.", _convert call client_fnc_numberText, _convert*(1-_rate) call client_fnc_numberText, _rate*100, "%"], true] spawn domsg;
+    [format["Przekształciłeś %1 w brudne pieniądze w %2 w czyste pieniądze, stosując stawkę %3%4.", _convert call client_fnc_numberText, _convert*(1-_rate) call client_fnc_numberText, _rate*100, "%"], true] spawn domsg;
 
 }] remoteExec["bis_fnc_spawn", _target];
 

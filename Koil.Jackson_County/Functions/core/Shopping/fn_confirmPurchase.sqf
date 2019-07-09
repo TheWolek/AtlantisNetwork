@@ -26,4 +26,4 @@ switch (_type) do {
 
 [_totalPrice, true] call Client_fnc_removeCash;
 
-[format["You bought %1 of %2 for %3 - check the box at your feet.",_quantity, _item, _totalprice call client_fnc_numberText], false] spawn doQUICKmsg;
+[format["Kupiłeś %1 z %2 za %3 - zaznacz.",_quantity, _item, _totalprice call client_fnc_numberText], false] spawn doQUICKmsg;

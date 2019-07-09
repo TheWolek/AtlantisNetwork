@@ -23,7 +23,7 @@ class FindPlayer_Menu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select player to heal!";
+			text = "Wybierz osobę do leczenia!";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -43,7 +43,7 @@ class FindPlayer_Menu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Select";
+			text = "Wybierz";
 			onButtonClick = "[] spawn client_fnc_chooseUser;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -53,7 +53,7 @@ class FindPlayer_Menu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -88,7 +88,7 @@ class FindKeyPlayer_Menu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select player to give keys!";
+			text = "Wybierz osobe, aby dać klucze!";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -108,7 +108,7 @@ class FindKeyPlayer_Menu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Select";
+			text = "Wybierz";
 			onButtonClick = "[] spawn client_fnc_chooseKeyUser;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -118,7 +118,7 @@ class FindKeyPlayer_Menu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -207,7 +207,7 @@ class client_Craft_Menu {
 			fadein=1;
 		  	fadeout=1;
 			font="PuristaLight";
-			text = "Select an option for more information!";
+			text = "Wybierz opcję, aby uzyskać więcej informacji!";
 			size = 0.035;
 			sizeEx = 0.05;
 			x = 0.521649 * safezoneW + safezoneX;
@@ -238,7 +238,7 @@ class client_Craft_Menu {
 
 		class ProcessOption : HideButton {
 			idc = 1117;
-			text = "Open";
+			text = "Otwórz";
 			onButtonClick = "[""MENU""] spawn client_fnc_CraftMenu; [""REFRESH""] spawn client_fnc_craftMenu;";
 			x = 0.311275 * safezoneW + safezoneX;
 			y = 0.70016 * safezoneH + safezoneY;
@@ -248,7 +248,7 @@ class client_Craft_Menu {
 
 		class CraftOption : HideButton {
 			idc = 1116;
-			text = "Craft Item";
+			text = "Stwórz przedmiot";
 			onButtonClick = "[""CRAFT""] spawn client_fnc_CraftMenu;";
 			x = 0.406871 * safezoneW + safezoneX;
 			y = 0.700203 * safezoneH + safezoneY;
@@ -258,7 +258,7 @@ class client_Craft_Menu {
 
 		class MagOption : HideButton {
 			idc = 1118;
-			text = "Craft Mag";
+			text = "Stwórz magazynek";
 			onButtonClick = "[""CRAFTMAG""] spawn client_fnc_CraftMenu;";
 			x = 0.503218 * safezoneW + safezoneX;
 			y = 0.699443 * safezoneH + safezoneY;
@@ -268,7 +268,7 @@ class client_Craft_Menu {
 
 		class CloseOption : HideButton {
 			idc = -1;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = 0.598653 * safezoneW + safezoneX;
 			y = 0.699443 * safezoneH + safezoneY;
@@ -307,7 +307,7 @@ class PayTicket_Menu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select a ticket to pay!";
+			text = "Wybierz do zapłaty!";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -327,7 +327,7 @@ class PayTicket_Menu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Select";
+			text = "Wybierz";
 			onButtonClick = "[] spawn client_fnc_ticketresult;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -337,7 +337,7 @@ class PayTicket_Menu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;

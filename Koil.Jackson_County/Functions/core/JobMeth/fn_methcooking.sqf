@@ -1,8 +1,8 @@
-AcetoneArray = ["WARNING: The substance seems too dark!","WARNING: The substance is turning black!","WARNING: The substance has too much color!"];
-PseudoArray = ["WARNING: The substance is losing color!","WARNING: The substance is faded!","WARNING: The substance is almost see-thru!"];
-CoolArray = ["WARNING: The stove is forcing steam!","WARNING: The stove is burning the table!","WARNING: The room is filling with heat!"];
-HeatArray = ["WARNING: The substance isnt flowing properly!","WARNING: The substance is very thick!","WARNING: The substance is looking sticky!"];
-ReleaseArray = ["WARNING: The substance is flowing too fast!","WARNING: Steam is trying to escape!","WARNING: The vials are looking very foggy!"];
+AcetoneArray = ["UWAGA: substancja wydaje się zbyt ciemna!","OSTRZEŻENIE: substancja robi się czarna!","OSTRZEŻENIE: substancja ma zbyt dużo koloru!"];
+PseudoArray = ["OSTRZEŻENIE: substancja traci kolor!","OSTRZEŻENIE: substancja jest wyblakła!","OSTRZEŻENIE: substancja jest prawie przezroczysta!"];
+CoolArray = ["OSTRZEŻENIE: Piec wymusza parę!","OSTRZEŻENIE: Piec pali stół!","OSTRZEŻENIE: Pokój wypełnia się ciepłem!"];
+HeatArray = ["OSTRZEŻENIE: Substancja nie płynie prawidłowo!","OSTRZEŻENIE: substancja jest bardzo gruba!","OSTRZEŻENIE: substancja wygląda lepko!"];
+ReleaseArray = ["OSTRZEŻENIE: substancja przepływa zbyt szybko!","OSTRZEŻENIE: Steam próbuje uciec!","OSTRZEŻENIE: Fiolki wyglądają na bardzo zamglone!"];
 
 _count = 0;
 checkFinish = false;

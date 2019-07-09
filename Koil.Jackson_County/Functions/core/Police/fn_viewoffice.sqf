@@ -8,10 +8,10 @@ closeDialog 0;
     params["_target"];
 
     if(myOffice isEqualTo [0,0,0]) then {
-        [format["%1 does not have an active office.", name player], true] remoteExec ["domsg", _target];
+        [format["%1 nie ma aktywnego biura.", name player], true] remoteExec ["domsg", _target];
     } else {
         [myoffice, format["%1's Office",name player], "Location", _target] remoteexec ["client_fnc_hudHelper", _target];
-        [format["%1's office has been marked on the map.", name player], true] remoteExec ["domsg", _target];
+        [format["%1's biuro zostało zaznaczone na mapie.", name player], true] remoteExec ["domsg", _target];
     };
     
 

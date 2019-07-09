@@ -34,4 +34,4 @@ if(myJob IN ["Biker"]) then {
 
 };
 
-[format["You are now on %1 %2 frequency.", _title, _freq], true] spawn domsg;
+[format["Jesteś teraz na częstotliwości %1 %2.", _title, _freq], true] spawn domsg;

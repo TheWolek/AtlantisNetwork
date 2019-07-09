@@ -25,7 +25,7 @@ _cost = call compile format["%1", (_status select 2)];
 
 _totalprice = _cost * _Quantity;
 
-if(_totalprice == 0 || _totalprice < 0) exitwith { ["You can not purchase an item that costs $0.00", true] spawn domsg; };
+if(_totalprice == 0 || _totalprice < 0) exitwith { ["Nie możesz kupić przedmiotu, który kosztuje $0.00", true] spawn domsg; };
 _error = false;
 
 if(_typebuy == "fish") then {
@@ -112,14 +112,14 @@ if(_typebuy == "standard") then {
 
 	[_totalPrice] call Client_fnc_removeCash;
 	["govtBank", _totalPrice-(_totalPrice/(1+taxRate/100)), "Add"] remoteExec["server_fnc_setValue",2];
-	["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_totalPrice-(_totalPrice/(1+taxRate/100))) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	["govtBank", format["%1 (%2) dodano %3 do rządowego konta bankowego.", name player, getplayeruid player, (_totalPrice-(_totalPrice/(1+taxRate/100))) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 };
 
 if(_item IN  ["np_tequila","murshun_cigs_lighter","murshun_cigs_cigpack"]) then {
 	["bikerBank", _totalPrice, "Add"] remoteexec ["server_fnc_setValue",2];
 };
 
-[format["You bought %1 of %2 for %3 - check the box at your feet.",_quantity, _item, _totalprice call client_fnc_numberText],true] spawn domsg;
+[format["Kupiłeś %1 z %2 za %3 - zaznacz pole u stóp.",_quantity, _item, _totalprice call client_fnc_numberText],true] spawn domsg;
 
 _totalTickets = 0;
 _handle = false;
@@ -133,7 +133,7 @@ if (time >= wantedTimer + 300 && count currentMarshals > 0) then {
 
         [getPos player, "Spotted Wanted Person", "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
         wantedTimer = time;
-        [format["Dispatch to %1: A wanted person has been spotted at %2 buying items.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg",currentMarshals];
+        [format["Dispatch to %1: Osoba poszukiwana została zauważona przy zakupie przedmiotów %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg",currentMarshals];
                 
     };
 };

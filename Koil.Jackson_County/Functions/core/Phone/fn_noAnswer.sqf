@@ -1,2 +1,2 @@
 	playSound "cgphone_hangup";
-	["They didnt answer your call!", false] spawn domsg; 
+	["Nie odpowiedzieli na twój telefon!", false] spawn domsg; 

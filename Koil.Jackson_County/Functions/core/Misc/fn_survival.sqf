@@ -21,7 +21,7 @@ Survival Koil
 			if(Mayor) then { _addition = 10 + _random; paycheck = paycheck + (22*_addition); };
 			if(Senator) then { _addition = 10 + _random; paycheck = paycheck + (20*_addition); };
 
-			[format["You received a government check for %1 and also %2 tax payable.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Otrzymałeś czek rządowy na podatek 1%, a także podatek 2%.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
 
@@ -31,7 +31,7 @@ Survival Koil
 
 			paycheck = 35 + paycheck + _random;
 
-			[format["You received an unemployment check for %1 and also %2 income tax payable.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Otrzymałeś czek na bezrobocie dla podatku dochodowego w wysokości% 1, a także% 2.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
 		};
@@ -66,9 +66,9 @@ Survival Koil
 		if(_govtbank < 100000 && myjob IN _govJobs) then {
 			_rate = 0.85;
 			paycheck = paycheck * _rate;
-			[format["You received a government check for %1 instead of %2 because of low funds and also %3 income tax payable.", paycheck call client_fnc_numberText, (paycheck/_rate) call client_fnc_numberText, ((paycheck)*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Otrzymałeś czek rządowy dla% 1 zamiast% 2 z powodu niskich funduszy, a także% 3 podatku dochodowego.", paycheck call client_fnc_numberText, (paycheck/_rate) call client_fnc_numberText, ((paycheck)*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 		} else {
-			[format["You received a government check for %1 and also %2 income tax payable.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Otrzymałeś czek rządowy na podatek dochodowy od% 1, a także% 2.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 		};
 
 		["add","Karma",1,"Default"] call client_fnc_sustain;
@@ -77,7 +77,7 @@ Survival Koil
 
 
 	["govtBank", (paycheck/10), "Remove"] remoteExec["server_fnc_setValue",2]; // remove paycheck from government
-	["govtBank", format["%1 (%2) removed %3 into the Government bank account because of salary.", name player, getplayeruid player, (paycheck/10) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	["govtBank", format["%1 (%2) usunięto %3 na rządowe konto bankowe z powodu wynagrodzenia.", name player, getplayeruid player, (paycheck/10) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 	[paycheck,true,true] call Client_fnc_addMoneyToBank; // add paycheck to player
 
 	(player getvariable "statuses") set [13, call compile ([((player getvariable "statuses") select 13) + paycheck*(taxRate/100), 1, 2, false] call CBA_fnc_formatNumber) ]; // add unpaid tax

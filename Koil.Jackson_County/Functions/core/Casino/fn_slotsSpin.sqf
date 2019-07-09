@@ -8,15 +8,15 @@ private["_slot","_slot1","_slot2","_slot3","_winnings","_slotcash","_betamt","_d
 _betamt = param [0,1,[0]];
 if(casinoVault < 5000) exitwith { ["Vault funds are too low.", true] spawn domsg; };
 _cashcheck = [1,_betamt*(1+casinoRate/100)] call client_fnc_checkmoney;
-if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",_betamt call client_fnc_numberText], true] spawn domsg; };
+if!(_cashCheck) exitwith { [format["%1 - Nie masz dość pieniędzy, aby za to zapłacić!",_betamt call client_fnc_numberText], true] spawn domsg; };
 
-[format["The slots cost you %1 because the fee is at %2%3.",_betamt*(1+casinoRate/100) call client_fnc_numberText, casinoRate, "%"], true] spawn domsg;
+[format["Muchamajana %1, ponieważ opłata jest na poziomie %2%3.",_betamt*(1+casinoRate/100) call client_fnc_numberText, casinoRate, "%"], true] spawn domsg;
 
 [_betamt*(1+casinoRate/100)] call Client_fnc_removeCash;
 
 ["mobsterBank", _betamt*(1+casinoRate/100), "Add"] remoteexec ["server_fnc_setValue",2];
 
-["mobsterBank", format["%1 (%2) bought %3 worth of slots.", name player, getplayeruid player, _betamt*(1+casinoRate/100) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+["mobsterBank", format["%1 (%2) kupił %3 wartości slotów.", name player, getplayeruid player, _betamt*(1+casinoRate/100) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 disableSerialization;
 _display = findDisplay 5780;
@@ -204,7 +204,7 @@ if(_slotcash*((0.75)+((1-casinoRate/100)/5)) > _casinoVault) then {
 	
 	_winning = _casinoVault;
 
-	[format["You won %1 in the slots but only received %2 because the casino ran out of cash.", _slotcash call client_fnc_numberText, _winning call client_fnc_numberText],false] spawn domsg;
+	[format["Wygrałeś %1 w automatach, ale otrzymałeś tylko %2, ponieważ kasyno skończyło się gotówką.", _slotcash call client_fnc_numberText, _winning call client_fnc_numberText],false] spawn domsg;
 	
 	["casinoVault",_winning, "Remove",true] remoteexec ["server_fnc_setValue",2];
 
@@ -212,7 +212,7 @@ if(_slotcash*((0.75)+((1-casinoRate/100)/5)) > _casinoVault) then {
 
 	_winning = _slotcash;
 
-	[format["You won %1 in the slots", _winning call client_fnc_numberText],false] spawn domsg;
+	[format["Wygrałeś %1 w automatach", _winning call client_fnc_numberText],false] spawn domsg;
 
 	["casinoVault",_winning*((0.75)+((1-casinoRate/100)/5)), "Remove",true] remoteexec ["server_fnc_setValue",2];
 
@@ -220,7 +220,7 @@ if(_slotcash*((0.75)+((1-casinoRate/100)/5)) > _casinoVault) then {
 
 [_winning,true,true] call Client_fnc_addMoneyToPlayer;
 
-["casinoVault", format["%1 (%2) won %3 and received %4 from the slots machine and the casino lost %5.", name player, getplayeruid player, _slotcash call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+["casinoVault", format["%1 (%2) wygrałeś %3 i otrzymałeś  %4 z automatu i kasyno zostało utracone %5.", name player, getplayeruid player, _slotcash call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 
 

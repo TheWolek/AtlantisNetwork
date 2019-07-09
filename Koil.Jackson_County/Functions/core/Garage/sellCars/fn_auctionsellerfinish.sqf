@@ -12,7 +12,7 @@ _garage DELETEAT _pia;
 
 player setvariable ["garage",_garage,false];
 
-["You just sold a car!", true] spawn domsg;
+["Właśnie sprzedałeś samochód!", true] spawn domsg;
 
 _amount = _amount;
 

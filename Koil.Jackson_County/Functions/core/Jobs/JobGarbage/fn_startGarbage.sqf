@@ -1,7 +1,7 @@
 //[getpos player(or object they drop / bin they use),"player"] remoteExec ["client_fnc_startGarbage",_player];
 //
 // _type is bin, player, dump - only should need to call player driven tasks with remoteexec.
-if(myjob != "none" && myjob != "TrashMan") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none" && myjob != "TrashMan") exitwith { ["Masz już pracę!", true] spawn domsg; };
 if(isnil "taskrunning") then { taskrunning = false; };
 
 if(isnil "mapBins") then {
@@ -33,7 +33,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 			_garbageLevel = 0;
 			playertasks pushback [[1064,3667,0.014],"dump"];	
 			[getpos ((playertasks select 0) select 0)] call client_fnc_jobMarker;
-			["Your current Job (Marked on the Map): Garbage Pickup", true] spawn domsg;
+			["Twoja aktualna praca (zaznaczona na mapie): Odbiór śmieci", true] spawn domsg;
 			["add","Karma",15,"Garbage Man"] call client_fnc_sustain;			
 		} else {
 			
@@ -44,7 +44,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 			};
 			playertasks pushback [mybin,"bin"];
 			[getpos ((playertasks select 0) select 0)] call client_fnc_jobMarker;
-			["Your current Job (Marked on the Map): Garbage Pickup", true] spawn domsg;
+			["Twoja aktualna praca (zaznaczona na mapie): Odbiór śmieci", true] spawn domsg;
 		};
 	} else {
 
@@ -53,7 +53,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 
 		if(_warnings > 30) then { 
 			taskrunning = false; 
-			["You have been laid off from your job!", true] spawn domsg; 
+			["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 		};
 
 		if(vehspawned distance player > 30) then { _warnings = _warnings + 1; };
@@ -81,7 +81,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 				_amount = round(_amount);
 				if(_amount > 0) then {
 					if(_amount > 150) then { _amount = 150; };
-					[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText] , false ] spawn domsg;	
+					[ format["Otrzymałeś dodatkowo 1% gotówki w kieszeni!", _amount call client_fnc_numberText] , false ] spawn domsg;	
 					[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 				};
 
@@ -105,7 +105,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 				_amount = round(_amount);
 				if(_amount > 0) then {
 					if(_amount > 150) then { _amount = 150; };
-					[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+					[ format["Otrzymałeś dodatkowe 1% gotówki w kieszeni!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 					[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 				};
 
@@ -115,7 +115,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 
 			if(((playertasks select 0) select 1) == "player") then {
 				//create function here to pick up player dropped garbage then pay the user.
-				["Pick up the rubbish pile around you.", true] spawn domsg;
+				["Podnieś stos śmieci wokół siebie.", true] spawn domsg;
 				_garbagelevel = _garbagelevel + 1;
 			};
 

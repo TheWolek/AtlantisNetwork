@@ -1,2 +1,2 @@
 bankrobber = 3;
-["That looks good for now!", true] spawn domsg;
+["Na razie to wygląda dobrze!", true] spawn domsg;

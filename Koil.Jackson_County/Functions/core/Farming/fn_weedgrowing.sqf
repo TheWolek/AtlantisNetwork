@@ -1,8 +1,8 @@
-WaterArray = ["WARNING: The leaves are fading!","WARNING: The dirt looks too dry!","WARNING: The plant is wiltering!"];
-PruneArray = ["WARNING: Has too many leaves covering the buds!","WARNING: Looks overgrown!"];
-CoolArray2 = ["WARNING: Is getting brown spots on the leaves!","WARNING: Is drying out from the heat!"];
-HeatArray2 = ["WARNING: There is too much moisture!"];
-TurnoverArray = ["WARNING: The soil needs turning!"];
+WaterArray = ["OSTRZEŻENIE: Liście blakną!","OSTRZEŻENIE: Brud wygląda zbyt sucho!","OSTRZEŻENIE: Roślina więdnie!"];
+PruneArray = ["OSTRZEŻENIE: Ma zbyt wiele liści pokrywających pąki!","OSTRZEŻENIE: Wygląda na zarośnięty!"];
+CoolArray2 = ["OSTRZEŻENIE: Brązowe plamy na liściach!","OSTRZEŻENIE: Wysycha z ciepła!"];
+HeatArray2 = [OSTRZEŻENIE: Za dużo wilgoci!"];
+TurnoverArray = ["OSTRZEŻENIE: Ziemia wymaga nażywniecia!"];
 private["_stage1","_stage2"];
 _count = 0;
 checkFinish2 = false;
@@ -52,7 +52,7 @@ if(player distance [1409.98,5740.65,0.00143814] < 400) then {
 	_randomvalue = _randomvalue + _randomvalue;
 };
 
-[format["You grew %1 bags of weed!",_randomvalue], true] spawn domsg;
+[format["Wyhodowałeś %1 torebek marych!",_randomvalue], true] spawn domsg;
 
 while {_randomValue > 0} do { player additem _item; _randomValue = _randomValue - 1; };
 

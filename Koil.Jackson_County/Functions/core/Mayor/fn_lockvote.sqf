@@ -2,7 +2,7 @@
 // CANDIDATES = [];
 // CANDIDATES PUSHBACK [player name,0];
 disableserialization;
-if(isNil "candidates") exitwith { ["Election not running", true] spawn domsg; closedialog 0; };
+if(isNil "candidates") exitwith { ["Wybory nie są uruchomione", true] spawn domsg; closedialog 0; };
 
 _votenumber = call compile format["%1",(lbData[9001,(lbCurSel 9001)])];
 

@@ -71,7 +71,7 @@ _bonus = _length*10;
                 [(_myCash - 5000)*(1-_rate)] remoteExec["client_fnc_addMoneyToPlayer", _officer]; 
 
 	            ["govtBank", (_myCash - 5000)*_rate, "Add"] remoteExec["server_fnc_setValue",2];
-	            ["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_myCash - 5000) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	            ["govtBank", format["%1 (%2) dodano %3 do rządowego konta bankowego.", name player, getplayeruid player, (_myCash - 5000) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
                 [format["The government seized %1 from your bank account because of unpaid tickets.",(_myCash - 5000) call client_fnc_numberText], true] spawn domsg; 
             }  else {
@@ -83,11 +83,11 @@ _bonus = _length*10;
             [_currentTax*(1-_rate)] remoteExec["client_fnc_addMoneyToPlayer", _officer]; 
 
 	        ["govtBank", _currentTax, "Add"] remoteExec["server_fnc_setValue",2];
-	        ["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, _currentTax call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	        ["govtBank", format["%1 (%2) dodano %3 do rządowego konta bankowego.", name player, getplayeruid player, _currentTax call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
-            [format["The government seized %1 from your bank account because of unpaid taxes.",(_currentTax) call client_fnc_numberText], true] spawn domsg; 
+            [format["Rząd przejął %1 z konta bankowego z powodu niezapłaconych podatków.",(_currentTax) call client_fnc_numberText], true] spawn domsg; 
             
-            [format["The government seized %1 from the convict's bank account because of unpaid taxes and you received %2 in bonus.",(_currentTax) call client_fnc_numberText], true] remoteExec["domsg", _officer]; 
+            [format["Rząd przejął %1 z rachunku bankowego skazanego z powodu niezapłaconych podatków i otrzymałeś bonus w wysokości 2%.",(_currentTax) call client_fnc_numberText], true] remoteExec["domsg", _officer]; 
         };
         (player getvariable "statuses") set [13, 0]; 
     };
@@ -102,9 +102,9 @@ _bonus = _length*10;
         [_dirtyMoney*(1-_rate)] remoteExec["client_fnc_addMoneyToPlayer", _officer]; 
         ["govtBank", _dirtyMoney*_rate, "Add"] remoteExec["server_fnc_setValue",2];
         
-        [format["The government seized %1 from your person because of you were in possession of dirty money.", (_dirtyMoney) call client_fnc_numberText], true] spawn domsg; 
+        [format["Rząd przejął %1 od twojej osoby, ponieważ byłeś w posiadaniu brudnych pieniędzy.", (_dirtyMoney) call client_fnc_numberText], true] spawn domsg; 
             
-        [format["The government seized %1 from the convict because of dirty money and you received %2 in bonus.",(_dirtyMoney) call client_fnc_numberText, (_dirtyMoney*(1-_rate)) call client_fnc_numberText], true] remoteExec["domsg", _officer]; 
+        [format["Rząd przejął %1 od skazanego z powodu brudnych pieniędzy i otrzymałeś bonus 2%.",(_dirtyMoney) call client_fnc_numberText, (_dirtyMoney*(1-_rate)) call client_fnc_numberText], true] remoteExec["domsg", _officer]; 
 
     };
     

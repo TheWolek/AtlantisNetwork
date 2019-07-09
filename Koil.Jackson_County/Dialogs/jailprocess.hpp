@@ -66,7 +66,7 @@ class jailprocess {
 		class Reason : Client_RscEdit 
 		{
 			idc = 1111;
-			text = "Reason";
+			text = "Powód";
 			autocomplete = "";
 			sizeEx = 0.05;
 			x = 0.25; 
@@ -89,7 +89,7 @@ class jailprocess {
 
 		class HomeOption : hidebutton {
 			idc = 1115;
-			text = "Process";
+			text = "Proces";
 			onButtonClick = "[] call client_fnc_processjail;";
 			x = 0.55;
 			y = 0.45;
@@ -174,7 +174,7 @@ class carPrice {
 		class Reason : Client_RscEdit 
 		{
 			idc = 1111;
-			text = "Price";
+			text = "Cena";
 			autocomplete = "";
 			sizeEx = 0.05;
 			x = 0.25; 
@@ -185,7 +185,7 @@ class carPrice {
 
 		class HomeOption : hidebutton {
 			idc = 1115;
-			text = "Process";
+			text = "Proces";
 			onButtonClick = "[] call client_fnc_auctionSellCar;";
 			x = 0.55;
 			y = 0.45;

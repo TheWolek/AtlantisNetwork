@@ -24,7 +24,7 @@ if(_betamount > 500) exitwith { ["$500.00 is max single bet", true] spawn domsg;
 _cashcheck = [1,_betamount*(1+casinoRate/100)] call client_fnc_checkmoney;
 if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",_betamount*(1+casinoRate/100) call client_fnc_numberText], true] spawn domsg; };
 
-[format["The horse betting cost you %1 because the fee is at %2%3.",_betamount*(1+casinoRate/100) call client_fnc_numberText, casinoRate, "%"], true] spawn domsg;
+[format["Zakłady na konie kosztują Cię% 1, ponieważ opłata wynosi %2%3.",_betamount*(1+casinoRate/100) call client_fnc_numberText, casinoRate, "%"], true] spawn domsg;
 
 [_betamount*(1+casinoRate/100)] call Client_fnc_removeCash;
 

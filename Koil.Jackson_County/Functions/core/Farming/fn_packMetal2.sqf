@@ -1,8 +1,8 @@
 /*
 Refine Logs trees by koil
 */
-	if(vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) exitwith { ["Your truck is too far away!", true] spawn domsg; }; 
-	if(totalLogs == 6) exitwith { ["Load is full!", true] spawn domsg; };
+	if(vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) exitwith { ["Twoja ciężarówka jest za daleko!", true] spawn domsg; }; 
+	if(totalLogs == 6) exitwith { ["Ładunek jest pełny!", true] spawn domsg; };
 	mylog = createVehicle ["Land_Pipes_large_F", position player, [], 0, "NONE"];
 
 	totalLogs = totalLogs + 1;

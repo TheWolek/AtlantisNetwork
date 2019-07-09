@@ -57,9 +57,9 @@ while{true} do {
 
 		if(_markerNum == 15) then { _markerNum = 1;  };
 
-		if(_markerNum == 1) then { _laps = _laps + 1; _lapTime = _timer;  if(_laptime < _myfastest) then { _myfastest = _laptime; }; [format["Your last laptime was: %1 seconds --- fastest: %2",_laptime,_myfastest], true] spawn domsg;  _timer = 0; };
+		if(_markerNum == 1) then { _laps = _laps + 1; _lapTime = _timer;  if(_laptime < _myfastest) then { _myfastest = _laptime; }; [format["Twój ostatni czas laptacji to: %1 sekund --- fastest: %2",_laptime,_myfastest], true] spawn domsg;  _timer = 0; };
 
-		if(_laps == 3) then { _finish = true; ["You finished your session & received $100.00!", true] spawn domsg; [100,true,true] call Client_fnc_addMoneyToPlayer; };
+		if(_laps == 3) then { _finish = true; ["Skończyłeś sesję i odebrałeś  $100.00!", true] spawn domsg; [100,true,true] call Client_fnc_addMoneyToPlayer; };
 
 	};
 

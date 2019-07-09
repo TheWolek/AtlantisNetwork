@@ -7,7 +7,7 @@ if(_type == "Home" || _type == "All") then {
     _marker setMarkerShapeLocal "ICON";
     _marker setMarkerTypeLocal "hd_dot";
     _marker setMarkerColorLocal "ColorGreen";
-    _marker setMarkerTextLocal "My Home";
+    _marker setMarkerTextLocal "Mój Dom";
 
 };
 

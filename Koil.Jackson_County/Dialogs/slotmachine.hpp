@@ -27,7 +27,7 @@ class SlotMachineGUI
 		class RscText_1000: client_RscText
 		{
 			idc = 5774;
-			text = "Payout: $"; //--- ToDo: Localize;
+			text = "Wypłata: $"; //--- ToDo: Localize;
 			x = 13 * 0.025 + 0;
 			y = 21 * 0.04 + 0;
 			w = 5 * 0.025;
@@ -37,7 +37,7 @@ class SlotMachineGUI
 		class RscText_1003: client_RscText
 		{
 			idc = 5783;
-			text = "BET"; //--- ToDo: Localize;
+			text = "Zakład"; //--- ToDo: Localize;
 			x = 6 * 0.025 + 0;
 			y = 14 * 0.04 + 0;
 			w = 2 * 0.025;
@@ -46,7 +46,7 @@ class SlotMachineGUI
 		class RscText_1004: client_RscText
 		{
 			idc = 5784;
-			text = "BET"; //--- ToDo: Localize;
+			text = "Zakład"; //--- ToDo: Localize;
 			x = 15 * 0.025 + 0;
 			y = 14 * 0.04 + 0;
 			w = 2 * 0.025;
@@ -55,7 +55,7 @@ class SlotMachineGUI
 		class RscText_1005: client_RscText
 		{
 			idc = 5786;
-			text = "BET"; //--- ToDo: Localize;
+			text = "Zakład"; //--- ToDo: Localize;
 			x = 23 * 0.025 + 0;
 			y = 14 * 0.04 + 0;
 			w = 2 * 0.025;
@@ -64,7 +64,7 @@ class SlotMachineGUI
 		class RscText_1006: client_RscText
 		{
 			idc = 5787;
-			text = "BET"; //--- ToDo: Localize;
+			text = "Zakład"; //--- ToDo: Localize;
 			x = 32 * 0.025 + 0;
 			y = 14 * 0.04 + 0;
 			w = 2 * 0.025;
@@ -74,7 +74,7 @@ class SlotMachineGUI
 		class RscText_1002: client_RscText
 		{
 			idc = 5776;
-			text = "SLOTS"; //--- ToDo: Localize;
+			text = "SLOTY MUCHAMAJANA"; //--- ToDo: Localize;
 			x = 6 * 0.025 + 0;
 			y = 0 * 0.04 + 0;
 			w = 28 * 0.025;
@@ -126,7 +126,7 @@ class SlotMachineGUI
 		class EXIT_BTN: client_RscButtonMenu
 		{
 			idc = -1;
-			text = "EXIT"; //--- ToDo: Localize;
+			text = "WYJDŻ"; //--- ToDo: Localize;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "closeDialog 0;";
 			x = 35.5 * 0.025 + 0;
@@ -137,7 +137,7 @@ class SlotMachineGUI
 		class BET_5K: client_RscButtonMenu
 		{
 			idc = 5778;
-			text = "100 + FEE"; //--- ToDo: Localize;
+			text = "100 + OPŁATA"; //--- ToDo: Localize;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[100] spawn client_fnc_slotsSpin;";
 			x = 5 * 0.025 + 0;
@@ -149,7 +149,7 @@ class SlotMachineGUI
 		class BET_10K: client_RscButtonMenu
 		{
 			idc = 5782;
-			text = "250 + FEE"; //--- ToDo: Localize;
+			text = "250 + OPŁATA"; //--- ToDo: Localize;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[250] spawn client_fnc_slotsSpin;";
 			x = 14 * 0.025 + 0;
@@ -161,7 +161,7 @@ class SlotMachineGUI
 		class BET_25K: client_RscButtonMenu
 		{
 			idc = 5781;
-			text = "500 + FEE"; //--- ToDo: Localize;
+			text = "500 + OPŁATA"; //--- ToDo: Localize;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[500] spawn client_fnc_slotsSpin;";
 			x = 22 * 0.025 + 0;
@@ -173,7 +173,7 @@ class SlotMachineGUI
 		class BET_50K: client_RscButtonMenu
 		{
 			idc = 5779;
-			text = "1000 + FEE"; //--- ToDo: Localize;
+			text = "1000 + OPŁATA"; //--- ToDo: Localize;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[1000] spawn client_fnc_slotsSpin;";
 			x = 31 * 0.025 + 0;

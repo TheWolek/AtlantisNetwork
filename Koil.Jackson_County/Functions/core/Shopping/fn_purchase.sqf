@@ -19,13 +19,13 @@ _availableQuantity = call compile format["%1", (_status select 1)];
 _totalprice = _cost * _Quantity;
 
 _cashcheck = [1,_totalprice] call client_fnc_checkmoney;
-if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",_totalprice call client_fnc_numberText], true] spawn domsg; };	
+if!(_cashCheck) exitwith { [format["%1 - Nie masz dość pieniędzy, aby za to zapłacić!",_totalprice call client_fnc_numberText], true] spawn domsg; };	
 
-if(_quantity > _availableQuantity) exitwith { ["Please select an appropriate amount.", true] spawn domsg; };
-if(_totalprice == 0 || _totalprice < 0) exitwith { ["You can not purchase an item that costs $0.00", true] spawn domsg; };
+if(_quantity > _availableQuantity) exitwith { ["Wybierz odpowiednią kwotę.", true] spawn domsg; };
+if(_totalprice == 0 || _totalprice < 0) exitwith { ["Nie możesz kupić przedmiotu, który kosztuje $0.00", true] spawn domsg; };
 
 if( ((player getvariable "cashinhand") - _totalprice) < (client_level_array select 16) ) exitWith {
-	[format["You cannot buy stuff from this store with your %1 in dirty money.", (client_level_array select 16) call client_fnc_numberText], true] spawn domsg;
+	[format["Nie możesz kupić rzeczy z tego sklepu ze swoim %1 w brudnych pieniądzach.", (client_level_array select 16) call client_fnc_numberText], true] spawn domsg;
 };
 
 _status = (_status select 0);

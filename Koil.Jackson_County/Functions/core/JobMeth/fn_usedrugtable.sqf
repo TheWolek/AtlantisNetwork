@@ -1,4 +1,4 @@
-if(player distance myhouse > 20) exitwith { ["You must do this near your house", true] spawn domsg; };
+if(player distance myhouse > 20) exitwith { ["Musisz to zrobić w pobliżu domu", true] spawn domsg; };
 
 myDT = createVehicle ["itemsdruglab1", [0,0,0], [], 0, "NONE"];
 myDT attachto [player, [0, 1.3, 0.84] ];

@@ -7,7 +7,7 @@ _evidence = 0; // lodged later.
 _charges = ctrlText 1116;
 
 if(_charges find ":" > -1) exitWith {
-    ["You cannot use a colon (':') in your message.", true] spawn domsg;
+    ["Nie możesz użyć dwukropka (':') w wiadomości.", true] spawn domsg;
 };
 
 if(_type == 0) then {
@@ -48,15 +48,15 @@ if(_type == 4) then {
     _suspect = name currentcursortarget;
     _suspectID = getplayeruid currentcursortarget;
 
-    if(_charges == "This is an official court document. You have to describe the events leading up to the arrest of this person. Do not include the charges. You have to be brief and descriptive. Failure to abide by the correct format will lead to disciplinary action as well the denial of the arrest and conviction of the suspect.") exitWith {
+    if(_charges == "To jest oficjalny dokument sądowy. Musisz opisać wydarzenia, które doprowadziły do aresztowania tej osoby. Nie uwzględniaj opłat. Musisz być zwięzły i opisowy. Nieprzestrzeganie właściwego formatu spowoduje postępowanie dyscyplinarne, a także odmowę aresztowania i skazania podejrzanego.") exitWith {
 
-        ["You did not provide a valid reason.", true] spawn domsg;
+        ["Nie podałeś ważnego powodu.", true] spawn domsg;
 
     };
 
     if(count _charges < 150) exitWith {
 
-        ["The reason must contain at least 150 characters.", true] spawn domsg;
+        ["Powód musi zawierać co najmniej 150 znaków.", true] spawn domsg;
         
     };
 
@@ -70,9 +70,9 @@ if(_type == 4) then {
             lastarrest = time + 600;
 
             [500] remoteExec ['client_fnc_addMoneyToPlayer', _officer];
-            [format["You have received %1 in bonuses for arresting a suspect and logging it.", 500 call client_fnc_numberText], true] remoteExec ["domsg", _officer];
+            [format["Otrzymałeś %1 w bonusach za aresztowanie podejrzanego i zarejestrowanie go.", 500 call client_fnc_numberText], true] remoteExec ["domsg", _officer];
         } else {
-            ["You have not received a bonus because the arrest of this person was recently logged.", true] remoteExec ["domsg", _officer];
+            ["Nie otrzymałeś premii, ponieważ aresztowanie tej osoby zostało niedawno zarejestrowane.", true] remoteExec ["domsg", _officer];
         };
 
     }] remoteExec["bis_fnc_spawn", currentcursortarget];

@@ -8,7 +8,7 @@ playSound3D ["CG_Jobs\sounds\meth\drugBoil.ogg", player, false, getPosasl player
 
 
 if(isNil "globalProtection") then { globalProtection = 0; };
-if(globalProtection != 0) exitwith { ["Error - Already processing", true] spawn domsg; };
+if(globalProtection != 0) exitwith { ["Błąd - już trwa przetwarzanie", true] spawn domsg; };
 _localProtection = 0;
 
 
@@ -27,7 +27,7 @@ _n = 0;
 		player additem (_barArray select _n);
 		_i = _i - 1;
 		sleep 0.25;
-		["You are curing pelts, stay still!", true] spawn domsg;
+		["Przerabiasz futra, nie ruszaj się!", true] spawn domsg;
 	};
 
 	_n = _n + 1;

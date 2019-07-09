@@ -12,13 +12,13 @@ removeHeadgear player;
 
 if(deadPhase == 1) then {
 
-    ["You woke up and can recall what happened from when you were paralyzed.", true] spawn domsg;
+    ["Obudziłeś się i możesz sobie przypomnieć, co się stało od kiedy zostałeś sparaliżowany.", true] spawn domsg;
 
 };
 
 if(deadPhase == 2) then {
 
-    ["You woke up, but have no recollection of any recent memories while you were unconscious.", true] spawn domsg;
+    ["Obudziłeś się, ale nie pamiętasz żadnych ostatnich wspomnień, kiedy byłeś nieprzytomny.", true] spawn domsg;
 
 };
 

@@ -105,5 +105,5 @@ if(_owner IN _owedPlayers) then {
 	//delete from database
 
 } else {
-	["The owner of this vehicle is not in debt to the Mafia.", true] spawn domsg;	
+	["TWłaściciel tego pojazdu nie jest zadłużony wobec mafii.", true] spawn domsg;	
 };

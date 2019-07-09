@@ -79,7 +79,7 @@ class buycar {
 
 		class Saveranks : client_RscButtonMenu {
 			idc = 1115;
-			text = "Buy Car";
+			text = "Kup auto";
 			onButtonClick = "[] call client_fnc_carShopBuy;";
 			x = 0.85;
 			y = 0.95;
@@ -255,7 +255,7 @@ class charselect {
 		{
 			idc = 1500;
 			sizeEx = 0.033;
-			text = "FEMALE";
+			text = "Kobieta";
 			onButtonClick = "[""Female""] spawn client_fnc_playerselectFinish;";		
 			x = 0.405 * safezoneW + safezoneX;
 			y = 0.76 * safezoneH + safezoneY;
@@ -270,7 +270,7 @@ class charselect {
 		{
 			idc = 1501;
 			sizeEx = 0.033;
-			text = "MALE";
+			text = "Mężczyzna";
 			onButtonClick = "[""Male""] spawn client_fnc_playerselectFinish;";		
 			x = 0.53 * safezoneW + safezoneX;
 			y = 0.76 * safezoneH + safezoneY;
@@ -352,7 +352,7 @@ class koiladmin {
 
 		class execute : client_RscButtonMenu {
 			idc = 1115;
-			text = "Execute";
+			text = "Wykonaj";
 			onButtonClick = "[] spawn client_fnc_adminexecute;";
 			x = 0.55;
 			y = 0.8;

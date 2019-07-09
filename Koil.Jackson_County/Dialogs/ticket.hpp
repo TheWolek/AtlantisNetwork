@@ -72,7 +72,7 @@ class np_ticketcivilian
 		class TicketAmount: client_RscStructuredText
 		{
 			idc = 1400;
-			text = "Loading Amount";
+			text = "Ładowanie kwoty";
 			x = 0.455544 * safezoneW + safezoneX;
 			y = 0.561588 * safezoneH + safezoneY;
 			w = 0.0899698 * safezoneW;
@@ -81,7 +81,7 @@ class np_ticketcivilian
 		class OfficerName: client_RscStructuredText
 		{
 			idc = 1401;
-			text = "Loading Name";
+			text = "Ładowanie nazwy";
 			x = 0.455544 * safezoneW + safezoneX;
 			y = 0.376824 * safezoneH + safezoneY;
 			w = 0.0899698 * safezoneW;
@@ -90,7 +90,7 @@ class np_ticketcivilian
 		class TicketReason: client_RscStructuredText
 		{
 			idc = 1402;
-			text = "Loading Reason";
+			text = "Ładowanie powódu";
 			x = 0.455333 * safezoneW + safezoneX;
 			y = 0.466127 * safezoneH + safezoneY;
 			w = 0.0899698 * safezoneW;

@@ -49,7 +49,7 @@ class openMessages {
 					fadeout=1;
 
 					font="PuristaLight";
-					text = "No message selected.";
+					text = "Nie wybrano żadnej wiadomości.";
 					size = 0.035;
 					sizeEx = 0.05;
 					x = 0;
@@ -73,7 +73,7 @@ class openMessages {
 
 		class SendSMS : client_RscButtonMenu {
 			idc = 1115;
-			text = "Send";
+			text = "Wyślij";
 			onButtonClick = " [0] spawn client_fnc_phoneSys; ";
 			x = 0.37;
 			y = 0.75;
@@ -83,7 +83,7 @@ class openMessages {
 
 		class ReplySMS : client_RscButtonMenu {
 			idc = 1115;
-			text = "Reply";
+			text = "Odpowiedź";
 			onButtonClick = " [1] spawn client_fnc_phoneSys; ";
 			x = 0.52;
 			y = 0.75;
@@ -167,7 +167,7 @@ class client_findSMS {
 		{
 			idc = 9331;
 			ColorBackground[] = {0, 0, 0, 0.8};
-			text = "Enter a Message";
+			text = "Wpisz wiadomość";
 			autocomplete = "";
 			sizeEx = 0.030;
 			x = 0.75; 
@@ -178,7 +178,7 @@ class client_findSMS {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Send";
+			text = "Wyślij";
 			onButtonClick = "[0] spawn client_fnc_chooseUserMessage;";
 			x = 0.52;
 			y = 0.75;
@@ -259,7 +259,7 @@ class client_findSMSAnon {
 		{
 			idc = 9331;
 			ColorBackground[] = {0, 0, 0, 0.8};
-			text = "Enter a Message";
+			text = "Wpisz wiadomość";
 			autocomplete = "";
 			sizeEx = 0.030;
 			x = 0.75; 
@@ -270,7 +270,7 @@ class client_findSMSAnon {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Send";
+			text = "Wyślij";
 			onButtonClick = "[1] spawn client_fnc_chooseUserMessage;";
 			x = 0.52;
 			y = 0.75;
@@ -349,7 +349,7 @@ class client_tweet {
 		{
 			idc = 9331;
 			ColorBackground[] = {0, 0, 0, 0.8};
-			text = "Enter your Tweet.";
+			text = "Wpisz swój tweet.";
 			autocomplete = "";
 			sizeEx = 0.030;
 			x = 0.35;
@@ -429,7 +429,7 @@ class client_Advertise {
 		{
 			idc = 9331;
 			ColorBackground[] = {0, 0, 0, 0.8};
-			text = "Enter Advertisement Message, Keep it short and add your name.";
+			text = "Wpisz wiadomość reklamową, zachowaj ją krótko i dodaj swoje imię.";
 			autocomplete = "";
 			sizeEx = 0.030;
 			x = 0.35;
@@ -440,7 +440,7 @@ class client_Advertise {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Send";
+			text = "Wyślij";
 			onButtonClick = "[] spawn client_fnc_advertiseSend;";
 			x = 0.52;
 			y = 0.75;
@@ -512,7 +512,7 @@ class client_phoneBET {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Bet on Place";
+			text = "Postaw na miejsce";
 			onButtonClick = "[0] spawn client_fnc_horseProcessBet;";
 			x = 0.52;
 			y = 0.65;
@@ -522,7 +522,7 @@ class client_phoneBET {
 
 		class HomeOption2 : client_RscButtonMenu {
 			idc = 1116;
-			text = "Bet on Win";
+			text = "Postaw na zwycięstwo";
 			onButtonClick = "[1] spawn client_fnc_horseProcessBet;";
 			x = 0.52;
 			y = 0.75;

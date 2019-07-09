@@ -18,12 +18,12 @@ imfishing = true;
 	sleep 2.5;
 
 	if!(surfaceIsWater (getpos _vehicle)) exitwith {
-		["You lost your bait!", true] spawn domsg;
+		["Straciłeś swoją przynętę!", true] spawn domsg;
 		deletevehicle _vehicle;
 		imfishing = false;
 	};
 
-	["Successful Cast", true] spawn domsg;
+	["Udany rzut", true] spawn domsg;
 	playSound3D ["vvv_fishingrod\sounds\splash.ogg", player, false, getPosASL _vehicle, 25, 1, 85];
 
 	_timeOut = 0;
@@ -39,13 +39,13 @@ imfishing = true;
 	};
 
 	if(_fail) exitwith {
-		["You lost your bait by moving too far.", true] spawn domsg;
+		["Straciłeś przynętę, przesuwając się za daleko.", true] spawn domsg;
 		deletevehicle _vehicle;
 		imfishing = false;
 	};
 
 	playSound3D ["vvv_fishingrod\sounds\splash.ogg", player, false, getPosASL player, 15, 1, 45];
-	["You got a bite, press Windows key too hook it!", true] spawn domsg;
+	["Masz branie, naciśnij klawisz Windows mocno!", true] spawn domsg;
 
 	mouseMovement = 1;
 	sleep 0.5;
@@ -116,7 +116,7 @@ imfishing = true;
 		if(_curWep == "legendary_fishing_rod") then { Player additemtobackpack _myFish; };
 
 	} else {
-		["You were too slow", true] spawn domsg;
+		["Byłeś zbyt wolny", true] spawn domsg;
 	};
 
 	imfishing = false;

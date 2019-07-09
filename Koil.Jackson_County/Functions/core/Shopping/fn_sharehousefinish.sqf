@@ -6,6 +6,6 @@ player setVariable ["statuses",_mystatuses,false];
 lastsync = time; 
 [player, "statuses", (player getvariable "statuses")] remoteExec ["Server_fnc_setVariable",2];
 
-["House is now shared upon login", true] spawn domsg;
+["Dom jest teraz udostępniany po zalogowaniu", true] spawn domsg;
 
 houseinvitation = objNull;

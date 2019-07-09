@@ -65,7 +65,7 @@ class phonebg {
 
 		class SaveSelected : client_RscButtonMenu {
 			idc = 1115;
-			text = "Save BG";
+			text = "zapisz tapete";
 			onButtonClick = "[] spawn client_fnc_saveBG;";
 			x = 0.4;
 			y = 0.45;
@@ -87,7 +87,7 @@ class phonebg {
 
 		class SaveSelectedSkin : client_RscButtonMenu {
 			idc = 1176;
-			text = "Save Skin";
+			text = "Zapisz";
 			onButtonClick = "[] spawn client_fnc_saveSkin;";
 			x = 0.4;
 			y = 0.74;

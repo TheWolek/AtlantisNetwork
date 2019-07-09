@@ -16,15 +16,15 @@ _doc = player getvariable "doc";
 _dmv = player getvariable "dmv";
 _da = player getvariable "da";
 
-if(myJob == "doc" && _doc < 6) exitwith { ["You must be rank 6+ to promote people", true] spawn domsg; };
-if(myJob == "Cop" && _cop < 6) exitwith { ["You must be rank 6+ to promote people", true] spawn domsg; };
-if(myJob == "EMS" && _ems < 6) exitwith { ["You must be rank 6+ to promote people", true] spawn domsg; };
-if(myJob == "Mafia" && _Mafia < 6) exitwith { ["You must be rank 6+ to promote people", true] spawn domsg; };
-if(myJob == "Biker" && _Biker < 6) exitwith { ["You must be rank 6+ to promote people", true] spawn domsg; };
-if(myJob == "Mobster" && _Mobster < 6) exitwith { ["You must be rank 6+ to promote people", true] spawn domsg; };
-if(myJob == "Legal" && _legal < 6) exitwith { ["You must be rank 6+ to promote people", true] spawn domsg; };
-if(myJob == "DMV" && _dmv < 6) exitwith { ["You must be rank 6+ to promote people", true] spawn domsg; };
-if(myJob == "DA" && _da < 6) exitwith { ["You must be rank 6+ to promote people", true] spawn domsg; };
+if(myJob == "doc" && _doc < 6) exitwith { ["Musisz być miec rangę 6+, aby awansować ludzi", true] spawn domsg; };
+if(myJob == "Cop" && _cop < 6) exitwith { ["Musisz być miec rangę 6+, aby awansować ludzi", true] spawn domsg; };
+if(myJob == "EMS" && _ems < 6) exitwith { ["Musisz być miec rangę 6+, aby awansować ludzi", true] spawn domsg; };
+if(myJob == "Mafia" && _Mafia < 6) exitwith { ["Musisz być miec rangę 6+, aby awansować ludzi", true] spawn domsg; };
+if(myJob == "Biker" && _Biker < 6) exitwith { ["Musisz być miec rangę 6+, aby awansować ludzi", true] spawn domsg; };
+if(myJob == "Mobster" && _Mobster < 6) exitwith { ["Musisz być miec rangę 6+, aby awansować ludzi", true] spawn domsg; };
+if(myJob == "Legal" && _legal < 6) exitwith { ["Musisz być miec rangę 6+, aby awansować ludzi", true] spawn domsg; };
+if(myJob == "DMV" && _dmv < 6) exitwith { ["Musisz być miec rangę 6+, aby awansować ludzi", true] spawn domsg; };
+if(myJob == "DA" && _da < 6) exitwith { ["Musisz być miec rangę 6+, aby awansować ludzi", true] spawn domsg; };
 
 if(myJob == "Cop") then { _max = _cop; };
 if(myJob == "EMS") then { _max = _EMS; };
@@ -35,7 +35,7 @@ if(myJob == "doc") then { _max = _doc; };
 if(myJob == "Legal") then { _max = _legal;  };
 if(myJob == "DA") then { _max = _da; };
 
-if(_max <= _level) exitWith { ["You can't promote somebody higher or equal to you.", true] spawn domsg; };
+if(_max <= _level) exitWith { ["Nie możesz awansować kogoś wyższego lub równego tobie.", true] spawn domsg; };
 
 createdialog "promotion";
 

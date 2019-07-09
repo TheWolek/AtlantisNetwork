@@ -21,9 +21,9 @@ if(_type == "Karma") then {
 		_arraySelection = 0;
 
 		if (_adjust == "Add") then {
-		//	["You just gained Experience!.",false] spawn doquickmsg;
+		//	["Właśnie zdobyłeś Doświadczenie!.",false] spawn doquickmsg;
 		} else {
-		//	["You just lost experience..",false] spawn doquickmsg;
+		//	["Właśnie straciłeś Doświadczenie..",false] spawn doquickmsg;
 		};
 
 	};
@@ -32,9 +32,9 @@ if(_type == "Karma") then {
 		_arraySelection = 1;
 
 		if (_adjust == "Add") then {
-			["You just gained Fedex Experience!.",false] spawn doquickmsg;
+			["Właśnie zdobyłeś Fedex  Doświadczenie!.",false] spawn doquickmsg;
 		} else {
-			["You just lost Fedex experience..",false] spawn doquickmsg;
+			["Właśnie straciłeś Fedex  Doświadczenie..",false] spawn doquickmsg;
 		};
 
 	};//
@@ -43,9 +43,9 @@ if(_type == "Karma") then {
 		_arraySelection = 2;
 
 		if (_adjust == "Add") then {
-			["You just gained Security Experience!.",false] spawn doquickmsg;
+			["Właśnie zdobyłeś Doświadczenie w Ochornie.",false] spawn doquickmsg;
 		} else {
-			["You just lost Security experience..",false] spawn doquickmsg;
+			["Właśnie Straciłeś Doświadczenie w Ochornie..",false] spawn doquickmsg;
 		};
 
 	};
@@ -54,9 +54,9 @@ if(_type == "Karma") then {
 		_arraySelection = 3;
 
 		if (_adjust == "Add") then {
-			["You just gained Radio Experience!.",false] spawn doquickmsg;
+			["Właśnie zdobyłeś Doświadczenie!.",false] spawn doquickmsg;
 		} else {
-			["You just lost Radio experience..",false] spawn doquickmsg;
+			["Właśnie Straciłeś Doświadczenie..",false] spawn doquickmsg;
 		};
 
 	};//
@@ -65,9 +65,9 @@ if(_type == "Karma") then {
 		_arraySelection = 4;
 
 		if (_adjust == "Add") then {
-			["You just gained Tow Experience!.",false] spawn doquickmsg;
+			["Właśnie zdobyłeś Doświadczenie!.",false] spawn doquickmsg;
 		} else {
-			["You just lost Tow experience..",false] spawn doquickmsg;
+			["Właśnie Straciłeś Doświadczenie..",false] spawn doquickmsg;
 		};
 
 	};//
@@ -76,9 +76,9 @@ if(_type == "Karma") then {
 		_arraySelection = 5;
 
 		if (_adjust == "Add") then {
-			["You just gained Garbage Experience!.",false] spawn doquickmsg;
+			["Właśnie zdobyłeś Doświadczenie!.",false] spawn doquickmsg;
 		} else {
-			["You just lost Garbage experience..",false] spawn doquickmsg;
+			["Właśnie Straciłeś Doświadczenie..",false] spawn doquickmsg;
 		};
 
 	};//
@@ -87,9 +87,9 @@ if(_type == "Karma") then {
 		_arraySelection = 6;
 
 		if (_adjust == "Add") then {
-			["You just gained News Experience!.",false] spawn doquickmsg;
+			["Właśnie zdobyłeś Doświadczenie!.",false] spawn doquickmsg;
 		} else {
-			["You just lost News experience..",false] spawn doquickmsg;
+			["Właśnie Straciłeś Doświadczenie..",false] spawn doquickmsg;
 		};
 
 	};//
@@ -98,9 +98,9 @@ if(_type == "Karma") then {
 		_arraySelection = 7;
 
 		if (_adjust == "Add") then {
-			["You just gained Repairman Experience!.",false] spawn doquickmsg;
+			["Właśnie zdobyłeś Doświadczenie!.",false] spawn doquickmsg;
 		} else {
-			["You just lost Repairman experience..",false] spawn doquickmsg;
+			["Właśnie Straciłeś Doświadczenie..",false] spawn doquickmsg;
 		};
 
 
@@ -110,9 +110,9 @@ if(_type == "Karma") then {
 		_arraySelection = 8;
 
 		if (_adjust == "Add") then {
-			["You just gained Farming Experience!.",false] spawn doquickmsg;
+			["Właśnie zdobyłeś Doświadczenie!.",false] spawn doquickmsg;
 		} else {
-			["You just lost Farming experience..",false] spawn doquickmsg;
+			["Właśnie Straciłeś Doświadczenie..",false] spawn doquickmsg;
 		};
 
 
@@ -123,9 +123,9 @@ if(_type == "Karma") then {
 
 
 		if (_adjust == "Add") then {
-			["You just gained Public Transport Experience!.",false] spawn doquickmsg;
+			["Właśnie zdobyłeś Doświadczenie!.",false] spawn doquickmsg;
 		} else {
-			["You just lost Public Transport experience..",false] spawn doquickmsg;
+			["Właśnie Straciłeś Doświadczenie.",false] spawn doquickmsg;
 		};
 
 
@@ -136,9 +136,9 @@ if(_type == "Karma") then {
 
 
 		if (_adjust == "Add") then {
-			["You just gained Agility!.",false] spawn domsg;
+			["Właśnie zyskałeś Zwinność!.",false] spawn domsg;
 		} else {
-			["You just lost your Agility..",false] spawn domsg;
+			["Właśnie straciłeś Zwinność..",false] spawn domsg;
 		};
 
 
@@ -149,9 +149,9 @@ if(_type == "Karma") then {
 
 
 		if (_adjust == "Add") then {
-			["You just gained Strength!.",false] spawn domsg;
+			["Właśnie zyskałeś siłę!.",false] spawn domsg;
 		} else {
-			["You just lost Strength..",false] spawn domsg;
+			["Właśnie straciłeś siłę....",false] spawn domsg;
 		};
 
 
@@ -161,9 +161,9 @@ if(_type == "Karma") then {
 		_arraySelection = 12;
 
 		if (_adjust == "Add") then {
-			["You just gained Intellect!.",false] spawn domsg;
+			["Właśnie zyskałeś Intelekt!.",false] spawn domsg;
 		} else {
-			["You just lost Intellect..",false] spawn domsg;
+			["Właśnie straciłeś Intelekt..",false] spawn domsg;
 		};
 
 	};
@@ -173,9 +173,9 @@ if(_type == "Karma") then {
 
 
 		if (_adjust == "Add") then {
-			["You just gained Stamina!.",false] spawn domsg;
+			["Właśnie zyskałeś wytrzymałość!.",false] spawn domsg;
 		} else {
-			["You just lost Stamina..",false] spawn domsg;
+			["Właśnie straciłeś wytrzymałość..",false] spawn domsg;
 		};
 
 
@@ -186,10 +186,10 @@ if(_type == "Karma") then {
 
 
 		if (_adjust == "Add") then {
-			["You just gained Weight!.",false] spawn domsg;
+			["Właśnie zyskałeś na wadze!.",false] spawn domsg;
 			
 		} else {
-			["You just lost Weight..",false] spawn domsg;
+			["Właśnie straciłeś na wadze!..",false] spawn domsg;
 		};
 
 
@@ -199,9 +199,9 @@ if(_type == "Karma") then {
 		_arraySelection = 15;
 
 		if (_adjust == "Add") then {
-			["You gained Stress!",false] spawn domsg;
+			["Zyskałeś stres!",false] spawn domsg;
 		} else {
-			["You lost Stress!",false] spawn domsg;
+			["Straciłeś stres",false] spawn domsg;
 		};
 
 	};
@@ -210,9 +210,9 @@ if(_type == "Karma") then {
 		_arraySelection = 16;
 
 		if (_adjust == "Add") then {
-			//["You gained reputation as a Crime Lord!.",false] spawn domsg;
+			//["Zyskałeś reputację Pana Kryminalnego!.",false] spawn domsg;
 		} else {
-			//["You lost reputation as a Crime Lord!.",false] spawn domsg;
+			//["Straciłeś reputację Pana Kryminalnego!.",false] spawn domsg;
 		};
 
 	};
@@ -221,9 +221,9 @@ if(_type == "Karma") then {
 		_arraySelection = 17;
 
 		if (_adjust == "Add") then {
-			//["You gained reputation as a Crime Lord!.",false] spawn domsg;
+			//["Zyskałeś reputację Pana Kryminalnego!.",false] spawn domsg;
 		} else {
-			//["You lost reputation as a Crime Lord!.",false] spawn domsg;
+			//["Straciłeś reputację Pana Kryminalnego!.",false] spawn domsg;
 		};
 
 	};
@@ -232,9 +232,9 @@ if(_type == "Karma") then {
 		_arraySelection = 18;
 
 		if (_adjust == "Add") then {
-			//["You gained reputation as a Crime Lord!.",false] spawn domsg;
+			//["Zyskałeś reputację Pana Kryminalnego!.",false] spawn domsg;
 		} else {
-			//["You lost reputation as a Crime Lord!.",false] spawn domsg;
+			//["Straciłeś reputację Pana Kryminalnego!.",false] spawn domsg;
 		};
 
 	};

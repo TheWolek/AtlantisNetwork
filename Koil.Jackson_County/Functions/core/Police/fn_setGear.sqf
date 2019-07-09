@@ -31,7 +31,7 @@ if(_type == "water") exitwith {
 
 if(myJob IN ['Cop','doc'] && lastGovtUseWeapon > time) exitWith {
 
-	["You recently got gear out, please wait 20 minutes.", true] spawn domsg;
+	["Niedawno dostałeś sprzęt, poczekaj 20 minut.", true] spawn domsg;
 
 };
 
@@ -68,9 +68,9 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za Twój ładunek.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		["govtBank", format["%1 (%2) usunięto %3 na rządowe konto bankowe.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 		if (_level == 5) then { 
 			player addBackpack "AM_POLICEBELT";

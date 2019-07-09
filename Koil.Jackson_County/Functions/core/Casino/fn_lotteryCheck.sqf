@@ -35,8 +35,8 @@ if(_numbercount == 2) exitwith {
 
 		_winning = _casinoVault;
 
-		[format["You won %1 in the lottery but only received %2 because the casino ran out of cash.", _prize call client_fnc_numberText, _winning call client_fnc_numberText],false] spawn domsg;
-		[format["Someone just won %1 but only received %2 because the casino ran out of cash.", _prize call client_fnc_numberText, _winning call client_fnc_numberText],false] remoteexec ["domsg",_nearCasino]; 
+		[format["Wygrałeś %1 w loterii, ale otrzymałeś tylko %2, ponieważ kasyno skończyło się gotówką.", _prize call client_fnc_numberText, _winning call client_fnc_numberText],false] spawn domsg;
+		[format["Ktoś właśnie wygrał %1, ale otrzymał tylko 2%, ponieważ kasyno skończyło się gotówką.", _prize call client_fnc_numberText, _winning call client_fnc_numberText],false] remoteexec ["domsg",_nearCasino]; 
 	
 		["casinoVault",_winning, "Remove",true] remoteexec ["server_fnc_setValue",2];
 
@@ -44,8 +44,8 @@ if(_numbercount == 2) exitwith {
 
 		_winning = _prize;
 
-		[format["You won %1 in the lottery.", _winning call client_fnc_numberText],false] spawn domsg;
-		[format["Someone just won %1.", _winning call client_fnc_numberText],false] remoteexec ["domsg",_nearCasino - [player]]; 
+		[format["Wygrałeś %1 na loterii.", _winning call client_fnc_numberText],false] spawn domsg;
+		[format["Ktoś właśnie wygrał %1.", _winning call client_fnc_numberText],false] remoteexec ["domsg",_nearCasino - [player]]; 
 
 		["casinoVault",_winning*((0.75)+((1-casinoRate/100)/5)), "Remove",true] remoteexec ["server_fnc_setValue",2];
 
@@ -53,7 +53,7 @@ if(_numbercount == 2) exitwith {
 
 	[_winning,true,true] call Client_fnc_addMoneyToPlayer;
 
-	["casinoVault", format["%1 (%2) won %3 and received %4 from the lottery and the casino lost %5.", name player, getplayeruid player, _prize call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	["casinoVault", format["%1 (%2) wygrałeś %3 i otrzymałeś %4 z loterii i kasyno zostało utracone %5.", name player, getplayeruid player, _prize call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 };	
 
@@ -68,8 +68,8 @@ if(_numbercount == 3) exitwith {
 
 		_winning = _casinoVault;
 
-		[format["You won %1 in the lottery but only received %2 because the casino ran out of cash.", _prize call client_fnc_numberText, _winning call client_fnc_numberText],false] spawn domsg;
-		[format["Someone just won %1 but only received %2 because the casino ran out of cash.", _prize call client_fnc_numberText, _winning call client_fnc_numberText],false] remoteexec ["domsg",_nearCasino - [player]]; 
+		[format["Wygrałeś %1 w loterii, ale otrzymałeś tylko %2, ponieważ kasyno skończyło się gotówką.", _prize call client_fnc_numberText, _winning call client_fnc_numberText],false] spawn domsg;
+		[format["Ktoś właśnie wygrał %1, ale otrzymał tylko 2%, ponieważ kasyno skończyło się gotówką.", _prize call client_fnc_numberText, _winning call client_fnc_numberText],false] remoteexec ["domsg",_nearCasino - [player]]; 
 
 		["casinoVault",_winning, "Remove",true] remoteexec ["server_fnc_setValue",2];
 
@@ -77,9 +77,9 @@ if(_numbercount == 3) exitwith {
 
 		_winning = _prize;
 
-		[format["You won %1 in the lottery.", _winning call client_fnc_numberText],false] spawn domsg;
+		[format["Wygrałeś %1 na loterii.", _winning call client_fnc_numberText],false] spawn domsg;
 		
-		[format["Someone just won %1.", _winning call client_fnc_numberText],false] remoteexec ["domsg",_nearCasino]; 
+		[format["Ktoś właśnie wygrał %1.", _winning call client_fnc_numberText],false] remoteexec ["domsg",_nearCasino]; 
 
 		["casinoVault",_winning*((0.75)+((1-casinoRate/100)/5)), "Remove",true] remoteexec ["server_fnc_setValue",2];
 
@@ -87,7 +87,7 @@ if(_numbercount == 3) exitwith {
 
 	[_winning,true,true] call Client_fnc_addMoneyToPlayer;
 
-	["casinoVault", format["%1 (%2) won %3 and received %4 from the lottery and the casino lost %5.", name player, getplayeruid player, _prize call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	["casinoVault", format["%1 (%2) wygrałeś %3 i otrzymałeś %4 z loterii i kasyno zostało utracone %5.", name player, getplayeruid player, _prize call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 	
 };
 

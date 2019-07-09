@@ -13,7 +13,7 @@ if(local _vehicle) then {
 	[_vehicle,0] remoteExecCall ["client_fnc_lock",_vehicle];
 };
 
-["A hot vehicle has been stolen and is placed on the map for Police", true] remoteexec ["domsg",-2];
+["Gorący pojazd został skradziony i umieszczony na mapie dla Policji", true] remoteexec ["domsg",-2];
 
 while{true} do {
 	_pos = [RANDOM(10000),RANDOM(10000),0];
@@ -22,22 +22,22 @@ while{true} do {
 	uisleep 2;
 };
 
-["In 5 minutes your destination will be revealed.", true] spawn domsg;
+["Za 5 minut cel zostanie ujawniony.", true] spawn domsg;
 uisleep 60;
 
-["In 4 minutes your destination will be revealed.", true] spawn domsg;
+["Za 4 minut cel zostanie ujawniony.", true] spawn domsg;
 uisleep 60;
 
-["In 3 minutes your destination will be revealed.", true] spawn domsg;
+["Za 3 minut cel zostanie ujawniony.", true] spawn domsg;
 uisleep 60;
 
-["In 2 minutes your destination will be revealed.", true] spawn domsg;
+["Za 2 minut cel zostanie ujawniony.", true] spawn domsg;
 uisleep 60;
 
-["In 1 minutes your destination will be revealed.", true] spawn domsg;
+["Za 1 minut cel zostanie ujawniony.", true] spawn domsg;
 uisleep 60;
 
-["The vehicle drop off point has been marked on the map - get there in 5 minutes.", false] spawn doquickmsg;
+["Punkt zrzutu pojazdu został zaznaczony na mapie - dotrzyj tam w 5 minut.", false] spawn doquickmsg;
 
 
 _markername = format["DropOff%1",getPlayerUID player];
@@ -45,14 +45,14 @@ _marker = createMarkerlocal [_markername, _pos];
 _marker setMarkerShapelocal "ICON";
 _marker setMarkerTypelocal "hd_dot";
 _marker setMarkerColorlocal "ColorBlue";
-_marker setMarkerTextlocal "Drop Off Vehicle Location";	
+_marker setMarkerTextlocal "Lokalizacja zrzutu pojazdu";	
 
 _count = 0;
 while{true} do {
 	uisleep 1;
-	if(_count > 300) exitwith { ["You took too long!", true] spawn domsg; };
+	if(_count > 300) exitwith { ["Za długo!", true] spawn domsg; };
 	if(player distance _pos < 25 && driver (_vehicle) == player) exitwith { 
-		["You have been awarded the vehicle!", true] spawn domsg; 
+		["Otrzymałeś pojazd!", true] spawn domsg; 
 		_player = player; 
 		_rims = "default"; 
 		_windows = 0; 

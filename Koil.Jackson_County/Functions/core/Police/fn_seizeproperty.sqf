@@ -1,4 +1,4 @@
-["Your house and money has been seized", true] spawn domsg;
+["Twój dom i pieniądze zostały zajęte", true] spawn domsg;
 
 _cash = player getVariable "cashinhand";
 [_cash] call Client_fnc_removeCash;

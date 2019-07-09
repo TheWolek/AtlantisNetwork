@@ -36,14 +36,14 @@ if(!taskrunning) then {
 
 				if(_warnings > 10) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 				};
 				uisleep 3;
 			} else {
 
 				if(_warnings > 10) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 				};
 
 
@@ -51,7 +51,7 @@ if(!taskrunning) then {
 				if(isNull vehspawned) then { _warnings = _warnings + 1; };
 
 				if(player distance ((playertasks select 0) select 0) < 15) then {
-					["You successfully finished that job!", true] spawn domsg;
+					["Pomyślnie ukończyłeś tę pracę!", true] spawn domsg;
 
 
 					["add","Karma",1,"Fedex Worker"] call client_fnc_sustain;
@@ -65,7 +65,7 @@ if(!taskrunning) then {
 
 					if(_amount > 0) then {
 						if(_amount > 250) then { _amount = 250; };
-						[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+						[ format["Otrzymałeś dodatkowo 1% gotówki w kieszeni!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 						[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 					};
 
@@ -76,7 +76,7 @@ if(!taskrunning) then {
 					playertasks deleteat 0;
 					uisleep 3;
 				} else {
-					[format["Your current Job (Marked on the Map): Delivery Type - %1",(playertasks select 0) select 2], true] spawn domsg;	
+					[format["Twoja aktualna praca (zaznaczona na mapie): typ dostawy - %1",(playertasks select 0) select 2], true] spawn domsg;	
 					[((playertasks select 0) select 0)] call client_fnc_jobMarker;			
 					uisleep 3;
 				};

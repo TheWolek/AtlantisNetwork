@@ -104,9 +104,9 @@ if((_this select 0) == 1) exitwith {
 
 
 	if(_cost > 0) then {
-		[format["The government paid %1 for that vehicle.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za ten pojazd.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, (_cost) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		["govtBank", format["%1 (%2) usunięto %3 z rządowego konto bankowe.", name player, getplayeruid player, (_cost) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 	};
 
 	closedialog 0;

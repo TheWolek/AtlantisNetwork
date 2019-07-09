@@ -14,6 +14,6 @@ if(_player IN serverRadioPlayers) then {
 	callInProgress = true;
 	player setVariable ["tf_unable_to_use_radio", false];
 	call TFAR_fnc_HideHint;
-	["You have been connected to a radio presenter.", false] spawn domsg;
+	["Zostałeś połączony z prezenterem radiowym.", false] spawn domsg;
 
 };

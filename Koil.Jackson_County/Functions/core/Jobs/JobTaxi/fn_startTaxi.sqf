@@ -1,7 +1,7 @@
 //[_location] remoteExec ["client_fnc_startSecurity",_player];
 //[getpos player,] remoteExec ["client_fnc_startGarbage",_player];
 // use lexus with directionals only.
-if(myjob != "none") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none") exitwith { ["Masz już pracę!", true] spawn domsg; };
 
 if(isnil "taskrunning") then { taskrunning = false; };
 
@@ -20,7 +20,7 @@ if(!taskrunning) then {
 
 			if(_warnings > 10) then { 
 				taskrunning = false; 
-				["You have been laid off from your job!", true] spawn domsg; 
+				["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 			};
 
 			if(vehspawned distance player > 30) then { _warnings = _warnings + 1; };
@@ -42,7 +42,7 @@ if(!taskrunning) then {
 
 			if(_amount > 0) then {
 				if(_amount > 150) then { _amount = 150; };
-				[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+				[ format["Otrzymałeś dodatkowe 1% gotówki w kieszeni!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 				[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 			};
 

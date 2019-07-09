@@ -5,32 +5,32 @@ if(_type == 1) then {
     disableSerialization;
     createdialog "showLicenseMenu";
 
-    if(count licenseArray == 0 && !(myJob IN ["Cop","doc","EMS"])) exitWith { ["You seem to not have any licenses.", true] spawn domsg; };
+    if(count licenseArray == 0 && !(myJob IN ["Cop","doc","EMS"])) exitWith { ["Wydaje się, że nie masz żadnych licencji.", true] spawn domsg; };
 
     _message = [];
 
     if(myJob IN ['Cop']) then {
-        _message pushBack format["PD Badge [%1]", player getVariable "badgeNumber"];
+        _message pushBack format["PD Odznaka [%1]", player getVariable "badgeNumber"];
     };
 
     if(myJob IN ['EMS']) then {
-        _message pushBack format["FD Badge [%1]", player getVariable "badgeNumber"];
+        _message pushBack format["FD Odznaka [%1]", player getVariable "badgeNumber"];
     };
 
     if(myJob IN ['doc']) then {
-        _message pushBack format["DoC Badge [%1]", player getVariable "badgeNumber"];
+        _message pushBack format["DoC Odznaka [%1]", player getVariable "badgeNumber"];
     };
 
     if(0 IN licenseArray) then {
-        _message pushBack "Driver's License";
+        _message pushBack "Prawo jazdy";
     };
 
     if(1 IN licenseArray) then {
-        _message pushBack "Class 1 Weapons License";
+        _message pushBack "Licencja na broń klasy I";
     };
 
     if(2 IN licenseArray) then {
-        _message pushBack "Mining License";
+        _message pushBack "Licencja górnicza";
     };
 
     if(3 IN licenseArray) then {
@@ -38,19 +38,19 @@ if(_type == 1) then {
     };
 
     if(4 IN licenseArray) then {
-        _message pushBack "Fishing License";
+        _message pushBack "Licencja wędkarska";
     };
 
     if(5 IN licenseArray) then {
-        _message pushBack "Truck License";
+        _message pushBack "Licencja na ciężarówkę";
     };
 
     if(6 IN licenseArray) then {
-        _message pushBack "Pilot's License";
+        _message pushBack "Licencja pilota";
     };
 
     if(7 IN licenseArray) then {
-        _message pushBack "Oil Trade License";
+        _message pushBack "Licencja na handel olejem";
     };
 
     if(8 IN licenseArray) then {
@@ -106,7 +106,7 @@ if(_type == 1) then {
     };
 
     if(21 IN licenseArray) then {
-        _message pushBack "Bus License";
+        _message pushBack "Licencja Kierowcy autobusa";
     };
 
     if(22 IN licenseArray) then {

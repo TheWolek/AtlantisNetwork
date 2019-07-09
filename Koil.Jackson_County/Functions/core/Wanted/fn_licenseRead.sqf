@@ -3,35 +3,35 @@ params["_licenses","_playername"];
 _message = format["VALID LICENSES <br/><br/> %1 <br/><br/>",_playername];
 
 if(0 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Driver's License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Prawo jazdy </t> <br/> ",_message];
 };
 
 if(1 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Class 1 Weapons License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Licencja na broń klasy I </t> <br/> ",_message];
 };
 
 if(2 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Mining License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Licencja górnicza </t> <br/> ",_message];
 };
 
 if(3 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Logging License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Licencja logowania </t> <br/> ",_message];
 };
 
 if(4 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Fishing License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Licencja wędkarska </t> <br/> ",_message];
 };
 
 if(5 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Truck License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Licencja na ciężarówkę </t> <br/> ",_message];
 };
 
 if(6 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Pilot's License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Licencja pilota </t> <br/> ",_message];
 };
 
 if(7 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Oil Trade License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Licencja na handel olejem </t> <br/> ",_message];
 };
 
 if(8 IN _licenses) then {

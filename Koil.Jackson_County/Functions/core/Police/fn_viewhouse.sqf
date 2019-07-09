@@ -8,6 +8,6 @@ closeDialog 0;
     params["_target"];
 
     [myhouse, format["%1's Home",name player], "Location", _target] remoteexec ["client_fnc_hudHelper", _target];
-    [format["%1's home has been marked on the map.", name player], true] remoteExec ["domsg", _target];
+    [format["%1's dom został zaznaczony na mapie.", name player], true] remoteExec ["domsg", _target];
 
 }] remoteExec["bis_fnc_spawn", _suspect];

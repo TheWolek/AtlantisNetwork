@@ -2,7 +2,7 @@
 //[getpos player,] remoteExec ["client_fnc_startGarbage",_player];
 // use lexus with directionals only.
 
-if( myjob != "none" && myjob != "towtruck") exitwith { ["You already have a job!", true] spawn domsg; };
+if( myjob != "none" && myjob != "towtruck") exitwith { ["Masz już pracę!", true] spawn domsg; };
 
 if(isnil "taskrunning") then { taskrunning = false; };
 
@@ -20,14 +20,14 @@ if(!taskrunning) then {
 		while{taskrunning && myjob == "towtruck"} do {
 			uisleep 3;
 			if(playertasks isequalto []) then {
-				["You have no current jobs, please patrol for towable cars!", true] spawn domsg;
+				["Nie masz aktualnej pracy, proszę patrolować samochody ciągnione!", true] spawn domsg;
 				uisleep 60;
 			} else {
 
 
 				if(_warnings > 10) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 				};
 
 				if(vehspawned distance player > 30) then { _warnings = _warnings + 1; };
@@ -37,7 +37,7 @@ if(!taskrunning) then {
 				if(player distance ((playertasks select 0) select 0) < 15) then {
 
 
-					["You have arrived at your location!", true] spawn domsg;
+					["Dotarłeś do swojej lokalizacji!", true] spawn domsg;
 					paycheck = paycheck + 250;
 					playertasks deleteat 0;
 					uisleep 3;
@@ -61,7 +61,7 @@ if(!taskrunning) then {
 
 
 				} else {
-					["Your current Job (Marked on the Map): Job Type - Tow Vehicle", true] spawn domsg;	
+					["Twoja aktualna praca (zaznaczona na mapie): Typ pracy - pojazd holowniczy", true] spawn domsg;	
 					[((playertasks select 0) select 0)] call client_fnc_jobMarker;			
 					uisleep 3;
 				};

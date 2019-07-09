@@ -1,9 +1,9 @@
 _required = _this select 0;
-if(checkFinish) exitwith { ["You need to wait before doing that!", true] spawn domsg; };
+if(checkFinish) exitwith { ["Musisz poczekać, zanim to zrobisz!", true] spawn domsg; };
 
 
 if(requiredOutput == _required) then { 
-	["Looks like it worked!",false] spawn doquickmsg;
+	["Wygląda na to, że zadziałało!",false] spawn doquickmsg;
 	totalskills = totalskills - 10;
 	if(_required == "Acetone" || _required == "Pseudo") then { playSound3D ["CG_Jobs\sounds\meth\drugAdd.ogg", player, false, getPosasl player, 2, 1, 15]; };
 	if(_required == "Cool") then { playSound3D ["CG_Jobs\sounds\meth\drugCool.ogg", player, false, getPosasl player, 2, 1, 15]; };
@@ -17,7 +17,7 @@ if(requiredOutput == _required) then {
 	playSound3D ["CG_Jobs\sounds\meth\drugPressure.ogg", player, false, getPosasl player, 5, 1, 15];
 	if(_randomValue < 3) exitwith { 
 		"R_60mm_HE" createvehicle (getPosatl player); 
-		["Well, you messed up!", true] spawn domsg; 
+		["Cóż, zawiedliście!", true] spawn domsg; 
 		cookingMeth = false;
 		[(getpos player)] remoteexec ["server_fnc_firestart",2];
 		player removeaction myAction1;

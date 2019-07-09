@@ -58,7 +58,7 @@ if(count allplayers < 50) exitwith {};
 	_markerstr setMarkerShape "ICON";
 	_markerstr setMarkerType "hd_dot";
 	_markerstr setmarkertext "HOT CAR LOCATION";
-	["A hot vehicle has been placed on the map"] remoteexec ["client_fnc_announceCivilians",-2];
+	["Gorący pojazd został umieszczony na mapie"] remoteexec ["client_fnc_announceCivilians",-2];
 
 	uisleep 600;
 

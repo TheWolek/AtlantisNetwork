@@ -1,6 +1,6 @@
 params ["_giver", "_amount","_reason","_datedue"];
 
-if(moneyOwed > 0) exitwith { ["This player already has a loan, please update that instead of giving a new loan",true] remoteexec ["domsg",_giver]; };
+if(moneyOwed > 0) exitwith { ["Ten gracz ma już pożyczkę, zaktualizuj ją zamiast udzielać nowej pożyczki",true] remoteexec ["domsg",_giver]; };
 
 if(isNil "_reason") then { _reason = "Standard Loan"; };
 if(isNil "_dateDue") exitwith { ["Please enter a due date.",true] remoteexec ["domsg",_giver]; };

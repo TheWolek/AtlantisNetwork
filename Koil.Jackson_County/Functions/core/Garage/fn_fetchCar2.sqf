@@ -32,4 +32,4 @@ vehicle player allowdamage false;
 player allowdamage false;
 closedialog 0;
 
-["If you exit the vehicle, you will lose god mode", true] spawn domsg;
+["Jeśli wyjdziesz z pojazdu, utracisz  god mode", true] spawn domsg;

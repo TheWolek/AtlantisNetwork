@@ -1,5 +1,5 @@
 params ["_house"];
-["Your Partner has woken up and your house location has changed.", true] spawn domsg;
+["Twój partner się obudził i zmieniła się lokalizacja Twojego domu.", true] spawn domsg;
 
 deletemarkerlocal "myhouse";
 

@@ -8,7 +8,7 @@ params["_object"];
 
         player addItem "CG_wheel";
 
-        ["You stole the rims, aren't you proud of yourself...", true] spawn domsg;
+        ["Ukradłeś felgi, czy jesteś z siebie dumny?...", true] spawn domsg;
 
     };
 

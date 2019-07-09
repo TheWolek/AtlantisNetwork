@@ -14,7 +14,7 @@ if(_num == 0) then { _num = 1; };
 
 if(myJob IN ['Cop','doc'] && lastGovtUseCar > time) exitWith {
 
-	["You recently got a vehicle out, please wait 20 minutes.", true] spawn domsg;
+	["Niedawno dostałeś pojazd, odczekaj 20 minut.", true] spawn domsg;
 
 };
 

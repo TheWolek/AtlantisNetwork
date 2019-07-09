@@ -13,19 +13,19 @@ switch(_info select 10) do {
 
     case 1: {
 
-       [format["Upon analysis, it was discovered that a person shot somebody with a(n) %1. Witnessed by %2.", _info select 6, _witnesses], true] remoteExec ["domsg", player];
+       [format["Po analizie odkryto, że ktoś zastrzelił kogoś za pomocą (n) %1. Świadek %2.", _info select 6, _witnesses], true] remoteExec ["domsg", player];
 
     };
 
     case 2: {
 
-        [format["Upon analysis, it was discovered that a person strip searched somebody. Witnessed by %1. ", _witnesses], true] remoteExec ["domsg", player];
+        [format["Po analizie okazało się, że pasmo osób przeszukało kogoś. Świadek %1. ", _witnesses], true] remoteExec ["domsg", player];
 
     };
 
     case 3: {
 
-        [format["Upon analysis, it was discovered that a person robbed a store using a(n) %1. Witnessed by %2.", _info select 6, _witnesses], true] remoteExec ["domsg", player];
+        [format["Po analizie odkryto, że osoba obrabowała sklep za pomocą (n) %1. Świadek %2.", _info select 6, _witnesses], true] remoteExec ["domsg", player];
 
     };
 

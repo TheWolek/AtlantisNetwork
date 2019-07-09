@@ -8,6 +8,6 @@ closeDialog 0;
     params["_target"];
 
     [myshop, format["%1's Shop",name player], "Location", _target] remoteexec ["client_fnc_hudHelper", _target];
-    [format["%1's shop has been marked on the map.", name player], true] remoteExec ["domsg", _target];
+    [format["%1's sklep został oznaczony na mapie.", name player], true] remoteExec ["domsg", _target];
 
 }] remoteExec["bis_fnc_spawn", _suspect];

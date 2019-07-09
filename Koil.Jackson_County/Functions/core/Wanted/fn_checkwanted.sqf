@@ -1,5 +1,5 @@
 _currentitemindex = lbCurSel 1120;
-if (_currentitemindex == -1) exitWith { ["You must select a person.", true] spawn domsg; };
+if (_currentitemindex == -1) exitWith { ["Musisz wybrać osobę.", true] spawn domsg; };
 
 _status2 = lbData [1120, _currentitemindex];
 currentcursortarget = _status2;
@@ -21,9 +21,9 @@ if(player in currentMarshals) then {
     };
 
     if(_isMarshal) then {
-        [format["%1 has %2 unpaid tickets, %3 warrant(s), and %4 unpaid tax. %5", name player, myTickets call client_fnc_numberText, myWarrants, ((player getVariable 'statuses') select 13) call client_fnc_numberText, _arrest], true] remoteExec["domsg", _target];
+        [format["%1 ma %2 niezapłaconych biletów, nakaz(y) %3 i niezapłacony podatek% 4. %5", name player, myTickets call client_fnc_numberText, myWarrants, ((player getVariable 'statuses') select 13) call client_fnc_numberText, _arrest], true] remoteExec["domsg", _target];
     } else {
-        [format["%1 has %2 unpaid tickets and %3 warrant(s). %4", name player, myTickets call client_fnc_numberText, myWarrants, _arrest], true] remoteExec["domsg", _target];
+        [format["%1 ma %2 niezapłaconych biletów i gwarancję %3(s). %4", name player, myTickets call client_fnc_numberText, myWarrants, _arrest], true] remoteExec["domsg", _target];
     };
 
 

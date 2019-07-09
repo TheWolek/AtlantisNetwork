@@ -4,4 +4,4 @@ params["_object"];
 
 player removeItem "np_fuelcan";
 
-["You have refueled that vehicle.", true] spawn domsg;
+["Tankowałeś ten pojazd.", true] spawn domsg;

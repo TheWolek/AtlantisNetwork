@@ -1593,7 +1593,7 @@ class RscButtonMenuCancel
 		"0x00050000 + 1"
 	};
 	idc = 2;
-	text = "Cancel";
+	text = "Anuluj";
 };
 class RscControlsGroup
 {

@@ -13,4 +13,4 @@ if("CG_ATF_Bandage_i" in magazines player || myJob IN ["EMS","Fire"]) then {
 
 	 ["CG_ATF_Bandage_i",0] spawn client_fnc_removeitem;
 
-} else { ["You need a bandage to do this", true] spawn domsg; };
+} else { ["Potrzebujesz bandaża ", true] spawn domsg; };

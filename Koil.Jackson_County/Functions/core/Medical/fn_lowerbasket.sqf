@@ -16,5 +16,5 @@ if(isNull basket || isNull myRope || isNull lure) exitwith {
 	};
 	[] spawn client_fnc_unloadbasket; 
 };
-if(ropelength myrope > 15) exitwith { ["Can not go lower", true] spawn domsg; };
+if(ropelength myrope > 15) exitwith { ["Nie może iść niżej", true] spawn domsg; };
 ropeUnwind [myrope, 0.5, 3, true];	

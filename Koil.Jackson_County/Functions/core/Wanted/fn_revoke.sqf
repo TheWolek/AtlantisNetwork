@@ -5,35 +5,35 @@ _remove = call compile format["%1",(lbData[9001,(lbCurSel 9001)])];
 closedialog 0;
 
 if(_remove == 0) then {
-	_licenseName = "Driver's License";
+	_licenseName = "Prawo jazdy";
 };
 
 if(_remove == 3) then {
-	_licenseName = "Class 1 Weapons License";
+	_licenseName = "Licencja na broń klasy I";
 };
 
 if(_remove == 2) then {
-	_licenseName = "Mining License";
+	_licenseName = "Licencja górnicza";
 };
 
 if(_remove == 3) then {
-	_licenseName = "Logging License";
+	_licenseName = "Licencja logowania";
 };
 
 if(_remove == 4) then {
-	_licenseName = "Fishing License";
+	_licenseName = "Licencja wędkarska";
 };
 
 if(_remove == 5) then {
-	_licenseName = "Truck License";
+	_licenseName = "Licencja na ciężarówkę";
 };
 
 if(_remove == 6) then {
-	_licenseName = "Pilot's License";
+	_licenseName = "Licencja pilota";
 };
 
 if(_remove == 7) then {
-	_licenseName = "Oil Trade License";
+	_licenseName = "Licencja na handel olejem";
 };
 
 if(_remove == 8) then {

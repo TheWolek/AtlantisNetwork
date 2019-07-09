@@ -24,7 +24,7 @@ class phoneTapMenu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select player to tap into!";
+			text = "Wybierz osobę, do której chcesz zadzwonić!";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -44,7 +44,7 @@ class phoneTapMenu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Select";
+			text = "Wybierz";
 			onButtonClick = "[] spawn client_fnc_requestCurrentCall;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -54,7 +54,7 @@ class phoneTapMenu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -113,7 +113,7 @@ class client_CurrentPhoneCall_Menu
 		class CallButton : client_RscButtonMenu {
 
 			idc = -1;
-			text = "Add";
+			text = "Dodaj";
 			colorBackground[] = {0,0.535294117647059,0.2725490196078431,0.7};
 			onButtonClick = "[] spawn client_fnc_CallMenu;";
 			x = 0.52;
@@ -171,7 +171,7 @@ class bombMenu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select a bomb to detonate!";
+			text = "Wybierz bombę do detonacji!";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -191,7 +191,7 @@ class bombMenu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Detonate";
+			text = "Detonuj";
 			onButtonClick = "[] spawn client_fnc_IEDdetonate;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -201,7 +201,7 @@ class bombMenu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -236,7 +236,7 @@ class hackcarMenu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select a car to disable!";
+			text = "Wybierz samochód, który chcesz wyłączyć!";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -256,7 +256,7 @@ class hackcarMenu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Disable";
+			text = "Wyłąć";
 			onButtonClick = "[] spawn client_fnc_hackCarDisable;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -266,7 +266,7 @@ class hackcarMenu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -300,7 +300,7 @@ class casinoRoomMenu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select a room";
+			text = "Wybierz pokój";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -320,7 +320,7 @@ class casinoRoomMenu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Disable";
+			text = "Wyłąć";
 			onButtonClick = "[1] spawn client_fnc_giveCasinoRoom;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -330,7 +330,7 @@ class casinoRoomMenu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -366,7 +366,7 @@ class danceMenu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select a dance";
+			text = "Wybierz tanieć";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -386,7 +386,7 @@ class danceMenu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Dance";
+			text = "Tańcz";
 			onButtonClick = "[1] spawn client_fnc_dance;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -396,7 +396,7 @@ class danceMenu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -432,7 +432,7 @@ class licenseMenu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select a license";
+			text = "Wybierz licencję";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -452,7 +452,7 @@ class licenseMenu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Buy";
+			text = "Kup";
 			onButtonClick = "[1] spawn client_fnc_license;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -462,7 +462,7 @@ class licenseMenu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -499,7 +499,7 @@ class showLicenseMenu {
 		class Title : client_RscTitle {
 
 			idc = 1112;
-			text = "Select a license";
+			text = "Wybierz licencję";
 			x = 0.05;
 			y = 0.05;
 			w = 0.6;
@@ -519,7 +519,7 @@ class showLicenseMenu {
 
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
-			text = "Show";
+			text = "Pokaż";
 			onButtonClick = "[2] spawn client_fnc_giveLicense;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
@@ -529,7 +529,7 @@ class showLicenseMenu {
 
 		class CraftOption : client_RscButtonMenu {
 			idc = 1116;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;

@@ -1,9 +1,9 @@
 /*
 Refine Logs trees by koil
 */
-	if(carryingOre == 0) exitwith { ["You have no ore", true] spawn domsg; };
-	if(vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) exitwith { ["Your truck is too far away!", true] spawn domsg; }; 
-	if(totalLogs == 6) exitwith { ["Load is full!", true] spawn domsg; deletevehicle mybarrow; deletevehicle myIron; carryingOre = 0; };
+	if(carryingOre == 0) exitwith { ["Nie masz rudy", true] spawn domsg; };
+	if(vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) exitwith { ["Twoja ciężarówka jest za daleko!", true] spawn domsg; }; 
+	if(totalLogs == 6) exitwith { ["Ładunek jest pełny!", true] spawn domsg; deletevehicle mybarrow; deletevehicle myIron; carryingOre = 0; };
 	mylog = myIron;
 	deletevehicle mybarrow;
 	totalLogs = totalLogs + 1;

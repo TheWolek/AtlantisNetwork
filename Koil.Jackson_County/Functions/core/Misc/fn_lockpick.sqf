@@ -31,7 +31,7 @@ if (_obj isKindOf "House_F") exitWith {
 		};
 
 		["CG_Lockpick",50] spawn client_fnc_removeitem;
-		["You have access to this door for 5 minutes.", true] spawn domsg;
+		["Masz dostęp do tych drzwi przez 5 minut.", true] spawn domsg;
 
 	};
 

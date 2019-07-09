@@ -3,15 +3,15 @@
 private["_pos1","_pos2"];
 
 if(count allplayers < 50) exitwith {};
-["A loot supply package will drop in 2 minutes!", true] remoteExec ["domsg",-2];
+["Skrzynia z łupami spadnie w ciągu 2 minut!", true] remoteExec ["domsg",-2];
 
 UISLEEP 60;
 
-["A loot supply package will drop in 1 minute!", true] remoteExec ["domsg",-2];
+["Skrzynia z łupami spadnie w ciągu 1 minut!", true] remoteExec ["domsg",-2];
 
 UISLEEP 60;
 
-["A loot supply package has been dropped on the island!", true] remoteExec ["domsg",-2];
+["Skrzynia z łupami została upuszczona na wyspę!", true] remoteExec ["domsg",-2];
 _error = false;
 _n=0;
 while{true} do {
@@ -37,7 +37,7 @@ _markerstr1 setMarkerSize [200,200];
 _markerstr2 = createMarker ["openfire",[_pos1,_pos2]];
 _markerstr2 setMarkerShape "ICON";
 _markerstr2 setMarkerType "hd_dot";
-_markerstr2 setmarkertext "OPEN FIRE AREA";
+_markerstr2 setmarkertext "OTWARTY OBSZAR OGNIA";
 
 _luckisaskill = "plp_ct_woodboxlightbig" createVehicle [0,0,2000];
 

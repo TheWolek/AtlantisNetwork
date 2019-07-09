@@ -1,1 +1,1 @@
-[format["%1 just used an outdated function and is cheating!", name player, getplayerUID player], true] remoteexec ["domsg",-2];
+[format["%1 właśnie użyłem przestarzałej funkcji i oszukuje!", name player, getplayerUID player], true] remoteexec ["domsg",-2];

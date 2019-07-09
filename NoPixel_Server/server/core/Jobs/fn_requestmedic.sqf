@@ -8,4 +8,4 @@ _nearest = (_nearest select 0) select 1;
 
 [getPos _player, "Downed Person", "Location", currentEMS] remoteExec ["client_fnc_hudHelper", _nearest];
 wantedTimer = time;
-[format["Dispatch to %1: A downed person was spotted at %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _player], true] remoteExec ["domsg", currentEMS];
+[format["Dispatch do %1: Zestrzelona osoba została zauważona %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _player], true] remoteExec ["domsg", currentEMS];

@@ -4,18 +4,18 @@ params["_bankType"];
 
 if(!(typeOf CurrentCursorTarget IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F"])) exitWith { ["You need to be at a Bank to be able to transfer money.", true] spawn domsg; };
 
-if(_bankType == 1 && player getVariable "Mafia" <= 7) exitwith { ["You do not have access to transfer Mafia funds.", true] spawn domsg;  };
-if(_bankType == 2) exitwith { ["You do not have access to transfer Government funds.", true] spawn domsg;  };
-if(_bankType == 3 && player getVariable "Biker" <= 7) exitwith { ["You do not have access to transfer Biker funds.", true] spawn domsg;  };
-if(_bankType == 4) exitwith { ["You do not have access to transfer Casino funds.", true] spawn domsg;  };
-if(_bankType == 5 && player getVariable "Mobster" <= 7) exitwith { ["You do not have access to transfer Mobster funds.", true] spawn domsg;  };
-if(_bankType == 6) exitwith { ["You do not have access to transfer these funds.", true] spawn domsg; };
+if(_bankType == 1 && player getVariable "Mafia" <= 7) exitwith { ["Nie masz dostępu do transferu funduszy Mafii.", true] spawn domsg;  };
+if(_bankType == 2) exitwith { ["Nie masz dostępu do transferu funduszy rządowych.", true] spawn domsg;  };
+if(_bankType == 3 && player getVariable "Biker" <= 7) exitwith { ["Nie masz dostępu do transferu funduszy Klubu Moto.", true] spawn domsg;  };
+if(_bankType == 4) exitwith { ["Nie masz dostępu do transferu środków kasyna.", true] spawn domsg;  };
+if(_bankType == 5 && player getVariable "Mobster" <= 7) exitwith { ["Nie masz dostępu do transferu funduszy .", true] spawn domsg;  };
+if(_bankType == 6) exitwith { ["Nie masz dostępu do transferu tych środków.", true] spawn domsg; };
 
 
 switch (_bankType) do {
     case 0: {
         _bankAmount = (player getVariable "cashinbank");
-        _bankName = "his/her personal bank account";
+        _bankName = "jego / jej osobiste konto bankowe";
         _bankId = "personalBank";
     };
     case 1: { 
@@ -23,7 +23,7 @@ switch (_bankType) do {
 		waitUntil { !isNil "packet"; };
         _bankAmount = packet;
         packet = nil;
-        _bankName = "the Mafia bank account";
+        _bankName = "konto bankowe mafii";
         _bankId = "mafiaBank";
     };
     case 2: {
@@ -31,7 +31,7 @@ switch (_bankType) do {
 		waitUntil { !isNil "packet"; };
         _bankAmount = packet;
         packet = nil;
-        _bankName = "the Government bank account"; 
+        _bankName = "rządowe konto bankowe"; 
         _bankId = "govtBank";
     };
     case 3: { 
@@ -39,7 +39,7 @@ switch (_bankType) do {
 		waitUntil { !isNil "packet"; };
         _bankAmount = packet;
         packet = nil;
-        _bankName = "the Biker bank account"; 
+        _bankName = "konto bankowe moto"; 
         _bankId = "bikerBank";
      };
     case 4 : {
@@ -50,7 +50,7 @@ switch (_bankType) do {
 		waitUntil { !isNil "packet"; };
         _bankAmount = packet;
         packet = nil;
-        _bankName = "the Mobster bank account"; 
+        _bankName = "konto bankowe"; 
         _bankId = "mobsterBank";
      };
     case 6: { 
@@ -60,14 +60,14 @@ switch (_bankType) do {
 
 _amount = parseNumber (ctrlText 1400);
 _player = call compile format["%1",(lbData[1111,(lbCurSel 1111)])];
-if(isnil "_player") exitwith { ["No player selected", true] spawn domsg; };
+if(isnil "_player") exitwith { ["Nie wybrano żadnego gracza", true] spawn domsg; };
 closeDialog 0;
 
 _old = _bankAmount;
 _new = _old - _amount;
 
 if (_new < 0 || _amount < 0) exitwith { 
-    ["You do not have enough money in bank!", true] spawn domsg;
+    ["Nie masz wystarczająco dużo pieniędzy w banku!", true] spawn domsg;
 };
 
 switch (_bankType) do {
@@ -96,8 +96,8 @@ switch (_bankType) do {
 
 [_amount] remoteExec ["Client_fnc_addMoneyToBank", _player];
 
-[format["You successfully wire transferred %1", _amount call client_fnc_numberText], true] spawn domsg;
+[format["Udało Ci się przekazać %1", _amount call client_fnc_numberText], true] spawn domsg;
 
-[format["You were wire transferred %1 from %2", _amount call client_fnc_numberText, name player], true] remoteExec ["domsg", _player];
+[format["Udało Ci się przekazać  %1 z %2", _amount call client_fnc_numberText, name player], true] remoteExec ["domsg", _player];
 
-[_bankId, format["%1 (%2) transferred %3 from %4 to %5 (%6).", name player, getplayeruid player, _amount call client_fnc_numberText,_bankName, name _player, getplayeruid _player]] remoteExec ["server_fnc_log",2]; 
+[_bankId, format["%1 (%2) transfer %3 z %4 do %5 (%6).", name player, getplayeruid player, _amount call client_fnc_numberText,_bankName, name _player, getplayeruid _player]] remoteExec ["server_fnc_log",2]; 

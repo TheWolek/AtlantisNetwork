@@ -10,7 +10,7 @@ if(_object gethit "motor" > 0.9 && _object iskindof "car") exitwith {
 		_chance = random ( 100 );
 		if(_chance > 85) then {
 			player removeitem "cg_engine"; 
-			["You consumed your engine repair kit on the vehicle.", true] spawn domsg;
+			["Zużyłeś zestaw naprawczy silnika w pojeździe.", true] spawn domsg;
 		};
 	};
 	_repaired = false;
@@ -21,7 +21,7 @@ if(_object gethit "motor" > 0.9 && _object iskindof "car") exitwith {
 
 	if(_repaired) exitwith {};
 
-	["You need a repairman, a tow to a garage or an engine to fix this - its too damaged!", true] spawn domsg; 
+	["Potrzebujesz naprawy, holowania do garażu lub silnika, żeby to naprawić - jest zbyt uszkodzony!", true] spawn domsg; 
 };
 
 _wheels = {_x == "CG_wheel"} count magazines player;
@@ -42,9 +42,9 @@ if(_wheels > 0) exitwith {
 			_chance = 10;
 			if(random(100) < _chance) then {
 				player removeitem "CG_wheel";
-				["You have replaced the wheel on the vehicle and the repair kit broke.", true] spawn domsg;
+				["Wymieniłeś koło w pojeździe i zestaw naprawczy pękł.", true] spawn domsg;
 			} else {
-				["You have replaced the wheel on the vehicle.", true] spawn domsg;
+				["Wymieniłeś koło w pojeździe.", true] spawn domsg;
 			};
 
 		};
@@ -53,4 +53,4 @@ if(_wheels > 0) exitwith {
 	
 };
 
-["You need a wheel to fix this vehicle.", true] spawn domsg;
+["Potrzebujesz koła do naprawienia tego pojazdu.", true] spawn domsg;

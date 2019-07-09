@@ -17,4 +17,4 @@ while {_n > 0} do {
 };
 
 [name player, getpos player, player] remoteexec ["client_fnc_jurycall",_players];
-["Jury has been called - please wait.", true] spawn domsg;
+["Sąd został wywołane - proszę czekać.", true] spawn domsg;

@@ -2,7 +2,7 @@
 //[_location] remoteExec ["client_fnc_startSecurity",_player];
 //[getpos player,] remoteExec ["client_fnc_startGarbage",_player];
 // use lexus with directionals only.
-if(myjob != "none" && myjob != "bus") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none" && myjob != "bus") exitwith { ["Masz już pracę!", true] spawn domsg; };
 
 if(isnil "taskrunning") then { taskrunning = false; };
 
@@ -32,7 +32,7 @@ if(!taskrunning) then {
 
 				if(_warnings > 10) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 				};
 
 
@@ -40,7 +40,7 @@ if(!taskrunning) then {
 
 				if(_warnings > 10) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 				};
 
 				if(player distance vehspawned > 20) then { _warnings = _warnings + 1; };
@@ -49,7 +49,7 @@ if(!taskrunning) then {
 
 				if(player distance ((playertasks select 0) select 0) < 15) then {
 
-					["You have arrived, wait a few seconds for passengers!", true] spawn domsg;
+					["Przyjechałeś, poczekaj kilka sekund na pasażerów!", true] spawn domsg;
 					paycheck = paycheck + 135;
 
 					_pia = [[6297.1,1343.93,1.05324],[6578.3,2126.49,1.05263],[7754.72,2567.81,1.0542],[9767.67,3439.07,0.00143814],[9608.97,4133.95,0.00143814],[9403,5476.09,0.00148773],
@@ -87,7 +87,7 @@ if(!taskrunning) then {
 
 
 
-					if(random(100) > 90) then { _nearPlayers = player nearEntities ["man", 30]; {_nearplayers pushback _x; }foreach crew vehicle player; [format["%1 is the next stop!",((playertasks select 0) select 1)],false] remoteexec ["domsg",_nearPlayers]; };
+					if(random(100) > 90) then { _nearPlayers = player nearEntities ["man", 30]; {_nearplayers pushback _x; }foreach crew vehicle player; [format["%1 jest następny przystanek!",((playertasks select 0) select 1)],false] remoteexec ["domsg",_nearPlayers]; };
 					
 					[((playertasks select 0) select 0)] call client_fnc_jobMarker;			
 					uisleep 5;

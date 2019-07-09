@@ -46,7 +46,7 @@ if(_lights != _garageselection select 6) then { _price = _price + 1000; };
 if(_wheels != _garageselection select 4) then { _price = _price + 1000; };	
 
 _cashcheck = [1,_price] call client_fnc_checkmoney;
-if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",_price call client_fnc_numberText], true] spawn domsg; };	
+if!(_cashCheck) exitwith { [format["%1 - Nie masz dość pieniędzy, aby za to zapłacić!",_price call client_fnc_numberText], true] spawn domsg; };	
 
 [_price] call Client_fnc_removeCash;
 
@@ -69,5 +69,5 @@ _plate = _garageselection select 0;
 
 [_windows,_lights,_wheels,_finish,_color,_garage,_plate,player,_spoiler] REMOTEEXEC ["SERVER_FNC_UPGRADEVEHICLEPARTS",2];
 
-["Vehicle has been updated.", true] spawn domsg;
+["Pojazd został ulepszony.", true] spawn domsg;
 

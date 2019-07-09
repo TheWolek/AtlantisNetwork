@@ -26,37 +26,37 @@ lbClear _list;
 
 if(adminLevel >= 7) then {
 
-	_list lbAdd format["%1", "ESP Toggle"];
+	_list lbAdd format["%1", "ESP Włącz"];
 	_list lbSetdata [(lbSize _list)-1,str(18)];
 	
 	_list lbAdd format["%1", "Sync Data"];
 	_list lbSetdata [(lbSize _list)-1,str(8)];
 
-	_list lbAdd format["%1", "Teleport To"];
+	_list lbAdd format["%1", "Teleportuj do"];
 	_list lbSetdata [(lbSize _list)-1,str(1)];
 
-	_list lbAdd format["%1", "Teleport To Me"];
+	_list lbAdd format["%1", "Teleportuj do mnie"];
 	_list lbSetdata [(lbSize _list)-1,str(2)];
 	
-	_list lbAdd format["%1", "Kick Target"];
+	_list lbAdd format["%1", "wyrzuć osobę"];
 	_list lbSetdata [(lbSize _list)-1,str(27)];
 	
-	_list lbAdd format["%1", "Full Heal"];
+	_list lbAdd format["%1", "Pełne Żyice"];
 	_list lbSetdata [(lbSize _list)-1,str(13)];
 
-	_list lbAdd format["%1", "Revive"];
+	_list lbAdd format["%1", "Zresp"];
 	_list lbSetdata [(lbSize _list)-1,str(14)];
 	
-	_list lbAdd format["%1", "Repair Car"];
+	_list lbAdd format["%1", "Napraw Auto"];
 	_list lbSetdata [(lbSize _list)-1,str(28)];
 
-	_list lbAdd format["%1", "Kill Target"];
+	_list lbAdd format["%1", "Zabij osobę"];
 	_list lbSetdata [(lbSize _list)-1,str(7)];
 
-	_list lbAdd format["%1", "Freeze"];
+	_list lbAdd format["%1", "Zamroż"];
 	_list lbSetdata [(lbSize _list)-1,str(9)];
 
-	_list lbAdd format["%1", "UnFreeze"];
+	_list lbAdd format["%1", "odzamroż"];
 	_list lbSetdata [(lbSize _list)-1,str(10)];
 
 	_list lbAdd format["%1", "God Mode On"];

@@ -1,7 +1,7 @@
 	if(PhoneDisabled) then {
 		PhoneDisabled = false;
-		["Your calls are enabled!", false] spawn domsg; 
+		["Twoje połączenia są włączone!", false] spawn domsg; 
 	} else {
 		PhoneDisabled = true;
-		["Your calls are disabled!", false] spawn domsg; 
+		["Twoje połączenia są wyłączone!", false] spawn domsg; 
 	};	

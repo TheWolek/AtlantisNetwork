@@ -8,4 +8,4 @@ deletevehicle _bar;
 
 player additemtobackpack "np_goldbar";
 
-["You picked up a Gold Bar", true] spawn domsg;
+["Zdobyłeś sztabkę złota", true] spawn domsg;

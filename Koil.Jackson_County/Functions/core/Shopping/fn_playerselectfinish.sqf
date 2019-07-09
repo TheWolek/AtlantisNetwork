@@ -6,8 +6,8 @@
 disableSerialization;
 _answer = _this select 0;
 
-if(_answer == "Female") then { Female = true; player forceAddUniform "EF_FEM_4_2LPBP2"; };
-if(_answer == "Male") then { Female = false; player adduniform "U_C_TeeSurfer_shorts_1"; };
+if(_answer == "Kobieta") then { Female = true; player forceAddUniform "EF_FEM_4_2LPBP2"; };
+if(_answer == "Mężczyzna") then { Female = false; player adduniform "U_C_TeeSurfer_shorts_1"; };
 
 _display = findDisplay 1444;
 _control = _display displayCtrl 1500;

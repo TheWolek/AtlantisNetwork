@@ -258,7 +258,7 @@ class garage2
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fetch Car"; //--- ToDo: Localize;
+			text = "Weż samochód"; //--- ToDo: Localize;
 			x = 0.315 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
 			w = 0.09 * safezoneW;
@@ -349,7 +349,7 @@ class garage3
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fetch Work Car"; //--- ToDo: Localize;
+			text = "Weż samochód firmy"; //--- ToDo: Localize;
 			x = 0.315 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
 			w = 0.09 * safezoneW;
@@ -442,7 +442,7 @@ class garage
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fetch Car"; //--- ToDo: Localize;
+			text = "Weż samochód"; //--- ToDo: Localize;
 			x = 0.315 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
 			w = 0.09 * safezoneW;
@@ -537,7 +537,7 @@ class EnterLicense {
 		};	
 		class PurchaseOption : HideButton {
 			idc = 9995;
-			text = "Purchase";
+			text = "Kup";
 			onButtonClick = "[] spawn client_fnc_processPlates";
 			x = 0.40229 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -547,7 +547,7 @@ class EnterLicense {
 
 		class CloseOption : HideButton {
 			idc = 9996;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = 0.40229 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
@@ -631,7 +631,7 @@ class garageplates
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fetch Car"; //--- ToDo: Localize;
+			text = "Weż samochód"; //--- ToDo: Localize;
 			x = 0.315 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
 			w = 0.09 * safezoneW;
@@ -642,7 +642,7 @@ class garageplates
 		class RscButton_1601: HideButton
 		{
 			idc = 1601;
-			text = "Change Plates"; //--- ToDo: Localize;
+			text = "Zmień Tablice Rejestracyjną"; //--- ToDo: Localize;
 			x = 0.46 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
 			w = 0.09 * safezoneW;

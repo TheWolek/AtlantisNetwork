@@ -7,7 +7,7 @@ if(myjob == "towtruck") then {
 
 	if(currentcursortarget getVariable ["requestImpound", false]) then {
 		paycheck = paycheck + 300;
-		[ format["You received %1 bonus because this vehicle was requested to be impounded.", 300 call client_fnc_numberText] , false ] spawn domsg;
+		[ format["Zdobyłeś %1 premi, ponieważ ten pojazd został poproszony o zatrzymanie.", 300 call client_fnc_numberText] , false ] spawn domsg;
 	};
 
 	_level_check = (client_level_array select 4);

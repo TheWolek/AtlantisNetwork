@@ -13,7 +13,7 @@ lastforcesync = time;
 
 _nearc = nearestObjects[getPos player,["plp_ct_woodboxlightbig"],55];
 
-if(count _nearc > 0) exitwith { ["You can not do this while a crate is out", true] spawn domsg; };
+if(count _nearc > 0) exitwith { ["Nie możesz tego zrobić, gdy skrzynia jest wyłączona", true] spawn domsg; };
 
 _toDo = _this select 1;
 if(_toDo == "nameUpdate") exitwith {
@@ -22,7 +22,7 @@ if(_toDo == "nameUpdate") exitwith {
 	[player,_newName] remoteExec ["server_fnc_StoreUpdateName",2];
 };
 if(_toDo == "finishUpdate") exitwith {
-	["Your shop changes have been stored to the database, players will now see the new prices.", true] spawn domsg;
+	["Twoje zmiany w sklepie zostały zapisane w bazie danych, gracze zobaczą teraz nowe ceny.", true] spawn domsg;
 	[player,shopcontent] remoteExec ["server_fnc_finishStoreUpdate",2];
 };
 
@@ -31,7 +31,7 @@ if(_toDo == "start") then {
 		closedialog 0; 
 		createdialog "shop_update"; 
 	};
-	["Please update your shop prices", true] spawn domsg;
+	["Zaktualizuj ceny w sklepie", true] spawn domsg;
 };
 
 if(!dialog) then { createdialog "shop_update"; };

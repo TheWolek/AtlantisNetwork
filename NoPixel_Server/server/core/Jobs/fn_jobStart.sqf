@@ -15,7 +15,7 @@ if (str _jobtype find "Cop" > -1) exitwith {
 		publicvariable "currentCop";
 		//make a group and add them? easier for map locations / gps tracking.
 	} else {
-		["Too many on duty",true] remoteexec ["domsg",_player];
+		["Zbyt wielu na służbie",true] remoteexec ["domsg",_player];
 	};
 };
 
@@ -28,7 +28,7 @@ if (str _jobtype find "EMS" > -1) exitwith {
 		publicvariable "currentEMS";
 	} else {
 		//return error.
-		["Too many on duty",true] remoteexec ["domsg",_player];
+		["Zbyt wielu na służbie",true] remoteexec ["domsg",_player];
 	};
 };
 
@@ -39,7 +39,7 @@ if (str _jobtype find "Mafia" > -1) exitwith {
 		publicvariable "currentMafia";
 	} else {
 		//return error.
-		["Too many on duty",true] remoteexec ["domsg",_player];
+		["Zbyt wielu na służbie",true] remoteexec ["domsg",_player];
 	};	
 };
 

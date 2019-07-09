@@ -1,5 +1,5 @@
 //[position,type IE "Murder" or "Vehicle Accident"] remoteExec ["client_fnc_startNews",_player];
-if(myjob != "none") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none") exitwith { ["Masz już pracę!", true] spawn domsg; };
 if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "NewsMan";
@@ -15,18 +15,18 @@ if(!taskrunning) then {
 		while{taskrunning} do {
 			uisleep 3;
 			if(playertasks isequalto []) then {
-				["You have no current jobs!", true] spawn domsg;
+				["Nie masz aktualnych ofert pracy!", true] spawn domsg;
 				uisleep 60;
 			} else {
 
 				if(player distance ((playertasks select 0) select 0) < 15) then {
-					["You have arrived, get the cameras rolling!", true] spawn domsg;
+					["Przyjechałeś, włączaj kamery!", true] spawn domsg;
 					paycheck = paycheck + 30;
 					playertasks deleteat 0;
 					deletemarkerlocal format["job%1",getPlayerUID player];
 					uisleep 3;
 				} else {
-					[format ["Your current Job (Marked on the Map): Job Type - %1", ((playertasks select 0) select 1)], false] spawn doquickmsg;
+					[format ["Twoja aktualna praca (zaznaczona na mapie): Typ pracy - %1", ((playertasks select 0) select 1)], false] spawn doquickmsg;
 					[((playertasks select 0) select 0)] call client_fnc_jobMarker;			
 					uisleep 30;
 				};

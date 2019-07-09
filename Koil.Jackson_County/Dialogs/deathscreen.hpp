@@ -20,7 +20,7 @@ class DeathScreen
 			y = 0.522 * safezoneH + safezoneY;
 			w = 0.0878542 * safezoneW;
 			h = 0.0461907 * safezoneH;
-			text = "Respawn";
+			text = "Odródz się";
 			onButtonClick = "closeDialog 0; [] call client_fnc_startFresh;";
 			colorBackground[] = {0, 0, 0, 1};
 			class Attributes 
@@ -34,7 +34,7 @@ class DeathScreen
 			idc = 7301;
 			type = 13;
 			style = 0;
-			text = "You are severely injured!";
+			text = "Jesteś poważnie ranny!";
 			size = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			colorText[] = {1, 1, 1, 1.0};
 			class Attributes {

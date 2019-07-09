@@ -33,12 +33,12 @@ while{taskrunning} do {
 			_garbageLevel = 0;
 			playertasks pushback [[1064,3667,0.014],"dump"];	
 			[getpos ((playertasks select 0) select 0)] call client_fnc_jobMarker;
-			["Your current Job (Marked on the Map): Garbage Pickup", true] spawn domsg;			
+			["Twoja aktualna praca (zaznaczona na mapie): Odbiór śmieci", true] spawn domsg;			
 		} else {
 			mybin = mapBins call BIS_fnc_selectRandom;
 			playertasks pushback [mybin,"bin"];
 			[getpos ((playertasks select 0) select 0)] call client_fnc_jobMarker;
-			["Your current Job (Marked on the Map): Garbage Pickup", true] spawn domsg;
+			["Twoja aktualna praca (zaznaczona na mapie): Odbiór śmieci", true] spawn domsg;
 		};
 	} else {
 
@@ -46,12 +46,12 @@ while{taskrunning} do {
 		_warning = _warnings + 1;
 		if(_warnings > 150) then { 
 			taskrunning = false; 
-			["You have been laid off from your job!", true] spawn domsg; 
+			["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 		};
 
 		if !( (getmarkerpos _markername select 0) isEqualTo (getpos ((playertasks select 0) select 0) select 0) && (getmarkerpos _markername select 1) isEqualTo (getpos ((playertasks select 0) select 0) select 1) ) then {
 			[getpos ((playertasks select 0) select 0)] call client_fnc_jobMarker;
-			["Your current Job (Marked on the Map): Garbage Pickup", true] spawn domsg;
+			["Twoja aktualna praca (zaznaczona na mapie): Odbiór śmieci", true] spawn domsg;
 		};
 
 
@@ -74,7 +74,7 @@ while{taskrunning} do {
 
 			if(((playertasks select 0) select 1) == "player") then {
 				//create function here to pick up player dropped garbage then pay the user.
-				["Pick up the rubbish pile around you.", true] spawn domsg;
+				["Podnieś stos śmieci wokół siebie.", true] spawn domsg;
 				_garbagelevel = _garbagelevel + 1;
 			};
 

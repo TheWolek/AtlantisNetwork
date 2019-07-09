@@ -3,7 +3,7 @@
 // CANDIDATES PUSHBACK [player,0];
 
 disableserialization;
-if(isNil "candidates") exitwith { ["Election not running", true] spawn domsg; closedialog 0; };
+if(isNil "candidates") exitwith { ["Wybory nie są uruchomione", true] spawn domsg; closedialog 0; };
 
 _display = findDisplay 9999;
 _list = _display displayCtrl 9001;

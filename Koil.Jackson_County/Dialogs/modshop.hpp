@@ -102,7 +102,7 @@ class mod_shop
 			idc = 15006;
 			x = 0.699 * safezoneW + safezoneX;
 			y = 0.29 * safezoneH + safezoneY;
-			text = "Window Tint";			
+			text = "Odcień okna";			
 		};
 
 		class RscListbox_Tint_Wheel: client_RscXSliderH
@@ -118,13 +118,13 @@ class mod_shop
 			idc = 15008;
 			x = 0.895 * safezoneW + safezoneX;
 			y = 0.29 * safezoneH + safezoneY;
-			text = "Light Tint";		
+			text = "Jasny odcień";		
 		};
 
 		class RscButtonMenu_Commit : client_RscButtonMenu 
 		{
 			idc = 15009;
-			text = "Buy Car";
+			text = "Kup Auto";
 			onButtonClick = "[_this, 'commit'] call client_fnc_modShop;";
 			x = 0.85;
 			y = 0.95;

@@ -1,8 +1,8 @@
 /*
 _textures = getArray(configfile >> "cfgivorytextures" >> "textures"); ["%1",_textures, true] spawn domsg;
 [this] call ivory_fnc_initVehicle;
-    This will randomize the color of the body, ceteris paribus.
-    This will turn the car into Matte Olive Green with White rims and 100% tint on windows and 50% tint on lights.
+    Spowoduje to losowanie koloru ciała, ceteris paribus.
+    Spowoduje to przekształcenie samochodu w Matte Olive Green z białymi felgami i 100% odcieniem w oknach i 50% odcieniem w świetle.
 [this] call ivory_fnc_setLicense;
 vehspawned = createVehicle ["ivory_r34", getpos player, [], 0, "NONE"];
 [vehicle player, "nopixel"] call ivory_fnc_setLicense;

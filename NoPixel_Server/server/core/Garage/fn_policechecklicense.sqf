@@ -24,5 +24,5 @@ if(_booli) then {
 
 	[format["License: %1 - Car: %2 - Color: %3 - Owner: %4",toUpper(_fetch select 0),getText(configFile >> "cfgVehicles" >> (_fetch select 1) >> "displayName"),(_fetch select 2),name _owner], true] remoteexec ["domsg",_officer];
 } else {
-	["This plate returned no results in the DMV database.", true] remoteexec ["domsg",_officer];
+	["Ta rejestracja wróciła do bazy danych DMV.", true] remoteexec ["domsg",_officer];
 };

@@ -1,5 +1,5 @@
 _required = _this select 0;
-if(checkFinish) exitwith { ["You need to wait before doing that!", true] spawn domsg; };
+if(checkFinish) exitwith { ["Musisz poczekać, zanim to zrobisz!", true] spawn domsg; };
 
 
 

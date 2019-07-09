@@ -51,7 +51,7 @@ _civilianVehicle = player getvariable "garage";
 
 
 if(_whatdo == "NEW") exitwith {
-	["Wheels / Windows / Lights cost $1,000.00 EACH - Paints based on finish.",false] spawn doquickmsg; 
+	["Wheels / Windows / Światła kosztują $ 1,000.00 - Farby oparte na wykończeniu.",false] spawn doquickmsg; 
 	_display = findDisplay 1444;
 	_list = _display displayCtrl 1500;
 
@@ -74,7 +74,7 @@ if(_whatdo == "NEW") exitwith {
 		_class = _x select 0;
 		_cost = _x select 1;	
 		_FinishDisplayName = getText(configFile >> "CfgIvoryMaterials" >> _class >> "displayName");
-		_list lbAdd format["COST: %2 - %1",_FinishDisplayName,_cost call client_fnc_numberText];
+		_list lbAdd format["KOSZT: %2 - %1",_FinishDisplayName,_cost call client_fnc_numberText];
 		_list lbSetdata [(lbSize _list)-1,str([_class, _cost])];
 	} foreach _finishes;
 

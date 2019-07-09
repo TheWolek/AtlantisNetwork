@@ -9,7 +9,7 @@ private["_cost","_error","_materials","_n","_i","_iMafiaClasses"];
 _status = lbData[1113,lbCurSel (1113)];
 _status = call compile format["%1", _status];
 
-_mainMenus = ["Pistols","Large Weapons","Items","Foods","Clothing","Quality Clothing"];
+_mainMenus = ["Pistolety","Broń Długa","Itemy","Jedzenie","Ubrania","Odzież wysokiej jakości"];
 
 _materials = ["NP_Wood","np_copperbar1","np_ironbar1","np_silverbar1","CG_OilCanister"];
 
@@ -320,7 +320,7 @@ if((_this select 0) == "REFRESH") exitwith {
 		_myArray = _PricesPistolClasses select _mySelect;
 		_mags = _PistolMags;
 		_Btn4 = _display displayCtrl 1110;
-		_Btn4 ctrlSetStructuredText parsetext format["<t color='#33CC33'> %1 <t color='#ffffff'> <br/> Wood: %2 <br/> Copper: %3 <br/> Iron: %4 <br/> Silver: %5 <br/> Oil: %6 <br/><br/><t color='#33CC33'>Magazine Cost <t color='#ffffff'> <br/> Wood: %7 <br/> Copper: %8 <br/> Iron: %9 <br/> Silver: %10 <br/> Oil: %11 ",_selectedWeapon,(_myArray select 0),(_myArray select 1),(_myArray select 2),(_myArray select 3),(_myArray select 4),(_Mags select 0),(_Mags select 1),(_Mags select 2),(_Mags select 3),(_Mags select 4)];
+		_Btn4 ctrlSetStructuredText parsetext format["<t color='#33CC33'> %1 <t color='#ffffff'> <br/> Drewno: %2 <br/> Miedź: %3 <br/> Żelazo: %4 <br/> Srebro: %5 <br/> olej: %6 <br/><br/><t color='#33CC33'>Koszt magazynu <t color='#ffffff'> <br/> drewno: %7 <br/> Miedź: %8 <br/> Żelazo: %9 <br/> Srebro: %10 <br/> Oil: %11 ",_selectedWeapon,(_myArray select 0),(_myArray select 1),(_myArray select 2),(_myArray select 3),(_myArray select 4),(_Mags select 0),(_Mags select 1),(_Mags select 2),(_Mags select 3),(_Mags select 4)];
 		_btn4 ctrlCommit 0;
 	};
 
@@ -335,7 +335,7 @@ if((_this select 0) == "REFRESH") exitwith {
 		_myArray = _iPricesMafiaClasses select _mySelect;
 		_mags = _iMafiaMags;
 		_Btn4 = _display displayCtrl 1110;
-		_Btn4 ctrlSetStructuredText parsetext format["<t color='#33CC33'> %1 <t color='#ffffff'> <br/> Wood: %2 <br/> Copper: %3 <br/> Iron: %4 <br/> Silver: %5 <br/> Oil: %6 <br/><br/><t color='#33CC33'>Magazine Cost <t color='#ffffff'> <br/> Wood: %7 <br/> Copper: %8 <br/> Iron: %9 <br/> Silver: %10 <br/> Oil: %11 ",_selectedWeapon,(_myArray select 0),(_myArray select 1),(_myArray select 2),(_myArray select 3),(_myArray select 4),(_Mags select 0),(_Mags select 1),(_Mags select 2),(_Mags select 3),(_Mags select 4)];
+		_Btn4 ctrlSetStructuredText parsetext format["<t color='#33CC33'> %1 <t color='#ffffff'> <br/> Drewno: %2 <br/> Miedź: %3 <br/> Żelazo: %4 <br/> Srebro: %5 <br/> olej: %6 <br/><br/><t color='#33CC33'>Koszt magazynu <t color='#ffffff'> <br/> drewno: %7 <br/> Miedź: %8 <br/> Żelazo: %9 <br/> Srebro: %10 <br/> Oil: %11 ",_selectedWeapon,(_myArray select 0),(_myArray select 1),(_myArray select 2),(_myArray select 3),(_myArray select 4),(_Mags select 0),(_Mags select 1),(_Mags select 2),(_Mags select 3),(_Mags select 4)];
 		_btn4 ctrlCommit 0;
 	};
 
@@ -353,7 +353,7 @@ if((_this select 0) == "REFRESH") exitwith {
 		_myArray = _PricesItemList select _myselect;
 
 		_Btn4 = _display displayCtrl 1110;
-		_Btn4 ctrlSetStructuredText parsetext format["<t color='#33CC33'> %1 <t color='#ffffff'> <br/> Wood: %2 <br/> Copper: %3 <br/> Iron: %4 <br/> Silver: %5 <br/> Oil: %6",_selectedweapon,(_myArray select 0),(_myArray select 1),(_myArray select 2),(_myArray select 3),(_myArray select 4)];
+		_Btn4 ctrlSetStructuredText parsetext format["<t color='#33CC33'> %1 <t color='#ffffff'> <br/> Drewno: %2 <br/> Miedź: %3 <br/> Żelazo: %4 <br/> Srebro: %5 <br/> olej: %6",_selectedweapon,(_myArray select 0),(_myArray select 1),(_myArray select 2),(_myArray select 3),(_myArray select 4)];
 		_btn4 ctrlCommit 0;
 	};
 
@@ -448,7 +448,7 @@ if(isNil "_status") exitwith { ["Error with Selection!", true] spawn domsg; };
 	_btn2 ctrlShow true;
 	_btn5 ctrlShow true;
 
-if(_status == "Pistols") exitwith {
+if(_status == "Pistolety") exitwith {
 
 	{
 		_selectedweapon = (configfile >> "CfgWeapons" >> _x >> "displayName") call BIS_fnc_getCfgData;
@@ -458,7 +458,7 @@ if(_status == "Pistols") exitwith {
 
 };
 
-if(_status == "Large Weapons") exitwith {
+if(_status == "Broń Długa") exitwith {
 
 	{
 		_selectedweapon = (configfile >> "CfgWeapons" >> _x >> "displayName") call BIS_fnc_getCfgData;
@@ -468,7 +468,7 @@ if(_status == "Large Weapons") exitwith {
 
 };
 
-if(_status == "Items") exitwith {
+if(_status == "Itemy") exitwith {
 
 	{
 		_selectedweapon = (configfile >> "CfgMagazines" >> _x >> "displayName") call BIS_fnc_getCfgData;
@@ -479,7 +479,7 @@ if(_status == "Items") exitwith {
 };
 
 
-if(_status == "Foods") exitwith {
+if(_status == "Jedzenie") exitwith {
 
 	{
 		_selectedweapon = (configfile >> "CfgMagazines" >> _x >> "displayName") call BIS_fnc_getCfgData;
@@ -490,7 +490,7 @@ if(_status == "Foods") exitwith {
 };
 
 
-if(_status == "Clothing") exitwith {
+if(_status == "Ubrania") exitwith {
 
 	{
 		_selectedweapon = (configfile >> "CfgWeapons" >> _x >> "displayName") call BIS_fnc_getCfgData;
@@ -500,7 +500,7 @@ if(_status == "Clothing") exitwith {
 
 };
 
-if(_status == "Quality Clothing") exitwith {
+if(_status == "Odzież wysokiej jakości") exitwith {
 
 	{
 		_selectedweapon = (configfile >> "CfgWeapons" >> _x >> "displayName") call BIS_fnc_getCfgData;

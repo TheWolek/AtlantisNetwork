@@ -76,7 +76,7 @@ if(myjob == "Biker") then { _cashout = _cashout * 2.25 };
 
 [_cashout,true,true] call Client_fnc_addMoneyToPlayer;
 
-["You made %1 from this drug run.",_cashout call client_fnc_numberText, true] spawn domsg;
+["Zrobiłeś %1 z tego biegu narkotyków.",_cashout call client_fnc_numberText, true] spawn domsg;
 
 if(myJob != "Biker") exitwith {};
 [1,_total,player,getpos player] remoteExec ["server_fnc_gunJob",2];

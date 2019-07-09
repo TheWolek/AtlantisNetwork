@@ -53,5 +53,5 @@ if(!_escaped) then {
 	player setvariable ["JailTracked",nil,true]; 
 	removeuniform player;
 } else {
-	["You escaped jail, you criminal!", true] spawn domsg;
+	["Uciekłeś z więzienia, przestępco ezklap!", true] spawn domsg;
 };

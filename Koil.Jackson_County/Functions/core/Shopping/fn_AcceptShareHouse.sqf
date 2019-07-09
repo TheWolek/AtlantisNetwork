@@ -1,4 +1,4 @@
-if (isNull houseinvitation) exitwith { ["House timer run out", true] spawn domsg; };
+if (isNull houseinvitation) exitwith { ["Zabrakło czasu ", true] spawn domsg; };
 
 _them = houseinvitation;
 

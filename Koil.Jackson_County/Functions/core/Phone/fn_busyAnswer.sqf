@@ -1,3 +1,3 @@
 	tryingcall = false;
 	playSound "cgphone_hangup";
-	["This phone is in a call - try texting!", false] spawn domsg; 
+	["Ten telefon jest w trakcie rozmowy - spróbuj wysłać SMS-a!", false] spawn domsg; 

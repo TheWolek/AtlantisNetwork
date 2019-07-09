@@ -16,7 +16,7 @@ for [{_x=1},{_x<=25},{_x=_x+1}] do {
  
 };
 
-cutText ["YOU HAVE BEEN PARALYZED. YOU MAY TALK, BUT NOT MOVE.","PLAIN"];
+cutText ["ZOSTAŁEŚ PARALIZOWANY. MOŻESZ MÓWIĆ, ALE NIE RUSZAĆ SIĘ.","PLAIN"];
 
 [_unit] remoteExec ["server_fnc_requestMedic", 2];
 
@@ -118,16 +118,16 @@ if(_fuck != _you) then {
 	if(_fuck find "Error: " > -1) then {
 		[getpos _unit, "News", "Vehicle Accident"] remoteexec ["server_fnc_giveTask",2];
 		
-		["You have been downed because of an unknown reason.", false] spawn domsg; 
+		["Zostałeś zestrzelony z nieznanego powodu.", false] spawn domsg; 
 		shooting_death = false;
 
-		["death", format["%1 (%2) was downed because of an unknown reason.", name _unit, getplayeruid _unit]] remoteExec ["server_fnc_log",2];
+		["death", format["%1 (%2) został zestrzelony z nieznanego powodu.", name _unit, getplayeruid _unit]] remoteExec ["server_fnc_log",2];
 	} else {
 		[getpos _unit, "News", "Shooting"] remoteexec ["server_fnc_giveTask",2];
 		if(_headshot == 1) then { 
-			[format["%1 (%2) headshotted and downed you at a distance of %3m with a(n) %4.", _fuck, _fuck2, _killdistance, _killweapon], false] spawn domsg;  
+			[format["%1 (%2) strzał w głowę i zestrzelił cię w odległości 3% za pomocą(n) %4.", _fuck, _fuck2, _killdistance, _killweapon], false] spawn domsg;  
 		} else { 
-			[format["%1 (%2) downed you at a distance of %3m with a(n) %4.", _fuck, _fuck2, _killdistance, _killweapon], false] spawn domsg; 
+			[format["%1 (%2) zestrzelił cię w odległości 3% za pomocą(n) %4.", _fuck, _fuck2, _killdistance, _killweapon], false] spawn domsg; 
 		};
 
 		["Add","Karma",random(125),"Stress"] remoteexec ["client_fnc_sustain",_killer];
@@ -171,7 +171,7 @@ if(_fuck != _you) then {
 
 		};
 
-		["death", format["%1 (%2) was downed by %3 (%4) at a distance of %5m using a(n) %6.", name _unit, getplayeruid _unit, name _killer, getplayeruid _killer, _killdistance, _killweapon]] remoteExec ["server_fnc_log",2];
+		["death", format["%1 (%2) został zestrzelony przez% 3 (% 4) w odległości% 5m za pomocą a(n) %6.", name _unit, getplayeruid _unit, name _killer, getplayeruid _killer, _killdistance, _killweapon]] remoteExec ["server_fnc_log",2];
 
 
 		
@@ -182,7 +182,7 @@ if(_fuck != _you) then {
 	[getpos _unit, "News", "Unknown Death"] remoteexec ["server_fnc_giveTask",2];
 	["You have been downed because of an unknown reason.", false] spawn domsg; 
 
-	["death", format["%1 (%2) was downed because of an unknown reason.", name _unit, getplayeruid _unit]] remoteExec ["server_fnc_log",2];
+	["death", format["%1 (%2) został zestrzelony z nieznanego powodu.", name _unit, getplayeruid _unit]] remoteExec ["server_fnc_log",2];
 };
 
 [] spawn {
@@ -204,7 +204,7 @@ _unit spawn
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
 	_RespawnBtn ctrlEnable true;
 	(findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == (_this select 1)) then {true}"];
-	_Timer ctrlSetText "Your timer has run out. Press respawn in order to wake up at the Hospital.";
+	_Timer ctrlSetText "Twój czas się skończył. Naciśnij respawn, aby obudzić się w szpitalu.";
 	"colorCorrections" ppEffectEnable true;     
 	"colorCorrections" ppEffectAdjust [1, 1, -0.003, [0.0, 0.0, 0.0, 1.0], [0, 0, 0, 1],  [0, 0, 0, 0.0]];  
 	"colorCorrections" ppEffectCommit 5; 

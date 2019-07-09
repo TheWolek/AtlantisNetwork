@@ -8,9 +8,9 @@ closedialog 0;
 
 _owed = _amountcheck + (_amountcheck / 10);
 
-if(mafiabank < _amountcheck) exitwith { ["Mafia cant afford this. How embarrassing. ", true] spawn domsg; };
+if(mafiabank < _amountcheck) exitwith { ["Mafia nie może sobie na to pozwolić. Ale wstyd. ", true] spawn domsg; };
 
-[format["You have been given a loan of %1 - you must pay back %2",_amountcheck,_owed], true] spawn domsg;
+[format["Otrzymałeś pożyczkę w wysokości %1 - musisz spłacić %2",_amountcheck,_owed], true] spawn domsg;
 
 loan SET [0,_amount select 0];
 loan SET [2,_amount select 2];

@@ -25,7 +25,7 @@ if (time >= wantedTimer + 300 && count currentMarshals > 0) then {
 
         [getPos player, format["Spotted %1", name player], "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
         wantedTimer = time;
-        [format["Dispatch to %1: %2 has been spotted at %3 using an ATM.", _nearest getVariable "badgeNumber", name player, mapGridPosition getPos player], true] remoteExec ["domsg", currentMarshals];
+        [format["Dispatch to %1: %2 został zauważony w% 3 za pomocą bankomatu.", _nearest getVariable "badgeNumber", name player, mapGridPosition getPos player], true] remoteExec ["domsg", currentMarshals];
 
     };
 };
