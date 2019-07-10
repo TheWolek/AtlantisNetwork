@@ -934,6 +934,8 @@ NoPixel_InteractionMenuItems = [
 		["Napad Na Sklep", "closedialog 0; [] spawn client_fnc_robberyStore;",3]
 	],
 
+
+	//common shops
 	[
 		["typeof CurrentCursorTarget IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F']"],
 		["Sklep odzieżowy", "closedialog 0; createdialog 'Clothing_Menu'; ['clothing'] spawn client_fnc_LoadStore;",3]
