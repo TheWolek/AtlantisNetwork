@@ -22,8 +22,7 @@ uisleep 15;
 	[
 		["To jest rok 2019.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],	
 		["Przybyłeś do Atlantis County.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"]
-	],
-	0, safeZoneY + safeZoneH / 2
+	]
 ] spawn BIS_fnc_typeText;
 
 
@@ -42,8 +41,7 @@ _script = [
 	[
 		["Atlantis County niedawno odłączył się od USA,",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
 		["aby twierdzić, że jest niezależny.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
-	],
-	0, safeZoneY + safeZoneH / 2
+	]
 ] spawn BIS_fnc_typeText;
 
 waitUntil { scriptDone _script };
@@ -53,8 +51,7 @@ _script = [
 	[
 		["Ma w pełni funkcjonalny rząd,",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
 		["z burmistrzem, senatem i sądami sądowymi.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
-	],
-	0, safeZoneY + safeZoneH / 2
+	]
 ] spawn BIS_fnc_typeText;
 
 waitUntil { scriptDone _script };
@@ -63,8 +60,7 @@ _script = [
 	[
 		["Twój głos można łatwo usłyszeć,",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
 		["korzystając z prawa do głosowania.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
-	],
-	0, safeZoneY + safeZoneH / 2
+	]
 ] spawn BIS_fnc_typeText;
 
 waitUntil { scriptDone _script };
@@ -73,8 +69,7 @@ _script = [
 	[
 		["Jednak pomimo bycia społeczeństwem demokratycznym,",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
 		["Atlantis County jest pełne przestępców i Felonów.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
-	],
-	0, safeZoneY + safeZoneH / 2
+	]
 ] spawn BIS_fnc_typeText;
 
 waitUntil { scriptDone _script };
@@ -83,8 +78,7 @@ _script = [
 	[
 		["Teraz jest czas, aby wybrać ścieżkę.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
 		["Stań na ziemi lub zdobądź swoje imperium...",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
-	],
-	0, safeZoneY + safeZoneH / 2
+	]
 ] spawn BIS_fnc_typeText;
 
 waitUntil { scriptDone _script };
@@ -108,8 +102,7 @@ _script = [
 	[
 		["Wybierz swoją płeć",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
 		["Można to zmienić; Chociaż może to obejmować zabieg chirurgiczny.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
-	],
-	0, safeZoneY + safeZoneH / 2
+	]
 ] spawn BIS_fnc_typeText;
 
 
@@ -126,8 +119,7 @@ _script = [
 	[
 		["Witamy w Atlantis County!",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
 		["Użyj swojego klawisza Windows do interakcji ze wszystkim.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
-	],
-	0, safeZoneY + safeZoneH / 2
+	]
 ] spawn BIS_fnc_typeText;
 
 waitUntil { scriptDone _script };
@@ -136,8 +128,7 @@ _script = [
 	[
 		["Zacznij od interakcji z przyczepą.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
 		["Masz tam pocztę. baw się dobrze.",0, safeZoneY + safeZoneH / 2,"<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
-	],
-	0, safeZoneY + safeZoneH / 2
+	]
 ] spawn BIS_fnc_typeText;
 
 removeAllItems player;
