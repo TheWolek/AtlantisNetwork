@@ -1,1 +1,0 @@
-[format["%1 właśnie użyłem przestarzałej funkcji i oszukuje!", name player, getplayerUID player], true] remoteexec ["domsg",-2];
