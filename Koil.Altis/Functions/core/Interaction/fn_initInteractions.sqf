@@ -937,7 +937,8 @@ NoPixel_InteractionMenuItems = [
 
 	//common shops
 	[
-		["typeof CurrentCursorTarget IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F']"],
+		//["typeof CurrentCursorTarget IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F']"],
+		["CurrentCursorTarget getVariable['clothing',false]"],
 		["Sklep odzieżowy", "closedialog 0; createdialog 'Clothing_Menu'; ['clothing'] spawn client_fnc_LoadStore;",3]
 	],
 
@@ -982,7 +983,8 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof CurrentCursorTarget IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F','Land_Shop_DED_Shop_01_F','Land_Shop_DED_Shop_02_F']"],
+		//["typeof CurrentCursorTarget IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F','Land_Shop_DED_Shop_01_F','Land_Shop_DED_Shop_02_F']"],
+		["CurrentCursorTarget getVariable['General',false]"],
 		["Sklep Wielobrażowy", "closedialog 0; createdialog 'GeneralStore_Menu'; ['general'] spawn client_fnc_LoadStore;",3]
 	],
 
