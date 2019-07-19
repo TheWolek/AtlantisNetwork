@@ -1,9 +1,9 @@
 params["_key",["_public",false],["_player",ObjNull]];
 
 _fetch = [format["getValue:%1",_key], 2] call ExternalS_fnc_ExtDBasync;
-_fetch = _fetch select 0 select 0;
+_res = _fetch select 0 select 0;
 
-missionNamespace setVariable [_key, _fetch];
+missionNamespace setVariable [_key, _res];
 
 if(_public) then {
     publicVariable _key;
@@ -11,6 +11,6 @@ if(_public) then {
 
 if!(_player isEqualTo ObjNull) then {
 
-    [missionNamespace,[_key,_fetch]] remoteExec["setVariable",_player];
+    [missionNamespace,[_key,_res]] remoteExec["setVariable",_player];
 
 };
