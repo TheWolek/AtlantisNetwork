@@ -68,7 +68,7 @@ if(_type == "Gas") then {
 		_marker setMarkerTypeLocal "hd_dot";
 		_marker setMarkerColorLocal "ColorGreen";
 
-	} forEach (nearestobjects[player,["Land_fs_roof_F"],30000]);
+	} forEach [[1577.61,1077.84,0.00143814],[5862.47,3141.74,0.00143909],[5369.34,5836.63,0.00143814],[7360.6,4042.88,0.00143814]];
 };
 
 if(_type == "Gun") then {
@@ -108,7 +108,7 @@ if(_type == "Garage") then {
 		_marker setMarkerTypeLocal "hd_dot";
 		_marker setMarkerColorLocal "ColorGreen";
 
-	} forEach [[6828.56,1913.19,0.00144005],[8681.84,7012.18,0.00143814],[8948.54,7528.86,0.00143814]];
+	} forEach [[938.832,1207.01,0.00143862]];
 };
 
 if(_type == "Airshop") then {
@@ -236,18 +236,20 @@ if(_type == "Processing" || _type == "All") then {
 
 if(_type == "Misc" || _type == "All") then {
     _arr = [
-        ["Silver Lake Court System", [8637.41,5749.44,0.00143814]],
-        ["SLPD Silver Lake City", [8297.44,3002.32,0.00143814]],
-        ["DoC Silver Lake", [5576.06,6191.3,0.00143433]],
-        ["Silver Rush Hotel & Casino", [4821.5,2123.88,0.00143957]],
-        ["Silverlake Nightclub", [7481.15,2221.23,0.00143814]],
-        ["SLFD Silver Lake North", [9574.12,4165.42,0.00143814]],
-        ["Doncaster Hospital", [388.517,7506.98,0.00146198]],
-        ["SLFD Colchester", [8524.93,6642.69,-0.269258]],
-        ["Silver Lake City Concert Hall", [6736.5,1780.16,0.00144172]],
-		["Muscle Beach Gym", [7523.95,2239.83,0.00143814]],
-		["Impound Lot", [1049.88,3657.15,0.00143814]],
-		["Bank of Silver Lake", [8805.49,7242.14,0.00143814]]
+		["Casino",[933.723,1289.9,0.00143957]],
+        ["Court of Law", [817.614,1637.97,0.00143766]],
+        ["Police Station", [8297.44,3002.32,0.00143814]],
+        //["DoC Silver Lake", [5576.06,6191.3,0.00143433]],
+        //["Silver Rush Hotel & Casino", [4821.5,2123.88,0.00143957]],
+        ["Nightclub", [800.329,1389.63,0.00143814]],
+        //["SLFD Silver Lake North", [9574.12,4165.42,0.00143814]],
+        ["Hospital", [1752.17,2227.06,0.00132751]],
+		["Jail", [6884.91,4046.69,0.00143433]],
+        //["SLFD Colchester", [8524.93,6642.69,-0.269258]],
+        //["Silver Lake City Concert Hall", [6736.5,1780.16,0.00144172]],
+		//["Muscle Beach Gym", [7523.95,2239.83,0.00143814]],
+		["Impound Lot", [3419.04,4382.06,0.00144196]]
+		//["Bank of Silver Lake", [8805.49,7242.14,0.00143814]]
     ];
 
 	{
