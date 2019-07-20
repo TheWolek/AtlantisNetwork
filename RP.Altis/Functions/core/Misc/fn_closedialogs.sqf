@@ -1,1 +1,0 @@
-closedialog 0;
