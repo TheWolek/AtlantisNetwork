@@ -116,7 +116,10 @@ switch (_code) do
 
 				_respawnButton = (findDisplay 49) displayCtrl 1010;
 				_respawnButton ctrlEnable false;
-				
+
+				_abortB = (findDisplay 49) displayCtrl 104;
+				_abortB buttonSetAction "_new = player getVariable 'cashinhand'; [player, 'cashinhand', _new] remoteExec ['Server_fnc_setVariable',2]; _loadout = getunitloadout player; [player, 'getunitloadout', getunitloadout player] remoteExec ['Server_fnc_setVariable',2]; [player,1,getplayeruid player,name player,_loadout] remoteExec ['server_fnc_steppedsync',2];";
+
 				if(deadPlayer) then {
 					_qButton = (findDisplay 49) displayCtrl 104;
 					_qButton ctrlEnable false;
