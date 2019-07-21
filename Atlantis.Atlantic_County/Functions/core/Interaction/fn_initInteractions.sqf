@@ -153,6 +153,7 @@ NoPixel_InteractionMenuItems = [
 		["Sync Data (5min CD)", "	_new = player getVariable 'cashinhand';	[player, 'cashinhand', _new] remoteExec ['Server_fnc_setVariable',2]; _loadout = getunitloadout player; [player, 'getunitloadout', getunitloadout player] remoteExec ['Server_fnc_setVariable',2]; [player,1,getplayeruid player,name player,_loadout] remoteExec ['server_fnc_steppedsync',2]; lastforcesync = time; ",5] 
 	],
 
+	//casino ??
 	[ 
 		["player distance [4821.64,2133.08,0.00143909] < 25"], 
 		["Horse Betting $0-500", " createdialog 'client_phonebet';",5] 
@@ -167,6 +168,7 @@ NoPixel_InteractionMenuItems = [
 		["player distance [4821.92,2139.32,0.00143909] < 25"], 
 		["Slots $100-$1K", "[] spawn client_fnc_slotsStart; ",5] 
 	],
+	//
 
 	[
 		["typeof CursorTarget == 'Land_Market_DED_Market_03_F'"],
@@ -848,6 +850,7 @@ NoPixel_InteractionMenuItems = [
 
 //shops and offices garages etc
 
+	//private shops
 	[
 		["player distance myshop < 3 && !imrestrained"],
 		["Shop Inventory", "['Your crate will automatically despawn in 5 minutes - people can not use your shop while it is out!', true] spawn domsg; [player] remoteExec ['server_fnc_retreiveStore',2] ",3]
@@ -877,6 +880,7 @@ NoPixel_InteractionMenuItems = [
 		["player distance myoffice < 10 && !(myoffice isEqualTo [0,0,0])"],
 		["Close Office", " [myoffice, player] remoteExec['server_fnc_closeOffice',2]  ",3]
 	],
+	//
 
 
 	[
