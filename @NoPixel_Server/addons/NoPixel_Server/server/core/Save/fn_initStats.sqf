@@ -4,7 +4,7 @@ _checkstr = format ["existPlayerInfo:%1", _uid];
 _check = [0, _checkstr] call ExternalS_fnc_ExtDBquery;
 _booli = (_check select 0) select 0;
 
-diag_log ["init stats %1", _uid];
+diag_log format ["init stats %1", _uid];
 
 
 if (_booli) then {

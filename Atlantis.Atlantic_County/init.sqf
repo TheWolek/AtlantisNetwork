@@ -14,19 +14,20 @@ if (isServer) then {
 	PUBLICVARIABLE "BGJOINABLEGAMES";
 	[] spawn {
 		sleep 3; 
-		["currentMayorGUID", true] call server_fnc_getValue;
-		["currentSenatorsGUID", true] call server_fnc_getValue;
-		["currentPresidentSenateGUID", true] call server_fnc_getValue;
-		["casinoRate", true] spawn server_fnc_getValue;
-		["taxRate", true] spawn server_fnc_getValue;
+		//["currentMayorGUID", true] call server_fnc_getValue;
+		//["currentSenatorsGUID", true] call server_fnc_getValue;
+		//["currentPresidentSenateGUID", true] call server_fnc_getValue;
+		//["casinoRate", true] spawn server_fnc_getValue;
+		//["taxRate", true] spawn server_fnc_getValue;
+		missionNamespace setVariable ["taxRate", 100];
 		
-		["mafiaStash"] spawn server_fnc_getValue;
-		["bikerStash"] spawn server_fnc_getValue;
-		["mobsterStash"] spawn server_fnc_getValue;
+		//["mafiaStash"] spawn server_fnc_getValue;
+		//["bikerStash"] spawn server_fnc_getValue;
+		//["mobsterStash"] spawn server_fnc_getValue;
 		["govtBank"] spawn server_fnc_getValue;
 		["mafiaBank"] spawn server_fnc_getValue;
-		["bikerBank"] spawn server_fnc_getValue;
-		["mobsterBank"] spawn server_fnc_getValue;
+		//["bikerBank"] spawn server_fnc_getValue;
+		//["mobsterBank"] spawn server_fnc_getValue;
 		["casinoVault",true] spawn server_fnc_getValue;
 
 		[] spawn server_fnc_casinoSetup;

@@ -12,6 +12,8 @@ _farmingVehicles = ["vvv_DOD_RamSRT_civ","jf_caprice_wagon"];
 //remember to use this array in the mafia selling script & ALSO THE CAR UPDATE SCRIPT.
 _civilianVehicle = [
 	// type 1
+	["C_Offroad_01_F",3300]
+	/*
 	["ivory_190e",3300],
 	["ivory_gti",6000],	
 	["ivory_e36",8000],
@@ -46,6 +48,7 @@ _civilianVehicle = [
 	["ivory_rev",340000],
 	["ivory_veyron",390000],
 	["ivory_ccx",450000]
+	*/
 ];
 
 if(str CursorObject find "embarcadero" > -1) then {
@@ -88,8 +91,8 @@ if(_whatdo == "NEW") then {
 		_cost = _x select 1;
 		_vehicleName = [(_x select 0)] call Client_fnc_getVehicleName;
 
-		_addedprice = (_cost / 100) * taxRate;
-		_cost = _addedprice + _cost;
+		//_addedprice = (_cost / 100) * taxRate;
+		//_cost = _addedprice + _cost;
 
 		if(_class IN _farmingvehicles) then { 
 			_list lbAdd format["%2 %1 (Auto Refine)",_vehicleName, _cost call client_fnc_numberText]; 
@@ -152,8 +155,8 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 	_dir = 180;
 
 	if(_SELECTEDVEHICLE iskindof "car") then {
-		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [9720.13,827.599,25];
-		spawnedvehicle setpos [9720.13,827.599,0.5];
+		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [1060.8,4128.42,0.00143909];
+		spawnedvehicle setpos [1060.8,4128.42,0.00143909];
 		spawnedvehicle setdir _dir;
 	};
 
@@ -165,8 +168,8 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 	};
 
 	if(_SELECTEDVEHICLE iskindof "Air") then {
-		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [3282.51,914.667,1.24039];
-		spawnedvehicle setpos [3282.51,914.667,1.24039];
+		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [1060.8,4128.42,0.00143909];
+		spawnedvehicle setpos [1060.8,4128.42,0.00143909];
 		_dir = 180;
 		spawnedvehicle setdir _dir;
 	};
@@ -174,8 +177,9 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 	spawnedvehicle animate["spoiler", 0];
 
 	spawnedvehicle allowdamage false;
+	client_kcCamera camSetPos [1060.8,4128.42,0.00143909];
 	client_kcCamera camSetTarget spawnedvehicle;
-	client_kcCamera camSetRelPos [2.7,1,0.25];
+	client_kcCamera camSetRelPos [6.10,2,2];
 	client_kcCamera camSetFOV .99;
 	client_kcCamera camCommit 0;
 
