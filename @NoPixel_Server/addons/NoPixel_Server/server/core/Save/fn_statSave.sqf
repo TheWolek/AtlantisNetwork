@@ -1,7 +1,5 @@
 params ["_player", "_id", "_uid", "_name"];
 
-diag_log ["%1 %2 %3 %4", _player, _id, _uid, _name];
-
 _statuses = _player getVariable "statuses";
 if(isNil "_statuses") exitwith { };
 
@@ -46,6 +44,8 @@ _syncInfo = _player getVariable "sync";
 if(isNil "_syncInfo") then { _syncinfo = 1; };
 
 if(uniform _player IN ["vvv_traje_policia_3","silver_lake_police","silver_lake_fbi","silver_lake_statepolice","nopixel_character_swat","vvv_traje_bombero_2","female_police","female_ems","CUP_U_C_Fireman_01"]) then { _syncinfo = 0; };
+
+diag_log format ["StatSaveLog: %1 %2 cash: %3 bank: %4", _uid, _name, _cash, _bank];
 
 _exit = false;
 if(_syncInfo == 0 || _player in CurrentCop || _player in currentEMS || _player IN currentDoc) then {
