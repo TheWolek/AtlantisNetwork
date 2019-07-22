@@ -154,6 +154,7 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 	player allowdamage false;
 	_dir = 180;
 
+	//[1060.8,4128.42,0.00143909] airfield pos
 	if(_SELECTEDVEHICLE iskindof "car") then {
 		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [1060.8,4128.42,0.00143909];
 		spawnedvehicle setpos [1060.8,4128.42,0.00143909];
@@ -169,7 +170,7 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 
 	if(_SELECTEDVEHICLE iskindof "Air") then {
 		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [1060.8,4128.42,0.00143909];
-		spawnedvehicle setpos [1060.8,4128.42,0.00143909];
+		spawnedvehicle setpos [1060.8,4128.42,0.00143909]	;
 		_dir = 180;
 		spawnedvehicle setdir _dir;
 	};
@@ -177,9 +178,8 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 	spawnedvehicle animate["spoiler", 0];
 
 	spawnedvehicle allowdamage false;
-	client_kcCamera camSetPos [1060.8,4128.42,0.00143909];
 	client_kcCamera camSetTarget spawnedvehicle;
-	client_kcCamera camSetRelPos [6.10,2,2];
+	client_kcCamera camSetRelPos [2.7,1,0.25];
 	client_kcCamera camSetFOV .99;
 	client_kcCamera camCommit 0;
 

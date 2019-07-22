@@ -3,7 +3,7 @@
 class buycar {
 	idd = 1444;
 	name= "buycar";
-	onLoad = "[""NEW""] spawn client_fnc_carShop; client_kcCamera  = ""CAMERA"" camCreate [1060.8,4128.42,0.00143909]; showCinemaBorder true; client_kcCamera cameraEffect [""EXTERNAL"", ""BACK""];";	
+	onLoad = "[""NEW""] spawn client_fnc_carShop; client_kcCamera  = ""CAMERA"" camCreate (getPos player); showCinemaBorder true; client_kcCamera cameraEffect [""EXTERNAL"", ""BACK""];";	
 	onunload = "deletevehicle spawnedvehicle; client_kcCamera cameraEffect [""TERMINATE"",""BACK""]; camDestroy client_kcCamera;";
 	movingEnable = 0;
 	enableSimulation = 1;
