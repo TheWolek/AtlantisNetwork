@@ -16,7 +16,7 @@ class client_PhoneCallPP_Menu
 		class phoneMain: RscPicture
 		{
 			idc = 85441;
-			text = "\np_dialogs1\Images\anonphonepng.paa";
+			text = "\dialogs\Images\anonphonepng.paa";
 			style = 2096;
 			x = 0;
 			y = 0;

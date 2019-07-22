@@ -136,7 +136,8 @@ class client_Craft_Menu {
 	name= "client_craft";
 	movingEnable = 0;
 	enableSimulation = 1;
-	onLoad = "[""FRESH""] spawn client_fnc_craftMenu; [] spawn client_fnc_storesetup2 ";
+	//onLoad = "[""FRESH""] spawn client_fnc_craftMenu; [] spawn client_fnc_storesetup2 ";
+	onLoad = "[""FRESH""] spawn client_fnc_craftMenu;";
 	onunload = "dialog_open = false; deletevehicle cockbag; client_kcCamera cameraEffect [""TERMINATE"",""BACK""]; camDestroy client_kcCamera;";
 	
 	class controls {
@@ -155,7 +156,7 @@ class client_Craft_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\CraftingMenu.paa";
+			text = "\dialogs\Images\CraftingMenu.paa";
 			x = 0.271373 * safezoneW + safezoneX;
 			y = 0.0996764 * safezoneH + safezoneY;
 			w = 0.455142 * safezoneW;

@@ -19,7 +19,7 @@ class jailprocess {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\wantedMenu.paa";
+			text = "\dialogs\Images\wantedMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;

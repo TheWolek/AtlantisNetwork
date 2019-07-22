@@ -58,7 +58,7 @@ class racetimes {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\laptime.paa";
+			text = "\dialogs\Images\laptime.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -111,7 +111,7 @@ class fillvehicle
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GasMenu.paa";
+			text = "\dialogs\Images\GasMenu.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;
@@ -205,7 +205,7 @@ class garage2
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GarageMenu.paa";
+			text = "\dialogs\Images\GarageMenu.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;
@@ -296,7 +296,7 @@ class garage3
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GarageMenu.paa";
+			text = "\dialogs\Images\GarageMenu.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;
@@ -389,7 +389,7 @@ class garage
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GarageMenu.paa";
+			text = "\dialogs\Images\GarageMenu.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;
@@ -485,7 +485,7 @@ class EnterLicense {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\EnterLicense.paa";
+			text = "\dialogs\Images\EnterLicense.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -578,7 +578,7 @@ class garageplates
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GaragePlates.paa";
+			text = "\dialogs\Images\GaragePlates.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;

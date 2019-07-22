@@ -55,7 +55,7 @@ class client_findMail {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\SendMailMenu.paa";
+			text = "\dialogs\Images\SendMailMenu.paa";
 			x = 0.271373 * safezoneW + safezoneX;
 			y = 0.0996764 * safezoneH + safezoneY;
 			w = 0.455142 * safezoneW;
@@ -219,7 +219,7 @@ class openMail {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\LatestMailMenu.paa";
+			text = "\dialogs\Images\LatestMailMenu.paa";
 			x = 0.271373 * safezoneW + safezoneX;
 			y = 0.0996764 * safezoneH + safezoneY;
 			w = 0.455142 * safezoneW;

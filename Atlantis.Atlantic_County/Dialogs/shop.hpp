@@ -56,7 +56,7 @@ class vote_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\votingMenu.paa";
+			text = "\dialogs\Images\votingMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -122,7 +122,7 @@ class placefurniture {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\rentshop.paa";
+			text = "\dialogs\Images\rentshop.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -185,7 +185,7 @@ class rentshop {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\rentshop.paa";
+			text = "\dialogs\Images\rentshop.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -250,7 +250,7 @@ class tax_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\settaxMenu.paa";
+			text = "\dialogs\Images\settaxMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -314,7 +314,7 @@ class bill_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\settaxMenu.paa";
+			text = "\dialogs\Images\settaxMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -378,7 +378,7 @@ class payTax_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\settaxMenu.paa";
+			text = "\dialogs\Images\settaxMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -638,7 +638,7 @@ class shop_update {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\updateShopMenu.paa";
+			text = "\dialogs\Images\updateShopMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -767,7 +767,7 @@ class Shop_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ShopMenu.paa";
+			text = "\dialogs\Images\ShopMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -887,7 +887,7 @@ class GUN_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GunMenu.paa";
+			text = "\dialogs\Images\GunMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -1013,7 +1013,7 @@ class Food_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\FoodMenu.paa";
+			text = "\dialogs\Images\FoodMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -1122,7 +1122,7 @@ class GeneralStore_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GeneralStoreMenu.paa";
+			text = "\dialogs\Images\GeneralStoreMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -1231,7 +1231,7 @@ class RareFish_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\RareFishMenu.paa";
+			text = "\dialogs\Images\RareFishMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -1329,7 +1329,7 @@ class Clothing_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ClothingMenu.paa";
+			text = "\dialogs\Images\ClothingMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -1449,7 +1449,7 @@ class HairDresser_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\HairDresserMenu.paa";
+			text = "\dialogs\Images\HairDresserMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -1566,7 +1566,7 @@ class wallet_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\WalletMenu.paa";
+			text = "\dialogs\Images\WalletMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;

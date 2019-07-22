@@ -55,7 +55,7 @@ class ATMGovt
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -207,7 +207,7 @@ class ATMmafia
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -359,7 +359,7 @@ class ATMbiker
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -511,7 +511,7 @@ class ATMMobster
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -663,7 +663,7 @@ class CasinoVault
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -817,7 +817,7 @@ class ATM
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -970,7 +970,7 @@ class DirtyMoney
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;

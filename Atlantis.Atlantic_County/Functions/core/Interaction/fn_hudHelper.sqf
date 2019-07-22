@@ -73,7 +73,7 @@ if(_type == "Job") exitwith {
 	{
 		mydistanceJob = floor( getpos player distance mypositionJob );     
 		mydistanceJob = format ["%1 | %2m",mytextJob, mydistanceJob];
-		drawIcon3D ["\np_dialogs1\draw3dicon\job.paa", [1,1,1,1], mypositionJob, 1, 1, 5, mydistanceJob, 1, 0.036, "PuristaLight"];  
+		drawIcon3D ["\dialogs\draw3dicon\job.paa", [1,1,1,1], mypositionJob, 1, 1, 5, mydistanceJob, 1, 0.036, "PuristaLight"];  
 		if(player distance mypositionjob < 20) exitwith { ["Job", "onEachFrame"] call BIS_fnc_removeStackedEventHandler; player say "racebeep1"; };
 	}] call BIS_fnc_addStackedEventHandler;
 

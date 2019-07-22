@@ -98,7 +98,7 @@ class loanMenu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\loanMenu.paa";
+			text = "\dialogs\Images\loanMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -194,7 +194,7 @@ class LoanShark {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\LoanShark.paa";
+			text = "\dialogs\Images\LoanShark.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;

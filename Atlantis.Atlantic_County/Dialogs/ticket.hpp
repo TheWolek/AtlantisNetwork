@@ -45,7 +45,7 @@ class np_ticketcivilian
 		class Background: client_RscPicture
 		{
 			idc = 1200;
-			text = "\np_dialogs1\images\TicketCivilainMenu.paa";
+			text = "\dialogs\images\TicketCivilainMenu.paa";
 			x = 0.330645 * safezoneW + safezoneX;
 			y = 0.187662 * safezoneH + safezoneY;
 			w = 0.340827 * safezoneW;
@@ -156,7 +156,7 @@ class np_ticketpolice
 		class Background: client_RscPicture
 		{
 			idc = 1200;
-			text = "\np_dialogs1\images\TicketPoliceMenu.paa";
+			text = "\dialogs\images\TicketPoliceMenu.paa";
 			x = 0.330645 * safezoneW + safezoneX;
 			y = 0.187662 * safezoneH + safezoneY;
 			w = 0.340827 * safezoneW;

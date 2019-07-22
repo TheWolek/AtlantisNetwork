@@ -56,7 +56,7 @@ class job_update {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\CentreLinkMenu.paa";
+			text = "\dialogs\Images\CentreLinkMenu.paa";
 			x = 0.277722 * safezoneW + safezoneX;
 			y = 0.104079 * safezoneH + safezoneY;
 			w = 0.444557 * safezoneW;

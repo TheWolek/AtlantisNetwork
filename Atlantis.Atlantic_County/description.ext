@@ -13,10 +13,10 @@ disableChannels[] = {0,1,2,3,4};
 
 respawn = "BASE";
 disabledAI = 1;
-author = "Koil,RetroRP Devs";
-onLoadName = "Retro Roleplay";
-onLoadMission = "retrorp.net";
-loadScreen =  "SL_Client\Textures\Dialogs\Loading\loading_screen.paa";
+author = "Koil, TheWolek, DonTheDev";
+onLoadName = "Atlantis Network";
+onLoadMission = "AtlantisNetwork.pl";
+//loadScreen =  "";
 respawndelay = 99999;
 
 wreckLimit = 2;
