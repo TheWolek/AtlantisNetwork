@@ -7,7 +7,7 @@ class RscTitles
 	#include "dialogs\ui.hpp"
 };
 
-enableDebugConsole = 1;
+enableDebugConsole[] = {"76561198071999873","76561198084548281"};
 
 disableChannels[] = {0,1,2,3,4};
 

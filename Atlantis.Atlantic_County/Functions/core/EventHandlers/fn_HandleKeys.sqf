@@ -258,6 +258,7 @@ switch (_code) do
         }; 
     };
 
+	//1 taser, 
 	case 2:
 	{
 
@@ -317,7 +318,8 @@ switch (_code) do
 		};
 	};
 	
-	case 25:
+	//Shift+O fadeSound
+	case 24:
 	{
 	    if(_shift && !_alt && !_ctrlKey && !busyPlayer) then
 	    {
@@ -342,7 +344,7 @@ switch (_code) do
 
 
 
-
+	//Shift+5
 	case 6:
 	{
 
@@ -371,6 +373,7 @@ switch (_code) do
 		};
 	};
 	
+	//surrender Shift+6
 	case 7:
 	{
 		if (_shift) then { _handle = true; };
@@ -400,7 +403,7 @@ switch (_code) do
 	    };
 	};
 
-	//Holster / recall weapon.
+	//Holster / recall weapon. Shift+H Ctrl+H
 	case 35:
 	{
 		if(_shift && !_ctrlKey && currentWeapon player != "") then {
