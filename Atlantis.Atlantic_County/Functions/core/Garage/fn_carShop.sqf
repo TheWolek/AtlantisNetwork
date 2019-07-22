@@ -91,8 +91,8 @@ if(_whatdo == "NEW") then {
 		_cost = _x select 1;
 		_vehicleName = [(_x select 0)] call Client_fnc_getVehicleName;
 
-		//_addedprice = (_cost / 100) * taxRate;
-		//_cost = _addedprice + _cost;
+		_addedprice = (_cost / 100) * taxRate;
+		_cost = _addedprice + _cost;
 
 		if(_class IN _farmingvehicles) then { 
 			_list lbAdd format["%2 %1 (Auto Refine)",_vehicleName, _cost call client_fnc_numberText]; 
@@ -170,7 +170,7 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 
 	if(_SELECTEDVEHICLE iskindof "Air") then {
 		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [1060.8,4128.42,0.00143909];
-		spawnedvehicle setpos [1060.8,4128.42,0.00143909]	;
+		spawnedvehicle setpos [1060.8,4128.42,0.00143909];
 		_dir = 180;
 		spawnedvehicle setdir _dir;
 	};

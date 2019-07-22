@@ -19,7 +19,9 @@ if (isServer) then {
 		//["currentPresidentSenateGUID", true] call server_fnc_getValue;
 		//["casinoRate", true] spawn server_fnc_getValue;
 		//["taxRate", true] spawn server_fnc_getValue;
-		missionNamespace setVariable ["taxRate", 100];
+		//missionNamespace setVariable ["taxRate", 100];
+		taxRate = 100;
+		publicVariable "taxRate"; 
 		
 		//["mafiaStash"] spawn server_fnc_getValue;
 		//["bikerStash"] spawn server_fnc_getValue;
