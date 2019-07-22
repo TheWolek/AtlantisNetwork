@@ -782,10 +782,19 @@ NoPixel_InteractionMenuItems = [
 		["Take Money", " ['Taking Money',10,'client_fnc_takePlayerMoney',CurrentCursorObject,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorObject,'cg_mission_files\sounds\blindfold.ogg'] spawn client_fnc_dotask",2]
 	],
 
-
+	/*
 	[
 		["( !(CursorObject getVariable['dead',FALSE]) && isPlayer CursorObject && CursorObject isKindOf 'Man') && ((animationstate CurrentCursorObject) == 'incapacitated' || (animationstate CurrentCursorObject) == 'deadstate' || (animationstate CurrentCursorObject) == 'amovpercmstpssurwnondnon' || (animationstate CurrentCursorObject) == 'amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon') && !imrestrained"],
 		["Restrain", " ['Restraining',3,'client_fnc_restrain',CurrentCursorObject,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorObject,'cg_mission_files\sounds\handcuff.ogg'] spawn client_fnc_dotask",2]
+	],
+	*/
+	[
+		["( !(CursorObject getVariable['dead',FALSE]) && isPlayer CursorObject && CursorObject isKindOf 'Man') && cursorObject getVariable 'surrender' == true && !imrestrained"],
+		["Restrain Sitting", " ['Restraining',3,'client_fnc_restrain',CurrentCursorObject,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorObject,'cg_mission_files\sounds\handcuff.ogg'] spawn client_fnc_dotask",2]
+	],
+	[
+		["( !(CursorObject getVariable['dead',FALSE]) && isPlayer CursorObject && CursorObject isKindOf 'Man') && cursorObject getVariable 'surrender' == true && !imrestrained"],
+		["Restrain in front", " ['Restraining',3,'client_fnc_restrainfront',CurrentCursorObject,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorObject,'cg_mission_files\sounds\handcuff.ogg'] spawn client_fnc_dotask",2]
 	],
 
 

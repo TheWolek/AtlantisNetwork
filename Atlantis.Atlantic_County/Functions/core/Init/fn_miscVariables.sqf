@@ -195,6 +195,22 @@ client_fnc_restrained = compileFinal
 		uisleep 1;
 	};
 ";
+client_fnc_restraifront = compileFinal
+"
+	attachedplayer = false;
+	imRestrained = true;
+	player playActionNow 'Foski_Cuff_Front';
+	uisleep 0.05;
+
+";
+client_fnc_unrestraifront = compileFinal
+"
+	attachedplayer = false;
+	imRestrained = true;
+	player playActionNow 'Foski_UnCuff_Front';
+	uisleep 0.05;
+
+";
 
 client_fnc_unrestrained = compileFinal
 "
