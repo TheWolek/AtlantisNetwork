@@ -988,7 +988,8 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" casinoOpen && getpos player distance [6819.29,4619.24,0.00144005] < 5"],
+		//[" casinoOpen && getpos player distance [6819.29,4619.24,0.00144005] < 5"],
+		["casinoOpen && typeof cursorObject == 'Land_buildingsCasino2'"],
 		["Casino Bar", "closedialog 0; createdialog 'food_menu'; ['bar'] spawn client_fnc_LoadStore;",3]
 	],
 
@@ -1159,7 +1160,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" (typeof cursorobject IN ['Land_buildingsCasino2']) && player distance [6780,4608.48,0.00143766] < 5 && (myJob == 'Mobster' && player getVariable 'Mobster' >= 8) "],
+		[" (typeof cursorobject IN ['Land_buildingsCasino2']) && (myJob == 'Mobster' && player getVariable 'Mobster' >= 8) "],
 		["Open Casino Vault", "[player] remoteExec['Client_fnc_openCasinoVault',2]",4]
 	],
 
