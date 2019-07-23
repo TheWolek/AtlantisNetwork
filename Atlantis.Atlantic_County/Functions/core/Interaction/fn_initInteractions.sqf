@@ -261,17 +261,17 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[ 
-		[" (typeof cursorobject IN ['Land_buildingscourthouse1'])"], 
+		[" (player distance [825.717,1634.34,0.00143814] < 20 )"], 
 		["Buy Licenses", "[0] spawn client_fnc_license;",1] 
 	],
 
 	[
-		["(typeof cursorobject IN ['Land_buildingscourthouse1'])"],
+		["(player distance [825.717,1634.34,0.00143814] < 20 )"],
 		["Pay Taxes", "createdialog 'payTax_Menu';",1]
 	],
 
 	[
-		["(typeof cursorobject IN ['Land_buildingscourthouse1'])"],
+		["(player distance [825.717,1634.34,0.00143814] < 20 )"],
 		["View Taxes", " [format['You have unpaid taxes of %1 and the tax rate is at %2%3.', ((player getVariable 'statuses') select 13) call client_fnc_numberText, taxRate, '%'], true]  spawn domsg; ",1]
 	],
 
@@ -448,7 +448,7 @@ NoPixel_InteractionMenuItems = [
 // healing
 
 	[
-		["CursorTarget getVariable['dead',FALSE] && (count currentEMS == 0)"],
+		["CursorTarget getVariable['dead',FALSE] && (count currentEMS == 0) && ((animationstate CurrentCursorTarget) == 'incapacitated' || (animationstate cursorObject) == 'deadstate' || (animationstate cursorObject) == 'amovpercmstpsnonwnondnon' || (animationState cursorObject) == 'amovppnemstpsraswrfldnon' || (animationState cursorObject) == 'unconsciousfaceup')"],
 		["CPR Person", "['Reviving',125,'client_fnc_sendRevive',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",1]
 	],
 
@@ -784,10 +784,9 @@ NoPixel_InteractionMenuItems = [
 
 
 	[
-		["( !(cursortarget getVariable['dead',FALSE]) && isPlayer CursorTarget && CursorTarget isKindOf 'Man') && ((animationstate CurrentCursorTarget) == 'incapacitated' || (animationstate cursorObject) == 'deadstate' || (animationstate cursorObject) == 'amovpercmstpsnonwnondnon' && || (animationState cursorObject == 'amovppnemstpsraswrfldnon') || (animationState cursorObject == 'unconsciousfaceup') && !imrestrained"],
+		["( !(cursortarget getVariable['dead',FALSE]) && isPlayer CursorTarget && CursorTarget isKindOf 'Man') && ((animationstate CurrentCursorTarget) == 'incapacitated' || (animationstate cursorObject) == 'deadstate' || (animationstate cursorObject) == 'amovpercmstpsnonwnondnon' || (animationState cursorObject) == 'amovppnemstpsraswrfldnon' || (animationState cursorObject) == 'unconsciousfaceup') && !imrestrained"],
 		["Restrain", " ['Restraining',3,'client_fnc_restrain',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\handcuff.ogg'] spawn client_fnc_dotask",2]
 	],
-
 
 	[
 		[" myJob IN ['Cop','doc'] && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && ((animationstate CurrentCursorTarget) == 'Acts_AidlPsitMstpSsurWnonDnon_loop' || (animationstate CurrentCursorTarget) == 'amovpercmstpssurwnondnon' || (animationstate CurrentCursorTarget) == 'amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon') && !imrestrained"],
@@ -1066,12 +1065,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" myJob IN ['Legal'] && player getVariable 'legal' >= 6 && ( typeof cursorobject IN ['Land_buildingscourthouse1'] ) && ( vehicle player == player ) && !imrestrained "],
+		[" myJob IN ['Legal'] && player getVariable 'legal' >= 6 && (player distance [825.717,1634.34,0.00143814] < 20 ) && ( vehicle player == player ) && !imrestrained "],
 		["Court System", "createdialog 'wanted3';",4]
 	],
 
 	[
-		[" ( typeof cursorobject IN ['Land_buildingscourthouse1'] ) && ( vehicle player == player ) && !imrestrained "],
+		[" (player distance [825.717,1634.34,0.00143814] < 20 ) && ( vehicle player == player ) && !imrestrained "],
 		["Public Records", "createdialog 'wanted2';",4]
 	],
 
@@ -1262,7 +1261,7 @@ NoPixel_InteractionMenuItems = [
 	],
 	
 	[
-		[" myJob IN ['Legal'] && (player getVariable 'legal' >= 9) && (typeof cursorobject IN ['Land_buildingscourthouse1']) "],
+		[" myJob IN ['Legal'] && (player getVariable 'legal' >= 9) && (player distance [825.717,1634.34,0.00143814] < 20 ) "],
 		["Justice Uniform", "['basic'] spawn client_fnc_setGear",4]
 	],
 	
@@ -1382,12 +1381,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["myjob == 'none' && (player getvariable 'legal') > 0 && (typeof cursorobject IN ['Land_buildingscourthouse1']) && !(Senator || Mayor)"],
+		["myjob == 'none' && (player getvariable 'legal') > 0 && (player distance [825.717,1634.34,0.00143814] < 20 ) && !(Senator || Mayor)"],
 		["Sign-in Legal", "[player,'Legal'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
-		["myjob == 'Legal' && (typeof cursorobject IN ['Land_buildingscourthouse1'])"],
+		["myjob == 'Legal' && (player distance [825.717,1634.34,0.00143814] < 20 )"],
 		["Sign-out Legal", "[0] call client_fnc_jobEnd",4]
 	],
 

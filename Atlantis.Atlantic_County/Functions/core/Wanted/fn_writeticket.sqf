@@ -15,6 +15,6 @@ _reason = ctrlText _ctrl;
 [name CurrentCursorTarget,getplayeruid CurrentCursorTarget, name player, getplayeruid player, _reason, 2, 0, 1, (call compile _amount)] remoteexec ["server_fnc_addcriminal",2];
 
 [CurrentCursorTarget, "You have been issued a ticket. Please go to the court house to pay it off or face legal consequences.", "Silver Lake", "Ticket"] remoteExec ["server_fnc_sendMail",2];
-[name CurrentCursorTarget,getplayeruid CurrentCursorTarget, name player, getplayeruid player, _reason, 2, 0, 1, (call compile _amount),"","","",""] remoteExec ["client_fnc_addTicket",cursorTarget];
+[name CurrentCursorTarget, getplayeruid CurrentCursorTarget, name player, getplayeruid player, _reason, 2, 0, 1, (call compile _amount),"","","",""] remoteExec ["client_fnc_addTicket",cursorTarget];
 
 closedialog 0;
