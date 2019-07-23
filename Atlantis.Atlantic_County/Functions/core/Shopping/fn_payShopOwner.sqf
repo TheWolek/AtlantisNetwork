@@ -12,4 +12,4 @@ shopcontent = _shopcontent;
 
 [_totalprice,true,true] call Client_fnc_addMoneyToBank;
 ["govtBank", _totalPrice-(_totalPrice/(1+taxRate/100)), "Add"] remoteExec["server_fnc_setValue",2];
-["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_totalPrice-(_totalPrice/(1+taxRate/100))) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+//["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_totalPrice-(_totalPrice/(1+taxRate/100))) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];

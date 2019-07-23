@@ -53,7 +53,8 @@ if(_numbercount == 2) exitwith {
 
 	[_winning,true,true] call Client_fnc_addMoneyToPlayer;
 
-	["casinoVault", format["%1 (%2) won %3 and received %4 from the lottery and the casino lost %5.", name player, getplayeruid player, _prize call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	diag_log format["MoneyLog: %1 (%2) won %3 and received %4 from the lottery and the casino lost %5. Bank: %6; Cash: %7", name player, getplayeruid player, _prize call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText, player getVariable "cashinbank", player getVariable "cashinhand"];
+	//["casinoVault", format["%1 (%2) won %3 and received %4 from the lottery and the casino lost %5.", name player, getplayeruid player, _prize call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 };	
 

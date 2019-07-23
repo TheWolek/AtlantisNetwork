@@ -69,7 +69,8 @@ if(myjob == "Cop") then {
 		_cost = ((_level) * 10);
 		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		diag_log format["GearLog: %1 (%2) took PATROL loadout.", name player, getplayeruid player];
+		//["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 		if (_level == 5) then { 
 			player addBackpack "AM_PoliceBelt";
@@ -183,7 +184,8 @@ if(myjob == "Cop") then {
 		_cost = ((_level) * 10);
 		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		diag_log format["GearLog: %1 (%2) took DTU loadout.", name player, getplayeruid player];
+		//["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 		player addBackpack "sl_client_c_carryall_invisible"; 
 
@@ -335,7 +337,8 @@ if(myjob == "Cop") then {
 		_cost = ((_level) * 10);
 		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		diag_log format["GearLog: %1 (%2) took MARSHAL loadout.", name player, getplayeruid player];
+		//["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 		player addBackpack "AM_PoliceBelt"; 
 
@@ -432,7 +435,8 @@ if(myjob == "Cop") then {
 		_cost = 5000;
 		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		diag_log format["GearLog: %1 (%2) took SWAT loadout.", name player, getplayeruid player];
+		//["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 		player forceAddUniform "sl_client_c4_swat_W";
 		
@@ -499,7 +503,8 @@ if(myjob == "doc") then {
 		_cost = ((_level) * 10);
 		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		diag_log format["GearLog: %1 (%2) took PRISON loadout.", name player, getplayeruid player];
+		//["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 		player addBackpack "AM_PoliceBelt";
 
@@ -613,7 +618,8 @@ if(myjob == "doc") then {
 		_cost = 5000;
 		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove", false] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		diag_log format["GearLog: %1 (%2) took CRT loadout.", name player, getplayeruid player];
+		//["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 		player forceAddUniform "sl_client_c4_swat_W";
 		
@@ -664,7 +670,8 @@ if(myJob == "EMS") then {
 		_cost = ((_level) * 10);
 		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		diag_log format["GearLog: %1 (%2) took FIRE loadout.", name player, getplayeruid player];
+		//["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 		player addWeapon "Binocular";
 
@@ -692,6 +699,7 @@ if(myJob == "EMS") then {
 		_cost = ((_level) * 10);
 		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
+		diag_log format["GearLog: %1 (%2) took EMS loadout.", name player, getplayeruid player];
 		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 		player addWeapon "Binocular";
@@ -737,6 +745,7 @@ if(myJob == "EMS") then {
 if(myjob == "Mafia") then {
 
     _freq = 72.1;
+	diag_log format["GearLog: %1 (%2) took MAFIA loadout.", name player, getplayeruid player];
 
 	_level = player getVariable "Mafia";
 	
@@ -803,6 +812,7 @@ if(myjob == "Mobster") then {
 if(myjob == "Legal") then {
 
 	_level = player getVariable "Legal";
+	diag_log format["GearLog: %1 (%2) took LEGAL loadout.", name player, getplayeruid player];
 
 	if(_level >= 9) then { player forceAddUniform "KAEL_SUITS_BR_Judge"; };
 

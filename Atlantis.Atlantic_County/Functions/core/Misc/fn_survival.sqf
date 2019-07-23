@@ -77,7 +77,7 @@ Survival Koil
 
 
 	["govtBank", (paycheck/10), "Remove"] remoteExec["server_fnc_setValue",2]; // remove paycheck from government
-	["govtBank", format["%1 (%2) removed %3 into the Government bank account because of salary.", name player, getplayeruid player, (paycheck/10) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	//["govtBank", format["%1 (%2) removed %3 into the Government bank account because of salary.", name player, getplayeruid player, (paycheck/10) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 	[paycheck,true,true] call Client_fnc_addMoneyToBank; // add paycheck to player
 
 	(player getvariable "statuses") set [13, call compile ([((player getvariable "statuses") select 13) + paycheck*(taxRate/100), 1, 2, false] call CBA_fnc_formatNumber) ]; // add unpaid tax

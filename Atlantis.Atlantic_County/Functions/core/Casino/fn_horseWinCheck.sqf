@@ -47,6 +47,6 @@ if(_winnings*((0.75)+((1-casinoRate/100)/5)) > _casinoVault) then {
 if(_winning < 1) exitwith {};
 [_winning,true,true] call Client_fnc_addMoneyToPlayer;
 
-["casinoVault", format["%1 (%2) won %3 and received %4 from horse betting and the casino lost %5.", name player, getplayeruid player, _winnings call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+//["casinoVault", format["%1 (%2) won %3 and received %4 from horse betting and the casino lost %5.", name player, getplayeruid player, _winnings call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 

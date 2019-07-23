@@ -16,7 +16,7 @@ if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for
 
 [_status select 9] call Client_fnc_removeCash;
 ["govtBank", _status select 9, "Add"] remoteExec["server_fnc_setValue",2];
-["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_status select 9) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+//["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_status select 9) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 ["You have paid for the ticket.",false] spawn domsg;
 

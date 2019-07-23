@@ -28,8 +28,8 @@ if (_amount > 0) then
 			[_amount,true,true] call Client_fnc_addMoneyToBank;
 			[format["You successfully deposited %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashDeposited = cashDeposited + _amount; cashDepositedTime = time; };
-
-			["personalBank", format["%1 (%2) deposited %3 into his/her bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			diag_log format["MoneyLog: %1 (%2) deposited %3 into bank account. Bank: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, player getVariable "cashinbank", player getVariable "cashinhand"];
+			//["personalBank", format["%1 (%2) deposited %3 into his/her bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 			
 		} else {
 		
@@ -52,7 +52,8 @@ if (_amount > 0) then
 			[format["You successfully deposited %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashDeposited = cashDeposited + _amount; cashDepositedTime = time; };
 
-			["mafiaBank", format["%1 (%2) deposited %3 into the Mafia bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			diag_log format["MoneyLog: %1 (%2) deposited %3 into the Mafia bank account. Bank: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, str mafiaBank, player getVariable "cashinhand"];
+			//["mafiaBank", format["%1 (%2) deposited %3 into the Mafia bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 			
 		} else {
 		
@@ -76,7 +77,8 @@ if (_amount > 0) then
 			[format["You successfully deposited %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashDeposited = cashDeposited + _amount; cashDepositedTime = time; };
 
-			["govtBank", format["%1 (%2) deposited %3 into the Government bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			diag_log format["MoneyLog: %1 (%2) deposited %3 into the Gov bank account. Bank: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, str govtBank, player getVariable "cashinhand"];
+			//["govtBank", format["%1 (%2) deposited %3 into the Government bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 			
 		} else {
 		
@@ -102,7 +104,7 @@ if (_amount > 0) then
 			[format["You successfully deposited %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashDeposited = cashDeposited + _amount; cashDepositedTime = time; };
 
-			["bikerBank", format["%1 (%2) deposited %3 into the Biker bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			//["bikerBank", format["%1 (%2) deposited %3 into the Biker bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 			
 		} else {
 		
@@ -125,7 +127,9 @@ if (_amount > 0) then
 
 			[_amount, true] call Client_fnc_removeCash;
 			[format["You successfully deposited %1", _amount call client_fnc_numberText], true] spawn domsg;
-			["casinoVault", format["%1 (%2) deposited %3 into the Casino vault.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			
+			diag_log format["MoneyLog: %1 (%2) deposited %3 into the Casino Vault. Vault: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, str casinoVault, player getVariable "cashinhand"];
+			//["casinoVault", format["%1 (%2) deposited %3 into the Casino vault.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 			
 		} else {
 		
@@ -149,7 +153,7 @@ if (_amount > 0) then
 			[format["You successfully deposited %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashDeposited = cashDeposited + _amount; cashDepositedTime = time; };
 			
-			["mobsterBank", format["%1 (%2) deposited %3 into the Mobster bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			//["mobsterBank", format["%1 (%2) deposited %3 into the Mobster bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 			
 		} else {
 		

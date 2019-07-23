@@ -18,6 +18,6 @@ if(_bank < _amount) exitWith { [format["This person cannot afford the bail amoun
 [format["This person has accepted the bail amount of %1.", _amount call client_fnc_numberText], true] remoteExec["domsg", _player];
 [format["You have accepted the bail amount of %1. The money has been automatically debited from your bank account.", _amount call client_fnc_numberText], true] remoteExec["domsg", player];
 
-["bail", format["%1 (%2) has given a %3 bail to %4 (%5).", name _player, getplayeruid _player, _amount call client_fnc_numberText, name player, getplayeruid player]] remoteExec ["server_fnc_log",2];
+//["bail", format["%1 (%2) has given a %3 bail to %4 (%5).", name _player, getplayeruid _player, _amount call client_fnc_numberText, name player, getplayeruid player]] remoteExec ["server_fnc_log",2];
 
 [name player, getplayeruid player, name _player, getplayeruid _player, "Court issued bail.", 4, 0, 1, _amount] remoteexec ["server_fnc_addcriminal",2];

@@ -112,7 +112,7 @@ if(_typebuy == "standard") then {
 
 	[_totalPrice] call Client_fnc_removeCash;
 	["govtBank", _totalPrice-(_totalPrice/(1+taxRate/100)), "Add"] remoteExec["server_fnc_setValue",2];
-	["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_totalPrice-(_totalPrice/(1+taxRate/100))) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	//["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_totalPrice-(_totalPrice/(1+taxRate/100))) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 };
 
 if(_item IN  ["np_tequila","murshun_cigs_lighter","murshun_cigs_cigpack"]) then {

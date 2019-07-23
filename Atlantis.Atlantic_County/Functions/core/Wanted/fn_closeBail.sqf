@@ -14,7 +14,7 @@ params["_player"];
     [format["This person has not received his %1 back.", _bail call client_fnc_numberText], true] remoteExec["domsg", _player];
     [format["You have not received your %1 back.", _bail call client_fnc_numberText], true] remoteExec["domsg", player];
 
-    ["bail", format["%1 (%2) has closed the %3 bail of %4 (%5).", name _player, getplayeruid _player, _bail call client_fnc_numberText, name player, getplayeruid player]] remoteExec ["server_fnc_log",2];
+    //["bail", format["%1 (%2) has closed the %3 bail of %4 (%5).", name _player, getplayeruid _player, _bail call client_fnc_numberText, name player, getplayeruid player]] remoteExec ["server_fnc_log",2];
 
 
 }] remoteExec["bis_fnc_spawn",_player];

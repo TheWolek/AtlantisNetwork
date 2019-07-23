@@ -11,7 +11,7 @@
 			if( callInProgress || PhonesRinging ) exitwith { _haltphone = true; currentCaller remoteExec ["fnc_busyAnswer",currentCaller]; [format["A call from %1 went to your message bank! (In a Call) ","Anonymous"], false] spawn domsg; };	
 			if( client_battery < 5 ) exitwith { _haltphone = true; currentCaller remoteExec ["fnc_busyAnswer",currentCaller]; [format["A call from %1 went to your message bank! (Low Battery) ","Anonymous"], false] spawn domsg; };
 
-			["anonymous", format["%1 (%2) called %3 (%4)", name CurrentCaller, getplayeruid CurrentCaller, name player, getplayeruid player]] remoteExec ["server_fnc_log",2];
+			//["anonymous", format["%1 (%2) called %3 (%4)", name CurrentCaller, getplayeruid CurrentCaller, name player, getplayeruid player]] remoteExec ["server_fnc_log",2];
 		} else {
 			if( phoneDisabled ) exitwith { _haltphone = true; currentCaller remoteExec ["fnc_busyAnswer",currentCaller]; [format["A call from %1 went to your message bank! (Phone Disabled)",name CurrentCaller], false] spawn domsg; };	
 			if( callInProgress || PhonesRinging ) exitwith { _haltphone = true; currentCaller remoteExec ["fnc_busyAnswer",currentCaller]; [format["A call from %1 went to your message bank! (In a Call) ",name CurrentCaller], false] spawn domsg; };	

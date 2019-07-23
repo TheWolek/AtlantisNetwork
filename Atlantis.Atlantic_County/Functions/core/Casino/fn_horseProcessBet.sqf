@@ -28,7 +28,7 @@ if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for
 
 [_betamount*(1+casinoRate/100)] call Client_fnc_removeCash;
 
-["mobsterBank", format["%1 (%2) bought %3 worth of horse betting.", name player, getplayeruid player, _betamount*(1+casinoRate/100) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+//["mobsterBank", format["%1 (%2) bought %3 worth of horse betting.", name player, getplayeruid player, _betamount*(1+casinoRate/100) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 ["mobsterBank", 1000*(1+casinoRate/100), "Add"] remoteexec ["server_fnc_setValue",2];
 

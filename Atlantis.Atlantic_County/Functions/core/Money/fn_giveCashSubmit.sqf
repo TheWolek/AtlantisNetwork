@@ -9,6 +9,7 @@ if (_amount > 0) then
 	if (_enoughCash) then 
 	{
 
+		diag_log format["MoneyLog: %1 (%2) gave %3 to %4 (%5).", name _giver, getPlayerUID _giver, _amout call client_fnc_numberText, name _target, getPlayerUID _target];
 		["hand", format["%1 (%2) gave %3 to %4 (%5).", name _giver, getplayeruid _giver, _amount call client_fnc_numberText, name _target, getplayeruid _target]] remoteExec ["server_fnc_log", 2];
 
 		_DirtyMoneyTotal = (client_level_array select 16); 

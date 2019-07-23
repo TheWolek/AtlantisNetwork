@@ -116,5 +116,5 @@ if(_remove == 27) then {
 	_licenseName = "Paralegal License";
 };
 
-
-["license", format["%1 (%2) revoked a(n) %3 from %4 (%5).", name player, getplayeruid player, _licenseName, name currentcursortarget, getplayeruid currentcursortarget]] remoteExec ["server_fnc_log",2];
+diag_log format["LicenseLog: %1 (%2) revoked a(n) %3 from %4 (%5).", name player, getplayeruid player, _licenseName, name cursorObject, getPlayerUID cursorObject];
+//["license", format["%1 (%2) revoked a(n) %3 from %4 (%5).", name player, getplayeruid player, _licenseName, name currentcursortarget, getplayeruid currentcursortarget]] remoteExec ["server_fnc_log",2];

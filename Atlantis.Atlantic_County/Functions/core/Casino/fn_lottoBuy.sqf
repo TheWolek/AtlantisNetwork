@@ -15,7 +15,8 @@ if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for
 
 ["mobsterBank", 1000*(1+casinoRate/100), "Add"] remoteexec ["server_fnc_setValue",2];
 
-["mobsterBank", format["%1 (%2) bought %3 worth of lottery tickets.", name player, getplayeruid player, 1000*(1+casinoRate/100) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+diag_log format["MoneyLog: %1 (%2) bought %3 worth of lottery tickets. Bank: %4; Cash: %5", name player, getplayeruid player, 1000*(1+casinoRate/100) call client_fnc_numberText, player getVariable "cashinbank", player getVariable "cashinhand"];
+//["mobsterBank", format["%1 (%2) bought %3 worth of lottery tickets.", name player, getplayeruid player, 1000*(1+casinoRate/100) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 
 _num1 = round(random(10));
