@@ -53,7 +53,7 @@ if(_statementsent == 9) then {
 		lastPositionAdmin = getpos player;
 		disableuserinput true;
 
-		player setpos [9756.69,788.971,0.00144315];
+		//player setpos [9756.69,788.971,0.00144315];
 		
 		cutText ["YOU HAVE BEEN FROZEN BY AN ADMINISTRATOR.","BLACK OUT"]; 
 

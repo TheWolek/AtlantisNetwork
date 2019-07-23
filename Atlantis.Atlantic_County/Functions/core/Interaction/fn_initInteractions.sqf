@@ -155,17 +155,17 @@ NoPixel_InteractionMenuItems = [
 
 	//casino ??
 	[ 
-		["player distance [4821.64,2133.08,0.00143909] < 25"], 
+		["player distance [935.243,1281.78,0.00143957] < 25"], 
 		["Horse Betting $0-500", " createdialog 'client_phonebet';",5] 
 	],
 
 	[ 
-		["player distance [4816.38,2120.7,0.00143909] < 25"], 
+		["player distance [923.081,1285.73,0.00143957] < 25"], 
 		["Lottery $1K", "[] spawn client_fnc_lottoBuy;",5] 
 	],
 
 	[ 
-		["player distance [4821.92,2139.32,0.00143909] < 25"], 
+		["player distance [922.831,1293.87,0.00144005] < 25"], 
 		["Slots $100-$1K", "[] spawn client_fnc_slotsStart; ",5] 
 	],
 	//
@@ -846,7 +846,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[""],
+		["typeof cursorObject == 'Land_Centrelink' && myJob == 'none'"],
 		["Pay Tickets","[] spawn client_fnc_taketicket;"]
 	],
 
@@ -944,7 +944,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof CursorTarget IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F']"],
+		["typeof cursorObject IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F']"],
 		["Clothing Store", "closedialog 0; createdialog 'Clothing_Menu'; ['clothing'] spawn client_fnc_LoadStore;",3]
 	],
 
@@ -984,12 +984,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" casinoOpen && getpos player distance [6819.29,4619.24,0.00144005] < 5"],
+		[" casinoOpen && getpos player distance [939.145,1306.39,0.00144005] < 5"],
 		["Casino Bar", "closedialog 0; createdialog 'food_menu'; ['bar'] spawn client_fnc_LoadStore;",3]
 	],
 
 	[
-		["typeof CursorTarget IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F','Land_Shop_DED_Shop_01_F','Land_Shop_DED_Shop_02_F']"],
+		["typeof CursorObject IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F','Land_Shop_DED_Shop_01_F','Land_Shop_DED_Shop_02_F']"],
 		["General Store", "closedialog 0; createdialog 'GeneralStore_Menu'; ['general'] spawn client_fnc_LoadStore;",3]
 	],
 

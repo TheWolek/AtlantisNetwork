@@ -214,7 +214,7 @@ switch (_code) do
 		};
 	};
 
-	case 3:
+	case 5:
 	{
 		if(isNil "LoggedIn") then { LoggedIn = false; };
 		if(LoggedIN) then { _relpos = player getRelPos [10, 0]; player setpos _relpos; };

@@ -11,7 +11,7 @@ if(_type == "Home" || _type == "All") then {
 
 };
 
-if(_type == "Shop") then {
+if(_type == "Shop" || _type == "All") then {
     _marker = createMarkerLocal [format["tempmarker_%1",random 10000], getMarkerPos format["%1",(getPlayerUID player)]];
     _marker setMarkerShapeLocal "ICON";
     _marker setMarkerTypeLocal "hd_dot";
@@ -20,7 +20,7 @@ if(_type == "Shop") then {
 
 };
 
-if(_type == "Office") then {
+if(_type == "Office" || _type == "All") then {
     if(myoffice isEqualTo [0,0,0]) exitWith {};
 
     _marker = createMarkerLocal [format["tempmarker_%1",random 10000], getMarkerPos format["%1OFFICE",(getPlayerUID player)]];
@@ -31,7 +31,7 @@ if(_type == "Office") then {
 
 };
 
-if(_type == "Bank") then {
+if(_type == "Bank" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -41,7 +41,7 @@ if(_type == "Bank") then {
 	} forEach (nearestobjects[player,["Land_CommonwealthBank","Land_Bank_DED_House_01_F"],30000]);
 };
 
-if(_type == "Dunkin") then {
+if(_type == "Dunkin" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -61,17 +61,18 @@ if(_type == "Verizon") then {
 	} forEach (nearestobjects[player,["Land_Market_DED_Market_03_F"],30000]);
 };
 
-if(_type == "Gas") then {
+if(_type == "Gas" || _type == "All") then {
+	_gasStations = [[5864.81,3135.14,0.00143862],[7358.25,4043.26,0.00143814],[5370.65,5831.23,0.00143814],[1583.29,1080.06,0.00144005]];
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
 		_marker setMarkerTypeLocal "hd_dot";
 		_marker setMarkerColorLocal "ColorGreen";
 
-	} forEach [[1577.61,1077.84,0.00143814],[5862.47,3141.74,0.00143909],[5369.34,5836.63,0.00143814],[7360.6,4042.88,0.00143814]];
+	} forEach _gasStations;
 };
 
-if(_type == "Gun") then {
+if(_type == "Gun" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -81,7 +82,7 @@ if(_type == "Gun") then {
 	} forEach (nearestobjects[player,["Land_buildingGunStore1"],30000]);
 };
 
-if(_type == "General") then {
+if(_type == "General" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -91,7 +92,7 @@ if(_type == "General") then {
 	} forEach (nearestobjects[player,["Land_Coffee_DED_Coffee_02_F","Land_Coffee_DED_Coffee_01_F"],30000]);
 };
 
-if(_type == "Carshop") then {
+if(_type == "Carshop" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -101,7 +102,7 @@ if(_type == "Carshop") then {
 	} forEach (nearestobjects[player,["Land_ModernShowroom"],30000]);
 };
 
-if(_type == "Garage") then {
+if(_type == "Garage" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -111,7 +112,7 @@ if(_type == "Garage") then {
 	} forEach [[938.832,1207.01,0.00143862]];
 };
 
-if(_type == "Airshop") then {
+if(_type == "Airshop" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -121,7 +122,7 @@ if(_type == "Airshop") then {
 	} forEach (nearestobjects[player,["Land_Hangar_F"],30000]);
 };
 
-if(_type == "Boatshop") then {
+if(_type == "Boatshop" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -131,7 +132,7 @@ if(_type == "Boatshop") then {
 	} forEach [[9910.15,5076.94,-2.38744]];
 };
 
-if(_type == "Pizzaria") then {
+if(_type == "Pizzaria" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -141,7 +142,7 @@ if(_type == "Pizzaria") then {
 	} forEach (nearestobjects[player,["land_cg_dexters"],30000]);
 };
 
-if(_type == "Bar") then {
+if(_type == "Bar" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -151,7 +152,7 @@ if(_type == "Bar") then {
 	} forEach (nearestobjects[player,["Land_buildingBar1"],30000]);
 };
 
-if(_type == "McDildos") then {
+if(_type == "McDildos" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -161,7 +162,7 @@ if(_type == "McDildos") then {
 	} forEach (nearestobjects[player,["Land_Market_DED_Market_01_F"],30000]);
 };
 
-if(_type == "Barber") then {
+if(_type == "Barber" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -171,7 +172,7 @@ if(_type == "Barber") then {
 	} forEach (nearestobjects[player,["Land_buildingBarbers1"],30000]);
 };
 
-if(_type == "Centrelink") then {
+if(_type == "Centrelink" || _type == "All") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -238,7 +239,7 @@ if(_type == "Misc" || _type == "All") then {
     _arr = [
 		["Casino",[933.723,1289.9,0.00143957]],
         ["Court of Law", [817.614,1637.97,0.00143766]],
-        ["Police Station", [8297.44,3002.32,0.00143814]],
+        //["Police Station", [8297.44,3002.32,0.00143814]],
         //["DoC Silver Lake", [5576.06,6191.3,0.00143433]],
         //["Silver Rush Hotel & Casino", [4821.5,2123.88,0.00143957]],
         ["Nightclub", [800.329,1389.63,0.00143814]],
