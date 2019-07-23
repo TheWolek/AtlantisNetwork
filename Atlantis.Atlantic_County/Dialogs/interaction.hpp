@@ -10,7 +10,7 @@ class interaction
 
 
 
-		//niebeski 
+		//niebeski - szary
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
@@ -593,7 +593,7 @@ class interaction
 
 
 
-		//Zielony 
+		//Zielony - rozowy
 		class RscButton_16002: RscButton
 		{
 			idc = 16002;

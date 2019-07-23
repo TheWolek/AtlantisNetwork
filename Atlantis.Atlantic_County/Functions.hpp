@@ -201,6 +201,7 @@ class CfgFunctions
 			class acceptBail {};
 			class removeBail {};
 			class closeBail {};
+			class addTicket {};
 		};
 
 		class Mail {

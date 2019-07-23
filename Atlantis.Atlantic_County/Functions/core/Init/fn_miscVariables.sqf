@@ -23,6 +23,7 @@ myjob = "none";
 houseinvitation = ObjNull;
 RadioConnections = [];
 RadioConnected = [];
+latestWanted = [];
 fires = [];
 adminESP = false;
 attachedbarrier = false;
@@ -195,7 +196,7 @@ client_fnc_restrained = compileFinal
 		uisleep 1;
 	};
 ";
-client_fnc_restraifront = compileFinal
+client_fnc_restrainfront = compileFinal
 "
 	attachedplayer = false;
 	imRestrained = true;
@@ -203,7 +204,7 @@ client_fnc_restraifront = compileFinal
 	uisleep 0.05;
 
 ";
-client_fnc_unrestraifront = compileFinal
+client_fnc_unrestrainfront = compileFinal
 "
 	attachedplayer = false;
 	imRestrained = true;
