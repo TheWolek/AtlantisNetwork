@@ -1621,6 +1621,10 @@ NoPixel_InteractionMenuItems = [
 		["Time Left", " [player] remoteexec ['client_fnc_getTimeLeft', CurrentCursorTarget] ",4]
 	],
 
+	[
+		[" (myJob IN ['Cop','legal'] && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && CursorTarget == vehicle CursorTarget && !imrestrained && gerpos player distance [1344.42,981.73,0.00143814] < 35)"],
+		["Check fingerprints", " ['Checking fingerprints',5,'client_fnc_checkfingerp',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",2]
+	],
 
 	[
 		[" myjob IN ['doc','Cop','EMS']  && !imrestrained && !(player getVariable ['surrender', false]) && count currentrepairmen > 0"],

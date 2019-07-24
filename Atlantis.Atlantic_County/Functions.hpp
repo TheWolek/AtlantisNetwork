@@ -600,6 +600,7 @@ class CfgFunctions
 			class tazed {};
 			class sharphit {};
 			class blunthit {};
+			class checkfingerp {};
 		};
 		class Money
 		{
