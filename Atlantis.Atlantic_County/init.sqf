@@ -13,14 +13,16 @@ if (isServer) then {
 	BGJoinableGames = []; 
 	PUBLICVARIABLE "BGJOINABLEGAMES";
 	[] spawn {
-		sleep 3; 
+		sleep 3;
+		currentmayorguid = "76561198180954621";
+		publicVariable "currentmayorguid";
 		//["currentMayorGUID", true] call server_fnc_getValue;
 		//["currentSenatorsGUID", true] call server_fnc_getValue;
 		//["currentPresidentSenateGUID", true] call server_fnc_getValue;
 		//["casinoRate", true] spawn server_fnc_getValue;
 		//["taxRate", true] spawn server_fnc_getValue;
 		//missionNamespace setVariable ["taxRate", 100];
-		taxRate = 100;
+		taxRate = 1;
 		publicVariable "taxRate"; 
 		
 		//["mafiaStash"] spawn server_fnc_getValue;
@@ -242,12 +244,13 @@ if (isServer) then {
 	};
 
 	//hintC format["8 March 2017\n\nHello %1,\n\nThank you for participating in the testing phase for the beta release of NoPixel.\n\nOur developers have been working tirelessly on the update and would politely ask if you, as players of NoPixel, to please take this time now to meticulously and carefully test these development changes and report suggestions and/or bugs to the website. There have been a significant change in the code and we require the testing of the public in order to see what bugs can be discovered and the effect on the economy. Following this beta testing, there will be a final update and wipe to complete the official beta release. The website will have more information on the updates to come.\n\nWe hope you enjoy the substantial amount of money credited to your bank accounts and hope you will use it for strenuous testing. \n\nYours,\nNoPixel Staff", name player];
-
+	/*
 	if (getplayeruid player == currentMayorGUID) then {
 		Mayor = true;
 		currentMayor pushback player;
 		publicVariable "currentMayor";
 	};
+	
 	if (getplayeruid player IN currentSenatorsGUID) then {
 		Senator = true;
 		currentSenators pushback player;
@@ -256,6 +259,7 @@ if (isServer) then {
 	if (getplayeruid player == currentPresidentSenateGUID) then {
 		Psenate = true;
 	};
+	*/
 
 	waituntil { !(isnull (finddisplay 46)) };
 

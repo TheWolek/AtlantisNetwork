@@ -158,7 +158,7 @@ if (_booli) then {
 
 	_mayor = false;
 
-	if(_uid == currentMayorGUID) then { _mayor = true; theMayor = _player; };
+	//if(_uid == currentMayorGUID) then { _mayor = true; theMayor = _player; };
 	if(_mayor) then { _houselevel = 3; _player setVariable ["houselevel", _houselevel, false]; };
 
 	_house = [0,0,0];

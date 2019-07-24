@@ -14,3 +14,6 @@ fn_initInteractions-old.sqf
 Atlantis.Atlantic_County-b.pbo
 Atlantis.Atlantic_County-b.pbo
 Atlantis.Atlantic_County.pbo.bak
+*.pbo
+*.pbo
+*.bak
