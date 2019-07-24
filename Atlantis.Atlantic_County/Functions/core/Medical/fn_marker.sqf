@@ -12,11 +12,6 @@ if (_type == "ALL") then {
     _marker setMarkerTypeLocal "hd_dot";
     _marker setMarkerColorLocal "ColorGreen";
     _marker setMarkerTextLocal (markerText format["%1",(getPlayerUID player)]);
-	if(myoffice isEqualTo [0,0,0]) exitWith {};
-    _marker = createMarkerLocal [format["tempmarker_%1",random 10000], getMarkerPos format["%1OFFICE",(getPlayerUID player)]];
-    _marker setMarkerShapeLocal "ICON";
-    _marker setMarkerTypeLocal "hd_dot";
-    _marker setMarkerColorLocal "ColorGreen";
     _marker setMarkerTextLocal (markerText format["%1OFFICE",(getPlayerUID player)]);	
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
@@ -192,7 +187,11 @@ if (_type == "ALL") then {
 		_marker setMarkerTextLocal (_x select 0);
 
 	} forEach _arr;	
-
+	if(myoffice isEqualTo [0,0,0]) exitWith {};
+    _marker = createMarkerLocal [format["tempmarker_%1",random 10000], getMarkerPos format["%1OFFICE",(getPlayerUID player)]];
+    _marker setMarkerShapeLocal "ICON";
+    _marker setMarkerTypeLocal "hd_dot";
+    _marker setMarkerColorLocal "ColorGreen";
 };
 
 if(_type == "Home") then {
