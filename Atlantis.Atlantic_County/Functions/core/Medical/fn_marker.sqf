@@ -27,7 +27,7 @@ if (_type == "ALL") then {
 		_marker4 setMarkerColorLocal "ColorGreen";
 
 	} forEach (nearestobjects[player,["land_cg_dunkinbronuts"],30000]);
-	_gasStations = [[5864.81,3135.14,0.00143862],[7358.25,4043.26,0.00143814],[5370.65,5831.23,0.00143814],[1583.29,1080.06,0.00144005]];
+	//_gasStations = [[5864.81,3135.14,0.00143862],[7358.25,4043.26,0.00143814],[5370.65,5831.23,0.00143814],[1583.29,1080.06,0.00144005]];
 	{
 		_marker5 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker5 setMarkerShapeLocal "ICON";
@@ -35,7 +35,7 @@ if (_type == "ALL") then {
 		_marker5 setMarkerColorLocal "ColorGreen";
 		_marker5 setMarkerTextLocal "CPN";
 
-	} forEach _gasStations;
+	} forEach (nearestObjects[player,["land_pop_gasolinera"],30000]);
 	{
 		_marker6 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker6 setMarkerShapeLocal "ICON";

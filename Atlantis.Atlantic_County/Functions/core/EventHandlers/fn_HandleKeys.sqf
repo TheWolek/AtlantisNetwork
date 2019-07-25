@@ -203,6 +203,7 @@ switch (_code) do
 	{
 		if(!(myJob IN ["EMS","Cop","doc"])) then {
 			[] spawn client_fnc_playermapMarkers;
+			["All"] spawn client_fnc_markers;
 		} else {
 			if(myJob == "EMS") then {
 				[] spawn client_fnc_mapMarkers;
