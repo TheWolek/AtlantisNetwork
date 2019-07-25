@@ -68,7 +68,8 @@ class ATMGovt
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.20;
+			y = 0.23;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -77,7 +78,8 @@ class ATMGovt
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.30;
+			y = 0.33;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -220,7 +222,8 @@ class ATMmafia
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.20;
+			y = 0.23;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -229,7 +232,8 @@ class ATMmafia
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.30;
+			y = 0.33;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -372,7 +376,8 @@ class ATMbiker
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.20;
+			y = 0.23;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -381,7 +386,8 @@ class ATMbiker
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.30;
+			y = 0.33;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -524,7 +530,8 @@ class ATMMobster
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.20;
+			y = 0.23;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -533,7 +540,8 @@ class ATMMobster
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.30;
+			y = 0.33;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -676,7 +684,8 @@ class CasinoVault
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.20;
+			y = 0.23;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -685,7 +694,8 @@ class CasinoVault
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.30;
+			y = 0.33;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -830,7 +840,8 @@ class ATM
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.20;
+			y = 0.23;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -839,7 +850,8 @@ class ATM
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.30;
+			y = 0.33;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -983,7 +995,8 @@ class DirtyMoney
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.20;
+			y = 0.23;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -992,7 +1005,8 @@ class DirtyMoney
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.30;
+			y = 0.33;
+			sizeEx = 0.1;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};

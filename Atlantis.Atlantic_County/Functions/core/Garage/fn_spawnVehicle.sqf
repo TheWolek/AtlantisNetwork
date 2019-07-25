@@ -26,6 +26,8 @@ clearMagazineCargoGlobal _vehicle;
 clearWeaponCargoGlobal _vehicle;
 clearItemCargoGlobal _vehicle;
 
+Current_Cars pushBack _vehicle;
+
 
 if(str CurrentCursorTarget find 'otros' < 0 && str CurrentCursorTarget find 'garaje' < 0 && str CurrentCursorTarget find 'tallerdepinturaabandonado' < 0 && str CurrentCursorTarget find 'hangar' < 0 && str CurrentCursorTarget find 'embarcadero' < 0) exitWith {};
 

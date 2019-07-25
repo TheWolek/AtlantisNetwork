@@ -194,7 +194,7 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 
 	spawnedvehicle allowdamage false;
 	client_kcCamera camSetTarget spawnedvehicle;
-	client_kcCamera camSetRelPos [2.7,1,4];
+	client_kcCamera camSetRelPos [4,1,2];
 	client_kcCamera camSetFOV .99;
 	client_kcCamera camCommit 0;
 
