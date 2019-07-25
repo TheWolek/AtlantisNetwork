@@ -567,7 +567,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["(CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Boat' || CursorTarget isKindOf 'Ship') && (myJob != 'Repairman' || ( myJob == 'Repairman' && (CursorTarget IN current_cars) ) ) && ('CG_wheel' in magazines player || 'CG_engine' in magazines player)"],
+		["(CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Boat' || CursorTarget isKindOf 'Ship') && (myJob != 'Repairman' || ( myJob == 'Repairman' && (CursorTarget IN current_cars) ) ) && ('ToolKit' in backpackitems player)"],
 		["Repair Vehicle", "['Repairing',20,'client_fnc_repair',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 
@@ -761,10 +761,12 @@ NoPixel_InteractionMenuItems = [
 		["Send To Prison", " createdialog 'jailprocess';",2]
 	],
 
+	/*
 	[
 		[" (CursorTarget getVariable['dead',FALSE]) && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && !imrestrained"],
 		["Check Pulse", " ['Checking Pulse',3,'client_fnc_checkPulse',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',player,'cg_mission_files\sounds\patdown1.ogg',CurrentCursorTarget] spawn client_fnc_dotask ",2]
 	],
+	*/
 
 	[
 		["!(cursortarget getVariable['dead',FALSE]) && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && (animationstate CurrentCursorTarget) == 'amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon' || (animationstate CurrentCursorTarget) == 'Incapacitated' || (animationstate CurrentCursorTarget) == 'AmovPercMstpSnonWnonDnon_Ease' || (animationstate CurrentCursorTarget) == 'Acts_AidlPsitMstpSsurWnonDnon_loop' && !imrestrained"],

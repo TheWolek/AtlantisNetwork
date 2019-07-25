@@ -34,7 +34,7 @@ cutText ["YOU HAVE BEEN PARALYZED. YOU MAY TALK, BUT NOT MOVE.","PLAIN"];
 		for [{_x=1},{_x<=10},{_x=_x+1}] do { 
 			[] call KK_fnc_forceRagdoll; 
 			sleep 0.1;
-			if(animationState _unit == "unconscious") exitWith{}; 
+			if(animationState _unit == "UnconsciousReviveDefault") exitWith{}; 
 		};
 
 	} else {
@@ -42,12 +42,12 @@ cutText ["YOU HAVE BEEN PARALYZED. YOU MAY TALK, BUT NOT MOVE.","PLAIN"];
 		for [{_x=1},{_x<=10},{_x=_x+1}] do { 
 			[] call KK_fnc_forceRagdoll; 
 			sleep 0.1;
-			if(animationState _unit == "unconscious") exitWith{}; 
+			if(animationState _unit == "UnconsciousReviveDefault") exitWith{}; 
 		};
 
 	};
 
-	waitUntil {animationstate _unit != "unconscious"};
+	waitUntil {animationstate _unit != "UnconsciousReviveDefault"};
 	
 	if(_headshot == 1) then {
 		_anim = selectRandom [
@@ -62,7 +62,7 @@ cutText ["YOU HAVE BEEN PARALYZED. YOU MAY TALK, BUT NOT MOVE.","PLAIN"];
 		];
 	};
 
-	[_unit, _anim] remoteExec["switchMove"];
+	[_unit, "UnconsciousReviveDefault"] remoteExec["switchMove"];
 
 	while{true} do {
 		sleep 1;
@@ -70,13 +70,13 @@ cutText ["YOU HAVE BEEN PARALYZED. YOU MAY TALK, BUT NOT MOVE.","PLAIN"];
 		_unit setOxygenRemaining 1;
 
 		if (round(maxTime - time) > 0) then {
-			hintSilent parsetext format["<img size='1' image='CG_Jobs\icons\info.paa'/> <t color='#FFCC00'><t size='0.75'>Respawn</t><br/>You may respawn in %1",[(maxTime - time),"MM:SS"] call BIS_fnc_secondsToString];
+			hintSilent parsetext format["<t size='0.75'>Respawn</t><br/>You may respawn in %1",[(maxTime - time),"MM:SS"] call BIS_fnc_secondsToString];
 		} else {
 			hint "";
 		};
 
-		if(deadPhase == 1 && animationState player != _anim ) then { [_unit, ""] remoteExec["switchMove"]; [_unit, _anim] remoteExec["switchMove"]; sleep 5; };
-		if(deadPhase == 2 && animationState player != "UnconsciousReviveDefault" ) then { [_unit, ""] remoteExec["switchMove"]; [_unit, "UnconsciousReviveDefault"] remoteExec["switchMove"]; sleep 5; };
+		if(animationState player != "UnconsciousReviveDefault" ) then { [_unit, "UnconsciousReviveDefault"] remoteExec["switchMove"]; sleep 5; };
+		//if(deadPhase == 2 && animationState player != "UnconsciousReviveDefault" ) then { [_unit, ""] remoteExec["switchMove"]; [_unit, "UnconsciousReviveDefault"] remoteExec["switchMove"]; sleep 5; };
 
 		if(!deadPlayer) exitwith {
 			[_unit, "UnconsciousOutProne"] remoteExec["switchMove"];
