@@ -1622,7 +1622,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" (myJob IN ['Cop','legal'] && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && CursorTarget == vehicle CursorTarget && !imrestrained && gerpos player distance [1344.42,981.73,0.00143814] < 35 )"],
+		[" (myJob IN ['Cop','legal'] && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && CursorTarget == vehicle CursorTarget && !imrestrained && player distance [1344.42,981.73,0.00143814] < 35 )"],
 		["Check fingerprints", " ['Checking fingerprints',5,'client_fnc_checkfingerp',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",4]
 	],
 

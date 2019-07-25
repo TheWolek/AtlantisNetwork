@@ -1,8 +1,8 @@
 disableSerialization;
 createDialog "ATM";
 
-_bankAccount = format ["ATM # Account:%1", str (player getVariable "bankAccount")]; 
-ctrlSetText [1000, _bankAccount];
+//_bankAccount = format ["ATM # Account:%1", str (player getVariable "bankAccount")]; 
+//ctrlSetText [1000, _bankAccount];
 
 _bank = player getVariable "cashinbank"; 
 _bank = _bank call client_fnc_numberText;

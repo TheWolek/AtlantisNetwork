@@ -12,7 +12,22 @@ _farmingVehicles = ["vvv_DOD_RamSRT_civ","jf_caprice_wagon"];
 //remember to use this array in the mafia selling script & ALSO THE CAR UPDATE SCRIPT.
 _civilianVehicle = [
 	// type 1
-	["C_Offroad_01_F",3300]
+	//["C_Offroad_01_F",3300]
+	["d3s_fiesta_16",1000],
+	["d3s_e38_98",1000],
+	["d3s_vesta_15",1200],
+	["d3s_fseries_17",1200],
+	["d3s_f87_17_m",1200],
+	["d3s_f10_12",1200],
+	["d3s_challenger_15_DM",1300],
+	["d3s_giulietta_quad_16",1300],
+	["d3s_taurus_10",1300],
+	["d3s_charger_15",1500],
+	["d3s_q50_14",1500],
+	["d3s_is_16",1500],
+	["d3s_clubman_11_50",1800],
+	["d3s_xe_15",1800],
+	["d3s_c36_14",2000]
 	/*
 	["ivory_190e",3300],
 	["ivory_gti",6000],	
@@ -179,7 +194,7 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 
 	spawnedvehicle allowdamage false;
 	client_kcCamera camSetTarget spawnedvehicle;
-	client_kcCamera camSetRelPos [2.7,1,0.25];
+	client_kcCamera camSetRelPos [2.7,1,4];
 	client_kcCamera camSetFOV .99;
 	client_kcCamera camCommit 0;
 
