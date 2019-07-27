@@ -75,12 +75,12 @@ if (isServer) then {
 
 	THETV = "nopixel_tools_tv1" createvehicle [0,0,0];
 	publicvariable "THETV";
-	_vehicle = "ivory_wrx" createvehicle [0,0,0];
-	[_vehicle, ["black","matte"], "black", 1, 1] call client_fnc_ivoryInitVehicle;
-	[_vehicle, "FuckYou", "ivory"] call client_fnc_numberPlate;
+	//_vehicle = "ivory_wrx" createvehicle [0,0,0];
+	//[_vehicle, ["black","matte"], "black", 1, 1] call client_fnc_ivoryInitVehicle;
+	//[_vehicle, "FuckYou", "ivory"] call client_fnc_numberPlate;
 
 	uisleep 0.05;
-	deletevehicle _vehicle;
+	//deletevehicle _vehicle;
 
 	setDate [2015, 3, 3, 06, 0];  
 	0 setovercast 0.15;  
@@ -192,12 +192,12 @@ if (isServer) then {
 
 	waitUntil {!isNull (findDisplay 46)};
 
-	_vehicle = "ivory_wrx" createvehiclelocal [0,0,0];
-	[_vehicle, ["black","matte"], "black", 1, 1] call client_fnc_ivoryInitVehicle;
-	[_vehicle, "FuckYou", "ivory"] call client_fnc_numberPlate;
+	//_vehicle = "ivory_wrx" createvehiclelocal [0,0,0];
+	//[_vehicle, ["black","matte"], "black", 1, 1] call client_fnc_ivoryInitVehicle;
+	//[_vehicle, "FuckYou", "ivory"] call client_fnc_numberPlate;
 
 	uisleep 0.05;
-	deletevehicle _vehicle;
+	//deletevehicle _vehicle;
 
 	[Client_fnc_HudEffects, 3] execFSM "call.fsm";
 	

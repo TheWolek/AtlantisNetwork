@@ -76,7 +76,7 @@ if (_jobType == "repairman") exitwith {
 	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["nopixel_mrfixit", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 	if(_level_check > 599) then { vehspawned = createVehicle ["nopixel_mrfixit", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
-	[vehspawned, ["white","Glossy"]] spawn client_fnc_initVehicle;
+	//[vehspawned, ["white","Glossy"]] spawn client_fnc_initVehicle;
 	[vehspawned] spawn client_fnc_spawnvehicle;	
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE",1];
@@ -91,7 +91,7 @@ if (_jobType == "security") exitwith {
 	if(_level_check > 599) then { vehspawned = createVehicle ["ivory_isf_security", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
-	[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
+	//[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["sl_client_c3_security_W",1];
 	["You have some items in the truck, use them.", true] spawn domsg;
@@ -105,7 +105,7 @@ if (_jobType == "towtruck") exitwith {
 	if(_level_check > 599) then { vehspawned = createVehicle ["red_towtruck_08_black", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
-	[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
+	//[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE_BLKboots_nk_blk",1];
 	["You have some items in the truck, use them!", true] spawn domsg;
@@ -136,7 +136,7 @@ if (_jobType == "taxi") exitwith {
 	if(_level_check > 599) then { vehspawned = createVehicle ["red_gs350_13_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
-	[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
+	//[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 };
 
