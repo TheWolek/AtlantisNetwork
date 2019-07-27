@@ -1,7 +1,4 @@
 _player = _this select 0;
-
-diag_log format ["leave job %1", _player];
-
 //jobs that can happen inside jobs, so, if found, keep searching.
 
 

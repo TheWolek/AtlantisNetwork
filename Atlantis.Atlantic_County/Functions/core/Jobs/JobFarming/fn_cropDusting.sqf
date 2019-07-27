@@ -41,7 +41,7 @@ if(!taskrunning) then {
 				if(_warnings > 30) then { 
 					taskrunning = false; 
 					["You have been laid off from your job!", true] spawn domsg; 
-					format ["Job_Log: %1 has been laid off from %2",player,myjob] remoteExecCall["diag_log",2];
+					format ["Job_Log: %1 has been laid off from %2",name player,myjob] remoteExecCall["diag_log",2];
 				};
 
 				if(vehspawned distance player > 30) then { _warnings = _warnings + 1; };

@@ -4,7 +4,7 @@ if(_this select 0 == 1) then {
 	player setunitloadout _playerGear;
 };
 
-format ["Job_Log: %1 stopped working as %2",player,myjob] remoteExecCall["diag_log",2];
+format ["Job_Log: %1 stopped working as %2",name player,myjob] remoteExecCall["diag_log",2];
 myjob = "none";
 player setVariable["badgeNumber", ""];
 player setVariable["coplevel",nil,true];
