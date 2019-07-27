@@ -155,14 +155,15 @@ if(_ERROR == "Success") exitwith {
 	//shop owner setting
 	_shopcontent = [_myweapons,_mymagazines,_myitems,_mybackpacks];
 	_shopplayer setVariable ["shopcontent",_shopcontent,false];
-	
-	[_quantity, _item, _totalprice,_type,_shopcontent] remoteExec ["client_fnc_payShopOwner",_shopplayer];
+	//wysyła hajs i info do właściciela shlepu
+	[_quantity, _item, _totalprice,_type,_shopcontent, _player] remoteExec ["client_fnc_payShopOwner",_shopplayer];
 
 	//database changes
 	_updatestr = format ["updateShop:%1:%2", _shopcontent, getPlayerUID _shopplayer];
 	_update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
 
 	//player purchase success
+	//wysyła info z "rachunkiem" do klienta sklepu
 	[_quantity, _item, _totalprice, _type] remoteExec ["client_fnc_confirmPurchase",_player];
 };
 
