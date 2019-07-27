@@ -20,6 +20,6 @@ _uid = getPlayerUID _shopplayer;
 if(_uid in activeshopcrates) exitwith { ["This shop is currently being stocked, please wait a few moments.", false] remoteExec ["domsg",_unit]; };
 
 _shopcontent = _shopplayer getVariable "shopcontent";
-
+currentshopowner = _shopplayer
 [_shopcontent,_shopplayer] remoteExec ["client_fnc_openShop",_unit];
 

@@ -5,13 +5,10 @@ _player = _this select 0;
 _item = _this select 1;
 _quantity = _this select 2;
 _quantity = call compile format["%1", _quantity];
-_shop = nearestObjects [_player, ["Land_buildingCommercial1","Land_buildingCommercial2"], 30];
+/*_shop = nearestObjects [_player, ["Land_buildingCommercial1","Land_buildingCommercial2"], 30];
 _shop = _shop select 0;
-_shopplayer = _shop getVariable "shop";
-
-diag_log format ["store purchase %1", _player];
-
-
+_shopplayer = _shop getVariable "shop";*/
+_shopplayer = currentshopowner;
 
 if(isNull _shopplayer) exitwith {}; //guess they logged out, need to cancel it here to prevent duping.
 
