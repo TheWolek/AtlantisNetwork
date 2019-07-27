@@ -9,7 +9,7 @@ diag_log format ["Action_log: %1 (%2) open someones store", name _unit, getPlaye
 
 
 _shop = nearestObjects [_unit, [_shop], 30];
-//_shop = _shop select 0;
+_shop = _shop select 0;
 
 _shopplayer = _shop getVariable "shop";
 
