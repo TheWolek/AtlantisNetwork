@@ -17,7 +17,7 @@ processingjobs = true;
 _jobcount = count currentMailmen;
 
 while{true} do { 
-	diag_log format format ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Fedex Worker"; 
