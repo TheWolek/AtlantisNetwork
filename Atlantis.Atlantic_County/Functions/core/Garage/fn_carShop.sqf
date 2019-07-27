@@ -192,8 +192,8 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 
 	//[1060.8,4128.42,0.00143909] airfield pos
 	if(_SELECTEDVEHICLE iskindof "car") then {
-		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [1060.8,4128.42,0.00143909];
-		spawnedvehicle setpos [1060.8,4128.42,0.00143909];
+		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [1060.8,4128.42,1];
+		spawnedvehicle setpos [1060.8,4128.42,1];
 		spawnedvehicle setdir _dir;
 	};
 
