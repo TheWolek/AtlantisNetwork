@@ -6,7 +6,7 @@ if(myjob != "none" && myjob != "Repairman") exitwith { ["You already have a job!
 if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "Repairman";
-format ["Job_Log: %1 started working as %2",player,myjob] remoteExecCall["diag_log",2];
+format ["Job_Log: %1 started working as %2",name player,myjob] remoteExecCall["diag_log",2];
 [] call client_fnc_hudwork;
 private ["_warning","_JobBase"];
 if(!taskrunning) then {
