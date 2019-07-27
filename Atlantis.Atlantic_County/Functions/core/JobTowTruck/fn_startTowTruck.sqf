@@ -6,7 +6,7 @@ if(myjob != "none") exitwith { ["You already have a job!", true] spawn domsg; };
 if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "towtruck";
-
+diag_log format ["Job_Log: %1 started working as %2",player,myjob];
 private ["_warning","_JobBase"];
 if(!taskrunning) then {
 

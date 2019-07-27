@@ -52,9 +52,11 @@ if(!_failure) then {
 	_amount = _amount + ((count currentcop) * 3);
 	[_amount,false,true] call Client_fnc_addMoneyToPlayer; 
 	[format["You just robbed this store for %1",(_amount+_stolen) call client_fnc_numberText], true] spawn domsg;
+	diag_log format["Robbery_Log: %1 robbed store for %2",player, _amount+_stolen];
 
 } else { 
 	[format["You just robbed this store for %1",_stolen call client_fnc_numberText], true] spawn domsg;
+	diag_log format["Robbery_Log: %1 robbed store for %2",player, _stolen];
 };
 
 if(count currentCop > 0) then {

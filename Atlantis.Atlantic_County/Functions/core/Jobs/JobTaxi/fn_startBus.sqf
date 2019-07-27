@@ -7,7 +7,7 @@ if(myjob != "none" && myjob != "bus") exitwith { ["You already have a job!", tru
 if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "bus";
-
+diag_log format ["Job_Log: %1 started working as %2",player,myjob];
 [] call client_fnc_hudwork; 
 
 private ["_warning","_JobBase"];

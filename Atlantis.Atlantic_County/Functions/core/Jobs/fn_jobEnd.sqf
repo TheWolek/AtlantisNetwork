@@ -4,14 +4,13 @@ if(_this select 0 == 1) then {
 	player setunitloadout _playerGear;
 };
 
-
+diag_log format ["Job_Log: %1 stopped working as %2",player,myjob];
 myjob = "none";
 player setVariable["badgeNumber", ""];
 taskrunning = false;
 dispatch = false;
 playertasks = [];
 paycheck = 0;
-
 _pia = serverRadioPlayers FIND player;
 if(_pia != -1) then { serverRadioPlayers SET [_pia,objNull]; publicVariable "serverRadioPlayers"; [] spawn client_fnc_hangup; };
 

@@ -1,5 +1,5 @@
 _houseLevel = player getvariable "houselevel";
-
+_uid = getPlayerUID player;
 _cashcheck = [1,225000] call client_fnc_checkmoney;
 if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",225000 call client_fnc_numberText], true] spawn domsg; };	
 
@@ -8,7 +8,9 @@ if( ((player getvariable "cashinhand") - 225000) < (client_level_array select 16
 };
 
 if(_houselevel == 1) then { ["You upgraded to tier 2 housing, you will get your new house on soft-log.", true] spawn domsg; player setvariable ["houselevel",2,false]; [player, "houselevel", 2] remoteExec ["Server_fnc_setVariable",2]; };
+diag_log format["HouseUpgrade_Log: %1 (UID %2) upgraded hid house to tier 2",player,_uid];
 if(_houselevel == 2) then { ["You upgraded to tier 3 housing, you will get your new house on soft-log.", true] spawn domsg; player setvariable ["houselevel",3,false]; [player, "houselevel", 3] remoteExec ["Server_fnc_setVariable",2]; };
+diag_log format["HouseUpgrade_Log: %1 (UID %2) upgraded hid house to tier 3",player,_uid];
 if(_houselevel == 3) then { ["You can not upgrade any higher, yet!", true] spawn domsg; };
 
 [225000, true] call Client_fnc_removecash;
