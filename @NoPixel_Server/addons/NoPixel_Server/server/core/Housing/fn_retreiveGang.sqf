@@ -5,7 +5,7 @@ if (!safetyloot) exitwith {};
 _player = _this select 0;
 _myJob = _this select 1;
 
-diag_log ["retreive gang of: %1 %2", _player, _myJob];
+diag_log format ["retreive gang of: %1 %2", _player, _myJob];
 
 
 

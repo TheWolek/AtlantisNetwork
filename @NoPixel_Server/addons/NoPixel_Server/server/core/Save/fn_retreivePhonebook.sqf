@@ -28,4 +28,4 @@ _information = [
 [_information] remoteExec ["client_fnc_updatePhonebook",_player];
 
 
-diag_log ["retreive phonebook %1", _player];
+diag_log format ["retreive phonebook %1", _player];

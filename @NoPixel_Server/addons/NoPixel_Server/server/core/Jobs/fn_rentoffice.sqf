@@ -2,7 +2,7 @@ _shoppos = _this select 0;
 _player = _this select 1;
 _marker = _this select 2;
 
-diag_log ["rent office %1", _player];
+diag_log format ["rent office %1", _player];
 
 if(isNil "rentedshops") then { rentedshops = []; };
 

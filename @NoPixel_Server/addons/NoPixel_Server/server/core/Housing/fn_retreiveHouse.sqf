@@ -4,7 +4,7 @@ private ["_turntable","_holder","_time","_dir","_spawnLocation"];
 
 if (!safetyloot) exitwith {};
 
-diag_log ["retreive house: %1", _player];
+diag_log format ["retreive house: %1", _player];
 
 _uid = getPlayerUID _player;
 

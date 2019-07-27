@@ -7,7 +7,7 @@ _uidPlayer = getplayerUID _player;
 _updatestr = format ["update%3:%1:%2", _rank, _uidplayer, _type];
 _update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
 
-diag_log ["promoted %1 %2", _player, _type];
+diag_log format ["promoted %1 %2", _player, _type];
 
 [_type,_rank] remoteExec ["client_fnc_setvariable",_player];
 

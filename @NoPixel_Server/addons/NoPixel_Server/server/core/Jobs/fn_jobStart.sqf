@@ -4,7 +4,7 @@
 _player = _this select 0;
 _jobtype = _this select 1;
 
-diag_log ["job starting %1 - %2", _player,_jobtype];
+diag_log format ["job starting %1 - %2", _player,_jobtype];
 
 if (str _jobtype find "Cop" > -1) exitwith {   
 	if(count currentCop < 15) then {

@@ -6,7 +6,7 @@ if (!safetyloot) exitwith {};
 
 _uid = getPlayerUID _player;
 
-diag_log ["store %1", _uid];
+diag_log format ["store %1", _uid];
 
 if(_uid in activeshopcrates) exitwith {};
 activeshopcrates pushback _uid;

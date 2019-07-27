@@ -1,6 +1,6 @@
 params["_player"];
 
-diag_log ["paintball %1", _player];
+diag_log format ["paintball %1", _player];
 
 
 if(isNil "paintball") then { paintball = []; };

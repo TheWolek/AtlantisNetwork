@@ -17,7 +17,7 @@ processingjobs = true;
 _jobcount = count currentMailmen;
 
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Fedex Worker"; 
@@ -25,7 +25,7 @@ while{true} do {
 
 _jobcount = count currentsecurity;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Security"; 
@@ -34,7 +34,7 @@ while{true} do {
 
 _jobcount = count currentTowTruckDrivers;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Tow Truck Driver"; 
@@ -43,7 +43,7 @@ while{true} do {
 
 _jobcount = count currentTrashMan;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Garbage Man"; 
@@ -52,7 +52,7 @@ while{true} do {
 
 _jobcount = count currentNewsMan;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "News Reporter"; 
@@ -61,7 +61,7 @@ while{true} do {
 
 _jobcount = count currentRepairmen;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Repairman"; 
@@ -70,7 +70,7 @@ while{true} do {
 
 _jobcount = count currentTaxiDrivers;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Taxi Driver"; 
@@ -79,7 +79,7 @@ while{true} do {
 
 _jobcount = count currentLegalAid;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Legal Aid"; 

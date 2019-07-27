@@ -1,6 +1,6 @@
 _payment = _this select 0;
 
-diag_log ["paying mayor %1", _payment];
+diag_log format ["paying mayor %1", _payment];
 
 
 if(isNil "theMayor") exitwith {};

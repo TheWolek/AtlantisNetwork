@@ -13,4 +13,4 @@ _pia = activeshopcrates find _uid;
 activeshopcrates deleteAt _pia;
 
 
-diag_log ["store upd %1", _player];
+diag_log format ["store upd %1", _player];

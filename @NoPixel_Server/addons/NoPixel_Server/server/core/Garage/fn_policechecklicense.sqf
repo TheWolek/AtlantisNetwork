@@ -8,7 +8,7 @@ _check = [0, _checkstr] call ExternalS_fnc_ExtDBquery;
 _booli = (_check select 0) select 0;
 
 
-diag_log ["license check police: %1 %2", _officer, _plate];
+diag_log format ["license check police: %1 %2", _officer, _plate];
 
 if(_booli) then {
 

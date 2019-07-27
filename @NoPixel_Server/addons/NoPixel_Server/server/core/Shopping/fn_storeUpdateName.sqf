@@ -1,7 +1,7 @@
 _player = _this select 0;
 _newname = _this select 1;
 
-diag_log ["store update name %1", _player];
+diag_log format ["store update name %1", _player];
 
 if(isNil "_newname") exitwith {};
 

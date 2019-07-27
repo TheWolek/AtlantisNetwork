@@ -36,7 +36,7 @@ if(_status == "Add") then {
 		while {booli} do {
 			sleep 3;
 
-			diag_log ["license change 7x %1", _owner];
+			diag_log format ["license change 7x %1", _owner];
 
 			_l1 = _licenseAlphaArray call BIS_fnc_selectRandom;
 			_l2 = _licenseAlphaArray call BIS_fnc_selectRandom;

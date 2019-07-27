@@ -33,7 +33,7 @@ if(typeName _receiver == "ARRAY") exitWith {
 
         [missionNamespace, ["messages", _messages]] remoteExec ["setVariable", _x];
 
-        diag_log ["inserting sms %1", _player];
+        diag_log format ["inserting sms %1", _player];
 
     } forEach _receiver;
 
@@ -84,4 +84,4 @@ if(typeName _receiver == "OBJECT") exitWith {
 
 
 
-diag_log ["inserting sms %1", _player];
+diag_log format ["inserting sms %1", _player];

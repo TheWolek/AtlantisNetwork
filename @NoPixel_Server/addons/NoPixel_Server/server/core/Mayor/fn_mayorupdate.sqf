@@ -4,7 +4,7 @@
 
 _uidplayer = _this select 0;
 
-diag_log ["mayor update %1", _uidplayer];
+diag_log format ["mayor update %1", _uidplayer];
 
 
 _updatestr = format ["updateMayor:%1:%2", _uidplayer,1];

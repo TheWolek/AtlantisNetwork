@@ -5,7 +5,7 @@ _sender = _this select 1;
 _jobType = _this select 2;
 _message = _this select 3;
 
-diag_log ["job action %1", _sender];
+diag_log format ["job action %1", _sender];
 
 _units = [];
 

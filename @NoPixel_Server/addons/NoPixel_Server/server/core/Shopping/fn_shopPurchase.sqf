@@ -9,7 +9,7 @@ _shop = nearestObjects [_player, ["Land_buildingCommercial1","Land_buildingComme
 _shop = _shop select 0;
 _shopplayer = _shop getVariable "shop";
 
-diag_log ["store purchase %1", _player];
+diag_log format ["store purchase %1", _player];
 
 
 

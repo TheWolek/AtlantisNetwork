@@ -14,4 +14,4 @@ if(count currentcop > 0) then {
 	
 };
 
-diag_log ["robbery call %1", _target];
+diag_log format ["robbery call %1", _target];
