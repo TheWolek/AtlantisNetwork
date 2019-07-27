@@ -1,4 +1,9 @@
 params["_house"];
+if(myJob IN ['Cop','doc'] && lastGovtUseCar > time) exitWith {
+
+	["You recently got a vehicle out, please wait 5 minutes.", true] spawn domsg;
+
+};
 
 createDialog "garage3"; 
 
@@ -11,12 +16,6 @@ waitUntil { !isNil "packet"; };
 
 _num = round (random(4));	
 if(_num == 0) then { _num = 1; };
-
-if(myJob IN ['Cop','doc'] && lastGovtUseCar > time) exitWith {
-
-	["You recently got a vehicle out, please wait 5 minutes.", true] spawn domsg;
-
-};
 
 if(myJob == "Legal") then {
 	if(player getVariable "legal" >= 1) then {
@@ -37,13 +36,17 @@ if(myJob == "Legal") then {
 
 if(myJob == "Cop") then {
 
-	if(player getvariable "cop" >= 1 && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'])) then {
+		_garage pushback "GM_MPD_CVPI";
+		_garage pushback "d3s_taurus_FPI_10";
+        _garage pushback "GM_SIO_RANGEROVER";
+
+	if(player getvariable "cop" >= 1) then {
 		_garage pushback "GM_MPD_CVPI";
 		_garage pushback "d3s_taurus_FPI_10";
         _garage pushback "GM_SIO_RANGEROVER";
 	};
 
-	if(player getvariable "cop" >= 4 && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'])) then {
+	if(player getvariable "cop" >= 4 ) then {
 		_garage pushback "GM_MPD_CHARGER";
         _garage pushback "GM_MPD_CHARGER_CHP_LB";
         _garage pushback "GM_MPD_CHARGER_CHP_W_LB";
@@ -82,11 +85,11 @@ if(myJob == "Cop") then {
 
 if(myJob == "doc") then {
 
-	if(player getvariable "doc" >= 1 && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'])) then {
+	if(player getvariable "doc" >= 1) then {
 
 	};
 
-	if(player getvariable "doc" >= 6 && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'])) then {
+	if(player getvariable "doc" >= 6) then {
 
 	};
 
@@ -94,7 +97,7 @@ if(myJob == "doc") then {
 
 	};
 
-	if((player getvariable "doc" == 7 || 12 IN licenseArray || 13 IN licenseArray) && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'] || str _house find "em_heliport" > -1)  ) then {
+	if((player getvariable "doc" == 7 || 12 IN licenseArray || 13 IN licenseArray) ) then {
 
 	};
 	
@@ -126,9 +129,9 @@ if(myJob == "EMS") then {
 		_garage pushback "d3s_svr_17_EMS";
 		_garage pushback "d3s_g500_18_EMS";
 		_garage pushback "d3s_cla_15_EMS";
-	}
+	};
 
-	if((player getvariable "ems" == 8 || 25 IN licenseArray || 26 IN licenseArray) && (str _house find "embarcadero" > -1) ) then { 
+	if((player getvariable "ems" == 8 || 25 IN licenseArray || 26 IN licenseArray) ) then { 
 		_garage pushback "B_CBS_WaterShadow730_F";
 		_garage pushback "B_Boat_Transport_01_F";
 		_garage pushback "C_Scooter_Transport_01_F";
@@ -136,7 +139,7 @@ if(myJob == "EMS") then {
 		_garage pushback "B_T_Lifeboat";
 	};
 
-	if((player getvariable "ems" == 10 || 23 IN licenseArray || 24 IN licenseArray) && (typeof _house IN ['Land_buildingsfiredept1','Land_buildingshospital1'] || str _house find "em_heliport" > -1)  ) then {
+	if((player getvariable "ems" == 10 || 23 IN licenseArray || 24 IN licenseArray)  ) then {
 		_garage pushback "C_hh60j_unarmed_F";
 	};
 	
@@ -180,9 +183,8 @@ if(Mayor) then {
 {
 	_class = _x;
 	_vehicleName = [_x] call Client_fnc_getVehicleName; 
-
-	_veh = lbAdd [1500, _vehicleName];
-	lbSetData [1500, _veh, _x];
+	_veh = lbAdd [1500, format["%1",_vehicleName] ];
+    lbSetData [1500, _veh, format["%1",Str(_x)]];
 
 }forEach _garage;
 

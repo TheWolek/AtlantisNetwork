@@ -107,7 +107,7 @@ if (_type == "ALL") then {
 		_marker16 setMarkerShapeLocal "ICON";
 		_marker16 setMarkerTypeLocal "hd_dot";
 		_marker16 setMarkerColorLocal "ColorGreen";
-		_marker15 setMarkerText "Barber";
+		_marker16 setMarkerText "Barber";
 
 	} forEach (nearestobjects[player,["Land_buildingBarbers1"],30000]);
 	{
