@@ -18,7 +18,7 @@ if(typeof _obj == "Land_zac_prison_wall_gate") exitWith {
 	_obj animate ["door_1",5];
 
 	["CG_C4",0] spawn client_fnc_removeitem;
-	diag_log format ["C4_Log: %1 blew up doors to prison",player];
+	format ["C4_Log: %1 blew up doors to prison",player] remoteExecCall["diag_log",2];
 };
 
 if(typeof _obj == "Land_buildingsCasino2" && (player distance (_obj modelToWorld (_obj selectionPosition "mem_vaultdoor_trigger")) < 5)) exitWith {
@@ -67,7 +67,7 @@ if(typeof _obj == "Land_buildingsCasino2" && (player distance (_obj modelToWorld
 
 	["CG_C4",0] spawn client_fnc_removeitem;
 	["You have access to the vault for 5 minutes.", true] spawn domsg;
-	diag_log format ["C4_Log: %1 blew up vault in casino",player];
+	format ["C4_Log: %1 blew up vault in casino",player] remoteExecCall["diag_log",2];
 
 	vaultrobber = true;
 	

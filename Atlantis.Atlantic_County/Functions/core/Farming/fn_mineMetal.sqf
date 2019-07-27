@@ -18,13 +18,11 @@ if(player getVariable["JailTracked",FALSE] && cursorobject distance player < 25)
 		if(player distance [5545.74,6291.12,0.00143433] > 1500) then { 
 			secondsLeft = secondsLeft - round(45 * _removeamount); ["Your time has been lowered by 45 seconds", true] spawn domsg; 
 			["govtBank",150, "Add"] remoteExec["server_fnc_setValue",2]; 
-			diag_log format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, 150 call client_fnc_numberText]; 
-			//["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, 150 call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, 150 call client_fnc_numberText] remoteExecCall["diag_log",2];
 		} else { 
 			secondsLeft = secondsLeft - round(25 * _removeamount); ["Your time has been lowered by 25 seconds", true] spawn domsg; 
 			["govtBank",70, "Add"] remoteExec["server_fnc_setValue",2];  
-			diag_log format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, 70 call client_fnc_numberText];
-			//["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, 70 call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, 70 call client_fnc_numberText] remoteExecCall["diag_log",2];
 		};	
 	}; 
 

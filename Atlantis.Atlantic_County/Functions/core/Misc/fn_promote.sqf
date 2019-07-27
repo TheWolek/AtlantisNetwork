@@ -3,5 +3,4 @@ _rank = call compile format["%1", _data];
 if(isNil "_rank") exitwith {}; // error check
 [myjob,CurrentCursorTarget,_rank] remoteExec ["server_fnc_promote",2];
 
-diag_log format["PromotionLog: %1 (%2) changed %3 (%4) to rank %5.", name player, getplayeruid player, name cursorObject, getplayeruid cursorObject, _rank];
-//[format["%1Promotions",myJob], format["%1 (%2) changed %3 (%4) to rank %5.", name player, getplayeruid player, name CurrentCursorTarget, getplayeruid CurrentCursorTarget, _rank]] remoteExec ["server_fnc_log",2]; 
+format["PromotionLog: %1 (%2) changed %3 (%4) to rank %5.", name player, getplayeruid player, name cursorObject, getplayeruid cursorObject, _rank] remoteExecCall["diag_log",2];

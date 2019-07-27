@@ -16,8 +16,7 @@ if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for
 
 ["mobsterBank", _betamt*(1+casinoRate/100), "Add"] remoteexec ["server_fnc_setValue",2];
 
-diag_log format["MoneyLog: %1 (%2) bought %3 worth of slots. Bank: %4; Cash: %5", name player, getplayeruid player, _betamt*(1+casinoRate/100) call client_fnc_numberText, player getVariable "cashinbank", player getVariable "cashinhand"];
-//["mobsterBank", format["%1 (%2) bought %3 worth of slots.", name player, getplayeruid player, _betamt*(1+casinoRate/100) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+format["MoneyLog: %1 (%2) bought %3 worth of slots. Bank: %4; Cash: %5", name player, getplayeruid player, _betamt*(1+casinoRate/100) call client_fnc_numberText, player getVariable "cashinbank", player getVariable "cashinhand"] remoteExecCall["diag_log",2];
 
 disableSerialization;
 _display = findDisplay 5780;

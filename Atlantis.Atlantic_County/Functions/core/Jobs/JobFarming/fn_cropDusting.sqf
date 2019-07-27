@@ -3,7 +3,7 @@ if(myjob != "none" && myjob != "cropdusting") exitwith { ["You already have a jo
 if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "cropdusting";
-diag_log format ["Job_Log: %1 started working as %2",player,myjob];
+format ["Job_Log: %1 started working as %2",player,myjob] remoteExecCall["diag_log",2];
 [] call client_fnc_hudwork;
 
 private ["_warning","_JobBase"];
@@ -41,7 +41,7 @@ if(!taskrunning) then {
 				if(_warnings > 30) then { 
 					taskrunning = false; 
 					["You have been laid off from your job!", true] spawn domsg; 
-					diag_log format ["Job_Log: %1 has been laid off from %2",player,myjob];
+					format ["Job_Log: %1 has been laid off from %2",player,myjob] remoteExecCall["diag_log",2];
 				};
 
 				if(vehspawned distance player > 30) then { _warnings = _warnings + 1; };

@@ -19,7 +19,7 @@ imrestrained = false;
 player setVariable ['surrender', false];
 
 _bonus = _length*10;
-diag_log format["JailLog: %1 (%2) sent %3 (%4) to %5 years and received $%6.", name player, getplayeruid player, _suspect, _suspectID, _length, _bonus call client_fnc_numberText];
+format["JailLog: %1 (%2) sent %3 (%4) to %5 years and received $%6.", name player, getplayeruid player, _suspect, _suspectID, _length, _bonus call client_fnc_numberText] remoteExecCall["diag_log",2];
 //[format["%1 has been sentenced to %2 year(s) and you have received a %3 bonus.", name player, _length, _bonus call client_fnc_numberText], true] spawn domsg; 
 [_bonus] call client_fnc_addMoneyToPlayer; 
 

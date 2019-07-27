@@ -6,7 +6,7 @@ if(myjob != "none") exitwith { ["You already have a job!", true] spawn domsg; };
 if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "Legal";
-diag_log format ["Job_Log: %1 started working as %2",player,myjob];
+format ["Job_Log: %1 started working as %2",player,myjob] remoteExecCall["diag_log",2];
 [] call client_fnc_hudwork;
 private ["_warning","_JobBase"];
 if(!taskrunning) then {

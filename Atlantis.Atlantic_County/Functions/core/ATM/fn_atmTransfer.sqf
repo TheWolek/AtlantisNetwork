@@ -100,5 +100,4 @@ switch (_bankType) do {
 
 [format["You were wire transferred %1 from %2", _amount call client_fnc_numberText, name player], true] remoteExec ["domsg", _player];
 
-diag_log format["MoneyLog: %1 (%2) transfered %3 to %5 (%6). Bank: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, name _player, getPlayerUID _player, player getVariable "cashinbank", player getVariable "cashinhand"];
-//[_bankId, format["%1 (%2) transferred %3 from %4 to %5 (%6).", name player, getplayeruid player, _amount call client_fnc_numberText,_bankName, name _player, getplayeruid _player]] remoteExec ["server_fnc_log",2]; 
+format["MoneyLog: %1 (%2) transfered %3 to %5 (%6). Bank: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, name _player, getPlayerUID _player, player getVariable "cashinbank", player getVariable "cashinhand"] remoteExecCall["diag_log",2];

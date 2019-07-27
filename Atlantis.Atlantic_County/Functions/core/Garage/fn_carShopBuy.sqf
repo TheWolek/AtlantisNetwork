@@ -24,8 +24,8 @@ if( ((player getvariable "cashinhand") - _price*(1+taxRate/100)) < (client_level
 
 [_price*(1+taxRate/100), true] call Client_fnc_removeCash;
 ["govtBank", _price*(taxRate/100), "Add"] remoteExec["server_fnc_setValue",2];
-diag_log format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, (_price*(taxRate/100)) call client_fnc_numberText];
-diag_log format["BuyLog: %1 (%2) bought %3 za %4.", name player, getplayeruid player, _class,(_price*(taxRate/100)) call client_fnc_numberText];
+format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, (_price*(taxRate/100)) call client_fnc_numberText] remoteExecCall["diag_log",2];
+format["BuyLog: %1 (%2) bought %3 za %4.", name player, getplayeruid player, _class,(_price*(taxRate/100)) call client_fnc_numberText] remoteExecCall["diag_log",2];
 //["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_price*(taxRate/100)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 

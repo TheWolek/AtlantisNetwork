@@ -11,7 +11,7 @@
 private _template = _this select 0;
 if !(isClass (missionconfigFile >> "CfgExileToasts" >> _template)) exitWith 
 {
-	diag_log format ["UNKNOWN TOAST TEMPLATE: %1", _template];
+	format ["UNKNOWN TOAST TEMPLATE: %1", _template] remoteExecCall["diag_log",2];
 };
 private _placeholders = param [1, [""]];
 private _placeholder1 = _placeholders param [0, ""];

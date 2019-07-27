@@ -4,7 +4,7 @@ if(_this select 0 == 1) then {
 	player setunitloadout _playerGear;
 };
 
-diag_log format ["Job_Log: %1 stopped working as %2",player,myjob];
+format ["Job_Log: %1 stopped working as %2",player,myjob] remoteExecCall["diag_log",2];
 myjob = "none";
 player setVariable["badgeNumber", ""];
 taskrunning = false;

@@ -121,8 +121,7 @@ if(_fuck != _you) then {
 		["You have been downed because of an unknown reason.", false] spawn domsg; 
 		shooting_death = false;
 
-		diag_log format["DeathLog: %1 (%2) was downed because of an unknown reason.", name _unit, getplayeruid _unit];
-		//["death", format["%1 (%2) was downed because of an unknown reason.", name _unit, getplayeruid _unit]] remoteExec ["server_fnc_log",2];
+		format["DeathLog: %1 (%2) was downed because of an unknown reason.", name _unit, getplayeruid _unit] remoteExecCall["diag_log",2];
 	} else {
 		[getpos _unit, "News", "Shooting"] remoteexec ["server_fnc_giveTask",2];
 		if(_headshot == 1) then { 
@@ -172,8 +171,8 @@ if(_fuck != _you) then {
 
 		};
 
-		diag_log format["DeathLog: %1 (%2) was downed by %3 (%4) at a distance of %5m using a(n) %6.", name _unit, getplayeruid _unit, name _killer, getPlayerUID _killer, _killdistance, _killweapon];
-		//["death", format["%1 (%2) was downed by %3 (%4) at a distance of %5m using a(n) %6.", name _unit, getplayeruid _unit, name _killer, getplayeruid _killer, _killdistance, _killweapon]] remoteExec ["server_fnc_log",2];
+		format["DeathLog: %1 (%2) was downed by %3 (%4) at a distance of %5m using a(n) %6.", name _unit, getplayeruid _unit, name _killer, getPlayerUID _killer, _killdistance, _killweapon] remoteExecCall["diag_log",2];
+
 
 
 		
@@ -184,8 +183,7 @@ if(_fuck != _you) then {
 	[getpos _unit, "News", "Unknown Death"] remoteexec ["server_fnc_giveTask",2];
 	["You have been downed because of an unknown reason.", false] spawn domsg; 
 
-	diag_log format["DeathLog: %1 (%2) was downed of an unknown reason.", name _unit, getplayeruid _unit];
-	//["death", format["%1 (%2) was downed because of an unknown reason.", name _unit, getplayeruid _unit]] remoteExec ["server_fnc_log",2];
+	format["DeathLog: %1 (%2) was downed of an unknown reason.", name _unit, getplayeruid _unit] remoteExecCall["diag_log",2];
 };
 
 [] spawn {

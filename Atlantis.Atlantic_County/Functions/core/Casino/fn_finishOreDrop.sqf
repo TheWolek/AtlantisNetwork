@@ -91,8 +91,7 @@ _price = (_totalvalue*1000);
 	uiSleep (400+(random 400));
 
 	["casinoVault", _price, "Add",true] remoteexec ["server_fnc_setValue",2];
-	diag_log format["MoneyLog: %1 (%2) has transfered %3 into the casino vault from the boat", name player, getPlayerUID player, _price call client_fnc_numberText];
-	//["casinoVault", format["%1 (%2) has transferred %3 into the casino vault from the boat.", name player, getplayeruid player, _price call client_fnc_numberText]] remoteexec ["server_fnc_log",2];
+	format["MoneyLog: %1 (%2) has transfered %3 into the casino vault from the boat", name player, getPlayerUID player, _price call client_fnc_numberText] remoteExecCall["diag_log",2];
 
 	[format["%1 has been transferred to the casino vault.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
 
