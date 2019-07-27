@@ -25,6 +25,7 @@ class CfgFunctions
 			class connected {};
 			class licenses {};
 			class handleDisconnect {};
+			class disconnect {};
 			class setupVariablesServer {};
             class initStats {};
             class steppedSync {};

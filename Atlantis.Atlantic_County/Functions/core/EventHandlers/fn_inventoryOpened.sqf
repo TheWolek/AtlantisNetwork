@@ -98,6 +98,12 @@ if( ( _container != player || _container isKindOf "Car" || _container isKindOf "
 
 };
 
+if (_container isKindOf "Man" && !alive _container) exitWith {
+	["You're not allowed to loot dead bodies",false] spawn domsg;
+	handle = true;
+	handle;
+};
+
 
 if(_container isKindOf "Car" && {(locked _container) == 2}) exitWith {
 	if(!(_container in current_cars)) then {
