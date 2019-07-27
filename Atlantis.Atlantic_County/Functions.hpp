@@ -150,7 +150,7 @@ class CfgFunctions
 			class setGear {};
 			class sendintox {};
 			class seizeObjects {};
-			class payDTU {};
+			//class payDTU {};
 			class raidshop {};
 			class raidhouse {};
 			class setlastsave {};
