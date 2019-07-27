@@ -20,5 +20,5 @@ if(typeof _object == "plp_ct_HighSecMediumBlack") then {
 
 mybank = ObjNull;
 
-[_cash] call Client_fnc_addCash;
+[_cashadded,true,true] call Client_fnc_addMoneyToPlayer; 
 [format["You have stole %1.",_cashadded call client_fnc_numberText], true] spawn domsg;

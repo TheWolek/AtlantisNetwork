@@ -617,8 +617,6 @@ class CfgFunctions
 			class loanUpdate {};
 			class numberText {};
 			class addcashmayor {};
-			//class addBank {};
-			//class addcash {};
 			class addMoneyToBank {};
 			class addMoneyToPlayer {};
 			class addMoneyToStash {};

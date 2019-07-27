@@ -10,12 +10,14 @@ _shop = _shop select 0;
 _shopplayer = _shop getVariable "shop";*/
 _shopplayer = currentshopowner;
 
+
+
 if(isNull _shopplayer) exitwith {}; //guess they logged out, need to cancel it here to prevent duping.
 
 _shopcontent = _shopplayer getVariable "shopcontent";
 
 _cash = _player getVariable "cashinhand";
-_cash = call compile format["%1", _cash];
+_cash = call compile _cash;
 
 _myweapons = (_shopcontent select 0); 
 _mymagazines = (_shopcontent select 1); 
@@ -33,8 +35,8 @@ if(true) then {
 		_itemcount = (_myweapons select 1) select _location;
 		_price = (_myweapons select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
@@ -63,8 +65,8 @@ if(true) then {
 		_itemcount =  (_mymagazines select 1) select _location;
 		_price = (_mymagazines select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
@@ -94,8 +96,8 @@ if(true) then {
 		_itemcount =  (_myitems select 1) select _location;
 		_price = (_myitems select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
@@ -124,8 +126,8 @@ if(true) then {
 		_itemcount = (_mybackpacks select 1) select _location;
 		_price = (_mybackpacks select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;

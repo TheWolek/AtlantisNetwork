@@ -3,9 +3,9 @@ disableSerialization;
 _index = lbCurSel (9001);
 if (_index == -1) exitWith {};
 _status = lbData[9001, _index];
-_status = call compile format["%1", _status];
+_status = call compile _status;
 _quantity = ctrlText 9339;
-_quantity = call compile format["%1", _quantity];
+_quantity = call compile _quantity;
 closedialog 0;
 
 if(isNil "_status") exitwith {};
@@ -13,8 +13,8 @@ if(isNil "_quantity") exitwith {};
 
 if(_quantity < 0) exitwith {};
  
-_cost = call compile format["%1", (_status select 2)];
-_availableQuantity = call compile format["%1", (_status select 1)];
+_cost = call compile (_status select 2);
+_availableQuantity = call compile (_status select 1);
 
 _totalprice = _cost * _Quantity;
 
