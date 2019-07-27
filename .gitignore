@@ -2,3 +2,4 @@
 *.bak
 fn_initInteractions-new.sqf
 fn_initInteractions-old.sqf
+@NoPixel_Server/addons/NoPixel_Server.pbo
