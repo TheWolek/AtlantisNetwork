@@ -29,7 +29,7 @@ _garage = player getVariable "garage";
 {
 	_class = _x select 1;
 	_vehicleName = [_class] call Client_fnc_getVehicleName; 
-	_Color = _x select 2;
+	//_Color = _x select 2;
 	//_colorName = getText(configFile >> "cfgIvoryTextures" >> _Color >> "displayName");
 	_license = _x select 0;
 	_availability = _x select 7;
@@ -46,7 +46,7 @@ _garage = player getVariable "garage";
 		};
 
 		if (_class isKindOf "Car" && _type == "Car") exitWith {
-			_veh = lbAdd [1500, format["%1 %2 [%3]", _Color, _vehicleName, toUpper(_license)] ];
+			_veh = lbAdd [1500, format["%1 [%2]", _vehicleName, toUpper(_license)] ];
 			lbSetData [1500, _veh, format["%1",Str(_x)]];
 		};
 	};
