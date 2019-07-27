@@ -2,7 +2,28 @@
 
 _whatdo = _this select 0;
 
-_textures = getArray(configfile >> "CfgIvoryTextures" >> "defaulttextures");
+_textures = [
+	["Oxford white","\colors\oxford_white.paa"],
+	["Marina blue","\colors\marina_blue.paa"],
+	["Hyper blue","\colors\hyper_blue.paa"],
+	["Deep blue","\colors\deep_blue.paa"],
+	["Imperial blue","\colors\imperial_blue.paa"],
+	["Green pearl","\colors\green_pearl.paa"],
+	["Green gem","\colors\green_gem.paa"],
+	["Ignot silver","\colors\ignot_silver.paa"],
+	["Silverstone","\colors\silverstone.paa"],
+	["champagne quartz","\colors\champagne_quartz.paa"],
+	["Kodial brown","\colors\kodial_brown.paa"],
+	["bronze fire","\colors\bronze_fire.paa"],
+	["Almandine brown","\colors\almandine_brown.paa"],
+	["Ruby red","\colors\ruby_red.paa"],
+	["Red hot","\colors\red_hot.paa"],
+	["Austin yellow","\colors\austin_yellow.paa"],
+	["Sakhir orange","\colors\sakhir_orange.paa"],
+	["Sterling gray","\colors\sterling_gray.paa"],
+	["Tuxedo black","\colors\tuxedo_black.paa"],
+	["Obsidian black","\colors\obsidian_black.paa"]
+];
 _finishes = [["Glossy",0]];
 
 
@@ -123,9 +144,9 @@ if(_whatdo == "NEW") then {
 	_list = _display displayCtrl 1501;
 	lbClear _list;
 	{
-		_TextureDisplayName = getText(configFile >> "CfgIvoryTextures" >> _x >> "displayName");
-		_list lbAdd format["%1",_TextureDisplayName];
-		_list lbSetdata [(lbSize _list)-1,str(_x)];
+		//_TextureDisplayName = getText(configFile >> "CfgIvoryTextures" >> _x >> "displayName");
+		_list lbAdd format["%1",_x select 0];
+		_list lbSetdata [(lbSize _list)-1,_x select 1];
 	} foreach _textures;
 
 	_list = _display displayCtrl 1502;
@@ -151,8 +172,8 @@ _selectedvehicle = _selectedvehicle select 0;
 
 _index = lbCurSel (1501);
 _status = lbData[1501, _index];
-_SELECTEDCOLOR = call compile format["%1", _status];
-_SELECTEDCOLOR = getText(configfile >> "CfgIvoryTextures" >> _SELECTEDCOLOR >> "texture");
+_SELECTEDCOLOR = _status;
+//_SELECTEDCOLOR = getText(configfile >> "CfgIvoryTextures" >> _SELECTEDCOLOR >> "texture");
 
 _index = lbCurSel (1502);
 _status = lbData[1502, _index];

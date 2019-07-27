@@ -19,7 +19,7 @@ _car = lbData [1500, _currentitemindex];
 
 lbDelete [1500, _currentitemindex];
 
-_car = call compile format["%1", _car]; 
+_car = call compile _car; 
 
 if((_this select 0) == 1) exitwith { 
 	_vehicle = _car createvehicle getpos player; 
@@ -167,6 +167,9 @@ _vehicle setvariable ["information",_car,false];
 		if (str _className find "nopixel_" > -1 ) then {
 			[_vehicle, [_carColor,_carFinish]] remoteexec ["client_fnc_initVehicle",2];
 		};
+
+		_vehicle setObjectTexture[0,_carColor];
+
 	};
 };
 

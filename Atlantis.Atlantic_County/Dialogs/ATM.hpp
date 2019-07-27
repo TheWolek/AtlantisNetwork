@@ -69,7 +69,6 @@ class ATMGovt
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
 			y = 0.23;
-			sizeEx = 2;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -79,7 +78,6 @@ class ATMGovt
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
 			y = 0.33;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -223,7 +221,6 @@ class ATMmafia
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
 			y = 0.23;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -233,7 +230,6 @@ class ATMmafia
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
 			y = 0.33;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -377,7 +373,6 @@ class ATMbiker
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
 			y = 0.23;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -387,7 +382,6 @@ class ATMbiker
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
 			y = 0.33;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -531,7 +525,6 @@ class ATMMobster
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
 			y = 0.23;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -541,7 +534,6 @@ class ATMMobster
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
 			y = 0.33;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -685,7 +677,6 @@ class CasinoVault
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
 			y = 0.23;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -695,7 +686,6 @@ class CasinoVault
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
 			y = 0.33;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -841,7 +831,6 @@ class ATM
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
 			y = 0.23;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -851,7 +840,6 @@ class ATM
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
 			y = 0.33;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -996,7 +984,6 @@ class DirtyMoney
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
 			y = 0.23;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -1006,7 +993,6 @@ class DirtyMoney
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
 			y = 0.33;
-			sizeEx = 2
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};

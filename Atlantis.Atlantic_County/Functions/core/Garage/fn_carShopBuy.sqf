@@ -6,7 +6,7 @@ _price = _selectedvehicle select 1;
 
 _index = lbCurSel (1501);
 _status = lbData[1501, _index];
-_color = call compile format["%1", _status];
+_color = _status;
 
 _index = lbCurSel (1502);
 _status = lbData[1502, _index];
