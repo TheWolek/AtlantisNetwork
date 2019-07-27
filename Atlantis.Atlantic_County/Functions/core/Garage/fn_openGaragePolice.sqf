@@ -19,112 +19,116 @@ if(myJob IN ['Cop','doc'] && lastGovtUseCar > time) exitWith {
 };
 
 if(myJob == "Legal") then {
-	_garage pushBack "ivory_isf_1";
+	if(player getVariable "legal" >= 1) then {
+		_garage pushBack "d3s_malibu_18_LT";
+		_garage pushBack "d3s_malibu_18_LT";
+	};
+
+	if(player getVariable "legal" >= 2) then {
+		_garage pushBack "d3s_xe_15";
+		_garage pushBack "d3s_c63_14";
+	};
+
+	if(player getVariable "legal" >= 3) then {
+		_garage pushBack "d3s_s560_18";
+		_garage pushback "d3s_g63amg_18";
+	};
 };
 
 if(myJob == "Cop") then {
 
-	if(player getvariable "cop" >= 1 && (typeof _house IN ['land_jf_sheriff_station_01','land_jf_sheriff_station_01'])) then {
-		_garage pushback "ivory_cv_marked";
-		_garage pushback "ivory_cv_unmarked";
-		_garage pushback "ivory_taurus_unmarked";
-        _garage pushback "ivory_taurus_marked";
-        _garage pushback "ivory_charger_marked";
-        _garage pushback "ivory_charger_unmarked";
+	if(player getvariable "cop" >= 1 && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'])) then {
+		_garage pushback "GM_MPD_CVPI";
+		_garage pushback "d3s_taurus_FPI_10";
+        _garage pushback "GM_SIO_RANGEROVER";
 	};
 
-	if(player getvariable "cop" >= 6 && (typeof _house IN ['land_jf_sheriff_station_01','land_jf_sheriff_station_01'])) then {
-		_garage pushback "ivory_isf_unmarked";
-        _garage pushback "ivory_isf_marked";
-        _garage pushback "ivory_rs4_unmarked";
-        _garage pushback "ivory_rs4_marked";
-        _garage pushback "ivory_m3_unmarked";
-        _garage pushback "ivory_m3_marked";
-        _garage pushback "ivory_suburban_marked";
-        _garage pushback "ivory_suburban_slicktop";
-        _garage pushback "ivory_suburban_unmarked";
-        _garage pushback "ivory_wrx_unmarked";
-        _garage pushback "ivory_wrx_marked";
-        _garage pushback "ivory_wrx_slicktop";
-        _garage pushback "ivory_evox_unmarked";
-        _garage pushback "ivory_evox_marked";
-        _garage pushback "ivory_evox_slicktop";
-        _garage pushback "B_UAV_01_F";
-        _garage pushback "B_Static_Designator_01_F";
+	if(player getvariable "cop" >= 4 && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'])) then {
+		_garage pushback "GM_MPD_CHARGER";
+        _garage pushback "GM_MPD_CHARGER_CHP_LB";
+        _garage pushback "GM_MPD_CHARGER_CHP_W_LB";
 	};
 
-	if(player getvariable "cop" >= 10 && (typeof _house IN ['land_jf_sheriff_station_01','land_jf_sheriff_station_01'])) then {
-		_garage pushback "ivory_isf_unmarked";
-        _garage pushback "ivory_rev_marked";
-        _garage pushback "ivory_rev_slicktop";
-        _garage pushback "ivory_rev_unmarked";
+	if(player getVariable "cop" >= 5 ) then {
+		_garage pushback "GM_SIO_DURANGO";
+        _garage pushback "GM_SIO_RAPTOR";
 	};
+
+	if(player getVariable "cop" >= 5 && 9 IN licenseArray) then {
+		_garage pushback "GM_SWAT_DURANGO";
+        _garage pushback "GM_SWAT_RAPTOR";
+        _garage pushback "GM_SWAT_TAHOE";
+        _garage pushback "d3s_fseries_17_P3E";
+	};
+
+	if(player getVariable "cop" >= 7) then {
+		_garage pushback "d3s_vklasse_17_UNM";
+        _garage pushback "d3s_savana_PSV";
+        _garage pushback "GM_SIO_CHARGER_SRT";
+        _garage pushback "GM_SIO_CTSV";
+	};
+	/*
 
 	if((player getvariable "cop" == 7 || 10 IN licenseArray || 11 IN licenseArray) && (str _house find "embarcadero" > -1) ) then { 
-	    _garage pushback "B_Boat_Transport_01_F"; 
-        _garage pushback "C_Scooter_Transport_01_F";
-        _garage pushback "C_Boat_Civil_01_police_F";
-        _garage pushback "B_CBS_WaterShadow730_F";
-        _garage pushback "O_Boat_Armed_01_hmg_F";
+
 	};
 
-	if((player getvariable "cop" == 7 || 12 IN licenseArray || 13 IN licenseArray) && (typeof _house IN ['land_jf_sheriff_station_01','land_jf_sheriff_station_01'] || str _house find "em_heliport" > -1)  ) then {
-		_garage pushback "jf_as350";
+	if((player getvariable "cop" == 7 || 12 IN licenseArray || 13 IN licenseArray) && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'] || str _house find "em_heliport" > -1)  ) then {
+
 	};
+	*/
 	
 };
 
 if(myJob == "doc") then {
 
-	if(player getvariable "doc" >= 1 && (typeof _house IN ['land_jf_sheriff_station_01','land_jf_sheriff_station_01'])) then {
-		_garage pushback "red_savana_14_p_prison";
-		_garage pushback "red_cvpi_06_p_sheriff";
-		_garage pushback "red_cvpi_06_p_u_sheriff";
-		_garage pushback "red_charger_12_p_u_sheriff";
-		_garage pushback "red_charger_12_p_sheriff";
-		_garage pushback "red_taurus_13_p_u_sheriff";
-		_garage pushback "red_taurus_13_p_sheriff";
+	if(player getvariable "doc" >= 1 && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'])) then {
+
 	};
 
-	if(player getvariable "doc" >= 6 && (typeof _house IN ['land_jf_sheriff_station_01','land_jf_sheriff_station_01'])) then {
-		_garage pushback "red_tahoe_13_p_u_sheriff";
-		_garage pushback "red_tahoe_13_p_sheriff";
-		_garage pushback "red_suburban_15_p_sheriff";
-		_garage pushback "red_suburban_15_p_u_sheriff";
-		_garage pushback "red_charger_15_p_u_sheriff";
-		_garage pushback "red_charger_15_p_sheriff";
-		_garage pushback "red_explorer_16_p_sheriff";
-		_garage pushback "red_explorer_16_p_u_sheriff";
+	if(player getvariable "doc" >= 6 && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'])) then {
+
 	};
 
 	if((player getvariable "doc" == 7 || 10 IN licenseArray || 11 IN licenseArray) && (str _house find "embarcadero" > -1) ) then { 
-	    _garage pushback "B_Boat_Transport_01_F"; 
-        _garage pushback "C_Scooter_Transport_01_F";
-        _garage pushback "C_Boat_Civil_01_police_F";
-        _garage pushback "B_CBS_WaterShadow730_F";
-        _garage pushback "O_Boat_Armed_01_hmg_F";
+
 	};
 
-	if((player getvariable "doc" == 7 || 12 IN licenseArray || 13 IN licenseArray) && (typeof _house IN ['land_jf_sheriff_station_01','land_jf_sheriff_station_01'] || str _house find "em_heliport" > -1)  ) then {
-		_garage pushback "jf_as350";
+	if((player getvariable "doc" == 7 || 12 IN licenseArray || 13 IN licenseArray) && (typeof _house IN ['Land_ScriptOase_PoliceHeadquarters','Land_PoliceStation'] || str _house find "em_heliport" > -1)  ) then {
+
 	};
 	
 };
 
 if(myJob == "EMS") then {
 
-	if(player getvariable "ems" >= 1 && (typeof _house IN ['Land_buildingsfiredept1','Land_buildingshospital1'])) then {
-		_garage pushback "red_ambulance_04_EMS";
-		_garage pushback "red_ambulance_16_ems2";
-		_garage pushback "red_f250_16_e_ems2";
+	if(player getvariable "ems" >= 1 ) then {
+		_garage pushback "d3s_fseries_17_EMS";
+		_garage pushback "d3s_fseries_17_Rescue";
+		_garage pushback "d3s_fseries_17_TOW";
+		_garage pushback "d3s_savana_EMS";
 	};
 
-	if(player getvariable "ems" >= 6 && (typeof _house IN ['Land_buildingsfiredept1','Land_buildingshospital1'])) then {
-		_garage pushback "red_tahoe_13_e_ems";
-		_garage pushback "red_explorer_16_e_ems";
+	if(player getvariable "ems" >= 3 ) then {
+		_garage pushback "d3s_uaz_3162_EMS";
+		_garage pushback "d3s_vklasse_17_EMS";
+		_garage pushback "d3s_uaz_3165M_EMS";
 	};
 
-	if((player getvariable "ems" == 10 || 25 IN licenseArray || 26 IN licenseArray) && (str _house find "embarcadero" > -1) ) then { 
+	if(player getVariable "ems" >= 5 ) then {
+		_garage pushback "GM_ECFD_CHARGER";
+		_garage pushback "d3s_charger_15_EMS";
+		_garage pushback "d3s_explorer_EMS_13";
+		_garage pushback "d3s_titan_17_TAR";
+	};
+
+	if(player getVariable "ems" >= 7 ) then {
+		_garage pushback "d3s_svr_17_EMS";
+		_garage pushback "d3s_g500_18_EMS";
+		_garage pushback "d3s_cla_15_EMS";
+	}
+
+	if((player getvariable "ems" == 8 || 25 IN licenseArray || 26 IN licenseArray) && (str _house find "embarcadero" > -1) ) then { 
 		_garage pushback "B_CBS_WaterShadow730_F";
 		_garage pushback "B_Boat_Transport_01_F";
 		_garage pushback "C_Scooter_Transport_01_F";
@@ -134,18 +138,20 @@ if(myJob == "EMS") then {
 
 	if((player getvariable "ems" == 10 || 23 IN licenseArray || 24 IN licenseArray) && (typeof _house IN ['Land_buildingsfiredept1','Land_buildingshospital1'] || str _house find "em_heliport" > -1)  ) then {
 		_garage pushback "C_hh60j_unarmed_F";
-		_garage pushback "jf_as350_4";
 	};
 	
 };
 
 if(myJob == "Mafia") then {
-	_garage pushback "ivory_c";
-	_garage pushback "jf_bmw_m5_f90_76561198089541702";
+	_garage pushback "d3s_malibu_18_LT";
+	_garage pushback "d3s_kodiaq_17";
 
+	if(player getVariable "mafia" >= 3) then {
+		_garage pushBack "d3s_ghost_18_EWB_III";	
+		_garage pushBack "d3s_tahoe_08";	
+	};
 	if(player getvariable "mafia" >= 6) then { 
-	    _garage pushback "red_suburban_15_black";
-	    _garage pushback "red_sel300_72_black";
+	    _garage pushback "d3s_cayenne_16";
 	};
 };
 
