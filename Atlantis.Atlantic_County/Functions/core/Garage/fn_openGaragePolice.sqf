@@ -181,8 +181,8 @@ if(Mayor) then {
 	_class = _x;
 	_vehicleName = [_x] call Client_fnc_getVehicleName; 
 
-	_veh = lbAdd [1500, format["%1",_vehicleName] ];
-	lbSetData [1500, _veh, format["%1",Str(_x)]];
+	_veh = lbAdd [1500, _vehicleName];
+	lbSetData [1500, _veh, _x];
 
 }forEach _garage;
 

@@ -5,11 +5,11 @@ private ["_shop","_unit","_shopplayer","_shopcontent"];
 _shop = _this select 0;
 _unit = _this select 1;
 
-diag_log format ["open someones store %1", _unit];
+diag_log format ["Action_log: %1 (%2) open someones store", name _unit, getPlayerUID _unit];
 
 
 _shop = nearestObjects [_unit, [_shop], 30];
-_shop = _shop select 0;
+//_shop = _shop select 0;
 
 _shopplayer = _shop getVariable "shop";
 

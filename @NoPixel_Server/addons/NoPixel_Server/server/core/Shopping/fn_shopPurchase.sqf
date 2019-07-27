@@ -4,12 +4,12 @@ private["_ERROR","_itemcount","_price","_newcount","_totalprice","_newcount","_q
 _player = _this select 0;
 _item = _this select 1;
 _quantity = _this select 2;
-_quantity = call compile format["%1", _quantity];
+_quantity = call compile _quantity;
 _shop = nearestObjects [_player, ["Land_buildingCommercial1","Land_buildingCommercial2"], 30];
 _shop = _shop select 0;
 _shopplayer = _shop getVariable "shop";
 
-diag_log format ["store purchase %1", _player];
+diag_log format ["Action_log: store purchase %1", name _player];
 
 
 
@@ -18,7 +18,7 @@ if(isNull _shopplayer) exitwith {}; //guess they logged out, need to cancel it h
 _shopcontent = _shopplayer getVariable "shopcontent";
 
 _cash = _player getVariable "cashinhand";
-_cash = call compile format["%1", _cash];
+_cash = call compile _cash;
 
 _myweapons = (_shopcontent select 0); 
 _mymagazines = (_shopcontent select 1); 
@@ -36,8 +36,8 @@ if(true) then {
 		_itemcount = (_myweapons select 1) select _location;
 		_price = (_myweapons select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
@@ -66,8 +66,8 @@ if(true) then {
 		_itemcount =  (_mymagazines select 1) select _location;
 		_price = (_mymagazines select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
@@ -97,8 +97,8 @@ if(true) then {
 		_itemcount =  (_myitems select 1) select _location;
 		_price = (_myitems select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
@@ -127,8 +127,8 @@ if(true) then {
 		_itemcount = (_mybackpacks select 1) select _location;
 		_price = (_mybackpacks select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
