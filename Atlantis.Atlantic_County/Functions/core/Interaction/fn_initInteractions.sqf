@@ -250,9 +250,13 @@ NoPixel_InteractionMenuItems = [
 		["Twitch.TV", " ['Trying to connect to twitch.tv servers... Connection lost.', true] spawn domsg; ",5] 
 	],
 
-	[ 
+	/*[ 
 		[" "], 
 		["Give Keys", " [] spawn client_fnc_findplayerskeys; ",5] 
+	],*/
+	[ 
+		["!imrestrained && isPlayer cursorTarget "], 
+		["Give Keys", " [current_cars] remoteexec ['client_fnc_givekeys', CurrentcursorTarget]; ",5] 
 	],
 
 	[ 
