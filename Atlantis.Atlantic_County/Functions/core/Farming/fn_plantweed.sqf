@@ -1,3 +1,4 @@
+//file: plantweed
 ["NP_GrowingPlot",0] spawn client_fnc_removeitem;
 
 myDT2 = createVehicle ["vvv_cannabis1_plan", [0,0,0], [], 0, "NONE"]; 

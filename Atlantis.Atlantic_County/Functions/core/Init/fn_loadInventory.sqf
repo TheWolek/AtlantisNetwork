@@ -147,11 +147,12 @@ _marker setMarkerShapeLocal "ICON";
 _marker setMarkerTypeLocal "Empty";
 _marker setMarkerTextLocal "My House";
 
-
+/*
 _marker = createMarkerLocal [getPlayerUID player, _shop];
 _marker setMarkerShapeLocal "ICON";
 _marker setMarkerTypeLocal "Empty";
 _marker setMarkerTextLocal format["%1 - CLOSED", _shopname];
+*/
 
 
 player setVariable ["shopname", _shopname, false];

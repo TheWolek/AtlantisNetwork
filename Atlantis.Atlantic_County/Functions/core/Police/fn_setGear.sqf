@@ -1,3 +1,4 @@
+//file: setGear
 params["_type"];
 
 
@@ -72,39 +73,27 @@ if(myjob == "Cop") then {
 		format["GearLog: %1 (%2) took PATROL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
-		if (_level == 5) then { 
-			player addBackpack "AM_PoliceBelt";
-		} else {
-			player addBackpack "AM_PoliceBelt"; 
-		};
+		player addBackpack "B_Carryall_cbr";
 
-
+		//player addItem "ItemMap";
 		player linkItem "ItemMap";
+		//player addItem "ItemCompass";
 		player linkItem "ItemCompass";
+		//player addItem "Itemwatch";
 		player linkItem "Itemwatch";
+		//player addItem "ItemGPS";
 		player linkItem "ItemGPS";
-		player linkitem "cg_tabletd";
+		//player linkitem "cg_tabletd";
 
-		if(packet > 100000) then {
 
 			player additemtobackpack "RH_uspm";
 
 			for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
-			for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+			for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
 			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-		} ELSE {
-			player additemtobackpack "RH_g17";
-
-			for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
-			for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
-			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
-			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
-
-		};
-
-		player addweapon "taser";
+		player addweapon "CSW_M26C";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 
@@ -139,39 +128,39 @@ if(myjob == "Cop") then {
 			};
 
 		} else { 
-			if(_level == 1) then {
-				player forceAddUniform "silver_lake_statepolice";
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 2) then {
-				player forceAddUniform "silver_lake_statepolice";
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 3) then {
-				player forceadduniform "silver_lake_police"; 
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 4) then {			
-				player forceadduniform "silver_lake_police"; 
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 5) then { 
-				player forceadduniform "sl_client_c4_swat3_W"; 
-				player addVest "EF_BSF";
-				player removeweapon "cg_baton";
-				player additemtobackpack "Press_Mic_CNN_F";
-			};
-			if(_level == 6) then {	
-				player forceadduniform "silver_lake_police"; 
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 7) then {		
-				player forceAddUniform "silver_lake_fbi";
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 8) then {
-				player forceAddUniform "silver_lake_fbi";
-				player addHeadgear "EF_Mcap_PB"; 
+			switch (_level) do {
+				case 1: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 2: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 3: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 4: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 5: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 6: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 7: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 8: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
 			};
 		};
 	};
@@ -187,36 +176,25 @@ if(myjob == "Cop") then {
 		format["GearLog: %1 (%2) took DTU loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
-		player addBackpack "sl_client_c_carryall_invisible"; 
+		player addBackpack "B_Carryall_cbr"; 
 
+		//player addItem "ItemMap";
 		player linkItem "ItemMap";
+		//player addItem "ItemCompass";
 		player linkItem "ItemCompass";
+		//player addItem "Itemwatch";
 		player linkItem "Itemwatch";
+		//player addItem "ItemGPS";
 		player linkItem "ItemGPS";
-		player linkitem "cg_tabletd";
-
-	if(packet > 100000) then {
 
 		player additemtobackpack "RH_uspm";
 
 		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
-
-		for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+		for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
 
-	} ELSE {
-			player additemtobackpack "RH_g17";
-
-			for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
-
-			for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
-			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
-		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
-
-	};
-
-		player addweapon "taser";
+		player addweapon "CSW_M26C";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 
@@ -272,53 +250,39 @@ if(myjob == "Cop") then {
 			};
 
 		} else { 
-			if(_level == 1) then {
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
-			};
-			if(_level == 2) then {
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
-			};
-			if(_level == 3) then {
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
-			};
-			if(_level == 4) then {	
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
-			};
-			if(_level == 5) then {	
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
-			};
-			if(_level == 6) then {	
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
-			};
-			if(_level == 7) then {	
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
-			};
-			if(_level == 8) then {
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+			switch (_level) do {
+				case 1: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 2: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 3: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 4: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 5: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 6: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 7: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 8: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
 			};
 
 		};
@@ -674,21 +638,22 @@ if(myJob == "EMS") then {
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
 		player addWeapon "Binocular";
-
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
 		player linkItem "Itemwatch";
 		player linkItem "ItemGPS";
-		player linkitem "cg_tabletd";
+		//player linkitem "cg_tabletd";
 
 		_level = player getVariable "fire";
-		player forceAddUniform "vvv_traje_bombero_2";
-		player addBackpack "sl_client_c_medic";
+		player forceAddUniform "U_C_CBRN_Suit_01_Blue_F";
+		player addBackpack "B_SCBA_01_F";
+		player addVest "V_Safety_yellow_F";
+		player addGoggles "G_RegulatorMask_F";
 		{ player additemtobackpack _x; } foreach ["cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-		for "_i" from 1 to 10 do {player addItemToBackPack "Manguera_magazine";};
+		//for "_i" from 1 to 10 do {player addItemToBackPack "Manguera_magazine";};
 
-		player addweapon "fireextinguisher";
+		//player addweapon "fireextinguisher";
 	};
 
 
@@ -722,22 +687,43 @@ if(myJob == "EMS") then {
 			if(_level == 9) then { player forceAddUniform "female_ems7"; };
 			if(_level == 10) then { player forceAddUniform "female_ems7"; };
 		} else { 
-
-		    if(_level == 1) then { player forceAddUniform "CG_EMS1"; };
-			if(_level == 2) then { player forceAddUniform "CG_EMS2"; };
-			if(_level == 3) then { player forceAddUniform "EMT_uni1"; };
-			if(_level == 4) then { player forceAddUniform "SEMT_uni1"; };
-			if(_level == 5) then { player forceAddUniform "paramedic_uni1"; };
-			if(_level == 6) then { player forceAddUniform "sparamedic_uni1"; };
-			if(_level == 7) then { player forceAddUniform "Lieutenant_uni1"; };
-			if(_level == 8) then { player forceAddUniform "Captain_uni1"; };
-			if(_level == 9) then { player forceAddUniform "Chief_uni1"; };
-			if(_level == 10) then { player forceAddUniform "Commissioner_uni1"; };
+			switch (_level) do {
+				case 1: {
+					player forceAddUniform "CG_EMS1";
+				};
+				case 2: {
+					player forceAddUniform "CG_EMS2";
+				};
+				case 3: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 4: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 5: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 6: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 7: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 8: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 9: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 10: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+			};
 
 		};
 
 		player addGoggles "Masque_Chirurgical";
-		player addBackpack "sl_client_c_medic";
+		player addBackpack "B_Messenger_IDAP_F";
 		{ player additemtobackpack _x; } foreach ["cg_atf_bandage_i","cg_atf_bandage_i"];
 	};
 };

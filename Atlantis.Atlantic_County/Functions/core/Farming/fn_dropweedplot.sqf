@@ -1,3 +1,4 @@
+//file: dropweedplot
 detach myDT2;
 growingweed = true;
 player removeAction myDrugAction2;
