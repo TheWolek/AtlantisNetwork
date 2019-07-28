@@ -207,13 +207,14 @@ if (isServer) then {
 
 	420 cutRsc ["playerHUD","PLAIN"];
 
-
+	/*
 	if(uniform player == "" && female) then {
 		player forceadduniform "female_default_1";
 	};
 	if(uniform player == "" && male) then {
 		player forceadduniform "female_default_1";
 	};
+	*/
 	
 	client_seatwarn = false;
 	client_seatbelt = false;

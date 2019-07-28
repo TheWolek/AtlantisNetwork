@@ -35,11 +35,6 @@ if(myJob == "Legal") then {
 };
 
 if(myJob == "Cop") then {
-
-		_garage pushback "GM_MPD_CVPI";
-		_garage pushback "d3s_taurus_FPI_10";
-        _garage pushback "GM_SIO_RANGEROVER";
-
 	if(player getvariable "cop" >= 1) then {
 		_garage pushback "GM_MPD_CVPI";
 		_garage pushback "d3s_taurus_FPI_10";
@@ -53,8 +48,8 @@ if(myJob == "Cop") then {
 	};
 
 	if(player getVariable "cop" >= 5 ) then {
-		_garage pushback "GM_SIO_DURANGO";
-        _garage pushback "GM_SIO_RAPTOR";
+		_garage pushback "GM_MPD_DURANGO";
+        _garage pushback "GM_MPD_RAPTOR";	
 	};
 
 	if(player getVariable "cop" >= 5 && 9 IN licenseArray) then {

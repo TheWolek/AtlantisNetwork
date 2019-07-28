@@ -79,8 +79,8 @@ if(myjob == "Cop") then {
 		player linkItem "ItemMap";
 		//player addItem "ItemCompass";
 		player linkItem "ItemCompass";
-		//player addItem "Itemwatch";
-		player linkItem "Itemwatch";
+		//player addItem "Oase_ID_Card_Police";
+		player linkItem "Oase_ID_Card_Police";
 		//player addItem "ItemGPS";
 		player linkItem "ItemGPS";
 		//player linkitem "cg_tabletd";
@@ -182,8 +182,8 @@ if(myjob == "Cop") then {
 		player linkItem "ItemMap";
 		//player addItem "ItemCompass";
 		player linkItem "ItemCompass";
-		//player addItem "Itemwatch";
-		player linkItem "Itemwatch";
+		//player addItem "Oase_ID_Card_Police";
+		player linkItem "Oase_ID_Card_Police";
 		//player addItem "ItemGPS";
 		player linkItem "ItemGPS";
 
@@ -308,7 +308,7 @@ if(myjob == "Cop") then {
 
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
@@ -409,7 +409,7 @@ if(myjob == "Cop") then {
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
@@ -500,7 +500,7 @@ if(myjob == "doc") then {
 
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
@@ -592,7 +592,7 @@ if(myjob == "doc") then {
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
@@ -640,7 +640,7 @@ if(myJob == "EMS") then {
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		//player linkitem "cg_tabletd";
 
@@ -670,7 +670,7 @@ if(myJob == "EMS") then {
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
