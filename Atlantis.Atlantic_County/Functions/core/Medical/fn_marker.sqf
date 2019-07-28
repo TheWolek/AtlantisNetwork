@@ -118,6 +118,7 @@ if (_type == "ALL") then {
 		_marker17 setMarkerText "Centrelink";
 
 	} forEach (nearestobjects[player,["Land_Centrelink"],30000]);
+	/*
 	{
 
         if((getMarkerColor format["%1",(getPlayerUID _x)] IN ["ColorBlack"])) then {
@@ -130,6 +131,7 @@ if (_type == "ALL") then {
 		};
 
 	} forEach playableUnits;
+	*/
 	{
 		
         if((getMarkerColor format["%1OFFICE",(getPlayerUID _x)] IN ["ColorBlack"])) then {

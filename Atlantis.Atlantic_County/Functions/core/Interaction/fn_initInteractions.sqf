@@ -34,21 +34,23 @@ NoPixel_InteractionMenuItemsMap = [
 		["My Home", " ['Home'] spawn client_fnc_marker; ",5] 
 	],
 
+	/*
 	[ 
 		["visibleMap"], 
 		["My Shop", " ['Shop'] spawn client_fnc_marker; ",5] 
 	],
+	*/
 
 	[ 
 		["visibleMap"], 
 		["My Office", " ['Office'] spawn client_fnc_marker; ",5] 
 	],
-
+	/*
 	[ 
 		["visibleMap"], 
 		["Shops", " ['Shops'] spawn client_fnc_marker; ",5] 
 	],
-
+	*/
 	[ 
 		["visibleMap"], 
 		["Offices", " ['Offices'] spawn client_fnc_marker; ",5] 
@@ -861,6 +863,7 @@ NoPixel_InteractionMenuItems = [
 //shops and offices garages etc
 
 	//private shops
+	/*
 	[
 		["player distance myshop < 3 && !imrestrained"],
 		["Shop Inventory", "['Your crate will automatically despawn in 5 minutes - people can not use your shop while it is out!', true] spawn domsg; [player] remoteExec ['server_fnc_retreiveStore',2] ",3]
@@ -875,6 +878,7 @@ NoPixel_InteractionMenuItems = [
 		["(typeof CurrentCursorTarget) IN ['Land_buildingCommercial1','Land_buildingCommercial2'] && !imrestrained"],
 		["Browse Shop", "[typeof CurrentCursorTarget,player] remoteExec ['server_fnc_retreiveStoreShopper',2]",3]
 	],
+	*/
 
 	[
 		["(typeof CursorTarget == 'Land_buildingApartments2A' && player distance getpos CursorTarget < 20 && (myJob IN ['Legal','DA'] || 20 IN licenseArray) && player distance [8186.91,2862.51,0.00143814] < 100) && myoffice isEqualTo [0,0,0]"],
