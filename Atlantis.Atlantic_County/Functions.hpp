@@ -360,7 +360,6 @@ class CfgFunctions
 		{
 			file = "Functions\core\Mayor";
 			class paymayor {};
-			class setmayor {};
 			class lockvote {};
 			class loadvote {};
 			class settax {};
