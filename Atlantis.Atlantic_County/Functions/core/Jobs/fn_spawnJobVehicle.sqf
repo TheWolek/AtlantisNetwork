@@ -62,7 +62,7 @@ if (_jobType == "mail") exitwith {
 };
 
 if (_jobType == "trashman") exitwith {	
-	vehspawned = createVehicle ["jf_dump", [0,0,(random(500) + 3)], [], 0, "NONE"];	
+	vehspawned = createVehicle ["chbom", [0,0,(random(500) + 3)], [], 0, "NONE"];	
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE_BLKboots_nk_blk",1];
@@ -149,9 +149,9 @@ if (_jobType == "cropdusting") exitwith {
 if (_jobType == "bus") exitwith {	
 
 	_level_check = (client_level_array select 9);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["agora_ratp", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["agora_ratp", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["agora_tcl", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 
 	vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"];

@@ -62,7 +62,7 @@ if(_mafia == 9) then {
 
 	_house = nearestObject [[9736.28,3629.54,0.00143814], "Land_ark_bg_maison1"]; _higherup = true;
 };
-*/
+
 if(_cop == 10) then {
 	_house = nearestObject [[9626,3578.7,0.00143814], "Land_ark_bg_maison1"]; _higherup = true;
 };
@@ -94,7 +94,7 @@ if(_legal == 9) then {
 if(_legal == 8) then {
 	_house = nearestObject [[8984.55,3274.12,0.00143814], "Land_ark_bg_maison1"]; _higherup = true;
 };
-
+*/
 
 //[8984.55,3274.12,0.00143814]
 
@@ -226,7 +226,7 @@ if(_higherup) exitwith {
 
 	if(_houselevel == 1) then {
 		_nObject = nearestObjects [_house, ["Land_ivory_trailer_04","Land_ivory_trailer_01","Land_ivory_trailer_02","Land_ivory_trailer_03","Land_ivory_trailer_06","Land_ivory_trailer_05","Land_ark_bg_maison1"], 30];  
-		_containerpos = (_nobject select 0) getrelpos [8,0]; 
+		_containerpos = (_nobject select 0) getrelpos [8,0]; 	
 		player setpos _containerpos;
 	};
 

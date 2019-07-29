@@ -21,8 +21,8 @@ if(_status == "Add") then {
 
 	if(_licensePlate == "FrstCar") then {
 			
-			_textures = getArray(configfile >> "CfgIvoryTextures" >> "defaulttextures");
-			_color = _textures call BIS_fnc_selectRandom;
+			//_textures = getArray(configfile >> "CfgIvoryTextures" >> "defaulttextures");
+			//_color = _textures call BIS_fnc_selectRandom;
 	};
 
 		_l1 = _licenseAlphaArray call BIS_fnc_selectRandom;
