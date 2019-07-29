@@ -3,10 +3,8 @@ _dummy setpos [1905.81,6733.37,0.00146198];
 client_kcCamera  = "CAMERA" camCreate (getPos player);  
 showCinemaBorder true;   
 client_kcCamera cameraEffect ["EXTERNAL", "BACK"];                             
-//client_kcCamera camSetPos [9821.32,1079.3,1];  
-//client_kcCamera camSetPos [1903.32,‭6 733,23‬,1];
 client_kcCamera camSettarget _dummy; 
-client_kcCamera camSetRelPos [1,2.5,1.5];  
+client_kcCamera camSetRelPos [3,4,1.5];  
 client_kcCamera camSetFOV 0.85;  
  
 client_kcCamera camCommit 0;

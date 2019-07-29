@@ -1433,12 +1433,12 @@ NoPixel_InteractionMenuItems = [
 
 
 	[
-		["myjob == 'none' && (player getvariable 'da') > 0 && && (player distance [817.614,1637.97,0.00143766] < 20 )"],
+		["myjob == 'none' && (player getvariable 'da') > 0 && player distance [817.614,1637.97,0.00143766] < 20"],
 		["Sign-in DA", "[player,'DA'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
-		["myjob == 'DA' && (player distance [817.614,1637.97,0.00143766] < 20 )"],
+		["myjob == 'DA' && player distance [817.614,1637.97,0.00143766] < 20 "],
 		["Sign-out DA", "[0] call client_fnc_jobEnd",4]
 	],
 

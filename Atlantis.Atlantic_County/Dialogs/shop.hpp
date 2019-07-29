@@ -888,7 +888,7 @@ class GUN_Menu {
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
 			text = "\dialogs\Images\GunMenu.paa";
-			x = 0.275605 * safezoneW + safezoneX;
+			x = 0.025625 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
 			h = 0.747851 * safezoneH;
@@ -933,7 +933,7 @@ class GUN_Menu {
 			idc = 9001;
 			text = "";
 			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
-			x = 0.311121 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
 			h = 0.343181 * safezoneH;
@@ -943,7 +943,7 @@ class GUN_Menu {
 			idc = 9993;
 			text = "";
 			onButtonClick = "[""gunstore""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -953,7 +953,7 @@ class GUN_Menu {
 			idc = 9994;
 			text = "";
 			onButtonClick = "[""veststore""] spawn client_fnc_loadStore;"; 
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -963,7 +963,7 @@ class GUN_Menu {
 			idc = 9995;
 			text = "Purchase";
 			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -973,7 +973,7 @@ class GUN_Menu {
 			idc = 9996;
 			text = "Close";
 			onButtonClick = "closedialog 0;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0878542 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1232,7 +1232,7 @@ class RareFish_Menu {
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
 			text = "\dialogs\Images\RareFishMenu.paa";
-			x = 0.275605 * safezoneW + safezoneX;
+			x = 0.025625 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
 			h = 0.747851 * safezoneH;
@@ -1277,7 +1277,7 @@ class RareFish_Menu {
 			idc = 9001;
 			text = "";
 			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
-			x = 0.311121 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
 			h = 0.343181 * safezoneH;
@@ -1287,7 +1287,7 @@ class RareFish_Menu {
 			idc = 9995;
 			text = "Purchase";
 			onButtonClick = "[""fish""] spawn client_fnc_purchaseAI;"; 
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1297,7 +1297,7 @@ class RareFish_Menu {
 			idc = 9996;
 			text = "Close";
 			onButtonClick = "closedialog 0;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0878542 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1330,7 +1330,7 @@ class Clothing_Menu {
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
 			text = "\dialogs\Images\ClothingMenu.paa";
-			x = 0.275605 * safezoneW + safezoneX;
+			x = 0.025625 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
 			h = 0.747851 * safezoneH;
@@ -1375,7 +1375,7 @@ class Clothing_Menu {
 			idc = 9001;
 			text = "";
 			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
-			x = 0.311121 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
 			h = 0.343181 * safezoneH;
@@ -1385,7 +1385,7 @@ class Clothing_Menu {
 			idc = 9993;
 			text = "Clothing";
 			onButtonClick = "[""clothing""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -1395,7 +1395,7 @@ class Clothing_Menu {
 			idc = 9994;
 			text = "Backpack";
 			onButtonClick = "[""backpack""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -1405,7 +1405,7 @@ class Clothing_Menu {
 			idc = 9995;
 			text = "Purchase";
 			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;"; 
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1415,7 +1415,7 @@ class Clothing_Menu {
 			idc = 9996;
 			text = "Close";
 			onButtonClick = "closedialog 0;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0878542 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1450,7 +1450,7 @@ class HairDresser_Menu {
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
 			text = "\dialogs\Images\HairDresserMenu.paa";
-			x = 0.275605 * safezoneW + safezoneX;
+			x = 0.025625 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
 			h = 0.747851 * safezoneH;
@@ -1495,7 +1495,7 @@ class HairDresser_Menu {
 			idc = 9001;
 			text = "";
 			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
-			x = 0.311121 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
 			h = 0.343181 * safezoneH;
@@ -1505,7 +1505,7 @@ class HairDresser_Menu {
 			idc = 9993;
 			text = "Glasses";
 			onButtonClick = "[""Glasses""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -1515,7 +1515,7 @@ class HairDresser_Menu {
 			idc = 9994;
 			text = "Head";
 			onButtonClick = "[""head""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -1525,7 +1525,7 @@ class HairDresser_Menu {
 			idc = 9995;
 			text = "Purchase";
 			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;"; 
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1535,7 +1535,7 @@ class HairDresser_Menu {
 			idc = 9996;
 			text = "Close";
 			onButtonClick = "closedialog 0;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0878542 * safezoneW;
 			h = 0.023 * safezoneH;

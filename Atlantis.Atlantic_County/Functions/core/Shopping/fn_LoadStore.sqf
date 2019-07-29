@@ -297,7 +297,7 @@ if(_condition == "clothing") then {
 
 		// other
 		["U_B_Wetsuit",nil,2000,3,1],
-		["V_RebreatherB",nil,4000,3,3],
+		["V_RebreatherB",nil,4000,3,3]
 
 	];
 
