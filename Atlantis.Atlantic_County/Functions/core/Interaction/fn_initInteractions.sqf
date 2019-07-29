@@ -1035,24 +1035,24 @@ NoPixel_InteractionMenuItems = [
 	],
 	
 	[
-		["((player distance (getMarkerPos 'houseUpgrades')) < 30) && !isNull houseinvitation && !imrestrained "],
+		["(player distance [855.632,1092.4,0.00143909] < 10) && !isNull houseinvitation && !imrestrained "],
 		["Accept Share House", "[] spawn client_fnc_AcceptShareHouse",3]
 	],
 
 	[
-		["((player distance (getMarkerPos 'houseUpgrades')) < 30) && !imrestrained "],
+		["(player distance [855.632,1092.4,0.00143909] < 10) && !imrestrained "],
 		["Reset Share House", "_myguid = getplayeruid player; _theirguid = '0'; _myarray = [_myguid,_theirguid]; _myarray spawn client_fnc_sharehousefinish;",3]
 	],
 /*
 	[
-		["player getVariable 'houselevel' == 3 && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && ((player distance (getMarkerPos 'houseUpgrades')) < 30) && !imrestrained"],
+		["player getVariable 'houselevel' == 3 && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && (player distance [855.632,1092.4,0.00143909] < 10) && !imrestrained"],
 		["Temp Disabled", ',3]
 	],
 //[player,getplayerUID player] remoteexec ['client_fnc_ShareHouse', currentcursortarget]
 */
 
 	[
-		["((player distance (getMarkerPos 'houseUpgrades')) < 30) && player getvariable 'houselevel' < 3"],
+		["(player distance [855.632,1092.4,0.00143909] < 10) && player getvariable 'houselevel' < 3"],
 		["Upgrade House $225K", "[] spawn client_fnc_UpgradeHouse",3]
 	],
 
