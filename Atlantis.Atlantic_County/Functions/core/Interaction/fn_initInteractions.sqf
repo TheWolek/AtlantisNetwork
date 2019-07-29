@@ -252,10 +252,6 @@ NoPixel_InteractionMenuItems = [
 		["Twitch.TV", " ['Trying to connect to twitch.tv servers... Connection lost.', true] spawn domsg; ",5] 
 	],
 
-	/*[ 
-		[" "], 
-		["Give Keys", " [] spawn client_fnc_findplayerskeys; ",5] 
-	],*/
 	[ 
 		["!imrestrained && isPlayer cursorTarget "], 
 		["Give Keys", " [current_cars] remoteexec ['client_fnc_givekeys', CurrentcursorTarget]; ",5] 
@@ -1001,6 +997,10 @@ NoPixel_InteractionMenuItems = [
 		["typeof CursorObject IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F','Land_Shop_DED_Shop_01_F','Land_Shop_DED_Shop_02_F']"],
 		["General Store", "closedialog 0; createdialog 'GeneralStore_Menu'; ['general'] spawn client_fnc_LoadStore;",3]
 	],
+	[
+		["(myJob IN == 'Cop' && !imrestrained && player distance [1344.42,981.73,0.00143814] < 10 )"],
+		["Police Store", "closedialog 0; createdialog 'police_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
+	],
 
 
 	[ 
@@ -1552,7 +1552,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["( myjob != 'none' && myjob !='cop' && myjob !='EMS' && myjob !='Mafia') ) && (typeof CursorTarget IN ['Land_Centrelink'] || player distance myhouse < 20)"],
+		[" myjob != 'none' && myjob !='cop' && myjob !='EMS' && myjob !='Mafia' && (typeof CursorTarget IN ['Land_Centrelink'])"],
 		["Quit Job", "[0] spawn client_fnc_jobEnd;",4]
 	],
 
