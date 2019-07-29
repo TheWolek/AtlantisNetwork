@@ -274,3 +274,110 @@ if (isServer) then {
 	player setVariable["loaded", nil, false];
 
 };
+if (isNil "TFAR_fnc_isTeamSpeakPluginEnabled") exitwith {
+	
+	999999 cutText ["Task Force Radio is not running on your computer. Please re-sync and retry","BLACK FADED"];
+	999999 cutFadeOut 99999999;
+	if (player getvariable "taskfr") then {
+		player setvariable ["taskfr",false,true];
+	};
+};
+
+
+
+_TFenabled = [] call TFAR_fnc_isTeamSpeakPluginEnabled;
+
+if (!(_TFenabled)) then {
+
+	while {!([] call TFAR_fnc_isTeamSpeakPluginEnabled)} do {
+		
+		titleText ["Please enable Task Force Radio in your TS3 Plugins! || TS3 -> Settings -> Plugins", "BLACK"];
+		sleep 2;
+		if (player getvariable "taskfr") then {
+		player setvariable ["taskfr",false,true];
+		};
+	};
+};
+
+Dvid_TFEnabled = true;
+Dvid_onTsServer = "AtlantisNETWORK.PL | Official Teamspeak | Serwer RolePlay" == (call TFAR_fnc_getTeamSpeakServerName); ///////////////////////Edit This line (the channel at the top of your TS (where you right click and "Edit Virtual Server"), yes, get the name of that goes here)
+Dvid_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
+titleText ["Task Force Radio loaded succesfully","BLACK IN"];
+
+[] spawn {
+
+	while {true} do {
+	
+				_isadmin = false;
+				if (!(isNil "life_adminlevel")) then {
+					_adminlvl = life_adminlevel call BIS_fnc_parseNumber;
+					
+					if (_adminlvl > 0) then {
+						_isadmin = true;
+					};
+				};
+				
+				
+				
+					_TFenabled = [] call TFAR_fnc_isTeamSpeakPluginEnabled;
+					if ((!(_TFenabled)) && (Dvid_TFEnabled)) then {
+					if (!(_isadmin)) then {
+						titleText ["Please enable Task Force Radio in your TS3 Plugins! || TS3 -> Settings -> Plugins", "BLACK"];
+						Dvid_TFEnabled = false;
+					};
+							if (player getvariable "taskfr") then {
+								player setvariable ["taskfr",false,true];
+							};
+					};
+					
+					_onTsServer = "same as Dvid_onTsServer variable " == (call TFAR_fnc_getTeamSpeakServerName); //////////////////////Edit too pls, or dont but it wont work if you dont
+					if (!(_onTsServer)) then {
+					if (!(_isadmin)) then {
+						titleText ["Please join the teamspeak server! Adress: here", "BLACK"];
+						Dvid_onTsServer = false;
+					};
+						if (player getvariable "taskfr") then {
+							player setvariable ["taskfr",false,true];
+						};
+					} else {
+						if (!(Dvid_onTsServer)) then {
+						if (!(_isadmin)) then {
+							titleText ["TS server check completed. Welcome!","BLACK IN"];
+							Dvid_onTsServer = true;
+							};
+						if (!(player getvariable "taskfr")) then {
+							player setvariable ["taskfr",true,true];
+						};
+						};
+					};
+					
+					_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
+					if (!(_onChannel)) then {
+					if (!(_isadmin)) then {
+						titleText ["Please reload the plugin to join the TFR channel || Settings -> Plugins -> Reload All", "BLACK"];
+						Dvid_onChannel = false;
+					};
+						if (player getvariable "taskfr") then {
+							player setvariable ["taskfr",false,true];
+						};
+					} else {
+						if (!(Dvid_onChannel)) then {
+							titleText ["TS channel check completed. Welcome!","BLACK IN"];
+							Dvid_onChannel = true;
+						if (!(player getvariable "taskfr")) then {
+							player setvariable ["taskfr",true,true];
+						};
+						};
+					};
+					
+					
+					if ((_TFenabled) && (!(Dvid_TFEnabled))) then {
+						titleText ["Plugin enabled, welcome back!","BLACK IN"];
+						Dvid_TFEnabled = true;
+						if (!(player getvariable "taskfr")) then {
+							player setvariable ["taskfr",true,true];
+						};
+					};
+				
+				sleep 2;	
+			};
