@@ -1421,7 +1421,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 
-	[
+/*	[
 		["myjob == 'none' && (player getvariable 'dmv') > 0 && (typeof cursorobject IN ['Land_Centrelink'])"],
 		["Sign-in DMV", "[player,'DMV'] spawn client_fnc_jobstart;",4]
 	],
@@ -1429,16 +1429,16 @@ NoPixel_InteractionMenuItems = [
 	[
 		["myjob == 'DMV' && (typeof cursorobject IN ['Land_Centrelink'])"],
 		["Sign-out DMV", "[0] call client_fnc_jobEnd",4]
-	],
+	],*/
 
 
 	[
-		["myjob == 'none' && (player getvariable 'da') > 0 && (typeof cursorobject IN ['Land_Centrelink'])"],
+		["myjob == 'none' && (player getvariable 'da') > 0 && && (player distance [817.614,1637.97,0.00143766] < 20 )"],
 		["Sign-in DA", "[player,'DA'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
-		["myjob == 'DA' && (typeof cursorobject IN ['Land_Centrelink'])"],
+		["myjob == 'DA' && (player distance [817.614,1637.97,0.00143766] < 20 )"],
 		["Sign-out DA", "[0] call client_fnc_jobEnd",4]
 	],
 
