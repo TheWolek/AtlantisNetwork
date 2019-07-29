@@ -43,8 +43,8 @@ if(myJob == "Cop") then {
 
 	if(player getvariable "cop" >= 4 ) then {
 		_garage pushback "GM_MPD_CHARGER";
-        _garage pushback "GM_MPD_CHARGER_CHP_LB";
-        _garage pushback "GM_MPD_CHARGER_CHP_W_LB";
+        _garage pushback "GM_CHARGER_CHP_LB";
+        _garage pushback "GM_CHARGER_CHP_W_LB";
 	};
 
 	if(player getVariable "cop" >= 5 ) then {

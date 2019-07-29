@@ -573,7 +573,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["(CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Boat' || CursorTarget isKindOf 'Ship') && (myJob != 'Repairman' || ( myJob == 'Repairman' && (CursorTarget IN current_cars) ) ) && ('ToolKit' in backpackitems player)"],
+		["(CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Boat' || CursorTarget isKindOf 'Ship') && (myJob != 'Repairman' || ( myJob == 'Repairman' && (CursorTarget IN current_cars) ) ) && ('ToolKit' in backpackitems player) && !attachedcar"],
 		["Repair Vehicle", "['Repairing',20,'client_fnc_repair',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 
@@ -623,7 +623,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" (CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Ship') && player distance CursorTarget < 11 && CursorTarget in current_cars && !imrestrained"],
+		[" (CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Ship') && player distance CursorTarget < 11 && CursorTarget in current_cars && !imrestrained && !attachedcar"],
 		["Push Vehicle", "[] spawn Client_fnc_pushveh",2]
 	],
 	

@@ -39,7 +39,7 @@ if (_jobType == "Biker") exitwith {
 };
 
 if (_jobType == "Wood Logging") exitwith {
-	vehspawned = createVehicle ["jonzie_log_truck", [0,0,(random(500) + 3)], [], 0, "NONE"];
+	vehspawned = createVehicle ["d3s_actros_14", [0,0,(random(500) + 3)], [], 0, "NONE"];
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
@@ -72,9 +72,9 @@ if (_jobType == "trashman") exitwith {
 if (_jobType == "repairman") exitwith {	
 
 	_level_check = (client_level_array select 7);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["nopixel_mrfixit", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["nopixel_mrfixit", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["nopixel_mrfixit", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_titan_17_TAR", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_titan_17_TAR", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_titan_17_TAR", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	//[vehspawned, ["white","Glossy"]] spawn client_fnc_initVehicle;
 	[vehspawned] spawn client_fnc_spawnvehicle;	
@@ -86,23 +86,23 @@ if (_jobType == "repairman") exitwith {
 if (_jobType == "security") exitwith {
 
 	_level_check = (client_level_array select 2);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["ivory_isf_security", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["ivory_isf_security", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["ivory_isf_security", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_200_VX_16", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_200_VX_16", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_gls63amg_17", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	//[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
-	vehspawned addItemCargo ["sl_client_c3_security_W",1];
-	["You have some items in the truck, use them.", true] spawn domsg;
+	//vehspawned addItemCargo ["sl_client_c3_security_W",1];
+	//["You have some items in the truck, use them.", true] spawn domsg;
 };
 
 if (_jobType == "towtruck") exitwith {
 
 	_level_check = (client_level_array select 4);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["red_towtruck_08_black", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["red_towtruck_08_black", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["red_towtruck_08_black", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_fseries_17_TOW", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_fseries_17_TOW", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_fseries_17_TOW", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	//[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
@@ -114,9 +114,9 @@ if (_jobType == "towtruck") exitwith {
 if (_jobType == "NewsMan") exitwith {	
 
 	_level_check = (client_level_array select 6);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["nopixel_news_van_original", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["nopixel_news_van_original", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["nopixel_news_van_original", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_savana_05", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_savana_05", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_vklasse_17", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	clearmagazinecargoGlobal (vehspawned);
@@ -131,9 +131,9 @@ if (_jobType == "NewsMan") exitwith {
 if (_jobType == "taxi") exitwith {	
 
 	_level_check = (client_level_array select 9);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["ivory_cv_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["ivory_rs4_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["red_gs350_13_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_camry_18_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_camry_18_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_cherokee_18_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	//[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];

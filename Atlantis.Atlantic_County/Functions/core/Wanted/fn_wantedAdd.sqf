@@ -11,10 +11,9 @@ if(_charges find ":" > -1) exitWith {
 };
 
 if(_type == 0) then {
-    _status = lbData [911, _currentitemindex];
-    currentcursortarget = call compile format ["%1",currentcursortarget];
-    _suspect = name currentcursortarget;
-    _suspectID = getplayeruid currentcursortarget;
+    _status = currentSuspect;
+    _suspect = name _status;
+    _suspectID = getplayeruid _status;
     [_suspect,_suspectID,_officer,_officerID,_charges,1,_evidence,1,0] remoteexec ["server_fnc_addcriminal",2];
 };
 
@@ -26,7 +25,7 @@ if(_type == 1) then {
 };
 
 if(_type == 2) then {
-    _status = lbData [911, _currentitemindex];
+    _status = lbData [911, currentSuspect];
     currentcursortarget = call compile format ["%1",currentcursortarget];
     _suspect = name currentcursortarget;
     _suspectID = getplayeruid currentcursortarget;
@@ -34,7 +33,7 @@ if(_type == 2) then {
 };
 
 if(_type == 3) then {
-    _status = lbData [911, _currentitemindex];
+    _status = lbData [911, currentSuspect];
     currentcursortarget = call compile format ["%1",currentcursortarget];
     _suspect = name currentcursortarget;
     _suspectID = getplayeruid currentcursortarget;
@@ -43,7 +42,7 @@ if(_type == 3) then {
 
 if(_type == 4) then {
     
-    _status = lbData [911, _currentitemindex];
+    _status = lbData [911, currentSuspect];
     currentcursortarget = call compile format ["%1",currentcursortarget];
     _suspect = name currentcursortarget;
     _suspectID = getplayeruid currentcursortarget;
