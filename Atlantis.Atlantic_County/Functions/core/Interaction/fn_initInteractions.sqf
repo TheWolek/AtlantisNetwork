@@ -1552,7 +1552,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["( myjob != 'none' && !(myjob IN ['Doc','cop','EMS','Mobster','Biker','Mafia']) ) && (typeof CursorTarget IN ['Land_Centrelink'] || player distance myhouse < 20)"],
+		["( myjob != 'none' && myjob !='cop' && myjob !='EMS' && myjob !='Mafia') ) && (typeof CursorTarget IN ['Land_Centrelink'] || player distance myhouse < 20)"],
 		["Quit Job", "[0] spawn client_fnc_jobEnd;",4]
 	],
 
