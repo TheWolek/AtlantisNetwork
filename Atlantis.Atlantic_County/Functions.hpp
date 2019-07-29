@@ -269,7 +269,6 @@ class CfgFunctions
 			class clothesupdate2 {};
 			class clothesUpdate {};
 			class storeSetup {};
-			class storeSetup2 {};
 			class openShop {};
 			class purchaseAI {};
 			class confirmPurchase {};
