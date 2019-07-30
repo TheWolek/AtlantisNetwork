@@ -728,7 +728,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" (myJob IN ['Cop','doc','DA'] || (myJob == 'Legal' && player getVariable 'Legal' > 5)) && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && CursorTarget == vehicle CursorTarget && getpos player distance [8242.13,3019.17,0] < 150 && !imrestrained"],
+		[" (myJob IN ['Cop','doc','DA'] || (myJob == 'Legal' && player getVariable 'Legal' > 5)) && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && CursorTarget == vehicle CursorTarget && getpos player distance [6984.76,4045.14,0.00143433] < 150 && !imrestrained"],
 		["Send To Jail", " createdialog 'jailprocess';",2]
 	],
 
