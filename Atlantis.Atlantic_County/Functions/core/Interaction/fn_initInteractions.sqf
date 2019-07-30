@@ -1002,6 +1002,10 @@ NoPixel_InteractionMenuItems = [
 		["General Store", "closedialog 0; createdialog 'GeneralStore_Menu'; ['general'] spawn client_fnc_LoadStore;",3]
 	],
 
+	[
+		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained"],
+		["Police store", "closedialog 0; createdialog 'police_equipment'; ['police_equipment'] spawn client_fnc_LoadStore;",3]
+	],
 
 	[ 
 		["(getpos player) distance [1049.88,3657.15,0.00143814] < 30"], 
@@ -1552,7 +1556,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["( myjob != 'none' && myjob !='cop' && myjob !='EMS' && myjob !='Mafia') ) && (typeof CursorTarget IN ['Land_Centrelink'] || player distance myhouse < 20)"],
+		["( myjob != 'none' && myjob !='cop' && myjob !='EMS' && myjob !='Mafia' ) && (typeof CursorTarget IN ['Land_Centrelink'] || player distance myhouse < 20)"],
 		["Quit Job", "[0] spawn client_fnc_jobEnd;",4]
 	],
 
