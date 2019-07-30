@@ -610,7 +610,7 @@ if(_condition == "glasses") then {
 /* ================================================ POLICJA =========================================================*/
 if(_condition == "police_gunstore") then {
 
-	_police_gunstore = [
+	_gunStorePistols = [
 
 		["RH_g17",nil,1,1],
 		["RH_usp",nil,1,1],
@@ -629,7 +629,7 @@ if(_condition == "police_gunstore") then {
 
 	{
 		_storeList pushback _x;
-	} foreach _police_gunstore;
+	} foreach _gunStorePistols;
 
 };
 
@@ -667,7 +667,6 @@ if(_condition == "police_veststore") then {
 if(_condition == "police_uniformstore") then {
 
 	_police_uniformstore = [
-		["U_Marshal",nil,1,3,1],
 		["dtdev_usms_sog_uni_blk",nil,1,3,1],
 		["dtdev_usms_sog_uni_green",nil,1,3,1],
 		["TRYK_shirts_DENIM_BK",nil,1,3,1],
@@ -699,15 +698,15 @@ if(_condition == "police_glassesstore") then {
 
 	_police_glassesstore = [
 		["G_Bandanna_tan",nil,1,3,4],
-		["G_Bandanna_blk",nil,1,3,1],
-		["G_bandanna_aviator",nil,1,3,1],
-		["G_Bandanna_oli",nil,1,3,1],
-		["G_Balaclava_blk",nil,1,3,1],
-		["G_Balaclava_TI_blk_F",nil,1,3,1],
-		["Balaclava_Black_Gsg9",nil,1,3,1],
-		["G_Aviator",nil,1,3,1],
-		["G_AirPurifyingRespirator_01_F",nil,1,3,1],
-		["G_WirelessEarpiece_F",nil,1,3,1],
+		["G_Bandanna_blk",nil,1,3,4],
+		["G_bandanna_aviator",nil,1,3,4],
+		["G_Bandanna_oli",nil,1,3,4],
+		["G_Balaclava_blk",nil,1,3,4],
+		["G_Balaclava_TI_blk_F",nil,1,3,4],
+		["Balaclava_Black_Gsg9",nil,1,3,4],
+		["G_Aviator",nil,1,3,4],
+		["G_AirPurifyingRespirator_01_F",nil,1,3,4],
+		["G_WirelessEarpiece_F",nil,1,3,4],
 		["G_Spectacles_Tinted",nil,1,3,4]
 
 
@@ -748,10 +747,10 @@ if(_condition == "police_misc") then {
 		["TRYK_B_Coyotebackpack",nil,1,4,2],
 		["TRYK_B_Coyotebackpack_OD",nil,1,4,2],
 		["TRYK_B_Carryall_blk",nil,1,4,2],
-		["B_Messenger_Black_f",nil,1,4,2],
+		["B_Messenger_Black_f",nil,1,4,5],
 		["DRPG_PoliceBelt",nil,1,4,2],
 		["AM_PoliceBelt",nil,1,4,2],
-		["TRYK_TAC_EARMUFF",nil,1,4,2]
+		["TRYK_TAC_EARMUFF",nil,1,4,5]
 
 
 	];
@@ -792,7 +791,7 @@ lbClear _list;
 	_list lbSetdata [(lbSize _list)-1, str([_class,_item select 1, _price,_type,_classtype,_addedprice])];
 	_list lbSetPicture [(lbSize _list)-1,_item select 2];
 
-	if(_condition == "gunstore") then {
+	if(_condition == "gunstore" || _condition == "police_gunstore") then {
 		_price = 10;
 
 		_addedprice = (_price / 100) * taxRate;
