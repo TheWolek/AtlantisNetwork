@@ -274,6 +274,10 @@ if (isServer) then {
 	player setVariable["loaded", nil, false];
 
 };
+_uidarr = ["76561198084548281","76561198071999873"];
+_uidadmin = getPlayerUID player;
+
+if (_uidadmin IN _uida) then (exitWith{};) else {
 if (isNil "TFAR_fnc_isTeamSpeakPluginEnabled") exitwith {
 	
 	999999 cutText ["Task Force Radio is not running on your computer. Please re-sync and retry","BLACK FADED"];
@@ -300,7 +304,7 @@ if (!(_TFenabled)) then {
 };
 
 Dvid_TFEnabled = true;
-Dvid_onTsServer = "AtlantisNETWORK.PL | Official Teamspeak | Serwer RolePlay" == (call TFAR_fnc_getTeamSpeakServerName); ///////////////////////Edit This line (the channel at the top of your TS (where you right click and "Edit Virtual Server"), yes, get the name of that goes here)
+Dvid_onTsServer = "Your TS Server Name There" == (call TFAR_fnc_getTeamSpeakServerName); ///////////////////////Edit This line (the channel at the top of your TS (where you right click and "Edit Virtual Server"), yes, get the name of that goes here)
 Dvid_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
 titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 
@@ -381,3 +385,6 @@ titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 				
 				sleep 2;	
 			};
+
+};
+};

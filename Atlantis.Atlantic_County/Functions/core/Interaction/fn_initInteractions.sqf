@@ -998,7 +998,7 @@ NoPixel_InteractionMenuItems = [
 		["General Store", "closedialog 0; createdialog 'GeneralStore_Menu'; ['general'] spawn client_fnc_LoadStore;",3]
 	],
 	[
-		["(myJob IN == 'Cop' && !imrestrained && player distance [1344.42,981.73,0.00143814] < 10 )"],
+		["(myJob == 'Cop' && !imrestrained && player distance [1344.42,981.73,0.00143814] < 10 )"],
 		["Police Store", "closedialog 0; createdialog 'police_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
 	],
 

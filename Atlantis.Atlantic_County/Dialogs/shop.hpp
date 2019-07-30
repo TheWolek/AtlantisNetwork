@@ -1075,20 +1075,20 @@ class police_equipment {
 			h = 0.0231907 * safezoneH;
 		};	
 
-		class vestOption : HideButton {
+		class uniformOption : HideButton {
 			idc = 9993;
 			text = "";
-			onButtonClick = "[""police_veststore""] spawn client_fnc_loadStore;"; 
+			onButtonClick = "[""police_uniformstore""] spawn client_fnc_loadStore;"; 
 			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.683497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
 		};	
 
-		class uniformOption : HideButton {
+		class vestOption : HideButton {
 			idc = 9994;
 			text = "";
-			onButtonClick = "[""police_uniformstore""] spawn client_fnc_loadStore;"; 
+			onButtonClick = "[""police_veststore""] spawn client_fnc_loadStore;"; 
 			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
