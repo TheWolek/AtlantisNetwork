@@ -14,7 +14,7 @@ class racetimes {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -122,7 +122,7 @@ class fillvehicle
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -216,7 +216,7 @@ class garage2
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -307,7 +307,7 @@ class garage3
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -400,7 +400,7 @@ class garage
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -495,7 +495,7 @@ class EnterLicense {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -589,7 +589,7 @@ class garageplates
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};

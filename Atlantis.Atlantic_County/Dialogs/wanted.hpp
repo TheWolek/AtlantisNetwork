@@ -1000,7 +1000,7 @@ class revoke_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.35};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0.7};
@@ -1100,7 +1100,7 @@ class giveCert_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.35};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0.7};

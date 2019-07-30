@@ -9,7 +9,7 @@ class ATMGovt
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -161,7 +161,7 @@ class ATMmafia
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -313,7 +313,7 @@ class ATMbiker
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -465,7 +465,7 @@ class ATMMobster
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -617,7 +617,7 @@ class CasinoVault
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -771,7 +771,7 @@ class ATM
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -924,7 +924,7 @@ class DirtyMoney
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};

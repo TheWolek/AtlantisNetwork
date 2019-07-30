@@ -12,7 +12,7 @@ class vote_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -648,7 +648,7 @@ class shop_update {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -777,7 +777,7 @@ class Shop_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -897,7 +897,7 @@ class GUN_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1022,7 +1022,7 @@ class police_equipment {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1175,7 +1175,7 @@ class Food_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1284,7 +1284,7 @@ class GeneralStore_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1393,7 +1393,7 @@ class RareFish_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1491,7 +1491,7 @@ class Clothing_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1611,7 +1611,7 @@ class HairDresser_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1728,7 +1728,7 @@ class wallet_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};

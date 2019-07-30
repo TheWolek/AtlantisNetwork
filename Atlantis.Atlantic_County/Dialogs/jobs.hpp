@@ -11,7 +11,7 @@ class job_update {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};

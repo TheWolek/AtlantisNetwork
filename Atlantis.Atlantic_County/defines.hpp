@@ -98,7 +98,7 @@
 
 class RscText
 {
-    access = 0;
+    
     idc = -1;
     type = CT_STATIC;
     style = ST_MULTI;
@@ -120,7 +120,7 @@ class RscText
 
 class RscPicture
 {
-    access = 0;
+    
     idc = -1;
     type = CT_STATIC;
     style = ST_PICTURE;
@@ -144,7 +144,7 @@ class RscPicture
 class RscButton
 {
     
-   access = 0;
+   
     type = CT_BUTTON;
     text = "";
     colorText[] = {1, 1, 1, 1};

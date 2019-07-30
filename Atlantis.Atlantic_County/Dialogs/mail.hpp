@@ -10,7 +10,7 @@ class client_findMail {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -174,7 +174,7 @@ class openMail {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};

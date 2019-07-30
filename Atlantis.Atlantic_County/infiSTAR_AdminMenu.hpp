@@ -3,7 +3,7 @@ Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de
 #12384
 */
 class RscListBox_infiSTAR {
-access=0;
+
 type=5;
 style=0;
 font="PuristaLight";
@@ -51,7 +51,7 @@ shadow=0;
 };
 };
 class RscText_infiSTAR {
-access=0;
+
 idc=-1;
 type=0;
 style=0;
@@ -64,7 +64,7 @@ sizeex=0.0400;
 fixedWidth=0;
 };
 class RscEdit_infiSTAR {
-access=0;
+
 type=2;
 style=0;
 colorBackground[]={0,0,0,0.6};
@@ -79,7 +79,7 @@ size=0.2;
 shadow=0;
 };
 class RscButton_infiSTAR {
-access=0;
+
 idc=-1;
 type=1;
 style=0;
