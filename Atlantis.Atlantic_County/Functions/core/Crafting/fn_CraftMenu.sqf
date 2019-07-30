@@ -455,7 +455,7 @@ if(_status == "Quality Clothing") exitwith {
 
 
 if(isNil "shopholder") then {
-	shopholder = "plp_ct_woodboxlightbig" createVehicleLocal (getpos player);  
+	shopholder = "plp_ct_woodboxlightsmall" createVehicleLocal (getpos player);  
 };
 
 if((_this select 0) == "CRAFT") exitwith {
