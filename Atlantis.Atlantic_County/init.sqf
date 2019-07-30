@@ -273,12 +273,7 @@ if (isServer) then {
 	uisleep 5;
 	player setVariable["loaded", nil, false];
 
-};
-_uidarr = ["76561198084548281","76561198071999873"];
-_uidadmin = getPlayerUID player;
-
-if (_uidadmin IN _uida) then (exitWith{};) else {
-if (isNil "TFAR_fnc_isTeamSpeakPluginEnabled") exitwith {
+	if (isNil "TFAR_fnc_isTeamSpeakPluginEnabled") exitwith {
 	
 	999999 cutText ["Task Force Radio is not running on your computer. Please re-sync and retry","BLACK FADED"];
 	999999 cutFadeOut 99999999;
@@ -304,14 +299,23 @@ if (!(_TFenabled)) then {
 };
 
 Dvid_TFEnabled = true;
-Dvid_onTsServer = "Your TS Server Name There" == (call TFAR_fnc_getTeamSpeakServerName); ///////////////////////Edit This line (the channel at the top of your TS (where you right click and "Edit Virtual Server"), yes, get the name of that goes here)
+Dvid_onTsServer = "DPP Official Serwer" == (call TFAR_fnc_getTeamSpeakServerName); ///////////////////////Edit This line (the channel at the top of your TS (where you right click and "Edit Virtual Server"), yes, get the name of that goes here)
 Dvid_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
 titleText ["Task Force Radio loaded succesfully","BLACK IN"];
+
+_uidarr = ["76561198084548281","76561198071999873"];
+_adminuid = getplayeruid player;
+if(_adminuid in _uidarr) then {
+	_isadmin = true;
+} else {
+	_isadmin = false;
+};
 
 [] spawn {
 
 	while {true} do {
 	
+				/*
 				_isadmin = false;
 				if (!(isNil "life_adminlevel")) then {
 					_adminlvl = life_adminlevel call BIS_fnc_parseNumber;
@@ -320,6 +324,7 @@ titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 						_isadmin = true;
 					};
 				};
+				*/
 				
 				
 				
@@ -334,7 +339,7 @@ titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 							};
 					};
 					
-					_onTsServer = "same as Dvid_onTsServer variable " == (call TFAR_fnc_getTeamSpeakServerName); //////////////////////Edit too pls, or dont but it wont work if you dont
+					_onTsServer = "DPP Official Serwer" == (call TFAR_fnc_getTeamSpeakServerName); //////////////////////Edit too pls, or dont but it wont work if you dont
 					if (!(_onTsServer)) then {
 					if (!(_isadmin)) then {
 						titleText ["Please join the teamspeak server! Adress: here", "BLACK"];
@@ -387,4 +392,5 @@ titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 			};
 
 };
+
 };

@@ -159,7 +159,6 @@ class CfgFunctions
 			class viewhouse {};
 			class viewshop {};
 			class viewoffice {};
-			class seizeitems {};
 		};
 
 		class Wanted {

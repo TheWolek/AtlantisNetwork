@@ -83,7 +83,7 @@ if(myjob == "Cop") then {
 		player linkItem "Oase_ID_Card_Police";
 		//player addItem "ItemGPS";
 		player linkItem "ItemGPS";
-		//player linkitem "cg_tabletd";
+		player linkitem "cg_tabletd";
 
 
 			player additemtobackpack "RH_uspm";
@@ -186,6 +186,7 @@ if(myjob == "Cop") then {
 		player linkItem "Oase_ID_Card_Police";
 		//player addItem "ItemGPS";
 		player linkItem "ItemGPS";
+		player linkitem "cg_tabletd";
 
 		player additemtobackpack "RH_uspm";
 
@@ -642,7 +643,7 @@ if(myJob == "EMS") then {
 		player linkItem "ItemCompass";
 		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
-		//player linkitem "cg_tabletd";
+		player linkitem "cg_tabletd";
 
 		_level = player getVariable "fire";
 		player forceAddUniform "U_C_CBRN_Suit_01_Blue_F";

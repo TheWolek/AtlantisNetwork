@@ -256,10 +256,10 @@ if (_booli) then {
 	[_player] spawn Server_fnc_initStats;
 
 	_startercars = ["d3s_fiesta_16","d3s_e38_98","d3s_focus_14_ST","d3s_beetle_04"];
-	_class = _startercars call BIS_fnc_selectRandom;
+	_class = selectRandom _startercars;
 	//add a test car for every spawn!
 	_colors = ["\colors\oxford_white.paa","\colors\hyper_blue.paa","\colors\bronze_fire.paa","\colors\austin_yellow.paa"];
-	_color = _colors call BIS_fnc_selectRandom;
+	_color = selectRandom _colors;
 	_finish = "glossy"; _rims = "default"; _windows = 0; _Lights = 0; _owner = getplayeruid _player; _licensePlate = "FrstCar"; _statuses = 1; 
 	[_licensePlate, _class, _color, _finish, _rims, _windows, _lights, _owner, _statuses, "Add", _player] spawn Server_fnc_garageUpdate;
 

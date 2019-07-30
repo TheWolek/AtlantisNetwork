@@ -252,6 +252,10 @@ NoPixel_InteractionMenuItems = [
 		["Twitch.TV", " ['Trying to connect to twitch.tv servers... Connection lost.', true] spawn domsg; ",5] 
 	],
 
+	/*[ 
+		[" "], 
+		["Give Keys", " [] spawn client_fnc_findplayerskeys; ",5] 
+	],*/
 	[ 
 		["!imrestrained && isPlayer cursorTarget "], 
 		["Give Keys", " [current_cars] remoteexec ['client_fnc_givekeys', CurrentcursorTarget]; ",5] 
@@ -724,7 +728,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" (myJob IN ['Cop','doc','DA'] || (myJob == 'Legal' && player getVariable 'Legal' > 5)) && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && CursorTarget == vehicle CursorTarget && getpos player distance [6984.76,4045.14,0.00143433] < 150 && !imrestrained"],
+		[" (myJob IN ['Cop','doc','DA'] || (myJob == 'Legal' && player getVariable 'Legal' > 5)) && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && CursorTarget == vehicle CursorTarget && getpos player distance [8242.13,3019.17,0] < 150 && !imrestrained"],
 		["Send To Jail", " createdialog 'jailprocess';",2]
 	],
 
@@ -997,11 +1001,11 @@ NoPixel_InteractionMenuItems = [
 		["typeof CursorObject IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F','Land_Shop_DED_Shop_01_F','Land_Shop_DED_Shop_02_F']"],
 		["General Store", "closedialog 0; createdialog 'GeneralStore_Menu'; ['general'] spawn client_fnc_LoadStore;",3]
 	],
-	[
-		["(myJob == 'Cop' && !imrestrained && player distance [1344.42,981.73,0.00143814] < 10 )"],
-		["Police Store", "closedialog 0; createdialog 'police_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
-	],
 
+	[
+		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained"],
+		["Police store", "closedialog 0; createdialog 'police_equipment'; ['police_equipment'] spawn client_fnc_LoadStore;",3]
+	],
 
 	[ 
 		["(getpos player) distance [1049.88,3657.15,0.00143814] < 30"], 
@@ -1552,7 +1556,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" myjob != 'none' && myjob !='cop' && myjob !='EMS' && myjob !='Mafia' && (typeof CursorTarget IN ['Land_Centrelink'])"],
+		["( myjob != 'none' && myjob !='cop' && myjob !='EMS' && myjob !='Mafia' ) && (typeof CursorTarget IN ['Land_Centrelink'] || player distance myhouse < 20)"],
 		["Quit Job", "[0] spawn client_fnc_jobEnd;",4]
 	],
 
@@ -1634,11 +1638,6 @@ NoPixel_InteractionMenuItems = [
 	[
 		[" (myJob IN ['Cop','legal'] && isPlayer CursorTarget && CursorTarget isKindOf 'Man' && CursorTarget == vehicle CursorTarget && !imrestrained && player distance [1344.42,981.73,0.00143814] < 35 )"],
 		["Check fingerprints", " ['Checking fingerprints',5,'client_fnc_checkfingerp',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",4]
-	],
-
-	[
-		[" (myJob == 'Cop' && nearestObjects [player,['weaponholder'],3] != 0"],
-		["Seize items", " [] call client_fnc_seizeitems",4]
 	],
 
 	[

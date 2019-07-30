@@ -989,7 +989,6 @@ class GUN_Menu {
 	};
 };
 
-
 class police_equipment {
 	idd = 9999;
 	name= "police_equipment";
@@ -1053,7 +1052,7 @@ class police_equipment {
 		    offsetPressedY = 0.002;
 		    borderSize = 0.01;
 		};
-			
+
 		class ShopList : client_RscListBox 
 		{
 			idc = 9001;
@@ -1141,17 +1140,8 @@ class police_equipment {
 			w = 0.0878542 * safezoneW;
 			h = 0.023 * safezoneH;
 		};	
-
-
-
-
-
-
-
-
 	};
 };
-
 
 
 class Food_Menu {

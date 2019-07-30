@@ -607,55 +607,29 @@ if(_condition == "glasses") then {
 
 };
 
-/* ================================================ POLICJA =========================================================*/
 if(_condition == "police_gunstore") then {
-
-	_gunStorePistols = [
-
-		["RH_g17",nil,1,1],
-		["RH_usp",nil,1,1],
-		["RH_m1911",nil,1,1],
-		["RH_bull",nil,1,1],
-		["RH_Deaglem",nil,1,1],
-		["CSW_FN57_Ballistic_Shield",nil,1,1],
-		["CSW_M26C",nil,1,1],
-		["CSW_M870",nil,1,1],
-		["hlc_smg_MP5N",nil,1,1],
-		["RH_m4",nil,1,1],
-		["RH_M4m_b",nil,1,1]
-
-
+	_police_gunstore = [
+		["RH_g17",nil,1200,1],
+		["RH_usp",nil,1900,1],
+		["RH_m1911",nil,1900,1],
+		["RH_ttracker",nil,2100,1],
+		["RH_mp412",nil,1900,1],
+		["RH_python",nil,2100,1],
+		["RH_fn57",nil,3300,1],
+		["RH_gsh18",nil,3500,1]
 	];
 
 	{
-		_storeList pushback _x;
-	} foreach _gunStorePistols;
-
+		_storeList pushBack _x;
+	} foreach _police_gunstore
 };
-
 
 if(_condition == "police_veststore") then {
 
 	_police_veststoree = [
-		["V_Safety_yellow_F",nil,1,3,3],
-		["EF_BS",nil,1,3,3],
-		["EF_SH_BK",nil,1,3,3],
-		["EF_SH_BW",nil,1,3,3],
-		["TAC_PBDFG2CPMSL_B_1",nil,1,3,3],
-		["TAC_PBDFG2CPP_CY_1",nil,1,3,3],
-		["TAC_PBDFG2CPP_BK_1",nil,1,3,3],
-		["TAC_V_tacv1_MSL",nil,1,3,3],
-		["TAC_V_tacv1LC_MSL",nil,1,3,3],
-		["TAC_V_tacv1_P",nil,1,3,3],
-		["TAC_V_tacv1LC_P",nil,1,3,3],		
-		["Gsg9_PlateCarrier_Black_Assault",nil,1,3,3],
-		["Gsg9_PlateCarrier_Brown_Assault",nil,1,3,3],
-		["KSK_PlateCarrier_FlecktarnW_Specialist",nil,1,3,3],
-		["dtdev_usms_sog_vest_blk_camo",nil,1,3,3],
-		["dtdev_usms_sog_vest_blk",nil,1,3,3],
-		["dtdev_usms_sog_vest_grn",nil,1,3,3],
-		["Gsg9_PlateCarrier_Brown_SupportHeavy",nil,1,3,3]
-
+		["bj1",nil,1500,3,3],
+		["bj2",nil,1500,3,3],
+		["bj3",nil,1500,3,3]
 
 	];
 
@@ -667,23 +641,15 @@ if(_condition == "police_veststore") then {
 if(_condition == "police_uniformstore") then {
 
 	_police_uniformstore = [
-		["dtdev_usms_sog_uni_blk",nil,1,3,1],
-		["dtdev_usms_sog_uni_green",nil,1,3,1],
-		["TRYK_shirts_DENIM_BK",nil,1,3,1],
-		["TRYK_shirts_DENIM_BL",nil,1,3,1],
-		["TRYK_shirts_DENIM_BWH",nil,1,3,1],
-		["TRYK_shirts_DENIM_R",nil,1,3,1],
-		["TRYK_shirts_DENIM_RED2",nil,1,3,1],
-		["TRYK_shirts_DENIM_WHB",nil,1,3,1],
-		["TRYK_shirts_DENIM_ylb",nil,1,3,1],
-		["TRYK_U_denim_hood_blk",nil,1,3,1],
-		["TRYK_U_B_BLKBLK_CombatUniform",nil,1,3,1],
-		["EF_HMMSL_1",nil,1,3,1],
-		["EF_HMMSL_2",nil,1,3,1],
-		["EF_HMP_1",nil,1,3,1],
-		["EF_HMP_2",nil,1,3,1],
-		["EF_M_P_U",nil,1,3,1],
-		["TRYK_U_B_3CD_BLK_BDUTshirt",nil,1,3,1]
+		["TRYK_U_B_BLK_T_BG_BK",nil,50,3,1],
+		["TRYK_U_B_RED_T_BG_BR",nil,50,3,1],
+		["TRYK_U_B_BLK_T_BK",nil,50,3,1],
+		["TRYK_U_B_RED_T_BR",nil,50,3,1],
+		["TRYK_U_B_BLK_T_WH",nil,50,3,1],
+		["TRYK_U_B_Denim_T_BG_BK",nil,50,3,1],
+		["TRYK_U_B_Denim_T_BG_WH",nil,50,3,1],
+		["TRYK_U_B_Denim_T_BK",nil,50,3,1],
+		["TRYK_U_B_Denim_T_WH",nil,50,3,1]
 
 	];
 
@@ -697,18 +663,20 @@ if(_condition == "police_uniformstore") then {
 if(_condition == "police_glassesstore") then {
 
 	_police_glassesstore = [
-		["G_Bandanna_tan",nil,1,3,4],
-		["G_Bandanna_blk",nil,1,3,4],
-		["G_bandanna_aviator",nil,1,3,4],
-		["G_Bandanna_oli",nil,1,3,4],
-		["G_Balaclava_blk",nil,1,3,4],
-		["G_Balaclava_TI_blk_F",nil,1,3,4],
-		["Balaclava_Black_Gsg9",nil,1,3,4],
-		["G_Aviator",nil,1,3,4],
-		["G_AirPurifyingRespirator_01_F",nil,1,3,4],
-		["G_WirelessEarpiece_F",nil,1,3,4],
-		["G_Spectacles_Tinted",nil,1,3,4]
-
+		["G_Spectacles_Tinted",nil,120,3,4],
+		["G_Shades_Black",nil,120,3,4],
+		["G_Shades_Blue",nil,120,3,4],
+		["G_Sport_Blackred",nil,120,3,4],
+		["G_Sport_Checkered",nil,120,3,4],
+		["G_Sport_Blackyellow",nil,120,3,4],
+		["G_Sport_BlackWhite",nil,120,3,4],
+		["G_Squares",nil,120,3,4],
+		["G_Aviator",nil,120,3,4],
+		["G_Lady_Mirror",nil,120,3,4],
+		["G_Lady_Dark",nil,120,3,4],
+		["G_Lady_Blue",nil,120,3,4],
+		["G_Lowprofile",nil,120,3,4],
+		["G_Combat",nil,120,3,4]
 
 	];
 
@@ -720,15 +688,35 @@ if(_condition == "police_glassesstore") then {
 if(_condition == "police_headgearstore") then {
 
 	_police_headgearstore = [
-		["H_Cap_police",nil,1,3,5],
-		["TRYK_H_PASGT_BLK",nil,1,3,5],
-		["TRYK_R_CAP_BLK",nil,1,3,5],
-		["TRYK_r_cap_blk_Glasses",nil,1,3,5],
-		["G_WirelessEarpiece_F",nil,1,3,5],
-		["EF_Mcap_PB",nil,1,3,5],
-		["CG_sert_H2",nil,1,3,5],
-		["TRYK_H_headsetcap_blk_Glasses",nil,1,3,5]
-
+			["H_ShrekMask",nil,12,3,5],
+			["H_MickeyMask",nil,12,3,5],
+			["H_UltronMask",nil,12,3,5],
+			["H_PatriotMask",nil,12,3,5],
+			["H_AntmanMask",nil,12,3,5],
+			["H_BobaMask",nil,12,3,5],
+			["H_AugustusMask",nil,12,3,5],
+			["H_RAAMMask",nil,12,3,5],
+			["H_HulkMask",nil,12,3,5],
+			["H_VenomMask",nil,12,3,5],
+			["H_SpongebobMask",nil,12,3,5],
+			["H_SquidwardMask",nil,12,3,5],
+			["H_JasonMask",nil,12,3,5],
+			["H_DeadpoolMask",nil,12,3,5],
+			["H_GingerbreadMask",nil,12,3,5],
+			["H_KermitMask",nil,12,3,5],
+			["H_SpidermanMask",nil,12,3,5],
+			["H_StarFoxMask",nil,12,3,5],
+			["H_BatmanMask",nil,12,3,5],
+			["H_ScarecrowMask",nil,12,3,5],
+			["H_GuyFawkesMask",nil,12,3,5],
+			["H_WashingtonMask",nil,12,3,5],
+			["H_LincolnMask",nil,12,3,5],
+			["H_GrantMask",nil,12,3,5],
+			["H_NixonMask",nil,12,3,5],
+			["H_ClintonMask",nil,12,3,5],
+			["H_BushMask",nil,12,3,5],
+			["H_ObamaMask",nil,12,3,5],
+			["H_FranklinMask",nil,12,3,5]
 
 	];
 
@@ -740,18 +728,14 @@ if(_condition == "police_headgearstore") then {
 if(_condition == "police_misc") then {
 
 	_police_misc = [
-		["EF_FBAG_BK",nil,1,4,2],
-		["EF_FBAG_HB_BK",nil,1,4,2],
-		["EF_FBAG_SL_BK",nil,1,4,2],
-		["TRYK_B_Alicepack",nil,1,4,2],
-		["TRYK_B_Coyotebackpack",nil,1,4,2],
-		["TRYK_B_Coyotebackpack_OD",nil,1,4,2],
-		["TRYK_B_Carryall_blk",nil,1,4,2],
-		["B_Messenger_Black_f",nil,1,4,5],
-		["DRPG_PoliceBelt",nil,1,4,2],
-		["AM_PoliceBelt",nil,1,4,2],
-		["TRYK_TAC_EARMUFF",nil,1,4,5]
-
+		["EF_FBAG_BK",nil,100,4,2],
+		["EF_FBAG_HB_BK",nil,100,4,2],
+		["EF_FBAG_SL_BK",nil,100,4,2],
+		["TRYK_B_Alicepack",nil,100,4,2],
+		["TRYK_B_Coyotebackpack",nil,100,4,2],
+		["TRYK_B_Coyotebackpack_OD",nil,100,4,2],
+		["TRYK_B_Carryall_blk",nil,100,4,2],
+		["B_Messenger_Black_f",nil,100,4,2]
 
 	];
 
@@ -760,6 +744,9 @@ if(_condition == "police_misc") then {
 	} foreach _police_misc;
 
 };
+
+
+
 
 
 
@@ -791,7 +778,7 @@ lbClear _list;
 	_list lbSetdata [(lbSize _list)-1, str([_class,_item select 1, _price,_type,_classtype,_addedprice])];
 	_list lbSetPicture [(lbSize _list)-1,_item select 2];
 
-	if(_condition == "gunstore" || _condition == "police_gunstore") then {
+	if(_condition == "gunstore") then {
 		_price = 10;
 
 		_addedprice = (_price / 100) * taxRate;
