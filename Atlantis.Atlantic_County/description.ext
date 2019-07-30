@@ -1,6 +1,6 @@
 #include "Functions.hpp"
 #include "Dialogs\Dialogs.hpp"
-//#include "infiSTAR_AdminMenu.hpp"
+#include "infiSTAR_AdminMenu.hpp"
 
 class RscTitles
 {
