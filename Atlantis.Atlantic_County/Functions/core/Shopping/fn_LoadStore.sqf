@@ -757,7 +757,11 @@ if(_condition == "police_misc") then {
 		["Oase_ID_Card_Police",nil,1,3],
 		["ItemGPS",nil,1,3],
 		["cg_tabletd",nil,1,3],
-		["ToolKit",nil,10,3]
+		["RH_compm2",nil,10,3],
+		["RH_compm2l",nil,10,3],
+		["RH_cmore",nil,10,3],
+		["RH_barska_rds",nil,10,3],
+		["TH_eotech553",nil,10,3]
 
 
 
