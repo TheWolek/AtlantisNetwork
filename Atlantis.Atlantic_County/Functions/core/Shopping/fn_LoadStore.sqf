@@ -752,6 +752,7 @@ if(_condition == "police_misc") then {
 		["TRYK_TAC_EARMUFF",nil,1,4,5],
 		["cg_atf_bandage_i",nil,5,3],
 		["CG_Spikes_Collapsed",nil,50,3],
+		["ItemMap",nil,1,3],
 		["ItemCompass",nil,1,3],
 		["Oase_ID_Card_Police",nil,1,3],
 		["ItemGPS",nil,1,3],
