@@ -21,7 +21,7 @@ uisleep 15;
 [
 	[
 		["It is the year 2053.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],	
-		["You have arrived to Silver Lake.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"]
+		["You have arrived to Atlantis County.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"]
 	]
 ] spawn BIS_fnc_typeText;
 

@@ -749,7 +749,9 @@ if(_condition == "police_misc") then {
 		["B_Messenger_Black_f",nil,1,4,5],
 		["DRPG_PoliceBelt",nil,1,4,2],
 		["AM_PoliceBelt",nil,1,4,2],
-		["TRYK_TAC_EARMUFF",nil,1,4,5]
+		["TRYK_TAC_EARMUFF",nil,1,4,5],
+		["cg_atf_bandage_i",nil,5,3],
+		["CG_Spikes_Collapsed",nil,50,3]
 
 
 	];

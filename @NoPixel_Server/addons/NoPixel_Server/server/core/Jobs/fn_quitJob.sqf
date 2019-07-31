@@ -44,6 +44,12 @@ if (_player IN currentCop) exitwith {
 		currentMarshals deleteAt _pia;
 		publicvariable "currentMarshals";
 	};
+
+	if (_player IN currentAIA) then {  
+		_pia = currentAIA find _player;
+		currentAIA deleteAt _pia;
+		publicvariable "currentAIA";
+	};
 	
 };
 

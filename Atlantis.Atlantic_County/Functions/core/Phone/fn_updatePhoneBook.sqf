@@ -93,6 +93,15 @@ disableSerialization;
 
 	if!(_old isEqualTo  currentMarshals) then { publicvariable "currentMarshals"; };
 
+	_old =  currentAIA;
+
+	for "_i" from 0 to 20 step 1 do {
+		_pia =  currentAIA FIND objNull;  
+		 currentAIA deleteAT _pia;  
+	};
+
+	if!(_old isEqualTo  currentAIA) then { publicvariable "currentAIA"; };
+
 
  
 	_old =  currentMafia;

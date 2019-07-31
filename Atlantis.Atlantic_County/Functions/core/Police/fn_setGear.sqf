@@ -9,9 +9,11 @@ waitUntil { !isNil "packet"; };
 
 currentDetectives = currentDetectives - [player];
 currentMarshals = currentMarshals - [player];
+currentAIA = currentAIA - [player];
 
 publicVariable "currentDetectives";
 publicVariable "currentMarshals";
+publicVariable "currentAIA";
 
 if(_type == "uav") exitwith {
 	player addWeapon "B_UavTerminal";
@@ -248,6 +250,130 @@ if(myjob == "Cop") then {
 				player addVest "EF_BLT_M1B";
 				currentDetectives pushBack player;
 				publicVariable "currentDetectives";
+			};
+
+		} else { 
+			switch (_level) do {
+				case 1: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 2: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 3: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 4: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 5: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 6: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 7: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 8: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+			};
+
+		};
+	};
+	// aia 
+	//wy jesteście oddział wewnętrzny a nie KURWA POLICJA
+	if(_type == "aia") then {
+
+		_freq = 33.3; // do ustalenia z komediantem
+
+		_cost = ((_level) * 10);
+		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
+		format["GearLog: %1 (%2) took AIA loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
+
+		player addBackpack "B_Carryall_cbr"; 
+
+		//player addItem "ItemMap";
+		player linkItem "ItemMap";
+		//player addItem "ItemCompass";
+		player linkItem "ItemCompass";
+		//player addItem "Oase_ID_Card_Police";
+		player linkItem "Oase_ID_Card_Police";
+		//player addItem "ItemGPS";
+		player linkItem "ItemGPS";
+		player linkitem "cg_tabletd";
+
+		player additemtobackpack "RH_uspm";
+
+		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
+		for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
+		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
+		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
+
+		player addweapon "CSW_M26C";
+		player addweapon "cg_baton";
+		player addWeapon "Binocular";
+
+		//sprzęt do zmiany na jakiś co im dobro zrobi
+		if(female) then { 
+			
+			if(_level == 1) then {
+				player forceAddUniform "EF_FEM_4_2";
+				currentAIA pushBack player;
+				publicVariable "currentAIA";
+			};
+			if(_level == 2) then {				
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+				currentAIA pushBack player;
+				publicVariable "currentAIA";
+			};				
+			if(_level == 3) then {	
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+				currentAIA pushBack player;
+				publicVariable "currentAIA";
+			};
+			if(_level == 4) then {		
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+				currentAIA pushBack player;
+				publicVariable "currentAIA";
+			};
+			if(_level == 5) then {	
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+				currentAIA pushBack player;
+				publicVariable "currentAIA";
+			};
+			if(_level == 6) then {
+				player forceadduniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+				currentAIA pushBack player;
+				publicVariable "currentAIA";
+			};
+			if(_level == 7) then {				
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+				currentAIA pushBack player;
+				publicVariable "currentAIA";
+			};
+			if(_level == 8) then {
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+				currentAIA pushBack player;
+				publicVariable "currentAIA";
 			};
 
 		} else { 

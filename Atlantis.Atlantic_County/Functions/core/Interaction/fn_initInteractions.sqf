@@ -1004,7 +1004,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained"],
-		["Police store", "closedialog 0; createdialog 'police_equipment'; ['police_equipment'] spawn client_fnc_LoadStore;",3]
+		["Police store", "closedialog 0; createdialog 'police_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
 	],
 
 	[ 
@@ -1025,7 +1025,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" ( (myJob IN ['Cop','doc'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) || (myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1'])) || (myJob == 'Mafia' && (typeof cursorobject == 'Land_em_mansion_01')) || (myJob == 'Biker' && (typeof cursorobject == 'Land_buildingsNightclub2')) || (myJob == 'Mobster' && (typeof cursorobject == 'Land_buildingsCasino2')) || (( myJob IN ['Cop','doc','EMS'] ) && ( str CursorObject find 'em_heliport' > -1 || str CursorObject find 'embarcadero' > -1 )) || (Mayor && player distance myhouse < 30) || (myJob == 'Legal' && player getVariable 'legal' > 5 && (typeof cursorobject == 'Land_buildingscourthouse1'))) && !imrestrained "],
-		["Open Job Garage", "[CursorObject] spawn client_fnc_opengaragepolice;  ",3]
+		["Open Job Garage", "[CursorObject] call client_fnc_opengaragepolice;  ",3]
 	],
 
 	[ 
@@ -1124,7 +1124,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["((myjob == 'Mafia' && typeof CursorTarget == 'Land_em_mansion_01' && player getVariable 'Mafia' >= 8) || (myjob == 'Mobster' && typeof cursorobject == 'Land_buildingsCasino2' && player getVariable 'Mobster' >= 8) || (myjob == 'Biker' && typeof cursorobject == 'Land_buildingsNightclub2' && player getVariable 'Biker' >= 8)) && !imrestrained"],
+		["((myjob == 'Mafia' && typeof CursorTarget == 'Land_buildingsCasino2' && player getVariable 'Mafia' >= 8) || (myjob == 'Mobster' && typeof cursorobject == 'Land_buildingsCasino2' && player getVariable 'Mobster' >= 8) || (myjob == 'Biker' && typeof cursorobject == 'Land_buildingsNightclub2' && player getVariable 'Biker' >= 8)) && !imrestrained"],
 		["Open Gang Stash", "['Your crate will automatically despawn in 1 minute!', true] spawn domsg; [player, myJob] remoteExec ['server_fnc_retreivegang',2]",4]
 	],
 
@@ -1271,37 +1271,37 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" (myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) && (player getvariable 'cop') >= 5  "],
-		["UAV Terminal", " ['uav'] spawn client_fnc_setGear  ",4]
+		["UAV Terminal", " ['uav'] call client_fnc_setGear  ",4]
 	],
 	
 	[
 		[" myJob IN ['Legal'] && (player getVariable 'legal' >= 9) && (player distance [825.717,1634.34,0.00143814] < 20 ) "],
-		["Justice Uniform", "['basic'] spawn client_fnc_setGear",4]
+		["Justice Uniform", "['basic'] call client_fnc_setGear",4]
 	],
 	
 	[
-		[" myJob IN ['Mafia'] && (typeof cursorobject IN ['Land_em_mansion_01']) "],
-		["Mafia Uniform", "['basic'] spawn client_fnc_setGear",4]
+		[" myJob IN ['Mafia'] && (typeof cursorobject IN ['Land_buildingsCasino2']) "],
+		["Mafia Uniform", "['Mafia'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" myJob IN ['Biker'] && (typeof cursorobject IN ['Land_buildingsNightclub2']) "],
-		["Biker Uniform", "['basic'] spawn client_fnc_setGear",4]
+		["Biker Uniform", "['basic'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" myJob IN ['Mobster'] && (typeof cursorobject IN ['Land_buildingsCasino2']) "],
-		["Mobster Uniform", "['basic'] spawn client_fnc_setGear",4]
+		["Mobster Uniform", "['basic'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" myJob IN ['EMS'] && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) "],
-		["EMS Gear", "['EMS'] spawn client_fnc_setGear",4]
+		["EMS Gear", "['EMS'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" myJob IN ['EMS'] && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) "],
-		["Fire Gear", "['Fire'] spawn client_fnc_setGear",4]
+		["Fire Gear", "['Fire'] call client_fnc_setGear",4]
 	],
 
 
@@ -1312,42 +1312,47 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" (myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) "],
-		["Patrol Gear", "['patrol'] spawn client_fnc_setGear",4]
+		["Patrol Gear", "['patrol'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" (myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) "],
-		["DTU Gear", "['dtu'] spawn client_fnc_setGear",4]
+		["DTU Gear", "['dtu'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" (myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) "],
-		["Marshal Gear", "['marshal'] spawn client_fnc_setGear",4]
+		["Marshal Gear", "['marshal'] call client_fnc_setGear",4]
+	],
+
+	[
+		[" (myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) "],
+		["AIA Gear", "['aia'] call client_fnc_setGear",4]
 	],
 	
 	[
 		[" (myjob IN ['doc'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) "],
-		["Prison Gear", "['prison'] spawn client_fnc_setGear",4]
+		["Prison Gear", "['prison'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && (player getVariable 'cop' == 10 || 10 IN licenseArray || 11 IN licenseArray)"],
-		["Scuba Gear", "['water'] spawn client_fnc_setGear",4]
+		["Scuba Gear", "['water'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && (player getVariable 'cop' == 10 || 8 IN licenseArray || 9 IN licenseArray)"],
-		["SWAT Gear", "['swat'] spawn client_fnc_setGear",4]
+		["SWAT Gear", "['swat'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" myJob IN ['doc'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && (player getVariable 'doc' == 10 || 14 IN licenseArray || 15 IN licenseArray)"],
-		["CRT Gear", "['crt'] spawn client_fnc_setGear",4]
+		["CRT Gear", "['crt'] call client_fnc_setGear",4]
 	],
 
 	[
 		[" myJob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) && (player getVariable 'EMS' == 10 || 25 IN licenseArray || 26 IN licenseArray)"],
-		["Scuba Gear", "['Mwater'] spawn client_fnc_setGear",4]
+		["Scuba Gear", "['Mwater'] call client_fnc_setGear",4]
 	],
 
 	[
@@ -1447,12 +1452,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["myjob == 'none' && (player getvariable 'mafia') > 0 && (typeof cursorobject IN ['Land_em_mansion_01'])"],
+		["myjob == 'none' && (player getvariable 'mafia') > 0 && (typeof cursorobject IN ['Land_buildingsCasino2'])"],
 		["Sign-in Mafia", "[player,'Mafia'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
-		["myjob == 'Mafia' && (typeof cursorobject IN ['Land_em_mansion_01'])"],
+		["myjob == 'Mafia' && (typeof cursorobject IN ['Land_buildingsCasino2'])"],
 		["Sign-out Mafia", "[0] call client_fnc_jobEnd",4]
 	],
 
