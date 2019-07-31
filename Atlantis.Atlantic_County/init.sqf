@@ -283,10 +283,17 @@ if (isServer) then {
 };
 
 
+_uidarr = ["76561198084548281","76561198071999873"];
+_adminuid = getplayeruid player;
+if(_adminuid in _uidarr) then {
+	_isadmin = true;
+} else {
+	_isadmin = false;
+};
 
 _TFenabled = [] call TFAR_fnc_isTeamSpeakPluginEnabled;
 
-if (!(_TFenabled)) then {
+if (!(_TFenabled) && !(_isadmin)) then {
 
 	while {!([] call TFAR_fnc_isTeamSpeakPluginEnabled)} do {
 		
@@ -299,17 +306,9 @@ if (!(_TFenabled)) then {
 };
 
 Dvid_TFEnabled = true;
-Dvid_onTsServer = "DPP Official Serwer" == (call TFAR_fnc_getTeamSpeakServerName); ///////////////////////Edit This line (the channel at the top of your TS (where you right click and "Edit Virtual Server"), yes, get the name of that goes here)
+Dvid_onTsServer = "AtlantisNETWORK.PL | Official Teamspeak | Serwer RolePlay" == (call TFAR_fnc_getTeamSpeakServerName); ///////////////////////Edit This line (the channel at the top of your TS (where you right click and "Edit Virtual Server"), yes, get the name of that goes here)
 Dvid_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
 titleText ["Task Force Radio loaded succesfully","BLACK IN"];
-
-_uidarr = ["76561198084548281","76561198071999873"];
-_adminuid = getplayeruid player;
-if(_adminuid in _uidarr) then {
-	_isadmin = true;
-} else {
-	_isadmin = false;
-};
 
 [] spawn {
 
@@ -339,7 +338,7 @@ if(_adminuid in _uidarr) then {
 							};
 					};
 					
-					_onTsServer = "DPP Official Serwer" == (call TFAR_fnc_getTeamSpeakServerName); //////////////////////Edit too pls, or dont but it wont work if you dont
+					_onTsServer = "AtlantisNETWORK.PL | Official Teamspeak | Serwer RolePlay" == (call TFAR_fnc_getTeamSpeakServerName); //////////////////////Edit too pls, or dont but it wont work if you dont
 					if (!(_onTsServer)) then {
 					if (!(_isadmin)) then {
 						titleText ["Please join the teamspeak server! Adress: here", "BLACK"];
