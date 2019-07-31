@@ -338,7 +338,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" myJob IN ['Cop','doc'] && (count(nearestObjects [player,['weaponholder'],3])>0) && count (nearestObjects[player,['land_jf_sheriff_station_01'],100]) > 0"],
+		[" myJob IN ['Cop','doc'] && (count(nearestObjects [player,['weaponholder'],3])>0) && count (nearestObjects[player,['Land_ScriptOase_PoliceHeadquarters'],100]) > 0"],
 		["Seize Objects", " [] spawn client_fnc_seizeObjects; ",1]
 	],
 
@@ -1029,7 +1029,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[ 
-		["!attachedcar && (player distance myhouse < 30 || player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30 || str CursorObject find 'otros' > -1 || str CursorObject find 'garaje' > -1 || str CursorObject find 'tallerdepinturaabandonado' > -1 || str CursorObject find 'hangar' > -1 || str CursorObject find 'embarcadero' > -1) && !imrestrained"], 
+		["!attachedcar && (player distance myhouse < 30 || typeof CursorTarget IN ['Land_ModernShowroom'] || player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30 || str CursorObject find 'otros' > -1 || str CursorObject find 'garaje' > -1 || str CursorObject find 'tallerdepinturaabandonado' > -1 || str CursorObject find 'hangar' > -1 || str CursorObject find 'embarcadero' > -1) && !imrestrained"], 
 		["Open Garage", "[cursorObject] call Client_fnc_openGarage",3] 
 	],
 	

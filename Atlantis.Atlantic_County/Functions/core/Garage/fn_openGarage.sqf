@@ -11,7 +11,7 @@ if (player distance myhouse < 30) then {
 	_type = "Car";
 };
 
-if (player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30) then {
+if (player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30 || typeof _object IN ['Land_ModernShowroom']) then {
 	createDialog "garage";
 	_type = "Car";
 };
