@@ -611,7 +611,9 @@ if(_condition == "police_gunstore") then {
 
 	_gunStorePistols = [
 
+		["CG_BATON",nil,1,1],
 		["RH_g17",nil,1,1],
+		["RH_p226",nil,1,1],
 		["RH_usp",nil,1,1],
 		["RH_m1911",nil,1,1],
 		["RH_bull",nil,1,1],
@@ -761,8 +763,9 @@ if(_condition == "police_misc") then {
 		["RH_compm2l",nil,10,3],
 		["RH_cmore",nil,10,3],
 		["RH_barska_rds",nil,10,3],
-		["TH_eotech553",nil,10,3],
+		["RH_eotech553",nil,10,3],
 		["RH_spr_mbs",nil,10,3],
+		["hlc_muzzle_Agendasix",nil,10,3],
 		["ToolKit",nil,10,3]
 
 
