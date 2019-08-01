@@ -424,7 +424,7 @@ if(myjob == "Cop") then {
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
 
-	};
+	
 		player addweapon "CSW_M26C";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
