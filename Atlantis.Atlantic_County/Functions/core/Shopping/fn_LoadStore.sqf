@@ -762,6 +762,7 @@ if(_condition == "police_misc") then {
 		["RH_cmore",nil,10,3],
 		["RH_barska_rds",nil,10,3],
 		["TH_eotech553",nil,10,3],
+		["RH_spr_mbs",nil,10,3],
 		["ToolKit",nil,10,3]
 
 

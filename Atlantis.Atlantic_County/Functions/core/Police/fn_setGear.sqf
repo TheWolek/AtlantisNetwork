@@ -421,7 +421,7 @@ if(myjob == "Cop") then {
 
 		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 
-		for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+		for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
@@ -430,12 +430,12 @@ if(myjob == "Cop") then {
 
 			for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
 
-			for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+			for "_i" from 1 to 3 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
 			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
 	};
-		player addweapon "taser";
+		player addweapon "CSW_M26C";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 
@@ -521,13 +521,13 @@ if(myjob == "Cop") then {
 		player addHeadgear "TRYK_H_PASGT_BLK";
 		player addGoggles "Balaclava_Blk_Plain";
 
-		for "_i" from 1 to 9 do {player addItemTobackpack "29rnd_300BLK_STANAG";};
-		for "_i" from 1 to 4 do {player addItemTobackpack "SUPER_Flash";};
+		for "_i" from 1 to 9 do {player addItemTobackpack "RH_30Rnd_556x45_M855A1";};
+		//for "_i" from 1 to 4 do {player addItemTobackpack "SUPER_Flash";};
 		for "_i" from 1 to 9 do {player addItemToBackpack "RH_16Rnd_40cal_usp";};	
 
 		{ player additemtobackpack _x; } foreach ["ToolKit","CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-		player addWeapon "hlc_rifle_vendimus";
+		player addWeapon "RH_M4sbr_b";
 		player addWeapon "RH_uspm";
 
 		player addPrimaryWeaponItem "optic_MRCO";
@@ -582,7 +582,7 @@ if(myjob == "doc") then {
 
 			for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 
-			for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+			for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
 			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
@@ -592,14 +592,14 @@ if(myjob == "doc") then {
 
 				for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
 
-				for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+				for "_i" from 1 to 3 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
 				for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
 		};
 
 		player addweapon "cg_baton";
-		player addweapon "taser";
+		player addweapon "CSW_M26C";
 		player addWeapon "Binocular";
 
 		player linkItem "ItemMap";
