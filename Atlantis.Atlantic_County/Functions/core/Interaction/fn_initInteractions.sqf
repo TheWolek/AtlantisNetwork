@@ -583,7 +583,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" CursorTarget isKindOf 'Car' "],
+		[" CursorTarget isKindOf 'Car' && !attachedcar "],
 		["Steal Rims", "['Stealing',100,'client_fnc_stealRims',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 
@@ -593,7 +593,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["(vehicle player) == player && count nearestobjects[player,['Land_ModernShowroom'],50] > 0 && CursorTarget in Current_Cars && !(cursortarget getVariable['salecheck',FALSE]) "],
+		["(vehicle player) == player && count nearestobjects[player,['Land_ModernShowroom'],50] > 0 && CursorTarget in Current_Cars && !(cursortarget getVariable['salecheck',FALSE]) && !attachedcar "],
 		["Sell Vehicle", "[] call Client_fnc_AuctionDialog",2]
 	],
 

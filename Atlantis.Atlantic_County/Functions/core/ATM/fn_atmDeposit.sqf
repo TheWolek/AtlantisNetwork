@@ -6,7 +6,7 @@ if(isNil "cashDeposited") then { cashDeposited = 0; };
 if(isNil "cashDepositedTime") then { cashDepositedTime = time; };
 
 if(cashDepositedTime + 600 < time) then { cashDeposited = 0; };
-if(!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F"]) && cashDeposited + _amount > 5000 && cashDepositedTime + 600 > time && !(_bankType IN [4,6]) ) exitWith { 
+if(!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F"]) && cashDeposited + _amount > 10000 && cashDepositedTime + 600 > time && !(_bankType IN [4,6]) ) exitWith { 
 	[format["You can only deposit up to $5,000.00 for every 10 minutes from an ATM. You have currently deposited %1. To deposit more cash, go to a Bank or wait %2.", cashDeposited call client_fnc_numberText, [cashDepositedTime + 600 - time, "MM:SS"] call BIS_fnc_secondsToString], true] spawn domsg; 
 };
 

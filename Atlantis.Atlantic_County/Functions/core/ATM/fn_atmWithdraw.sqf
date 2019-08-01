@@ -6,7 +6,7 @@ if(isNil "cashWithdraw") then { cashWithdraw = 0; };
 if(isNil "cashWithdrawTime") then { cashWithdrawTime = time; };
 
 if(cashWithdrawTime + 600 < time) then { cashWithdraw = 0; };
-if(!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F"]) && cashWithdraw + _amount > 5000 && cashWithdrawTime + 600 > time && !(_bankType IN [4,6]) ) exitWith { 
+if(!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F"]) && cashWithdraw + _amount > 10000 && cashWithdrawTime + 600 > time && !(_bankType IN [4,6]) ) exitWith { 
 	[format["You can only withdraw up to $5,000.00 for every 10 minutes from an ATM. You have currently withdrawn %1. To withdraw more cash, go to a Bank or wait %2.", cashWithdraw call client_fnc_numberText, [cashWithdrawTime + 600 - time, "MM:SS"] call BIS_fnc_secondsToString], true] spawn domsg; 
 };
 
