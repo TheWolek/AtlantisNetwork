@@ -387,7 +387,7 @@ switch (_code) do
 				[] spawn client_fnc_keyBusyPlayer;
 				if (player getVariable ["surrender", false]) then
 				{
-					player setVariable ["surrender", nil, false];
+					player setVariable ["surrender", nil, true];
 				} else
 				{
 					[] spawn client_fnc_surrender;

@@ -93,8 +93,8 @@ if (_jobType == "security") exitwith {
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	//[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
-	//vehspawned addItemCargo ["sl_client_c3_security_W",1];
-	//["You have some items in the truck, use them.", true] spawn domsg;
+	vehspawned addItemCargo ["dtdev_vest_security",1];
+	["You have some items in the truck, use them.", true] spawn domsg;
 };
 
 if (_jobType == "towtruck") exitwith {

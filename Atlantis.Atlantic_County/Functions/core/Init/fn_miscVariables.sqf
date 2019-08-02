@@ -217,7 +217,7 @@ client_fnc_unrestrained = compileFinal
 "
 	imRestrained = false;
 	player switchMove """";
-	player setVariable ['surrender', nil, false];
+	player setVariable ['surrender', nil, true];
 ";
 
 KK_fnc_forceRagdoll = compileFinal

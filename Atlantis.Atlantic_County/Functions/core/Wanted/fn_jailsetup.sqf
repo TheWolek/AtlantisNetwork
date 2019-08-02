@@ -25,7 +25,7 @@ ClientArrested = true;
 EM_allowed2 = false;
 _escaped = false;
 imRestrained = false;
-player setVariable ['surrender', false];
+player setVariable ['surrender', true];
 player switchmove "";
 _update = 0;
 while{ClientArrested} do {

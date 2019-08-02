@@ -92,7 +92,7 @@ _unit setVariable ["tf_voiceVolume", 0.3, true];
 
 im_dead = true;
 imRestrained = false;
-_unit setVariable ['surrender', nil, false];
+_unit setVariable ['surrender', nil, true];
 
 _length = 15 - _length;
 _length = round(_length);

@@ -539,7 +539,7 @@ NoPixel_InteractionMenuItems = [
 	
 	[
 		[" player getVariable ['surrender', false] && !imrestrained && vehicle player == player"],
-		["Surrender", " player setVariable ['surrender', nil, false]; ",2]
+		["Surrender", " player setVariable ['surrender', nil, true]; ",2]
 	],
 
 	[
@@ -792,7 +792,7 @@ NoPixel_InteractionMenuItems = [
 
 
 	[
-		["( !(cursortarget getVariable['dead',FALSE]) && isPlayer CursorTarget && CursorTarget isKindOf 'Man') && ((animationstate CurrentCursorTarget) == 'incapacitated' || (animationstate cursorObject) == 'deadstate' || (animationstate cursorObject) == 'amovpercmstpsnonwnondnon' || (animationState cursorObject) == 'amovppnemstpsraswrfldnon' || (animationState cursorObject) == 'unconsciousfaceup') && !imrestrained"],
+		["(!(cursortarget getVariable['dead',FALSE]) && isPlayer CursorTarget && CursorTarget isKindOf 'Man') && ((animationstate CurrentCursorTarget) == 'incapacitated' || (animationstate cursorObject) == 'deadstate' || (animationState cursorObject) == 'amovppnemstpsraswrfldnon' || (animationState cursorObject) == 'unconsciousfaceup' || cursorObject getVariable['surrender',false]) && !imrestrained"],
 		["Restrain", " ['Restraining',3,'client_fnc_restrain',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\handcuff.ogg'] spawn client_fnc_dotask",2]
 	],
 
@@ -948,7 +948,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof CursorTarget IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F'] && !(CursorTarget getVariable['robbing',FALSE]) "],
+		["typeof CursorObject IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F'] && !(CursorTarget getVariable['robbing',FALSE]) "],
 		["Rob Store", "closedialog 0; [] spawn client_fnc_robberyStore;",3]
 	],
 
