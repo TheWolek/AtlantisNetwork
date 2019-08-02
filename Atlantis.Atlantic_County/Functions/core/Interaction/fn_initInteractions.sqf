@@ -267,7 +267,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[ 
-		[" (player distance [825.717,1634.34,0.00143814] < 20 )"], 
+		["typeof CursorObject IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F','Land_Shop_DED_Shop_01_F','Land_Shop_DED_Shop_02_F']"], 
 		["Buy Licenses", "[0] spawn client_fnc_license;",1] 
 	],
 

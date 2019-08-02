@@ -154,7 +154,7 @@ if (_jobType == "bus") exitwith {
 	if(_level_check > 599) then { vehspawned = createVehicle ["agora_tcl", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 
-	vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"];
+	//vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"];
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	current_cars pushback vehspawned; uisleep 1;
