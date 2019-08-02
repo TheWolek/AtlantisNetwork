@@ -6,7 +6,7 @@ if(_type == "dump") then {
 
 	_veh setfuel 0;
 	["Ładowanie pojemnika...",true] spawn domsg;
-	sleep 15;
+	sleep 5;
 	/*
 	_veh animate ['contenedor_unhide',1];
 	_veh animate ['contenedor',1];
@@ -73,7 +73,7 @@ if(mybin distance (vehicle player) < 25 && _type == "bin") then {
 		
 	_veh setfuel 0;
 	["Ładowanie pojemnika...",true] spawn domsg;
-	sleep 15;
+	sleep 5;
 	/*
 	_veh animate ['contenedor_unhide',1];
 	_veh animate ['contenedor',1];

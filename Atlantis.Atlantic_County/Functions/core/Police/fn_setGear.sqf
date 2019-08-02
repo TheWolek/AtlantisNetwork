@@ -76,7 +76,7 @@ if(myjob == "Cop") then {
 		format["GearLog: %1 (%2) took PATROL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
-		player addBackpack "B_Carryall_cbr";
+		player addBackpack "AM_PoliceBelt";
 
 		//player addItem "ItemMap";
 		player linkItem "ItemMap";
@@ -180,7 +180,7 @@ if(myjob == "Cop") then {
 		format["GearLog: %1 (%2) took DTU loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
-		player addBackpack "B_Carryall_cbr"; 
+		player addBackpack "AM_PoliceBelt";
 
 		//player addItem "ItemMap";
 		player linkItem "ItemMap";
@@ -291,7 +291,7 @@ if(myjob == "Cop") then {
 		format["GearLog: %1 (%2) took AIA loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
-		player addBackpack "B_Carryall_cbr"; 
+		player addBackpack "AM_PoliceBelt";
 
 		//player addItem "ItemMap";
 		player linkItem "ItemMap";
