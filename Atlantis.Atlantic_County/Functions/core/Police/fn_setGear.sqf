@@ -89,7 +89,8 @@ if(myjob == "Cop") then {
 		player linkitem "cg_tabletd";
 
 
-			player additemtobackpack "RH_uspm";
+		player additemtobackpack "RH_uspm";
+		player additemtobackpack "Toolkit";
 
 			for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 			for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
@@ -193,6 +194,7 @@ if(myjob == "Cop") then {
 		player linkitem "cg_tabletd";
 
 		player additemtobackpack "RH_uspm";
+		player additemtobackpack "Toolkit";
 
 		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 		for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
@@ -302,8 +304,8 @@ if(myjob == "Cop") then {
 		//player addItem "ItemGPS";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
-
 		player additemtobackpack "RH_uspm";
+		player additemtobackpack "Toolkit";
 
 		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 		for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
@@ -416,6 +418,7 @@ if(myjob == "Cop") then {
 		player linkitem "cg_tabletd";
 
 		player additemtobackpack "RH_uspm";
+		player additemtobackpack "Toolkit";
 
 		for "_i" from 1 to 8 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 
@@ -519,7 +522,7 @@ if(myjob == "Cop") then {
 
 		player addWeapon "RH_M4sbr_b";
 		player addWeapon "RH_uspm";
-
+		player additemtobackpack "Toolkit";
 		player addPrimaryWeaponItem "RH_compm2l";
 
 	};

@@ -29,9 +29,8 @@ if(_totald >= -90 && _totald < 1 || _totald <= 90 && _totald > -1 || _totald >= 
 	_obj setPosATL (getPosATL player);  
 	player attachTo [_obj,[0,-0.3,0.7]]; 
 	detach player;
-	//[player,"knockhit"] spawn life_fnc_nearestSound;	
+	[player,"knockhit"] spawn client_fnc_nearestSound;	
 	[_target,profileName] remoteExecCall ["client_fnc_crashTackled",_target];
-	["Remove",20] call fnc_karma;
 	uiSleep 3;
 	life_knockout = false;
 	deleteVehicle _obj;

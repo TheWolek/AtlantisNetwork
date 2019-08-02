@@ -601,6 +601,8 @@ class CfgFunctions
 			class sharphit {};
 			class blunthit {};
 			class checkfingerp {};
+			class say3D {};
+			class nearestSound {};
 		};
 		class Money
 		{
