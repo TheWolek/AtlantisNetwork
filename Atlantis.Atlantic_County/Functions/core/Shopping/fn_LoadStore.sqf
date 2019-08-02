@@ -638,7 +638,7 @@ if(_condition == "police_gunstore") then {
 if(_condition == "police_veststore") then {
 
 	_police_veststoree = [
-		["V_Safety_yellow_F",nil,1,3,3],
+		["dtdev_vest_hivis",nil,1,3,3],
 		["EF_BS",nil,1,3,3],
 		["EF_SH_BK",nil,1,3,3],
 		["EF_SH_BW",nil,1,3,3],
