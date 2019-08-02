@@ -463,12 +463,12 @@ NoPixel_InteractionMenuItems = [
 		["CursorTarget getVariable['dead',FALSE] && (myjob == 'EMS' || myJob == 'Fire')"],
 		["Revive Person", "['Reviving',15,'client_fnc_sendRevive',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",1]
 	],
-
+/*
 	[
 		[" !imrestrained && count (nearestobjects[player,['Man'],5]-[player]) > 0  && !(player getVariable ['surrender', false])"],
 		["Heal Near", "createdialog 'FindPlayer_Menu';",1]
 	],
-
+*/
 	[
 		[" vehicle player == player && !imrestrained && isPlayer CursorTarget && CursorTarget isKindOf 'Man'  && !(player getVariable ['surrender', false])"],
 		["Heal Person", " [CurrentCursorTarget] spawn client_fnc_medicUpdater; ",1]
