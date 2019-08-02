@@ -1007,6 +1007,11 @@ NoPixel_InteractionMenuItems = [
 		["Police store", "closedialog 0; createdialog 'police_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
 	],
 
+	[
+		["myjob == 'Mafia' && typeof cursorobject IN ['Land_buildingsCasino2'] && !imrestrained"],
+		["Sklep Mafii", "closedialog 0; createdialog 'mafia_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
+	],
+
 	[ 
 		["(getpos player) distance [1049.88,3657.15,0.00143814] < 30"], 
 		["Impound Lot", "[CurrentCursorTarget] call Client_fnc_openCarYard",3] 

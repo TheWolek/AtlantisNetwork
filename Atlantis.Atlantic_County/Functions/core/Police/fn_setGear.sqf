@@ -61,7 +61,7 @@ if(myjob == "Cop") then {
 	};	
 
 	if(_level == 9) then { 
-		player forceAddUniform "silver_lake_fbi";
+		player forceAddUniform "vvv_character_agente_47";
 	};	
 
 	// patrol bureau
@@ -415,27 +415,17 @@ if(myjob == "Cop") then {
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
-	if(packet > 100000) then {
-
 		player additemtobackpack "RH_uspm";
 
-		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
+		for "_i" from 1 to 8 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 
-		for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+		for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-	} ELSE {
-			player additemtobackpack "RH_g17";
 
-			for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
-
-			for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
-			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
-		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
-
-	};
-		player addweapon "taser";
+	
+		player addweapon "CSW_M26C";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 
@@ -506,9 +496,9 @@ if(myjob == "Cop") then {
 		format["GearLog: %1 (%2) took SWAT loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
-		player forceAddUniform "sl_client_c4_swat_W";
+		player forceAddUniform "Gsg9_Uniform_Black";
 		
-		player addBackpack "AM_POLICEBELT";
+		player addBackpack "AM_PoliceBelt"; 
 
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
@@ -521,16 +511,16 @@ if(myjob == "Cop") then {
 		player addHeadgear "TRYK_H_PASGT_BLK";
 		player addGoggles "Balaclava_Blk_Plain";
 
-		for "_i" from 1 to 9 do {player addItemTobackpack "29rnd_300BLK_STANAG";};
-		for "_i" from 1 to 4 do {player addItemTobackpack "SUPER_Flash";};
+		for "_i" from 1 to 9 do {player addItemTobackpack "RH_30Rnd_556x45_M855A1";};
+		//for "_i" from 1 to 4 do {player addItemTobackpack "SUPER_Flash";};
 		for "_i" from 1 to 9 do {player addItemToBackpack "RH_16Rnd_40cal_usp";};	
 
 		{ player additemtobackpack _x; } foreach ["ToolKit","CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-		player addWeapon "hlc_rifle_vendimus";
+		player addWeapon "RH_M4sbr_b";
 		player addWeapon "RH_uspm";
 
-		player addPrimaryWeaponItem "optic_MRCO";
+		player addPrimaryWeaponItem "RH_compm2l";
 
 	};
 
@@ -582,7 +572,7 @@ if(myjob == "doc") then {
 
 			for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 
-			for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+			for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
 			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
@@ -592,14 +582,14 @@ if(myjob == "doc") then {
 
 				for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
 
-				for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+				for "_i" from 1 to 3 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
 				for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
 		};
 
 		player addweapon "cg_baton";
-		player addweapon "taser";
+		player addweapon "CSW_M26C";
 		player addWeapon "Binocular";
 
 		player linkItem "ItemMap";
@@ -841,18 +831,18 @@ if(myjob == "Mafia") then {
 
 	_level = player getVariable "Mafia";
 	
-	if(_level >= 1 && _level <= 2) then { player forceAddUniform "sl_client_c_suit_W_O_D"; };
+	if(_level >= 1 && _level <= 2) then { player forceAddUniform "REYK_SUITS_BLK_F"; };
 
-	if(_level >= 3 && _level <= 5) then { player addHeadgear "H_Hat_brown"; };
+	if(_level >= 3 && _level <= 5) then { player addHeadgear "REYK_SUITS_BLK_F"; };
 
-	if(_level >= 6 && _level <= 9) then { player addHeadgear "H_Hat_tan"; };
+	if(_level >= 6 && _level <= 9) then { player addHeadgear "REYK_SUITS_BLK_F"; };
 
 	if(_level == 10 ) then { player addHeadgear "H_Hat_grey"; };
 
 	if(_level >= 3 && _level <= 10 && female) then { 
-		player forceAddUniform "sl_client_c_suitmafia_W";
+		player forceAddUniform "REYK_SUITS_BLK_F";
 	} else { 
-		player forceAddUniform "sl_client_c_suitmafia_W";
+		player forceAddUniform "REYK_SUITS_BLK_F";
 	};
 
 };

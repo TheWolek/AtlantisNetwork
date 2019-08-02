@@ -606,12 +606,14 @@ if(_condition == "glasses") then {
 	} foreach _gunStorePistols;
 
 };
-/* policja  ======================================================*/
+/*============================================ POLICE STORE =====================================*/
 if(_condition == "police_gunstore") then {
 
 	_gunStorePistols = [
 
+		["CG_BATON",nil,1,1],
 		["RH_g17",nil,1,1],
+		["RH_p226",nil,1,1],
 		["RH_usp",nil,1,1],
 		["RH_m1911",nil,1,1],
 		["RH_bull",nil,1,1],
@@ -636,7 +638,7 @@ if(_condition == "police_gunstore") then {
 if(_condition == "police_veststore") then {
 
 	_police_veststoree = [
-		["V_Safety_yellow_F",nil,1,3,3],
+		["dtdev_vest_hivis",nil,1,3,3],
 		["EF_BS",nil,1,3,3],
 		["EF_SH_BK",nil,1,3,3],
 		["EF_SH_BW",nil,1,3,3],
@@ -761,7 +763,9 @@ if(_condition == "police_misc") then {
 		["RH_compm2l",nil,10,3],
 		["RH_cmore",nil,10,3],
 		["RH_barska_rds",nil,10,3],
-		["TH_eotech553",nil,10,3],
+		["RH_eotech553",nil,10,3],
+		["RH_spr_mbs",nil,10,3],
+		["hlc_muzzle_Agendasix",nil,10,3],
 		["ToolKit",nil,10,3]
 
 
@@ -774,8 +778,108 @@ if(_condition == "police_misc") then {
 
 };
 
+/* ========================================== MAFIA STORE ==============================================================================================*/
+if(_condition == "mafia_gunstore") then {
+
+	_gunStorePistols = [
+
+		["RH_g17",nil,1,1],
+		["RH_usp",nil,1,1],
+		["RH_m1911",nil,1,1],
+		["RH_bull",nil,1,1],
+		["RH_Deaglem",nil,1,1],
+		["CSW_FN57_Ballistic_Shield",nil,1,1],
+		["CSW_M26C",nil,1,1],
+		["CSW_M870",nil,1,1],
+		["hlc_smg_MP5N",nil,1,1],
+		["RH_m4",nil,1,1],
+		["RH_M4m_b",nil,1,1]
 
 
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _gunStorePistols;
+
+};
+
+
+if(_condition == "mafia_veststore") then {
+
+	_mafia_veststoree = [
+		["V_Safety_yellow_F",nil,1,3,3]
+
+
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _mafia_veststoree;
+
+};
+if(_condition == "mafia_uniformstore") then {
+
+	_mafia_uniformstore = [
+		["TRYK_shirts_DENIM_BWH",nil,1,3,1]
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _mafia_uniformstore
+
+};
+
+
+if(_condition == "mafia_glassesstore") then {
+
+	_mafia_glassesstore = [
+		["G_Bandanna_tan",nil,1,3,4],
+		["G_Bandanna_blk",nil,1,3,4],
+		["G_bandanna_aviator",nil,1,3,4],
+		["G_Bandanna_oli",nil,1,3,4],
+		["G_Balaclava_blk",nil,1,3,4],
+		["G_Balaclava_TI_blk_F",nil,1,3,4],
+		["Balaclava_Black_Gsg9",nil,1,3,4],
+		["G_Aviator",nil,1,3,4],
+		["G_AirPurifyingRespirator_01_F",nil,1,3,4],
+		["G_WirelessEarpiece_F",nil,1,3,4],
+		["G_Spectacles_Tinted",nil,1,3,4]
+
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _mafia_glassesstore;
+
+};
+if(_condition == "mafia_headgearstore") then {
+
+	_mafia_headgearstore = [
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _mafia_headgearstore;
+
+};
+if(_condition == "mafia_misc") then {
+
+	_mafia_misc = [
+
+
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _mafia_misc;
+
+};
 
 
 
@@ -806,7 +910,7 @@ lbClear _list;
 	_list lbSetdata [(lbSize _list)-1, str([_class,_item select 1, _price,_type,_classtype,_addedprice])];
 	_list lbSetPicture [(lbSize _list)-1,_item select 2];
 
-	if(_condition == "gunstore" || _condition =="police_gunstore") then {
+	if(_condition == "gunstore" || _condition =="police_gunstore" || _condition =="mafia_gunstore") then {
 		_price = 10;
 
 		_addedprice = (_price / 100) * taxRate;
