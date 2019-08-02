@@ -280,7 +280,7 @@ NoPixel_InteractionMenuItems = [
 		["(player distance [825.717,1634.34,0.00143814] < 20 )"],
 		["View Taxes", " [format['You have unpaid taxes of %1 and the tax rate is at %2%3.', ((player getVariable 'statuses') select 13) call client_fnc_numberText, taxRate, '%'], true]  spawn domsg; ",1]
 	],
-
+/*
 	[
 		["paintballing "],
 		["Respawn", " paintballhit = true; ['Respawned', true] spawn domsg; ",1]
@@ -295,7 +295,7 @@ NoPixel_InteractionMenuItems = [
 		[" player distance [3370.36,1436.92,0.00147247] < 225 && !paintballing"],
 		["Start Paintball", " [player] remoteexec ['server_fnc_paintball',2]; ",1]
 	],
-
+*/
 	[
 		[" cursorObject == mobsterVehicle && !isNull mobsterVehicle && player distance endOfmission < 25 && myjob == 'Mobster' && typeof mobsterVehicle == 'acj_Brinks' "],
 		["Armed Pack", " ['Packing in Boat',30,'client_fnc_brinkstoboat',player,'AinvPknlMstpSnonWnonDnon_medic_1',[CurrentCursorTarget,1],'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",1]
