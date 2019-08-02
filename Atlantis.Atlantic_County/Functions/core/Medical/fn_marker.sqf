@@ -151,15 +151,15 @@ if (_type == "ALL") then {
 		};
 	} forEach playableUnits;							
     _arr = [
-        ["Oil Refining",[6326.59,2253.8,0.00143814]],
-        ["Ore Refining",[6315.67,2242.35,0.00139236]],
-        ["Log Refining",[1237.41,4379.28,0.00143814]],
-        ["Pelt Curing",[4215.46,5725.09,0.00120544]],
-        ["Bars/Wood/Oil Selling",[8644.31,6861.77,0.00143623]],
-        ["Fish Processing",[9803.09,3003,0.00113201]],
-		["Open Mining", [4074.46,2447.46,0.00144005]],
-        ["Rare Item Trading", [5447.27,5165.15,0.002213]],
-        ["Fish Selling", [4734.05,2411.46,0.00143862]],
+        ["Oil Refining",[6326.59,2253.8,0.00143814]],//to change
+        ["Ore Refining",[6315.67,2242.35,0.00139236]],//to change
+        ["Log Refining",[5576.34,3327.53,0]],
+        ["Pelt Curing",[4215.46,5725.09,0.00120544]],//to change
+        ["Bars/Wood/Oil Selling",[3159.32,2470.09,0]],
+        ["Fish Processing",[9803.09,3003,0.00113201]],//to change
+		["Open Mining", [4074.46,2447.46,0.00144005]],//to change
+        ["Rare Item Trading", [5447.27,5165.15,0.002213]],//to change
+        ["Fish Selling", [4734.05,2411.46,0.00143862]],//to change
         ["Housing Upgrading",[855.632,1092.4,0.00143909]]
     ];
 

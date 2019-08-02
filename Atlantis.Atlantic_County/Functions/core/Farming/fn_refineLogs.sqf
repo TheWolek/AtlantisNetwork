@@ -20,8 +20,9 @@ if(vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) 
 		deletevehicle _x; 
 		_sound = round(random 5);
 		playSound3D ["CG_Jobs\sounds\sawing\saw.ogg", player, false, getPosasl player, 7, 1, 25];
-		player additem "NP_Wood";	
-		uisleep 0.25;
+		//player additem "NP_Wood";	
+		vehspawned addItemCargo ["NP_WOOD",8];
+		sleep 1;
 		if(dialog) then { closedialog 0; };
 		["You are refining wood, stay still!", true] spawn domsg;
 	};

@@ -39,7 +39,7 @@ if (_jobType == "Biker") exitwith {
 };
 
 if (_jobType == "Wood Logging") exitwith {
-	vehspawned = createVehicle ["d3s_actros_14", [0,0,(random(500) + 3)], [], 0, "NONE"];
+	vehspawned = createVehicle ["d3s_next", [0,0,(random(500) + 3)], [], 0, "NONE"];
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	//[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
