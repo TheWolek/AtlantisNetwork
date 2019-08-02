@@ -3,32 +3,33 @@ Pack Logs trees by koil
 */
 
 	if( vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) exitwith { ["Your truck is too far away!", true] spawn domsg; }; 
-	if(totalLogs == 23) exitwith { ["Load is full!", true] spawn domsg; };
-	mylog = createVehicle ["NP_Wood", position player, [], 0, "NONE"];
+	if(totalLogs >= 7) exitwith { ["Load is full!", true] spawn domsg; };
+	mylog = createVehicle ["Land_WoodPile_large_F", position player, [], 0, "NONE"];
 
 	totalLogs = totalLogs + 1;
 
 	if(totalLogs == 1) exitwith {
-		mylog attachTo [vehspawned, [-1, -3.5, 1.3] ]; mylog setdir 90;
+		mylog attachTo [vehspawned,[-0.2, -1.2, 0] ]; mylog setdir 90;
 	};
 	if(totalLogs == 2) exitwith {
-		mylog attachTo [vehspawned, [-0.5, -3.5, 1.3] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [0.5, -1.2, 0] ]; mylog setdir 90;
 	};
 	if(totalLogs == 3) exitwith {	
-		mylog attachTo [vehspawned, [0, -3.5, 1.3] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [0.4, -1.8, 0] ]; mylog setdir 90;
 	};
 	if(totalLogs == 4) exitwith {	
-		mylog attachTo [vehspawned, [0.5, -3.5, 1.3] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [-0.2, -1.8, 0] ]; mylog setdir 90;
 	};
 	if(totalLogs == 5) exitwith {
-		mylog attachTo [vehspawned, [1, -3.5, 1.3] ];mylog setdir 90;
+		mylog attachTo [vehspawned, [-0.2, -1.3, 0.6] ];mylog setdir 90;
 	};
 	if(totalLogs == 6) exitwith {
-		mylog attachTo [vehspawned, [-0.8, -3.5, 1.6] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [0.4, -1.3, 0.6] ]; mylog setdir 90;
 	};
 	if(totalLogs == 7) exitwith {
-		mylog attachTo [vehspawned, [-0.3, -3.5, 1.6] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [0.6, -1.3, 0.7] ]; mylog setdir 90;
 	};
+	/*
 	if(totalLogs == 8) exitwith {
 		mylog attachTo [vehspawned, [0.3, -3.5, 1.6] ]; mylog setdir 90;
 	};
@@ -77,3 +78,4 @@ Pack Logs trees by koil
 	if(totalLogs == 23) exitwith {
 		mylog attachTo [vehspawned, [1, -3.5, 2.5] ]; mylog setdir 90;
 	};
+	*/

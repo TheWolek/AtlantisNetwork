@@ -317,7 +317,7 @@ NoPixel_InteractionMenuItems = [
 	],
 	
 	[
-		["player distance [1109.4,715.803,0.000686407] < 100 && ((myjob == 'Mafia' && CursorTarget == mafiaVehicle) || (myjob == 'Biker' && CursorTarget == bikerVehicle)) && vehicle player == player"],
+		["player distance [1083.07,4126.32,0] < 100 && ((myjob == 'Mafia' && CursorTarget == mafiaVehicle) || (myjob == 'Biker' && CursorTarget == bikerVehicle)) && vehicle player == player"],
 		["Finish Drug Run", " [] spawn client_fnc_finishDrugRun;  ",1]
 	],
 
