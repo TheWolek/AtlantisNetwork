@@ -16,7 +16,7 @@ if ( _length > 90 ) exitWith { ["Must be at most 90 years.", true] spawn domsg; 
 [_suspect,_suspectID,_officer,_officerID,_reason,0,_evidence,0,_length,"","","Silver Lake", 0] remoteexec ["server_fnc_addcriminal",2];
 
 imrestrained = false;
-player setVariable ['surrender', true];
+//player setVariable ['surrender', true];
 
 _bonus = _length*10;
 format["JailLog: %1 (%2) sent %3 (%4) to %5 years and received $%6.", name player, getplayeruid player, _suspect, _suspectID, _length, _bonus call client_fnc_numberText] remoteExecCall["diag_log",2];
