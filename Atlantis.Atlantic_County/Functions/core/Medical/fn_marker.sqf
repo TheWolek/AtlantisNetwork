@@ -110,6 +110,13 @@ if (_type == "ALL") then {
 		_marker16 setMarkerText "Barber";
 
 	} forEach (nearestobjects[player,["Land_buildingBarbers1"],30000]);
+	if (player IN currentMarshals || player IN currentDetectives) then {
+		_marker23 = createMarkerLocal [format["tempmarker_%1",random 10000],[3638.11,3524.14,0.00183105]];
+		_marker23 setMarkerShapeLocal "ICON";
+		_marker23 setMarkerTypeLocal "hd_dot";
+		_marker23 setMarkerColorLocal "ColorGreen";
+		_marker23 setMarkerText "Cementownia";
+	};
 	{
 		_marker17 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker17 setMarkerShapeLocal "ICON";

@@ -65,6 +65,11 @@ if(myJob == "Cop") then {
         _garage pushback "GM_SIO_CHARGER_SRT";
         _garage pushback "GM_SIO_CTSV";
 	};
+	if(player in currentMarshals || player in currentDetectives) then {
+		_garage pushback "chvwT6_raid";
+		_garage pushback "GM_SWAT_TAHOE";
+
+	};
 	/*
 
 	if((player getvariable "cop" == 7 || 10 IN licenseArray || 11 IN licenseArray) && (str _house find "embarcadero" > -1) ) then { 
