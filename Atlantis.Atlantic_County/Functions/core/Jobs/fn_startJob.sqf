@@ -20,9 +20,11 @@ if(count currentTrashman < 3) then {
 _Jobs pushback "Garbage Man"; 
 };
 
+/*
 if(count currentNewsMan < 3) then {
 _Jobs pushback "News Reporter"; 
 };
+*/
 
 if(count currentRepairmen < 7) then {
 _Jobs pushback "Repairman"; 
@@ -37,9 +39,11 @@ if(count currentTaxiDrivers < 7) then {
 _Jobs pushback "Taxi Driver"; 
 };
 
+/*
 if(count currentTowTruckDrivers < 5) then {
 _Jobs pushback "Tow Truck Driver"; 
 };
+*/
 
 _FUCKYOU = FALSE;
 {
