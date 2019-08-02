@@ -948,7 +948,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof CursorObject IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F'] && !(CursorTarget getVariable['robbing',FALSE]) "],
+		["typeof CursorObject IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F'] && !(CursorTarget getVariable['robbing',FALSE]) && currentweapon player != '' && !(currentweapon player in ['cg_hatchet','cg_pickaxe','cg_bat','Binocular','Rangefinder']) "],
 		["Rob Store", "closedialog 0; [] spawn client_fnc_robberyStore;",3]
 	],
 
