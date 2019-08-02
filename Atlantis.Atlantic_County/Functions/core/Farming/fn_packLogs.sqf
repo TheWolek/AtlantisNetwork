@@ -9,25 +9,25 @@ Pack Logs trees by koil
 	totalLogs = totalLogs + 1;
 
 	if(totalLogs == 1) exitwith {
-		mylog attachTo [vehspawned,[-0.2, -1.2, 0] ]; mylog setdir 90;
+		mylog attachTo [vehspawned,[-0.2, -1.2, 0] ]; mylog setdir 180;
 	};
 	if(totalLogs == 2) exitwith {
-		mylog attachTo [vehspawned, [0.5, -1.2, 0] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [0.5, -1.2, 0] ]; mylog setdir 180;
 	};
 	if(totalLogs == 3) exitwith {	
-		mylog attachTo [vehspawned, [0.4, -1.8, 0] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [0.4, -1.8, 0] ]; mylog setdir 180;
 	};
 	if(totalLogs == 4) exitwith {	
-		mylog attachTo [vehspawned, [-0.2, -1.8, 0] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [-0.2, -1.8, 0] ]; mylog setdir 180;
 	};
 	if(totalLogs == 5) exitwith {
-		mylog attachTo [vehspawned, [-0.2, -1.3, 0.6] ];mylog setdir 90;
+		mylog attachTo [vehspawned, [-0.2, -1.3, 0.6] ];mylog setdir 180;
 	};
 	if(totalLogs == 6) exitwith {
-		mylog attachTo [vehspawned, [0.4, -1.3, 0.6] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [0.4, -1.3, 0.6] ]; mylog setdir 180;
 	};
 	if(totalLogs == 7) exitwith {
-		mylog attachTo [vehspawned, [0.6, -1.3, 0.7] ]; mylog setdir 90;
+		mylog attachTo [vehspawned, [0.6, -1.3, 0.7] ]; mylog setdir 180;
 	};
 	/*
 	if(totalLogs == 8) exitwith {
