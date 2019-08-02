@@ -7,8 +7,6 @@ if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "security";
 format ["Job_Log: %1 started working as %2",name player,myjob] remoteExecCall["diag_log",2];
-player addItemToBackpack "dtdev_vest_security";
-["Kamizelka ochrony została dodana to twojego plecaka!", true] spawn domsg;
 [] call client_fnc_hudwork; 
 
 private ["_warning","_JobBase"];
