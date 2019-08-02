@@ -1304,10 +1304,12 @@ NoPixel_InteractionMenuItems = [
 		["EMS Gear", "['EMS'] call client_fnc_setGear",4]
 	],
 
+	/*
 	[
 		[" myJob IN ['EMS'] && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) "],
 		["Fire Gear", "['Fire'] call client_fnc_setGear",4]
 	],
+	*/
 
 
 	[
@@ -1396,12 +1398,12 @@ NoPixel_InteractionMenuItems = [
 	],
 	[
 		[" myjob == 'none' && (player getvariable 'ems') > 0 && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) "],
-		["Sign-in FD", "[] call client_fnc_setlastsave; [player,'EMS'] spawn client_fnc_jobstart;",4]
+		["Sign-in EMS", "[] call client_fnc_setlastsave; [player,'EMS'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		["myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1'])"],
-		["Sign-out FD", "[1] call client_fnc_jobEnd",4]
+		["Sign-out EMS", "[1] call client_fnc_jobEnd",4]
 	],
 
 	[

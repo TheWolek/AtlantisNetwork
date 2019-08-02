@@ -16,7 +16,7 @@ disabledAI = 1;
 author = "TheWolek, DonTheDev";
 onLoadName = "Atlantis Network";
 onLoadMission = "AtlantisNetwork.pl";
-//loadScreen =  "";
+loadScreen =  "dtdev_marshal_stuff/ui/icon.paa";
 respawndelay = 99999;
 
 wreckLimit = 2;
