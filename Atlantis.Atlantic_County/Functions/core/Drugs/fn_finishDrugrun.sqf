@@ -2,7 +2,7 @@ private["_vehicle"];
 _oreArray = ["CG_Heroin"];
 
 if(isNil "globalProtection") then { globalProtection = 0; };
-if(globalProtection != 0) exitwith { ["Error - Already processing", true] spawn domsg; };
+if(globalProtection != 0) exitwith { ["Błąd - W trakcie przetwarzania", true] spawn domsg; };
 _localProtection = 0;
 
 if(myJob == "Mafia") then {

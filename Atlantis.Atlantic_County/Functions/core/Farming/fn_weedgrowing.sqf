@@ -52,7 +52,7 @@ if(player distance [1409.98,5740.65,0.00143814] < 400) then {
 	_randomvalue = _randomvalue + _randomvalue;
 };
 
-[format["You grew %1 bags of weed!",_randomvalue], true] spawn domsg;
+[format["Zebrałeś %1 paczek marihuany!",_randomvalue], true] spawn domsg;
 
 while {_randomValue > 0} do { player additem _item; _randomValue = _randomValue - 1; };
 
