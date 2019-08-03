@@ -48,7 +48,7 @@ if (isServer) then {
 
 	[client_fnc_lottoRun, 3600] execFSM "\NoPixel_server\call.fsm";
 	[client_fnc_horseRace, 600] execFSM "\NoPixel_server\call.fsm";
-	[client_fnc_goldFarming, 300] execFSM "\NoPixel_server\call.fsm";
+	//[client_fnc_goldFarming, 300] execFSM "\NoPixel_server\call.fsm";
 	[client_fnc_camsetup, 1200] execFSM "\NoPixel_server\call.fsm";
 
 	//[client_fnc_carEvent, 5500 + random(7500)] execFSM "\NoPixel_server\call.fsm";
@@ -311,6 +311,13 @@ Dvid_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
 titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 
 [] spawn {
+	_uidarr = ["76561198084548281","76561198071999873"];
+	_adminuid = getplayeruid player;
+	if(_adminuid in _uidarr) then {
+		_isadmin = true;
+	} else {
+		_isadmin = false;
+	};
 
 	while {true} do {
 	

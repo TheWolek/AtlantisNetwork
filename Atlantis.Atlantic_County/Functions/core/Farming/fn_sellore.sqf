@@ -15,7 +15,7 @@ _localProtection = 0;
 _n = 0;
 _cashTotal = 0;
 {
-	_total = {_x == (_barArray select _n)} count magazinesCargo vehspawned;
+	_total = {_x == (_barArray select _n)} count magazineCargo vehspawned;
 	_i = _total;
 
 	while{ _i > 0 } do {
@@ -24,7 +24,7 @@ _cashTotal = 0;
 		globalProtection = globalProtection + 1;
 		if(_localProtection != globalProtection) exitwith { [1,"Selling Ore Script"] spawn client_fnc_anticheat; };
 
-		player removeitem (_barArray select _n);
+		//player removeitem (_barArray select _n);
 		_value = (_priceArray select _n);
 		[_value,true,true] call Client_fnc_addMoneyToPlayer;
 		_cashTotal = _cashTotal + _value;
@@ -37,6 +37,8 @@ _cashTotal = 0;
 	_n = _n + 1;
 
 } foreach _barArray;
+
+clearMagazineCargo vehspawned;
 
 globalProtection = 0;
 
