@@ -378,7 +378,7 @@ if(_condition == "hotdogs") then {
 if(_condition == "general") then {
 
 	_generalGroceries = [
-		["cg_torch",nil,120,1],
+		//["cg_torch",nil,120,1],
 		["cg_tabletd",nil,1,1],
 		["cg_atf_bandage_i",nil,45,3],	
 		["ToolKit",nil,200,3],		

@@ -156,6 +156,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	//casino ??
+	/*
 	[ 
 		["player distance [935.243,1281.78,0.00143957] < 25"], 
 		["Horse Betting $0-500", " createdialog 'client_phonebet';",5] 
@@ -165,6 +166,7 @@ NoPixel_InteractionMenuItems = [
 		["player distance [923.081,1285.73,0.00143957] < 25"], 
 		["Lottery $1K", "[] spawn client_fnc_lottoBuy;",5] 
 	],
+	*/
 
 	[ 
 		["player distance [922.831,1293.87,0.00144005] < 25"], 
@@ -312,7 +314,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" typeof cursorobject == 'land_cg_dexters' && player distance getmarkerpos 'drugdump' < 30 && ((myjob == 'Mafia' && drugcount <= 375) || (myjob == 'Biker' && drugcount2 <= 375) || (myjob == 'none')) "],
+		[" typeof cursorobject == 'Land_buildingsNightclub2' && player distance getmarkerpos 'drugdump' < 30 && ((myjob == 'Mafia' && drugcount <= 375) || (myjob == 'Biker' && drugcount2 <= 375) || (myjob == 'none')) "],
 		["Dump Drugs", " ['Dumping Drugs',60,'client_fnc_dumpDrugs',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",1]
 	],
 	
@@ -326,6 +328,7 @@ NoPixel_InteractionMenuItems = [
 		["Dump Ore", " ['Dropping Ore',60,'client_fnc_dumpOre',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",1]
 	],
 
+	//brudne $
 	[
 		[" isPlayer CursorTarget && CursorTarget isKindOf 'Man' && (player distance [4817.36,2111.62,0.00143957] < 5) && (myJob IN ['Mobster']) && player getvariable 'mobster' >= 3 "],
 		["Give Contract", " closeDialog 0; createDialog 'casinoConvert_Menu'; ",1]
@@ -362,7 +365,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" (player == vehicle player) && (isPlayer CursorTarget && CursorTarget isKindOf 'Man' && vehicle CursorTarget == currentcursortarget) && myJob == 'Mobster' "],
+		[" (player == vehicle player) && (isPlayer CursorTarget && CursorTarget isKindOf 'Man' && vehicle CursorTarget == currentcursortarget) && myJob == 'Mafia' "],
 		["Rent Casino Room", " [] spawn client_fnc_casinoRoom; ",1]
 	],
 
@@ -993,7 +996,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" casinoOpen && getpos player distance [939.145,1306.39,0.00144005] < 5"],
+		[" casinoOpen && getpos player distance [939.047,1306.81,0] < 10"],
 		["Casino Bar", "closedialog 0; createdialog 'food_menu'; ['bar'] spawn client_fnc_LoadStore;",3]
 	],
 
@@ -1168,12 +1171,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" myJob IN ['Mobster'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mobster' >= 8 "],
+		[" myJob IN ['Mobster'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mafia' >= 8 "],
 		["Set Casino Rate", "createdialog 'casinoRate_Menu';",4]
 	],
 
 	[
-		[" (typeof cursorobject IN ['Land_buildingsCasino2']) && player distance [6780,4608.48,0.00143766] < 5 && (myJob == 'Mobster' && player getVariable 'Mobster' >= 8) "],
+		[" (typeof cursorobject IN ['Land_buildingsCasino2']) && player distance [946.689,1274.56,0] < 5 && (myJob == 'Mafia' && player getVariable 'Mafia' >= 8) "],
 		["Open Casino Vault", "[player] remoteExec['Client_fnc_openCasinoVault',2]",4]
 	],
 
@@ -1183,22 +1186,22 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" !casinoOpen && myJob IN ['Mobster'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mobster' >= 6 "],
+		[" !casinoOpen && myJob IN ['Mafia'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mafia' >= 6 "],
 		["Open Casino", "[1] remoteExec['server_fnc_openCasino',2];",4]
 	],
 
 	[
-		[" casinoOpen && myJob IN ['Mobster'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mobster' >= 6 "],
+		[" casinoOpen && myJob IN ['Mafia'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mafia' >= 6 "],
 		["Close Casino", "[0] remoteExec['server_fnc_openCasino',2];",4]
 	],
 
 	[
-		[" myJob IN ['Mobster'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mobster' >= 6 && !lockCasino"],
+		[" myJob IN ['Mafia'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mafia' >= 6 && !lockCasino"],
 		["Lock Casino", "[1] call client_fnc_lockCasino;",4]
 	],
 
 	[
-		[" myJob IN ['Mobster'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mobster' >= 6 && lockCasino"],
+		[" myJob IN ['Mafia'] && (typeof cursorobject IN ['Land_buildingsCasino2']) && player getVariable 'Mafia' >= 6 && lockCasino"],
 		["Unlock Casino", "[0] call client_fnc_lockCasino;",4]
 	],
 
@@ -1479,6 +1482,7 @@ NoPixel_InteractionMenuItems = [
 		["Sign-out Biker", "[0] call client_fnc_jobEnd",4]
 	],
 
+	/*
 	[
 		["myjob == 'none' && (player getvariable 'Mobster') > 0 && (typeof cursorobject IN ['Land_buildingsCasino2'])"],
 		["Sign-in Mobster", "[player,'Mobster'] spawn client_fnc_jobstart;",4]
@@ -1488,6 +1492,7 @@ NoPixel_InteractionMenuItems = [
 		["myjob == 'Mobster' && (typeof cursorobject IN ['Land_buildingsCasino2'])"],
 		["Sign-out Mobster", "[0] call client_fnc_jobEnd",4]
 	],
+	*/
 
 
 

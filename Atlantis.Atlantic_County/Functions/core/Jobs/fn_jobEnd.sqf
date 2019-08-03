@@ -4,11 +4,13 @@ if(_this select 0 == 1) then {
 	player setunitloadout _playerGear;
 	[] spawn client_fnc_hangup;
 };
-
+if(myjob in["Mafia"]) then {
+	[] spawn client_fnc_hangup;
+};
 format ["Job_Log: %1 stopped working as %2",name player,myjob] remoteExecCall["diag_log",2];
 myjob = "none";
 player setVariable["badgeNumber", ""];
-	player setVariable["coplevel",nil,true];
+player setVariable["coplevel",nil,true];
 taskrunning = false;
 dispatch = false;
 playertasks = [];

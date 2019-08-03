@@ -52,7 +52,18 @@ if(myJob == "Cop") then {
         _garage pushback "GM_MPD_RAPTOR";	
 	};
 
-	if(player getVariable "cop" >= 5 && 9 IN licenseArray) then {
+	//PD air
+	if(player getVariable "cop" >= 5 || 13 IN licenseArray) then {
+		_garage pushback "B_Heli_Light_01_F";
+	};
+
+	//PD air leader
+	if(player getVariable "cop" >= 6 || 12 IN licenseArray) then {
+		_garage pushback "d3s_AS_365";
+	};
+
+	//PD SWAT
+	if(player getVariable "cop" >= 5 && (9 IN licenseArray || 8 in licenseArray)) then {
 		_garage pushback "GM_SWAT_DURANGO";
         _garage pushback "GM_SWAT_RAPTOR";
         _garage pushback "GM_SWAT_TAHOE";

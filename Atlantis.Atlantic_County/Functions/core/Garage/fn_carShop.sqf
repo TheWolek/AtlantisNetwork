@@ -105,14 +105,10 @@ if(str CursorObject find "embarcadero" > -1) then {
 if(str CursorObject find "hangar" > -1) then {
 	_type = "AIR";
 	_civilianVehicle = [
-		["r_hotairballoon",500000],
-		["C_Plane_Civil_01_F",650000],
-		["C_Plane_Civil_01_racing_F",650000],		
-		["sab_FAAllegro",650000],
-		["sab_katana",750000],
-		["sab_albatrosb2_civ",750000],
-		["sab_piper5",750000],
-		["sab_an12_4",850000]
+		["B_Heli_Light_01_F",100000],
+		["d3s_AS_365",300000],
+		["C_Plane_Civil_01_F",550000],
+		["C_Plane_Civil_01_racing_F",550000]
 	];
 };
 

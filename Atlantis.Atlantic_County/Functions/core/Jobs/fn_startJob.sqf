@@ -49,10 +49,11 @@ _FUCKYOU = FALSE;
 {
 	if( isnull _x ) then { _FUCKYOU = TRUE; };
 }foreach serverRadioPlayers;
-
+/*
 IF(_FUCKYOU) THEN {	
 	_jobs pushback "Radio Presenter";
 };
+*/
 
 if(_jobs isequalto []) then { _jobs = ["No Jobs Available"]; };
 
