@@ -118,6 +118,6 @@ if(mybin distance (vehicle player) < 25 && _type == "bin") then {
 
 	} else {
 
-	["There is no garbage near you!", true] spawn domsg;	
+	["Nie ma śmieci blisko ciebie!", true] spawn domsg;	
 
 };

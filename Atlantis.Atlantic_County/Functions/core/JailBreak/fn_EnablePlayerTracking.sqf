@@ -5,4 +5,4 @@ player addMagazine "sharp_swing";
 player addMagazine "sharp_swing";
 player addMagazine "sharp_swing";
 
-["You have had a GPS tracker inserted into your anus.", true] spawn domsg;
+["GPS został włożony w twój odbyt.", true] spawn domsg;

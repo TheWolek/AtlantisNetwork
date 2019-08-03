@@ -91,7 +91,7 @@ paintballing = false;
 paintballhit = false;
 
 [_amount,true,true] call Client_fnc_addMoneyToPlayer;
-[format["You won %1 dollars!",_amount],false] spawn domsg;
+[format["Wygrałeś %1 $!",_amount],false] spawn domsg;
 
 if(client_energy == 0) then {
 	player enablefatigue true;

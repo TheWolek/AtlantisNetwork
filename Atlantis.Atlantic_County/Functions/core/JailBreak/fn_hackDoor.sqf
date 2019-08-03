@@ -1,5 +1,5 @@
 if(isNil "jailHacking") then { jailHacking = false; };
-if(jailHacking) exitwith { ["A Jail is already being hacked.", true] spawn domsg; };
+if(jailHacking) exitwith { ["Więzienie jest już w trakcie hackowania.", true] spawn domsg; };
 jailHacking = true;
 
 
@@ -24,7 +24,7 @@ if(typeof cursorobject IN ["Land_buildingsJailCellBlock1"]) then {
 	playSound3D ["CG_Jobs\sounds\jailbreak\jailAlarm.ogg", _fenceToOpen, false, (getposasl _fenceToOpen), 1.7, 1, 10235];
 	hint parsetext format["<img size='1' image='CG_Jobs\icons\info.paa'/> <t color='#FFCC00'><t size='0.75'>MAIN MODULE HACKED</t><br/> FULL ACCESS GRANTED IN 7 MINUTES.",_calcT];
 
-	["3 Minutes til open", true] spawn domsg;
+	["3 minuty do otwarcia", true] spawn domsg;
 
 	uisleep 60;
 
@@ -45,13 +45,13 @@ if(typeof cursorobject IN ["Land_buildingsJailCellBlock1"]) then {
 		_obj setVariable ['bis_disabled_Door_03',1];
 		_obj setVariable ['bis_disabled_Door_04',1];
 	};
-	["You have access to the doors for 20 minutes.", true] spawn domsg;
+	["Masz dostęp do drzwi na 20 minut.", true] spawn domsg;
 
-	["2 Minutes til open", true] spawn domsg;
+	["2 minuty do otwarcia", true] spawn domsg;
 
 	uisleep 60;
 
-	["1 Minute til open", true] spawn domsg;
+	["1 minut do otwarcia", true] spawn domsg;
 
 	uisleep 60;
 
@@ -72,7 +72,7 @@ if(typeof cursorobject IN ["Land_buildingsJailCellBlock1"]) then {
 		_obj setVariable ['bis_disabled_Door_c3',1];
 		_obj setVariable ['bis_disabled_Door_c4',1];
 	};
-	["You have access to the cell doors for 20 minutes.", true] spawn domsg;
+	["Masz dostęp do drzwi cel na 20 minut.", true] spawn domsg;
 
 	jailHacking = false;
 	publicVariable "jailHacking";

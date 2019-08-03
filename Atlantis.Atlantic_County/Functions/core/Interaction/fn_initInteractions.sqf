@@ -251,7 +251,7 @@ NoPixel_InteractionMenuItems = [
 
 	[ 
 		["player distance [6795.5,4615.08,0.00143814] <= 3"], 
-		["Twitch.TV", " ['Trying to connect to twitch.tv servers... Connection lost.', true] spawn domsg; ",5] 
+		["Twitch.TV", " ['Próba połączenia z serwerami twitch.tv... Połączenie utracone.', true] spawn domsg; ",5] 
 	],
 
 	/*[ 
@@ -280,7 +280,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["(player distance [825.717,1634.34,0.00143814] < 20 )"],
-		["Podatek", " [format['You have unpaid taxes of %1 and the tax rate is at %2%3.', ((player getVariable 'statuses') select 13) call client_fnc_numberText, taxRate, '%'], true]  spawn domsg; ",1]
+		["Podatek", " [format['Masz dług w wysokości %1, a stawka podatkowa wynosi %2%3.', ((player getVariable 'statuses') select 13) call client_fnc_numberText, taxRate, '%'], true]  spawn domsg; ",1]
 	],
 /*
 	[
@@ -515,7 +515,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" typeof cursorobject == 'Land_buildingshospital1'"],
-		["Zmień płeć", " if(female) then {female = false; ['You are now male.', true] spawn domsg; } else {female = true; ['You are now female.', true] spawn domsg; }; ['NA','sex',0] call client_fnc_sustain;",1]
+		["Zmień płeć", " if(female) then {female = false; ['Jesteś teraz mężczyzną.', true] spawn domsg; } else {female = true; ['Jesteś teraz kobietą.', true] spawn domsg; }; ['NA','sex',0] call client_fnc_sustain;",1]
 	],
 
 	[
@@ -1140,30 +1140,30 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["player distance myhouse < 10 && !imrestrained"],
-		["Otwórz schowek", "['Your crate will automatically despawn in 1 minute!', true] spawn domsg; [player] remoteExec ['server_fnc_retreivehouse',2]",4]
+		["Otwórz schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player] remoteExec ['server_fnc_retreivehouse',2]",4]
 	],
 
 	[
 		["((myjob == 'Mafia' && typeof CursorTarget == 'Land_buildingsCasino2' && player getVariable 'Mafia' >= 8) || (myjob == 'Mobster' && typeof cursorobject == 'Land_buildingsCasino2' && player getVariable 'Mobster' >= 8) || (myjob == 'Biker' && typeof cursorobject == 'Land_buildingsNightclub2' && player getVariable 'Biker' >= 8)) && !imrestrained"],
-		["Otwórz schowek", "['Your crate will automatically despawn in 1 minute!', true] spawn domsg; [player, myJob] remoteExec ['server_fnc_retreivegang',2]",4]
+		["Otwórz schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player, myJob] remoteExec ['server_fnc_retreivegang',2]",4]
 	],
 
 
 
 	[
 		["((myjob == 'Cop' && typeof CursorTarget == 'Land_em_mansion_01' && player getVariable 'Cop' > 4))"],
-		["Przeszukaj schowek", "['Your crate will automatically despawn in 1 minute!', true] spawn domsg; [player, ""Mafia""] remoteExec ['server_fnc_retreivegang',2]",4]
+		["Przeszukaj schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player, ""Mafia""] remoteExec ['server_fnc_retreivegang',2]",4]
 	],
 
 
 	[
 		["((myjob == 'Cop' && typeof cursorobject == 'Land_buildingsCasino2' && player getVariable 'Cop' > 4))"],
-		["Przeszukaj schowek", "['Your crate will automatically despawn in 1 minute!', true] spawn domsg; [player, ""Mobster""] remoteExec ['server_fnc_retreivegang',2]",4]
+		["Przeszukaj schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player, ""Mobster""] remoteExec ['server_fnc_retreivegang',2]",4]
 	],
 
 	[
 		["((myjob == 'Cop' && typeof cursorobject == 'Land_buildingsNightclub2' && player getVariable 'Cop'> 4))"],
-		["Przeszukaj schowek", "['Your crate will automatically despawn in 1 minute!', true] spawn domsg; [player, ""Biker""] remoteExec ['server_fnc_retreivegang',2]",4]
+		["Przeszukaj schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player, ""Biker""] remoteExec ['server_fnc_retreivegang',2]",4]
 	],
 
 
@@ -1239,7 +1239,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["clientarrested"],
-		["Pozostały czas", "_time = secondsLeft / 60; [format['You have %1 year(s) remaining.', round(_time)], true] spawn domsg;",4]
+		["Pozostały czas", "_time = secondsLeft / 60; [format['Pozostało ci %1 miesięcy wyroku.', round(_time)], true] spawn domsg;",4]
 	],
 
 	[
@@ -1384,17 +1384,17 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Wezwij prokuratora", " ['Request sent successfully.', true] spawn domsg;  [currentDA, format['%1 has requested a prosecutor at PD. Text him/her to confirm.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
+		["Wezwij prokuratora", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentDA, format['%1 wezwał prokuratora na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
 	],
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Wezwij obrońce", " ['Request sent successfully.', true] spawn domsg;  [currentPubDefs, format['%1 has requested a public defender at PD. Text him/her to confirm.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2];  ", 4]
+		["Wezwij adwokata", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentPubDefs, format['%1 wezwał adwokata ba komendę. Napisz do niego w celu potwierdzenia.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2];  ", 4]
 	],
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Wezwij sędzie", " ['Request sent successfully.', true] spawn domsg; [currentjudges, format['%1 has requested a judge at PD. Text him/her to confirm.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
+		["Wezwij sędziego", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg; [currentjudges, format['%1 wezwał sędziego na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
 	],
 
 	[
@@ -1560,12 +1560,12 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["( typeof CursorTarget == 'Rabbit_F' || str CursorObject find 'cock_' > -1 ) && getdammage cursorobject == 1"],
-		["Oskuruj zająca", "deletevehicle CurrentCursorTarget; player additem 'np_upelt'; ['You skinned an animal for its pelt!', true] spawn domsg; ",4]
+		["Oskóruj zająca", "deletevehicle CurrentCursorTarget; player additem 'np_upelt'; ['Oskórowałeś zawierze!', true] spawn domsg; ",4]
 	],
 
 	[
 		["( str CursorObject find 'Sheep_' > -1 ) && getdammage cursorobject == 1"],
-		["Oskuruj zwierze", "deletevehicle CurrentCursorTarget; player additem 'np_upelt'; player additem 'np_upelt'; player additem 'np_upelt'; player additem 'np_upelt'; ['You skinned an animal for its pelt!', true] spawn domsg; ",4]
+		["Oskóruj zwierze", "deletevehicle CurrentCursorTarget; player additem 'np_upelt'; player additem 'np_upelt'; player additem 'np_upelt'; player additem 'np_upelt'; ['Oskórowałeś zawierze!', true] spawn domsg; ",4]
 	],
 
 	[
@@ -1613,7 +1613,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" myjob == 'none' && typeof CursorTarget IN ['Land_Hangar_F'] && (6) IN licenseArray "],
-		["Start Air Job", "[] spawn client_fnc_cropdusting; ['You can spawn a plane at any hanger', true] spawn domsg; ",4]
+		["Start Air Job", "[] spawn client_fnc_cropdusting; ['Możesz wyciągnąć samolot w każdym hangarze', true] spawn domsg; ",4]
 	],
 
 	[
@@ -1678,7 +1678,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" myjob IN ['doc','Cop','EMS']  && !imrestrained && !(player getVariable ['surrender', false]) && count currentrepairmen > 0"],
-		["Zleć naprawę", " [getpos player] remoteExec ['client_fnc_startRepair',currentrepairmen]; ['Thank you for supporting your community, SMS has been sent to repair jobs' , true] spawn domsg; ",4]
+		["Zleć naprawę", " [getpos player] remoteExec ['client_fnc_startRepair',currentrepairmen]; ['Dziękujemy za dbanie o czystość stanu, SMS został wysłany do mechaników' , true] spawn domsg; ",4]
 	]
 
 ];

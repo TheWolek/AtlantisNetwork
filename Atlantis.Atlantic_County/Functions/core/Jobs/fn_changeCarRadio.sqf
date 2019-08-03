@@ -10,4 +10,4 @@ callInProgress = false;
 myCallOwner = player;
 player setVariable ["tf_unable_to_use_radio", true];
 call TFAR_fnc_HideHint;
-["You switched radio!", false] spawn domsg;
+["Zmieniłeś radio!", false] spawn domsg;

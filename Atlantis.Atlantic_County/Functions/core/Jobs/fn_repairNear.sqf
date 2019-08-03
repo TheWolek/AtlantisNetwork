@@ -23,7 +23,7 @@ if(lastpos distance player < 30) then { paycheck = paycheck + 15; } else {
 
 	if(_amount > 0) then {
 		if(_amount > 150) then { _amount = 150; };
-		[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+		[ format["Otrzymałeś zapłatę w wysokości %1!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 		[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 	};
 

@@ -54,7 +54,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 
 		if(_warnings > 30) then { 
 			taskrunning = false; 
-			["You have been laid off from your job!", true] spawn domsg; 
+			["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 			format ["Job_Log: %1 has been laid off from %2",name player,myjob] remoteExecCall["diag_log",2];
 		};
 

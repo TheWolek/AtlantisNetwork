@@ -1,5 +1,5 @@
 _chance = random ( 100 );
 if(_chance > 85) then {
 	player additem "cg_lockpick";
-	["You were successful", true] spawn domsg;
-} else { ["You failed", true] spawn domsg; };
+	["Udało ci się wytworzyć wytrych", true] spawn domsg;
+} else { ["Nie udało się", true] spawn domsg; };

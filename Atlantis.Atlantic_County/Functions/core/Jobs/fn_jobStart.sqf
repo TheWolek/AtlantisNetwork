@@ -2,30 +2,30 @@ _player = _this select 0;
 _jobtype = _this select 1;
 
 if (str _jobtype find "Police Dispatch" > -1) exitwith {   
-	if(count currentPoliceDispatch > 2) exitWith { ["There is too many dispatchers on duty.", true] spawn domsg; };
+	if(count currentPoliceDispatch > 2) exitWith { ["Na służbie jest za dużo dyspozytorów.", true] spawn domsg; };
 	[] spawn client_fnc_startDispatch;
 	currentPoliceDispatch pushback _player;
 	publicvariable "currentPoliceDispatch";
 };
 
 if (str _jobtype find "Doc Dispatch" > -1) exitwith {   
-	if(count currentDocDispatch > 2) exitWith { ["There is too many dispatchers on duty.", true] spawn domsg; };
+	if(count currentDocDispatch > 2) exitWith { ["Na służbie jest za dużo dyspozytorów.", true] spawn domsg; };
 	[] spawn client_fnc_startDispatch;
 	currentDocDispatch pushback _player;
 	publicvariable "currentDocDispatch";
 };
 
 if (str _jobtype find "Medic Dispatch" > -1) exitwith {
-	if(count currentMedicDispatch > 2) exitWith { ["There is too many dispatchers on duty.", true] spawn domsg; };
+	if(count currentMedicDispatch > 2) exitWith { ["Na służbie jest za dużo dyspozytorów.", true] spawn domsg; };
 	[] spawn client_fnc_startDispatch;
 	currentMedicDispatch pushback _player;
 	publicvariable "currentMedicDispatch";	
 };
 
-if(!allowjob) exitwith { ["You must wait 5 minutes after ending a job to start another job.", true] spawn domsg; };
+if(!allowjob) exitwith { ["Musisz odczekać 5 minut od zakończenia pracy, aby zacząć kolejną.", true] spawn domsg; };
 
 if (str _jobtype find "doc" > -1) exitwith { 
-		if(count currentdoc > 6 && player getVariable 'doc' <= 5) exitWith { ["There is too many on duty.", true] spawn domsg; };
+		if(count currentdoc > 6 && player getVariable 'doc' <= 5) exitWith { ["Za dużo osób na służbie.", true] spawn domsg; };
 
 		player setVariable["badgeNumber", "3" + ([getplayeruid player, 14] call CBA_fnc_substr), true];
 	
@@ -46,7 +46,7 @@ if (str _jobtype find "doc" > -1) exitwith {
 };
 
 if (str _jobtype find "Cop" > -1) exitwith {  
-		if(count currentcop > 11 && player getVariable 'cop' <= 5) exitWith { ["There is too many on duty.", true] spawn domsg; };
+		if(count currentcop > 20 && player getVariable 'cop' <= 5) exitWith { ["Za dużo osób na służbie.", true] spawn domsg; };
 
 		player setVariable["badgeNumber", "2" + ([getplayeruid player, 14] call CBA_fnc_substr), true];
 
@@ -67,7 +67,7 @@ if (str _jobtype find "Cop" > -1) exitwith {
 };
 
 if (str _jobtype find "EMS" > -1) exitwith {  
-		if(count currentdoc > 11 && player getVariable 'ems' <= 5) exitWith { ["There is too many on duty.", true] spawn domsg; };
+		if(count currentdoc > 11 && player getVariable 'ems' <= 5) exitWith { ["Za dużo osób na służbie.", true] spawn domsg; };
 
 		player setVariable["badgeNumber", "4" + ([getplayeruid player, 14] call CBA_fnc_substr), true];
 

@@ -3,13 +3,13 @@ _pos = getpos _shop;
 _stolen = 0;
 _amount = 0;
 
-if(count currentcop == 0) exitwith { ["No police, no fun!", true] spawn domsg; };
+if(count currentcop == 0) exitwith { ["Bez policji nie ma zabawy!", true] spawn domsg; };
 
-if(_shop getVariable["robbing",FALSE]) exitwith { ["Someone is robbing this store!", true] spawn domsg; }; 
+if(_shop getVariable["robbing",FALSE]) exitwith { ["Ktoś napad na ten sklep!", true] spawn domsg; }; 
 
 if(isNil "robbedStores2") then { robbedstores2 = []; rs2modifier = 0; };
 
-if(_shop IN robbedstores2) exitwith { ["This shop has nothing left for you!", true] spawn domsg; };
+if(_shop IN robbedstores2) exitwith { ["W tym sklepie nie ma więcej pieniędzy!", true] spawn domsg; };
 
 _shop setvariable ["robbing",true,true];
 rs2modifier = rs2modifier + 1;
@@ -30,8 +30,8 @@ if(count currentCop > 0) then {
 	_nearest sort true;
 	_nearest = (_nearest select 0) select 1;
 
-	[_pos, "Store Robbery", "Location", currentCop-currentMarshals-currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-	[format["Dispatch to %1: There is a store robbery at %2.", _nearest getVariable "badgeNumber", mapGridPosition _pos], true] remoteExec ["domsg", currentCop-currentMarshals-currentDetectives];
+	[_pos, "Napad na sklep", "Location", currentCop-currentMarshals-currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
+	[format["Wezwanie do %1: Trwa napad na sklep w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition _pos], true] remoteExec ["domsg", currentCop-currentMarshals-currentDetectives];
 };
 
 while{true} do {
@@ -51,11 +51,11 @@ if(!_failure) then {
 	_amount =  (rs2modifier * _counter) * random(500);
 	_amount = _amount + ((count currentcop) * 3);
 	[_amount,false,true] call Client_fnc_addMoneyToPlayer; 
-	[format["You just robbed this store for %1",(_amount+_stolen) call client_fnc_numberText], true] spawn domsg;
+	[format["Okradłeś ten sklep na %1",(_amount+_stolen) call client_fnc_numberText], true] spawn domsg;
 	format["Robbery_Log: %1 robbed store for %2",player, _amount+_stolen] remoteExecCall["diag_log",2];
 
 } else { 
-	[format["You just robbed this store for %1",_stolen call client_fnc_numberText], true] spawn domsg;
+	[format["Okradłeś ten sklep na %1",_stolen call client_fnc_numberText], true] spawn domsg;
 	format["Robbery_Log: %1 robbed store for %2",player, _stolen] remoteExecCall["diag_log",2];
 };
 
@@ -64,8 +64,8 @@ if(count currentCop > 0) then {
 	_nearest sort true;
 	_nearest = (_nearest select 0) select 1;
 
-	[_pos, "Store Robbery [FLED]", "Location", currentCop-currentMarshals-currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-	[format["Dispatch to %1: The suspect of the store robbery at %2 has fled the scene.", _nearest getVariable "badgeNumber", mapGridPosition _pos], true] remoteExec ["domsg",currentCop-currentMarshals-currentDetectives];
+	[_pos, "Napad na sklep - podejrzany uciekł", "Location", currentCop-currentMarshals-currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
+	[format["Wezwanie do %1: Podejrzany o napad w okolicach %2 uciekł ze miejsca napadu.", _nearest getVariable "badgeNumber", mapGridPosition _pos], true] remoteExec ["domsg",currentCop-currentMarshals-currentDetectives];
 };
 
 _shop setvariable ["robbing",nil,true];
@@ -96,8 +96,8 @@ if(_amount > 10 || _stolen > 10) then {
 			_nearest sort true;
 			_nearest = (_nearest select 0) select 1;
 
-			[getPos _GroundWeaponHolder, "Store Robbery","Location", currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-			[format["Dispatch to %1: There has been a store robbery at %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _GroundWeaponHolder], true] remoteExec ["domsg", currentDetectives];
+			[getPos _GroundWeaponHolder, "Napad na sklep","Location", currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
+			[format["Wezwanie do %1: Doszło do napadu na sklep w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _GroundWeaponHolder], true] remoteExec ["domsg", currentDetectives];
 		};
 	};
 	

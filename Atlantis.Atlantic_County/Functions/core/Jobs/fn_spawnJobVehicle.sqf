@@ -44,7 +44,7 @@ if (_jobType == "Wood Logging") exitwith {
 	//[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE",1];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "mail") exitwith {
@@ -58,7 +58,7 @@ if (_jobType == "mail") exitwith {
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE_BLKboots_nk_blk",1];	
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "trashman") exitwith {	
@@ -66,7 +66,7 @@ if (_jobType == "trashman") exitwith {
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE_BLKboots_nk_blk",1];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "repairman") exitwith {	
@@ -80,7 +80,7 @@ if (_jobType == "repairman") exitwith {
 	[vehspawned] spawn client_fnc_spawnvehicle;	
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE",1];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "security") exitwith {
@@ -94,7 +94,7 @@ if (_jobType == "security") exitwith {
 	//[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["dtdev_vest_security",1];
-	["You have some items in the truck, use them.", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich.", true] spawn domsg;
 };
 
 if (_jobType == "towtruck") exitwith {
@@ -108,7 +108,7 @@ if (_jobType == "towtruck") exitwith {
 	//[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE_BLKboots_nk_blk",1];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "NewsMan") exitwith {	
@@ -125,7 +125,7 @@ if (_jobType == "NewsMan") exitwith {
 	vehspawned addWeaponCargo ["Press_Cam_F",2];
 	_microphone = ["Press_Mic_AAN_F", "Press_Mic_BBC_F", "Press_Mic_CNN_F", "Press_Mic_ARD_F", "Press_Mic_ZDF_F"] call BIS_fnc_selectRandom;
 	vehspawned addWeaponCargo [_microphone,2];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "taxi") exitwith {	

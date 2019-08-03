@@ -66,5 +66,5 @@ _list lbAdd "Job: Wood Logging";
 _job = "Wood Logging";
 _list lbSetdata [(lbSize _list)-1,str(_job)];
 
-["Remember, farming jobs require backpacks - most jobs come with a vehicle, you can access it by windows keying this building once you have a job.", true] spawn domsg;
+["Pamiętaj, prace polegające na zbieraniu potrzebują plecaka. Możesz użyć pojazdu klikając windows na centrelinku.", true] spawn domsg;
 
