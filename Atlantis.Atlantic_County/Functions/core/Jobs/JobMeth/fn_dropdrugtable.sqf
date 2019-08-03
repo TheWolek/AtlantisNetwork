@@ -1,8 +1,8 @@
 detach myDT;
 cookingMeth = true;
 player removeAction myDrugAction;
-["Your table is down, be ready to cook!", true] spawn domsg;
-myActionStart = myDT addAction [ "Start Cooking", {  
+["Twój stół jest gotowy, czas gotować!", true] spawn domsg;
+myActionStart = myDT addAction [ "Zacznij gotować", {  
 	[] spawn client_fnc_methCooking;
 	totalskills = 100;
 	myDrugValue = 100;

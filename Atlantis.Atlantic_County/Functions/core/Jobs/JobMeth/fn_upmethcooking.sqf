@@ -1,5 +1,5 @@
 _required = _this select 0;
-if(checkFinish) exitwith { ["You need to wait before doing that!", true] spawn domsg; };
+if(checkFinish) exitwith { ["Musisz czekać przed wykonaniem tego!", true] spawn domsg; };
 
 
 if(requiredOutput == _required) then { 
@@ -17,7 +17,7 @@ if(requiredOutput == _required) then {
 	playSound3D ["CG_Jobs\sounds\meth\drugPressure.ogg", player, false, getPosasl player, 5, 1, 15];
 	if(_randomValue < 3) exitwith { 
 		"R_60mm_HE" createvehicle (getPosatl player); 
-		["Well, you messed up!", true] spawn domsg; 
+		["Oj, chyba coś zjebałeś...", true] spawn domsg; 
 		cookingMeth = false;
 		[(getpos player)] remoteexec ["server_fnc_firestart",2];
 		player removeaction myAction1;

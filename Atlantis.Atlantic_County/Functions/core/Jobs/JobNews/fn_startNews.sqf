@@ -1,6 +1,6 @@
 //[position,type IE "Murder" or "Vehicle Accident"] remoteExec ["client_fnc_startNews",_player];
 
-if(myjob != "none" && myjob != "NewsMan") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none" && myjob != "NewsMan") exitwith { ["Już masz pracę!", true] spawn domsg; };
 if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "NewsMan";
@@ -17,7 +17,7 @@ if(!taskrunning) then {
 		while{taskrunning && myjob == "NewsMan"} do {
 			uisleep 3;
 			if(playertasks isequalto []) then {
-				["You have no current jobs!", true] spawn domsg;
+				["Nie masz aktualnych prac!", true] spawn domsg;
 				uisleep 60;
 			} else {
 
@@ -33,7 +33,7 @@ if(!taskrunning) then {
 
 
 				if(player distance ((playertasks select 0) select 0) < 15 && player distance vehspawned < 10) then {
-					["You have arrived, get the cameras rolling!", true] spawn domsg;
+					["Dotarłeś na miejsce, uruchom kamery!", true] spawn domsg;
 					paycheck = paycheck + 200;
 					playertasks deleteat 0;
 					deletemarkerlocal format["job%1",getPlayerUID player];
@@ -53,14 +53,14 @@ if(!taskrunning) then {
 
 					if(_amount > 0) then {
 						if(_amount > 150) then { _amount = 150; };
-						[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+						[ format["Otrzymałeś zapłate w wysokości %1!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 						[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 					};
 
 
 					uisleep 3;
 				} else {
-					[format ["Your current Job (Marked on the Map): Job Type - %1", ((playertasks select 0) select 1)], false] spawn doquickmsg;
+					[format ["Aktualna praca (Ozanczone na mapie): Typ pracy - %1", ((playertasks select 0) select 1)], false] spawn doquickmsg;
 					[((playertasks select 0) select 0)] call client_fnc_jobMarker;			
 					uisleep 30;
 				};
