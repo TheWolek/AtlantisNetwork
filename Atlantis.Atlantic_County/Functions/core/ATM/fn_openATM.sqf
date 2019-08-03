@@ -23,15 +23,15 @@ if (time >= wantedTimer + 300 && count currentMarshals > 0) then {
         _nearest sort true;
         _nearest = (_nearest select 0) select 1;
 
-        [getPos player, format["Spotted %1", name player], "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
+        [getPos player, format["Zauważony %1", name player], "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
         wantedTimer = time;
-        [format["Dispatch to %1: %2 has been spotted at %3 using an ATM.", _nearest getVariable "badgeNumber", name player, mapGridPosition getPos player], true] remoteExec ["domsg", currentMarshals];
+        [format["Wezwanie do %1: %2 został zauważony w okolicach %3 podczas używania bankomatu.", _nearest getVariable "badgeNumber", name player, mapGridPosition getPos player], true] remoteExec ["domsg", currentMarshals];
 
     };
 };
 
 if(isNil "loanTimer") then { loanTimer = time-301; };
 if(time >= loanTimer + 300 && moneyOwed > 0 && count currentMafia > 0) then {
-        [getPos player, format["Spotted %1", name player], "Location", currentMafia] remoteExec ["client_fnc_hudHelper", _nearest];
-        [format["%1 has been spotted at %2 using an ATM.", name player, mapGridPosition getPos player], true] remoteExec ["domsg", currentMafia];
+        [getPos player, format["Zauważony %1", name player], "Location", currentMafia] remoteExec ["client_fnc_hudHelper", _nearest];
+        [format["%1 został zauważony w okolicach %2 podczas używania bankomatu.", name player, mapGridPosition getPos player], true] remoteExec ["domsg", currentMafia];
 };

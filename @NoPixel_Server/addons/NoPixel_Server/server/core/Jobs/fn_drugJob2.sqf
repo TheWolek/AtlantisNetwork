@@ -1,7 +1,7 @@
 params ["_type","_number","_player","_pos"];
 private ["_vehspawn","_veh","_endmission","_amount"];
 
-if(count allplayers < 35) exitwith { ["Not enough players to add to event..", true] remoteExec["domsg", currentBiker]; };
+if(count allplayers < 35) exitwith { ["Za mało graczy, aby rozpocząć zadanie", true] remoteExec["domsg", currentBiker]; };
 	
 if(isNil "drugcount2") then { drugcount2 = 0; };
 
@@ -34,7 +34,7 @@ if(drugcount2 >= 375) then {
 
 } else {
 
-	[format["%1 drugs have been added to the dump. (375 Needed)", drugcount2], true] remoteExec["domsg", currentBiker];
+	[format["%1 narkotyków dodane do zrzutu narkotyków (Wymagane 375)", drugcount2], true] remoteExec["domsg", currentBiker];
 
 };
 

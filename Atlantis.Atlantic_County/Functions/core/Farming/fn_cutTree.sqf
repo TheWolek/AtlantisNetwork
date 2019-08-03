@@ -5,7 +5,7 @@ Cutting down trees by koil
 if(isNil "totalLogs") then { totallogs = 0; };
 _tree = cursorobject;
 if (str _tree find ": t_" > -1 && cursorobject distance player < 45) then {     
-	if(_tree IN mytrees) exitwith { ["This object has no more resources to gather!", true] spawn domsg; }; 
+	if(_tree IN mytrees) exitwith { ["Obiekt nie ma więcej zasobów do zebrania!", true] spawn domsg; }; 
 	_sound = round(random 5);
 	switch(_sound) do {
 		case 0: {
@@ -42,7 +42,7 @@ if (str _tree find ": t_" > -1 && cursorobject distance player < 45) then {
 			if(_level_check > 599) then { [] call client_fnc_packLogs; };
 			
 		} else {
-			["You need to sign in as a wood logger to cut down trees", true] spawn domsg;
+			["Musisz pracować jako drwal, aby ścinać drzewa", true] spawn domsg;
 		};
 	};
 };

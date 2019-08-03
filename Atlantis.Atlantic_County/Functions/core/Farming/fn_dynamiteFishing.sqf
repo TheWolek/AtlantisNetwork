@@ -16,12 +16,12 @@ pole fishing by koil
 	sleep 2.5;
 
 	if!(surfaceIsWater (getpos _vehicle)) exitwith {
-		["You lost your dynamite!", true] spawn domsg;
+		["Straciłeś dynamit!", true] spawn domsg;
 		deletevehicle _vehicle;
 	};
 
 	_catchPos = (getpos _vehicle);
-	["Successful Throw - Stand Back!", true] spawn domsg;
+	["Dobry rzut - lepiej się odsuń!", true] spawn domsg;
 	
 	sleep 8;
 	"R_60mm_HE" createvehicle [(getpos _vehicle select 0)-2,(getpos _vehicle select 1)+1,(getpos _vehicle select 2)-3];
@@ -31,7 +31,7 @@ pole fishing by koil
 	deletevehicle _vehicle;
 
 
-	["Get close to pick up your catch!", true] spawn domsg;
+	["Podpłyń, aby wyłowić martwe ryby!", true] spawn domsg;
 
 	_timeout = 60; 
 	while{true} do {
@@ -42,7 +42,7 @@ pole fishing by koil
 	};
 	if(_catch) then {
 		playSound3D ["vvv_fishingrod\sounds\splash.ogg", player, false, getPosASL player, 51, 1, 45];
-	["You picked up your catch!", true] spawn domsg;
+	["Podniosłeś martwe ryby!", true] spawn domsg;
 	_amount = 1 + random(25);
 	_chance = random (100);
 	if(_chance > 80) then {
@@ -108,4 +108,4 @@ pole fishing by koil
 			};	
 			_amount = _amount - 1;	
 		};		
-	} else { ["You didnt pick up your fish in time!", true] spawn domsg;};				
+	} else { ["Nie zdążyłeś wyłowić martwych ryb!", true] spawn domsg;};				

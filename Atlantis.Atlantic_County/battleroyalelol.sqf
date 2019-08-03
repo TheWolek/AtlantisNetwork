@@ -179,7 +179,7 @@ markerstr setmarkercolor "ColorGreen";
     activatedGamemode = true;
     defaultDistance = 5000;
     dicklord = false;
-    ["The round begins in 5 minutes - you must stay close to the ENDING MARKER or you will die", true] spawn domsg;
+    ["Runda zaczyna się za 5 minut - musisz zostać blisko końcowego znacznika, lub umrzesz", true] spawn domsg;
     uisleep 300;
 
 
@@ -189,22 +189,22 @@ markerstr setmarkercolor "ColorGreen";
         defaultDistance = defaultDistance - 1000;
         if(player distance getmarkerpos "theend" > defaultdistance) then { 
             if(player distance getmarkerpos "theend" > 1000) then { 
-                [] spawn { ["You are taking extra damage", true] spawn domsg;
+                [] spawn { ["Otrzymujesz dodatkowe obrażenia", true] spawn domsg;
                     uisleep 20; 
                     ["Remove",0.25] call Client_Fnc_DoHealth; 
-                    ["You are taking extra damage", true] spawn domsg; 
+                    ["Otrzymujesz dodatkowe obrażenia", true] spawn domsg; 
                     uisleep 20; 
                     ["Remove",0.25] call Client_Fnc_DoHealth; 
-                    ["You are taking extra damage", true] spawn domsg; 
+                    ["Otrzymujesz dodatkowe obrażenia", true] spawn domsg; 
                     uisleep 20; 
                     ["Remove",0.25] call Client_Fnc_DoHealth; 
                 }; 
             }; 
             [] spawn { 
-                ["You are taking extra damage", true] spawn domsg; 
+                ["Otrzymujesz dodatkowe obrażenia", true] spawn domsg; 
                 uisleep 60; 
                 ["Remove",0.25] call Client_Fnc_DoHealth; 
-                ["You are taking extra damage", true] spawn domsg; 
+                ["Otrzymujesz dodatkowe obrażenia", true] spawn domsg; 
                 uisleep 60; 
                 ["Remove",0.25] call Client_Fnc_DoHealth; 
             };
@@ -218,7 +218,7 @@ markerstr setmarkercolor "ColorGreen";
                     while{activatedGamemode} do {
                         uisleep 30;
                         ["Remove",0.25] call Client_Fnc_DoHealth;
-                        ["You are taking extra damage", true] spawn domsg;
+                        ["Otrzymujesz dodatkowe obrażenia", true] spawn domsg;
                     };
                };
             };
@@ -226,11 +226,11 @@ markerstr setmarkercolor "ColorGreen";
 
         defaultdistance = 40; ["Remove",0.15] call Client_Fnc_DoHealth; };
 
-        [format["You must be %1 distance from the marker - you are %2 distance from it",defaultdistance, player distance getmarkerpos "theend"], true] spawn domsg;
+        [format["Musisz być %1 od znacznika - jesteś %2 od niego",defaultdistance, player distance getmarkerpos "theend"], true] spawn domsg;
         if(deadplayer) exitwith { "Sign_Circle_F" createvehicle getpos player; };
     };
 
-    ["Game Ended", true] spawn domsg;
+    ["Gra zakończona", true] spawn domsg;
 
 
 };

@@ -33,6 +33,6 @@ if(oreCount >= 200) then {
 
 } else {
 
-	[format["%1 gold bars have been added to the reserve. (200 Needed)", oreCount], true] remoteExec["domsg", currentMobster];
+	[format["%1 sztabek złota dodane do rezerwy. (Wymagane 200 )", oreCount], true] remoteExec["domsg", currentMobster];
 
 };

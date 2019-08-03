@@ -9,9 +9,9 @@ diag_log format ["retreive gang of: %1 %2", _player, _myJob];
 
 
 
-if(_uid in activecrates) exitwith { ["Already in use",FALSE] remoteexec ["DOMSG",_player]; };
+if(_uid in activecrates) exitwith { ["W użyciu",FALSE] remoteexec ["DOMSG",_player]; };
 if(isnil "gangstasharray") then { gangstasharray = []; };
-if(_myjob IN gangStashArray) exitwith { ["Already in use",FALSE] remoteexec ["DOMSG",_player]; };
+if(_myjob IN gangStashArray) exitwith { ["W użyciu",FALSE] remoteexec ["DOMSG",_player]; };
 
 gangstasharray pushback _myjob;
 activecrates pushback _uid;

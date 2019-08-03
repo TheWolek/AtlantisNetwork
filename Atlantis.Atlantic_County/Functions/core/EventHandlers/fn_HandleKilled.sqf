@@ -118,16 +118,16 @@ if(_fuck != _you) then {
 	if(_fuck find "Error: " > -1) then {
 		[getpos _unit, "News", "Vehicle Accident"] remoteexec ["server_fnc_giveTask",2];
 		
-		["You have been downed because of an unknown reason.", false] spawn domsg; 
+		["Straciłeś przytomność z nieznanego powodu.", false] spawn domsg; 
 		shooting_death = false;
 
 		format["DeathLog: %1 (%2) was downed because of an unknown reason.", name _unit, getplayeruid _unit] remoteExecCall["diag_log",2];
 	} else {
 		[getpos _unit, "News", "Shooting"] remoteexec ["server_fnc_giveTask",2];
 		if(_headshot == 1) then { 
-			[format["%1 (%2) headshotted and downed you at a distance of %3m with a(n) %4.", _fuck, _fuck2, _killdistance, _killweapon], false] spawn domsg;  
+			[format["%1 (%2) postrzelił cię w głowę z odległości %3m używająć %4.", _fuck, _fuck2, _killdistance, _killweapon], false] spawn domsg;  
 		} else { 
-			[format["%1 (%2) downed you at a distance of %3m with a(n) %4.", _fuck, _fuck2, _killdistance, _killweapon], false] spawn domsg; 
+			[format["%1 (%2) postrzelił cię z odległości %3m używająć %4.", _fuck, _fuck2, _killdistance, _killweapon], false] spawn domsg; 
 		};
 
 		["Add","Karma",random(125),"Stress"] remoteexec ["client_fnc_sustain",_killer];
@@ -151,8 +151,8 @@ if(_fuck != _you) then {
 				_nearest sort true;
 				_nearest = (_nearest select 0) select 1;
 
-				[getPos _killer, "Homicide","Location",currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-				[format["Dispatch to %1: There has been a homicide at %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _killer], true] remoteExec ["domsg", currentDetectives];
+				[getPos _killer, "Zabójstwo","Location",currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
+				[format["Wezwanie do %1: Doszło do zabójstwa w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _killer], true] remoteExec ["domsg", currentDetectives];
 			};
 		};
 
@@ -181,7 +181,7 @@ if(_fuck != _you) then {
 	shooting_death = false;
 	
 	[getpos _unit, "News", "Unknown Death"] remoteexec ["server_fnc_giveTask",2];
-	["You have been downed because of an unknown reason.", false] spawn domsg; 
+	["Straciłeś przytomność z nieznanego powodu.", false] spawn domsg; 
 
 	format["DeathLog: %1 (%2) was downed of an unknown reason.", name _unit, getplayeruid _unit] remoteExecCall["diag_log",2];
 };

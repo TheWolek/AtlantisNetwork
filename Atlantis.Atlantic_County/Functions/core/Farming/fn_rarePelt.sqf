@@ -8,7 +8,7 @@ if ("NP_kPelt" IN (magazines player)) then {
 
 	 _chance = round(random(100));
 	player removeitem "np_kpelt";
-	["Here is a box I found, search it!",false] spawn domsg;
+	["To jest skrzynka, którą znalazłem, przeszukaj ją!",false] spawn domsg;
 
 
 
@@ -36,5 +36,5 @@ if ("NP_kPelt" IN (magazines player)) then {
 	[player, "getunitloadout", _loadout] remoteExec ["Server_fnc_setVariable",2]; 
 
 } else {
-	["I only trade for rare pelts.",false] spawn domsg;
+	["Wymieniam się tylko za rzadkie skóry.",false] spawn domsg;
 };

@@ -385,7 +385,7 @@ if((_this select 0) == "FRESH") exitwith {
 
 };
 
-if(isNil "_status") exitwith { ["Error with Selection!", true] spawn domsg; };
+if(isNil "_status") exitwith { ["Błąd w wyborze!", true] spawn domsg; };
 
 
 	_btn2 ctrlShow true;
@@ -496,7 +496,7 @@ if(_status IN _clothing1 || _status IN _clothing2 || _status IN _foodlist) then 
 		_checkCost = _cost;
 
 		_amountcurrent = {_x == "NP_FoodPart"} count magazines player;
-		if(_amountcurrent < _checkCost) exitwith { ["Not enough resources", true] spawn domsg; _error = true; };
+		if(_amountcurrent < _checkCost) exitwith { ["Za mało zasobów", true] spawn domsg; _error = true; };
 
 		if(_error) exitwith {};
 
@@ -516,7 +516,7 @@ if(_status IN _clothing1 || _status IN _clothing2 || _status IN _foodlist) then 
 		_checkCost = _cost;
 
 		_amountcurrent = {_x == "NP_Pelt"} count magazines player;
-		if(_amountcurrent < _checkCost) exitwith { ["Not enough resources", true] spawn domsg; _error = true; };
+		if(_amountcurrent < _checkCost) exitwith { ["Za mało zasobów", true] spawn domsg; _error = true; };
 
 		if(_error) exitwith {};
 
@@ -542,7 +542,7 @@ if(_status IN _clothing1 || _status IN _clothing2 || _status IN _foodlist) then 
 		_checkCost = _cost select _n;
 
 		_amountcurrent = {_x == (_materials select _n)} count magazines player;
-		if(_amountcurrent < _checkCost) exitwith { ["Not enough resources", true] spawn domsg; _error = true; };
+		if(_amountcurrent < _checkCost) exitwith { ["Za mało zasobów", true] spawn domsg; _error = true; };
 		_n = _n + 1;
 
 	} foreach _cost;
@@ -600,7 +600,7 @@ if(_error) exitwith {};
 	player disablecollisionwith shopholder;
 	shopholder setpos (getposATL player);	
 
-	[format["You have crafted a %1",_status], true] spawn domsg;
+	[format["Wytworzyłeś %1",_status], true] spawn domsg;
 	closedialog 0;
 };
 
@@ -623,7 +623,7 @@ if((_this select 0) == "CRAFTMAG") exitwith {
 		_checkCost = _cost select _n;
 
 		_amountcurrent = {_x == (_materials select _n)} count magazines player;
-		if(_amountcurrent < _checkCost) exitwith { ["Not enough resources", true] spawn domsg; _error = true; };
+		if(_amountcurrent < _checkCost) exitwith { ["Za mało zasobów", true] spawn domsg; _error = true; };
 		_n = _n + 1;
 
 	} foreach _cost;
@@ -653,15 +653,15 @@ if((_this select 0) == "CRAFTMAG") exitwith {
 	_level_check = (client_level_array select 12);
 	if(_level_check > -1 && _level_check < 300) then { 	
 		shopholder addmagazineCargoGlobal [_magazineclass,3];
-		[format["You have crafted 3 mags for a %1",_status], true] spawn domsg; 
+		[format["Wytworzyłeś 3 magazynki do %1",_status], true] spawn domsg; 
 	};
 	if(_level_check > 299 && _level_check < 600) then { 
 		shopholder addmagazineCargoGlobal [_magazineclass,4];
-		[format["You have crafted 4 mags for a %1",_status], true] spawn domsg; 
+		[format["Wytworzyłeś 4 magazynki do %1",_status], true] spawn domsg; 
 	};
 	if(_level_check > 599) then { 	
 		shopholder addmagazineCargoGlobal [_magazineclass,5];
-		[format["You have crafted 5 mags for a %1",_status], true] spawn domsg; 
+		[format["Wytworzyłeś 5 magazynki do %1",_status], true] spawn domsg; 
 	};
 
 	closedialog 0;

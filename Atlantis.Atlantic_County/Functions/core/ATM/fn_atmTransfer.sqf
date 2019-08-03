@@ -2,14 +2,14 @@ private["_bankAmount","_bankName","_bankId"];
 params["_bankType"];
 
 
-if(!(typeOf CurrentCursorTarget IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F"])) exitWith { ["You need to be at a Bank to be able to transfer money.", true] spawn domsg; };
+if(!(typeOf CurrentCursorTarget IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F"])) exitWith { ["Muisz być w banku, aby przesyłać pieniądze", true] spawn domsg; };
 
-if(_bankType == 1 && player getVariable "Mafia" <= 7) exitwith { ["You do not have access to transfer Mafia funds.", true] spawn domsg;  };
-if(_bankType == 2) exitwith { ["You do not have access to transfer Government funds.", true] spawn domsg;  };
-if(_bankType == 3 && player getVariable "Biker" <= 7) exitwith { ["You do not have access to transfer Biker funds.", true] spawn domsg;  };
-if(_bankType == 4) exitwith { ["You do not have access to transfer Casino funds.", true] spawn domsg;  };
-if(_bankType == 5 && player getVariable "Mobster" <= 7) exitwith { ["You do not have access to transfer Mobster funds.", true] spawn domsg;  };
-if(_bankType == 6) exitwith { ["You do not have access to transfer these funds.", true] spawn domsg; };
+if(_bankType == 1 && player getVariable "Mafia" <= 7) exitwith { ["Nie ma dostępu do przesyłania funfuszy mafijnych.", true] spawn domsg;  };
+if(_bankType == 2) exitwith { ["Nie ma dostępu do przesyłania funduszy rządowych.", true] spawn domsg;  };
+if(_bankType == 3 && player getVariable "Biker" <= 7) exitwith { ["Nie ma dostępu do przesyłania funduszy gangu motocyklowego.", true] spawn domsg;  };
+if(_bankType == 4) exitwith { ["Nie ma dostępu do przesyłania funduszy kasyna.", true] spawn domsg;  };
+if(_bankType == 5 && player getVariable "Mobster" <= 7) exitwith { ["Nie ma dostępu do przesyłania funduszy gangsterów.", true] spawn domsg;  };
+if(_bankType == 6) exitwith { ["Nie ma dostępu do przesyłania tych funduszy.", true] spawn domsg; };
 
 
 switch (_bankType) do {
@@ -60,14 +60,14 @@ switch (_bankType) do {
 
 _amount = parseNumber (ctrlText 1400);
 _player = call compile format["%1",(lbData[1111,(lbCurSel 1111)])];
-if(isnil "_player") exitwith { ["No player selected", true] spawn domsg; };
+if(isnil "_player") exitwith { ["Nikt nie został wybrany", true] spawn domsg; };
 closeDialog 0;
 
 _old = _bankAmount;
 _new = _old - _amount;
 
 if (_new < 0 || _amount < 0) exitwith { 
-    ["You do not have enough money in bank!", true] spawn domsg;
+    ["Nie masz wystarczająco pieniędzy!", true] spawn domsg;
 };
 
 switch (_bankType) do {
@@ -96,8 +96,8 @@ switch (_bankType) do {
 
 [_amount] remoteExec ["Client_fnc_addMoneyToBank", _player];
 
-[format["You successfully wire transferred %1", _amount call client_fnc_numberText], true] spawn domsg;
+[format["Przesłałeś %1", _amount call client_fnc_numberText], true] spawn domsg;
 
-[format["You were wire transferred %1 from %2", _amount call client_fnc_numberText, name player], true] remoteExec ["domsg", _player];
+[format["Dostałeś przelew %1 od %2", _amount call client_fnc_numberText, name player], true] remoteExec ["domsg", _player];
 
 format["MoneyLog: %1 (%2) transfered %3 to %5 (%6). Bank: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, name _player, getPlayerUID _player, player getVariable "cashinbank", player getVariable "cashinhand"] remoteExecCall["diag_log",2];

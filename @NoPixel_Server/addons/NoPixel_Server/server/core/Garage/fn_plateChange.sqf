@@ -12,7 +12,7 @@ diag_log format ["license change - %1 - %2", _player, _plate];
 
 if(_booli) then {
 	//already existsch
-	["That plate already exists", true] remoteexec ["domsg",_player];
+	["Ten numer rejestracyjny już istnieje!", true] remoteexec ["domsg",_player];
 } else {
 	//insertlicense	
 	_checkstr = format ["updateLicense:%1:%2", _plate, _oldPlate];

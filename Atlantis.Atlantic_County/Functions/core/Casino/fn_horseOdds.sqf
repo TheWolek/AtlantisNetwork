@@ -65,4 +65,4 @@ publicVariable "horseRacers";
 
 _nearCasino = [6810.04,4639.41,0.00144005] nearEntities ["Man", 35];
 
-["A new horse race is taking bets",false] remoteexec ["domsg",_nearCasino];
+["Nowy wyścig koni zbiera zakłady",false] remoteexec ["domsg",_nearCasino];

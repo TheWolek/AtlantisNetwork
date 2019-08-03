@@ -57,7 +57,7 @@ _mafiacash = _totalValue * 600;
 [_mafiaCash,false,true] call Client_fnc_addMoneyToPlayer;
 ["Add","Karma",random(30),"Stress"] call client_fnc_sustain;
 
-[format["You have gained %1 from the drug run.", _mafiaCash call client_fnc_numberText], true] spawn domsg;
+[format["Zarobiłeś %1 z przemytu.", _mafiaCash call client_fnc_numberText], true] spawn domsg;
 
 
 deletevehicle _vehicle;

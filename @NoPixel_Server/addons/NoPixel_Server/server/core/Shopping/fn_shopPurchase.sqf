@@ -41,8 +41,8 @@ if(true) then {
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
 
-		if(_newcount < 0) exitwith { _ERROR = "Not enough of that item."; };
-		if(_cash < _totalprice) exitwith { _ERROR = "Not enough cash."; };
+		if(_newcount < 0) exitwith { _ERROR = "Zbyt mało tego przedmiotu."; };
+		if(_cash < _totalprice) exitwith { _ERROR = "Zbyt mało pieniędzy."; };
 
 		if(_newcount == 0) then {
 			//remove the item, its quantity and price here if there is none left after purchase.
@@ -71,8 +71,8 @@ if(true) then {
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
 
-		if(_newcount < 0) exitwith { _ERROR = "Not enough of that item."; };
-		if(_cash < _totalprice) exitwith { _ERROR = "Not enough cash."; };
+		if(_newcount < 0) exitwith { _ERROR = "Zbyt mało tego przedmiotu."; };
+		if(_cash < _totalprice) exitwith { _ERROR = "Zbyt mało pieniędzy."; };
 
 		if(_newcount == 0) then {
 			//remove the item, its quantity and price here if there is none left after purchase.
@@ -102,8 +102,8 @@ if(true) then {
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
 
-		if(_newcount < 0) exitwith { _ERROR = "Not enough of that item."; };
-		if(_cash < _totalprice) exitwith { _ERROR = "Not enough cash."; };
+		if(_newcount < 0) exitwith { _ERROR = "Zbyt mało tego przedmiotu."; };
+		if(_cash < _totalprice) exitwith { _ERROR = "Zbyt mało pieniędzy."; };
 
 		if(_newcount == 0) then {
 			//remove the item, its quantity and price here if there is none left after purchase.
@@ -132,8 +132,8 @@ if(true) then {
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
 
-		if(_newcount < 0) exitwith { _ERROR = "Not enough of that item."; };
-		if(_cash < _totalprice) exitwith { _ERROR = "Not enough cash."; };	
+		if(_newcount < 0) exitwith { _ERROR = "Zbyt mało tego przedmiotu."; };
+		if(_cash < _totalprice) exitwith { _ERROR = "Zbyt mało pieniędzy."; };	
 
 		if(_newcount == 0) then {
 			//remove the item, its quantity and price here if there is none left after purchase.
