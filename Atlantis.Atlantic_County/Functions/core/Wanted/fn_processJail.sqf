@@ -8,9 +8,9 @@ _officer = name player;
 _officerID = getplayeruid player;
 _evidence = 1;
 
-if ( _length <= 0 ) exitWith { ["Must be at least 0 years.", true] spawn domsg; };
+if ( _length <= 0 ) exitWith { ["Długość musi wynosić minimum 0 lat.", true] spawn domsg; };
 if ( _length > 10 && getpos player distance [8242.13,3019.17,0] < 600 ) exitWith { ["Must be at most 10 years at Jail.", true] spawn domsg; };
-if ( _length > 90 ) exitWith { ["Must be at most 90 years.", true] spawn domsg; };
+if ( _length > 90 ) exitWith { ["Długość musi wynosić maksymalnie 90 lat.", true] spawn domsg; };
 
 [_length, _reason, CurrentCursorTarget,true] remoteExec ["server_fnc_jailsetup",2];
 [_suspect,_suspectID,_officer,_officerID,_reason,0,_evidence,0,_length,"","","Silver Lake", 0] remoteexec ["server_fnc_addcriminal",2];
@@ -26,7 +26,7 @@ format["JailLog: %1 (%2) sent %3 (%4) to %5 years and received $%6.", name playe
 [[_length, _officer],{
 
     params["_length", "_officer"];
-    [format["You have been convicted for %1 years.", _length], true] spawn domsg;
+    [format["Zostałeś skazany na %1 lat.", _length], true] spawn domsg;
 
     [getplayeruid player, "Silver Lake", 0] remoteExec ["Server_fnc_wantedRemoveAll",2];
 
@@ -42,9 +42,9 @@ format["JailLog: %1 (%2) sent %3 (%4) to %5 years and received $%6.", name playe
 	            ["govtBank", (_myCash - 5000)*_rate, "Add"] remoteExec["server_fnc_setValue",2];
 	            ["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_myCash - 5000) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
-                [format["The government seized %1 from your bank account because of unpaid tickets.",(_myCash - 5000) call client_fnc_numberText], true] spawn domsg; 
+                [format["Rząd odebrał ci %1 z twojego konta bankowego z powodu nie zapłaconych mandatów.",(_myCash - 5000) call client_fnc_numberText], true] spawn domsg; 
             } else {
-                [format["You had less than %1 in your bank account so the government did not seize any funds.", 5000 call client_fnc_numberText], true] spawn domsg;
+                [format["Masz mniej niż %1 na swoim koncie bankowym, więc rząd ci nic nie odbierze.", 5000 call client_fnc_numberText], true] spawn domsg;
             };  
         } else {
             [myTickets] call client_fnc_removeBank;  
@@ -54,9 +54,9 @@ format["JailLog: %1 (%2) sent %3 (%4) to %5 years and received $%6.", name playe
 	        ["govtBank", myTickets, "Add"] remoteExec["server_fnc_setValue",2];
 	        ["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, myTickets call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
-            [format["The government seized %1 from your bank account because of unpaid tickets.",(myTickets) call client_fnc_numberText], true] spawn domsg; 
+            [format["Rząd odebrał ci %1 z twojego konta bankowego z powodu nie zapłaconych mandatów.",(myTickets) call client_fnc_numberText], true] spawn domsg; 
             
-            [format["The government seized %1 from the convict's bank account because of unpaid tickets and you received %2 in bonus.",(myTickets) call client_fnc_numberText], true] remoteExec["domsg", _officer]; 
+            [format["Rząd odebrał %1 z konta skazanego, ponieważ miał on nie zapłacone mandaty i otrzymałeś %2 jako bonus.",(myTickets) call client_fnc_numberText], true] remoteExec["domsg", _officer]; 
         };
         myTickets = 0;
     };
@@ -74,9 +74,9 @@ format["JailLog: %1 (%2) sent %3 (%4) to %5 years and received $%6.", name playe
 	            ["govtBank", (_myCash - 5000)*_rate, "Add"] remoteExec["server_fnc_setValue",2];
 	            ["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_myCash - 5000) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
-                [format["The government seized %1 from your bank account because of unpaid tickets.",(_myCash - 5000) call client_fnc_numberText], true] spawn domsg; 
+                [format["Rząd odebrał ci %1 z twojego konta bankowego z powodu nie zapłaconych mandatów.",(_myCash - 5000) call client_fnc_numberText], true] spawn domsg; 
             }  else {
-                [format["You had less than %1 in your bank account so the government did not seize any funds.", 5000 call client_fnc_numberText], true] spawn domsg;
+                [format["Masz mniej niż %1 na swoim koncie bankowym, więc rząd ci nic nie odbierze.", 5000 call client_fnc_numberText], true] spawn domsg;
             };
         } else {
             [_currentTax] call client_fnc_removeBank;  
@@ -86,9 +86,9 @@ format["JailLog: %1 (%2) sent %3 (%4) to %5 years and received $%6.", name playe
 	        ["govtBank", _currentTax, "Add"] remoteExec["server_fnc_setValue",2];
 	        ["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, _currentTax call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
-            [format["The government seized %1 from your bank account because of unpaid taxes.",(_currentTax) call client_fnc_numberText], true] spawn domsg; 
+            [format["Rząd odebrał ci %1 z twojego konta bankowego z powodu nie zapłaconych podatków.",(_currentTax) call client_fnc_numberText], true] spawn domsg; 
             
-            [format["The government seized %1 from the convict's bank account because of unpaid taxes and you received %2 in bonus.",(_currentTax) call client_fnc_numberText], true] remoteExec["domsg", _officer]; 
+            [format["Rząd odebrał %1 z konta skazanego, ponieważ miał on nie zapłacone podatki i otrzymałeś %2 jako bonus.",(_currentTax) call client_fnc_numberText], true] remoteExec["domsg", _officer]; 
         };
         (player getvariable "statuses") set [13, 0]; 
     };

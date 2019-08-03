@@ -34,7 +34,7 @@ if(_type == "water") exitwith {
 
 if(myJob IN ['Cop','doc'] && lastGovtUseWeapon > time) exitWith {
 
-	["You recently got gear out, please wait 5 minutes.", true] spawn domsg;
+	["Ostatnio pobrałeś sprzęt, poczekaj 5 minut.", true] spawn domsg;
 
 };
 
@@ -70,8 +70,8 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
-		[format["Your badge number is: %1",player getVariable "badgenumber"], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odzaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took PATROL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -175,8 +175,8 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
-		[format["Your badge number is: %1",player getVariable "badgenumber"], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took DTU loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -287,8 +287,8 @@ if(myjob == "Cop") then {
 		_freq = 33.3; // do ustalenia z komediantem
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
-		[format["Your badge number is: %1",player getVariable "badgenumber"], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took AIA loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -403,8 +403,8 @@ if(myjob == "Cop") then {
 		publicVariable "currentMarshals";
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
-		[format["Your badge number is: %1",player getVariable "badgenumber"], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took MARSHAL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -493,8 +493,8 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = 5000;
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
-		[format["Your badge number is: %1",player getVariable "badgenumber"], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took SWAT loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -562,7 +562,7 @@ if(myjob == "doc") then {
 		_freq = 33.2;
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took PRISON loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -677,7 +677,7 @@ if(myjob == "doc") then {
 		_freq = 33.2;
 
 		_cost = 5000;
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove", false] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took CRT loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -729,8 +729,8 @@ if(myJob == "EMS") then {
 		_freq = 33.1;
 		
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
-		[format["Your badge number is: %1",player getVariable "badgenumber"], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took FIRE loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -760,8 +760,8 @@ if(myJob == "EMS") then {
 		_freq = 33.1;
 		
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
-		[format["Your badge number is: %1",player getVariable "badgenumber"], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took EMS loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];

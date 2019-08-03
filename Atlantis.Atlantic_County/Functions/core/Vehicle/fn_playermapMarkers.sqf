@@ -3,8 +3,8 @@ private["_name","_markers"];
 waituntil{visiblemap};
 
 if(mapHint) then {
-	["You can bring up map markers by pressing on your windows key.", true] spawn domsg;
-	["You may find a log for all notifications above.", true] spawn domsg;
+	["Możesz pojawić znaczniki klikając windows.", true] spawn domsg;
+	["Wyzej możesz znaleźć logi z powiadomień.", true] spawn domsg;
 	mapHint = false;
 };
 

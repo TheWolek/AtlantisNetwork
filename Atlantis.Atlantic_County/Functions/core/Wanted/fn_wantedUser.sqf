@@ -2,7 +2,7 @@
 
 
 _currentitemindex = lbCurSel 1120;
-if (_currentitemindex == -1) exitWith { ["You must select a person.", true] spawn domsg; };
+if (_currentitemindex == -1) exitWith { ["Musisz wybrać osobę.", true] spawn domsg; };
 _status2 = lbData [1120, _currentitemindex];
 currentcursortarget = _status2;
 currentcursortarget = call compile format["%1", currentcursortarget];

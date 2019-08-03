@@ -51,7 +51,7 @@ ClientArrested = false;
 EM_allowed2 = true;
 //when jail time ends normally
 if(!_escaped) then {
-	["Your jail time is over, did you learn your lesson?", true] spawn domsg;
+	["Twój czas w więzieniu dobiegł końca.", true] spawn domsg;
 	if(_custody == "jail") then { player setpos [910.937,1237.75,0.0014348]; };
 	//if(_custody == "prison") then { player setpos [5538.63,6258.06,0.00143433]; };
 	player setvariable ["JailTracked",nil,true];
