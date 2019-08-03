@@ -48,7 +48,7 @@ if (isServer) then {
 
 	[client_fnc_lottoRun, 3600] execFSM "\NoPixel_server\call.fsm";
 	[client_fnc_horseRace, 600] execFSM "\NoPixel_server\call.fsm";
-	[client_fnc_goldFarming, 300] execFSM "\NoPixel_server\call.fsm";
+	//[client_fnc_goldFarming, 300] execFSM "\NoPixel_server\call.fsm";
 	[client_fnc_camsetup, 1200] execFSM "\NoPixel_server\call.fsm";
 
 	//[client_fnc_carEvent, 5500 + random(7500)] execFSM "\NoPixel_server\call.fsm";
