@@ -1558,7 +1558,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["str CursorObject find 'cargo20' > -1 && player distance [3709.95,9054.45,0.00143886] < 600"],
+		["(str typeof CursorObject find 'cargo20' > -1 || str typeof cursorObject find 'plp' > -1 ) && player distance [2243.1,6442.22,0] < 700"],
 		["Search Crate", "['Searching Crate',35,'client_fnc_searchcrates',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask; ",4]
 	],
 
