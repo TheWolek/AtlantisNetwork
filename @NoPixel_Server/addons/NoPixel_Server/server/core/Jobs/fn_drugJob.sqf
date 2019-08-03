@@ -1,7 +1,7 @@
 params ["_type","_number","_player","_pos"];
 private ["_vehspawn","_veh","_endmission","_amount"];
 
-if(count allplayers < 1) exitwith { ["Not enough players to add to event..", true] remoteExec["domsg", currentMafia]; };
+if(count allplayers < 1) exitwith { ["Za mało graczy, aby rozpocząć zadanie", true] remoteExec["domsg", currentMafia]; };
 	
 if(isNil "drugcount") then { drugcount = 0; };
 
@@ -36,7 +36,7 @@ if(drugcount >= 375) then {
 
 } else {
 
-	[format["%1 drugs have been added to the dump. (375 Needed)", drugcount], true] remoteExec["domsg", currentMafia];
+	[format["%1 narkotyków dodane do zrzutu narkotyków (Wymagane 375)", drugcount], true] remoteExec["domsg", currentMafia];
 
 };
 

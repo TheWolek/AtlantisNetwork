@@ -16,10 +16,10 @@ _finish = _finish select 0;
 
 
 _cashCheck = [1, _price*(1+taxRate/100)] call Client_fnc_checkMoney;
-if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",(_price*(1+taxRate/100)) call client_fnc_numberText], true] spawn domsg; };
+if!(_cashCheck) exitwith { [format["%1 - Masz za mało pieniędzy, aby za to zapłacić!",(_price*(1+taxRate/100)) call client_fnc_numberText], true] spawn domsg; };
 
 if( ((player getvariable "cashinhand") - _price*(1+taxRate/100)) < (client_level_array select 16) ) exitWith {
-    [format["The car shop does not accept your %1 in dirty money.", (client_level_array select 16) call client_fnc_numberText], true] spawn domsg;
+    [format["Sklep samochodowy nie akceptuje %1 twoich brudnych pieniędzy.", (client_level_array select 16) call client_fnc_numberText], true] spawn domsg;
 };
 
 [_price*(1+taxRate/100), true] call Client_fnc_removeCash;
@@ -32,7 +32,7 @@ format["BuyLog: %1 (%2) bought %3 za %4.", name player, getplayeruid player, _cl
 
 closedialog 0;
 
-["The vehicle has been delivered to your garage.", true] spawn domsg;
+["Pojazd został dostarczony do twojego garażu.", true] spawn domsg;
 
 _player = player; 
 _rims = "default"; 

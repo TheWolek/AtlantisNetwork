@@ -1,4 +1,4 @@
-["You have started a black jack game.", true] spawn domsg;
+["Rozpocząłeś grę w Black Jack.", true] spawn domsg;
 
 BGJoinableGames pushback player;
 publicVariable "BGJoinableGames";

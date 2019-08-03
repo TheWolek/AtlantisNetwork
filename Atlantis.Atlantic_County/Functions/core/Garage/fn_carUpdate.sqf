@@ -1,6 +1,6 @@
 params[["_type",0]];
 
-if (vehicle player == player) exitwith { ["You need to be inside your vehicle to upgrade it!", true] spawn domsg; };
+if (vehicle player == player) exitwith { ["Musisz być w pojeździe, aby go ulepszyć!", true] spawn domsg; };
 _PROCESS = vehicle player;
 _civilianVehicle = [
 	// type 1
@@ -138,13 +138,13 @@ if(_attempt && _oldveh in current_cars) then {
 
 
 	_cashCheck = [1, _price] call Client_fnc_checkMoney;
-	if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",_price call client_fnc_numberText], true] spawn domsg; };	
+	if!(_cashCheck) exitwith { [format["%1 - Masz za mało pieniędzy, aby za to zapłacić!",_price call client_fnc_numberText], true] spawn domsg; };	
 	
 	[_price] call Client_fnc_removecash;
 
  	_car = _oldveh getvariable "information";
 
- 	if(isNil "_car") exitwith { ["You can not upgrade this vehicle...", true] spawn domsg; };
+ 	if(isNil "_car") exitwith { ["Nie możesz ulepszyć tego pojazdu...", true] spawn domsg; };
 
 	_garage = player getVariable "garage";
 
@@ -162,5 +162,5 @@ if(_attempt && _oldveh in current_cars) then {
 	[_garage,_numberPlate,_newVehicle,player,getPlayerUID player,Current_Cars] remoteexec ["server_fnc_upgradeVehicle",2];
 
 } else {
-	["This car is either already upgraded or unable to be upgraded!", true] spawn domsg;
+	["Ten pojazd jest już ulepszony, lub nie można go ulepszyć!", true] spawn domsg;
 };

@@ -1,10 +1,10 @@
 disableSerialization;
 _index = lbCurSel (1113);
-if(casinoVault < 5000) exitwith { ["Vault funds are too low.", true] spawn domsg; };
-if(cantbet) exitwith { ["Race already in progress.", true] spawn domsg; };
+if(casinoVault < 5000) exitwith { ["Fundusze w skarbcu są zbyt małe.", true] spawn domsg; };
+if(cantbet) exitwith { ["Wyścig się już zaczął.", true] spawn domsg; };
 if(isnil "MyHorseBets") then { myhorsebets = []; };
-if(_index == -1) exitWith { ["You must select a horse.", true] spawn domsg; };
-if(count myhorsebets > 2) exitwith { ["3 bets max per race", true] spawn domsg; };
+if(_index == -1) exitWith { ["Musisz wybrać konia.", true] spawn domsg; };
+if(count myhorsebets > 2) exitwith { ["3 zakłady na wyścig", true] spawn domsg; };
 
 _status = lbData[1113, _index];
 _status = call compile format["%1", _status];
@@ -22,9 +22,9 @@ if(_betamount > 500) exitwith { ["$500.00 is max single bet", true] spawn domsg;
 
 
 _cashcheck = [1,_betamount*(1+casinoRate/100)] call client_fnc_checkmoney;
-if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",_betamount*(1+casinoRate/100) call client_fnc_numberText], true] spawn domsg; };
+if!(_cashCheck) exitwith { [format["%1 - Masz za mało pieniędzy na to!",_betamount*(1+casinoRate/100) call client_fnc_numberText], true] spawn domsg; };
 
-[format["The horse betting cost you %1 because the fee is at %2%3.",_betamount*(1+casinoRate/100) call client_fnc_numberText, casinoRate, "%"], true] spawn domsg;
+[format["Zakłay kosztują cię %1, ponieważ podatek kasyna wynosi %2%3.",_betamount*(1+casinoRate/100) call client_fnc_numberText, casinoRate, "%"], true] spawn domsg;
 
 [_betamount*(1+casinoRate/100)] call Client_fnc_removeCash;
 

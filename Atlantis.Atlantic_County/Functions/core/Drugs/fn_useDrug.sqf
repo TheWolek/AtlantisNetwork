@@ -16,18 +16,18 @@ if(_type == "marijuana") then {
 	player setCustomAimCoef 0;
 	["set",0] call Client_Fnc_DoHealth;
 	["Remove","Karma",5,"Stress"] call client_fnc_sustain;
-	["You feel great, and feel very calm.",false] spawn domsg;
+	["Czujesz się świetnie i jesteś spokojny.",false] spawn domsg;
 };
 
 if(_type == "cocaine") then {
 	[player,20] spawn drug_cocaine_effects;
 	client_cocaine = _amount;
 
-	if (((client_level_array select 10) / 100) > -1 && ((client_level_array select 10) / 100) < 2 ) then { 	player setAnimSpeedCoef 1.1; ["You are 10% faster.",false] spawn domsg; };
+	if (((client_level_array select 10) / 100) > -1 && ((client_level_array select 10) / 100) < 2 ) then { 	player setAnimSpeedCoef 1.1; ["Jesteś 10% szybszy.",false] spawn domsg; };
 
-	if (((client_level_array select 10) / 100) > 1 && ((client_level_array select 10) / 100) < 3 ) then { player setAnimSpeedCoef 1.15; ["You are 15% faster.",false] spawn domsg; };
+	if (((client_level_array select 10) / 100) > 1 && ((client_level_array select 10) / 100) < 3 ) then { player setAnimSpeedCoef 1.15; ["Jesteś 15% szybszy.",false] spawn domsg; };
 
-	if (((client_level_array select 10) / 100) > 2 ) then { player setAnimSpeedCoef 1.25; ["You are 25% faster.",false] spawn domsg; };
+	if (((client_level_array select 10) / 100) > 2 ) then { player setAnimSpeedCoef 1.25; ["Jesteś 25% szybszy.",false] spawn domsg; };
 
 	["Add","unhealthiness",5] call client_fnc_sustain;
 	["Add","Karma",5,"Stress"] call client_fnc_sustain;
@@ -38,7 +38,7 @@ if(_type == "heroin") then {
 	[player,20] spawn drug_heroin_effects;
 	client_heroin = _amount;
 	player setUnitRecoilCoefficient 0.5;
-	["You can manage your aim very well.",false] spawn domsg;
+	["Możesz bardzo dobrze kontrolowac swoją broń.",false] spawn domsg;
 	["Add","unhealthiness",5] call client_fnc_sustain;
 	["Remove","Karma",5,"Stress"] call client_fnc_sustain;
 };
@@ -46,7 +46,7 @@ if(_type == "heroin") then {
 if(_type == "meth") then {
 	[player,20] spawn drug_lsd_effects;
 	client_meth = _amount;
-	["You feel invincible.",false] spawn domsg;
+	["Czujesz się nieśmiertelny.",false] spawn domsg;
 	["Add","unhealthiness",5] call client_fnc_sustain;
 	["Add","Karma",5,"Stress"] call client_fnc_sustain;
 };
@@ -61,7 +61,7 @@ if(_type == "energy") then {
 	
 	player enablefatigue false;
 	player enablestamina false;
-	["You feel very light!",false] spawn domsg;
+	["Czujesz się lekki.",false] spawn domsg;
 };
 
 if(_type == "donuts") then {
@@ -69,7 +69,7 @@ if(_type == "donuts") then {
 	client_donuts = _amount;
 	player setUnitRecoilCoefficient 0.5;
 	player setCustomAimCoef 0;
-	["You feel sustained!",false] spawn domsg;
+	["Czujesz się najedzony!",false] spawn domsg;
 };
 
 
@@ -78,7 +78,7 @@ if(_type == "donuts") then {
 
 
 
-[format ["%1 will last %2m due to unhealthiness of %3",[_type] call CBA_fnc_capitalize, (_amount * 5), client_unhealthiness],false] spawn domsg;
+[format ["%1 będzie trwać %2m przez chorobę %3",[_type] call CBA_fnc_capitalize, (_amount * 5), client_unhealthiness],false] spawn domsg;
 
 
 /*

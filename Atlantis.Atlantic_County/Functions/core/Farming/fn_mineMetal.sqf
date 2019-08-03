@@ -16,11 +16,11 @@ if(player getVariable["JailTracked",FALSE] && cursorobject distance player < 25)
 
 
 		if(player distance [5545.74,6291.12,0.00143433] > 1500) then { 
-			secondsLeft = secondsLeft - round(45 * _removeamount); ["Your time has been lowered by 45 seconds", true] spawn domsg; 
+			secondsLeft = secondsLeft - round(45 * _removeamount); ["Twój czas został zmniejszony o 45 sekund", true] spawn domsg; 
 			["govtBank",150, "Add"] remoteExec["server_fnc_setValue",2]; 
 			format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, 150 call client_fnc_numberText] remoteExecCall["diag_log",2];
 		} else { 
-			secondsLeft = secondsLeft - round(25 * _removeamount); ["Your time has been lowered by 25 seconds", true] spawn domsg; 
+			secondsLeft = secondsLeft - round(25 * _removeamount); ["Twój czas został zmniejszony o 25 sekund", true] spawn domsg; 
 			["govtBank",70, "Add"] remoteExec["server_fnc_setValue",2];  
 			format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, 70 call client_fnc_numberText] remoteExecCall["diag_log",2];
 		};	
@@ -30,7 +30,7 @@ if(player getVariable["JailTracked",FALSE] && cursorobject distance player < 25)
 
 if((getposATL player) distance (getposATL _rock) > 25) exitwith {};
 if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [2123.79,8750.29,0.00143909] < 3000) then {   
-	if(_rock IN myoil) exitwith { ["There are no resources in this rock!", true] spawn domsg; };
+	if(_rock IN myoil) exitwith { ["Nie ma więcej zasobów w tej skale!", true] spawn domsg; };
 	_sound = round(random 5);
 	switch(_sound) do {
 		case 0: {
@@ -68,13 +68,13 @@ if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 ||
 		if(_level_check > 299 && _level_check < 600) then { player additem "CG_OilBarrel"; player additem "CG_OilBarrel"; };
 		if(_level_check > 599) then { player additem "CG_OilBarrel"; player additem "CG_OilBarrel"; player additem "CG_OilBarrel"; };
 
-		["You found an oil deposit!", true] spawn domsg;
+		["Znalazłeś olej w tej skale!", true] spawn domsg;
 	};	
 
 };
 
 if ( (str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [3925.83,2800.64,0.00206757] < 1000 ) then {   
-	if(_rock IN mymetal) exitwith { ["There are no resources in this rock!", true] spawn domsg;  };
+	if(_rock IN mymetal) exitwith { ["Nie ma więcej zasobów w tej skale!", true] spawn domsg;  };
 	_sound = round(random 5);
 	switch(_sound) do {
 		case 0: {

@@ -2,7 +2,7 @@ params["_target"];
 
 if (isNil "searchedcrates") then { searchedcrates = []; };
 	
-if (_target IN searchedcrates) exitwith { ["You recently searched this crate", true] spawn domsg; };
+if (_target IN searchedcrates) exitwith { ["Niedawno przszukałeś tą skrzynkę", true] spawn domsg; };
 
 searchedcrates pushback _target;
 
@@ -17,14 +17,14 @@ if(_chance > 85) then {
 		player additem "cg_DrugBrick"; 
 	};
 
-	["You found drugs",false] spawn domsg;
+	["Znalazłeś narkotyki",false] spawn domsg;
 } else {
-	["You found nothing.",false] spawn domsg;
+	["Pusto....",false] spawn domsg;
 };
 
 if(_chance > 95) THEN {
 	player additem "NP_kPelt";
-	["You found a very rare pelt!",false] spawn domsg; 
+	["Znalazłeś rzadką skórę!",false] spawn domsg; 
 };
 
 [_target] spawn {

@@ -10,7 +10,7 @@ if(_type == 1) then {
 _oreArray = ["np_goldbar"];
 
 if(isNil "globalProtection") then { globalProtection = 0; };
-if(globalProtection != 0) exitwith { ["Error - Already processing", true] spawn domsg; };
+if(globalProtection != 0) exitwith { ["Błąd - Już przetwarza", true] spawn domsg; };
 _localProtection = 0;
 
 _thecargo = getmagazineCargo mobsterVehicle;
@@ -77,9 +77,9 @@ _veh addMagazineCargoGlobal  ["np_goldbar2", _totalValue ];
 deletevehicle mobsterVehicle;
 
 if(_type == 1) then {
-	["A highly armed boat has been seen in Silver Lake.", true] remoteExec ["domsg", currentcop];
-	["A highly armed boat has been seen in Silver Lake.", true] remoteExec ["domsg", currentcop];
-	["A highly armed boat has been seen in Silver Lake.", true] remoteExec ["domsg", currentcop];
-	["A highly armed boat has been seen in Silver Lake.", true] remoteExec ["domsg", currentcop];
-	["A highly armed boat has been seen in Silver Lake.", true] remoteExec ["domsg", currentcop];
+	["Uzbrojona łódź została zauważona u wybrzeży hrabstwa Atlantis.", true] remoteExec ["domsg", currentcop];
+	["Uzbrojona łódź została zauważona u wybrzeży hrabstwa Atlantis.", true] remoteExec ["domsg", currentcop];
+	["Uzbrojona łódź została zauważona u wybrzeży hrabstwa Atlantis.", true] remoteExec ["domsg", currentcop];
+	["Uzbrojona łódź została zauważona u wybrzeży hrabstwa Atlantis.", true] remoteExec ["domsg", currentcop];
+	["Uzbrojona łódź została zauważona u wybrzeży hrabstwa Atlantis.", true] remoteExec ["domsg", currentcop];
 };

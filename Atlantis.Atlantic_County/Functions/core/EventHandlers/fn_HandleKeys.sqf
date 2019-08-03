@@ -275,7 +275,7 @@ switch (_code) do
 						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "RH_uspm"; player addweapon "RH_uspm"; player selectweapon "RH_uspm"; player addItemToBackPack "CSW_Taser_Probe_Mag";
 						444 cutRsc ["HUDguncop","PLAIN"]; 
 					} else {
-						["ERROR: No USP Pistol in backpack", true] spawn domsg;
+						["Błąd: Brak pistoletu USP w plecaku", true] spawn domsg;
 					};
 					
 				};
@@ -288,7 +288,7 @@ switch (_code) do
 						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "CSW_M26C"; player addweapon "CSW_M26C"; player selectweapon "CSW_M26C"; player addItemToBackpack "RH_16Rnd_40cal_usp";
 						444 cutRsc ["HUDtasercop","PLAIN"]; 
 					} else {
-						["ERROR: No Taser in backpack", true] spawn domsg;
+						["Błąd: Brak Paralizatora w plecaku", true] spawn domsg;
 					};
 
 				};
@@ -329,13 +329,13 @@ switch (_code) do
 			if (!client_fadeSound) then 
 			{
 				1 fadeSound 0.1;
-				["Your sound has been lowered.", false] spawn domsg;
+				["Włożyłeś zatyczki do uszu.", false] spawn domsg;
 				client_fadesound = true;
 			}
 			else
 			{
 				1 fadeSound 1;
-				["Your sound has returned to normal.", false] spawn domsg;
+				["Wyjąłeś zatyczki z uszu", false] spawn domsg;
 				client_fadesound = false;
 			};
 	        _handle = true;
@@ -437,7 +437,7 @@ switch (_code) do
 						spikeAntispam = false;
 					};	
 					deletevehicle _spikeStrips;
-					["You picked up some spike strips!", false] spawn domsg; 
+					["Podniosłeś kolczatki!", false] spawn domsg; 
 					player additem "CG_Spikes_Collapsed";
 			};
 

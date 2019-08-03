@@ -18,9 +18,9 @@ if(_rate < 0) then { _rate = 0; };
 
     _convert = floor (_convert / 1000) * 1000;
 
-    if(_convert < 1000) exitWith { [format["You need at least %1 in dirty money to convert.", 1000 call client_fnc_numberText], true] spawn domsg; };
+    if(_convert < 1000) exitWith { [format["Potrzebujesz conajmniej %1 brudnych pieniędzy, aby zamienić.", 1000 call client_fnc_numberText], true] spawn domsg; };
 
-    [format["You are converting %1 in dirty money to %2 in clean money using the rate of %3%4.", _convert call client_fnc_numberText, _convert*(1-_rate) call client_fnc_numberText, _rate*100, "%"], true] spawn domsg;
+    [format["Zamieniasz %1 brudnych pieniędzy w %2 czystych pieniędzy, używając rate of %3%4.", _convert call client_fnc_numberText, _convert*(1-_rate) call client_fnc_numberText, _rate*100, "%"], true] spawn domsg;
 
     _check = ["Converting",300,0,player,'AinvPknlMstpSnonWnonDnon_medic_1',player,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
 

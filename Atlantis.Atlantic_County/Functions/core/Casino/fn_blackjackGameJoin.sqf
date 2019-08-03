@@ -1,8 +1,8 @@
 params["_player"];
 
-if(count BJgamePlayers > 4) exitwith { ["A player tried joining your BJ table, though, it is filled.", true] spawn domsg; };
+if(count BJgamePlayers > 4) exitwith { ["Osoba próbowała dołączyć do twojego stołu BJ.", true] spawn domsg; };
 BJgamePlayers pushback _player;
 
-["A player has joined your BJ table", true] spawn domsg;
+["Osoba dołączyła do twojego stołu BJ", true] spawn domsg;
 
 [player] remoteexec ["client_fnc_blackjackGameJoined",_player];

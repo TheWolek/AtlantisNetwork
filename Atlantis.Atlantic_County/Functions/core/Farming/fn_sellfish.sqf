@@ -9,7 +9,7 @@ _priceArray = [7];
 
 
 if(isNil "globalProtection") then { globalProtection = 0; };
-if(globalProtection != 0) exitwith { ["Error - Already processing", true] spawn domsg; };
+if(globalProtection != 0) exitwith { ["Błąd - W trakcie przetwarzania", true] spawn domsg; };
 _localProtection = 0;
 
 
@@ -42,4 +42,4 @@ _cashTotal = 0;
 
 globalProtection = 0;
 
-[format["You just earned %1",_cashTotal call client_fnc_numberText], true] spawn domsg;
+[format["Zarobiłeś %1",_cashTotal call client_fnc_numberText], true] spawn domsg;

@@ -3,7 +3,7 @@ private["_n","_i","_localprotection"];
 
 
 if(isNil "globalProtection") then { globalProtection = 0; };
-if(globalProtection != 0) exitwith { ["Error - Already processing", true] spawn domsg; };
+if(globalProtection != 0) exitwith { ["Błąd - Już przetwarza", true] spawn domsg; };
 _localProtection = 0;
 
 
@@ -26,7 +26,7 @@ while{ _i > 0 } do {
 	_i = _i - 1;
 	uisleep 5;
 	if(dialog) then { closedialog 0; };
-	["You are processing drug bricks, stay still!", true] spawn domsg;
+	["Przetwarzasz kostki narkotyków, stój w miejscu!", true] spawn domsg;
 
 };
 

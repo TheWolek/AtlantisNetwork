@@ -37,7 +37,7 @@ _n = 0;
 		playSound3D ["vvv_fishingrod\sounds\splash.ogg", player, false, getPosasl player, 5, 1, 5];
 		sleep 0.25;
 		if(dialog) then { closedialog 0; };
-		["Your fish is being filleted, stay still!", true] spawn domsg;
+		["Twoje ryby są filetowane, stój w miejscu!", true] spawn domsg;
 	};
 
 	_n = _n + 1;

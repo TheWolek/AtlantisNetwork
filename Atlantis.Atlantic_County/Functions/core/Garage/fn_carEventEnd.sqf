@@ -13,7 +13,7 @@ if(local _vehicle) then {
 	[_vehicle,0] remoteExecCall ["client_fnc_lock",_vehicle];
 };
 
-["A hot vehicle has been stolen and is placed on the map for Police", true] remoteexec ["domsg",-2];
+["Poszukiwany samochód został skradziony i oznaczony na mapie", true] remoteexec ["domsg",-2];
 
 while{true} do {
 	_pos = [RANDOM(10000),RANDOM(10000),0];
@@ -22,22 +22,22 @@ while{true} do {
 	uisleep 2;
 };
 
-["In 5 minutes your destination will be revealed.", true] spawn domsg;
+["Za 5 minut twoja pozycja zostanie ujawniona.", true] spawn domsg;
 uisleep 60;
 
-["In 4 minutes your destination will be revealed.", true] spawn domsg;
+["Za 4 minuty twoja pozycja zostanie ujawniona.", true] spawn domsg;
 uisleep 60;
 
-["In 3 minutes your destination will be revealed.", true] spawn domsg;
+["Za 3 minuty twoja pozycja zostanie ujawniona.", true] spawn domsg;
 uisleep 60;
 
-["In 2 minutes your destination will be revealed.", true] spawn domsg;
+["Za 2 minuty twoja pozycja zostanie ujawniona..", true] spawn domsg;
 uisleep 60;
 
-["In 1 minutes your destination will be revealed.", true] spawn domsg;
+["Za 1 minutę twoja pozycja zostanie ujawniona.", true] spawn domsg;
 uisleep 60;
 
-["The vehicle drop off point has been marked on the map - get there in 5 minutes.", false] spawn doquickmsg;
+["Miejsce odbioru pojazdu zostało oznaczoone na mapie, dostań się tam w 5 minut", false] spawn doquickmsg;
 
 
 _markername = format["DropOff%1",getPlayerUID player];
@@ -50,9 +50,9 @@ _marker setMarkerTextlocal "Drop Off Vehicle Location";
 _count = 0;
 while{true} do {
 	uisleep 1;
-	if(_count > 300) exitwith { ["You took too long!", true] spawn domsg; };
+	if(_count > 300) exitwith { ["Czas się skończył!", true] spawn domsg; };
 	if(player distance _pos < 25 && driver (_vehicle) == player) exitwith { 
-		["You have been awarded the vehicle!", true] spawn domsg; 
+		["Zostałeś nagrodzony!", true] spawn domsg; 
 		_player = player; 
 		_rims = "default"; 
 		_windows = 0; 
