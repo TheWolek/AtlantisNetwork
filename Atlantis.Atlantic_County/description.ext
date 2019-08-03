@@ -575,6 +575,36 @@ class CfgSounds
 		sound[] = {"@cg_mission_files\sounds\vomit.ogg", 1, 1};
 		titles[] = {};
 	};	
+	class cop_siren_wail //4.394
+	{
+		name = "cop_siren_wail";
+		sound[] = {"@atlantis_sirens\cop\wail.ogg", 1, 1};
+		titles[] = {};
+	};	
+	class cop_siren_warning //0.054
+	{
+		name = "cop_siren_warning";
+		sound[] = {"@atlantis_sirens\cop\warning.ogg", 1, 1};
+		titles[] = {};
+	};	
+	class cop_siren_yelp //0.349
+	{
+		name = "cop_siren_yelp";
+		sound[] = {"@atlantis_sirens\cop\yelp.ogg", 1, 1};
+		titles[] = {};
+	};	
+	class ems_siren_wail //5.2
+	{
+		name = "ems_siren_wail";
+		sound[] = {"@atlantis_sirens\ems\wail.ogg", 1, 1};
+		titles[] = {};
+	};	
+	class ems_siren_warning //0.946
+	{
+		name = "ems_siren_warning";
+		sound[] = {"@atlantis_sirens\ems\warning.ogg", 1, 1};
+		titles[] = {};
+	};
 };
 
 
