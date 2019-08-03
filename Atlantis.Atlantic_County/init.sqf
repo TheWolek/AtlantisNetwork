@@ -311,6 +311,13 @@ Dvid_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
 titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 
 [] spawn {
+	_uidarr = ["76561198084548281","76561198071999873"];
+	_adminuid = getplayeruid player;
+	if(_adminuid in _uidarr) then {
+		_isadmin = true;
+	} else {
+		_isadmin = false;
+	};
 
 	while {true} do {
 	
