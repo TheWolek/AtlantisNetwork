@@ -834,18 +834,18 @@ if(myjob == "Mafia") then {
 
 	_level = player getVariable "Mafia";
 	
-	if(_level >= 1 && _level <= 2) then { player forceAddUniform "REYK_SUITS_BLK_F"; };
+	if(_level >= 1 && _level <= 2) then { player forceAddUniform "TRYK_SUITS_BLK_F"; };
 
-	if(_level >= 3 && _level <= 5) then { player addHeadgear "REYK_SUITS_BLK_F"; };
+	if(_level >= 3 && _level <= 5) then { player addHeadgear "TRYK_SUITS_BLK_F"; };
 
-	if(_level >= 6 && _level <= 9) then { player addHeadgear "REYK_SUITS_BLK_F"; };
+	if(_level >= 6 && _level <= 9) then { player addHeadgear "TRYK_SUITS_BLK_F"; };
 
 	if(_level == 10 ) then { player addHeadgear "H_Hat_grey"; };
 
 	if(_level >= 3 && _level <= 10 && female) then { 
-		player forceAddUniform "REYK_SUITS_BLK_F";
+		player forceAddUniform "TRYK_SUITS_BLK_F";
 	} else { 
-		player forceAddUniform "REYK_SUITS_BLK_F";
+		player forceAddUniform "TRYK_SUITS_BLK_F";
 	};
 
 };

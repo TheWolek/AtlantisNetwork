@@ -312,7 +312,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" typeof cursorobject == 'land_cg_dexters' && player distance getmarkerpos 'drugdump' < 30 && ((myjob == 'Mafia' && drugcount <= 375) || (myjob == 'Biker' && drugcount2 <= 375)) "],
+		[" typeof cursorobject == 'land_cg_dexters' && player distance getmarkerpos 'drugdump' < 30 && ((myjob == 'Mafia' && drugcount <= 375) || (myjob == 'Biker' && drugcount2 <= 375) || (myjob == 'none')) "],
 		["Dump Drugs", " ['Dumping Drugs',60,'client_fnc_dumpDrugs',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",1]
 	],
 	

@@ -342,7 +342,14 @@ switch (_code) do
 	    };
 	};
 
-
+	//powalenie  
+	case 34:
+	{
+		if(_shift && !_ctrlKey  && currentWeapon player == "" && myjob =="Cop" && cursorObject isKindOf "Man") then {
+			[cursorObject] call client_fnc_tackleAction;
+			_handle = true;
+		};
+  	};
 
 
 
@@ -418,14 +425,6 @@ switch (_code) do
 			if(client_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
 				player selectWeapon client_curWep_h;
 			};
-		};
-  	};
-	//powalenie  
-	case 34:
-	{
-		if(_shift  && currentWeapon player = "" && myjob =="Cop" && cursorObject isKindOf "Man") then {
-			[cursorObject] call client_fnc_tackleAction;
-
 		};
   	};
 };

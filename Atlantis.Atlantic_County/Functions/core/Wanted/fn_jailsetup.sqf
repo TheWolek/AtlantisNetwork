@@ -20,7 +20,7 @@ removeuniform player;
 
 ["Remove","Karma",random(100),"Stress"] call client_fnc_sustain;
 
-player adduniform "U_C_WorkerCoveralls";
+player forceadduniform "U_C_WorkerCoveralls";
 ClientArrested = true;
 EM_allowed2 = false;
 _escaped = false;
@@ -58,7 +58,7 @@ if(!_escaped) then {
 	player playAction "foski_uncuff_front";
 	player forcewalk false; 
 	removeuniform player;
-	player adduniform "U_C_Poloshirt_blue";
+	player forceadduniform "U_C_Poloshirt_blue";
 	player linkItem "cg_tabletd";
 } else {
 	["Udało ci się oswobodzić z kajdanek", true] spawn domsg;
