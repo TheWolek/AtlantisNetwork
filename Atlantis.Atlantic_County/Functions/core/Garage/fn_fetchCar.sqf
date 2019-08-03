@@ -90,7 +90,7 @@ if((_this select 0) == 1) exitwith {
 	}; 
 
 	if( _vehicle isKindOf "Car") then {
-		_vehicle addItemCargoGlobal ["CG_wheel", 3];
+		_vehicle addItemCargoGlobal ["Toolkit", 3];
 		
 		if(myJob IN ["Cop","doc"]) then {
 			_vehicle addItemCargoGlobal ["np_woodbarrierlongpolice",4];
@@ -108,7 +108,7 @@ if((_this select 0) == 1) exitwith {
 
 
 	if(_cost > 0) then {
-		[format["The government paid %1 for that vehicle.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za ten pojazd.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, (_cost) call client_fnc_numberText] remoteExecCall["diag_log",2];
 

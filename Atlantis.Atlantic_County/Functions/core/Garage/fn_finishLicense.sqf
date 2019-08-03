@@ -1,5 +1,5 @@
 _garage = _this select 0;
-["License change was successful!", true] spawn domsg;
+["Zmiana licencji zakończona powodzeniem!", true] spawn domsg;
 
 {
 	_carcheck = _x;

@@ -2,7 +2,7 @@ mypos = _this select 0;
 
 createDialog "garage2";
 
-["You are in the race, pick your car!", true] spawn domsg;
+["Jesteś w wyścigu, wbierz samochód!", true] spawn domsg;
 
 ctrlSetText [1000, "Garage"];
 

@@ -10,7 +10,7 @@ _licenseNumericArray = ["0","1","2","3","4","5","6","7","8","9"];
 _licenseArr = _text splitString "";
 
 if(count _licenseArr > 7) then { _licenseArr resize 7; };
-if(count _licenseArr == 0) exitwith { ["Too Short", true] spawn domsg; };
+if(count _licenseArr == 0) exitwith { ["Za krótkie", true] spawn domsg; };
 _fuckit = false;
 _n = 0;
 {
@@ -19,10 +19,10 @@ _n = 0;
 	_n = _n + 1;
 } forEach _licenseArr;
 
-if(_fuckit) exitwith { ["Invalid Numberplate", true] spawn domsg; };
+if(_fuckit) exitwith { ["Nieprawidłowe numer rejestracyjny", true] spawn domsg; };
 
 _cashCheck = [1, 2000] call Client_fnc_checkMoney;
-if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for this!",2000 call client_fnc_numberText], true] spawn domsg; };	
+if!(_cashCheck) exitwith { [format["%1 - Masz za mało pieniędzy, żeby za to zapłacić!",2000 call client_fnc_numberText], true] spawn domsg; };	
 
 [plateChange,_text,player] remoteexec ["server_fnc_platechange",2];
 

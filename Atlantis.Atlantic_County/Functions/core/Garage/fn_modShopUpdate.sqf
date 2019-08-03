@@ -20,7 +20,7 @@ call
 		params ["_display"];
 
 		selectedVehicle = ((getMarkerPos "modshop_marker") nearEntities ["Car", 10]) select 0;
-		if(isNull selectedvehicle) exitWith { ["There is no vehicle in the shop to mod!", true] spawn domsg;};
+		if(isNull selectedvehicle) exitWith { ["Nie ma pojazdu w warsztacue do ulepszenia!", true] spawn domsg;};
 
 		if((typeOf selectedVehicle) find "ivory_" isEqualTo -1) then
 		{
@@ -53,7 +53,7 @@ call
 
 			if(_current_upgrade_level isEqualTo "2") exitWith
 			{
-				["This car is already fully upgraded!"]
+				["Ten pojazd jest w pełni ulepszony!"]
 			};
 
 			if(_current_upgrade_level isEqualTo "1") then

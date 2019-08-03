@@ -1,7 +1,7 @@
 params["_house"];
 if(myJob IN ['Cop','doc'] && lastGovtUseCar > time) exitWith {
 
-	["You recently got a vehicle out, please wait 5 minutes.", true] spawn domsg;
+	["Niedawno wyjąłeś samochód z garażu, musisz poczekać 5 minut.", true] spawn domsg;
 
 };
 
