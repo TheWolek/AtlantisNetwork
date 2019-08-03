@@ -351,6 +351,75 @@ switch (_code) do
 		};
   	};
 
+//F Key (Yelp & Sirens)
+	case 33: {
+
+		if(_shift && !_ctrlKey) then {
+            if(myjob == "Cop" && {vehicle player != player} && {!atlantis_siren2_active} && {((driver vehicle player) == player)}) then {
+                [] spawn {
+                    atlantis_siren2_active = true;
+					sleep 1.2;
+                    atlantis_siren2_active = false;
+                };
+                _veh = vehicle player;
+                if (isNil {_veh getVariable "siren2"}) then {_veh setVariable ["siren2",false,true];};
+                if ((_veh getVariable "siren2")) then {
+					["Yelp OFF", false] spawn domsg; 		
+                    _veh setVariable["siren2",false,true];
+                } else {
+					["Yelp ON", false] spawn domsg; 	
+                    _veh setVariable["siren2",true,true];
+					[_veh] remoteExec ["client_fnc_copsiren2",-2];
+                };
+            };
+        };
+
+		if(_shift && !_ctrlKey) then {
+            if(myjob == "EMS" && {vehicle player != player} && {!atlantis_siren2_active} && {((driver vehicle player) == player)}) then {
+                [] spawn {
+                    atlantis_siren2_active = true;
+					sleep 1.2;
+                    atlantis_siren2_active = false;
+                };
+                _veh = vehicle player;
+                if (isNil {_veh getVariable "siren2"}) then {_veh setVariable ["siren2",false,true];};
+                if ((_veh getVariable "siren2")) then {
+					["Warning OFF", false] spawn domsg; 		
+                    _veh setVariable["siren2",false,true];
+                } else {
+					["Warning ON", false] spawn domsg; 	
+                    _veh setVariable["siren2",true,true];
+					[_veh] remoteExec ["client_fnc_medicSiren2",-2];
+                };
+            };
+        };
+
+		if (_ctrlKey && !_shift) then {
+			if (myjob IN ["Cop","EMS"] && {vehicle player != player} && {!atlantis_siren_active} && {((driver vehicle player) == player)}) then {
+				[] spawn {
+					atlantis_siren_active = true;
+					sleep 4.7;
+					atlantis_siren_active = false;
+				};
+
+				_veh = vehicle player;
+				if (isNil {_veh getVariable "siren"}) then {_veh setVariable ["siren",false,true];};
+				if ((_veh getVariable "siren")) then {
+					["Wail OFF", false] spawn domsg; 		
+					_veh setVariable ["siren",false,true];
+				} else {
+					["Wail ON", false] spawn domsg; 		
+					_veh setVariable ["siren",true,true];
+					if(myjob =="Cop") then {
+						[_veh] remoteExec ["client_fnc_copSiren",-2];
+					} else {
+						[_veh] remoteExec ["client_fnc_medicSiren",-2];
+					};
+				};
+			};
+		};
+	};	
+
 
 
 	//Shift+5

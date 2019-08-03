@@ -161,6 +161,11 @@ class CfgFunctions
 			class viewoffice {};
 			class crashTackled {};
 			class tackleAction {};
+			class copSiren {};
+			class copSiren2 {};
+			class copSiren3 {};
+			class medicSiren {};
+			class medicSiren2 {};
 		};
 
 		class Wanted {

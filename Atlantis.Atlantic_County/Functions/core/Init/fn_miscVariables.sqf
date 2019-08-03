@@ -111,6 +111,8 @@ speedChecked = false;
 myTickets = 0;
 myWarrants = 0;
 mapHint = true;
+atlantis_siren_active = false;
+atlantis_siren2_active = false;
 
 client_fnc_cameraflash = compileFinal "
 	ppEffect = ppEffectCreate ['ColorCorrections',2500];
