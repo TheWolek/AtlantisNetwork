@@ -100,7 +100,7 @@ class CfgFunctions
 		class Drugs {
 			file = "Functions\core\Drugs";
 			class drinkTequila {};
-			class drugJob {}; 
+			//class drugJob {}; 
 			class druginit {};
 			class useDrug {};
 			class dumpDrugs {};
