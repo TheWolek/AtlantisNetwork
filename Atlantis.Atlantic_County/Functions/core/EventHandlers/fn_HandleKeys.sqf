@@ -266,7 +266,7 @@ switch (_code) do
 
 
 		if (_ctrlKey && myjob IN ["Cop","doc"]) then {
-			if(handgunweapon player == "taserC") then {
+			if(handgunweapon player == "taser") then {
 				_weapon = handgunweapon player;
 				player removeweapon _weapon; player additemtobackpack _weapon;
 				[] spawn { 
@@ -285,7 +285,7 @@ switch (_code) do
 				[] spawn { 
 
 					if("taser" in backpackItems Player) then {
-						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "taserC"; player addweapon "taserC"; player selectweapon "taserC"; player addItemToBackpack "RH_16Rnd_40cal_usp";
+						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "taser"; player addweapon "taser"; player selectweapon "taser"; player addItemToBackpack "RH_16Rnd_40cal_usp";
 						444 cutRsc ["HUDtasercop","PLAIN"]; 
 					} else {
 						["Błąd: Brak Paralizatora w plecaku", true] spawn domsg;

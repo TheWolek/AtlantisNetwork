@@ -604,30 +604,78 @@ if(_condition == "glasses") then {
 };
 /*============================================ POLICE STORE =====================================*/
 if(_condition == "police_gunstore") then {
-
-	_gunStorePistols = [
-
+	_gspl1 = [
 		["CG_BATON",nil,1,1],
 		["RH_g17",nil,1,1],
-		["RH_p226",nil,1,1],
 		["RH_usp",nil,1,1],
-		["RH_m1911",nil,1,1],
-		["RH_bull",nil,1,1],
+		["taser",nil,1,1]		
+	];
+	_gspl2 = [
+		["RH_p226",nil,1,1]
+	];
+	_gspl3 = [
+		["RH_m1911",nil,1,1]
+	];
+	_gspl4 = [
+		["RH_bull",nil,1,1]
+	];
+	_gspl5 = [
 		["RH_Deaglem",nil,1,1],
+		["CSW_M870",nil,1,1]		
+	];
+	_gspl6 = [
+		["hlc_smg_MP5N",nil,1,1]
+	];
+	_gspl891011 = [
+		["RH_m4",nil,1,1]
+	];
+	_gspmswat = [
 		["CSW_FN57_Ballistic_Shield",nil,1,1],
-		["taser",nil,1,1],
-		["CSW_M870",nil,1,1],
-		["hlc_smg_MP5N",nil,1,1],
-		["RH_m4",nil,1,1],
+		["CSW_FN57_Shield_P",nil,1,3],
 		["RH_M4m_b",nil,1,1]
-
-
 	];
 
-	{
-		_storeList pushback _x;
-	} foreach _gunStorePistols;
-
+	if(player getvariable "cop" >= 1) then {
+		{
+			_storeList pushback _x;
+		} foreach _gspl1;
+	};
+	if(player getvariable "cop" >= 2) then {
+		{
+			_storeList pushback _x;
+		} foreach _gspl2;
+	};
+	if(player getvariable "cop" >= 3) then {
+		{
+			_storeList pushback _x;
+		} foreach _gspl3;
+	};
+	if(player getvariable "cop" >= 4) then {
+		{
+			_storeList pushback _x;
+		} foreach _gspl4;
+	};
+	if(player getvariable "cop" >= 5) then {
+		{
+			_storeList pushback _x;
+		} foreach _gspl5;
+	};
+	if(player getvariable "cop" >= 6) then {
+		{
+			_storeList pushback _x;
+		} foreach _gspl6;
+	};
+	if(player getvariable "cop" >= 7) then {
+		{
+			_storeList pushback _x;
+		} foreach _gspl891011;
+	};
+	// marshale i swat
+	if(player in currentMarshals || 9 IN licenseArray || 8 in licenseArray) then {
+		{
+			_storeList pushback _x;
+		} foreach _gspmswat;
+	};
 };
 
 
@@ -635,37 +683,51 @@ if(_condition == "police_veststore") then {
 
 	_police_veststoree = [
 		["dtdev_vest_hivis",nil,1,3,3],
-		["EF_BS",nil,1,3,3],
-		["EF_SH_BK",nil,1,3,3],
-		["EF_SH_BW",nil,1,3,3],
-		["TAC_PBDFG2CPMSL_B_1",nil,1,3,3],
 		["TAC_PBDFG2CPP_CY_1",nil,1,3,3],
 		["TAC_PBDFG2CPP_BK_1",nil,1,3,3],
-		["TAC_V_tacv1_MSL",nil,1,3,3],
-		["TAC_V_tacv1LC_MSL",nil,1,3,3],
+
 		["TAC_V_tacv1_P",nil,1,3,3],
-		["TAC_V_tacv1LC_P",nil,1,3,3],		
-		["Gsg9_PlateCarrier_Black_Assault",nil,1,3,3],
-		["Gsg9_PlateCarrier_Brown_Assault",nil,1,3,3],
-		["KSK_PlateCarrier_FlecktarnW_Specialist",nil,1,3,3],
-		["dtdev_usms_sog_vest_blk_camo",nil,1,3,3],
-		["dtdev_usms_sog_vest_blk",nil,1,3,3],
-		["dtdev_usms_sog_vest_grn",nil,1,3,3],
-		["Gsg9_PlateCarrier_Brown_SupportHeavy",nil,1,3,3]
+		["TAC_V_tacv1LC_P",nil,1,3,3],
+		["EF_BS",nil,1,3,3],
+		["EF_SH_BK",nil,1,3,3],
+		["EF_SH_BW",nil,1,3,3]		
+
 
 
 	];
-
 	{
 		_storeList pushback _x;
 	} foreach _police_veststoree;
 
+	if (player IN currentMarshals) then {
+		_police_marshalvest = [
+			["TAC_PBDFG2CPMSL_B_1",nil,1,3,3],
+			["TAC_V_tacv1_MSL",nil,1,3,3],
+			["TAC_V_tacv1LC_MSL",nil,1,3,3],					
+			["dtdev_usms_sog_vest_blk_camo",nil,1,3,3],
+			["dtdev_usms_sog_vest_blk",nil,1,3,3],
+			["dtdev_usms_sog_vest_grn",nil,1,3,3],
+			["Gsg9_PlateCarrier_Black_Assault",nil,1,3,3],
+			["Gsg9_PlateCarrier_Brown_Assault",nil,1,3,3],
+			["KSK_PlateCarrier_FlecktarnW_Specialist",nil,1,3,3],
+			["Gsg9_PlateCarrier_Brown_SupportHeavy",nil,1,3,3],
+			["Gsg9_Assault_Vest_Coyot",nil,1,3,3],
+			["Gsg9_Medic_Vest_Coyot",nil,1,3,3]
+
+		];
+		{
+		_storeList pushback _x;
+		} foreach _police_marshalvest;
+	};	
+
 };
 if(_condition == "police_uniformstore") then {
-
-	_police_uniformstore = [
+	_marshaluniformstore = [
+		["TRYK_U_denim_hood_blk",nil,1,3,1],
+		["TRYK_U_B_BLKBLK_CombatUniform",nil,1,3,1],		
 		["dtdev_usms_sog_uni_blk",nil,1,3,1],
 		["dtdev_usms_sog_uni_green",nil,1,3,1],
+		["dtdev_marshal_shirt",nil,1,3,1],
 		["TRYK_shirts_DENIM_BK",nil,1,3,1],
 		["TRYK_shirts_DENIM_BL",nil,1,3,1],
 		["TRYK_shirts_DENIM_BWH",nil,1,3,1],
@@ -673,21 +735,35 @@ if(_condition == "police_uniformstore") then {
 		["TRYK_shirts_DENIM_RED2",nil,1,3,1],
 		["TRYK_shirts_DENIM_WHB",nil,1,3,1],
 		["TRYK_shirts_DENIM_ylb",nil,1,3,1],
-		["TRYK_U_denim_hood_blk",nil,1,3,1],
-		["TRYK_U_B_BLKBLK_CombatUniform",nil,1,3,1],
 		["EF_HMMSL_1",nil,1,3,1],
 		["EF_HMMSL_2",nil,1,3,1],
-		["EF_HMP_1",nil,1,3,1],
-		["EF_HMP_2",nil,1,3,1],
-		["EF_M_P_U",nil,1,3,1],
-		["TRYK_U_B_3CD_BLK_BDUTshirt",nil,1,3,1]
+		["TRYK_U_B_3CD_BLK_BDUTshirt",nil,1,3,1]					
+	];
 
+	_dtuuniformstore = [
+
+	];
+
+	_police_uniformstore = [
+		["EF_HMP_1",nil,1,3,1],
+		["EF_HMP_2",nil,1,3,1]
 	];
 
 	{
 		_storeList pushback _x;
-	} foreach _police_uniformstore
+	} foreach _police_uniformstore;
 
+	if (player IN currentMarshals) then {	
+		{
+			_storeList pushback _x;
+		} foreach _marshaluniformstore;
+	};
+
+	if (player in currentDetectives) then {
+		{
+			_storeList pushback _x;
+		} foreach _dtuuniformstore;
+	};
 };
 
 

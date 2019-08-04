@@ -17,7 +17,7 @@ _dmv = player getvariable "dmv";
 _da = player getvariable "da";
 
 if(myJob == "doc" && _doc < 6) exitwith { ["Musisz być na 6 randze, aby awansować ludzi", true] spawn domsg; };
-if(myJob == "Cop" && _cop < 6) exitwith { ["Musisz być na 6 randze, aby awansować ludzi", true] spawn domsg; };
+if(myJob == "Cop" && _cop < 8) exitwith { ["Musisz być na 8 randze, aby awansować ludzi", true] spawn domsg; };
 if(myJob == "EMS" && _ems < 6) exitwith { ["Musisz być na 6 randze, aby awansować ludzi", true] spawn domsg; };
 if(myJob == "Mafia" && _Mafia < 6) exitwith { ["Musisz być na 6 randze, aby awansować ludzi", true] spawn domsg; };
 if(myJob == "Biker" && _Biker < 6) exitwith { ["Musisz być na 6 randze, aby awansować ludzi", true] spawn domsg; };
