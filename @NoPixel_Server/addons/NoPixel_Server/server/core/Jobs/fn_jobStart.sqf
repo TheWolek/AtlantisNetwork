@@ -74,21 +74,21 @@ if (str _jobtype find "Fire Dispatch" > -1) exitwith {
 	//[] spawn server_fnc_addJob;
 };
 
-if (str _jobtype find "Fedex Worker" > -1) exitwith {
+if (str _jobtype find "Kurier" > -1) exitwith {
 	[] remoteExec ["client_fnc_mailSystem",_player];
 	currentmailmen pushback _player;
 	publicvariable "currentMailMen";
 	//[] spawn server_fnc_addJob;
 };
 
-if (str _jobtype find "Taxi Driver" > -1) exitwith {
+if (str _jobtype find "Taksówkarz" > -1) exitwith {
 	[] remoteExec ["client_fnc_startTaxi",_player];
 	currentTaxiDrivers pushback _player;
 	publicvariable "currentTaxiDrivers";
 	//[] spawn server_fnc_addJob;
 };
 
-if (str _jobtype find "Security" > -1) exitwith {
+if (str _jobtype find "Ochrona" > -1) exitwith {
 	[] remoteExec ["client_fnc_startSecurity",_player];
 	currentsecurity pushback _player;
 	publicvariable "currentSecurity";
@@ -160,7 +160,7 @@ if (str _jobtype find "Tow Truck Driver" > -1) exitwith {
 	//[] spawn server_fnc_addJob;
 };
 
-if (str _jobtype find "Garbage Man" > -1) exitwith {
+if (str _jobtype find "Śmieciarz" > -1) exitwith {
 	[] remoteExec ["client_fnc_startGarbage",_player];
 	currentTrashMan pushback _player;
 	publicvariable "currentTrashman";

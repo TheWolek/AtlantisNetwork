@@ -20,7 +20,7 @@ while{true} do {
 	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Fedex Worker"; 
+	activeJobs pushback "Kurier"; 
 };
 
 _jobcount = count currentsecurity;
@@ -28,7 +28,7 @@ while{true} do {
 	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Security"; 
+	activeJobs pushback "Ochrona"; 
 };
 
 
@@ -46,7 +46,7 @@ while{true} do {
 	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Garbage Man"; 
+	activeJobs pushback "Śmieciarz"; 
 };
 
 
@@ -64,7 +64,7 @@ while{true} do {
 	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Repairman"; 
+	activeJobs pushback "Mechanik"; 
 };
 
 
@@ -73,7 +73,7 @@ while{true} do {
 	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Taxi Driver"; 
+	activeJobs pushback "Taksówkarz"; 
 };
 
 

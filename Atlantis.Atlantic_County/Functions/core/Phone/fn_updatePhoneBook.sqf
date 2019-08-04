@@ -328,7 +328,7 @@ _allJobs = [
 	["Police Dispatch",currentPoliceDispatch],
 	["Fire/EMS Dispatch",currentMedicDispatch],
 
-	["Security",currentSecurity],
+	["Ochrona",currentSecurity],
 	["Repairmen",currentRepairmen],
 
 	["Judges",currentJudges],
@@ -344,7 +344,7 @@ _allJobs = [
 	["Mail Men",currentMailmen],
 	["Tow Trucks",currentTowTruckDrivers],
 	["News Worker",currentNewsMan],
-	["Bus Drivers",currentBusDrivers],
+	["Kierowca Autobusus",currentBusDrivers],
 	["Taxi",currentTaxiDrivers]
 	
 ];

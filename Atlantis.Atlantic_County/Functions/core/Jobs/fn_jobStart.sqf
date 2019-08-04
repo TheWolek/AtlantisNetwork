@@ -129,20 +129,20 @@ if (str _jobtype find "DA" > -1) exitwith {
 
 
 
-if (str _jobtype find "Fedex Worker" > -1) exitwith {
+if (str _jobtype find "Kurier" > -1) exitwith {
 	[] spawn client_fnc_mailSystem;
 	currentmailmen pushback _player;
 	publicvariable "currentMailMen";	
 };
 
-if (str _jobtype find "Bus Driver" > -1) exitwith {
+if (str _jobtype find "Kierowca Autobusu" > -1) exitwith {
 	[] spawn client_fnc_startBus;
 	currentBusDrivers pushback _player;
 	publicvariable "currentBusDrivers";
 };
 
 
-if (str _jobtype find "Taxi Driver" > -1) exitwith {
+if (str _jobtype find "Taksówkarz" > -1) exitwith {
 	[] spawn client_fnc_startTaxi;
 	currentTaxiDrivers pushback _player;
 	publicvariable "currentTaxiDrivers";
@@ -219,7 +219,7 @@ if (str _jobtype find "Tow Truck Driver" > -1) exitwith {
 	publicvariable "currentTowTruckDrivers";
 };
 
-if (str _jobtype find "Garbage Man" > -1) exitwith {
+if (str _jobtype find "Śmieciarz" > -1) exitwith {
 	[] spawn client_fnc_startGarbage;
 	currentTrashMan pushback _player;
 	publicvariable "currentTrashman";	

@@ -9,7 +9,7 @@ diag_log format ["job action %1", _sender];
 
 _units = [];
 
-if (_jobType == "Fedex Worker") exitwith {
+if (_jobType == "Kurier") exitwith {
 	if(currentmailmen isequalto []) exitwith { [] remoteExec ["client_fnc_completemail",_sender]; };
 	_units = currentmailmen;
 	_selection = _units call BIS_fnc_selectRandom;

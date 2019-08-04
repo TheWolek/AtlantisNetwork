@@ -54,7 +54,7 @@ if(!taskrunning) then {
 					["You successfully finished that job!", true] spawn domsg;
 
 
-					["add","Karma",1,"Fedex Worker"] call client_fnc_sustain;
+					["add","Karma",1,"Kurier"] call client_fnc_sustain;
 					_level_check = (client_level_array select 1);
 					_amount = 0;
 					if(_level_check > 10 && _level_check < 300) then { _amount = _level_check / 10; };

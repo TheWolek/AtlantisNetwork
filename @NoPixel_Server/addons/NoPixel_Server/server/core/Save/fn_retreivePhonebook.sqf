@@ -20,7 +20,7 @@ _information = [
 	["Mail Men",currentMailmen],
 	["Tow Trucks",currentTowTruckDrivers],
 	["News Worker",currentNewsMan],
-	["Bus Drivers",currentBusDrivers],
+	["Kierowca Autobusus",currentBusDrivers],
 	["Taxi",currentTaxiDrivers]
 	
 ];

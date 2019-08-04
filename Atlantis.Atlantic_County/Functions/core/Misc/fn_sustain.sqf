@@ -11,7 +11,7 @@ _jobName = param [3,"",[""]];
 
 
 	//["add","Karma",1,"MoneyOwed"] call client_fnc_sustain;
-	//["add","Karma",1,"Fedex Worker"] call client_fnc_sustain;
+	//["add","Karma",1,"Kurier"] call client_fnc_sustain;
 	//["remove","Karma",1,"Default"] call client_fnc_sustain;
 if(_type == "Karma") then {
 
@@ -28,7 +28,7 @@ if(_type == "Karma") then {
 
 	};
 
-	if(_jobName == "Fedex Worker") then {
+	if(_jobName == "Kurier") then {
 		_arraySelection = 1;
 
 		if (_adjust == "Add") then {
@@ -72,7 +72,7 @@ if(_type == "Karma") then {
 
 	};//
 
-	if(_jobName == "Garbage Man") then {
+	if(_jobName == "Śmieciarz") then {
 		_arraySelection = 5;
 
 		if (_adjust == "Add") then {
@@ -118,7 +118,7 @@ if(_type == "Karma") then {
 
 	};//
 
-	if(_jobName == "Taxi Driver") then {
+	if(_jobName == "Taksówkarz") then {
 		_arraySelection = 9;
 
 

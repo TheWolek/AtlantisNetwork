@@ -35,7 +35,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 			playertasks pushback [[1064,3667,0.014],"dump"];	
 			[getpos ((playertasks select 0) select 0)] call client_fnc_jobMarker;
 			["Aktualna Praca (Oznaczona na mapie): Zbieranie Śmieci", true] spawn domsg;
-			["add","Karma",15,"Garbage Man"] call client_fnc_sustain;			
+			["add","Karma",15,"Śmieciarz"] call client_fnc_sustain;			
 		} else {
 			
 			while{true} do {
@@ -79,7 +79,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 				if(_level_check > 10 && _level_check < 300) then { _amount = _level_check / 9; };
 				if(_level_check > 299 && _level_check < 600) then { _amount = _level_check / 7; };
 				if(_level_check > 599) then { _amount = _level_check / 5; };
-				["add","Karma",3,"Garbage Man"] call client_fnc_sustain;
+				["add","Karma",3,"Śmieciarz"] call client_fnc_sustain;
 				_amount = round(_amount);
 				if(_amount > 0) then {
 					if(_amount > 150) then { _amount = 150; };
@@ -96,7 +96,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 				_warnings = 0;
 				paycheck = paycheck + 250;
 				playertasks deleteat 0;
-				["add","Karma",10,"Garbage Man"] call client_fnc_sustain;
+				["add","Karma",10,"Śmieciarz"] call client_fnc_sustain;
 
 				_level_check = (client_level_array select 5);
 				_amount = 0;
