@@ -29,7 +29,7 @@ if(player getVariable["JailTracked",FALSE] && cursorobject distance player < 25)
 };
 
 if((getposATL player) distance (getposATL _rock) > 25) exitwith {};
-if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [2123.79,8750.29,0.00143909] < 3000) then {   
+if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [4957.66,689.13,0.00144005] < 300) then {   
 	if(_rock IN myoil) exitwith { ["Nie ma więcej zasobów w tej skale!", true] spawn domsg; };
 	_sound = round(random 5);
 	switch(_sound) do {
@@ -73,7 +73,7 @@ if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 ||
 
 };
 
-if ( (str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [3925.83,2800.64,0.00206757] < 1000 ) then {   
+if ( (str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [6407.09,5816.01,0.00143814] < 220 ) then {   
 	if(_rock IN mymetal) exitwith { ["Nie ma więcej zasobów w tej skale!", true] spawn domsg;  };
 	_sound = round(random 5);
 	switch(_sound) do {

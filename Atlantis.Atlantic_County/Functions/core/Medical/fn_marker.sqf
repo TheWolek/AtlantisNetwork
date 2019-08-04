@@ -157,7 +157,7 @@ if (_type == "ALL") then {
         ["Pelt Curing",[4215.46,5725.09,0.00120544]],//to change
         ["Bars/Wood/Oil Selling",[3159.32,2470.09,0]],
         ["Fish Processing",[9803.09,3003,0.00113201]],//to change
-		["Open Mining", [4074.46,2447.46,0.00144005]],//to change
+		["Open Mining", [6407.09,5816.01,0.00143814]],//to change
         ["Rare Item Trading", [5447.27,5165.15,0.002213]],//to change
         ["Fish Selling", [4734.05,2411.46,0.00143862]],//to change
         ["Housing Upgrading",[855.632,1092.4,0.00143909]]
@@ -434,7 +434,7 @@ if(_type == "Processing") then {
         ["Pelt Curing",[4215.46,5725.09,0.00120544]],
         ["Bars/Wood/Oil Selling",[8644.31,6861.77,0.00143623]],
         ["Fish Processing",[9803.09,3003,0.00113201]],
-		["Open Mining", [4074.46,2447.46,0.00144005]],
+		["Open Mining", [6407.09,5816.01,0.00143814]],
         ["Rare Item Trading", [5447.27,5165.15,0.002213]],
         ["Fish Selling", [4734.05,2411.46,0.00143862]],
         ["Housing Upgrading",[7924.76,2724.39,0.00143814]]

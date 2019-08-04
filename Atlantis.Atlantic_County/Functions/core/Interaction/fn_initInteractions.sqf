@@ -418,12 +418,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" PLAYER DISTANCE [7483.25,2218.8,0.00143814] < 15 && !imRestrained && !(player getVariable ['surrender', false]) "],
+		[" PLAYER DISTANCE [800.635,1386.1,0.00143862] < 15 && !imRestrained && !(player getVariable ['surrender', false]) "],
 		["Tańcz", " [0] spawn client_fnc_dance; ",1]
 	],
 
 	[
-		[" PLAYER DISTANCE [7483.25,2218.8,0.00143814] < 15 && !imRestrained && !(player getVariable ['surrender', false]) "],
+		[" PLAYER DISTANCE [800.635,1386.1,0.00143862] < 15 && !imRestrained && !(player getVariable ['surrender', false]) "],
 		["Przestań tańczyć", " [player, ''] remoteExec ['switchMove'] ",1]
 	],
 
