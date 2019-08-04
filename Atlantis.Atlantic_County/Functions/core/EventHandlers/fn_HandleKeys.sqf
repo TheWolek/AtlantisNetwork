@@ -284,7 +284,7 @@ switch (_code) do
 				player removeweapon _weapon; player additemtobackpack _weapon;
 				[] spawn { 
 
-					if("taserC" in backpackItems Player) then {
+					if("taser" in backpackItems Player) then {
 						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "taserC"; player addweapon "taserC"; player selectweapon "taserC"; player addItemToBackpack "RH_16Rnd_40cal_usp";
 						444 cutRsc ["HUDtasercop","PLAIN"]; 
 					} else {

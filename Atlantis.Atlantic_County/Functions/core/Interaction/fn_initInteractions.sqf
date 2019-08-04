@@ -484,7 +484,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" !imrestrained && !(player getVariable ['surrender', false]) "],
-		["Ulecz siebie", " [player] spawn client_fnc_medicUpdater; ",1]
+		["Ulecz się", " [player] spawn client_fnc_medicUpdater; ",1]
 	],
 
 	[
@@ -537,17 +537,17 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["count attachedObjects player > 0 && attachedcar"],
-		["Upuść pojazdu", " [] spawn client_fnc_detach; ",2]
+		["Upuść pojazd", " [] spawn client_fnc_detach; ",2]
 	],
 
 	[
 		[" !(player getVariable ['surrender',false]) && !imrestrained && vehicle player == player "],
-		["Zdejmij ręce", " [] spawn client_fnc_surrender; ",2]
+		["Poddaj się", " [] spawn client_fnc_surrender; ",2]
 	],
 	
 	[
 		[" player getVariable ['surrender', false] && !imrestrained && vehicle player == player"],
-		["Poddaj się", " player setVariable ['surrender', nil, true]; ",2]
+		["Zdejmij ręce", " player setVariable ['surrender', nil, true]; ",2]
 	],
 
 	[
@@ -1270,22 +1270,22 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" myJob IN ['Cop'] && !dispatch && (player getvariable 'cop') > 0 "],
-		["Zapisz się dyspozytor", "[player,'Police Dispatch'] spawn client_fnc_jobstart;",4]
+		["Centrala", "[player,'Police Dispatch'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		[" myJob IN ['doc'] && !dispatch && (player getvariable 'doc') > 0 "],
-		["Zapisz się dyspozytor", "[player,'Doc Dispatch'] spawn client_fnc_jobstart;",4]
+		["Centrala", "[player,'Doc Dispatch'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		["myjob == 'EMS' && !dispatch && (player getvariable 'ems') > 0 "],
-		["Zapisz się dyspozytor", "[player,'Medic Dispatch'] spawn client_fnc_jobstart;",4]
+		["Centrala", "[player,'Medic Dispatch'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		["dispatch"],
-		["Wypisz się dyspozytor", "Dispatch = false; [player] remoteExec ['server_fnc_quitDispatch',2];",4]
+		["Wypisz się z centrali", "Dispatch = false; [player] remoteExec ['server_fnc_quitDispatch',2];",4]
 	],
 
 
@@ -1409,51 +1409,51 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" myjob == 'none' && (player getvariable 'cop') > 0 && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Zapisz się PD", "[] call client_fnc_setlastsave; [player,'Cop'] spawn client_fnc_jobstart;",4]
+		["START PD", "[] call client_fnc_setlastsave; [player,'Cop'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		[" myjob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Zapisz się PD", "[1] call client_fnc_jobEnd",4]
+		["STOP PD", "[1] call client_fnc_jobEnd",4]
 	],
 	[
 		[" myjob == 'none' && (player getvariable 'ems') > 0 && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) "],
-		["Zapisz się EMS", "[] call client_fnc_setlastsave; [player,'EMS'] spawn client_fnc_jobstart;",4]
+		["START EMS", "[] call client_fnc_setlastsave; [player,'EMS'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		["myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1'])"],
-		["Zapisz się EMS", "[1] call client_fnc_jobEnd",4]
+		["STOPEMS", "[1] call client_fnc_jobEnd",4]
 	],
 
 	[
 		["myjob == 'none' && (player getvariable 'legal') > 0 && (player distance [825.717,1634.34,0.00143814] < 20 ) && !(Senator || Mayor)"],
-		["Zapisz się DOJ", "[player,'Legal'] spawn client_fnc_jobstart;",4]
+		["START DOJ", "[player,'Legal'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		["myjob == 'Legal' && (player distance [825.717,1634.34,0.00143814] < 20 )"],
-		["Zapisz się DOJ", "[0] call client_fnc_jobEnd",4]
+		["STOP DOJ", "[0] call client_fnc_jobEnd",4]
 	],
 
 	[
 		["20 IN licenseArray && !(player IN currentLawyers) && ( typeof cursorobject == 'Land_Centrelink' )"],
-		["Zapisz się Prawnik", " currentLawyers pushBack player; publicVariable 'currentLawyers'; ",4]
+		["START Prawnik", " currentLawyers pushBack player; publicVariable 'currentLawyers'; ",4]
 	],
 
 	[
 		["(player IN currentLawyers) && ( typeof cursorobject == 'Land_Centrelink' )"],
-		["Wypisz się Prawnik", " currentLawyers = currentLawyers - [player]; publicVariable 'currentLawyers'; ",4]
+		["STOP Prawnik", " currentLawyers = currentLawyers - [player]; publicVariable 'currentLawyers'; ",4]
 	],
 
 	[
 		["27 IN licenseArray && !(player IN currentParalegals) && ( typeof cursorobject == 'Land_Centrelink' )"],
-		["Zapisz się Paralegal", " currentParalegals pushBack player; publicVariable 'currentParalegals'; ",4]
+		["START Paralegal", " currentParalegals pushBack player; publicVariable 'currentParalegals'; ",4]
 	],
 
 	[
 		["player IN currentParalegals && ( typeof cursorobject == 'Land_Centrelink' )"],
-		["Wypisz się Paralegal", " currentParalegals = currentParalegals - [player]; publicVariable 'currentParalegals'; ",4]
+		["STOPParalegal", " currentParalegals = currentParalegals - [player]; publicVariable 'currentParalegals'; ",4]
 	],
 
 
@@ -1470,22 +1470,22 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["myjob == 'none' && (player getvariable 'da') > 0 && player distance [817.614,1637.97,0.00143766] < 20"],
-		["Zapisz się prokurator", "[player,'DA'] spawn client_fnc_jobstart;",4]
+		["START prokurator", "[player,'DA'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		["myjob == 'DA' && player distance [817.614,1637.97,0.00143766] < 20 "],
-		["Wypisz się prokurator", "[0] call client_fnc_jobEnd",4]
+		["STOP prokurator", "[0] call client_fnc_jobEnd",4]
 	],
 
 	[
 		["myjob == 'none' && (player getvariable 'mafia') > 0 && (typeof cursorobject IN ['Land_buildingsCasino2'])"],
-		["Zapisz się Mafia", "[player,'Mafia'] spawn client_fnc_jobstart;",4]
+		["START Mafia", "[player,'Mafia'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		["myjob == 'Mafia' && (typeof cursorobject IN ['Land_buildingsCasino2'])"],
-		["Wypisz się Mafia", "[0] call client_fnc_jobEnd",4]
+		["STOP Mafia", "[0] call client_fnc_jobEnd",4]
 	],
 
 	/*

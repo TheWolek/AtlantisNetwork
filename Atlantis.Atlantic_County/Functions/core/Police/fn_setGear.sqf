@@ -97,7 +97,7 @@ if(myjob == "Cop") then {
 			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-		player addweapon "taserC";
+		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 
@@ -201,7 +201,7 @@ if(myjob == "Cop") then {
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
 
-		player addweapon "taserC";
+		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 		currentDetectives pushBack player;
@@ -312,7 +312,7 @@ if(myjob == "Cop") then {
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
 
-		player addweapon "taserC";
+		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 		currentAIA pushBack player;
@@ -428,7 +428,7 @@ if(myjob == "Cop") then {
 
 
 	
-		player addweapon "taserC";
+		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 
@@ -592,7 +592,7 @@ if(myjob == "doc") then {
 		};
 
 		player addweapon "cg_baton";
-		player addweapon "taserC";
+		player addweapon "taser";
 		player addWeapon "Binocular";
 
 		player linkItem "ItemMap";

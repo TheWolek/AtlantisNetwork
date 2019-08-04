@@ -7,7 +7,7 @@ _display = findDisplay 9999;
 _list = _display displayCtrl 9001;
 
 if(0 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Driver's License";
+	_list lbAdd "Prawo Jazdy";
 	_list lbSetdata [(lbSize _list)-1,str(0)];
 };
 
@@ -17,32 +17,32 @@ if(1 IN _licenses && myJob == "Cop") then {
 };
 
 if(2 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Mining License";
+	_list lbAdd "Licencja górnika";
 	_list lbSetdata [(lbSize _list)-1,str(2)];
 };
 
 if(3 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Logging License";
+	_list lbAdd "Licencja drwala";
 	_list lbSetdata [(lbSize _list)-1,str(3)];
 };
 
 if(4 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Fishing License";
+	_list lbAdd "Licencja rybaka";
 	_list lbSetdata [(lbSize _list)-1,str(4)];
 };
 
 if(5 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Truck License";
+	_list lbAdd "Prawo Jazdy na ciężarówki";
 	_list lbSetdata [(lbSize _list)-1,str(5)];
 };
 
 if(6 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Pilot's License";
+	_list lbAdd "Licencja pilota";
 	_list lbSetdata [(lbSize _list)-1,str(6)];
 };
 
 if(7 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Oil Trade License";
+	_list lbAdd "Licencja handlarza oleju";
 	_list lbSetdata [(lbSize _list)-1,str(7)];
 };
 
@@ -97,12 +97,12 @@ if(17 IN _licenses && (player getVariable "doc" == 10 || 16 IN licenseArray) && 
 };
 
 if(18 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Boat License";
+	_list lbAdd "Patent motorowodny";
 	_list lbSetdata [(lbSize _list)-1,str(18)];
 };
 
 if(19 IN _licenses && (myJob == "Mobster")) then {
-	_list lbAdd "Casino Membership";
+	_list lbAdd "Członkostwo Kasyna";
 	_list lbSetdata [(lbSize _list)-1,str(19)];
 }; 
 
@@ -142,6 +142,6 @@ if(26 IN _licenses && (player getVariable "ems" == 10 || 25 IN licenseArray) && 
 };
 
 if(27 IN _licenses && (myJob == "Legal" && player getVariable "legal" >= 6)) then {
-	_list lbAdd "Paralegal License";
+	_list lbAdd "Licencja prawnika";
 	_list lbSetdata [(lbSize _list)-1,str(27)];
 }; 
