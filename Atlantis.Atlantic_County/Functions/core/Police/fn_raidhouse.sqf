@@ -28,11 +28,11 @@ if(_warrant2 != "") then { _warrant3 = (call compile _warrant2); };
 
 if (_warrant > -1) exitWith {
 
-	if (_warrant3 select 6 != 3) exitWith { ["You must select a search warrant.", true] spawn domsg; };
-	if (_suspect == -1) exitWith { ["You must select a person.", true] spawn domsg; };
-	if ((getplayeruid _suspect3) != (_warrant3 select 2)) exitWith { ["You must select the correct person.", true] spawn domsg; };
-	if (_warrant3 select 7 == 0) exitWith { ["This warrant is not yet signed.", true] spawn domsg; };
-	if !(myJob == "Cop" && (player getVariable 'cop' >= 8 || 8 IN licenseArray || 9 IN licenseArray)) exitWith { ["You must be a SWAT Member or supervisor to initiate a raid.", true] spawn domsg; };
+	if (_warrant3 select 6 != 3) exitWith { ["Musisz wybrać nakaz.", true] spawn domsg; };
+	if (_suspect == -1) exitWith { ["Musisz wybrać osobę.", true] spawn domsg; };
+	if ((getplayeruid _suspect3) != (_warrant3 select 2)) exitWith { ["Musisz wybrac poprawną osobę.", true] spawn domsg; };
+	if (_warrant3 select 7 == 0) exitWith { ["Ten nakaz nie jest podpisany.", true] spawn domsg; };
+	if !(myJob == "Cop" && (player getVariable 'cop' >= 8 || 8 IN licenseArray || 9 IN licenseArray || player IN currentMarshals)) exitWith { ["Aby zacząć nalot na dom musisz być członkiem SWAT, Supervisorem lub Marshalem.", true] spawn domsg; };
 
 	[player] remoteexec ["client_fnc_raidhouse", _suspect3];
 
@@ -44,9 +44,9 @@ if (_warrant > -1) exitWith {
 
 if (_suspect > -1) exitWith {
 
-	if ( myJob != "DA" && !(myJob == "Cop" && (player IN currentDetectives || (player getVariable "cop") >= 6 )) ) exitWith { ["You must be either a detective, prosecutor, or supervisor to submit warrants.", true] spawn domsg; };
+	if ( myJob != "DA" && !(myJob == "Cop" && (player IN currentDetectives || (player getVariable "cop") >= 6 )) ) exitWith { ["Musisz być detektywem, supervisorem lub prokuratorem, aby wydać nakaz.", true] spawn domsg; };
 
-	if (count nearestobjects[player,["Land_buildingscourthouse1"],100] == 0) exitWith { ["You must be next to the court house to submit a warrant. Don't forget to approach a judge too.", true] spawn domsg; };
+	if (count nearestobjects[player,["Land_buildingscourthouse1"],100] == 0) exitWith { ["Musisz pójść do sądu, aby wydać nakaz. Nie zapomnij poprozmawiac z sędzią.", true] spawn domsg; };
 	
 	currentcursortarget = _suspect3;
 

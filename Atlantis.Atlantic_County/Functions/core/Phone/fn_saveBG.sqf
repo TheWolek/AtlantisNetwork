@@ -13,4 +13,4 @@ if(isNil "phoneBackground") exitwith { ["Error saving", true] spawn domsg; };
 
 
 
-["You were charged $1.00 for your new phone background!", false] spawn domsg; 
+["Zapłaciłeś $1.00 za nowe tło!", false] spawn domsg; 

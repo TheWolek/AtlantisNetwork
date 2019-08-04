@@ -266,13 +266,13 @@ switch (_code) do
 
 
 		if (_ctrlKey && myjob IN ["Cop","doc"]) then {
-			if(handgunweapon player == "CSW_M26C") then {
+			if(handgunweapon player == "taserC") then {
 				_weapon = handgunweapon player;
 				player removeweapon _weapon; player additemtobackpack _weapon;
 				[] spawn { 
 
 					if("RH_uspm" in backpackItems Player) then {
-						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "RH_uspm"; player addweapon "RH_uspm"; player selectweapon "RH_uspm"; player addItemToBackPack "CSW_Taser_Probe_Mag";
+						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "RH_uspm"; player addweapon "RH_uspm"; player selectweapon "RH_uspm"; player addItemToBackPack "vvv_np_magazine_taser";
 						444 cutRsc ["HUDguncop","PLAIN"]; 
 					} else {
 						["Błąd: Brak pistoletu USP w plecaku", true] spawn domsg;
@@ -284,8 +284,8 @@ switch (_code) do
 				player removeweapon _weapon; player additemtobackpack _weapon;
 				[] spawn { 
 
-					if("CSW_M26C" in backpackItems Player) then {
-						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "CSW_M26C"; player addweapon "CSW_M26C"; player selectweapon "CSW_M26C"; player addItemToBackpack "RH_16Rnd_40cal_usp";
+					if("taserC" in backpackItems Player) then {
+						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "taserC"; player addweapon "taserC"; player selectweapon "taserC"; player addItemToBackpack "RH_16Rnd_40cal_usp";
 						444 cutRsc ["HUDtasercop","PLAIN"]; 
 					} else {
 						["Błąd: Brak Paralizatora w plecaku", true] spawn domsg;

@@ -17,7 +17,7 @@ if(typeName _receiver == "ARRAY") exitWith {
 
         [missionNamespace, ["mail", _mail]] remoteExec ["setVariable", _x];
 
-        ["New Mail", false] remoteExec ["doquickmsg", _x];
+        ["Nowy list", false] remoteExec ["doquickmsg", _x];
 
     } forEach _receiver;
 
@@ -28,7 +28,7 @@ if(typeName _receiver == "STRING") exitWith {
     _updatestr = format ["insertMail:%1:%2:%3:%4", _mail, _title, _player, _receiver];
     _update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
     
-    ["New Mail", false] remoteExec ["doquickmsg", _receiver];
+    ["Nowy list", false] remoteExec ["doquickmsg", _receiver];
 
     _targetowner = _receiver call BIS_fnc_getUnitByUid;
 
@@ -57,7 +57,7 @@ if(typeName _receiver == "OBJECT") exitWith {
 
     [missionNamespace, ["mail", _mail]] remoteExec ["setVariable", _receiver];
 
-    ["New Mail", false] remoteExec ["doquickmsg", _receiver];
+    ["Nowy list", false] remoteExec ["doquickmsg", _receiver];
 
 };
 

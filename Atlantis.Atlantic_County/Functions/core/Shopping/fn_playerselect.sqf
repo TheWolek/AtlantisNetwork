@@ -20,8 +20,8 @@ uisleep 15;
 
 [
 	[
-		["It is the year 2053.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],	
-		["You have arrived to Atlantis County.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"]
+		["Jest rok 2053.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],	
+		["Przybyłeś do Atlantis County.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -39,8 +39,8 @@ uisleep 10;
 
 _script = [
 	[
-		["Now is the time to choose your path.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
-		["Create Your Life!","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
+		["Teraz pora na wybranie swojej ścieżki.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
+		["Stwórz swoje zycie!","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -64,8 +64,8 @@ uisleep 15;
 
 _script = [
 	[
-		["Choose your sex","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
-		["This can be changed; Though, it may involve surgery.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
+		["Wybierz swoją płeć","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
+		["Może ona być zmieniona później, ale może wymagać operacji.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -81,8 +81,8 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Welcome to RetroRoleplay!","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
-		["Use your Windows key to interact with everything.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
+		["Witaj na atlantisnetwork.pl!","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
+		["Używaj przycisku windows w celu interakcji ze wszystkim.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
@@ -90,8 +90,8 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Start by interacting with your trailer.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
-		["You have mail there. Have fun.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
+		["Zacznij od interakcji z przyczepą.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
+		["Masz tam listy. Baw się dobrze.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
 	]
 ] spawn BIS_fnc_typeText;
 
