@@ -1,6 +1,6 @@
 params["_cash"];
 
-[format["You took %1",_cash], true] spawn domsg;
+[format["Ukradłeś %1",_cash], true] spawn domsg;
 
 if(isNil "_cash") exitwith {};
 

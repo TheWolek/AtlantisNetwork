@@ -15,7 +15,7 @@ _title = "None";
 if(myJob IN ["Cop","doc","EMS"]) then {
 
    switch (_freq) do {
-        case 33.1: { _title = "FD"; };
+        case 33.1: { _title = "EMS"; };
         case 33.2: { _title = "DoC"; };
         case 33.3: { _title = "PD Patrol"; };
         case 33.4: { _title = "PD Extra 1"; };
@@ -41,4 +41,4 @@ if(myJob IN ["Biker"]) then {
 
 };
 
-[format["You are now on %1 %2 frequency.", _title, _freq], true] spawn domsg;
+[format["Jesteś na częstotliwości %1 - %2.", _title, _freq], true] spawn domsg;

@@ -4,4 +4,4 @@ _old = player getVariable "cashinhand";
 _new = _old + _amount;
 player setVariable ["cashinhand", _new, false];
 
-[format ["You got paid %1 in taxes.",_amount], true] spawn domsg;
+[format ["Otrzymałeś wypłatę %1 w podatkach.",_amount], true] spawn domsg;

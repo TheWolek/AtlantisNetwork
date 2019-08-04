@@ -2,4 +2,4 @@ disableSerialization;
 
 player say "racebeep1";
 
-["Your map has been updated with an injured patient!", true] spawn domsg;
+["Na twojej mapie została oznaczona osoba wymagająca pomocy medycznej!", true] spawn domsg;

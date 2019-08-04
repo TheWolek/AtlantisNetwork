@@ -10,5 +10,5 @@ if (_amount > 0) then
 {
 	[player,_amount,_reason,_datedue] remoteexec ["client_fnc_takeLoan",_target];
 } else {
-	["Amount must be more than $0.00!", true] spawn domsg;
+	["Ilość musi być większa niż $0.00!", true] spawn domsg;
 };

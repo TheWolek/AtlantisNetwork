@@ -3,7 +3,7 @@
 	_haltphone = false;
 	_radios = player call TFAR_fnc_radiosList;
 	
-	if(myjob == "Radio") exitwith { ["A player has been added to your available radio connection list", true] spawn domsg; RadioConnections pushback currentcaller; ["You have been added to the radio host call back list",true] remoteExec ["domsg",currentCaller]; };
+	if(myjob == "Radio") exitwith { ["Gracz został dodany do mozliwych połączeń", true] spawn domsg; RadioConnections pushback currentcaller; ["You have been added to the radio host call back list",true] remoteExec ["domsg",currentCaller]; };
 
 	if(count _radios > 0) then {
 		if(_type == 1) then {

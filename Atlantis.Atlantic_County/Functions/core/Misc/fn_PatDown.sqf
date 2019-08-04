@@ -134,9 +134,9 @@ lastforcesync = time;
 [current_cars] remoteexec ["client_fnc_givekeys",_returnkeys];
 
 if(count licenseArray > 0) then {
-	[format["You found ID and it says %1.",name player], true] remoteExec["domsg", _returnkeys];
+	[format["Znalazłeś dowód osobisty na nazwisko %1.",name player], true] remoteExec["domsg", _returnkeys];
 } else {
-	["This person does not seem to have any ID.", true] remoteExec["domsg", _returnkeys];
+	["Ta osoba nie ma dowodu osobistego.", true] remoteExec["domsg", _returnkeys];
 };
 
 _GroundWeaponHolder = createVehicle["Land_FilePhotos_F", getPosATL _killer, [], 0, "CAN_COLLIDE"];
@@ -159,8 +159,8 @@ _GroundWeaponHolder setVariable ["evidenceInformation", [_returnkeys, name _retu
 		_nearest sort true;
 		_nearest = (_nearest select 0) select 1;
 
-		[getPos _player, "Robbery","Location", currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-		[format["Dispatch to %1: There has been a robbery at %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _player], true] remoteExec ["domsg", currentDetectives];
+		[getPos _player, "Napad","Location", currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
+		[format["Wezwanie do %1: Doszło do napadu w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _player], true] remoteExec ["domsg", currentDetectives];
 	};
 
 };

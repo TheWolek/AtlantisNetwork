@@ -7,4 +7,4 @@
 	myCallOwner = player;
 	player setVariable ["tf_unable_to_use_radio", false];
 	call TFAR_fnc_HideHint;
-	["You are on the DoC Freq!", false] spawn domsg;
+	["Jesteś na częstotliwości DOC!", false] spawn domsg;

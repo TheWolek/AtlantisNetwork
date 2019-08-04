@@ -21,7 +21,7 @@ Survival Koil
 			if(Mayor) then { _addition = 10 + _random; paycheck = paycheck + (22*_addition); };
 			if(Senator) then { _addition = 10 + _random; paycheck = paycheck + (20*_addition); };
 
-			[format["You received a government check for %1 and also %2 tax payable.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Dostałeś wypłatę w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
 
@@ -31,7 +31,7 @@ Survival Koil
 
 			paycheck = 35 + paycheck + _random;
 
-			[format["You received an unemployment check for %1 and also %2 income tax payable.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Dostałeś zasiłek dla bezrobotnych w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
 		};
@@ -66,9 +66,9 @@ Survival Koil
 		if(_govtbank < 100000 && myjob IN _govJobs) then {
 			_rate = 0.85;
 			paycheck = paycheck * _rate;
-			[format["You received a government check for %1 instead of %2 because of low funds and also %3 income tax payable.", paycheck call client_fnc_numberText, (paycheck/_rate) call client_fnc_numberText, ((paycheck)*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Dostałeś wypłatę w wysokości %1 zamiast %2 z powodu niskiego budżetu i %3 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck/_rate) call client_fnc_numberText, ((paycheck)*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 		} else {
-			[format["You received a government check for %1 and also %2 income tax payable.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Dostałeś wypłatę w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 		};
 
 		["add","Karma",1,"Default"] call client_fnc_sustain;

@@ -1,15 +1,15 @@
 private["_type","_stopTime","_success"];
 
-if!(typeof cursortarget IN ["cg_mainvault","plp_ct_HighSecMediumBlack"]) exitwith { ["You must use this on a high security black box or a vault.", true] spawn domsg; };
-if(typeof cursortarget IN ["cg_mainvault"] && count currentCop < 7) exitwith { ["There has to be at least 7 cops to drill this.", true] spawn domsg; };
-if(count currentCop < 3) exitwith { ["There has to be at least 3 cops to drill this.", true] spawn domsg; };
-if(time >= 25200) exitwith { ["You cannot rob this bank at this time.", true] spawn domsg; };
+if!(typeof cursortarget IN ["cg_mainvault","plp_ct_HighSecMediumBlack"]) exitwith { ["Musisz użyć tego na czarnej skrzynce lub drzwiach skarbca.", true] spawn domsg; };
+if(typeof cursortarget IN ["cg_mainvault"] && count currentCop < 7) exitwith { ["7 policjantów musi być na służbie.", true] spawn domsg; };
+if(count currentCop < 3) exitwith { ["3 policjantów musi być na służbie.", true] spawn domsg; };
+if(time >= 25200) exitwith { ["Nie możesz teraz napaść na ten bank", true] spawn domsg; };
 
-if(bankrobber != 1) exitwith { ["Already in progress", true] spawn domsg; };
+if(bankrobber != 1) exitwith { ["W trakcie", true] spawn domsg; };
 
 _thebankcontainer = cursortarget;
 
-if(_thebankcontainer IN robbedBanks) exitWith { ["You cannot rob this bank yet.", true] spawn domsg; };
+if(_thebankcontainer IN robbedBanks) exitWith { ["Nie możesz jeszcze napaść tego banku.", true] spawn domsg; };
 
 robbedBanks pushback _thebankcontainer;
 publicVariable "robbedBanks";
@@ -19,11 +19,11 @@ mybank = _thebankcontainer;
 if(typeof cursortarget == "plp_ct_HighSecMediumBlack") then {
 	_type = 1;
 	_stopTime = time + 600;
-	["This is going to take 10 minutes, make sure that the drill is being constantly repaired.", true] spawn domsg;
+	["To zajmie 10 minut. Wiertarka wymaga częstych napraw.", true] spawn domsg;
 } else {
 	_type = 2;
 	_stopTime = time + 1200;
-	["This is going to take 20 minutes, make sure that the drill is being constantly repaired.", true] spawn domsg;
+	["To zajmie 20 minut. Wiertarka wymaga częstych napraw", true] spawn domsg;
 };
 
 
@@ -37,8 +37,8 @@ if(_type == 1) then {
 		_nearest sort true;
 		_nearest = (_nearest select 0) select 1;
 
-		[getpos player, "Bank Robbery", "Location", currentCop] remoteExec ["client_fnc_hudHelper", _nearest];
-		[format["Dispatch to %1: There is a Retail Bank robbery at %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
+		[getpos player, "Napad na bank", "Location", currentCop] remoteExec ["client_fnc_hudHelper", _nearest];
+		[format["Wezwanie do %1: Dochodzi do napadu na bank w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
 	};
 } else {
 	_thedrill attachTo [cursorObject, [2.4, 1.3, 0] ]; 
@@ -51,8 +51,8 @@ if(_type == 1) then {
 		_nearest sort true;
 		_nearest = (_nearest select 0) select 1;
 
-		[getpos player, "Bank Robbery", "Location", currentCop] remoteExec ["client_fnc_hudHelper", _nearest];
-		[format["Dispatch to %1: There is a Central Bank robbery at %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
+		[getpos player, "Napad na bank", "Location", currentCop] remoteExec ["client_fnc_hudHelper", _nearest];
+		[format["Wezwanie do %1: Dochodzi do napadu na bank centralny w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
 	};
 };
 
@@ -123,7 +123,7 @@ while {true} do {
 };
 
 if(_success) then {
-	["You robbed the bank - interact with the box now!", true] spawn domsg;
+	["Przewierciłeś zamek, masz dostęp do skrytki!", true] spawn domsg;
 	bankrobber = 4;
 
 	deleteVehicle _thedrill;
@@ -148,7 +148,7 @@ if(_success) then {
 
 	};
 } else {
-	["You failed to rob the bank.", true] spawn domsg;
+	["Nie udało ci się napaść na bank.", true] spawn domsg;
 	bankrobber = 1;
 
 	deleteVehicle _thedrill;

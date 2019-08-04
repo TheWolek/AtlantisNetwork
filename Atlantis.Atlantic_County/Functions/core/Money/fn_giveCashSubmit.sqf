@@ -29,9 +29,9 @@ if (_amount > 0) then
 
 			};
 				
-			[format ["You were handed %1 in cash including %2 in dirty money.",  _amount call client_fnc_numberText, _DirtyMoney call client_fnc_numberText], true] remoteExec ["domsg",_target];
+			[format ["Otrzymałeś %1 w gotówce, razem z %2 w brudnych pieniądzach.",  _amount call client_fnc_numberText, _DirtyMoney call client_fnc_numberText], true] remoteExec ["domsg",_target];
 			
-			[format ["You handed over %1 in cash including %2 in dirty money.", _amount call client_fnc_numberText, _DirtyMoney call client_fnc_numberText], true] remoteExec ["domsg",_giver];
+			[format ["Dałeś %1 w gotówce, razem z %2 w brudnych pieniądzach.", _amount call client_fnc_numberText, _DirtyMoney call client_fnc_numberText], true] remoteExec ["domsg",_giver];
 
 			[_cleanMoney,true,true] remoteExec ["Client_fnc_addMoneyToPlayer",_target];
 
@@ -39,9 +39,9 @@ if (_amount > 0) then
 			
 		} else {
 
-			[format ["You were handed %1 in cash.",  _amount call client_fnc_numberText], true] remoteExec ["domsg",_target];
+			[format ["Otrzymałeś %1 w gotówce.",  _amount call client_fnc_numberText], true] remoteExec ["domsg",_target];
 			
-			[format ["You handed %1 in cash.", _amount call client_fnc_numberText], true] remoteExec ["domsg",_giver];
+			[format ["Dałeś %1 w gotówce.", _amount call client_fnc_numberText], true] remoteExec ["domsg",_giver];
 
 			[_amount,true,true] remoteExec ["Client_fnc_addMoneyToPlayer",_target];
 
@@ -55,8 +55,8 @@ if (_amount > 0) then
 		};
 
 	} else {
-		["You don't have that much cash!", true] spawn domsg;
+		["Nie masz tyle gotówki!", true] spawn domsg;
 	};
 } else {
-	["Amount must be more than $0.00!", true] spawn domsg;
+	["Ilość musi być większa niż $0.00!", true] spawn domsg;
 };

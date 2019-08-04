@@ -3,15 +3,15 @@
 private["_pos1","_pos2"];
 
 if(count allplayers < 19) exitwith {};
-["A loot supply package will drop in 2 minutes!", true] remoteExec ["domsg",-2];
+["Zrzut nastąpi za 2 minuty!", true] remoteExec ["domsg",-2];
 
 UISLEEP 60;
 
-["A loot supply package will drop in 1 minute!", true] remoteExec ["domsg",-2];
+["Zrzut nastąpi za 1 minutę!", true] remoteExec ["domsg",-2];
 
 UISLEEP 60;
 
-["A loot supply package has been dropped on the island!", true] remoteExec ["domsg",-2];
+["Nastąpił zrzut zasobów!", true] remoteExec ["domsg",-2];
 _error = false;
 _n=0;
 while{true} do {

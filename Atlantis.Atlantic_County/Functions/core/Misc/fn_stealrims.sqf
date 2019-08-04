@@ -6,9 +6,9 @@ params["_object"];
 
         [_object,[_x,1]] remoteExec ["setHitPointDamage"];
 
-        player addItem "CG_wheel";
+        player addItem "Toolkit";
 
-        ["You stole the rims, aren't you proud of yourself...", true] spawn domsg;
+        ["Ukradłeś koła...", true] spawn domsg;
 
     };
 

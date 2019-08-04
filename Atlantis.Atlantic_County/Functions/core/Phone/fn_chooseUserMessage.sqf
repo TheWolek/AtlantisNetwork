@@ -3,9 +3,9 @@ disableSerialization;
 _index = lbCurSel (1113);
 _message = ctrlText 9331;
 _type = _this select 0;
-if(_message == "Enter a Message") exitwith { ["You must enter a valid message.", true] spawn domsg;  };
+if(_message == "Enter a Message") exitwith { ["Musisz wprowadzić wiadomość.", true] spawn domsg;  };
 if(_message find ":" > -1) exitWith {
-    ["You cannot use a colon (':') in your message.", true] spawn domsg;
+    ["Nie możesz użyć dwukropka (':') w swojej wiadmości.", true] spawn domsg;
 };
 if (_index == -1) exitWith {};
 _status = lbData[1113, _index];

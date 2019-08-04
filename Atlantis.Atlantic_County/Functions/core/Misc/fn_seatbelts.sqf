@@ -19,7 +19,7 @@ if(vehicle player != player && (vehicle player isKindOf "LandVehicle")) then
 		if(!client_seatwarn) then {
 			client_seatwarn = true;
 			427 cutRsc ["HUDseat","PLAIN"]; 
-			["Remember your Seatbelt!", false] spawn domsg;
+			["Zapnij pasy!", false] spawn domsg;
 			playSound "seatwarn";	
 		};
 
@@ -39,21 +39,21 @@ if(vehicle player != player && (vehicle player isKindOf "LandVehicle")) then
 
 			if(speed player > _speedLimit + 10 && speed player <= _speedLimit + 35) exitwith {
 				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 3rd degree.", 2, 0, 1, 250] remoteexec ["server_fnc_addcriminal",2];
-				[player, "You have been issued a ticket for speeding. Go to the court house to pay it off or face legal consequences.", "Silver Lake", "Ticket"] remoteExec ["server_fnc_sendMail",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];
 
 				[] spawn client_fnc_speedchecked;
 			};
 
 			if(speed player > _speedLimit + 35 && speed player <= _speedLimit + 70) exitwith {
 				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 2nd degree.", 2, 0, 1, 500] remoteexec ["server_fnc_addcriminal",2];
-				[player, "You have been issued a ticket for speeding. Go to the court house to pay it off or face legal consequences.", "Silver Lake", "Ticket"] remoteExec ["server_fnc_sendMail",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};
 
 			if(speed player > _speedLimit + 70) exitwith {
 				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 1st degree.", 2, 0, 1, 750] remoteexec ["server_fnc_addcriminal",2];
-				[player, "You have been issued a ticket for speeding. Go to the court house to pay it off or face legal consequences.", "Silver Lake", "Ticket"] remoteExec ["server_fnc_sendMail",2];["server_fnc_sendMail",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};			
@@ -66,21 +66,21 @@ if(vehicle player != player && (vehicle player isKindOf "LandVehicle")) then
 			
 			if(speed player > _speedLimit + 10 && speed player <= _speedLimit + 35) exitwith {
 				[name player,getplayeruid player, "Silver Lake", "0","1x Speeding, 3rd degree.", 2, 0, 1, 250] remoteexec ["server_fnc_addcriminal",2];
-				[player, "You have been issued a ticket for speeding. Go to the court house to pay it off or face legal consequences.", "Silver Lake", "Ticket"] remoteExec ["server_fnc_sendMail",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};
 
 			if(speed player > _speedLimit + 35 && speed player <= _speedLimit + 70) exitwith {
 				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 2nd degree.", 2, 0, 1, 500] remoteexec ["server_fnc_addcriminal",2];
-				[player, "You have been issued a ticket for speeding. Go to the court house to pay it off or face legal consequences.", "Silver Lake", "Ticket"] remoteExec ["server_fnc_sendMail",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};
 			
 			if(speed player > _speedLimit + 70) exitwith {
 				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 1st degree.", 2, 0, 1, 750] remoteexec ["server_fnc_addcriminal",2];
-				[player, "You have been issued a ticket for speeding. Go to the court house to pay it off or face legal consequences.", "Silver Lake", "Ticket"] remoteExec ["server_fnc_sendMail",2];["server_fnc_sendMail",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};		
