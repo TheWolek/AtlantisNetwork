@@ -31,7 +31,7 @@ if(!taskrunning) then {
 			uisleep 180;
 			paycheck = paycheck + 65;
 
-			if(random(100) > 75) then { ["add","Karma",1,"Taxi Driver"] call client_fnc_sustain; };
+			if(random(100) > 75) then { ["add","Karma",1,"Taksówkarz"] call client_fnc_sustain; };
 			
 			_level_check = (client_level_array select 9);
 			_amount = 0;

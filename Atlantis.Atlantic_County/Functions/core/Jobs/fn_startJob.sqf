@@ -9,7 +9,7 @@ lbClear _list;
 _jobs = [];
 
 if(count currentMailmen < 3) then {
-_Jobs pushback "Fedex Worker"; 
+_Jobs pushback "Kurier"; 
 };
 
 if(count currentSecurity < 2) then {
@@ -17,7 +17,7 @@ _Jobs pushback "Security";
 };
 
 if(count currentTrashman < 3) then {
-_Jobs pushback "Garbage Man"; 
+_Jobs pushback "Śmieciarz"; 
 };
 
 /*
@@ -27,16 +27,16 @@ _Jobs pushback "News Reporter";
 */
 
 if(count currentRepairmen < 7) then {
-_Jobs pushback "Repairman"; 
+_Jobs pushback "Mechanik"; 
 };
 
 if(count currentBusDrivers < 4) then {
-_Jobs pushback "Bus Driver"; 
+_Jobs pushback "Kierowca Autobusu"; 
 };
 
 
 if(count currentTaxiDrivers < 7) then {
-_Jobs pushback "Taxi Driver"; 
+_Jobs pushback "Taksówkarz"; 
 };
 
 /*
@@ -55,15 +55,15 @@ IF(_FUCKYOU) THEN {
 };
 */
 
-if(_jobs isequalto []) then { _jobs = ["No Jobs Available"]; };
+if(_jobs isequalto []) then { _jobs = ["Brak dostęponych prac"]; };
 
 {
-	_list lbAdd format["Job: %1",_x];
+	_list lbAdd format["Praca: %1",_x];
 	_list lbSetdata [(lbSize _list)-1,str(_x)];
 } foreach _jobs;
 
-_list lbAdd "Job: Wood Logging";
-_job = "Wood Logging";
+_list lbAdd "Praca: Drwal";
+_job = "Drwal";
 _list lbSetdata [(lbSize _list)-1,str(_job)];
 
 ["Pamiętaj, prace polegające na zbieraniu wymagają plecaka. Możesz wypożyczyć pojazdu klikając windows na centrelinku.", true] spawn domsg;
