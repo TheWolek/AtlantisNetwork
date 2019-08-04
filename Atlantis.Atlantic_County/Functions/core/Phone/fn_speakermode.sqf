@@ -1,7 +1,7 @@
 	_stereo = (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwSpeakers;
 	if(_stereo) then {
-		["Your phone is off speaker mode!", false] spawn doquickmsg;
+		["Twój telefon jest w trybie normalnym!", false] spawn doquickmsg;
 	} else {
-		["Your phone is on speaker mode!", false] spawn doquickmsg;
+		["Twój telefon jest w trybie głośnomówiącym!", false] spawn doquickmsg;
 	};
 	[call TFAR_fnc_ActiveSWRadio] call TFAR_fnc_setSwSpeakers;

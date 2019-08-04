@@ -19,7 +19,7 @@ if(_drunk > 0 || _marijuana > 0 || _heroin > 0 || _cocaine > 0 || _meth > 0) the
 
 } else {
 
-    _message = "Osoba nie jest niczym odużona.";
+    _message = "Osoba nie jest niczym odurzona.";
 
 };
 

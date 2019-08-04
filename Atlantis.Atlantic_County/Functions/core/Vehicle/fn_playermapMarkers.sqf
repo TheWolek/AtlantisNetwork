@@ -4,7 +4,7 @@ waituntil{visiblemap};
 
 if(mapHint) then {
 	["Możesz pojawić znaczniki klikając windows.", true] spawn domsg;
-	["Wyzej możesz znaleźć logi z powiadomień.", true] spawn domsg;
+	["Wyżej możesz znaleźć logi z powiadomień.", true] spawn domsg;
 	mapHint = false;
 };
 

@@ -5,7 +5,7 @@ _add = call compile format["%1",(lbData[9001,(lbCurSel 9001)])];
 closedialog 0;
 
 if(_add == 0) then {
-	_licenseName = "Driver's License";
+	_licenseName = "Prawo Jazdy";
 };
 
 if(_add == 3) then {
@@ -13,51 +13,51 @@ if(_add == 3) then {
 };
 
 if(_add == 2) then {
-	_licenseName = "Mining License";
+	_licenseName = "Licencja górnika";
 };
 
 if(_add == 3) then {
-	_licenseName = "Logging License";
+	_licenseName = "Licencja drwala";
 };
 
 if(_add == 4) then {
-	_licenseName = "Fishing License";
+	_licenseName = "Licencja rybaka";
 };
 
 if(_add == 5) then {
-	_licenseName = "Truck License";
+	_licenseName = "Prawo Jazdy na ciężarówki";
 };
 
 if(_add == 6) then {
-	_licenseName = "Pilot's License";
+	_licenseName = "Licencja pilota";
 };
 
 if(_add == 7) then {
-	_licenseName = "Oil Trade License";
+	_licenseName = "Licencja handlarza oleju";
 };
 
 if(_add == 8) then {
-	_licenseName = "PD SWAT Leader Certification";
+	_licenseName = "Licencja Dowódcy SWAT";
 };
 
 if(_add == 9) then {
-	_licenseName = "PD SWAT Certification";
+	_licenseName = "Licencja SWAT";
 };
 
 if(_add == 10) then {
-	_licenseName = "PD Scuba Leader Certification";
+	_licenseName = "Licencja Dowódcy nurków PD";
 };
 
 if(_add == 11) then {
-	_licenseName = "PD Scuba Certification";
+	_licenseName = "Licencja nurka PD";
 };
 
 if(_add == 12) then {
-	_licenseName = "PD Air Leader Certification";
+	_licenseName = "Licencja Dowódcy AIR PD";
 };
 
 if(_add == 13) then {
-	_licenseName = "PD Air Certification";
+	_licenseName = "Licencja AIR PD";
 };
 
 if(_add == 14) then {
@@ -77,11 +77,11 @@ if(_add == 17) then {
 };
 
 if(_add == 18) then {
-	_licenseName = "Boat License";
+	_licenseName = "Patent motorowodny";
 };
 
 if(_add == 19) then {
-	_licenseName = "Casino Membership";
+	_licenseName = "Członkostwo Kasyna";
 };
 
 if(_add == 20) then {
@@ -97,11 +97,11 @@ if(_add == 22) then {
 };
 
 if(_add == 23) then {
-	_licenseName = "FD Air Leader Certification";
+	_licenseName = "Licencja Dowódcy AIR FD";
 };
 
 if(_add == 24) then {
-	_licenseName = "FD Air Certification";
+	_licenseName = "Licencja AIR FD";
 };
 
 if(_add == 25) then {
@@ -109,11 +109,11 @@ if(_add == 25) then {
 };
 
 if(_add == 26) then {
-	_licenseName = "FD Scuba Certification";
+	_licenseName = "Licencja Nurka FD";
 };
 
 if(_add == 27) then {
-	_licenseName = "Paralegal License";
+	_licenseName = "Licencja prawnika";
 };
 
 format["LicenseLog: %1 (%2) granted a(n) %3 to %4 (%5).", name player, getplayeruid player, _licenseName, name cursorObject, getPlayerUID cursorObject] remoteExecCall["diag_log",2];

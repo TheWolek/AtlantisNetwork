@@ -70,7 +70,7 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = ((_level) * 10);
-		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		[format["Twój numer odzaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took PATROL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
@@ -93,11 +93,11 @@ if(myjob == "Cop") then {
 		player additemtobackpack "Toolkit";
 
 			for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
-			for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
+			for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
 			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-		player addweapon "CSW_M26C";
+		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 
@@ -175,7 +175,7 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = ((_level) * 10);
-		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took DTU loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
@@ -197,11 +197,11 @@ if(myjob == "Cop") then {
 		player additemtobackpack "Toolkit";
 
 		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
-		for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
+		for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
 
-		player addweapon "CSW_M26C";
+		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 		currentDetectives pushBack player;
@@ -287,7 +287,7 @@ if(myjob == "Cop") then {
 		_freq = 33.3; // do ustalenia z komediantem
 
 		_cost = ((_level) * 10);
-		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took AIA loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
@@ -308,11 +308,11 @@ if(myjob == "Cop") then {
 		player additemtobackpack "Toolkit";
 
 		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
-		for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
+		for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
 
-		player addweapon "CSW_M26C";
+		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 		currentAIA pushBack player;
@@ -403,7 +403,7 @@ if(myjob == "Cop") then {
 		publicVariable "currentMarshals";
 
 		_cost = ((_level) * 10);
-		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took MARSHAL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
@@ -422,13 +422,13 @@ if(myjob == "Cop") then {
 
 		for "_i" from 1 to 8 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 
-		for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
+		for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
 
 	
-		player addweapon "CSW_M26C";
+		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
 
@@ -493,7 +493,7 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = 5000;
-		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took SWAT loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
@@ -562,7 +562,7 @@ if(myjob == "doc") then {
 		_freq = 33.2;
 
 		_cost = ((_level) * 10);
-		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took PRISON loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -575,7 +575,7 @@ if(myjob == "doc") then {
 
 			for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 
-			for "_i" from 1 to 10 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
+			for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
 			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
@@ -585,14 +585,14 @@ if(myjob == "doc") then {
 
 				for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
 
-				for "_i" from 1 to 3 do {player addItemToBackPack "CSW_Taser_Probe_Mag"; };
+				for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
 				for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
 		};
 
 		player addweapon "cg_baton";
-		player addweapon "CSW_M26C";
+		player addweapon "taser";
 		player addWeapon "Binocular";
 
 		player linkItem "ItemMap";
@@ -677,7 +677,7 @@ if(myjob == "doc") then {
 		_freq = 33.2;
 
 		_cost = 5000;
-		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove", false] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took CRT loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
@@ -729,7 +729,7 @@ if(myJob == "EMS") then {
 		_freq = 33.1;
 		
 		_cost = ((_level) * 10);
-		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took FIRE loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
@@ -760,7 +760,7 @@ if(myJob == "EMS") then {
 		_freq = 33.1;
 		
 		_cost = ((_level) * 10);
-		[format["Rząd zapłacił %1 za twoje wyposarzenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took EMS loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];

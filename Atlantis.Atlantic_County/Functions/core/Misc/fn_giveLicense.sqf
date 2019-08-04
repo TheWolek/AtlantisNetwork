@@ -22,7 +22,7 @@ if(_type == 1) then {
     };
 
     if(0 IN licenseArray) then {
-        _message pushBack "Driver's License";
+        _message pushBack "Prawo Jazdy";
     };
 
     if(1 IN licenseArray) then {
@@ -30,51 +30,51 @@ if(_type == 1) then {
     };
 
     if(2 IN licenseArray) then {
-        _message pushBack "Mining License";
+        _message pushBack "Licencja górnika";
     };
 
     if(3 IN licenseArray) then {
-        _message pushBack "Logging License";
+        _message pushBack "Licencja drwala";
     };
 
     if(4 IN licenseArray) then {
-        _message pushBack "Fishing License";
+        _message pushBack "Licencja rybaka";
     };
 
     if(5 IN licenseArray) then {
-        _message pushBack "Truck License";
+        _message pushBack "Prawo Jazdy na ciężarówki";
     };
 
     if(6 IN licenseArray) then {
-        _message pushBack "Pilot's License";
+        _message pushBack "Licencja pilota";
     };
 
     if(7 IN licenseArray) then {
-        _message pushBack "Oil Trade License";
+        _message pushBack "Licencja handlarza oleju";
     };
 
     if(8 IN licenseArray) then {
-        _message pushBack "PD SWAT Leader Certification";
+        _message pushBack "Licencja Dowódcy SWAT";
     };
 
     if(9 IN licenseArray) then {
-        _message pushBack "PD SWAT Certification";
+        _message pushBack "Licencja SWAT";
     };
 
     if(10 IN licenseArray) then {
-        _message pushBack "PD Scuba Leader Certification";
+        _message pushBack "Licencja Dowódcy nurków PD";
     };
 
     if(11 IN licenseArray) then {
-        _message pushBack "PD Scuba Certification";
+        _message pushBack "Licencja nurka PD";
     };
 
     if(12 IN licenseArray) then {
-        _message pushBack "PD Air Leader Certification";
+        _message pushBack "Licencja Dowódcy AIR PD";
     };
 
     if(13 IN licenseArray) then {
-        _message pushBack "PD Air Certification";
+        _message pushBack "Licencja AIR PD";
     };
 
     if(14 IN licenseArray) then {
@@ -98,7 +98,7 @@ if(_type == 1) then {
     };
 
     if(19 IN licenseArray) then {
-        _message pushBack "Casino Membership";
+        _message pushBack "Patent motorowodny";
     };
 
     if(20 IN licenseArray) then {
@@ -114,11 +114,11 @@ if(_type == 1) then {
     };
 
     if(23 IN licenseArray) then {
-        _message pushBack "FD Air Leader Certification";
+        _message pushBack "Licencja Dowódcy AIR FD";
     };
 
     if(24 IN licenseArray) then {
-        _message pushBack "FD Air Certification";
+        _message pushBack "Licencja AIR FD";
     };
 
     if(25 IN licenseArray) then {
@@ -126,11 +126,11 @@ if(_type == 1) then {
     };
 
     if(26 IN licenseArray) then {
-        _message pushBack "FD Scuba Certification";
+        _message pushBack "Licencja Nurka FD";
     };
 
     if(27 IN licenseArray) then {
-        _message pushBack "Paralegal License";
+        _message pushBack "Licencja prawnika";
     };
 
     uisleep 0.05;
