@@ -60,6 +60,14 @@ Survival Koil
 		if (paycheck > _level_default) then { paycheck = _level_default; };
 
 		paycheck = 55 + paycheck;
+	
+		_bonus = 80;
+		if(profileNameSteam find "AtlantisNetwork.pl" > -1) then {
+			[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
+			[_bonus,true,true] call Client_fnc_addMoneyToBank;
+		} else {
+			[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork w nazwie na steam",str _bonus],true] spawn domsg;
+		};
 
 		_govJobs = ["DA","Legal","doc","Cop","EMS"];
 
