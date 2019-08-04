@@ -8,7 +8,7 @@ if (_obj isKindOf "House_F") exitWith {
 
 	if( !(_doorArray isEqualTo 0) ) then {
 
-		_check = ["Lockpicking",100,0,player,'AinvPknlMstpSnonWnonDnon_medic_1',player,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
+		_check = ["Otwieranie zamka",100,0,player,'AinvPknlMstpSnonWnonDnon_medic_1',player,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
 		
 		waitUntil { scriptDone _check };
 
@@ -31,7 +31,7 @@ if (_obj isKindOf "House_F") exitWith {
 		};
 
 		["CG_Lockpick",50] spawn client_fnc_removeitem;
-		["You have access to this door for 5 minutes.", true] spawn domsg;
+		["Masz dostęp do drzwi na 5 minut.", true] spawn domsg;
 
 	};
 
@@ -39,7 +39,7 @@ if (_obj isKindOf "House_F") exitWith {
 
 if(_obj iskindof "car"  || _obj iskindof "boat" || _obj iskindof "Air") exitWith {
 
-	_check = ["Lockpicking",100,0,player,'AinvPknlMstpSnonWnonDnon_medic_1',player,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
+	_check = ["Otwieranie zamka",100,0,player,'AinvPknlMstpSnonWnonDnon_medic_1',player,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
 
 	waitUntil { scriptDone _check };
 

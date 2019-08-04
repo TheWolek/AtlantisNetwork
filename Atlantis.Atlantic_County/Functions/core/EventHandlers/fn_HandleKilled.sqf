@@ -16,7 +16,7 @@ for [{_x=1},{_x<=25},{_x=_x+1}] do {
  
 };
 
-cutText ["YOU HAVE BEEN PARALYZED. YOU MAY TALK, BUT NOT MOVE.","PLAIN"];
+cutText ["JESTEŚ SPARALIŻOWANY. MOŻESZ MÓWIĆ, ALE NIE JESTEŚ W STANIE SIĘ RUSZYĆ","PLAIN"];
 
 [_unit] remoteExec ["server_fnc_requestMedic", 2];
 
@@ -70,7 +70,7 @@ cutText ["YOU HAVE BEEN PARALYZED. YOU MAY TALK, BUT NOT MOVE.","PLAIN"];
 		_unit setOxygenRemaining 1;
 
 		if (round(maxTime - time) > 0) then {
-			hintSilent parsetext format["<t size='0.75'>Respawn</t><br/>You may respawn in %1",[(maxTime - time),"MM:SS"] call BIS_fnc_secondsToString];
+			hintSilent parsetext format["<t size='0.75'>Respawn</t><br/>Możesz się zrespić za %1",[(maxTime - time),"MM:SS"] call BIS_fnc_secondsToString];
 		} else {
 			hint "";
 		};
@@ -205,7 +205,7 @@ _unit spawn
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
 	_RespawnBtn ctrlEnable true;
 	(findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == (_this select 1)) then {true}"];
-	_Timer ctrlSetText "Your timer has run out. Press respawn in order to wake up at the Hospital.";
+	_Timer ctrlSetText "Twój czas się skończył. Naciśnij guzik respawn, aby obudzić się w szpitalu.";
 	"colorCorrections" ppEffectEnable true;     
 	"colorCorrections" ppEffectAdjust [1, 1, -0.003, [0.0, 0.0, 0.0, 1.0], [0, 0, 0, 1],  [0, 0, 0, 0.0]];  
 	"colorCorrections" ppEffectCommit 5; 

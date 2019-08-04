@@ -7,13 +7,13 @@ detach player;
 
 if(deadPhase == 1) then {
 
-    ["You woke up and can recall what happened from when you were paralyzed.", true] spawn domsg;
+    ["Odzyskałeś władzę w kończynach i pamiętasz co się działo, gdy byłeś sparaliżowany.", true] spawn domsg;
 
 };
 
 if(deadPhase == 2) then {
 
-    ["You woke up, but have no recollection of any recent memories while you were unconscious.", true] spawn domsg;
+    ["Obudziłeś się, ale nie pamiętasz co się działo.", true] spawn domsg;
 
 };
 

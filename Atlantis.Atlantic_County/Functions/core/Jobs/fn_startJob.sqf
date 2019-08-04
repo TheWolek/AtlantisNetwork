@@ -66,5 +66,5 @@ _list lbAdd "Job: Wood Logging";
 _job = "Wood Logging";
 _list lbSetdata [(lbSize _list)-1,str(_job)];
 
-["Pamiętaj, prace polegające na zbieraniu potrzebują plecaka. Możesz użyć pojazdu klikając windows na centrelinku.", true] spawn domsg;
+["Pamiętaj, prace polegające na zbieraniu wymagają plecaka. Możesz wypożyczyć pojazdu klikając windows na centrelinku.", true] spawn domsg;
 

@@ -44,7 +44,7 @@ if (time >= wantedTimer + 300 && count currentMarshals > 0) then {
 		_nearest sort true;
 		_nearest = (_nearest select 0) select 1;
 
-		[getPos player, format["Spotted Wanted Person with a(n) %1", _vehiclename], "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
+		[getPos player, format["Poszukiwana osoba była widziana poruszając się %1", _vehiclename], "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
 		wantedTimer = time;
 		[format["Wezwanie do %1: Poszukiwana osoba była widziana w okolicach %2 wyciągając %3 z garażu.", _nearest getVariable "badgeNumber", mapGridPosition getPos player, _vehiclename], true] remoteExec ["domsg",currentMarshals];
 		

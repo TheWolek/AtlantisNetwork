@@ -19,7 +19,7 @@ _n = 0;
 	_n = _n + 1;
 } forEach _licenseArr;
 
-if(_fuckit) exitwith { ["Nieprawidłowe numer rejestracyjny", true] spawn domsg; };
+if(_fuckit) exitwith { ["Nieprawidłowy numer rejestracyjny", true] spawn domsg; };
 
 _cashCheck = [1, 2000] call Client_fnc_checkMoney;
 if!(_cashCheck) exitwith { [format["%1 - Masz za mało pieniędzy, żeby za to zapłacić!",2000 call client_fnc_numberText], true] spawn domsg; };	

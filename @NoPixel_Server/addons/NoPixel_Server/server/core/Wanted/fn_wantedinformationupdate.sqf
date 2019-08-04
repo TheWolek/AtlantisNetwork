@@ -15,5 +15,5 @@ _jailtime = _info select 6;
 _time = _info select 7;
 
 
-_Btn4 ctrlSetStructuredText parsetext format["Silver Lake v. %1 <br/> Officer %2 <br/> Entered %3 <br/> <br/> Crime: %4", _suspect select 0, _suspect select 0, _time, _crime];
+_Btn4 ctrlSetStructuredText parsetext format["Atlantis County v. %1 <br/> Policjant %2 <br/> Wprowadzony %3 <br/> <br/> Przestępstwo: %4", _suspect select 0, _suspect select 0, _time, _crime];
 _btn4 ctrlCommit 0;

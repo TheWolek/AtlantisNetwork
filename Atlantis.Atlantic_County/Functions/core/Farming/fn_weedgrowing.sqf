@@ -1,8 +1,8 @@
-WaterArray = ["WARNING: The leaves are fading!","WARNING: The dirt looks too dry!","WARNING: The plant is wiltering!"];
-PruneArray = ["WARNING: Has too many leaves covering the buds!","WARNING: Looks overgrown!"];
-CoolArray2 = ["WARNING: Is getting brown spots on the leaves!","WARNING: Is drying out from the heat!"];
-HeatArray2 = ["WARNING: There is too much moisture!"];
-TurnoverArray = ["WARNING: The soil needs turning!"];
+WaterArray = ["UWAGA!: Liście opadają!","UWAGA!: Ziemia wygląda na suchą!","UWAGA!: Roślina więdnie!"];
+PruneArray = ["UWAGA!: Ma zbyt dużo liści!","UWAGA!: Wygląda na przerośniętą!"];
+CoolArray2 = ["UWAGA!: Pojawiają się brązowe kropki na liściach!","UWAGA!: Schnie z nadmiatu ciepła!"];
+HeatArray2 = ["UWAGA!: Jest zbyt wilgotono!"];
+TurnoverArray = ["UWAGA!: Ziemia wymaga odwrócenia!"];
 private["_stage1","_stage2"];
 _count = 0;
 checkFinish2 = false;

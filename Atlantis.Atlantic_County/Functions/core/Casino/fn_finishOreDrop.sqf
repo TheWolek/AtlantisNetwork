@@ -82,7 +82,7 @@ globalProtection = 0;
 deletevehicle theGunner;
 _price = (_totalvalue*1000);
 
-[format["%1 will be transferred to the casino vault as soon as the pirates have confirmed the grade of the gold.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
+[format["%1 zostanie przesłane po sprawdzeniu jakości złota przez piratów.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
 
 [_price] spawn {
 

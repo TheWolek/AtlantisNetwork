@@ -55,7 +55,7 @@ if(_statementsent == 9) then {
 
 		//player setpos [9756.69,788.971,0.00144315];
 		
-		cutText ["YOU HAVE BEEN FROZEN BY AN ADMINISTRATOR.","BLACK OUT"]; 
+		cutText ["ZOSTAŁEŚ ZAMROŻONY PRZEZ ADMINISTRATORA.","BLACK OUT"]; 
 
 	} remoteExec ["bis_fnc_spawn", _target];
 };

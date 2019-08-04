@@ -11,6 +11,6 @@ _obj = call compile format["%1", _objStr];
 
 } forEach hackedcars;
 
-["Disabled!", true] spawn domsg;
+["Wyłączony!", true] spawn domsg;
 
 closeDialog 0;

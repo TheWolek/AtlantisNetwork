@@ -19,7 +19,7 @@ _cashCheck = [1, _price*(1+taxRate/100)] call Client_fnc_checkMoney;
 if!(_cashCheck) exitwith { [format["%1 - Masz za mało pieniędzy, aby za to zapłacić!",(_price*(1+taxRate/100)) call client_fnc_numberText], true] spawn domsg; };
 
 if( ((player getvariable "cashinhand") - _price*(1+taxRate/100)) < (client_level_array select 16) ) exitWith {
-    [format["Sklep samochodowy nie akceptuje %1 twoich brudnych pieniędzy.", (client_level_array select 16) call client_fnc_numberText], true] spawn domsg;
+    [format["Salon samochodowy nie akceptuje %1 twoich brudnych pieniędzy.", (client_level_array select 16) call client_fnc_numberText], true] spawn domsg;
 };
 
 [_price*(1+taxRate/100), true] call Client_fnc_removeCash;

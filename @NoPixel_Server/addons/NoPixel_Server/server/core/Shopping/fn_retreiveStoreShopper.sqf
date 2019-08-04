@@ -17,7 +17,7 @@ if(isNil "_ShopPlayer") exitWith { ["Ten sklep nie posiada właścicela.", false
 
 _uid = getPlayerUID _shopplayer;
 
-if(_uid in activeshopcrates) exitwith { ["Ten sklep jest zaopatrywany, proszę spróbowac później.", false] remoteExec ["domsg",_unit]; };
+if(_uid in activeshopcrates) exitwith { ["Ten sklep jest zaopatrywany, proszę spróbować później.", false] remoteExec ["domsg",_unit]; };
 
 _shopcontent = _shopplayer getVariable "shopcontent";
 currentshopowner = _shopplayer;

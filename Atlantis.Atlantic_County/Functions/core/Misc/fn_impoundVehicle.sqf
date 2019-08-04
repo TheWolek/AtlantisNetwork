@@ -7,7 +7,7 @@ if(myjob == "towtruck") then {
 
 	if(currentcursortarget getVariable ["requestImpound", false]) then {
 		paycheck = paycheck + 300;
-		[ format["You received %1 bonus because this vehicle was requested to be impounded.", 300 call client_fnc_numberText] , false ] spawn domsg;
+		[ format["Otrzymałeś %1 bonusu, bo na ten pojazdy było zlecenie odholowania.", 300 call client_fnc_numberText] , false ] spawn domsg;
 	};
 
 	_level_check = (client_level_array select 4);
@@ -20,7 +20,7 @@ if(myjob == "towtruck") then {
 	["add","Karma",2,"Tow Truck Driver"] call client_fnc_sustain;
 	if(_amount > 0) then {
 		if(_amount > 150) then { _amount = 150; };
-		[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText] , false ] spawn domsg;	
+		[ format["Otrzymałeś dodatkową wypłate w wysokości %1!", _amount call client_fnc_numberText] , false ] spawn domsg;	
 		[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 	};
 
@@ -36,13 +36,13 @@ if(myjob == "towtruck") then {
 		};
 
 		[_targetowner, _targetid, name player, getplayeruid player, "Impounded vehicle", 2, 0, 1, 1000] remoteexec ["server_fnc_addcriminal",2];
-		[_targetid, format["Your %1 was impounded because of a traffic violation. Go to the impound lot to retrieve it. You must also pay the impound fee at the court house.", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Silver Lake", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
+		[_targetid, format["Twój %1 został odholowony z powodu złamania przepisów. Możesz go odebrac na parkingu pojazdu odholowanych i musisz zapłacić karę w sądzie", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Silver Lake", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
 
 	};
 
 	["who cares",0,currentcursortarget,player] remoteExec ["Server_fnc_updateCarStatus",2];  
 
-	["You have impounded that vehicle and have been paid.", true] spawn domsg;
+	["Odholowałeś pojazd i otrzymałeś zapłatę.", true] spawn domsg;
 
 } else { 
 
@@ -60,13 +60,13 @@ if(myjob == "towtruck") then {
 			};
 
 			[_targetowner, _targetid, name player, getplayeruid player, "Impounded vehicle", 2, 0, 1, 1000] remoteexec ["server_fnc_addcriminal",2];
-			[_targetid, format["Your %1 was impounded because of a traffic violation. Go to the impound lot to retrieve it. You must also pay the impound fee at the court house.", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Silver Lake", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
+			[_targetid, format["Twój %1 został odholowony z powodu złamania przepisów. Możesz go odebrac na parkingu pojazdu odholowanych i musisz zapłacić karę w sądzie.", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Silver Lake", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
 
 		};
 
 		["who cares",0,currentcursortarget,player] remoteExec ["Server_fnc_updateCarStatus",2];  
 
-		["The car has been impounded.", true] spawn domsg;
+		["Pojazd został odholowany.", true] spawn domsg;
 
 
 	} else {
@@ -75,11 +75,11 @@ if(myjob == "towtruck") then {
         _nearest sort true;
         _nearest = (_nearest select 0) select 1;
 
-        [getPos player, format["Impound Requested %1", name player], "Location", currenttowtruckdrivers] remoteExec ["client_fnc_hudHelper", _nearest];
+        [getPos player, format["Zlecenie holowania %1", name player], "Location", currenttowtruckdrivers] remoteExec ["client_fnc_hudHelper", _nearest];
         wantedTimer = time;
-        [format["Dispatch to %1: %2 has requested impound at %3.", name _nearest, name player, mapGridPosition getPos player], true] remoteExec ["domsg", currenttowtruckdrivers];
+        [format["Wezwanie do %1: %2 zlecił holowanie w okolicach %3.", name _nearest, name player, mapGridPosition getPos player], true] remoteExec ["domsg", currenttowtruckdrivers];
 
-		["A dispatch has been sent to all tow truck drivers.", true] spawn domsg;
+		["Wezwanie zostało wysłane do laweciarzy.", true] spawn domsg;
 
 		currentcursortarget setVariable ["requestImpound", true, true];
 

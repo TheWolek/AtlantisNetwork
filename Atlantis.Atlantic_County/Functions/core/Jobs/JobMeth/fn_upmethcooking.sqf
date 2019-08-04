@@ -3,7 +3,7 @@ if(checkFinish) exitwith { ["Musisz czekać przed wykonaniem tego!", true] spawn
 
 
 if(requiredOutput == _required) then { 
-	["Looks like it worked!",false] spawn doquickmsg;
+	["Wygląda na to, że zadziałało!",false] spawn doquickmsg;
 	totalskills = totalskills - 10;
 	if(_required == "Acetone" || _required == "Pseudo") then { playSound3D ["CG_Jobs\sounds\meth\drugAdd.ogg", player, false, getPosasl player, 2, 1, 15]; };
 	if(_required == "Cool") then { playSound3D ["CG_Jobs\sounds\meth\drugCool.ogg", player, false, getPosasl player, 2, 1, 15]; };

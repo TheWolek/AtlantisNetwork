@@ -1,7 +1,7 @@
 //[_location] remoteExec ["client_fnc_startSecurity",_player];
 //[getpos player] remoteExec ["client_fnc_startRepair",currentrepairmen];
 // use lexus with directionals only.
-if(myjob != "none" && myjob != "Repairman") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none" && myjob != "Repairman") exitwith { ["Masz już pracę!", true] spawn domsg; };
 
 if(isnil "taskrunning") then { taskrunning = false; };
 
@@ -19,7 +19,7 @@ if(!taskrunning) then {
 		while{taskrunning && myjob == "Repairman"} do {
 			uisleep 3;
 			if(playertasks isequalto []) then {
-				["You have no current jobs, please patrol for objects to repair!", true] spawn domsg;
+				["Nie masz przydzielonych zadań, szukaj uszkodzonych obiektów!", true] spawn domsg;
 				uisleep 60;
 
 				if(_warnings > 10) then { 
@@ -44,7 +44,7 @@ if(!taskrunning) then {
 
 				if(player distance ((playertasks select 0) select 0) < 15) then {
 
-					["You have arrived at your location - look for things to repair!", true] spawn domsg;
+					["Dotarłeś na miejsce - szukaj uszkodzonych obiektów!", true] spawn domsg;
 					paycheck = paycheck + 80;
 					playertasks deleteat 0;
 					uisleep 3;
@@ -63,12 +63,12 @@ if(!taskrunning) then {
 
 					if(_amount > 0) then {
 						if(_amount > 220) then { _amount = 220; };
-						[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+						[ format["Otrzymałeś dodatkową wypłate w wysokości %1!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 						[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 					};
 
 				} else {
-					["Your current Job (Marked on the Map): Job Type - Repair Object", true] spawn domsg;	
+					["Aktualna praca (Oznaczona na mapie): Typ pracy - Naprawa objektów", true] spawn domsg;	
 					[((playertasks select 0) select 0)] call client_fnc_jobMarker;			
 					uisleep 3;
 				};

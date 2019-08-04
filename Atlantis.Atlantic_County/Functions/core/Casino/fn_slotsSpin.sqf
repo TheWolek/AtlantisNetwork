@@ -10,7 +10,7 @@ if(casinoVault < 5000) exitwith { ["Fundusze w kasynie są zbyt małe", true] sp
 _cashcheck = [1,_betamt*(1+casinoRate/100)] call client_fnc_checkmoney;
 if!(_cashCheck) exitwith { [format["%1 - Masz za mało pieniędzy, aby za to zapłacić!",_betamt call client_fnc_numberText], true] spawn domsg; };
 
-[format["Jednoręki bandyta kosztuje cię %1, ponieważ podatek kasyna wynosi %2%3.",_betamt*(1+casinoRate/100) call client_fnc_numberText, casinoRate, "%"], true] spawn domsg;
+[format["Jednoręki bandyta kosztuje %1, ponieważ podatek kasyna wynosi %2%3.",_betamt*(1+casinoRate/100) call client_fnc_numberText, casinoRate, "%"], true] spawn domsg;
 
 [_betamt*(1+casinoRate/100)] call Client_fnc_removeCash;
 

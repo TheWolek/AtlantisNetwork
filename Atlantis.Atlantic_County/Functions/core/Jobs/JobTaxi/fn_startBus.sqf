@@ -2,7 +2,7 @@
 //[_location] remoteExec ["client_fnc_startSecurity",_player];
 //[getpos player,] remoteExec ["client_fnc_startGarbage",_player];
 // use lexus with directionals only.
-if(myjob != "none" && myjob != "bus") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none" && myjob != "bus") exitwith { ["Masz już pracę!", true] spawn domsg; };
 
 if(isnil "taskrunning") then { taskrunning = false; };
 
@@ -26,7 +26,7 @@ if(!taskrunning) then {
 
 			if(playertasks isequalto []) then {
 
-				["Generating Task", true] spawn domsg;
+				["Tworzenie zadania", true] spawn domsg;
 
 				[(busStopArray select 0) select 0,(busStopArray select 0) select 1] spawn client_fnc_startBus;
 
@@ -49,7 +49,7 @@ if(!taskrunning) then {
 
 				if(player distance ((playertasks select 0) select 0) < 15) then {
 
-					["You have arrived, wait a few seconds for passengers!", true] spawn domsg;
+					["Dotarłeś na miejsce, poczekaj kilka sekund na pasażerów!", true] spawn domsg;
 					paycheck = paycheck + 135;
 
 					_pia = [[843.134,1560.77,0.524498],[812.653,1050.72,0.524401],[1301.89,1048.78,0.52441],[1736.61,2232.84,0.524719],[2823.97,3276.34,0.524475],[3423.96,2566.25,0.524262],[5614.85,3720.59,0.524711],[5565.33,3935.98,0.524396],[5447.95,4208.73,0.524391],[5005.71,5186.02,0.524447],[1262.33,3841.6,0.524388]] FIND ((playertasks select 0) select 0);
@@ -75,7 +75,7 @@ if(!taskrunning) then {
 
 					if(_amount > 0) then {
 						if(_amount > 150) then { _amount = 150; };
-						[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+						[ format["Otrzymałeś dodatkową wypłate w wysokości %1!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 						[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 					};
 

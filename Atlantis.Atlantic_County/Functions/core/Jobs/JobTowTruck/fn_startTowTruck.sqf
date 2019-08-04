@@ -2,7 +2,7 @@
 //[getpos player,] remoteExec ["client_fnc_startGarbage",_player];
 // use lexus with directionals only.
 
-if( myjob != "none" && myjob != "towtruck") exitwith { ["You already have a job!", true] spawn domsg; };
+if( myjob != "none" && myjob != "towtruck") exitwith { ["Masz już pracę!", true] spawn domsg; };
 
 if(isnil "taskrunning") then { taskrunning = false; };
 
@@ -20,7 +20,7 @@ if(!taskrunning) then {
 		while{taskrunning && myjob == "towtruck"} do {
 			uisleep 3;
 			if(playertasks isequalto []) then {
-				["You have no current jobs, please patrol for towable cars!", true] spawn domsg;
+				["Nie masz przydzielonych zadań, szukaj samochodów do odcholowania!", true] spawn domsg;
 				uisleep 60;
 			} else {
 
@@ -37,7 +37,7 @@ if(!taskrunning) then {
 				if(player distance ((playertasks select 0) select 0) < 15) then {
 
 
-					["You have arrived at your location!", true] spawn domsg;
+					["Dotarłes na miejsce!", true] spawn domsg;
 					paycheck = paycheck + 250;
 					playertasks deleteat 0;
 					uisleep 3;
@@ -55,13 +55,13 @@ if(!taskrunning) then {
 
 					if(_amount > 0) then {
 						if(_amount > 220) then { _amount = 220; };
-						[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+						[ format["Otrzymałeś dodatkową wypłate w wysokości %1!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 						[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 					};
 
 
 				} else {
-					["Your current Job (Marked on the Map): Job Type - Tow Vehicle", true] spawn domsg;	
+					["Aktualna praca (Oznaczona na mapie): Typ pracy - Holowanie", true] spawn domsg;	
 					[((playertasks select 0) select 0)] call client_fnc_jobMarker;			
 					uisleep 3;
 				};

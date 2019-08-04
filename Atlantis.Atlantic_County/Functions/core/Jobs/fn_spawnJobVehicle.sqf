@@ -16,7 +16,7 @@ if(!isNil "vehspawned") then {
 };
 
 [10] call Client_fnc_removeBank;
-["You have been charged $10.00 for renting a Job Vehicle.", true] spawn domsg;
+["Zapłąciłeś $10.00 za wynajem samochodu służbowego.", true] spawn domsg;
 
 _jobType = myjob;
 

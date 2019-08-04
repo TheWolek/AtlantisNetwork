@@ -4,7 +4,7 @@ _chairs = ["big_chair_civ","sofagris_civ","sillamedico2_civ","sillademedico_civ"
 _attachedObjects = [];
 
 {
-	if(typeof _x IN _chairs) then { ["You cant drop furniture with this function", true] spawn domsg; } else { detach _x; _attachedObjects pushBack _x; };
+	if(typeof _x IN _chairs) then { ["Nie mozesz stawiać mebli tą funkcją.", true] spawn domsg; } else { detach _x; _attachedObjects pushBack _x; };
 } forEach attachedObjects player;
 
 if(attachedcar) then {

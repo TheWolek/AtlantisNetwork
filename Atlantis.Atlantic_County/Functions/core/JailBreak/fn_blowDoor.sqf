@@ -2,7 +2,7 @@ _obj = cursorobject;
 
 if(typeof _obj == "Land_zac_prison_wall_gate") exitWith {
 	
-	_check = ["Podkładanie C$", 5, 0,player,'vvv_anim_ticket',nil,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
+	_check = ["Podkładanie C4", 5, 0,player,'vvv_anim_ticket',nil,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
 
 	waitUntil { scriptDone _check };
 
@@ -26,7 +26,7 @@ if(typeof _obj == "Land_buildingsCasino2" && (player distance (_obj modelToWorld
 	if(count currentMobster < 3 || count currentCop < 3) exitWith { ["3 policjantów i gangsterów musi być w pracy w celu napadu na kasyno", true] spawn domsg; };
 	if(time < vaultTimer) exitWith { ["Skarbiec kasyna może być napadnięty raz na 60 minut.", true] spawn domsg; };
 	
-	_check = ["Podkładanie C$", 5, 0,player,'vvv_anim_ticket',nil,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
+	_check = ["Podkładanie C4", 5, 0,player,'vvv_anim_ticket',nil,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
 
 	waitUntil { scriptDone _check };
 

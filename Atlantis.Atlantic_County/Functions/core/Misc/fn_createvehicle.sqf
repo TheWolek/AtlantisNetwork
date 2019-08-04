@@ -6,7 +6,7 @@ if(myjob IN ["Cop","EMS","FIRE"]) then {
 	};
 };
 
-["Kicking due to restart or Admin!", true] spawn domsg;
+["Wyrzucenie z popodu restartu lub przez admina!", true] spawn domsg;
 
 sleep 20;
 
