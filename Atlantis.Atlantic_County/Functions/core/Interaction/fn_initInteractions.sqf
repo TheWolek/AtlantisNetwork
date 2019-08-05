@@ -1025,7 +1025,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["myjob == 'Mafia' && typeof cursorobject IN ['Land_buildingsCasino2'] && !imrestrained"],
-		["Sklep Mafii", "closedialog 0; createdialog 'mafia_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
+		["Sklep Mafii", "closedialog 0; createdialog 'mafia_equipment'; ['mafia_gunstore'] spawn client_fnc_LoadStore;",3]
 	],
 /*
 	[ 

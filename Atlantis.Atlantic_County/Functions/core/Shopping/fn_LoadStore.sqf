@@ -829,7 +829,7 @@ if(_condition == "mafia_gunstore") then {
 
 	_gunStorePistols = [
 
- 		["RH_m9qd",nil,1900,1],
+ 		["RH_m9qd",nil,1900,3],
 		["RH_m9",nil,2500,1],
         ["RH_g17",nil,3000,1],
         ["RH_uspm",nil,4000,1],
