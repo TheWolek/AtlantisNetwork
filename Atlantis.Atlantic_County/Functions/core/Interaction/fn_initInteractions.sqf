@@ -1150,7 +1150,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 
-
+/*
 	[
 		["((myjob == 'Cop' && typeof CursorTarget == 'Land_em_mansion_01' && player getVariable 'Cop' > 4))"],
 		["Przeszukaj schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player, ""Mafia""] remoteExec ['server_fnc_retreivegang',2]",4]
@@ -1166,7 +1166,7 @@ NoPixel_InteractionMenuItems = [
 		["((myjob == 'Cop' && typeof cursorobject == 'Land_buildingsNightclub2' && player getVariable 'Cop'> 4))"],
 		["Przeszukaj schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player, ""Biker""] remoteExec ['server_fnc_retreivegang',2]",4]
 	],
-
+*/
 
 	[
 		["(str CursorObject find 'gymbench' > -1 || str CursorObject find 'gymrack' > -1)"],
