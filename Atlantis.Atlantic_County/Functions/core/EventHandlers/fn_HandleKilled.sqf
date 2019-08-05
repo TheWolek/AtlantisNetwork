@@ -145,14 +145,14 @@ if(_fuck != _you) then {
 			params["_killer","_GroundWeaponHolder"];
 			uiSleep 120;
 			if(isNull _GroundWeaponHolder) exitWith {};			
-							
+			/*			
 			if(count currentDetectives > 0) then {
 				_nearest = currentDetectives apply {[player distance getPos _x, _x]};
 				_nearest sort true;
 				_nearest = (_nearest select 0) select 1;
 
 				[getPos _killer, "Zabójstwo","Location",currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-				[format["Wezwanie do %1: Doszło do zabójstwa w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _killer], true] remoteExec ["domsg", currentDetectives];
+				[format["Wezwanie do %1: Doszło do zabójstwa w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _killer], true] remoteExec ["domsg", currentDetectives];*/
 			};
 		};
 
