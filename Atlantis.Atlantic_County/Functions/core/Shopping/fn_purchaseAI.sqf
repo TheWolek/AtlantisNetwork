@@ -119,6 +119,10 @@ if(_item IN  ["np_tequila","murshun_cigs_lighter","murshun_cigs_cigpack"]) then 
 	["bikerBank", _totalPrice, "Add"] remoteexec ["server_fnc_setValue",2];
 };
 
+if(_item == "cg_tabletd") then {
+	["By wziąć tablet przenieś go do plecaka",true] spawn domsg;
+};
+
 [format["Kupiłeś %1 %2 za %3. Zobacz skrzynkę pod twoimi nogami.",_quantity, _item, _totalprice call client_fnc_numberText],true] spawn domsg;
 
 _totalTickets = 0;

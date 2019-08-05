@@ -311,28 +311,18 @@ Dvid_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
 titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 
 [] spawn {
-	_uidarr = ["76561198084548281","76561198071999873"];
-	_adminuid = getplayeruid player;
-	if(_adminuid in _uidarr) then {
-		_isadmin = true;
-	} else {
-		_isadmin = false;
-	};
+	
 
 	while {true} do {
 	
-				/*
-				_isadmin = false;
-				if (!(isNil "life_adminlevel")) then {
-					_adminlvl = life_adminlevel call BIS_fnc_parseNumber;
-					
-					if (_adminlvl > 0) then {
-						_isadmin = true;
-					};
+				_uidarr = ["76561198084548281","76561198071999873"];
+				_adminuid = getplayeruid player;
+				if(_adminuid in _uidarr) then {
+					_isadmin = true;
+				} else {
+					_isadmin = false;
 				};
-				*/
-				
-				
+						
 				
 					_TFenabled = [] call TFAR_fnc_isTeamSpeakPluginEnabled;
 					if ((!(_TFenabled)) && (Dvid_TFEnabled)) then {

@@ -23,7 +23,7 @@ switch (_code) do
 		};
 		
 	};
-
+/*
 	case 57:
 	{
 		if(EM_allowed) then { EM_Allowed = false; };
@@ -47,6 +47,7 @@ switch (_code) do
 
 		};
 	};
+	*/
 	case 61:
 	{
 	

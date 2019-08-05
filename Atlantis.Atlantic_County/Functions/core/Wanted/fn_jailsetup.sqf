@@ -21,12 +21,18 @@ removeuniform player;
 ["Remove","Karma",random(100),"Stress"] call client_fnc_sustain;
 
 player forceadduniform "U_C_WorkerCoveralls";
+removeAllWeapons player;
+removeVest player;
+removeHeadgear player;
+removegoggles player;
+removeBackpack player;
 ClientArrested = true;
 EM_allowed2 = false;
 _escaped = false;
 imRestrained = false;
 player setVariable ['surrender',nil, true];
 player switchmove "";
+uisleep 0.2;
 player playAction "Foski_cuff_front";
 player forceWalk true;
 _myradio = call TFAR_fnc_ActiveSwRadio;

@@ -483,42 +483,7 @@ if(_condition IN ["nbar"]) then {
 
 if(_condition == "head") then {
 
-	_gunStorePistols = [
-
-
-			["sl_client_c_masks_gangster_W",nil,520,3,5],
-			["ALE_H_Calot",nil,120,3,5],
-			["ALE_H_Cowboy_White",nil,120,3,5],
-			["ALE_H_Cowboy_Black",nil,120,3,5],
-			["ALE_H_Cowboy_Brown",nil,120,3,5],
-			["sl_client_c_hats_russian_W",nil,120,3,5],
-
-			["ALE_H_NewEra_Monster",nil,120,3,5],
-			["ALE_H_NewEra_Rouge",nil,120,3,5],
-			["ALE_H_NewEra_Superman",nil,12,3,5],
-			["ALE_H_NewEra_Cyan",nil,120,3,5],
-			["ALE_H_NewEra_Black",nil,120,3,5],
-			["ALE_H_NewEra_Lakers",nil,120,3,5],
-			["ALE_H_NewEra_Redsox",nil,120,3,5],
-
-			["sl_client_c5_cap_nike_blk_W",nil,120,3,5],
-			["sl_client_c5_cap_nike_blu_W",nil,120,3,5],
-			["sl_client_c5_cap_nike_grn_W",nil,12,3,5],
-			["sl_client_c5_cap_nike_grey_W",nil,120,3,5],
-			["sl_client_c5_cap_nike_navy_W",nil,120,3,5],
-			["sl_client_c5_cap_nike_org_W",nil,120,3,5],
-			["sl_client_c5_cap_nike_red_W",nil,120,3,5],
-			["sl_client_c5_cap_nike_wh_W",nil,120,3,5],
-			["sl_client_c5_cap_nike_ylw_W",nil,120,3,5],
-
-			["sl_client_c5_cap_polo_blk_W",nil,120,3,5],
-			["sl_client_c5_cap_polo_lblu_W",nil,120,3,5],
-			["sl_client_c5_cap_polo_navy_W",nil,12,3,5],
-			["sl_client_c5_cap_polo_pink_W",nil,120,3,5],
-			["sl_client_c5_cap_polo_red_W",nil,120,3,5],
-			["sl_client_c5_cap_polo_tan_W",nil,120,3,5],
-			["sl_client_c5_cap_polo_wh_W",nil,120,3,5],
-						
+	_gunStorePistols = [						
 			["H_Beret_blk",nil,120,3,5],
 			["H_Booniehat_khk",nil,120,3,5],
 			["H_Booniehat_oli",nil,120,3,5],

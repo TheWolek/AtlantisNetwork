@@ -220,7 +220,7 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 	player allowDamage true;
 };
 
-if(spawnedvehicle iskindof "car" && !isNil "spawnedvehicle") then {
+if((spawnedvehicle iskindof "car" || spawnedvehicle iskindof "air") && !isNil "spawnedvehicle") then {
 	spawnedVehicle setObjectMaterial [0, _SELECTEDFINISH];
 
 	spawnedVehicle setObjectTexture	[0, _SELECTEDCOLOR];
