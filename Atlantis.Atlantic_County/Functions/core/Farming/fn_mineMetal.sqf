@@ -1,6 +1,7 @@
 private ["_myOre","_level_check"];
 _rock = cursorobject;
 
+/*
 if(player getVariable["JailTracked",FALSE] && cursorobject distance player < 25) exitwith { 
 	playSound3D ["CG_Jobs\sounds\mining\mine1.ogg", player, false, getPosasl player, 3, 1, 15]; 
 
@@ -27,6 +28,7 @@ if(player getVariable["JailTracked",FALSE] && cursorobject distance player < 25)
 	}; 
 
 };
+*/
 
 if((getposATL player) distance (getposATL _rock) > 25) exitwith {};
 if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [4957.66,689.13,0.00144005] < 300) then {   

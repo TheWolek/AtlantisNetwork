@@ -503,23 +503,23 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" typeof cursorobject == 'Land_buildingshospital1' && myjob == 'EMS'"],
+		[" typeof cursorobject == 'land_POP_Hospital' && myjob == 'EMS'"],
 		["Łóżko", "[false] spawn client_fnc_spawnbed;",1]
 	],
 
 
 	[
-		[" typeof cursorobject == 'Land_buildingshospital1'"],
+		[" typeof cursorobject == 'land_POP_Hospital'"],
 		["Ulecz się", "[] spawn client_fnc_fullheal; bleedingEffect = 0; ",1]
 	],
 
 	[
-		[" typeof cursorobject == 'Land_buildingshospital1'"],
+		[" typeof cursorobject == 'land_POP_Hospital'"],
 		["Zmień płeć", " if(female) then {female = false; ['Jesteś teraz mężczyzną.', true] spawn domsg; } else {female = true; ['Jesteś teraz kobietą.', true] spawn domsg; }; ['NA','sex',0] call client_fnc_sustain;",1]
 	],
 
 	[
-		[" typeof cursorobject == 'Land_buildingshospital1'"],
+		[" typeof cursorobject == 'land_POP_Hospital'"],
 		["Szukaj pluskw", "[] spawn client_fnc_disabletrackingme;",1]
 	],
 
@@ -638,7 +638,7 @@ NoPixel_InteractionMenuItems = [
 	],
 	
 	[
-		[" (CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Car') && CursorTarget in Current_Cars && ( (myhouse distance getpos player < 50 || player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'embarcadero' > -1}) > 0 || count (nearestobjects[player,['Land_Hangar_F'],50]) > 0 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'taller' > -1}) > 0) || (myJob IN ['Cop','doc'] && count (nearestObjects[player,['land_jf_sheriff_station_01'],50]) > 0 ) || (myJob == 'EMS' && count (nearestObjects[player,['Land_buildingsfiredept1','Land_buildingshospital1'],50]) > 0) || (myJob == 'Mafia' && count (nearestObjects[player,['Land_em_mansion_01'],50]) > 0) || (myJob == 'Biker' && count (nearestObjects[player,['Land_buildingsNightclub2'],50]) > 0) || (myJob == 'Mobster' && count (nearestObjects[player,['Land_buildingsCasino2'],50]) > 0) ) && !imrestrained && !attachedcar"],
+		[" (CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Car') && CursorTarget in Current_Cars && ( (myhouse distance getpos player < 50 || player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'embarcadero' > -1}) > 0 || count (nearestobjects[player,['Land_Hangar_F'],50]) > 0 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'taller' > -1}) > 0) || (myJob IN ['Cop','doc'] && count (nearestObjects[player,['land_jf_sheriff_station_01'],50]) > 0 ) || (myJob == 'EMS' && count (nearestObjects[player,['Land_buildingsfiredept1','land_POP_Hospital'],50]) > 0) || (myJob == 'Mafia' && count (nearestObjects[player,['Land_em_mansion_01'],50]) > 0) || (myJob == 'Biker' && count (nearestObjects[player,['Land_buildingsNightclub2'],50]) > 0) || (myJob == 'Mobster' && count (nearestObjects[player,['Land_buildingsCasino2'],50]) > 0) ) && !imrestrained && !attachedcar"],
 		["Schowaj", "['Storing Vehicle',5, 'Client_fnc_storeCar',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 	
@@ -724,7 +724,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" isPlayer CursorTarget && CursorTarget isKindOf 'Man' && !imrestrained && myJob IN ['Cop','doc','EMS'] && count (nearestObjects[player,['land_jf_sheriff_station_01','Land_buildingsfiredept1','Land_buildingshospital1'],100]) > 0"],
+		[" isPlayer CursorTarget && CursorTarget isKindOf 'Man' && !imrestrained && myJob IN ['Cop','doc','EMS'] && count (nearestObjects[player,['land_jf_sheriff_station_01','Land_buildingsfiredept1','land_POP_Hospital'],100]) > 0"],
 		["Zidentyfikuj osobę", " ['Identifying Person',15,'client_fnc_getName',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',player,'cg_mission_files\sounds\patdown1.ogg',CurrentCursorTarget] spawn client_fnc_dotask     ",2]
 	],
 
@@ -972,22 +972,22 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof CursorTarget == 'Land_buildingGunStore1'"],
+		["typeof CursorObject == 'Land_buildingGunStore1'"],
 		["Sklep z bronią", "closedialog 0; createdialog 'gun_menu'; ['gunstore'] spawn client_fnc_LoadStore;",3]
 	],
 
 	[
-		["typeof CursorTarget == 'land_cg_dunkinbronuts'"],
+		["typeof CursorObject == 'land_cg_dunkinbronuts'"],
 		["Donut Menu", "closedialog 0; createdialog 'food_menu'; ['donuts'] spawn client_fnc_LoadStore;",3]
 	],
 
 	[
-		["typeof CursorTarget == 'land_cg_dexters'"],
+		["typeof cursorObject == 'land_cg_dexters'"],
 		["Pizza Menu", "closedialog 0; createdialog 'food_menu'; ['pizza'] spawn client_fnc_LoadStore;",3]
 	],
 
 	[
-		["typeof CursorTarget == 'Land_Market_DED_Market_01_F'"],
+		["typeof CursorObject == 'Land_Market_DED_Market_01_F'"],
 		["Mc Dildos", "closedialog 0; createdialog 'food_menu'; ['mcdonalds'] spawn client_fnc_LoadStore;",3]
 	],
 
@@ -997,7 +997,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof CursorTarget IN ['Land_buildingBar1','Land_Pub_A'] "],
+		["typeof CursorObject IN ['Land_buildingBar1','Land_Pub_A'] "],
 		["Bar", "closedialog 0; createdialog 'food_menu'; ['bar'] spawn client_fnc_LoadStore;",3]
 	],
 ////////////////////////////////////
@@ -1045,7 +1045,7 @@ NoPixel_InteractionMenuItems = [
 	],
 */
 	[
-		[" ( (myJob IN ['Cop','doc'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) || (myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1'])) || (myJob == 'Mafia' && (typeof cursorobject == 'Land_em_mansion_01')) || (myJob == 'Biker' && (typeof cursorobject == 'Land_buildingsNightclub2')) || (myJob == 'Mobster' && (typeof cursorobject == 'Land_buildingsCasino2')) || (( myJob IN ['Cop','doc','EMS'] ) && ( str CursorObject find 'em_heliport' > -1 || str CursorObject find 'embarcadero' > -1 )) || (Mayor && player distance myhouse < 30) || (myJob == 'Legal' && player getVariable 'legal' > 5 && (typeof cursorobject == 'Land_buildingscourthouse1'))) && !imrestrained "],
+		[" ( (myJob IN ['Cop','doc'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) || (myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital'])) || (myJob == 'Mafia' && (typeof cursorobject == 'Land_em_mansion_01')) || (myJob == 'Biker' && (typeof cursorobject == 'Land_buildingsNightclub2')) || (myJob == 'Mobster' && (typeof cursorobject == 'Land_buildingsCasino2')) || (( myJob IN ['Cop','doc','EMS'] ) && ( str CursorObject find 'em_heliport' > -1 || str CursorObject find 'embarcadero' > -1 )) || (Mayor && player distance myhouse < 30) || (myJob == 'Legal' && player getVariable 'legal' > 5 && (typeof cursorobject == 'Land_buildingscourthouse1'))) && !imrestrained "],
 		["Garaż pracy", "[CursorObject] call client_fnc_opengaragepolice;  ",3]
 	],
 
@@ -1316,13 +1316,13 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" myJob IN ['EMS'] && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) "],
+		[" myJob IN ['EMS'] && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital']) "],
 		["Sprzęt EMS", "['EMS'] call client_fnc_setGear",4]
 	],
 
 	/*
 	[
-		[" myJob IN ['EMS'] && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) "],
+		[" myJob IN ['EMS'] && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital']) "],
 		["Fire Gear", "['Fire'] call client_fnc_setGear",4]
 	],
 	*/
@@ -1379,7 +1379,7 @@ NoPixel_InteractionMenuItems = [
 	*/
 
 	[
-		[" myJob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) && (player getVariable 'EMS' == 10 || 25 IN licenseArray || 26 IN licenseArray)"],
+		[" myJob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital']) && (player getVariable 'EMS' == 10 || 25 IN licenseArray || 26 IN licenseArray)"],
 		["Sprzęt nurka", "['Mwater'] call client_fnc_setGear",4]
 	],
 
@@ -1418,12 +1418,12 @@ NoPixel_InteractionMenuItems = [
 		["STOP PD", "[1] call client_fnc_jobEnd",4]
 	],
 	[
-		[" myjob == 'none' && (player getvariable 'ems') > 0 && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1']) "],
+		[" myjob == 'none' && (player getvariable 'ems') > 0 && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital']) "],
 		["START EMS", "[] call client_fnc_setlastsave; [player,'EMS'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
-		["myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','Land_buildingshospital1'])"],
+		["myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital'])"],
 		["STOPEMS", "[1] call client_fnc_jobEnd",4]
 	],
 
