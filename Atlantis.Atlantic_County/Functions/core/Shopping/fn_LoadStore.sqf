@@ -667,6 +667,12 @@ if(_condition == "police_veststore") then {
 	if (player IN currentMarshals) then {
 		_police_marshalvest = [
 			["TAC_PBDFG2CPMSL_B_1",nil,1,3,3],
+			["Kangaro0_MarshalV1",nil,1,3,3],
+			["Kangaro0_MarshalV2",nil,1,3,3],
+			["Kangaro0_MarshalV3",nil,1,3,3],
+			["Kangaro0_MarshalV4",nil,1,3,3],
+			["Kangaro0_MarshalV5",nil,1,3,3],
+			["Kangaro0_MarshalV6",nil,1,3,3],
 			["TAC_V_tacv1_MSL",nil,1,3,3],
 			["TAC_V_tacv1LC_MSL",nil,1,3,3],					
 			["dtdev_usms_sog_vest_blk_camo",nil,1,3,3],
@@ -689,6 +695,8 @@ if(_condition == "police_veststore") then {
 if(_condition == "police_uniformstore") then {
 	_marshaluniformstore = [
 		["TRYK_U_denim_hood_blk",nil,1,3,1],
+		["Kangaro0_Marshal_Navy",nil,1,3,1],
+		["Kangaro0_Marshal_Black",nil,1,3,1],
 		["TRYK_U_B_BLKBLK_CombatUniform",nil,1,3,1],		
 		["dtdev_usms_sog_uni_blk",nil,1,3,1],
 		["dtdev_usms_sog_uni_green",nil,1,3,1],
@@ -765,6 +773,7 @@ if(_condition == "police_headgearstore") then {
 		["G_WirelessEarpiece_F",nil,1,3,5],
 		["EF_Mcap_PB",nil,1,3,5],
 		["CG_sert_H2",nil,1,3,5],
+		["Kangaro0_MarshalH",nil,1,3,5],
 		["TRYK_H_headsetcap_blk_Glasses",nil,1,3,5]
 
 

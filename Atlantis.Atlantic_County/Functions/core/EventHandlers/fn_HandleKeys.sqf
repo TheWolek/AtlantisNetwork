@@ -346,7 +346,7 @@ switch (_code) do
 	//powalenie  
 	case 34:
 	{
-		if(_shift && !_ctrlKey  && currentWeapon player == "" && myjob =="Cop" && cursorObject isKindOf "Man") then {
+		if(_shift && !_ctrlKey  && currentWeapon player == "" && myjob =="Cop" && cursorObject isKindOf "Man" && !imrestrained ) then {
 			[cursorObject] call client_fnc_tackleAction;
 			_handle = true;
 		};
