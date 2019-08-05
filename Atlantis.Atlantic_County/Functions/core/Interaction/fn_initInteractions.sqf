@@ -694,7 +694,8 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" !isNil{cursorTarget getVariable 'evidenceInformation'} && myJob == 'Cop' && player IN currentDetectives"],
-		["Zbierz dowody", " [CurrentCursorTarget] spawn client_fnc_evidence;  ",2]
+	//	["Zbierz dowody", " [CurrentCursorTarget] spawn client_fnc_evidence;  ",2]
+		["Zbierz dowody", " ['Zbieram dowody',30,'client_fnc_evidence',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",2]		
 	],
 
 	[
