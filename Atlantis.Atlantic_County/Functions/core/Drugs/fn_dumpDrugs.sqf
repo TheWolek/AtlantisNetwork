@@ -1,4 +1,4 @@
-if(count currentcop < 4) exitwith { ["4 policjantów musi być na służbie",true] spawn domsg; };
+if(count currentcop < 2) exitwith { ["2 policjantów musi być na służbie",true] spawn domsg; };
 
 _class1 = ["CG_MethBag100","CG_Cocaine","CG_WeedBag4"];
 _class2 = ["CG_MethBag80","CG_WeedBag3","CG_MethBag90"];

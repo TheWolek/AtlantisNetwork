@@ -974,7 +974,6 @@ if(_condition == "mafia_gunstore") then {
 
 	_gunStorePistols = [
 
- 		["RH_m9qd",nil,1900,3],
 		["RH_m9",nil,2500,1],
         ["RH_g17",nil,3000,1],
         ["RH_uspm",nil,4000,1],
@@ -986,8 +985,10 @@ if(_condition == "mafia_gunstore") then {
         ["RH_m4",nil,40000,1],
 		["RH_ar10",nil,55000,1],
 		["hlc_rifle_g3a3",nil,60000,1],
-		["hlc_rifle_M1903A1_unertl",nil,90000,1]
-
+		["hlc_rifle_M1903A1_unertl",nil,90000,1],
+		["arifle_mas_ww2_ppsh",nil,20000,1],
+		["arifle_mas_ww2_tommy",nil,16000,1],
+		["arifle_mas_ww2_sten",nil,15000,1]
 
 	];
 
@@ -1019,7 +1020,7 @@ if(_condition == "mafia_uniformstore") then {
 
 	_mafia_uniformstore = [
 		["vvv_hazmat",nil,4500,3,1],
-		["vvv_traje_mafioso1_F_1",nil,1600,3,1],
+		["vvv_traje_mafioso_F_1",nil,1600,3,1],
         ["vvv_traje_ejecutivo_1",nil,1400,3,1],
 		["vvv_character_funcionario_1",nil,2000,3,1],
 		["vvv_traje_jackoy5",nil,1200,3,1],
@@ -1077,11 +1078,10 @@ if(_condition == "mafia_misc") then {
 	_mafia_misc = [
 		["NP_drillitem",nil,20000,3],
 		["CG_HackingTool",nil,9000,3],
-		["CG_Lockpick",nil,4000,3],
-		["NP_DrugTable",nil,5500,3],
-		["CG_Pseudo",nil,5500,3],
-		["CG_Acetone",nil,5500,3],
-		["DemoCharge_Remote_Mag",nil,5500,3]
+		["CG_Lockpick",nil,1000,3],
+		["NP_DrugTable",nil,6500,3],
+		["DemoCharge_Remote_Mag",nil,60000,3],
+ 		["RH_m9qd",nil,1900,3]
 
 
 	];

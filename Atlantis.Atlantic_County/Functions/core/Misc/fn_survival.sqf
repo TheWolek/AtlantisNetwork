@@ -24,11 +24,11 @@ Survival Koil
 
 			[format["Dostałeś wypłatę w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 
-			if(profileNameSteam find "AtlantisNetwork.pl" > -1) then {
+			if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
 				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
 				[_bonus,true,true] call Client_fnc_addMoneyToBank;
 			} else {
-				[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork w nazwie na steam",str _bonus],true] spawn domsg;
+				[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
 			};
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
@@ -41,11 +41,11 @@ Survival Koil
 
 			[format["Dostałeś zasiłek dla bezrobotnych w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 
-			if(profileNameSteam find "AtlantisNetwork.pl" > -1) then {
+			if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
 				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
 				[_bonus,true,true] call Client_fnc_addMoneyToBank;
 			} else {
-				[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork w nazwie na steam",str _bonus],true] spawn domsg;
+				[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
 			};
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
@@ -76,7 +76,7 @@ Survival Koil
 
 		paycheck = 55 + paycheck;
 	
-		if(profileNameSteam find "AtlantisNetwork.pl" > -1) then {
+		if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
 			[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
 			[_bonus,true,true] call Client_fnc_addMoneyToBank;
 		} else {
