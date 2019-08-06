@@ -315,7 +315,7 @@ NoPixel_InteractionMenuItems = [
 	],
 ////
 	[
-		["player distance pos [6460.69,2853.63,0.000980377] < 40 && ((myjob == 'Mafia' && drugcount <= 375) || (myjob == 'Biker' && drugcount2 <= 375) || (myjob == 'none')) "],
+		["player distance [6460.69,2853.63,0.000980377] < 40 && ((myjob == 'Mafia' && drugcount <= 375) || (myjob == 'Biker' && drugcount2 <= 375) || (myjob == 'none')) "],
 		["Dealer", " ['Sprzedaję narkotyki',60,'client_fnc_dumpDrugs',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",1]
 	],
 	
@@ -378,7 +378,7 @@ NoPixel_InteractionMenuItems = [
 	*/
 
 	[
-		[" (vehicle player == player) && (isPlayer CursorTarget && CursorTarget isKindOf 'Man') && (vehicle CursorTarget == currentcursortarget) && ( ( myJob == 'Mafia' && player getvariable 'mafia' >= 2 ) || ( myJob == 'Cop' && player getvariable 'cop' >= 5 )) ) && !imrestrained"],
+		[" (vehicle player == player) && (isPlayer CursorTarget && CursorTarget isKindOf 'Man') && (vehicle CursorTarget == currentcursortarget) && ( ( myJob == 'Mafia' && player getvariable 'mafia' >= 2 ) || ( myJob == 'Cop' && player getvariable 'cop' == 5 ) || ( myJob == 'Cop' &&  player getvariable 'cop' == 10 ) ) && !imrestrained"],
 		["Śledź osobę $3K", " ['Podkładam gps',5,'client_fnc_trackplayer',CurrentCursorTarget,'vvv_anim_ticket',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",1]
 	],
 
