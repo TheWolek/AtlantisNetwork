@@ -325,25 +325,25 @@ disableSerialization;
 
 _allJobs = [
 
-	["Police Dispatch",currentPoliceDispatch],
-	["Fire/EMS Dispatch",currentMedicDispatch],
-
+	["Dyspozytro Policji",currentPoliceDispatch],
+	["Dyspozytro EMS",currentMedicDispatch],
+	
 	["Ochrona",currentSecurity],
-	["Repairmen",currentRepairmen],
+	["Mechanik",currentRepairmen],
 
-	["Judges",currentJudges],
-	["Lawyers",currentLawyers],
-	["Paralegals",currentParalegals],
+	["Sędziowie",currentJudges],
+	["Prawnicy",currentLawyers],
+	["Asystent prawny",currentParalegals],
 
 	["Public Defender",currentPubDefs],
-	["Prosecutors",currentDA],
+	["Prokuratorzy",currentDA],
 
-	["Senator",currentSenators],
-	["Mayor",currentMayor],
+	["Senatorzy",currentSenators],
+	["Burmistrz",currentMayor],
 	
-	["Mail Men",currentMailmen],
-	["Tow Trucks",currentTowTruckDrivers],
-	["News Worker",currentNewsMan],
+	["Kurier",currentMailmen],
+	["Holownik",currentTowTruckDrivers],
+	["Prezenter",currentNewsMan],
 	["Kierowca Autobusus",currentBusDrivers],
 	["Taxi",currentTaxiDrivers]
 	

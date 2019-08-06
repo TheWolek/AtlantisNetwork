@@ -694,7 +694,8 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" !isNil{cursorTarget getVariable 'evidenceInformation'} && myJob == 'Cop' && player IN currentDetectives"],
-		["Zbierz dowody", " [CurrentCursorTarget] spawn client_fnc_evidence;  ",2]
+	//	["Zbierz dowody", " [CurrentCursorTarget] spawn client_fnc_evidence;  ",2]
+		["Zbierz dowody", " ['Zbieram dowody',30,'client_fnc_evidence',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",2]		
 	],
 
 	[
@@ -1024,7 +1025,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["myjob == 'Mafia' && typeof cursorobject IN ['Land_buildingsCasino2'] && !imrestrained"],
-		["Sklep Mafii", "closedialog 0; createdialog 'mafia_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
+		["Sklep Mafii", "closedialog 0; createdialog 'mafia_equipment'; ['mafia_gunstore'] spawn client_fnc_LoadStore;",3]
 	],
 /*
 	[ 
@@ -1149,7 +1150,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 
-
+/*
 	[
 		["((myjob == 'Cop' && typeof CursorTarget == 'Land_em_mansion_01' && player getVariable 'Cop' > 4))"],
 		["Przeszukaj schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player, ""Mafia""] remoteExec ['server_fnc_retreivegang',2]",4]
@@ -1165,7 +1166,7 @@ NoPixel_InteractionMenuItems = [
 		["((myjob == 'Cop' && typeof cursorobject == 'Land_buildingsNightclub2' && player getVariable 'Cop'> 4))"],
 		["Przeszukaj schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player, ""Biker""] remoteExec ['server_fnc_retreivegang',2]",4]
 	],
-
+*/
 
 	[
 		["(str CursorObject find 'gymbench' > -1 || str CursorObject find 'gymrack' > -1)"],
@@ -1453,7 +1454,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["player IN currentParalegals && ( typeof cursorobject == 'Land_Centrelink' )"],
-		["STOPParalegal", " currentParalegals = currentParalegals - [player]; publicVariable 'currentParalegals'; ",4]
+		["STOP Paralegal", " currentParalegals = currentParalegals - [player]; publicVariable 'currentParalegals'; ",4]
 	],
 
 
