@@ -952,12 +952,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["CursorTarget == fishTrader"],
+		["cursorObject getVariable['fishtrader',false]"],
 		["Rare Fish Sales", "closedialog 0; createdialog 'RareFish_Menu'; ['rarefish'] spawn client_fnc_LoadStore;",3]
 	],
 
 	[
-		["CursorTarget == fishTrader"],
+		["cursorObject getVariable['fishtrader',false]"],
 		["Trade Rare Pelt", "closedialog 0; [] spawn client_fnc_rarePelt;",3]
 	],
 
@@ -1004,7 +1004,7 @@ NoPixel_InteractionMenuItems = [
 ///////////////////////////////////
 //////////////////////////////////
 	[
-		[" getpos player distance [7481.77,2223.85,0.00143814] < 5"],
+		[" getpos player distance [801.153,1391.25,0.00143814] < 5"],
 		["Nightclub Bar", "closedialog 0; createdialog 'food_menu'; ['nbar'] spawn client_fnc_LoadStore;",3]
 	],
 
@@ -1096,7 +1096,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" myJob IN ['Cop','DA'] && (( typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) || ( vehicle player != player )) && !imrestrained "],
-		["Komputer PD", "createdialog 'wanted';",4]
+		["Komputer PD", "createdialog 'wanted';",3]
 	],
 
 	[
@@ -1136,7 +1136,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["(typeof CursorTarget IN ['Land_Centrelink'] || str CursorObject find 'mcl_atm' > -1) && bankrobber == 1 && !imrestrained"],
-		["Bankomat", "[] call Client_fnc_openATM",4]
+		["Bankomat", "[] call Client_fnc_openATM",3]
 	],
 
 	[
@@ -1515,7 +1515,7 @@ NoPixel_InteractionMenuItems = [
 
 
 	[
-		["typeof CursorTarget == 'Land_i_Barracks_V1_F'"],
+		["typeof CursorTarget == 'Land_Barracks_01_camo_F' && player distance [4330.02,4050.19,0.00143433] < 100"],
 		["Oczyść kryształ", "closedialog 0; [] spawn client_fnc_processBricks",4]
 	],
 
@@ -1575,8 +1575,8 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["(str typeof CursorObject find 'cargo20' > -1 || str typeof cursorObject find 'plp' > -1 ) && player distance [2243.1,6442.22,0] < 700"],
-		["Przeszukaj Kontener", "['Searching Crate',35,'client_fnc_searchcrates',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask; ",4]
+		["(str CursorObject find 'cargo20' > -1 || str cursorObject find 'plp' > -1 ) && player distance [2243.1,6442.22,0] < 700"],
+		["Przeszukaj Kontener", "['Searching Crate',35,'client_fnc_searchcrates',player,'AinvPknlMstpSnonWnonDnon_medic_1',cursorObject,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask; ",4]
 	],
 
 	/*
