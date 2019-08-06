@@ -293,7 +293,7 @@ if(_adminuid in _uidarr) then {
 
 _TFenabled = [] call TFAR_fnc_isTeamSpeakPluginEnabled;
 
-if (!(_TFenabled) && !(_isadmin)) then {
+if (!(_TFenabled) && !(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
 
 	while {!([] call TFAR_fnc_isTeamSpeakPluginEnabled)} do {
 		
@@ -326,7 +326,7 @@ titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 				
 					_TFenabled = [] call TFAR_fnc_isTeamSpeakPluginEnabled;
 					if ((!(_TFenabled)) && (Dvid_TFEnabled)) then {
-					if (!(_isadmin)) then {
+					if (!(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
 						titleText ["Please enable Task Force Radio in your TS3 Plugins! || TS3 -> Settings -> Plugins", "BLACK"];
 						Dvid_TFEnabled = false;
 					};
@@ -337,7 +337,7 @@ titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 					
 					_onTsServer = "AtlantisNETWORK.PL | Official Teamspeak | Serwer RolePlay" == (call TFAR_fnc_getTeamSpeakServerName); //////////////////////Edit too pls, or dont but it wont work if you dont
 					if (!(_onTsServer)) then {
-					if (!(_isadmin)) then {
+					if (!(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
 						titleText ["Please join the teamspeak server! Adress: here", "BLACK"];
 						Dvid_onTsServer = false;
 					};
@@ -346,7 +346,7 @@ titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 						};
 					} else {
 						if (!(Dvid_onTsServer)) then {
-						if (!(_isadmin)) then {
+						if (!(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
 							titleText ["TS server check completed. Welcome!","BLACK IN"];
 							Dvid_onTsServer = true;
 							};
@@ -358,7 +358,7 @@ titleText ["Task Force Radio loaded succesfully","BLACK IN"];
 					
 					_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
 					if (!(_onChannel)) then {
-					if (!(_isadmin)) then {
+					if (!(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
 						titleText ["Please reload the plugin to join the TFR channel || Settings -> Plugins -> Reload All", "BLACK"];
 						Dvid_onChannel = false;
 					};

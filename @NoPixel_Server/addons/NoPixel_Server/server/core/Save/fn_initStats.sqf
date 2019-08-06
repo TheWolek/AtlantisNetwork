@@ -51,9 +51,11 @@ if (_booli) then {
 
 	///////////////////////////////////////////////////////// REMOVE AFTER WIPE ////////////////////////////////////////////////////////////
 
+	/*
 	if(count _statuses == 13) then {
 		_statuses pushBack 0; // tax
 	};
+	*/
 	
 	if(count (_statuses select 0) == 17) then {
 		(_statuses select 0) pushBack 0; // tax
