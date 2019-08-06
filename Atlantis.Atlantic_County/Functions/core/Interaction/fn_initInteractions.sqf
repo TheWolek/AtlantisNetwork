@@ -1454,7 +1454,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["player IN currentParalegals && ( typeof cursorobject == 'Land_Centrelink' )"],
-		["STOPParalegal", " currentParalegals = currentParalegals - [player]; publicVariable 'currentParalegals'; ",4]
+		["STOP Paralegal", " currentParalegals = currentParalegals - [player]; publicVariable 'currentParalegals'; ",4]
 	],
 
 
