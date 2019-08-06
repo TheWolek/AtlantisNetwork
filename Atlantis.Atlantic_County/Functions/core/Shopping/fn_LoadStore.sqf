@@ -569,11 +569,13 @@ if(_condition == "glasses") then {
 };
 /*============================================ POLICE STORE =====================================*/
 if(_condition == "police_gunstore") then {
-	_gspl1 = [
+	_gsplcadet = [
 		["CG_BATON",nil,1,1],
-		["RH_g17",nil,1,1],
 		["RH_usp",nil,1,1],
-		["taser",nil,1,1]		
+		["taser",nil,1,1]
+	];
+	_gspl1 = [
+		["RH_g17",nil,1,1]	
 	];
 	_gspl2 = [
 		["RH_p226",nil,1,1]
@@ -591,7 +593,7 @@ if(_condition == "police_gunstore") then {
 	_gspl6 = [
 		["hlc_smg_MP5N",nil,1,1]
 	];
-	_gspl891011 = [
+	_gspl8do12 = [
 		["RH_m4",nil,1,1]
 	];
 	_gspmswat = [
@@ -603,37 +605,42 @@ if(_condition == "police_gunstore") then {
 	if(player getvariable "cop" >= 1) then {
 		{
 			_storeList pushback _x;
-		} foreach _gspl1;
+		} foreach _gsplcadet;
 	};
 	if(player getvariable "cop" >= 2) then {
 		{
 			_storeList pushback _x;
-		} foreach _gspl2;
+		} foreach _gspl1;
 	};
 	if(player getvariable "cop" >= 3) then {
 		{
 			_storeList pushback _x;
-		} foreach _gspl3;
+		} foreach _gspl2;
 	};
 	if(player getvariable "cop" >= 4) then {
 		{
 			_storeList pushback _x;
-		} foreach _gspl4;
+		} foreach _gspl3;
 	};
 	if(player getvariable "cop" >= 5) then {
 		{
 			_storeList pushback _x;
-		} foreach _gspl5;
+		} foreach _gspl4;
 	};
 	if(player getvariable "cop" >= 6) then {
 		{
 			_storeList pushback _x;
-		} foreach _gspl6;
+		} foreach _gspl5;
 	};
 	if(player getvariable "cop" >= 7) then {
 		{
 			_storeList pushback _x;
-		} foreach _gspl891011;
+		} foreach _gspl6;
+	};
+	if(player getvariable "cop" >= 8) then {
+		{
+			_storeList pushback _x;
+		} foreach _gspl8do12;
 	};
 	// marshale i swat
 	if(player in currentMarshals || 9 IN licenseArray || 8 in licenseArray) then {
