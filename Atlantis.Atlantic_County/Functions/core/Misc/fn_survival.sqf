@@ -7,6 +7,7 @@ Survival Koil
 	waitUntil { !isNil "packet"; };
 	_govtbank = packet;
 	packet=nil;
+	_bonus = 80;
 
 	if(isNil "paycheck") then { paycheck = 0; };
 
@@ -23,6 +24,13 @@ Survival Koil
 
 			[format["Dostałeś wypłatę w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 
+			if(profileNameSteam find "AtlantisNetwork.pl" > -1) then {
+				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
+				[_bonus,true,true] call Client_fnc_addMoneyToBank;
+			} else {
+				[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork w nazwie na steam",str _bonus],true] spawn domsg;
+			};
+
 			["add","Karma",1,"Default"] call client_fnc_sustain;
 
 
@@ -32,6 +40,13 @@ Survival Koil
 			paycheck = 35 + paycheck + _random;
 
 			[format["Dostałeś zasiłek dla bezrobotnych w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+
+			if(profileNameSteam find "AtlantisNetwork.pl" > -1) then {
+				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
+				[_bonus,true,true] call Client_fnc_addMoneyToBank;
+			} else {
+				[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork w nazwie na steam",str _bonus],true] spawn domsg;
+			};
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
 		};
@@ -61,7 +76,6 @@ Survival Koil
 
 		paycheck = 55 + paycheck;
 	
-		_bonus = 80;
 		if(profileNameSteam find "AtlantisNetwork.pl" > -1) then {
 			[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
 			[_bonus,true,true] call Client_fnc_addMoneyToBank;
