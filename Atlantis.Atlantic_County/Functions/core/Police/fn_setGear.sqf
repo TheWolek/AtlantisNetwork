@@ -55,12 +55,12 @@ if(myjob == "Cop") then {
 
 	_level = player getVariable "cop";
 
-	// commissioner
-	if(_level == 10) then { 
+	// komediant
+	if(_level == 12) then { 
 		player forceAddUniform "TRYK_U_B_wh_blk_Rollup_CombatUniform";		
 	};	
-
-	if(_level == 9) then { 
+	//zastępca
+	if(_level == 11) then { 
 		player forceAddUniform "vvv_character_agente_47";
 	};	
 
@@ -130,6 +130,14 @@ if(myjob == "Cop") then {
 				player forceAddUniform "Campaign_Hat_trooper";
 				player addHeadgear "EF_Fcap_PB"; 
 			};
+			if(_level == 9) then {
+				player forceAddUniform "Campaign_Hat_trooper";
+				player addHeadgear "EF_Fcap_PB"; 
+			};
+			if(_level == 10) then {
+				player forceAddUniform "Campaign_Hat_trooper";
+				player addHeadgear "EF_Fcap_PB"; 
+			};
 
 		} else { 
 			switch (_level) do {
@@ -162,6 +170,14 @@ if(myjob == "Cop") then {
 					player addHeadgear "BL_party_Hat";
 				};
 				case 8: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 9: {
+					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 10: {
 					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
 					player addHeadgear "BL_party_Hat";
 				};
@@ -241,6 +257,14 @@ if(myjob == "Cop") then {
 				player forceAddUniform "EF_FEM_4_2";
 				player addVest "EF_BLT_M1B";
 			};
+			if(_level == 9) then {				
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+			};
+			if(_level == 10) then {
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+			};
 
 		} else { 
 			switch (_level) do {
@@ -273,6 +297,14 @@ if(myjob == "Cop") then {
 					player addHeadgear "BL_party_Hat";
 				};
 				case 8: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 9: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 10: {
 					player forceAddUniform "U_O_R_Gorka_01_black_F";
 					player addHeadgear "BL_party_Hat";
 				};
@@ -352,6 +384,14 @@ if(myjob == "Cop") then {
 				player forceAddUniform "EF_FEM_4_2";
 				player addVest "EF_BLT_M1B";
 			};
+			if(_level == 9) then {				
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+			};
+			if(_level == 10) then {
+				player forceAddUniform "EF_FEM_4_2";
+				player addVest "EF_BLT_M1B";
+			};
 
 		} else { 
 			switch (_level) do {
@@ -384,6 +424,14 @@ if(myjob == "Cop") then {
 					player addHeadgear "BL_party_Hat";
 				};
 				case 8: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 9: {
+					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player addHeadgear "BL_party_Hat";
+				};
+				case 10: {
 					player forceAddUniform "U_O_R_Gorka_01_black_F";
 					player addHeadgear "BL_party_Hat";
 				};
@@ -457,6 +505,12 @@ if(myjob == "Cop") then {
 			if(_level == 8) then {
 				player forceAddUniform "EF_FEM_3_3G";
 			};
+			if(_level == 9) then {				
+				player forceAddUniform "EF_FEM_3_3G";
+			};
+			if(_level == 10) then {
+				player forceAddUniform "EF_FEM_3_3G";
+			};
 
 		} else { 
 			if(_level == 1) then {
@@ -481,6 +535,12 @@ if(myjob == "Cop") then {
 				player forceadduniform "EF_HMMSL_2"; 
 			};
 			if(_level == 8) then {
+				player forceAddUniform "EF_HMMSL_2";
+			};
+			if(_level == 9) then {				
+				player forceadduniform "EF_HMMSL_2"; 
+			};
+			if(_level == 10) then {
 				player forceAddUniform "EF_HMMSL_2";
 			};
 
