@@ -17,7 +17,7 @@ if(!taskrunning) then {
 	[] spawn {
 		playertasks = [];
 		taskrunning = true;
-		busStoparray_Atlantis = [
+		busStopArray = [
 			[[879.369,1243.55,0],"Atlatnis city centrum"],
 			[[905.404,1312.68,0],"Kasyno Atlantis city"],
 			[[905.935,1442.87,0],"Kiesta Atlantis city"],
@@ -49,11 +49,13 @@ if(!taskrunning) then {
 		_warnings = 0;
 		uisleep 30;
 
+	/*
 		if(player distance [840.07,1164.61,0] < 500) then {
 			busStopArray = busStoparray_Atlantis;
 		} else {
 			busStopArray = busStoparray_Dobro;
 		};
+		*/
 
 		while{taskrunning && myjob == "bus"} do {
 			uisleep 3;

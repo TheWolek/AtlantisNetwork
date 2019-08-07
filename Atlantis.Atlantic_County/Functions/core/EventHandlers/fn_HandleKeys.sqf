@@ -23,16 +23,17 @@ switch (_code) do
 		};
 		
 	};
-/*
+
 	case 57:
 	{
 		if(EM_allowed) then { EM_Allowed = false; };
-        if(isNil "jumpActionTime") then { jumpActionTime = 0; };
+        /*if(isNil "jumpActionTime") then { jumpActionTime = 0; };
         if( (time - jumpActionTime) > 2 && !client_istazed && !imrestrained && (animationState player) != "unconscious" && (animationState player) != "Incapacitated" && (animationState player) != "deadstate") then {
             jumpActionTime = time;
             player spawn client_fnc_jumpScript;
             _handled = true;
         };
+		*/
 		if(!ClientInterrupted) then {
 			ClientInterrupted = true;
 		};
@@ -47,7 +48,6 @@ switch (_code) do
 
 		};
 	};
-	*/
 	case 61:
 	{
 	

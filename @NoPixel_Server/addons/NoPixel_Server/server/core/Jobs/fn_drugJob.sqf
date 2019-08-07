@@ -17,7 +17,7 @@ if(drugcount >= 375) then {
 		_endmission = [1083.07,4126.32,0];
 
 		_vehspawnarr = [[5392.3,5855.11,0],[5456.02,4236.2,0],[3618.88,1479.71,0],[1555.06,1090.91,0]];
-		_vehspawn = selectRandom _vehspawnarr
+		_vehspawn = selectRandom _vehspawnarr;
 
 		_veharr = ["d3s_kamaz_tent","d3s_kraz_6316","d3s_kamaz_6350"];
 		_veh = createVehicle [(selectRandom _veharr),_vehspawn,[],0,"NONE"];

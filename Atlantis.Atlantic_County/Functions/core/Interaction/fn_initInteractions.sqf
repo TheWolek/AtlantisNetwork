@@ -1515,7 +1515,7 @@ NoPixel_InteractionMenuItems = [
 
 
 	[
-		["typeof CursorTarget == 'Land_Barracks_01_camo_F' && player distance [4330.02,4050.19,0.00143433] < 100"],
+		["typeof cursorObject == 'Land_Barracks_01_camo_F' && player distance [4330.02,4050.19,0.00143433] < 100"],
 		["Oczyść kryształ", "closedialog 0; [] spawn client_fnc_processBricks",4]
 	],
 
@@ -1623,7 +1623,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof CursorTarget == 'Land_Centrelink'"],
+		["typeof CursorObject == 'Land_Centrelink'"],
 		["Znajdź pracę", "[player] spawn client_fnc_startjob",4]
 	],
 

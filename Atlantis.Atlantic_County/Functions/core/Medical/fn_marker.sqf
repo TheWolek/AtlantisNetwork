@@ -151,16 +151,13 @@ if (_type == "ALL") then {
 		};
 	} forEach playableUnits;							
     _arr = [
-        ["Oil Refining",[6326.59,2253.8,0.00143814]],//to change
-        ["Ore Refining",[6315.67,2242.35,0.00139236]],//to change
-        ["Log Refining",[5576.34,3327.53,0]],
-        ["Pelt Curing",[4215.46,5725.09,0.00120544]],//to change
-        ["Bars/Wood/Oil Selling",[3159.32,2470.09,0]],
-        ["Fish Processing",[9803.09,3003,0.00113201]],//to change
-		["Open Mining", [6407.09,5816.01,0.00143814]],//to change
-        ["Rare Item Trading", [5447.27,5165.15,0.002213]],//to change
-        ["Fish Selling", [4734.05,2411.46,0.00143862]],//to change
-        ["Housing Upgrading",[855.632,1092.4,0.00143909]]
+        ["Przetwarzanie",[5576.34,3327.53,0]],
+        ["Oczyszczanie skór",[4856.32,897.653,0]],
+        ["Skup dóbr",[3159.32,2470.09,0]],
+        ["Przetwarzanie ryb",[7463.44,1864,0]],
+        ["Skup żadkich przedmiotów", [1733.81,3723.2,0.00170898]],
+        ["Skup ryb", [3174.16,2281.33,0.00141549]],
+        ["Ulepszanie domów",[855.632,1092.4,0.00143909]]
     ];
 
 	{
@@ -172,19 +169,19 @@ if (_type == "ALL") then {
 
 	} forEach _arr;
     _arr = [
-		["Casino",[933.723,1289.9,0.00143957]],
-        ["Court of Law", [817.614,1637.97,0.00143766]],
+		["Kasyno",[933.723,1289.9,0.00143957]],
+        ["Sąd stanowy", [817.614,1637.97,0.00143766]],
         //["Police Station", [8297.44,3002.32,0.00143814]],
         //["DoC Silver Lake", [5576.06,6191.3,0.00143433]],
         //["Silver Rush Hotel & Casino", [4821.5,2123.88,0.00143957]],
         ["Nightclub", [800.329,1389.63,0.00143814]],
         //["SLFD Silver Lake North", [9574.12,4165.42,0.00143814]],
-        ["Hospital", [1752.17,2227.06,0.00132751]],
-		["Jail", [6884.91,4046.69,0.00143433]],
+        ["Szpital", [3263.96,3608.9,0.00143433]],
+		//["Jail", [6884.91,4046.69,0.00143433]],
         //["SLFD Colchester", [8524.93,6642.69,-0.269258]],
         //["Silver Lake City Concert Hall", [6736.5,1780.16,0.00144172]],
 		//["Muscle Beach Gym", [7523.95,2239.83,0.00143814]],
-		["Impound Lot", [3419.04,4382.06,0.00144196]]
+		//["Impound Lot", [3419.04,4382.06,0.00144196]]
 		//["Bank of Silver Lake", [8805.49,7242.14,0.00143814]]
     ];
 
@@ -332,6 +329,7 @@ if(_type == "Airshop") then {
 };
 
 if(_type == "Boatshop") then {
+	/*
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], _x];
 		_marker setMarkerShapeLocal "ICON";
@@ -340,6 +338,7 @@ if(_type == "Boatshop") then {
 		_marker setMarkerText "BoatShop";
 
 	} forEach [[9910.15,5076.94,-2.38744]];
+	*/
 };
 
 if(_type == "Pizzaria") then {
@@ -428,16 +427,13 @@ if(_type == "Offices") then {
 
 if(_type == "Processing") then {
     _arr = [
-        ["Oil Refining",[6326.59,2253.8,0.00143814]],
-        ["Ore Refining",[6315.67,2242.35,0.00139236]],
-        ["Log Refining",[1237.41,4379.28,0.00143814]],
-        ["Pelt Curing",[4215.46,5725.09,0.00120544]],
-        ["Bars/Wood/Oil Selling",[8644.31,6861.77,0.00143623]],
-        ["Fish Processing",[9803.09,3003,0.00113201]],
-		["Open Mining", [6407.09,5816.01,0.00143814]],
-        ["Rare Item Trading", [5447.27,5165.15,0.002213]],
-        ["Fish Selling", [4734.05,2411.46,0.00143862]],
-        ["Housing Upgrading",[7924.76,2724.39,0.00143814]]
+        ["Przetwarzanie",[5576.34,3327.53,0]],
+        ["Oczyszczanie skór",[4856.32,897.653,0]],
+        ["Skup dóbr",[3159.32,2470.09,0]],
+        ["Przetwarzanie ryb",[7463.44,1864,0]],
+        ["Skup żadkich przedmiotów", [1733.81,3723.2,0.00170898]],
+        ["Skup ryb", [3174.16,2281.33,0.00141549]],
+        ["Ulepszanie domów",[855.632,1092.4,0.00143909]]
     ];
 
 	{
@@ -452,19 +448,19 @@ if(_type == "Processing") then {
 
 if(_type == "Misc") then {
     _arr = [
-		["Casino",[933.723,1289.9,0.00143957]],
-        ["Court of Law", [817.614,1637.97,0.00143766]],
+		["Kasyno",[933.723,1289.9,0.00143957]],
+        ["Sąd stanowy", [817.614,1637.97,0.00143766]],
         //["Police Station", [8297.44,3002.32,0.00143814]],
         //["DoC Silver Lake", [5576.06,6191.3,0.00143433]],
         //["Silver Rush Hotel & Casino", [4821.5,2123.88,0.00143957]],
         ["Nightclub", [800.329,1389.63,0.00143814]],
         //["SLFD Silver Lake North", [9574.12,4165.42,0.00143814]],
-        ["Hospital", [1752.17,2227.06,0.00132751]],
-		["Jail", [6884.91,4046.69,0.00143433]],
+        ["Szpital", [3263.96,3608.9,0.00143433]],
+		//["Jail", [6884.91,4046.69,0.00143433]],
         //["SLFD Colchester", [8524.93,6642.69,-0.269258]],
         //["Silver Lake City Concert Hall", [6736.5,1780.16,0.00144172]],
 		//["Muscle Beach Gym", [7523.95,2239.83,0.00143814]],
-		["Impound Lot", [3419.04,4382.06,0.00144196]]
+		//["Impound Lot", [3419.04,4382.06,0.00144196]]
 		//["Bank of Silver Lake", [8805.49,7242.14,0.00143814]]
     ];
 
