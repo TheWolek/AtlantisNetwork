@@ -1023,6 +1023,11 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
+		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained && player distance [1355.1,997.385,4.41015] <8 && (currentWeapon player) == 'bnae_trg42_virtual'"],
+		["Zwróć Karabin", "[] spawn client_fnc_returnrifle;",3]
+	],
+
+	[
 		["myjob == 'Mafia' && typeof cursorobject IN ['Land_buildingsCasino2'] && !imrestrained"],
 		["Sklep Mafii", "closedialog 0; createdialog 'mafia_equipment'; ['mafia_gunstore'] spawn client_fnc_LoadStore;",3]
 	],

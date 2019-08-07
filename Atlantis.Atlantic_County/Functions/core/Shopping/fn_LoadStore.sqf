@@ -565,7 +565,7 @@ if(_condition == "glasses") then {
 if(_condition == "police_gunstore") then {
 	_gsplcadet = [
 		["CG_BATON",nil,1,1],
-		["RH_usp",nil,1,1],
+		["RH_uspm",nil,1,1],
 		["taser",nil,1,1]
 	];
 	_gspl1 = [
@@ -591,10 +591,11 @@ if(_condition == "police_gunstore") then {
 		["RH_m4",nil,1,1]
 	];
 	_gspmswat = [
-		["RH_g18",nil,1,1],
-		["CSW_FN57_Ballistic_Shield",nil,1,1],
-		["CSW_FN57_Shield_P",nil,1,3],
-		["RH_M4m_b",nil,1,1]
+		["RH_g18",nil,60,1],
+		["CSW_FN57_Ballistic_Shield",nil,100,1],
+		["bnae_trg42_virtual",nil,3000,1],	
+		["RH_M4m_b",nil,1000,1]
+
 
 	];
 
@@ -604,18 +605,9 @@ if(_condition == "police_gunstore") then {
 
 	_pddtushop = [
 		["RH_g18",nil,1,1],
-		["RH_uspm",nil,1,1],
 		["RH_kimber_nw",nil,1,1],
 		["RH_fnp45",nil,1,1],
-		["RH_cz75",nil,1,1],
-		["RH_gemtech9",nil,1,3],
-		["RH_matchsd",nil,1,3],
-		["RH_gemtech45",nil,1,3],
-		["RH_X2",nil,1,3],
-		["RH_docter",nil,1,3],
-		["RH_tundra",nil,1,3],
-		["KA_ANPEQ15_Black_IR",nil,1,3],
-		["RH_compM2",nil,1,3]
+		["RH_cz75",nil,1,1]
 	];
 
 	_dtulr = [
@@ -952,14 +944,46 @@ if(_condition == "police_misc") then {
 		["RH_spr_mbs",nil,10,3],
 		["hlc_muzzle_Agendasix",nil,10,3],
 		["ToolKit",nil,10,3]
-
-
-
 	];
+
+
+	_pddtuaccshop = [
+		["RH_gemtech9",nil,1,3],
+		["RH_matchsd",nil,1,3],
+		["RH_gemtech45",nil,1,3],
+		["RH_X2",nil,1,3],
+		["RH_docter",nil,1,3],
+		["RH_tundra",nil,1,3],
+		["KA_ANPEQ15_Black_IR",nil,1,3],
+		["RH_compM2",nil,1,3]
+	];	
+
+	_pdmarshalstuff = [
+		["CSW_FN57_Shield_P",nil,300,3],	
+		["bnae_muzzle_blk_virtual",nil,300,3],		
+		["bnae_scope_blk_virtual",nil,600,3],
+		["bnae_bipod_v2_virtual",nil,300,3],
+		["5Rnd_APDS_338LM_Magazine",nil,150,3]
+	];	
 
 	{
 		_storeList pushback _x;
 	} foreach _police_misc;
+
+	if(player in currentMarshals || 9 IN licenseArray || 8 in licenseArray) then {
+		{
+			_storeList pushback _x;
+		} foreach _pdmarshalstuff;
+	};
+	if(player in currentDetectives) then {
+		{
+			_storeList pushback _x;
+		} foreach _pddtuaccshop;
+	};
+
+
+
+
 
 };
 
@@ -980,6 +1004,8 @@ if(_condition == "mafia_gunstore") then {
 		["RH_ar10",nil,55000,1],
 		["hlc_rifle_g3a3",nil,60000,1],
 		["hlc_rifle_M1903A1_unertl",nil,90000,1],
+		["arifle_mas_ww2_mos",nil,160000,1],
+		["optic_LRPS",nil,5000,3],		
 		["arifle_mas_ww2_ppsh",nil,20000,1],
 		["arifle_mas_ww2_tommy",nil,16000,1],
 		["arifle_mas_ww2_sten",nil,15000,1]
