@@ -11,7 +11,6 @@ if (_item == "np_tequila") then { ["Remove","Karma",5000,"Stress"] call client_f
 if (_item == "NP_DrugTable") then {
 		[] spawn client_fnc_usedrugtable;
 		[_item,0] spawn client_fnc_removeitem; closeDialog 0;
-	};
 };
 
 if (_item == "NP_GrowingPlot") then { [] spawn client_fnc_plantweed; closeDialog 0; };
