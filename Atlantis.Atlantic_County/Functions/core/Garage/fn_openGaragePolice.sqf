@@ -79,6 +79,7 @@ if(myJob == "Cop") then {
 	if(player in currentMarshals || player in currentDetectives) then {
 		_garage pushback "chvwT6_raid";
 		_garage pushback "GM_SWAT_TAHOE";
+		_garage pushback "d3s_f10_12_UNM";
 
 	};
 	/*
