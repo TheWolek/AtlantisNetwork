@@ -9,7 +9,7 @@ if(_current == 0) exitwith {};
 if (_item == "np_tequila") then { ["Remove","Karma",5000,"Stress"] call client_fnc_sustain; [] spawn client_fnc_drinkTequila; [_item,0] spawn client_fnc_removeitem; closeDialog 0; client_drunk = client_drunk + 10; };
 
 if (_item == "NP_DrugTable") then {
-	if(player distance [2687.35,1462.83,0.00144196] < 400) then {
+	if((player distance (nearestBuilding player) < 50) || (player distance [4439.99,3029.93,0.00144196] < 60) || (player distance [3594.32,1415.93,0.00143862] < 60) || (player distance [6857.48,7211.6,0.00143862] < 60)) then {
 		[] spawn client_fnc_usedrugtable; [_item,0] spawn client_fnc_removeitem; closeDialog 0;
 	} else {
 		["Musisz być blisko budynku!", true] spawn domsg;

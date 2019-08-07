@@ -63,7 +63,7 @@ if(_jobs isequalto []) then { _jobs = ["Brak dostęponych prac"]; };
 } foreach _jobs;
 
 _list lbAdd "Praca: Drwal";
-_job = "Drwal";
+_job = "Wood Logging";
 _list lbSetdata [(lbSize _list)-1,str(_job)];
 
 ["Pamiętaj, prace polegające na zbieraniu wymagają plecaka. Możesz wypożyczyć pojazdu klikając windows na centrelinku.", true] spawn domsg;
