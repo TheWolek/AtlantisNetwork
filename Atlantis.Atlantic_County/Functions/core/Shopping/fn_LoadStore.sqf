@@ -10,18 +10,12 @@ if(_condition == "gunstore") then {
 		["cg_hatchet",nil,120,1],
 		["cg_pickaxe",nil,120,1],
 		["cg_bat",nil,120,1],
+		["vvv_fishing_rod",nil,120,1],
 
-		//["vvv_fishing_rod",nil,120,1],
-
-		["RH_g17",nil,1200,1],
-		["RH_usp",nil,1900,1],
-		["RH_m1911",nil,1900,1],
-		["RH_ttracker",nil,2100,1],
-		["RH_mp412",nil,1900,1],
-		["RH_python",nil,2100,1],
-		["RH_fn57",nil,3300,1],
-		["RH_gsh18",nil,3500,1]
-
+		["RH_m1911",nil,2500,1],
+		["RH_g17",nil,3000,1],
+		["RH_usp",nil,3000,1],
+		["RH_kimber_nw",nil,6500,1]// do zmiany na zloty
 
 	];
 
