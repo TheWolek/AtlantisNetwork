@@ -66,7 +66,7 @@ if((_this select 0) == 1) exitwith {
 	
 	if(myJob == "Cop") then {
 		_cost = 50;
-		if (typeof _vehicle IN ["GM_SWAT_TAHOE","chvwT6_raid"]) then {
+		if (typeof _vehicle IN ["GM_SWAT_TAHOE","chvwT6_raid","d3s_f10_12_UNM"]) then {
 		["Ten samochód nie ma GPS", false] spawn domsg; 
 		} else 	{
 		_vehicle setVariable ["pdCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
