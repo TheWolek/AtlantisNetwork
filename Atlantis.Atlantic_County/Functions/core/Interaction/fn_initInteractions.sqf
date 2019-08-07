@@ -452,12 +452,12 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" !client_seatbelt && vehicle player != player "],
-		["Pasy On", "client_seatbelt = true;",1]
+		["Zapnij pasy", "client_seatbelt = true;",1]
 	],
 
 	[
 		[" client_seatbelt && vehicle player != player "],
-		["Pasy Off", "client_seatbelt = false;",1]
+		["Odepnij pasy", "client_seatbelt = false;",1]
 	],
 // healing
 

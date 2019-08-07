@@ -188,6 +188,8 @@ if(_statementsent == 24) then {
 	if(isNil "Ghosting") then { Ghosting = false; };
 	if(!Ghosting) exitwith {
 		Ghosting = true;
+		[player,true] remoteExec ["hideobjectglobal", 2]; 
+		player setvariable ["admingod",true,true];				
 		while{Ghosting} do {
 			if(vehicle _target == _target) then {
 				if(player IN (attachedobjects _target)) then { sleep 3; } else { player attachTo [_target, [0, 0, 1] ]; sleep 5; };
@@ -198,7 +200,12 @@ if(_statementsent == 24) then {
 			};
 		};
 	};
-	if(Ghosting) exitwith { detach player; Ghosting = False;};
+	if(Ghosting) exitwith {
+		detach player;
+		Ghosting = False;
+		[player,false] remoteExec ["hideobjectglobal", 2]; 
+		player setvariable ["admingod",false,true];
+	};			
 };
 
 if(_statementsent == 25) then {
