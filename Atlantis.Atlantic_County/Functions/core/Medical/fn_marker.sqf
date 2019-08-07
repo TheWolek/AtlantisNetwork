@@ -71,6 +71,7 @@ if (_type == "ALL") then {
 		_marker11 setMarkerColorLocal "ColorGreen";
 
 	} forEach (nearestobjects[player,["Land_Hangar_F"],30000]);
+	/*
 	{
 		_marker12 = createMarkerLocal [format["tempmarker_%1",random 10000], _x];
 		_marker12 setMarkerShapeLocal "ICON";
@@ -79,6 +80,7 @@ if (_type == "ALL") then {
 		_marker12 setMarkerText "Boat";
 
 	} forEach [[9910.15,5076.94,-2.38744]];
+	*/
 	{
 		_marker13 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker13 setMarkerShapeLocal "ICON";
@@ -92,6 +94,7 @@ if (_type == "ALL") then {
 		_marker14 setMarkerShapeLocal "ICON";
 		_marker14 setMarkerTypeLocal "hd_dot";
 		_marker14 setMarkerColorLocal "ColorGreen";
+		_marker14 setMarkerText "Bar";
 
 	} forEach (nearestobjects[player,["Land_buildingBar1"],30000]);
 	{
