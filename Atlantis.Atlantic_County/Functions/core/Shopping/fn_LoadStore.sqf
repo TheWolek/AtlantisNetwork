@@ -15,7 +15,7 @@ if(_condition == "gunstore") then {
 		["RH_m1911",nil,2500,1],
 		["RH_g17",nil,3000,1],
 		["RH_usp",nil,3000,1],
-		["RH_kimber_nw",nil,6500,1]// do zmiany na zloty
+		["RH_kimber",nil,6500,1]
 
 	];
 
