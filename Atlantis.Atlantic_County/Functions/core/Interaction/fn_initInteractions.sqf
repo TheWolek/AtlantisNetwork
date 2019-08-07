@@ -952,12 +952,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["cursorObject getVariable['fishtrader',false]"],
+		["cursorObject getVariable['raretrader',false]"],
 		["Sprzedaż ryb", "closedialog 0; createdialog 'RareFish_Menu'; ['rarefish'] spawn client_fnc_LoadStore;",3]
 	],
 
 	[
-		["cursorObject getVariable['fishtrader',false]"],
+		["cursorObject getVariable['raretrader',false]"],
 		["Trade Rare Pelt", "closedialog 0; [] spawn client_fnc_rarePelt;",3]
 	],
 

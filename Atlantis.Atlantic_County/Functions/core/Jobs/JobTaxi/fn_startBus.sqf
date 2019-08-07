@@ -17,9 +17,43 @@ if(!taskrunning) then {
 	[] spawn {
 		playertasks = [];
 		taskrunning = true;
-		busStoparray = [[[843.134,1560.77,0.524498],"Sąd stanowy"],[[812.653,1050.72,0.524401],"Południowe Atlantis"],[[1301.89,1048.78,0.52441],"Komistariat Policji ASP"],[[1736.61,2232.84,0.524719],"Hospital"],[[2823.97,3276.34,0.524475],"Middlesmajor"],[[3423.96,2566.25,0.524262],"Port"],[[5614.85,3720.59,0.524711],"Południowe Dobro City"],[[5565.33,3935.98,0.524396],"Dobro City Kiesta"],[[5447.95,4208.73,0.524391],"Dobro City Art Gallery"],[[5005.71,5186.02,0.524447],"Pólnocny most"],[[1262.33,3841.6,0.524388],"Atlantis Airport"]];
+		busStoparray_Atlantis = [
+			[[879.369,1243.55,0],"Atlatnis city centrum"],
+			[[905.404,1312.68,0],"Kasyno Atlantis city"],
+			[[905.935,1442.87,0],"Kiesta Atlantis city"],
+			[[886.391,1594.08,0],"Sąd stanowy"],
+			[[828.526,1384.84,0],"Nightclub"],
+			[[921.855,1049.77,0],"Południowe Atlatnis city"],
+			[[1313.29,1047.68,0],"Komisariat Policji"],
+			[[2737.64,787.643,0],"Atlantis Residences"],
+			[[1001.46,1254.86,0],"Garaż Atlantis city"],
+			[[976.321,1531.3,0],"Aleja sklepów"],
+			[[2823.74,3278.46,0],"Middlesmayor"],
+			[[3286.95,3430.25,0],"Kadedra Masyl Town"],
+			[[3272.24,3571.42,0],"Szpital"],
+			[[3314.7,3739.4,0],"Bank Federalny"],
+			[[3427.12,3545.56,0],"Kangur"],
+			[[3226.14,2556.36,0],"Port"]
+		];
+		busStoparray_Dobro = [
+			[[5535.21,3898.8,0],"Dobro city centrum"],
+			[[5592.51,3701.48,0],"Dobro city Biura"],
+			[[5446.57,4210.3,0],"Art Gallery"],
+			[[5046.79,5231.72,0],"Północny most"],
+			[[3428.88,3545.86,0],"Kangur"],
+			[[3272.08,3570.82,0],"Szpital"],
+			[[3314.87,3739.82,0],"Bank Federalny"],
+			[[3192.24,3575.75,0],"Rondo Masyl Town"],
+			[[3288.51,3430.92,0],"Katedra Masyl Town"]
+		];
 		_warnings = 0;
 		uisleep 30;
+
+		if(player distance [840.07,1164.61,0] < 500) then {
+			busStopArray = busStoparray_Atlantis;
+		} else {
+			busStopArray = busStoparray_Dobro;
+		};
 
 		while{taskrunning && myjob == "bus"} do {
 			uisleep 3;
