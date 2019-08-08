@@ -158,7 +158,7 @@ if (_type == "ALL") then {
         ["Oczyszczanie skór",[4856.32,897.653,0]],
         ["Skup dóbr",[3159.32,2470.09,0]],
         ["Przetwarzanie ryb",[7463.44,1864,0]],
-        ["Skup żadkich przedmiotów", [1733.81,3723.2,0.00170898]],
+        ["Skup rzadkich przedmiotów", [1733.81,3723.2,0.00170898]],
         ["Skup ryb", [3174.16,2281.33,0.00141549]],
         ["Ulepszanie domów",[855.632,1092.4,0.00143909]]
     ];
@@ -434,7 +434,7 @@ if(_type == "Processing") then {
         ["Oczyszczanie skór",[4856.32,897.653,0]],
         ["Skup dóbr",[3159.32,2470.09,0]],
         ["Przetwarzanie ryb",[7463.44,1864,0]],
-        ["Skup żadkich przedmiotów", [1733.81,3723.2,0.00170898]],
+        ["Skup rzadkich przedmiotów", [1733.81,3723.2,0.00170898]],
         ["Skup ryb", [3174.16,2281.33,0.00141549]],
         ["Ulepszanie domów",[855.632,1092.4,0.00143909]]
     ];

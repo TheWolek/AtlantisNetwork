@@ -784,7 +784,10 @@ if(_condition == "police_uniformstore") then {
 		["TRYK_U_denim_jersey_blk",nil,1,3,1],
 		["TRYK_U_denim_jersey_blu",nil,1,3,1],
 		["TRYK_U_pad_j_blk",nil,1,3,1],
-		["TRYK_U_pad_j",nil,1,3,1]
+		["TRYK_U_pad_j",nil,1,3,1],
+		["hoodie_dtu_1",nil,1,3,1],
+		["hoodie_dtu_2",nil,1,3,1],
+		["hoodie_dtu_3",nil,1,3,1]
 	];
 
 	_police_uniformstore = [

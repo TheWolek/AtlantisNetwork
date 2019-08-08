@@ -57,11 +57,11 @@ if(myjob == "Cop") then {
 
 	// komediant
 	if(_level == 12) then { 
-		player forceAddUniform "TRYK_U_B_wh_blk_Rollup_CombatUniform";		
+		player forceAddUniform "asp_chief12";		
 	};	
 	//zastępca
 	if(_level == 11) then { 
-		player forceAddUniform "vvv_character_agente_47";
+		player forceAddUniform "asp_deputychief11";
 	};	
 
 	// patrol bureau
@@ -103,82 +103,86 @@ if(myjob == "Cop") then {
 
 		if(female) then { 
 			if(_level == 1) then {
-				player forceAddUniform "female_police";
+				player forceAddUniform "asp_cadet1";
 				player addHeadgear "Campaign_Hat"; 
 			};
 			if(_level == 2) then {				
-				player forceAddUniform "female_police";
+				player forceAddUniform "asp_trooper2";
 				player addHeadgear "Campaign_Hat"; 
 			};				
 			if(_level == 3) then {				
-				player forceadduniform "female_police2"; 
+				player forceadduniform "asp_seniortrooper3"; 
 				player addHeadgear "Campaign_Hat_black";  
 			};
 			if(_level == 4) then {				
-				player forceadduniform "female_police2";
+				player forceadduniform "asp_mastertrooper4";
+				player addHeadgear "Campaign_Hat_black";
+			};
+			if(_level == 5) then {				
+				player forceadduniform "asp_coropral";
 				player addHeadgear "Campaign_Hat_black";
 			};
 			if(_level == 6) then {
-				player forceadduniform "female_police2"; 
+				player forceadduniform "asp_sergeant6"; 
 				player addHeadgear "Campaign_Hat_trooper"; 
 			};
 			if(_level == 7) then {				
-				player forceAddUniform "Campaign_Hat_trooper";
+				player forceAddUniform "asp_lieutenant7";
 				player addHeadgear "EF_Fcap_PB"; 
 			};
 			if(_level == 8) then {
-				player forceAddUniform "Campaign_Hat_trooper";
+				player forceAddUniform "asp_colonel8";
 				player addHeadgear "EF_Fcap_PB"; 
 			};
 			if(_level == 9) then {
-				player forceAddUniform "Campaign_Hat_trooper";
+				player forceAddUniform "asp_captain9";
 				player addHeadgear "EF_Fcap_PB"; 
 			};
 			if(_level == 10) then {
-				player forceAddUniform "Campaign_Hat_trooper";
+				player forceAddUniform "asp_major10";
 				player addHeadgear "EF_Fcap_PB"; 
 			};
 
 		} else { 
 			switch (_level) do {
 				case 1: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_cadet1";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 2: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_trooper2";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 3: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_seniortrooper3";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 4: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_mastertrooper4";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 5: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_coropral";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 6: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_sergeant6";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 7: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_lieutenant7";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 8: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_colonel8";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 9: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_captain9";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 10: {
-					player forceAddUniform "U_I_E_Uniform_01_sweater_F";
+					player forceAddUniform "asp_major10";
 					player addHeadgear "BL_party_Hat";
 				};
 			};
@@ -227,85 +231,85 @@ if(myjob == "Cop") then {
 		if(female) then { 
 			
 			if(_level == 1) then {
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "hoodie_dtu_2";
 			};
 			if(_level == 2) then {				
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "hoodie_dtu_2";
 				player addVest "EF_BLT_M1B";
 			};				
 			if(_level == 3) then {	
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "hoodie_dtu_2";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 4) then {		
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "hoodie_dtu_2";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 5) then {	
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "hoodie_dtu_2";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 6) then {
-				player forceadduniform "EF_FEM_4_2";
+				player forceadduniform "hoodie_dtu_1";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 7) then {				
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "asphoodie_dtu_1_ia13";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 8) then {
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "hoodie_dtu_1";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 9) then {				
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "hoodie_dtu_1";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 10) then {
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "hoodie_dtu_3";
 				player addVest "EF_BLT_M1B";
 			};
 
 		} else { 
 			switch (_level) do {
 				case 1: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_2";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 2: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_2";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 3: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_2";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 4: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_2";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 5: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_2";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 6: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_1";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 7: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_1";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 8: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_1";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 9: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_1";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 10: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "hoodie_dtu_3";
 					player addHeadgear "BL_party_Hat";
 				};
 			};
@@ -354,85 +358,85 @@ if(myjob == "Cop") then {
 		if(female) then { 
 			
 			if(_level == 1) then {
-				player forceAddUniform "EF_FEM_4_2";			
+				player forceAddUniform "asp_ia13";			
 			};
 			if(_level == 2) then {				
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "asp_ia13";
 				player addVest "EF_BLT_M1B";
 			};				
 			if(_level == 3) then {	
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "asp_ia13";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 4) then {		
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "asp_ia13";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 5) then {	
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "asp_ia13";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 6) then {
-				player forceadduniform "EF_FEM_4_2";
+				player forceadduniform "asp_ia13";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 7) then {				
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "asp_ia13";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 8) then {
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "asp_ia13";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 9) then {				
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "asp_ia13";
 				player addVest "EF_BLT_M1B";
 			};
 			if(_level == 10) then {
-				player forceAddUniform "EF_FEM_4_2";
+				player forceAddUniform "asp_ia13";
 				player addVest "EF_BLT_M1B";
 			};
 
 		} else { 
 			switch (_level) do {
 				case 1: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 2: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 3: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 4: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 5: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 6: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 7: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 8: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 9: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 				case 10: {
-					player forceAddUniform "U_O_R_Gorka_01_black_F";
+					player forceAddUniform "asp_ia13";
 					player addHeadgear "BL_party_Hat";
 				};
 			};
