@@ -150,7 +150,7 @@ if(_status == 0) then {
 
 
 [_vehicle, "information", _car] remoteExec ["Server_fnc_setVariable",2];
-_vehicle setvariable ["information",_car,false];
+_vehicle setvariable ["information",_car,true];
 
 [_vehicle, _carColor, _carFinish, _wheelColor, _windowTint, _headlightTint, _className, _numberPlate] spawn {
 	params["_vehicle", "_carColor", "_carFinish", "_wheelColor", "_windowTint", "_headlightTint", "_className", "_numberPlate"];

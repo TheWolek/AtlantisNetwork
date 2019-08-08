@@ -1023,7 +1023,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained && player distance [1355.1,997.385,4.41015] <8"],
+		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained && player distance [1355.23,997.027,4.41015] <4"],
 		["Wyposażenie policji", "closedialog 0; createdialog 'police_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
 	],
 

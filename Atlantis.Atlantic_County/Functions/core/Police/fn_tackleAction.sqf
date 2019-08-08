@@ -13,6 +13,7 @@ if(surfaceIsWater _pos) exitwith {};
 if(isNull _target) exitWith {};
 if(!isPlayer _target) exitWith {};
 if(player distance _target > 3) exitWith {};
+if(player getVariable["knockedOut",false]) exitWith {};
 
 _degrees = getDir player; 
 _degreesu = getDir _target;
