@@ -565,53 +565,53 @@ if(_condition == "glasses") then {
 if(_condition == "police_gunstore") then {
 	_gsplcadet = [
 		["CG_BATON",nil,1,1],
-		["RH_uspm",nil,1,1],
+		["RH_uspm",nil,10,1],
 		["taser",nil,1,1]
 	];
 	_gspl1 = [
-		["RH_g17",nil,1,1]	
+		["RH_g17",nil,20,1]	
 	];
 	_gspl2 = [
-		["RH_p226",nil,1,1]
+		["RH_p226",nil,30,1]
 	];
 	_gspl3 = [
-		["RH_m1911",nil,1,1]
+		["RH_m1911",nil,40,1]
 	];
 	_gspl4 = [
-		["RH_bull",nil,1,1]
+		["RH_bull",nil,50,1]
 	];
 	_gspl5 = [
-		["RH_Deaglem",nil,1,1],
-		["CSW_M870",nil,1,1]		
+		["RH_Deaglem",nil,80,1],
+		["CSW_M870",nil,150,1]		
 	];
 	_gspl6 = [
-		["hlc_smg_MP5N",nil,1,1]
+		["hlc_smg_MP5N",nil,600,1]
 	];
 	_gspl8do12 = [
-		["RH_m4",nil,1,1]
+		["RH_m4",nil,1300,1]
 	];
 	_gspmswat = [
 		["RH_g18",nil,60,1],
 		["CSW_FN57_Ballistic_Shield",nil,100,1],
 		["bnae_trg42_virtual",nil,3000,1],	
-		["RH_M4m_b",nil,1000,1]
+		["RH_M4m_b",nil,2000,1]
 
 
 	];
 
 	_gsplm4auto = [
-		["RH_M4A6",nil,1,1]
+		["RH_M4A6",nil,1600,1]
 	];
 
 	_pddtushop = [
-		["RH_g18",nil,1,1],
-		["RH_kimber_nw",nil,1,1],
-		["RH_fnp45",nil,1,1],
-		["RH_cz75",nil,1,1]
+		["RH_g18",nil,150,1],
+		["RH_kimber_nw",nil,100,1],
+		["RH_fnp45",nil,100,1],
+		["RH_cz75",nil,100,1]
 	];
 
 	_dtulr = [
-		["RH_sbr9",nil,1,1]
+		["RH_sbr9",nil,900,1]
 		];
 
 	if(player getvariable "cop" >= 1) then {
@@ -945,6 +945,7 @@ if(_condition == "police_misc") then {
 		["RH_barska_rds",nil,10,3],
 		["RH_eotech553",nil,10,3],
 		["RH_spr_mbs",nil,10,3],
+		["CG_ATF_First_Aid_Kit_i",nil,50,3],
 		["hlc_muzzle_Agendasix",nil,10,3],
 		["ToolKit",nil,10,3]
 	];
@@ -1162,13 +1163,3 @@ lbClear _list;
 
 
 lbSetCurSel [9001, 0];
-
-
-
-/*
-
-	_magazines = getArray (configFile / "CfgWeapons" / _weapon / "magazines");
-	 _holder addMagazineCargoGlobal [_magazineClass, 3];
-
-
-
