@@ -792,7 +792,22 @@ if(_condition == "police_uniformstore") then {
 
 	_police_uniformstore = [
 		["EF_HMP_1",nil,1,3,1],
-		["EF_HMP_2",nil,1,3,1]
+		["EF_HMP_2",nil,1,3,1],
+		["asp_cadet1",nil,1,3,1],
+		["asp_trooper2",nil,1,3,1],
+		["asp_seniortrooper3",nil,1,3,1],
+		["asp_mastertrooper4",nil,1,3,1],
+		["asp_corporal5",nil,1,3,1],
+		["asp_sergeant6",nil,1,3,1],
+		["asp_lieutenant7",nil,1,3,1],
+		["asp_colonel8",nil,1,3,1],
+		["asp_captain9",nil,1,3,1],
+		["asp_major10",nil,1,3,1],
+		["asp_deputychief11",nil,1,3,1],
+		["asp_chief12",nil,1,3,1],
+		["asp_ia13",nil,1,3,1],
+		["dtdev_swat_1_uni",nil,1,3,1],
+		["dtdev_swat_2_uni",nil,1,3,1]
 	];
 
 	{
@@ -872,6 +887,11 @@ if(_condition == "police_glassesstore") then {
 if(_condition == "police_headgearstore") then {
 
 	_police_headgearstore = [
+		["Campaign_Hat_Dark",nil,1,3,5],
+		["Campaign_Hat_Light",nil,1,3,5],
+		["Campaign_Hat_Tan",nil,1,3,5],
+		["Campaign_Hat_Trooper",nil,1,3,5],
+		["Campaign_Hat_Washedout",nil,1,3,5],
 		["H_Cap_police",nil,1,3,5],
 		["TRYK_H_PASGT_BLK",nil,1,3,5],
 		["TRYK_R_CAP_BLK",nil,1,3,5],

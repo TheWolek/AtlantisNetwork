@@ -3,7 +3,7 @@ params["_type"];
 
 
 _freq = 0;
-
+[player,"don_empty"] call BIS_fnc_setUnitInsignia;
 [player, "govtbank"] remoteExec ["client_fnc_getremotevar",2];
 waitUntil { !isNil "packet"; };
 
@@ -104,86 +104,86 @@ if(myjob == "Cop") then {
 		if(female) then { 
 			if(_level == 1) then {
 				player forceAddUniform "asp_cadet1";
-				player addHeadgear "Campaign_Hat"; 
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 2) then {				
 				player forceAddUniform "asp_trooper2";
-				player addHeadgear "Campaign_Hat"; 
+				player addHeadgear "Campaign_Hat_Light"; 
 			};				
 			if(_level == 3) then {				
 				player forceadduniform "asp_seniortrooper3"; 
-				player addHeadgear "Campaign_Hat_black";  
+				player addHeadgear "Campaign_Hat_Light";  
 			};
 			if(_level == 4) then {				
 				player forceadduniform "asp_mastertrooper4";
-				player addHeadgear "Campaign_Hat_black";
+				player addHeadgear "Campaign_Hat_Light";
 			};
 			if(_level == 5) then {				
 				player forceadduniform "asp_coropral";
-				player addHeadgear "Campaign_Hat_black";
+				player addHeadgear "Campaign_Hat_Light";
 			};
 			if(_level == 6) then {
 				player forceadduniform "asp_sergeant6"; 
-				player addHeadgear "Campaign_Hat_trooper"; 
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 7) then {				
 				player forceAddUniform "asp_lieutenant7";
-				player addHeadgear "EF_Fcap_PB"; 
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 8) then {
 				player forceAddUniform "asp_colonel8";
-				player addHeadgear "EF_Fcap_PB"; 
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 9) then {
 				player forceAddUniform "asp_captain9";
-				player addHeadgear "EF_Fcap_PB"; 
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 10) then {
 				player forceAddUniform "asp_major10";
-				player addHeadgear "EF_Fcap_PB"; 
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 
 		} else { 
 			switch (_level) do {
 				case 1: {
 					player forceAddUniform "asp_cadet1";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 2: {
 					player forceAddUniform "asp_trooper2";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 3: {
 					player forceAddUniform "asp_seniortrooper3";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 4: {
 					player forceAddUniform "asp_mastertrooper4";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 5: {
-					player forceAddUniform "asp_coropral";
-					player addHeadgear "BL_party_Hat";
+					player forceAddUniform "asp_corporal5";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 6: {
 					player forceAddUniform "asp_sergeant6";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 7: {
 					player forceAddUniform "asp_lieutenant7";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 8: {
 					player forceAddUniform "asp_colonel8";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 9: {
 					player forceAddUniform "asp_captain9";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 10: {
 					player forceAddUniform "asp_major10";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Light";
 				};
 			};
 		};
@@ -235,82 +235,82 @@ if(myjob == "Cop") then {
 			};
 			if(_level == 2) then {				
 				player forceAddUniform "hoodie_dtu_2";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};				
 			if(_level == 3) then {	
 				player forceAddUniform "hoodie_dtu_2";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 4) then {		
 				player forceAddUniform "hoodie_dtu_2";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 5) then {	
 				player forceAddUniform "hoodie_dtu_2";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 6) then {
 				player forceadduniform "hoodie_dtu_1";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 7) then {				
-				player forceAddUniform "asphoodie_dtu_1_ia13";
-				player addVest "EF_BLT_M1B";
+				player forceAddUniform "hoodie_dtu_1";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 8) then {
 				player forceAddUniform "hoodie_dtu_1";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 9) then {				
 				player forceAddUniform "hoodie_dtu_1";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 10) then {
 				player forceAddUniform "hoodie_dtu_3";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 
 		} else { 
 			switch (_level) do {
 				case 1: {
 					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 				case 2: {
 					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 				case 3: {
 					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 				case 4: {
 					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 				case 5: {
 					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 				case 6: {
 					player forceAddUniform "hoodie_dtu_1";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 				case 7: {
 					player forceAddUniform "hoodie_dtu_1";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 				case 8: {
 					player forceAddUniform "hoodie_dtu_1";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 				case 9: {
 					player forceAddUniform "hoodie_dtu_1";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 				case 10: {
 					player forceAddUniform "hoodie_dtu_3";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "TRYK_R_CAP_BLK";
 				};
 			};
 
@@ -358,86 +358,87 @@ if(myjob == "Cop") then {
 		if(female) then { 
 			
 			if(_level == 1) then {
-				player forceAddUniform "asp_ia13";			
+				player forceAddUniform "asp_ia13";
+				player addHeadgear "Campaign_Hat_Dark";		
 			};
 			if(_level == 2) then {				
 				player forceAddUniform "asp_ia13";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "Campaign_Hat_Dark";
 			};				
 			if(_level == 3) then {	
 				player forceAddUniform "asp_ia13";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 4) then {		
 				player forceAddUniform "asp_ia13";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 5) then {	
 				player forceAddUniform "asp_ia13";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 6) then {
 				player forceadduniform "asp_ia13";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 7) then {				
 				player forceAddUniform "asp_ia13";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 8) then {
 				player forceAddUniform "asp_ia13";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 9) then {				
 				player forceAddUniform "asp_ia13";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 10) then {
 				player forceAddUniform "asp_ia13";
-				player addVest "EF_BLT_M1B";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 
 		} else { 
 			switch (_level) do {
 				case 1: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 2: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 3: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 4: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 5: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 6: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 7: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 8: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 9: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 10: {
 					player forceAddUniform "asp_ia13";
-					player addHeadgear "BL_party_Hat";
+					player addHeadgear "Campaign_Hat_Dark";
 				};
 			};
 
@@ -448,7 +449,7 @@ if(myjob == "Cop") then {
 	if(_type == "marshal") then {
 
 		_freq = 33.5;
-
+		[player,"usms_sog_patch_g"] call BIS_fnc_setUnitInsignia;
 		if(count currentMarshals > 5) exitWith { ["There are too many Marshals on duty.", true] spawn domsg; };
 
 		currentMarshals pushBack player;
@@ -557,13 +558,14 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = 5000;
+
 		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
 		format["GearLog: %1 (%2) took SWAT loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
-		player forceAddUniform "Gsg9_Uniform_Black";
+		player forceAddUniform "dtdev_swat_1uni";
 		
 		player addBackpack "AM_PoliceBelt"; 
 
@@ -577,7 +579,7 @@ if(myjob == "Cop") then {
 
 		player addHeadgear "TRYK_H_PASGT_BLK";
 		player addGoggles "Balaclava_Blk_Plain";
-
+		[player,"swat_patch"] call BIS_fnc_setUnitInsignia;		
 		for "_i" from 1 to 9 do {player addItemTobackpack "RH_30Rnd_556x45_M855A1";};
 		//for "_i" from 1 to 4 do {player addItemTobackpack "SUPER_Flash";};
 		for "_i" from 1 to 9 do {player addItemToBackpack "RH_16Rnd_40cal_usp";};	

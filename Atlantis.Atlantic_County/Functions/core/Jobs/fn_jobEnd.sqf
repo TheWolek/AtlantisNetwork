@@ -7,6 +7,7 @@ if(_this select 0 == 1) then {
 if(myjob in["Mafia"]) then {
 	[] spawn client_fnc_hangup;
 };
+[player,"don_empty"] call BIS_fnc_setUnitInsignia;
 format ["Job_Log: %1 stopped working as %2",name player,myjob] remoteExecCall["diag_log",2];
 myjob = "none";
 player setVariable["badgeNumber", ""];
