@@ -22,7 +22,7 @@ if(_booli) then {
 
 	_owner = _owner call BIS_fnc_getUnitByUid;
 
-	[format["Rejestracja: %1 - Pojazd: %2 - Kolor: %3 - Właścicel: %4",toUpper(_fetch select 0),getText(configFile >> "cfgVehicles" >> (_fetch select 1) >> "displayName"),(_fetch select 2),name _owner], true] remoteexec ["domsg",_officer];
+	[format["Rejestracja: %1 - Pojazd: %2 - Właścicel: %3",toUpper(_fetch select 0),getText(configFile >> "cfgVehicles" >> (_fetch select 1) >> "displayName"),name _owner], true] remoteexec ["domsg",_officer];
 } else {
 	["Ten numer rejestracyjny nie zwrócił żadnego wynniku z bazy pojazdów", true] remoteexec ["domsg",_officer];
 };
