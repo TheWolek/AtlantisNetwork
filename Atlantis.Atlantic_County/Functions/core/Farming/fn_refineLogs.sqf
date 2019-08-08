@@ -21,7 +21,8 @@ if(vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) 
 		_sound = round(random 5);
 		playSound3D ["CG_Jobs\sounds\sawing\saw.ogg", player, false, getPosasl player, 7, 1, 25];
 		//player additem "NP_Wood";	
-		vehspawned addItemCargo ["NP_WOOD",8];
+		//vehspawned addItemCargo ["NP_WOOD",8];
+		for "_i" from 0 to 7 do { player additem "NP_WOOD"; };
 		sleep 2;
 		if(dialog) then { closedialog 0; };
 		["Przetwarzasz drewno, stój w miejscu!", true] spawn domsg;
