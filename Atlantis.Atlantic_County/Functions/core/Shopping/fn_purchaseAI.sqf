@@ -124,7 +124,7 @@ if(_item == "cg_tabletd") then {
 };
 
 [format["Kupiłeś %1 %2 za %3. Zobacz skrzynkę pod twoimi nogami.",_quantity, _item, _totalprice call client_fnc_numberText],true] spawn domsg;
-format["Money_Log: %1 (%2) bought %3 %4 for %5",player, getplayeruid player, _quantity, _item, _totalprice] remoteExecCall["diag_log",2];
+format["Money_Log: %1 (%2) bought %3 %4 for %5",name player, getplayeruid player, _quantity, _item, _totalprice] remoteExecCall["diag_log",2];
 
 _totalTickets = 0;
 _handle = false;
