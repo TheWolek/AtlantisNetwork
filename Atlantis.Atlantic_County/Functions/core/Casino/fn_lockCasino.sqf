@@ -17,10 +17,10 @@ if(_lock == 1) then {
     _casino animate ["door17",0];
     _casino animate ["door18",0];
     lockCasino = true;
-    format["Action_Log: %1 (%2) zablokowal kasyno",player, getplayeruid player, ] remoteExecCall["diag_log",2];
+    format["Action_Log: %1 (%2) zablokowal kasyno",name player, getplayeruid player] remoteExecCall["diag_log",2];
 } else {
     lockCasino = false;
-    format["Action_Log: %1 (%2) odblokowal kasyno",player, getplayeruid player, ] remoteExecCall["diag_log",2];
+    format["Action_Log: %1 (%2) odblokowal kasyno",name player, getplayeruid player] remoteExecCall["diag_log",2];
 };
 
 publicVariable "lockCasino";

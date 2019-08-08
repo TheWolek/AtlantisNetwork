@@ -168,6 +168,7 @@ class CfgFunctions
 			class medicSiren {};
 			class medicSiren2 {};
 			class returnrifle {};
+			class checklicensePlate {};
 		};
 
 		class Wanted {
