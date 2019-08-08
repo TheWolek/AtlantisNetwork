@@ -29,6 +29,7 @@ class CfgFunctions
 			class rentRoom {};
 			class dumpOre {};
 			class finishOreDrop {};
+			class lockCasino {};
 
 		};		
 		class Phone
@@ -523,7 +524,6 @@ class CfgFunctions
 			class getTint {};
 			class evidence {};
 			class checkBank {};
-			class lockCasino {};
 			class lockNightclub {};
 			class IED {};
 			class IEDdetonate {};

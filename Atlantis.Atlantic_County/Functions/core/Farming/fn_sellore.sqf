@@ -48,3 +48,4 @@ if(myjob == "Wood Logging") then {
 globalProtection = 0;
 
 [format["Zarobiłeś %1",_cashTotal call client_fnc_numberText], true] spawn domsg;
+format["Money_Log: %1 (%2) earned %2 from selling ores",player, getplayeruid player, _cashtotal] remoteExecCall["diag_log",2];

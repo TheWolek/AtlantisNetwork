@@ -1134,7 +1134,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["(typeof CursorTarget IN ['Land_CommonwealthBank','Land_Bank_DED_House_01_F']) && bankrobber == 1 && !imrestrained"],
+		["(typeof CursorTarget IN ['Land_CommonwealthBank','Land_Bank_DED_House_01_F','Land_Kangaro0_Bank_01_F']) && bankrobber == 1 && !imrestrained"],
 		["Bank", "[] call Client_fnc_openATM",4]
 	],
 

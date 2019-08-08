@@ -19,7 +19,7 @@ if (_type == "ALL") then {
 		_marker3 setMarkerTypeLocal "HRP_icon_Bank";
 		_marker3 setMarkerColorLocal "ColorGreen";
 
-	} forEach (nearestobjects[player,["Land_CommonwealthBank","Land_Bank_DED_House_01_F"],30000]);
+	} forEach (nearestobjects[player,["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_Kangaro0_Bank_01_F"],30000]);
 	{
 		_marker4 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker4 setMarkerShapeLocal "ICON";
@@ -240,7 +240,7 @@ if(_type == "Bank") then {
 		_marker setMarkerTypeLocal "HRP_icon_Bank";
 		_marker setMarkerColorLocal "ColorGreen";
 
-	} forEach (nearestobjects[player,["Land_CommonwealthBank","Land_Bank_DED_House_01_F"],30000]);
+	} forEach (nearestobjects[player,["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_Kangaro0_Bank_01_F"],30000]);
 };
 
 if(_type == "Dunkin") then {
