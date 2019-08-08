@@ -579,7 +579,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["myjob IN ['Cop'] && (CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'AIR' || CursorTarget isKindOf 'BOAT' || CursorTarget isKindOf 'SHIP' || CursorTarget isKindOf 'TANK')"],
-		["Sprawdź tablice", " ['Spisuje tablice',6,'client_fnc_checkLicensePlate',cursorObject,'vvv_anim_ticket',cursorObject,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",2]
+		["Sprawdź tablice", " ['Spisuje tablice',6,'client_fnc_checkLicensePlate',cursorObject,'vvv_anim_ticket',[cursorObject],'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",2]
 	],
 
 	[
