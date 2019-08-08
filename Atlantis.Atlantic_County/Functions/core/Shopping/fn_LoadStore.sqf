@@ -933,6 +933,7 @@ if(_condition == "police_misc") then {
 		["AM_PoliceBelt",nil,1,4,2],
 		["TRYK_TAC_EARMUFF",nil,1,4,5],
 		["cg_atf_bandage_i",nil,5,3],
+		["CG_ATF_First_Aid_Kit_i",nil,50,3],		
 		["CG_Spikes_Collapsed",nil,50,3],
 		["ItemMap",nil,1,3],
 		["ItemCompass",nil,1,3],
@@ -945,7 +946,6 @@ if(_condition == "police_misc") then {
 		["RH_barska_rds",nil,10,3],
 		["RH_eotech553",nil,10,3],
 		["RH_spr_mbs",nil,10,3],
-		["CG_ATF_First_Aid_Kit_i",nil,50,3],
 		["hlc_muzzle_Agendasix",nil,10,3],
 		["ToolKit",nil,10,3]
 	];
