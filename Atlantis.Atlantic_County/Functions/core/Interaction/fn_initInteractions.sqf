@@ -1028,6 +1028,16 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
+		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained && player distance [1355.1,997.385,4.41015] <8 && player in currentMarshals"],
+		["Zielona naszywka", "[player,'usms_sog_patch_g'] call BIS_fnc_setUnitInsignia;",3]
+	],
+
+	[
+		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained && player distance [1355.1,997.385,4.41015] <8 && player in currentMarshals"],
+		["Niebieska naszywka", "[player,'usms_sog_patch_b'] call BIS_fnc_setUnitInsignia;",3]
+	],
+
+	[
 		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained && player distance [1355.1,997.385,4.41015] <8 && (currentWeapon player) == 'bnae_trg42_virtual'"],
 		["Zwróć Karabin", "[] spawn client_fnc_returnrifle;",3]
 	],
