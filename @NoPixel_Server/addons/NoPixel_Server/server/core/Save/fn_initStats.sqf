@@ -9,6 +9,8 @@ diag_log format ["init stats %1", _uid];
 
 if (_booli) then {
 
+	diag_log format["init exisiting %1", _uid];
+
 	_fetchstr = format ["getMessages:%1", _uid];
 	_fetch = [_fetchstr, 2] call ExternalS_fnc_ExtDBasync;
 	_returned = str _fetch;
@@ -210,6 +212,8 @@ if (_booli) then {
 	[_items, _position, _cash, _bank, _bankAccount, _cop, _ems, _garage, _inUseVehicles, _phoneBackground, _messages, _statuses, _houselevel, _shopname, (getpos _house), (getpos _shop), _shopcontent, _mail, _phonemessages, _mycarinfo, _mafia, _fire, _legal, _prison, _prisonreason,_mayor,_partner,_doc,_biker,_mobster,_dmv,_da,_licenseArray,_admin] remoteexec ["Client_fnc_loadInventory", _player]; 
 
 } else {
+
+	diag_log format["init new %1", _uid];
 
 	_name = name _player;
 	_items = getunitloadout _player;

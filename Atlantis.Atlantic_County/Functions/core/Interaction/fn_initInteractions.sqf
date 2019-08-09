@@ -409,7 +409,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" CursorTarget IN ((bombs) apply {call compile _x}) && !imrestrained "],
-		["Podnieś", " ['Podnoszę',5,'client_fnc_IEDdefuse',player,'vvv_anim_ticket',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",1]
+		["Podnieś", " ['Podnoszę',5,'client_fnc_IEDdefuse',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",1]
 	],
 
 	[
@@ -692,10 +692,12 @@ NoPixel_InteractionMenuItems = [
 		["Postaw", " [2] spawn client_fnc_spawnfurniture; attachedfurniture = false; ",2]
 	],
 
+	/*
 	[
 		["(player distance myoffice < 25 || (player distance myhouse < 25 && player getVariable 'houselevel' > 1 )) && player distance getpos CursorTarget < 20 && !attachedfurniture "],
-		["Podnieś", " createdialog 'placefurniture' ",2]
+		["Meble", " createdialog 'placefurniture' ",2]
 	],
+	*/
 
 	[
 		[" attachedbarrier "],

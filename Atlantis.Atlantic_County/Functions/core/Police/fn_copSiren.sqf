@@ -16,7 +16,7 @@ for "_i" from 0 to 1 step 0 do {
     if (count crew _vehicle isEqualTo 0) then {_vehicle setVariable ["siren",false,true]};
     if (!alive _vehicle) exitWith {};
     if (isNull _vehicle) exitWith {};
-    _vehicle say3D["cop_siren_wail",300];//Class name specified in description.ext
+    _vehicle say3D["cop_siren_wail",400];//Class name specified in description.ext
     sleep 4.394;//Exactly matches the length of the audio file.
     if (!(_vehicle getVariable "siren")) exitWith {};
 };

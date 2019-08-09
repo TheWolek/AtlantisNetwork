@@ -277,6 +277,8 @@ if((_statuses select 9) == 0) then {
 		"dynamicBlur" ppEffectEnable false;	
 		
 	};
+	_statuses set [9,1];
+	player setVariable["statuses",_statuses,true];
 } else {
 	if((_statuses select 9) == 1) then { 
 		Female = true;

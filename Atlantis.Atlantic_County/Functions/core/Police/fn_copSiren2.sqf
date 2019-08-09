@@ -9,7 +9,7 @@ For "_i" from 0 to 1 step 0 do {
     if(count (crew (_vehicle)) isEqualTo 0) then {_vehicle setVariable["siren2",false,true]};
     if(!alive _vehicle) exitWith {};
     if(isNull _vehicle) exitWith {};
-    _vehicle say3D ["cop_siren_yelp",300];
+    _vehicle say3D ["cop_siren_yelp",400];
     sleep 0.349;
     if(!(_vehicle getVariable "siren2")) exitWith {};
 };

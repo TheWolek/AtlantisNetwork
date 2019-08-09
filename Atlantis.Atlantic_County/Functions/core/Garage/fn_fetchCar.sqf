@@ -65,7 +65,7 @@ if((_this select 0) == 1) exitwith {
 	};
 	
 	if(myJob == "Cop") then {
-		if (_vehicle in currentcopsquadcars) then {	
+		if (typeof _vehicle in currentcopsquadcars) then {	
 			["Ten pojazd jest już w użyciu", false] spawn domsg;
 		} else {
 			_cost = 50;
@@ -75,7 +75,7 @@ if((_this select 0) == 1) exitwith {
 				_vehicle setVariable ["pdCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
 				lastGovtUseCar = time + 300;
 			};
-		currentcopsquadcars pushBack _vehicle; };
+		currentcopsquadcars pushBack (typeof _vehicle); };
 	};
 
 	if(myJob == "doc") then {
@@ -94,7 +94,7 @@ if((_this select 0) == 1) exitwith {
 	}; 
 
 	if( _vehicle isKindOf "Car") then {
-		_vehicle addItemCargoGlobal ["Toolkit", 3];
+		_vehicle addItemCargoGlobal ["Toolkit", 1];
 		
 		if(myJob IN ["Cop","doc"]) then {
 			_vehicle addItemCargoGlobal ["np_woodbarrierlongpolice",4];
