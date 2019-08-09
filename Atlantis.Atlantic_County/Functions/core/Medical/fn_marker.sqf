@@ -118,7 +118,7 @@ if (_type == "ALL") then {
 		_marker23 setMarkerShapeLocal "ICON";
 		_marker23 setMarkerTypeLocal "hd_dot";
 		_marker23 setMarkerColorLocal "ColorGreen";
-		_marker23 setMarkerText "Cementownia";
+		_marker23 setMarkerText "Stare magazyny";
 	};
 	{
 		_marker17 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];

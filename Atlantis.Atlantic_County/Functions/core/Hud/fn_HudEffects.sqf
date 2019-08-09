@@ -30,7 +30,6 @@ if(myhealth > 0) then { [] spawn client_fnc_hudhealth; [] call client_fnc_hudwor
 	if(_STRESS_check > 250) then {
 		_chance = _stress_check / 100;
 		if(_chance > random 300) then { 
-			hintsilent "Jesteś zestresowany! Tequila pozswala się odstresować.";
 			[player,1] spawn stress_effects; 
 		};
 	};

@@ -1,7 +1,7 @@
 _pos = _this select 0;
 
 if(myjob == "Cop") then { 
-/*
+
     _type1 = nearestObject [_pos,"Land_Coffee_DED_Coffee_02_F"];
     _type2 = nearestObject [_pos,"Land_Coffee_DED_Coffee_01_F"];
     _type3 = nearestObject [_pos,"Land_buildingCommercial2"];
@@ -14,13 +14,13 @@ if(myjob == "Cop") then {
 
 
     if( (_type1 < _type3 && _type1 < _type4) || _type2 < _type3 && _type2 < _type4 ) then  {  
-        [_pos,"Store Robbery","Location"] spawn client_fnc_hudHelper; 
-	    [format["There is a store robbery at %1!",mapGridPosition getPos player], false] remoteExec ["domsg",currentCop];
+        [_pos,"Napad na sklep","Location"] spawn client_fnc_hudHelper; 
+	    [format["W okolicach %1 dochodzi do napadu!",mapGridPosition getPos player], false] remoteExec ["domsg",currentCop];
     } else { 
-        [_pos,"Store Robbery","Location"] spawn client_fnc_hudHelper;   
-	    [format["There is a store robbery at %1!",mapGridPosition getPos player], false] remoteExec ["domsg",currentCop];
+        [_pos,"Napad na sklep","Location"] spawn client_fnc_hudHelper; 
+	    [format["W okolicach %1 dochodzi do napadu!",mapGridPosition getPos player], false] remoteExec ["domsg",currentCop];
     };
-*/
+
 
 } else {
     
