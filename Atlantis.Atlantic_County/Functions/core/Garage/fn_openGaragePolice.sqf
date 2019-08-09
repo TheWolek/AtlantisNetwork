@@ -75,6 +75,7 @@ if(myJob == "Cop") then {
         _garage pushback "d3s_savana_PSV";
         _garage pushback "GM_SIO_CHARGER_SRT";
         _garage pushback "GM_SIO_CTSV";
+		_garage pushback "d3s_f10_12_UNM";		
 	};
 	if(player in currentMarshals || player in currentDetectives) then {
 		_garage pushback "chvwT6_raid";
