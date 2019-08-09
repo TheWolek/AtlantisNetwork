@@ -9,7 +9,14 @@ class RscTitles
 
 enableDebugConsole[] = {"76561198071999873","76561198084548281"};
 
-disableChannels[] = {0,1,2,3,4};
+disableChannels[] = {
+	{0,true,true},
+	{1,false,true},
+	{2,true,true},
+	{3,true,true},
+	{4,true,true},
+	{5,true,true}
+};
 
 respawn = "BASE";
 disabledAI = 1;

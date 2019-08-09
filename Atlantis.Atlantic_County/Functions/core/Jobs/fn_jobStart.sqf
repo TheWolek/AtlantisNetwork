@@ -208,11 +208,12 @@ if (str _jobtype find "Legal" > -1) exitwith {
 	//[] spawn server_fnc_addJob;
 };
 
+//nie ma
 if (str _jobtype find "Radio Presenter" > -1) exitwith {
 	[] spawn client_fnc_radioStart;
 };
 
-
+//nie ma
 if (str _jobtype find "Tow Truck Driver" > -1) exitwith {
 	[] spawn client_fnc_startTowTruck;
 	currentTowTruckDrivers pushback _player;
@@ -225,13 +226,14 @@ if (str _jobtype find "Śmieciarz" > -1) exitwith {
 	publicvariable "currentTrashman";	
 };
 
+//nie ma
 if (str _jobtype find "News Reporter" > -1) exitwith {
 	[] spawn client_fnc_startNews;	
 	currentNewsMan pushback _player;
 	publicvariable "currentNewsMan";
 };
 
-if (str _jobtype find "Repairman" > -1) exitwith {	
+if (str _jobtype find "Mechanik" > -1) exitwith {	
 	[] spawn client_fnc_startRepair;
 	currentRepairmen pushback _player;
 	publicvariable "currentRepairmen";	
