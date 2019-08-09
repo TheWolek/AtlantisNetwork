@@ -1,7 +1,7 @@
 private["_witnesses"];
 _uid = getPlayerUID player;
 _evidence = _this select 0;
-
+_info = _evidence getVariable "evidenceInformation"; 
 
 switch(_info select 10) do {
 
