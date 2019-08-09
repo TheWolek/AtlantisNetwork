@@ -386,13 +386,13 @@ if(_type == "license") then {
 			if(_amount == 18) then { [getplayeruid player, 18, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś patent motorowodny.",false] spawn domsg; };
 			if(_amount == 19) then { [getplayeruid player, 19, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś Członkostwo kasyna.",false] spawn domsg; };
 			if(_amount == 20) then { [getplayeruid player, 20, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś Bar Certification.",false] spawn domsg; };
-			if(_amount == 21) then { [getplayeruid player, 21, 2 remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Bus License.",false] spawn domsg; };
-			if(_amount == 22) then { [getplayeruid player, 22, 2 remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję na broń Klasy 2.",false] spawn domsg; };
-			if(_amount == 23) then { [getplayeruid player, 23, 2 remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Dowódcy AIR FD.",false] spawn domsg; };
-			if(_amount == 24) then { [getplayeruid player, 24, 2 remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję AIR FD.",false] spawn domsg; };
-			if(_amount == 25) then { [getplayeruid player, 25, 2 remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję FD Scuba Leader Certification.",false] spawn domsg; };
-			if(_amount == 26) then { [getplayeruid player, 26, 2 remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Nurka FD.",false] spawn domsg; };
-			if(_amount == 27) then { [getplayeruid player, 27, 2 remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Prawnika.",false] spawn domsg; };
+			if(_amount == 21) then { [getplayeruid player, 21, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Bus License.",false] spawn domsg; };
+			if(_amount == 22) then { [getplayeruid player, 22, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję na broń Klasy 2.",false] spawn domsg; };
+			if(_amount == 23) then { [getplayeruid player, 23, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Dowódcy AIR FD.",false] spawn domsg; };
+			if(_amount == 24) then { [getplayeruid player, 24, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję AIR FD.",false] spawn domsg; };
+			if(_amount == 25) then { [getplayeruid player, 25, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję FD Scuba Leader Certification.",false] spawn domsg; };
+			if(_amount == 26) then { [getplayeruid player, 26, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Nurka FD.",false] spawn domsg; };
+			if(_amount == 27) then { [getplayeruid player, 27, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Prawnika.",false] spawn domsg; };
 
 
 			licenseArray = licenseArray - [_amount];

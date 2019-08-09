@@ -269,7 +269,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[ 
-		["typeof CursorObject IN ['Land_Coffee_DED_Coffee_02_F','Land_Coffee_DED_Coffee_01_F','Land_Shop_DED_Shop_01_F','Land_Shop_DED_Shop_02_F']"], 
+		["typeof CursorObject IN ['Land_Centrelink']"], 
 		["Licencje", "[0] spawn client_fnc_license;",3] 
 	],
 
