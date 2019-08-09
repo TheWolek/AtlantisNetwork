@@ -201,7 +201,7 @@ if (isServer) then {
 
 	[Client_fnc_HudEffects, 3] execFSM "call.fsm";
 	
-	[Client_fnc_Survival, 300] execFSM "call.fsm";
+	[Client_fnc_Survival, 600] execFSM "call.fsm";
 
 	[client_fnc_seatbelts, 1] execFSM "call.fsm";
 
