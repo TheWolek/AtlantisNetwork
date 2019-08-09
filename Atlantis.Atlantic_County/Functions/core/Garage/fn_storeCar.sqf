@@ -1,5 +1,8 @@
 params ["_ct"];
-
+if (myjob == "Cop") then {
+	_copcar = currentcopsquadcars find _ct;
+	currentcopsquadcars deleteAt _copcar;
+};
 _pia = Current_Cars find _ct;
 Current_Cars deleteAt _pia;
 
