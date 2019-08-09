@@ -1,9 +1,7 @@
 params["_vehicle", ["_type",0]];
 
 if(myjob == "towtruck") then { 
-		if (_vehicle in currentcopsquadcars) then {
-			_copcar = currentcopsquadcars find _vehicle;
-			currentcopsquadcars deleteAt _copcar;
+
 
 
 
@@ -27,7 +25,6 @@ if(myjob == "towtruck") then {
 				[ format["Otrzymałeś dodatkową wypłate w wysokości %1!", _amount call client_fnc_numberText] , false ] spawn domsg;	
 				[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 			};
-		} else {
 		if(count ( _vehicle getvariable ["information", []] ) > 0) then {
 
 			_targetid = (_vehicle getvariable "information" select 8);
@@ -42,7 +39,7 @@ if(myjob == "towtruck") then {
 			[_targetowner, _targetid, name player, getplayeruid player, "Impounded vehicle", 2, 0, 1, 1000] remoteexec ["server_fnc_addcriminal",2];
 			[_targetid, format["Twój %1 został odholowony z powodu złamania przepisów. Możesz go odebrac na parkingu pojazdu odholowanych i musisz zapłacić karę w sądzie", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Silver Lake", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
 
-		};
+
 	};
 	["who cares",0,currentcursortarget,player] remoteExec ["Server_fnc_updateCarStatus",2];  
 
@@ -51,11 +48,6 @@ if(myjob == "towtruck") then {
 } else { 
 
 	if(count currenttowtruckdrivers == 0 || _type == 1) then {
-		if (_vehicle in currentcopsquadcars) then {
-			_copcar = currentcopsquadcars find _vehicle;
-			currentcopsquadcars deleteAt _copcar;
-
-		} else {
 			if(count ( _vehicle getvariable ["information", []] ) > 0) then {
 
 				_targetid = (_vehicle getvariable "information" select 8);
@@ -71,7 +63,6 @@ if(myjob == "towtruck") then {
 				[_targetid, format["Twój %1 został odholowony z powodu złamania przepisów. Możesz go odebrac na parkingu pojazdu odholowanych i musisz zapłacić karę w sądzie.", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Silver Lake", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
 
 			};
-		};
 		["who cares",0,currentcursortarget,player] remoteExec ["Server_fnc_updateCarStatus",2];  
 
 		["Pojazd został odholowany.", true] spawn domsg;

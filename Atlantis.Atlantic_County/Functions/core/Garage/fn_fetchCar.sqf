@@ -65,9 +65,6 @@ if((_this select 0) == 1) exitwith {
 	};
 	
 	if(myJob == "Cop") then {
-		if (typeof _vehicle in currentcopsquadcars) then {	
-			["Ten pojazd jest już w użyciu", false] spawn domsg;
-		} else {
 			_cost = 50;
 			if (typeof _vehicle IN ["GM_SWAT_TAHOE","chvwT6_raid","d3s_f10_12_UNM"]) then {
 				["Ten samochód nie ma GPS", false] spawn domsg; 
@@ -75,7 +72,6 @@ if((_this select 0) == 1) exitwith {
 				_vehicle setVariable ["pdCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
 				lastGovtUseCar = time + 300;
 			};
-		currentcopsquadcars pushBack (typeof _vehicle); };
 	};
 
 	if(myJob == "doc") then {
