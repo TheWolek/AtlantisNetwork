@@ -524,6 +524,7 @@ class CfgFunctions
 			class dance {};
 			class getTint {};
 			class evidence {};
+			class destroyEvidence {};
 			class checkBank {};
 			class lockNightclub {};
 			class IED {};

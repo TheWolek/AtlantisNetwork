@@ -589,12 +589,12 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["(CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Boat' || CursorTarget isKindOf 'Ship') && (myJob != 'Repairman' || ( myJob == 'Repairman' && (CursorTarget IN current_cars) ) ) && ('ToolKit' in backpackitems player) && !attachedcar"],
-		["Napraw", "['Naprawiam',20,'client_fnc_repair',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
+		["Napraw", "['Naprawiam',25,'client_fnc_repair',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 
 	[
 		["(CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Boat' || CursorTarget isKindOf 'Ship') && myJob == 'Repairman' && !(CursorTarget IN current_cars) "],
-		["Napraw", "['Naprawiam',5,'client_fnc_repair',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
+		["Napraw", "['Naprawiam',10,'client_fnc_repair',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 
 	[
@@ -700,6 +700,11 @@ NoPixel_InteractionMenuItems = [
 	[
 		[" !isNil{cursorTarget getVariable 'evidenceInformation'} && myJob == 'Cop' && player IN currentDetectives"],
 		["Zbierz dowody", "['Zbieram  dowody',5,client_fnc_evidence,0,'AinvPknlMstpSnonWnonDnon_medic_1',[cursorobject],'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask; ",2]	
+	],
+
+	[
+		[" !isNil{cursorTarget getVariable 'evidenceInformation'}"],
+		["Zniszcz dowody", "['Zacieram ślady',120,client_fnc_destroyEvidence,0,'AinvPknlMstpSnonWnonDnon_medic_1',[cursorobject],'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask; ",2]	
 	],
 
 	[

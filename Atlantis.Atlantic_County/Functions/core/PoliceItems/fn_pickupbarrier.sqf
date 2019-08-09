@@ -18,7 +18,7 @@ if(_destroy IN barriers) then {
     _time = 10;
 };
 
-_check = ["Zbieranie", _time, 0, player,'vvv_anim_ticket',nil,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
+_check = ["Zbieranie", 15, 0, player,'vvv_anim_ticket',nil,"cg_sndimg\sounds\repair.ogg"] spawn client_fnc_dotask; 
 
 waitUntil { scriptDone _check };
 
