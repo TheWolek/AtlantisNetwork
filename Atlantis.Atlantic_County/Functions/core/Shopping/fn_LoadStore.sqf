@@ -1143,23 +1143,7 @@ if(_condition == "ems_gunstore") then {
 
 	_gunStorePistols = [
 
-		["RH_m9",nil,2500,1],
-        ["RH_g17",nil,3000,1],
-        ["RH_uspm",nil,4000,1],
-		["RH_kimber_nw",nil,7500,1],
-		["RH_tec9",nil,11000,1],
-        ["RH_bull",nil,13000,1],
-        ["RH_Deaglem",nil,15000,1],
-        ["hlc_smg_MP5N",nil,17000,1],
-        ["RH_m4",nil,40000,1],
-		["RH_ar10",nil,55000,1],
-		["hlc_rifle_g3a3",nil,60000,1],
-		["hlc_rifle_M1903A1_unertl",nil,90000,1],
-		["arifle_mas_ww2_mos",nil,160000,1],
-		["optic_LRPS",nil,5000,3],		
-		["arifle_mas_ww2_ppsh",nil,20000,1],
-		["arifle_mas_ww2_tommy",nil,16000,1],
-		["arifle_mas_ww2_sten",nil,15000,1]
+		["A3L_Extinguisher",nil,50,1]
 
 	];
 
@@ -1173,9 +1157,6 @@ if(_condition == "ems_gunstore") then {
 if(_condition == "ems_veststore") then {
 
 	_veststoree = [
-        ["TRYK_V_ArmorVest_Delta",nil,8500,3,3],
-		["TAC_V_tacv1_BK",nil,4500,3,3],
-		["EF_SHF_BK",nil,700,3,3]
 
 
 
@@ -1190,14 +1171,24 @@ if(_condition == "ems_veststore") then {
 if(_condition == "ems_uniformstore") then {
 
 	_ems_uniformstore = [
-		["vvv_hazmat",nil,4500,3,1],
-		["vvv_traje_mafioso_F_1",nil,1600,3,1],
-        ["vvv_traje_ejecutivo_1",nil,1400,3,1],
-		["vvv_character_funcionario_1",nil,2000,3,1],
-		["vvv_traje_jackoy5",nil,1200,3,1],
-		["Gsg9_AirUniform_black",nil,900,3,1],
-		["cg_invisbp",nil,9000,4,2],
-		["B_Bergen_dgtl_F",nil,10000,4,2]
+		["CG_EMS6",nil,500,3,1],
+		["CG_EMS5",nil,500,3,1],
+		["CG_EMS9",nil,500,3,1],
+		["CG_EMS8",nil,500,3,1],
+		["CG_EMS7",nil,500,3,1],
+		["CG_EMS10",nil,500,3,1],
+		["CG_EMS4",nil,500,3,1],
+		["CG_EMS3",nil,500,3,1],
+		["CG_EMS2",nil,500,3,1],
+		["CG_EMS1",nil,500,3,1],
+		["EF_MKJKT_EMS",nil,500,3,1],
+		["female_ems",nil,500,3,1],
+		["vvv_traje_doctor",nil,500,3,1],
+		["cg_invisbp",nil,300,4,2],
+        ["EF_BLT_MEMS",nil,150,4,2],
+		["V_RebreatherB",nil,150,4,2],
+		["TRYK_B_Medbag",nil,250,4,2],
+		["TRYK_B_Medbag_OD",nil,250,4,2]
 
 	];
 
@@ -1211,17 +1202,8 @@ if(_condition == "ems_uniformstore") then {
 if(_condition == "ems_glassesstore") then {
 
 	_ems_glassesstore = [
-        ["G_Bandanna_tan",nil,1,3,4],
-        ["G_Bandanna_blk",nil,1,3,4],
-        ["G_bandanna_aviator",nil,1,3,4],
-        ["G_Bandanna_oli",nil,1,3,4],
-        ["G_Balaclava_blk",nil,1,3,4],
-        ["G_Balaclava_TI_blk_F",nil,1,3,4],
-        ["Balaclava_Black_Gsg9",nil,1,3,4],
-        ["G_Aviator",nil,1,3,4],
-        ["G_AirPurifyingRespirator_01_F",nil,1,3,4],
-        ["G_WirelessEarpiece_F",nil,1,3,4],
-        ["G_Spectacles_Tinted",nil,1,3,4]
+        ["Masque_Chirurgical",nil,1,3,4]
+
 
 
 	];
@@ -1234,9 +1216,14 @@ if(_condition == "ems_glassesstore") then {
 if(_condition == "ems_headgearstore") then {
 
 	_ems_headgearstore = [
+		["EF_Mcap_EMSB",nil,300,3,5],
 		["H_Hat_brown",nil,300,3,5],
 		["H_Hat_grey",nil,300,3,5],
-		["H_Hat_tan",nil,300,3,5]
+		["H_Cap_marshal",nil,300,3,5],
+		["H_Hat_tan",nil,300,3,5],
+		["H_Beret_02",nil,300,3,5],
+		["H_Beret_Colonel",nil,300,3,5],
+		["Kio_Capital_Hat",nil,300,3,5]
 	];
 
 	{
@@ -1247,12 +1234,6 @@ if(_condition == "ems_headgearstore") then {
 if(_condition == "ems_misc") then {
 
 	_ems_misc = [
-		["NP_drillitem",nil,20000,3],
-		["CG_HackingTool",nil,9000,3],
-		["CG_Lockpick",nil,1000,3],
-		["NP_DrugTable",nil,6500,3],
-		["DemoCharge_Remote_Mag",nil,60000,3],
- 		["RH_m9qd",nil,1900,3]
 
 
 	];
