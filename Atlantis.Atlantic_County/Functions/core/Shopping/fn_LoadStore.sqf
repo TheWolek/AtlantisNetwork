@@ -1135,6 +1135,254 @@ if(_condition == "mafia_misc") then {
 	} foreach _mafia_misc;
 
 };
+/*================================================= ems =====================================*/
+if(_condition == "ems_gunstore") then {
+
+	_gunStorePistols = [
+
+		["RH_m9",nil,2500,1],
+        ["RH_g17",nil,3000,1],
+        ["RH_uspm",nil,4000,1],
+		["RH_kimber_nw",nil,7500,1],
+		["RH_tec9",nil,11000,1],
+        ["RH_bull",nil,13000,1],
+        ["RH_Deaglem",nil,15000,1],
+        ["hlc_smg_MP5N",nil,17000,1],
+        ["RH_m4",nil,40000,1],
+		["RH_ar10",nil,55000,1],
+		["hlc_rifle_g3a3",nil,60000,1],
+		["hlc_rifle_M1903A1_unertl",nil,90000,1],
+		["arifle_mas_ww2_mos",nil,160000,1],
+		["optic_LRPS",nil,5000,3],		
+		["arifle_mas_ww2_ppsh",nil,20000,1],
+		["arifle_mas_ww2_tommy",nil,16000,1],
+		["arifle_mas_ww2_sten",nil,15000,1]
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _gunStorePistols;
+
+};
+
+
+if(_condition == "ems_veststore") then {
+
+	_veststoree = [
+        ["TRYK_V_ArmorVest_Delta",nil,8500,3,3],
+		["TAC_V_tacv1_BK",nil,4500,3,3],
+		["EF_SHF_BK",nil,700,3,3]
+
+
+
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _veststoree;
+
+};
+if(_condition == "ems_uniformstore") then {
+
+	_ems_uniformstore = [
+		["vvv_hazmat",nil,4500,3,1],
+		["vvv_traje_mafioso_F_1",nil,1600,3,1],
+        ["vvv_traje_ejecutivo_1",nil,1400,3,1],
+		["vvv_character_funcionario_1",nil,2000,3,1],
+		["vvv_traje_jackoy5",nil,1200,3,1],
+		["Gsg9_AirUniform_black",nil,900,3,1],
+		["cg_invisbp",nil,9000,4,2],
+		["B_Bergen_dgtl_F",nil,10000,4,2]
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _ems_uniformstore
+
+};
+
+
+if(_condition == "ems_glassesstore") then {
+
+	_ems_glassesstore = [
+        ["G_Bandanna_tan",nil,1,3,4],
+        ["G_Bandanna_blk",nil,1,3,4],
+        ["G_bandanna_aviator",nil,1,3,4],
+        ["G_Bandanna_oli",nil,1,3,4],
+        ["G_Balaclava_blk",nil,1,3,4],
+        ["G_Balaclava_TI_blk_F",nil,1,3,4],
+        ["Balaclava_Black_Gsg9",nil,1,3,4],
+        ["G_Aviator",nil,1,3,4],
+        ["G_AirPurifyingRespirator_01_F",nil,1,3,4],
+        ["G_WirelessEarpiece_F",nil,1,3,4],
+        ["G_Spectacles_Tinted",nil,1,3,4]
+
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _ems_glassesstore;
+
+};
+if(_condition == "ems_headgearstore") then {
+
+	_ems_headgearstore = [
+		["H_Hat_brown",nil,300,3,5],
+		["H_Hat_grey",nil,300,3,5],
+		["H_Hat_tan",nil,300,3,5]
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _ems_headgearstore;
+
+};
+if(_condition == "ems_misc") then {
+
+	_ems_misc = [
+		["NP_drillitem",nil,20000,3],
+		["CG_HackingTool",nil,9000,3],
+		["CG_Lockpick",nil,1000,3],
+		["NP_DrugTable",nil,6500,3],
+		["DemoCharge_Remote_Mag",nil,60000,3],
+ 		["RH_m9qd",nil,1900,3]
+
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _ems_misc;
+
+};
+/*================================================= gang =====================================*/
+if(_condition == "gang_gunstore") then {
+
+	_gunStorePistols = [
+
+		["RH_m9",nil,2500,1],
+        ["RH_g17",nil,3000,1],
+        ["RH_uspm",nil,4000,1],
+		["RH_kimber_nw",nil,7500,1],
+		["RH_tec9",nil,11000,1],
+        ["RH_bull",nil,13000,1],
+        ["RH_Deaglem",nil,15000,1],
+        ["hlc_smg_MP5N",nil,17000,1],
+        ["RH_m4",nil,40000,1],
+		["RH_ar10",nil,55000,1],
+		["hlc_rifle_g3a3",nil,60000,1],
+		["hlc_rifle_M1903A1_unertl",nil,90000,1],
+		["arifle_mas_ww2_mos",nil,160000,1],
+		["optic_LRPS",nil,5000,3],		
+		["arifle_mas_ww2_ppsh",nil,20000,1],
+		["arifle_mas_ww2_tommy",nil,16000,1],
+		["arifle_mas_ww2_sten",nil,15000,1]
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _gunStorePistols;
+
+};
+
+
+if(_condition == "gang_veststore") then {
+
+	_gang_veststoree = [
+        ["TRYK_V_ArmorVest_Delta",nil,8500,3,3],
+		["TAC_V_tacv1_BK",nil,4500,3,3],
+		["EF_SHF_BK",nil,700,3,3]
+
+
+
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _gang_veststoree;
+
+};
+if(_condition == "gang_uniformstore") then {
+
+	_gang_uniformstore = [
+		["vvv_hazmat",nil,4500,3,1],
+		["vvv_traje_mafioso_F_1",nil,1600,3,1],
+        ["vvv_traje_ejecutivo_1",nil,1400,3,1],
+		["vvv_character_funcionario_1",nil,2000,3,1],
+		["vvv_traje_jackoy5",nil,1200,3,1],
+		["Gsg9_AirUniform_black",nil,900,3,1],
+		["cg_invisbp",nil,9000,4,2],
+		["B_Bergen_dgtl_F",nil,10000,4,2]
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _gang_uniformstore
+
+};
+
+
+if(_condition == "gang_glassesstore") then {
+
+	_gang_glassesstore = [
+        ["G_Bandanna_tan",nil,1,3,4],
+        ["G_Bandanna_blk",nil,1,3,4],
+        ["G_bandanna_aviator",nil,1,3,4],
+        ["G_Bandanna_oli",nil,1,3,4],
+        ["G_Balaclava_blk",nil,1,3,4],
+        ["G_Balaclava_TI_blk_F",nil,1,3,4],
+        ["Balaclava_Black_Gsg9",nil,1,3,4],
+        ["G_Aviator",nil,1,3,4],
+        ["G_AirPurifyingRespirator_01_F",nil,1,3,4],
+        ["G_WirelessEarpiece_F",nil,1,3,4],
+        ["G_Spectacles_Tinted",nil,1,3,4]
+
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _gang_glassesstore;
+
+};
+if(_condition == "gang_headgearstore") then {
+
+	_gang_headgearstore = [
+		["H_Hat_brown",nil,300,3,5],
+		["H_Hat_grey",nil,300,3,5],
+		["H_Hat_tan",nil,300,3,5]
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _gang_headgearstore;
+
+};
+if(_condition == "gang_misc") then {
+
+	_gang_misc = [
+		["NP_drillitem",nil,20000,3],
+		["CG_HackingTool",nil,9000,3],
+		["CG_Lockpick",nil,1000,3],
+		["NP_DrugTable",nil,6500,3],
+		["DemoCharge_Remote_Mag",nil,60000,3],
+ 		["RH_m9qd",nil,1900,3]
+
+
+	];
+
+	{
+		_storeList pushback _x;
+	} foreach _gang_misc;
+
+};
 
 
 

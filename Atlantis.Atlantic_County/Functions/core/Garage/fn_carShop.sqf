@@ -33,58 +33,43 @@ _farmingVehicles = ["vvv_DOD_RamSRT_civ","jf_caprice_wagon"];
 //remember to use this array in the mafia selling script & ALSO THE CAR UPDATE SCRIPT.
 _civilianVehicle = [
 	// type 1
-	//["C_Offroad_01_F",3300]
-	["d3s_fiesta_16",1000],
-	["d3s_e38_98",1000],
-	["d3s_vesta_15",1200],
-	["d3s_fseries_17",1200],
-	["d3s_f87_17_m",1200],
-	["d3s_f10_12",1200],
-	["d3s_challenger_15_DM",1300],
-	["d3s_giulietta_quad_16",1300],
-	["d3s_taurus_10",1300],
-	["d3s_charger_15",1500],
-	["d3s_q50_14",1500],
-	["d3s_is_16",1500],
-	["d3s_clubman_11_50",1800],
-	["d3s_xe_15",1800],
-	["d3s_c36_14",2000]
-	/*
-	["ivory_190e",3300],
-	["ivory_gti",6000],	
-	["ivory_e36",8000],
+	["d3s_KTM_1290_Super_Duke",82500],
+	["d3s_Ducati_Monster_1200_S",95500],
+	["d3s_Aprilia_Tuono_V4_1100_RR",100500],
+	["d3s_Kawasaki_Ninja_H2R",122500],
+	["d3s_Suzuki_Hayabusa",150000],
+	["d3s_oka",7000],
+	["d3s_beetle_04",9500],
+	["d3s_vesta_15",13500],
+	["d3s_e38_98",19500],
+	["d3s_crown_98",22500],
+	["d3s_wrx_17",29500],
+	["d3s_taurus_eco_10",30500],
+	["d3s_is_16",33500],
+	["d3s_f87_17",42500],
+	["d3s_charger_15",49500],
+	["d3s_f87_17_ACH",53500],
+	["d3s_savana_05",56000],
+	["d3s_vklasse_17",60500],
+	["d3s_challenger_15_SP",68500],
+	["d3s_ctsv_16",73500],
+	["d3s_civic_17",78500],
+	["d3s_srthellcat_15",89500],
+	["d3s_C63_14",95500],
+	["d3s_continentialGT_18",101500],
+	["d3s_camaro_16",115500],
+	["d3s_boss_15_payback",127500],
+	["d3s_amazing_ACS8_17",192500],
+	["d3s_asterion_15",225500],
+	["d3s_LaFerrari_14",295500],
+	["d3s_ghost_18_EWB",551500],
+	["d3s_durango_18",35500],
+	["d3s_escalade_16_pt",45500],
+	["d3s_tahoe_ltz_08",35500],
+	["d3s_explorer_13",43500],
+	["d3s_cayenne_16",65500],
+	["d3s_bentayga_18",56500]
 
-	// type 3
-	["ivory_gt500",22000],
-
-	// type 4
-	["ivory_rs4",40000],
-	["ivory_isf",42000],
-	["ivory_m3",46000],
-
-	// type 5
-	["ivory_evox",55000],
-	["ivory_wrx",56000],	
-	["ivory_elise",59000],	
-	["ivory_supra",62000],	
-	["ivory_r34",60000],
-	// type 6
-	["ivory_suburban",70000],
-	["ivory_c",102000],	
-	["ivory_r8",120000],
-	["ivory_r8_spyder",125000],
-	["ivory_911",120000],
-	["ivory_supra_topsecret",140000],	
-	["ivory_lp560",170000],	
-	["ivory_mp4",195000],
-
-	// type 7
-	["ivory_lfa",265000],
-	["ivory_f1",320000],
-	["ivory_rev",340000],
-	["ivory_veyron",390000],
-	["ivory_ccx",450000]
-	*/
 ];
 
 if(str CursorObject find "embarcadero" > -1) then {

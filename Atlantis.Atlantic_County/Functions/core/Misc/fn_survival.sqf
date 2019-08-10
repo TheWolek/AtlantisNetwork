@@ -28,7 +28,7 @@ Survival Koil
 				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
 				[_bonus,true,true] call Client_fnc_addMoneyToBank;
 			} else {
-				[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
+				[format["Przegapiłeś swoje $%1, ponieważ nie masz atlantisnetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
 			};
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
@@ -45,7 +45,7 @@ Survival Koil
 				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
 				[_bonus,true,true] call Client_fnc_addMoneyToBank;
 			} else {
-				[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
+				[format["Przegapiłeś swoje $%1, ponieważ nie masz atlantisnetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
 			};
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;

@@ -12,7 +12,7 @@ class yn_Menu {
 		{
 			type = 13;
 			style = 0;
-			text = "You have been summoned for Jury Duty - do you wish to accept? Payment is $2000.";
+			text = "Zostałeś wezwany do pracy jako sędzia, czy chcesz pracować? Zapłata to $2000.";
 			size = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			colorText[] = {1, 1, 1, 1.0};
 			colorBackground[]={0,0,0,0.5};
@@ -185,7 +185,7 @@ class wanted {
 					fadeout=1;
 
 					font="PuristaLight";
-					text = "No crime selected.";
+					text = "Nie wybrano przestępstwa.";
 					size = 0.035;
 					sizeEx = 0.05;
 					x = 0;
@@ -207,7 +207,7 @@ class wanted {
 
 		class APB : client_RscButtonMenu {
 			idc = 1400;
-			text = "Create APB";
+			text = "Utwórz poszukiwanego";
 			onButtonClick = "[] spawn client_fnc_addAPB;";
 			x = 0.406091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
@@ -217,7 +217,7 @@ class wanted {
 
 		class LicCheck : client_RscButtonMenu {
 			idc = 1120;
-			text = "Licenses";
+			text = "Licencje";
 			onButtonClick = "[] spawn client_fnc_licensecheck;";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.62 * safezoneH + safezoneY;
@@ -227,7 +227,7 @@ class wanted {
 
 		class RaidShop : client_RscButtonMenu {
 			idc = 1121;
-			text = "Search Shop";
+			text = "Przeszukaj Sklep";
 			onButtonClick = "[] spawn client_fnc_raidshop;";
 			x = 0.606091 * safezoneW + safezoneX;
 			y = 0.62 * safezoneH + safezoneY;
@@ -237,7 +237,7 @@ class wanted {
 
 		class LookupCrimes : client_RscButtonMenu {
 			idc = 1005;
-			text = "Lookup Crimes";
+			text = "Wyszukaj Przestępstwa";
 			onButtonClick = "[] spawn client_fnc_wantedUser;";
 			x = 0.306091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
@@ -248,7 +248,7 @@ class wanted {
 
 		class Update : client_RscButtonMenu {
 			idc = 1115;
-			text = "Archive Crime";
+			text = "Archiwizuj Przestępstwo";
 			onButtonClick = "[] call client_fnc_wantedRemove; closedialog 0;";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
@@ -258,7 +258,7 @@ class wanted {
 
 		class INSERT : client_RscButtonMenu {
 			idc = 1116;
-			text = "Warrant";
+			text = "Nakaz aresztowania";
 			onButtonClick = "[] spawn client_fnc_wantedredirect;";
 			x = 0.606091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
@@ -268,7 +268,7 @@ class wanted {
 
 		class refresh : client_RscButtonMenu {
 			idc = 1119;
-			text = "Refresh Active";
+			text = "Odśwież Przestępstwo";
 			onButtonClick = "[player,1] remoteExec [""Server_fnc_wantedList"",2];";
 			x = 0.306091 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -278,7 +278,7 @@ class wanted {
 
 		class checkwanted : client_RscButtonMenu {
 			idc = 1154;
-			text = "Wanted Status";
+			text = "Sprawdź przestępstwa";
 			onButtonClick = "[] spawn client_fnc_checkwanted;";
 			x = 0.306091 * safezoneW + safezoneX;
 			y = 0.73892 * safezoneH + safezoneY;
@@ -288,7 +288,7 @@ class wanted {
 
 		class Evidence : client_RscButtonMenu { 
 			idc = 1117;
-			text = "Search Home";
+			text = "Przeszukaj Dom";
 			onButtonClick = "[] spawn client_fnc_raidhouse;";
 			x = 0.406091 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -298,7 +298,7 @@ class wanted {
 
 		class LoadOld : client_RscButtonMenu {
 			idc = 1118;
-			text = "Past Crimes";
+			text = "Poprzednie Przestępstwa";
 			onButtonClick = "[player,0] remoteExec [""Server_fnc_wantedList"",2];";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -308,7 +308,7 @@ class wanted {
 
 		class LicenseCheck : client_RscButtonMenu {
 			idc = 1119;
-			text = "Plate";
+			text = "Rejestracja";
 			onButtonClick = "closedialog 0; createdialog ""licenseCheck""; ";
 			x = 0.606091 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -318,7 +318,7 @@ class wanted {
 
 		class ViewHome : client_RscButtonMenu { 
 			idc = 1145;
-			text = "View Home";
+			text = "Lokalizacja domu";
 			onButtonClick = "[] spawn client_fnc_viewhouse;";
 			x = 0.406091 * safezoneW + safezoneX;
 			y = 0.73892 * safezoneH + safezoneY;
@@ -328,7 +328,7 @@ class wanted {
 
 		class ViewShop : client_RscButtonMenu { 
 			idc = 1146;
-			text = "View Shop";
+			text = "Lokalizacja sklepu";
 			onButtonClick = "[] spawn client_fnc_viewshop;";
 			x = 0.506084 * safezoneW + safezoneX;
 			y = 0.73892 * safezoneH + safezoneY;
@@ -338,7 +338,7 @@ class wanted {
 
 		class ViewOffice : client_RscButtonMenu { 
 			idc = 1147;
-			text = "View Office";
+			text = "Lokalizacja biura";
 			onButtonClick = "[] spawn client_fnc_viewoffice;";
 			x = 0.6061161 * safezoneW + safezoneX;
 			y = 0.73892 * safezoneH + safezoneY;
@@ -407,7 +407,7 @@ class wanted2 {
 					fadeout=1;
 
 					font="PuristaLight";
-					text = "No crime selected.";
+					text = "Nie wybrano przestępstwa.";
 					size = 0.035;
 					sizeEx = 0.05;
 					x = 0;
@@ -429,7 +429,7 @@ class wanted2 {
 
 		class LookupCrimes : client_RscButtonMenu {
 			idc = 1005;
-			text = "Lookup Crimes";
+			text = "Szukaj przestępstw";
 			onButtonClick = "[] spawn client_fnc_wantedUser;";
 			x = 0.306091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
@@ -439,7 +439,7 @@ class wanted2 {
 
 		class refresh : client_RscButtonMenu {
 			idc = 1119;
-			text = "Refresh Active";
+			text = "Odśwież Przestępstwo";
 			onButtonClick = "[player,1] remoteExec [""Server_fnc_wantedList"",2];";
 			x = 0.306091 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -449,7 +449,7 @@ class wanted2 {
 
 		class PayTicket : client_RscButtonMenu {
 			idc = 1115;
-			text = "Pay Ticket";
+			text = "Zapłać mandat";
 			onButtonClick = "[] call client_fnc_ticketResult; ";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
@@ -459,7 +459,7 @@ class wanted2 {
 
 		class LoadOld : client_RscButtonMenu {
 			idc = 1118;
-			text = "Past Crimes";
+			text = "Poprzednie Przestępstwa";
 			onButtonClick = "[player,0] remoteExec [""Server_fnc_wantedList"",2];";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -528,7 +528,7 @@ class wanted3 { //  judges
 					fadeout=1;
 
 					font="PuristaLight";
-					text = "No crime selected.";
+					text = "Nie wybrano przestępstwa.";
 					size = 0.035;
 					sizeEx = 0.05;
 					x = 0;
@@ -551,7 +551,7 @@ class wanted3 { //  judges
 
 		class WARRANT : client_RscButtonMenu {
 			idc = 1117;
-			text = "Warrant";
+			text = "Nakaz";
 			onButtonClick = "[] spawn client_fnc_wantedredirect;";
 			x = 0.306091 * safezoneW + safezoneX;
 			y = 0.73892 * safezoneH + safezoneY;
@@ -561,7 +561,7 @@ class wanted3 { //  judges
 
 		class LicCheck : client_RscButtonMenu {
 			idc = 1120;
-			text = "License Check";
+			text = "Sprawdź licencje";
 			onButtonClick = "[] spawn client_fnc_licensecheck;";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.62 * safezoneH + safezoneY;
@@ -571,7 +571,7 @@ class wanted3 { //  judges
 
 		class LookupCrimes : client_RscButtonMenu {
 			idc = 1005;
-			text = "Lookup Crimes";
+			text = "Szukaj przestępstw";
 			onButtonClick = "[] spawn client_fnc_wantedUser;";
 			x = 0.306091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
@@ -582,7 +582,7 @@ class wanted3 { //  judges
 
 		class Update : client_RscButtonMenu {
 			idc = 1115;
-			text = "Archive Crime";
+			text = "Archiwizuj Przestępstwo";
 			onButtonClick = "[] call client_fnc_wantedRemove; closedialog 0;";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
@@ -592,7 +592,7 @@ class wanted3 { //  judges
 
 		class INSERT : client_RscButtonMenu {
 			idc = 1116;
-			text = "Approve";
+			text = "AKCEPTUJ";
 			onButtonClick = "[] spawn client_fnc_acceptWarrant;";
 			x = 0.606091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
@@ -602,7 +602,7 @@ class wanted3 { //  judges
 
 		class refresh : client_RscButtonMenu {
 			idc = 1119;
-			text = "Refresh Active";
+			text = "Odśwież Przestępstwo";
 			onButtonClick = "[player,1] remoteExec [""Server_fnc_wantedList"",2];";
 			x = 0.306091 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -612,7 +612,7 @@ class wanted3 { //  judges
 
 		class LoadOld : client_RscButtonMenu {
 			idc = 1118;
-			text = "Past Crimes";
+			text = "Poprzednie przestępstwa";
 			onButtonClick = "[player,0] remoteExec [""Server_fnc_wantedList"",2];";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -622,7 +622,7 @@ class wanted3 { //  judges
 
 		class LicenseCheck : client_RscButtonMenu {
 			idc = 1119;
-			text = "Plate Check";
+			text = "Rejestracja";
 			onButtonClick = "closedialog 0; createdialog ""licenseCheck""; ";
 			x = 0.606091 * safezoneW + safezoneX;
 			y = 0.7 * safezoneH + safezoneY;
@@ -665,7 +665,7 @@ class insertCriminal { // cops and da - arrest warrant
 		class charges : Client_RscEdit 
 		{
 			idc = 1116;
-			text = "Enter the charges.";
+			text = "Wprowadź zarzuty.";
 			autocomplete = "";
 			sizeEx = 0.030;
 			x = 0.517817 * safezoneW + safezoneX;
@@ -676,7 +676,7 @@ class insertCriminal { // cops and da - arrest warrant
 
 		class Process : client_RscButtonMenu {
 			idc = 1117;
-			text = "Process";
+			text = "Przetwórz";
 			onButtonClick = "[0] call client_fnc_wantedAdd;";
 			x = 0.401967 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -686,7 +686,7 @@ class insertCriminal { // cops and da - arrest warrant
 
 		class CloseDialog : client_RscButtonMenu {
 			idc = 1118;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "CLOSEDIALOG 0;";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -728,7 +728,7 @@ class insertPBA { // cops and da - arrest warrant
 		class charges : Client_RscEdit 
 		{
 			idc = 1116;
-			text = "This is an official court document. You have to describe the events leading up to the arrest of this person. Do not include the charges. You have to be brief and descriptive. Failure to abide by the correct format will lead to disciplinary action as well the denial of the arrest and conviction of the suspect.";
+			text = "Opisz wydarzenia poprzedzające aresztowanie.";
 			autocomplete = "";
 			sizeEx = 0.030;
 			x = 0.517817 * safezoneW + safezoneX;
@@ -739,7 +739,7 @@ class insertPBA { // cops and da - arrest warrant
 
 		class Process : client_RscButtonMenu {
 			idc = 1117;
-			text = "Submit";
+			text = "Wyślij";
 			onButtonClick = "[4] call client_fnc_wantedAdd;";
 			x = 0.401967 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -749,7 +749,7 @@ class insertPBA { // cops and da - arrest warrant
 
 		class CloseDialog : client_RscButtonMenu {
 			idc = 1118;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "CLOSEDIALOG 0;";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -791,7 +791,7 @@ class insertAPB { // cops
 		class charges : Client_RscEdit 
 		{
 			idc = 1116;
-			text = "Be on the lookout for ";
+			text = "Osoba poszukiwana";
 			autocomplete = "";
 			sizeEx = 0.030;
 			x = 0.517817 * safezoneW + safezoneX;
@@ -802,7 +802,7 @@ class insertAPB { // cops
 
 		class Process : client_RscButtonMenu {
 			idc = 1117;
-			text = "Process";
+			text = "Przetwórz";
 			onButtonClick = "[1] call client_fnc_wantedAdd;";
 			x = 0.401967 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -812,7 +812,7 @@ class insertAPB { // cops
 
 		class CloseDialog : client_RscButtonMenu {
 			idc = 1118;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "CLOSEDIALOG 0;";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -855,7 +855,7 @@ class insertSearchHouse { // cops and da - arrest warrant
 		class charges : Client_RscEdit 
 		{
 			idc = 1116;
-			text = "Enter reason for Search and Seizure Warrant of person's house.";
+			text = "Wprowadź powód przeszukania domu i aresztowania.";
 			autocomplete = "";
 			sizeEx = 0.030;
 			x = 0.517817 * safezoneW + safezoneX;
@@ -866,7 +866,7 @@ class insertSearchHouse { // cops and da - arrest warrant
 
 		class Process : client_RscButtonMenu {
 			idc = 1117;
-			text = "Process";
+			text = "Przetwórz";
 			onButtonClick = "[2] call client_fnc_wantedAdd;";
 			x = 0.401967 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -876,7 +876,7 @@ class insertSearchHouse { // cops and da - arrest warrant
 
 		class CloseDialog : client_RscButtonMenu {
 			idc = 1118;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "CLOSEDIALOG 0;";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -919,7 +919,7 @@ class insertSearchShop { // cops and da - arrest warrant
 		class charges : Client_RscEdit 
 		{
 			idc = 1116;
-			text = "Enter reason for Search and Seizure Warrant of person's shop.";
+			text = "Wprowadź powód przeszukania sklepu i aresztowania.";
 			autocomplete = "";
 			sizeEx = 0.030;
 			x = 0.517817 * safezoneW + safezoneX;
@@ -930,7 +930,7 @@ class insertSearchShop { // cops and da - arrest warrant
 
 		class Process : client_RscButtonMenu {
 			idc = 1117;
-			text = "Process";
+			text = "Przetwórz";
 			onButtonClick = "[3] call client_fnc_wantedAdd;";
 			x = 0.401967 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -940,7 +940,7 @@ class insertSearchShop { // cops and da - arrest warrant
 
 		class CloseDialog : client_RscButtonMenu {
 			idc = 1118;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "CLOSEDIALOG 0;";
 			x = 0.506091 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
@@ -1044,7 +1044,7 @@ class revoke_Menu {
 
 		class RemoveOption : HideButton {
 			idc = 9995;
-			text = "Revoke";
+			text = "Odbierz";
 			onButtonClick = "[] spawn client_fnc_revoke;";
 			x = 0.40229 * safezoneW + safezoneX;
 			y = 0.659497 * safezoneH + safezoneY;
@@ -1054,7 +1054,7 @@ class revoke_Menu {
 
 		class CloseOption : HideButton {
 			idc = 9996;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = 0.40229 * safezoneW + safezoneX;
 			y = 0.679497 * safezoneH + safezoneY;
@@ -1144,7 +1144,7 @@ class giveCert_Menu {
 
 		class RemoveOption : HideButton {
 			idc = 9995;
-			text = "Grant";
+			text = "Przyznaj";
 			onButtonClick = "[] spawn client_fnc_grant;";
 			x = 0.40229 * safezoneW + safezoneX;
 			y = 0.659497 * safezoneH + safezoneY;
@@ -1154,7 +1154,7 @@ class giveCert_Menu {
 
 		class CloseOption : HideButton {
 			idc = 9996;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = 0.40229 * safezoneW + safezoneX;
 			y = 0.679497 * safezoneH + safezoneY;
