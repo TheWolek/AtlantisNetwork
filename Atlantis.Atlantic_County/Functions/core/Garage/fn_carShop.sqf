@@ -56,7 +56,7 @@ _civilianVehicle = [
 	["d3s_civic_17",78500],
 	["d3s_srthellcat_15",89500],
 	["d3s_C63_14",95500],
-	["d3s_continentialGT_18",101500],
+	//["d3s_continentialGT_18",101500],//błąd
 	["d3s_camaro_16",115500],
 	["d3s_boss_15_payback",127500],
 	["d3s_amazing_ACS8_17",192500],
