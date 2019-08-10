@@ -8,6 +8,7 @@ Survival Koil
 	_govtbank = packet;
 	packet=nil;
 	_bonus = 80;
+	showchat true;
 
 	if(isNil "paycheck") then { paycheck = 0; };
 

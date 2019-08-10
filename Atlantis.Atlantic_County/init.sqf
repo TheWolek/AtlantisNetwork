@@ -272,6 +272,7 @@ if (isServer) then {
 
 	uisleep 5;
 	player setVariable["loaded", nil, false];
+	showchat true;
 
 	if (isNil "TFAR_fnc_isTeamSpeakPluginEnabled") exitwith {
 	

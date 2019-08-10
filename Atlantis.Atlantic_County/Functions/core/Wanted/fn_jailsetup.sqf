@@ -20,7 +20,7 @@ removeuniform player;
 
 ["Remove","Karma",random(100),"Stress"] call client_fnc_sustain;
 
-player forceadduniform "U_C_WorkerCoveralls";
+player forceadduniform "dtdev_prison_uni";
 removeAllWeapons player;
 removeVest player;
 removeHeadgear player;

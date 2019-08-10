@@ -89,6 +89,7 @@ TF_speak_volume_level = "whispering";
 TF_speak_volume_meters = 3;
 ["OnSpeakVolume", _unit, [_unit, TF_speak_volume_meters]] call TFAR_fnc_fireEventHandlers;
 _unit setVariable ["tf_voiceVolume", 0.3, true];
+showchat true;
 
 im_dead = true;
 imRestrained = false;
