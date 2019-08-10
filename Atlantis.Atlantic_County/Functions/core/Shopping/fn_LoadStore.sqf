@@ -5,23 +5,26 @@ _condition = _this select 0;
 _storeList = [];
 
 if(_condition == "gunstore") then {
-
 	_gunStorePistols = [
-		["cg_hatchet",nil,120,1],
-		["cg_pickaxe",nil,120,1],
-		["cg_bat",nil,120,1],
-		["vvv_fishing_rod",nil,120,1],
-
 		["RH_m1911",nil,2500,1],
 		["RH_g17",nil,3000,1],
 		["RH_usp",nil,3000,1],
 		["RH_kimber",nil,6500,1]
-
 	];
-
+	_gunstoretools = [
+		["vvv_fishing_rod",nil,120,1],		
+		["cg_hatchet",nil,120,1],
+		["cg_pickaxe",nil,120,1],
+		["cg_bat",nil,120,1]		
+	];
+    if(1 IN licenseArray) then {	
+		{
+			_storeList pushback _x;
+		} foreach _gunStorePistols;
+	};	
 	{
 		_storeList pushback _x;
-	} foreach _gunStorePistols;
+	} foreach _gunstoretools;
 
 };
 

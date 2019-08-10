@@ -1,6 +1,6 @@
 disableSerialization;
 
-if (typeof currentcursortarget != "Land_Market_DED_Market_03_F") exitwith { ["You must do this at a Verizon Store!", false] spawn domsg;  };
+if (typeof currentcursortarget != "Land_Market_DED_Market_03_F") exitwith { ["Musisz to zrobić w sklepie Verizon!", false] spawn domsg;  };
 _selectedBG = lbData[912,lbCurSel (912)];
 _selectedBG = call compile format["%1", _selectedBG];
 
