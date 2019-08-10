@@ -26,14 +26,14 @@ private["_injurytext","_ui","_food","_water","_health","_money","_cash","_ammo",
 if(myhealth > 0) then { [] spawn client_fnc_hudhealth; [] call client_fnc_hudwork; };
 
 	_STRESS_check = (client_level_array select 15);
-
+/*
 	if(_STRESS_check > 250) then {
 		_chance = _stress_check / 100;
 		if(_chance > random 300) then { 
 			[player,1] spawn stress_effects; 
 		};
 	};
-
+*/
 	_ui = uiNameSpace getVariable ["playerHUD",displayNull];
 
 	_bleeding = _ui displayCtrl 23570;

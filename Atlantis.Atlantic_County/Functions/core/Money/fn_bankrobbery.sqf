@@ -2,7 +2,7 @@ private["_type","_stopTime","_success"];
 
 if!(typeof cursortarget IN ["cg_mainvault","plp_ct_HighSecMediumBlack"]) exitwith { ["Musisz użyć tego na czarnej skrzynce lub drzwiach skarbca.", true] spawn domsg; };
 if(typeof cursortarget IN ["cg_mainvault"] && count currentCop < 7) exitwith { ["7 policjantów musi być na służbie.", true] spawn domsg; };
-if(count currentCop < 3) exitwith { ["3 policjantów musi być na służbie.", true] spawn domsg; };
+if(count currentCop < 5) exitwith { ["5 policjantów musi być na służbie.", true] spawn domsg; };
 if(time >= 25200) exitwith { ["Nie możesz teraz napaść na ten bank", true] spawn domsg; };
 
 if(bankrobber != 1) exitwith { ["W trakcie", true] spawn domsg; };

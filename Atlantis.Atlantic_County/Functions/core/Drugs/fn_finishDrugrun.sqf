@@ -55,7 +55,7 @@ _mafiaCash = 0;
 _mafiacash = _totalValue * 600;
 
 [_mafiaCash,false,true] call Client_fnc_addMoneyToPlayer;
-["Add","Karma",random(30),"Stress"] call client_fnc_sustain;
+//["Add","Karma",random(30),"Stress"] call client_fnc_sustain;
 
 [format["Zarobiłeś %1 z przemytu.", _mafiaCash call client_fnc_numberText], true] spawn domsg;
 

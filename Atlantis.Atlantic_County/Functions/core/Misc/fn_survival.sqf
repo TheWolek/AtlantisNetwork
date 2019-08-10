@@ -118,7 +118,7 @@ if( client_marijuana > 0 || client_cocaine > 0 || client_meth > 0 || client_hero
 
 	["Remove","drug",1] call client_fnc_sustain;
 
-	["Remove","Karma",5,"Stress"] call client_fnc_sustain;
+	//["Remove","Karma",5,"Stress"] call client_fnc_sustain;
 };
 
 ["Remove","Drink",0.75] call client_fnc_sustain; 

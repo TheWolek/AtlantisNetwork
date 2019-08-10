@@ -38,7 +38,7 @@ _item = format["CG_MethBag%1", myDrugValue];
 [format["Wytworzyłeś %1 torebek mety!",_randomvalue], true] spawn domsg;
 
 while {_randomValue > 0} do { player additem _item; _randomValue = _randomValue - 1; };
-["Add","Karma",random(3),"Stress"] call client_fnc_sustain;
+//["Add","Karma",random(3),"Stress"] call client_fnc_sustain;
 
 deletevehicle myDT;
 

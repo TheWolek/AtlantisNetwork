@@ -8,7 +8,7 @@ if(_shop IN robbedstores) exitwith { ["Ten sklep nie ma nic więcej, co można u
 
 if(_chance > 85) then {
 
-	["Add","Karma",random(1),"Stress"] call client_fnc_sustain;
+//	["Add","Karma",random(1),"Stress"] call client_fnc_sustain;
 
 	[player] remoteexec ["server_fnc_robberyCall",2];
 

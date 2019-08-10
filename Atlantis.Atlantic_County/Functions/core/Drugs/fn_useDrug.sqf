@@ -30,7 +30,7 @@ if(_type == "cocaine") then {
 	if (((client_level_array select 10) / 100) > 2 ) then { player setAnimSpeedCoef 1.25; ["Jesteś 25% szybszy.",false] spawn domsg; };
 
 	["Add","unhealthiness",5] call client_fnc_sustain;
-	["Add","Karma",5,"Stress"] call client_fnc_sustain;
+	//["Add","Karma",5,"Stress"] call client_fnc_sustain;
 
 };
 
@@ -48,7 +48,7 @@ if(_type == "meth") then {
 	client_meth = _amount;
 	["Czujesz się nieśmiertelny.",false] spawn domsg;
 	["Add","unhealthiness",5] call client_fnc_sustain;
-	["Add","Karma",5,"Stress"] call client_fnc_sustain;
+	//["Add","Karma",5,"Stress"] call client_fnc_sustain;
 };
 
 if(_type == "energy") then {

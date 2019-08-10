@@ -44,7 +44,7 @@ _randomValue = _randomValue + 1;
 _item = format["CG_WeedBag%1", myDrugValue2];
 
 ["Add","Karma",2,"Farming"] call client_fnc_sustain;
-["Add","Karma",1,"Stress"] call client_fnc_sustain;
+//["Add","Karma",1,"Stress"] call client_fnc_sustain;
 
 
 if(player distance [1409.98,5740.65,0.00143814] < 400) then { 

@@ -130,7 +130,7 @@ if(_fuck != _you) then {
 			[format["%1 (%2) postrzelił cię z odległości %3m używająć %4.", _fuck, _fuck2, _killdistance, _killweapon], false] spawn domsg; 
 		};
 
-		["Add","Karma",random(125),"Stress"] remoteexec ["client_fnc_sustain",_killer];
+//		["Add","Karma",random(125),"Stress"] remoteexec ["client_fnc_sustain",_killer];
 
 		_GroundWeaponHolder = createVehicle["Land_Magazine_rifle_F", getPosATL _killer, [], 0, "CAN_COLLIDE"];
 

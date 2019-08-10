@@ -40,7 +40,7 @@ while{true} do {
 	sleep 2;
 	_stolen = random(10) + _counter;
 	[_stolen,false,true] call Client_fnc_addMoneyToPlayer; 
-	["Add","Karma",random(3),"Stress"] call client_fnc_sustain;
+//	["Add","Karma",random(3),"Stress"] call client_fnc_sustain;
 	_counter = _counter + 0.1;
 	if((_distpolice - _counter) < 0.2) exitwith {}; 
 };

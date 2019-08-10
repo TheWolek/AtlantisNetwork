@@ -20,7 +20,7 @@ if(myjob == "Mafia") then {
 
 	} forEach magazines player;
 
-	["Add","Karma",random(15),"Stress"] call client_fnc_sustain;
+//	["Add","Karma",random(15),"Stress"] call client_fnc_sustain;
 	[1,_total,player,getpos player] remoteExec ["server_fnc_drugJob",2];
 } else {
 	{
@@ -37,7 +37,7 @@ if(myjob == "Mafia") then {
 
 	[format["Zarobiłeś %1 z tego przemytu.",_cashout call client_fnc_numberText], true] spawn domsg;
 		
-	["Add","Karma",random(15),"Stress"] call client_fnc_sustain;
+//	["Add","Karma",random(15),"Stress"] call client_fnc_sustain;
 };
 
 
