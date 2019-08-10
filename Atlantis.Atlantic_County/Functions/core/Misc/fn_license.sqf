@@ -6,7 +6,7 @@ if(_type == 0) then {
         ["Driver's",1500,0],
         ["Boating",3850,18],
         ["Class 1 Weapons",6250,1],
-        ["Class 2 Weapons",125000,22],
+       // ["Class 2 Weapons",125000,22],
         ["Oil Trade",50000,7],
         ["Mining",700,2],
         ["Logging",700,3],
