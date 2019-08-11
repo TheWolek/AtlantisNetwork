@@ -486,7 +486,7 @@ NoPixel_InteractionMenuItems = [
 		[" !imrestrained && !(player getVariable ['surrender', false]) "],
 		["Ulecz się", " [player] spawn client_fnc_medicUpdater; ",1]
 	],
-
+/*
 	[
 		["bedactive"],
 		["Upuść łóżko", "[] spawn client_fnc_dropbed;",1]
@@ -506,7 +506,7 @@ NoPixel_InteractionMenuItems = [
 		[" typeof cursorobject == 'land_POP_Hospital' && myjob == 'EMS'"],
 		["Łóżko", "[false] spawn client_fnc_spawnbed;",1]
 	],
-
+*/
 
 	[
 		[" typeof cursorobject == 'land_POP_Hospital'"],
@@ -639,7 +639,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" (CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Ship') && player distance CursorTarget < 11 && CursorTarget in current_cars && !imrestrained && !attachedcar"],
-		["Pophnij", "[] spawn Client_fnc_pushveh",2]
+		["Popchnij", "[] spawn Client_fnc_pushveh",2]
 	],
 	
 	[
@@ -1033,6 +1033,11 @@ NoPixel_InteractionMenuItems = [
 	[
 		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained && player distance [1355.23,997.027,4.41015] <4"],
 		["Wyposażenie policji", "closedialog 0; createdialog 'police_equipment'; ['police_gunstore'] spawn client_fnc_LoadStore;",3]
+	],
+
+	[
+		["myjob == 'Ems' && typeof cursorobject == 'land_POP_Hospital' && !imrestrained"],
+		["Wyposażenie EMS", "closedialog 0; createdialog 'police_equipment'; ['ems_uniformstore'] spawn client_fnc_LoadStore;",3]
 	],
 
 	[

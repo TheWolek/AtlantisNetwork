@@ -812,8 +812,8 @@ if(_condition == "police_uniformstore") then {
 		["asp_deputychief11",nil,1,3,1],
 		["asp_chief12",nil,1,3,1],
 		["asp_ia13",nil,1,3,1],
-		["dtdev_swat_1_uni",nil,1,3,1],
-		["dtdev_swat_2_uni",nil,1,3,1]
+		["dtdev_swat_1uni",nil,1,3,1],
+		["dtdev_swat_2uni",nil,1,3,1]
 	];
 
 	{
@@ -877,13 +877,13 @@ if(_condition == "police_glassesstore") then {
 	} foreach _police_glassesstore;
 
 
-	if (player IN currentMarshals) then {	
+	if (player IN currentMarshals || 9 IN licenseArray || 8 in licenseArray) then {	
 		{
 			_storeList pushback _x;
 		} foreach _marshalmasks;
 	};
 
-	if (player in currentDetectives) then {
+	if (player in currentDetectives || 9 IN licenseArray || 8 in licenseArray) then {
 		{
 			_storeList pushback _x;
 		} foreach _dtumasks;
@@ -989,6 +989,7 @@ if(_condition == "police_misc") then {
 	];	
 
 	_pdmarshalstuff = [
+		["SUPER_flash",nil,100,3],	
 		["CSW_FN57_Shield_P",nil,300,3],	
 		["bnae_muzzle_blk_virtual",nil,300,3],		
 		["bnae_scope_blk_virtual",nil,600,3],
