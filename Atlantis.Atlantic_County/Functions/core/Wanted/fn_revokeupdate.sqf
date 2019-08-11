@@ -7,12 +7,12 @@ _display = findDisplay 9999;
 _list = _display displayCtrl 9001;
 
 if(0 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Prawo Jazdy";
+	_list lbAdd "Prawo Jazdy kat B";
 	_list lbSetdata [(lbSize _list)-1,str(0)];
 };
 
 if(1 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Class 1 Weapons License";
+	_list lbAdd "Licencja na broń klasy 1";
 	_list lbSetdata [(lbSize _list)-1,str(1)];
 };
 
@@ -32,7 +32,7 @@ if(4 IN _licenses && myJob == "Cop") then {
 };
 
 if(5 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Prawo Jazdy na ciężarówki";
+	_list lbAdd "Prawo Jazdy kat B";
 	_list lbSetdata [(lbSize _list)-1,str(5)];
 };
 
@@ -117,7 +117,7 @@ if(21 IN _licenses && myJob == "Cop") then {
 }; 
 
 if(22 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Class 2 Weapons License";
+	_list lbAdd "Licencja na broń klasy 2";
 	_list lbSetdata [(lbSize _list)-1,str(22)];
 }; 
 

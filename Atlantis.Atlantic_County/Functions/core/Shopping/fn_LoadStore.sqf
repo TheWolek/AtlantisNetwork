@@ -443,7 +443,8 @@ if(_condition IN ["bar"]) then {
 		["np_coke",nil,4,3],
 		["np_drpepper",nil,4,3],
 		["np_beer",nil,4,3],
-		["np_energydrink",nil,4,3]
+		["np_energydrink",nil,4,3],
+		["plp_bo_inv_BottleBitters",nil,100,3]
 	];
 
 	{
@@ -456,10 +457,12 @@ if(_condition IN ["bar"]) then {
 if(_condition IN ["nbar"]) then {
 
 	_drinks = [
-		["np_tequila",nil,250,3],
-		["murshun_cigs_lighter",nil,100,3],
-		["murshun_cigs_matches",nil,100,3],
-		["murshun_cigs_cigpack",nil,100,3],	
+		["plp_bo_inv_BottleBitters",nil,100,3],
+		["plp_bo_inv_BottleBlueCorazol",nil,200,3],
+		["plp_bo_inv_BottleLiqCream",nil,200,3],
+		["plp_bo_inv_BottleGin",nil,300,3],	
+		["plp_bo_inv_BottleLiqOrange",nil,200,3],	
+		["plp_bo_inv_BottleTequila",nil,300,3],	
 		["np_water",nil,4,3],
 		["np_coke",nil,4,3],
 		["np_drpepper",nil,4,3],

@@ -6,7 +6,7 @@ _item = lbData [_idc, _selectedIndex];
 _current = {_x == _item} count magazines player;
 if(_current == 0) exitwith {};
 
-if (_item == "np_tequila") then { ["Remove","Karma",5000,"Stress"] call client_fnc_sustain; [] spawn client_fnc_drinkTequila; [_item,0] spawn client_fnc_removeitem; closeDialog 0; client_drunk = client_drunk + 10; };
+if (_item in ["plp_bo_inv_BottleBitters","plp_bo_inv_BottleBlueCorazol","plp_bo_inv_BottleLiqCream","plp_bo_inv_BottleGin","plp_bo_inv_BottleLiqOrange","plp_bo_inv_BottleTequila"] ) then { ["Remove","Karma",5000,"Stress"] call client_fnc_sustain; [] spawn client_fnc_drinkTequila; [_item,0] spawn client_fnc_removeitem; closeDialog 0; client_drunk = client_drunk + 10; };
 
 if (_item == "NP_DrugTable") then {
 		[] spawn client_fnc_usedrugtable;

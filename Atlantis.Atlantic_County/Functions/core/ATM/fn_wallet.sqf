@@ -21,7 +21,7 @@ _list = _display displayCtrl 9001;
 _licenses = licenseArray;
 
 if(0 IN _licenses) then {
-	_list lbAdd "Prawo Jazdy";
+	_list lbAdd "Prawo Jazdy kat B";
 };
 
 if(1 IN _licenses) then {
@@ -41,7 +41,7 @@ if(4 IN _licenses) then {
 };
 
 if(5 IN _licenses) then {
-	_list lbAdd "Prawo Jazdy na ciężarówki";
+	_list lbAdd "Prawo Jazdy kat C";
 };
 
 if(6 IN _licenses) then {
