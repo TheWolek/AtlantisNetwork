@@ -705,7 +705,8 @@ if(_condition == "police_veststore") then {
 	["TAC_PBDFG2P_B",nil,1,3,3],
 	["TAC_V_tacv1_P",nil,1,3,3],
 	["TAC_V_tacv1_P2",nil,1,3,3],
-	["TAC_V_tacv1LC_P",nil,1,3,3]		
+	["TAC_V_tacv1LC_P",nil,1,3,3],	
+	["dtdev_jtf615police",nil,1,3,3]	
 	];
 
 	_police_marshalvest = [
@@ -721,6 +722,7 @@ if(_condition == "police_veststore") then {
 		["dtdev_usms_sog_vest_blk_camo",nil,1,3,3],
 		["dtdev_usms_sog_vest_blk",nil,1,3,3],
 		["dtdev_usms_sog_vest_grn",nil,1,3,3],
+		["dtdev_jtf615police",nil,1,3,3],
 		["Gsg9_PlateCarrier_Black_Assault",nil,1,3,3],
 		["Gsg9_PlateCarrier_Brown_Assault",nil,1,3,3],
 		["KSK_PlateCarrier_FlecktarnW_Specialist",nil,1,3,3],
@@ -728,7 +730,11 @@ if(_condition == "police_veststore") then {
 		["Gsg9_Assault_Vest_Coyot",nil,1,3,3],
 		["Gsg9_Medic_Vest_Coyot",nil,1,3,3]
 
-	];	
+	];
+	_policeswatvests = [
+		["dtdev_police_swat_vest",nil,1,3,3],
+		["dtdev_jtf615police",nil,1,3,3]			
+	];
 	{
 		_storeList pushback _x;
 	} foreach _police_veststoree;
@@ -742,6 +748,11 @@ if(_condition == "police_veststore") then {
 		{
 		_storeList pushback _x;
 		} foreach _dtuvests;
+	};	
+	if (9 IN licenseArray || 8 in licenseArray) then {
+		{
+		_storeList pushback _x;
+		} foreach _policeswatvests;
 	};	
 
 };
@@ -905,7 +916,9 @@ if(_condition == "police_headgearstore") then {
 		["G_WirelessEarpiece_F",nil,1,3,5],
 		["EF_Mcap_PB",nil,1,3,5],
 		["CG_sert_H2",nil,1,3,5],
+		["dtdev_swat_helmet",nil,1,3,5],
 		["Kangaro0_MarshalH",nil,1,3,5],
+		["dtdev_marshal_helmet",nil,1,3,5],
 		["TRYK_H_headsetcap_blk_Glasses",nil,1,3,5]
 	];
 	_dtuhead = [

@@ -1157,7 +1157,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["(typeof CursorTarget IN ['Land_Centrelink','Land_CommonwealthBank','Land_Bank_DED_House_01_F'] || str CursorObject find 'mcl_atm' > -1) && ( Mayor || Psenate || (player getVariable 'legal' == 10) ) && !imrestrained"],
+		["(typeof CursorTarget IN ['Land_Centrelink','Land_CommonwealthBank','Land_Bank_DED_House_01_F'] || str CursorObject find 'mcl_atm' > -1) && ( Mayor || Psenate || (player getVariable 'legal' == 10) ) && !imrestrained && myJob IN ['Legal']"],
 		["Govt Bank", "[player] remoteExec['Client_fnc_openGovtATM',2]",4]
 	],
 
