@@ -702,7 +702,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" !isNil{cursorTarget getVariable 'evidenceInformation'} && myJob == 'Cop' && player IN currentDetectives"],
-		["Zbierz dowody", "['Zbieram  dowody',5,client_fnc_evidence,0,'AinvPknlMstpSnonWnonDnon_medic_1',[cursorobject],'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask; ",2]	
+		["Zbierz dowody", "['Zbieram  dowody',30,client_fnc_evidence,0,'AinvPknlMstpSnonWnonDnon_medic_1',[cursorobject],'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask; ",2]	
 	],
 
 	[
@@ -1037,7 +1037,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["myjob == 'Ems' && typeof cursorobject == 'land_POP_Hospital' && !imrestrained"],
-		["Wyposażenie EMS", "closedialog 0; createdialog 'police_equipment'; ['ems_uniformstore'] spawn client_fnc_LoadStore;",3]
+		["Wyposażenie EMS", "closedialog 0; createdialog 'ems_equipment'; ['ems_uniformstore'] spawn client_fnc_LoadStore;",3]
 	],
 
 	[
