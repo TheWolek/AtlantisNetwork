@@ -22,7 +22,7 @@ if(_type == 1) then {
     };
 
     if(0 IN licenseArray) then {
-        _message pushBack "Prawo Jazdy";
+        _message pushBack "Prawo Jazdy kat B";
     };
 
     if(1 IN licenseArray) then {
@@ -42,7 +42,7 @@ if(_type == 1) then {
     };
 
     if(5 IN licenseArray) then {
-        _message pushBack "Prawo Jazdy na ciężarówki";
+        _message pushBack "Prawo Jazdy kat C";
     };
 
     if(6 IN licenseArray) then {
@@ -106,7 +106,7 @@ if(_type == 1) then {
     };
 
     if(21 IN licenseArray) then {
-        _message pushBack "Bus License";
+        _message pushBack "Prawo Jazdy kat D";
     };
 
     if(22 IN licenseArray) then {

@@ -3,7 +3,7 @@ params["_licenses","_playername"];
 _message = format["VALID LICENSES <br/><br/> %1 <br/><br/>",_playername];
 
 if(0 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Prawo Jazdy kat C</t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Prawo Jazdy kat B</t> <br/> ",_message];
 };
 
 if(1 IN _licenses) then {
@@ -87,7 +87,7 @@ if(20 IN _licenses) then {
 };
 
 if(21 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Bus License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Prawo Jazdy kat D </t> <br/> ",_message];
 };
 
 if(22 IN _licenses) then {

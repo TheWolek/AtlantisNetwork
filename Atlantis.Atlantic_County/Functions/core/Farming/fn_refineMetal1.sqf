@@ -24,7 +24,12 @@ _n = 0;
 
 
 		player removeitem (_oreArray select _n);
-		player additem (_barArray select _n);
+		if(3 in licenseArray) then {
+			_random = round (random(4)) + 2;
+			for "_i" from 0 to _random do {player additem (_barArray select _n);};
+		} else {
+			player additem (_barArray select _n);
+		};
 		_i = _i - 1;
 		playSound3D ["CG_Jobs\sounds\mining\mineF2.ogg", player, false, getPosasl player, 31, 1, 15];
 		uisleep 0.25;

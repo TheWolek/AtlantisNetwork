@@ -105,7 +105,7 @@ if(20 IN _licenses) then {
 };
 
 if(21 IN _licenses) then {
-	_list lbAdd "Bus License";
+	_list lbAdd "Prawo jazdy kat D";
 };
 
 if(22 IN _licenses) then {

@@ -3,17 +3,17 @@ params["_type"];
 if(_type == 0) then {
 
     _licenses = [
-        ["Driver's",1500,0],
-        ["Boating",3850,18],
-        ["Class 1 Weapons",6250,1],
-       // ["Class 2 Weapons",125000,22],
-        ["Oil Trade",50000,7],
+        ["Prawo jazdy kat B",1500,0],
+        ["Prawo jazdy kat C",5250,5],
+        ["Prawo jazdy kat D",700,21],
+        ["Patent motorowodny",3850,18],
+        ["Licencja pilota",7500,6],
+        ["Licencja na broń klasy 1",6250,1]
+        //["Class 2 Weapons",125000,22],
+        //["Oil Trade",50000,7],
         ["Mining",700,2],
         ["Logging",700,3],
-        ["Bus",700,21],
-        ["Fishing",3850,4],
-        ["Truck",5250,5],
-        ["Pilot's",7500,6]
+        //["Fishing",3850,4]
     ];
 
     disableSerialization;

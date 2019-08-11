@@ -32,7 +32,7 @@ if(4 IN _licenses && myJob == "Cop") then {
 };
 
 if(5 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Prawo Jazdy kat B";
+	_list lbAdd "Prawo Jazdy kat C";
 	_list lbSetdata [(lbSize _list)-1,str(5)];
 };
 
@@ -112,7 +112,7 @@ if(20 IN _licenses && (myJob == "Legal" && player getVariable "legal" >= 6)) the
 }; 
 
 if(21 IN _licenses && myJob == "Cop") then {
-	_list lbAdd "Bus License";
+	_list lbAdd "Prawo Jazdy kat D";
 	_list lbSetdata [(lbSize _list)-1,str(21)];
 }; 
 
