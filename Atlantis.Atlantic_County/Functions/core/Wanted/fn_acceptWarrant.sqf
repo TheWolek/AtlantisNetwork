@@ -15,6 +15,6 @@ if (_status2 select 8 == 0) exitWith { ["Ten nakaz jest zarchiwizowany.", true] 
 
 [_caseID, name player, getplayeruid player] remoteExec ["server_fnc_acceptWarrant",2];
 
-[_status2 select 2, "You have been issued an arrest warrant. Surrender yourself to a police officer or face legal consequences.", "Silver Lake", "Arrest Warrant"] remoteExec ["server_fnc_sendMail",2];
+[_status2 select 2, "You have been issued an arrest warrant. Surrender yourself to a police officer or face legal consequences.", "Atlantis County", "Arrest Warrant"] remoteExec ["server_fnc_sendMail",2];
 
 closeDialog 0;

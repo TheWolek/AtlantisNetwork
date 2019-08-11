@@ -165,7 +165,7 @@ class fillvehicle
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fill Vehicle"; //--- ToDo: Localize;
+			text = "Napełnij pojazd"; //--- ToDo: Localize;
 			x = 0.401967 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
 			w = 0.0899712 * safezoneW;
@@ -258,7 +258,7 @@ class garage2
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fetch Car"; //--- ToDo: Localize;
+			text = "Wyjmij pojazd"; //--- ToDo: Localize;
 			x = 0.315 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
 			w = 0.09 * safezoneW;
@@ -349,7 +349,7 @@ class garage3
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fetch Work Car"; //--- ToDo: Localize;
+			text = "Wyjmij pojazd służbowy"; //--- ToDo: Localize;
 			x = 0.315 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
 			w = 0.09 * safezoneW;

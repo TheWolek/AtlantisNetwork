@@ -38,22 +38,22 @@ if(vehicle player != player && (vehicle player isKindOf "LandVehicle")) then
 		if(player distance [5958.55,2588.34,0.499081] < 35 || player distance [4167.47,1985.92,0.506023] < 35 || player distance [6077.71,4439.47,0.496862] < 35 || player distance [9008.4,7306.11,0.498945] < 35 || player distance [9837.6,4193.5,0.498384] < 35 ) then {
 
 			if(speed player > _speedLimit + 10 && speed player <= _speedLimit + 35) exitwith {
-				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 3rd degree.", 2, 0, 1, 250] remoteexec ["server_fnc_addcriminal",2];
-				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];
+				[name player,getplayeruid player, "Atlantis County", "0", "1x Speeding, 3rd degree.", 2, 0, 1, 250] remoteexec ["server_fnc_addcriminal",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Atlantis County", "Mandat"] remoteExec ["server_fnc_sendMail",2];
 
 				[] spawn client_fnc_speedchecked;
 			};
 
 			if(speed player > _speedLimit + 35 && speed player <= _speedLimit + 70) exitwith {
-				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 2nd degree.", 2, 0, 1, 500] remoteexec ["server_fnc_addcriminal",2];
-				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];
+				[name player,getplayeruid player, "Atlantis County", "0", "1x Speeding, 2nd degree.", 2, 0, 1, 500] remoteexec ["server_fnc_addcriminal",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Atlantis County", "Mandat"] remoteExec ["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};
 
 			if(speed player > _speedLimit + 70) exitwith {
-				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 1st degree.", 2, 0, 1, 750] remoteexec ["server_fnc_addcriminal",2];
-				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];["server_fnc_sendMail",2];
+				[name player,getplayeruid player, "Atlantis County", "0", "1x Speeding, 1st degree.", 2, 0, 1, 750] remoteexec ["server_fnc_addcriminal",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Atlantis County", "Mandat"] remoteExec ["server_fnc_sendMail",2];["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};			
@@ -65,22 +65,22 @@ if(vehicle player != player && (vehicle player isKindOf "LandVehicle")) then
 		_speedLimit = 140;
 			
 			if(speed player > _speedLimit + 10 && speed player <= _speedLimit + 35) exitwith {
-				[name player,getplayeruid player, "Silver Lake", "0","1x Speeding, 3rd degree.", 2, 0, 1, 250] remoteexec ["server_fnc_addcriminal",2];
-				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];
+				[name player,getplayeruid player, "Atlantis County", "0","1x Speeding, 3rd degree.", 2, 0, 1, 250] remoteexec ["server_fnc_addcriminal",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Atlantis County", "Mandat"] remoteExec ["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};
 
 			if(speed player > _speedLimit + 35 && speed player <= _speedLimit + 70) exitwith {
-				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 2nd degree.", 2, 0, 1, 500] remoteexec ["server_fnc_addcriminal",2];
-				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];
+				[name player,getplayeruid player, "Atlantis County", "0", "1x Speeding, 2nd degree.", 2, 0, 1, 500] remoteexec ["server_fnc_addcriminal",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Atlantis County", "Mandat"] remoteExec ["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};
 			
 			if(speed player > _speedLimit + 70) exitwith {
-				[name player,getplayeruid player, "Silver Lake", "0", "1x Speeding, 1st degree.", 2, 0, 1, 750] remoteexec ["server_fnc_addcriminal",2];
-				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Silver Lake", "Mandat"] remoteExec ["server_fnc_sendMail",2];["server_fnc_sendMail",2];
+				[name player,getplayeruid player, "Atlantis County", "0", "1x Speeding, 1st degree.", 2, 0, 1, 750] remoteexec ["server_fnc_addcriminal",2];
+				[player, "Dostałeś mandat za przekroczenie prędkości. Zapłać go w sądzie lub spodziewaj się konsekwencji prawnych.", "Atlantis County", "Mandat"] remoteExec ["server_fnc_sendMail",2];["server_fnc_sendMail",2];
 				
 				[] spawn client_fnc_speedchecked;
 			};		

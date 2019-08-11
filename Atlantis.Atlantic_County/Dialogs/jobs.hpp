@@ -68,7 +68,7 @@ class job_update {
 		class JobList : client_RscListBox 
 		{
 			idc = 9001;
-			text = "Connecting to Job Search..";
+			text = "Łączenie z wyszukiwaniem pracy..";
 			x = 0.339114 * safezoneW + safezoneX;
 			y = 0.282244 * safezoneH + safezoneY;
 			w = 0.32168 * safezoneW;

@@ -20,7 +20,7 @@ class promotion {
 
 		class Saveranks : client_RscButtonMenu {
 			idc = 1115;
-			text = "Save";
+			text = "Zapisz";
 			onButtonClick = "[] call client_fnc_promote; closedialog 0;";
 			x = 0.4;
 			y = 0.7;

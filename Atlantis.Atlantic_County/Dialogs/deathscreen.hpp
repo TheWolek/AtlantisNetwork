@@ -34,7 +34,7 @@ class DeathScreen
 			idc = 7301;
 			type = 13;
 			style = 0;
-			text = "You are severely injured!";
+			text = "Jesteś poważnie ranny!";
 			size = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			colorText[] = {1, 1, 1, 1.0};
 			class Attributes {

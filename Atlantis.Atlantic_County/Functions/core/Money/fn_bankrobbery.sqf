@@ -44,7 +44,7 @@ if(_type == 1) then {
 	_thedrill attachTo [cursorObject, [2.4, 1.3, 0] ]; 
 	_thedrill setdir 267;
 
-	["Bank of Silver Lake is currently being robbed, keep away!", true] remoteExec ["domsg", -2];
+	["Bank of Atlantis County is currently being robbed, keep away!", true] remoteExec ["domsg", -2];
 	
 	if(count currentCop > 0) then {
 		_nearest = currentCop apply {[player distance getPos _x, _x]};

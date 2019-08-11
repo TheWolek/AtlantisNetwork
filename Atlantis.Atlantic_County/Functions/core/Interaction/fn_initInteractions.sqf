@@ -1417,17 +1417,17 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Wezwij prokuratora", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentDA, format['%1 wezwał prokuratora na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
+		["Wezwij prokuratora", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentDA, format['%1 wezwał prokuratora na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Atlantis County'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
 	],
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Wezwij adwokata", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentPubDefs, format['%1 wezwał adwokata ba komendę. Napisz do niego w celu potwierdzenia.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2];  ", 4]
+		["Wezwij adwokata", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentPubDefs, format['%1 wezwał adwokata ba komendę. Napisz do niego w celu potwierdzenia.',name player], 'Atlantis County'] remoteExec ['server_fnc_sendMessage', 2];  ", 4]
 	],
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Wezwij sędziego", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg; [currentjudges, format['%1 wezwał sędziego na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
+		["Wezwij sędziego", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg; [currentjudges, format['%1 wezwał sędziego na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Atlantis County'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
 	],
 
 	[

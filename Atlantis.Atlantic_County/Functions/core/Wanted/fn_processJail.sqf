@@ -13,7 +13,7 @@ if ( _length > 10 && getpos player distance [8242.13,3019.17,0] < 600 ) exitWith
 if ( _length > 90 ) exitWith { ["Długość musi wynosić maksymalnie 90 lat.", true] spawn domsg; };
 
 [_length, _reason, CurrentCursorTarget,true] remoteExec ["server_fnc_jailsetup",2];
-[_suspect,_suspectID,_officer,_officerID,_reason,0,_evidence,0,_length,"","","Silver Lake", 0] remoteexec ["server_fnc_addcriminal",2];
+[_suspect,_suspectID,_officer,_officerID,_reason,0,_evidence,0,_length,"","","Atlantis County", 0] remoteexec ["server_fnc_addcriminal",2];
 
 imrestrained = false;
 //player setVariable ['surrender', true];
@@ -28,7 +28,7 @@ format["JailLog: %1 (%2) sent %3 (%4) to %5 years and received $%6.", name playe
     params["_length", "_officer"];
     [format["Zostałeś skazany na %1 lat.", _length], true] spawn domsg;
 
-    [getplayeruid player, "Silver Lake", 0] remoteExec ["Server_fnc_wantedRemoveAll",2];
+    [getplayeruid player, "Atlantis County", 0] remoteExec ["Server_fnc_wantedRemoveAll",2];
 
     if(myTickets > 0) then {
         _myCash = (player getVariable "cashinbank");
