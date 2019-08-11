@@ -26,7 +26,7 @@ if(_type == 1) then {
     };
 
     if(1 IN licenseArray) then {
-        _message pushBack "Class 1 Weapons License";
+        _message pushBack "Licencja na broń Klasy 1";
     };
 
     if(2 IN licenseArray) then {

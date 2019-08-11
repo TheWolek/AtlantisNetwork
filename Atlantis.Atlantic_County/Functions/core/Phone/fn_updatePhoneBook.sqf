@@ -325,8 +325,8 @@ disableSerialization;
 
 _allJobs = [
 
-	["Dyspozytro Policji",currentPoliceDispatch],
-	["Dyspozytro EMS",currentMedicDispatch],
+	["Policja",currentPoliceDispatch],
+	["Pogotowie Ratunkowe",currentMedicDispatch],
 	
 	["Ochrona",currentSecurity],
 	["Mechanik",currentRepairmen],

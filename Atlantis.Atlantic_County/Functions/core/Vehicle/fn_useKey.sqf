@@ -11,7 +11,7 @@ if(_veh iskindof "Car" || _veh iskindof "Ship" || _veh iskindof "Air") then {
 			} else {
 				[_veh,0] remoteExecCall ["client_fnc_lock",_veh];
 			};
-			["Unlocked", false] spawn doquickmsg; 
+			["Otworzyłeś pojazd", false] spawn doquickmsg; 
 		} else {
 
 			if(local _veh) then {
@@ -20,7 +20,7 @@ if(_veh iskindof "Car" || _veh iskindof "Ship" || _veh iskindof "Air") then {
 				[_veh,2] remoteExecCall ["client_fnc_lock",_veh];
 			};	
 
-			["Locked", false] spawn doquickmsg; 
+			["Zamknąłeś pojazd", false] spawn doquickmsg; 
 		};
 	};
 };

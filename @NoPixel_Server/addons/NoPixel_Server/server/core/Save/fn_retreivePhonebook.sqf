@@ -2,8 +2,8 @@ _player = _this select 0;
 
 _information = [
 
-	["Dyspozytro Policji",currentPoliceDispatch],
-	["Dyspozytro EMS",currentMedicDispatch],
+	["Policja",currentPoliceDispatch],
+	["Pogotowie Ratunkowe",currentMedicDispatch],
 	["Ochrona",currentSecurity],
 	["Mechanik",currentRepairmen],
 
