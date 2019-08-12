@@ -75,11 +75,11 @@ if(17 IN _licenses) then {
 };
 
 if(18 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Boating License </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Patent motorowodny </t> <br/> ",_message];
 };
 
 if(19 IN _licenses) then {
-	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Patent motorowodny </t> <br/> ",_message];
+	_message = format ["%1 <img size='1' image='cg_mission_files\id_icons\license.paa'/> <t color='#C80000'> Członkostwo kasyna </t> <br/> ",_message];
 };
 
 if(20 IN _licenses) then {

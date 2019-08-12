@@ -24,7 +24,7 @@ _n = 0;
 
 
 		player removeitem (_oreArray select _n);
-		if(3 in licenseArray) then {
+		if(2 in licenseArray) then {
 			_random = round (random(4)) + 2;
 			for "_i" from 0 to _random do {player additem (_barArray select _n);};
 		} else {
@@ -40,6 +40,9 @@ _n = 0;
 	_n = _n + 1;
 
 } foreach _oreArray;
+if(! (2 in licenseArray)) then {
+	["Nie wytworzyłeś więcej sztabek, ponieważ nie posiadasz licencji górnika. Możesz ją zakupić w CentreLinku.",true] spawn domsg;
+};
 
 if(_localProtection != globalProtection) exitwith { globalProtection = 0; };
 
