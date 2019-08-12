@@ -497,6 +497,20 @@ switch (_code) do
 			};
 		};
   	};
+
+	case 74:
+	{
+		if (_ctrlKey && _shift && myjob IN ["Cop","Ems","DA","DOJ"] && !imRestrained) then {
+			if ("ItemGPS" in assignedItems player) then {
+				[] spawn { 	
+					playSound "panicbutton";
+					sleep 2;
+					playSound "dpanic";
+					[player,name player,getPos player] remoteExec ["client_fnc_recivePB",-2];
+				};
+			} else {["Aby uruchomić panic button musisz mieć GPS!", false] spawn domsg; };
+		};
+	};
 };
 
 _handle;

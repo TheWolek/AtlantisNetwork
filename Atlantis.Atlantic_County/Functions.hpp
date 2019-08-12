@@ -515,6 +515,7 @@ class CfgFunctions
 		class Misc
 		{
 			file = "Functions\core\Misc";
+			class recivePB {};
 			class jumpscript {};
 			class giveLicense {};
 			class grabBody {};
