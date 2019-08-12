@@ -6,67 +6,72 @@
 disableSerialization;
 private["_male","_female","_dummy"];
 
-client_kcCamera  = "CAMERA" camCreate [7613.42,1927.02,61.3689];
+//client_kcCamera  = "CAMERA" camCreate [7613.42,1927.02,61.3689];
+client_kcCamera  = "CAMERA" camCreate [3272.97,3389.38,21.4395];
 showCinemaBorder true;   
 client_kcCamera cameraEffect ["EXTERNAL", "BACK"];                             
-client_kcCamera camSetPos [7551.71,2121.63,0.00132942];  
+client_kcCamera camSetPos [3269.83,3452.69,2.83995];  
 client_kcCamera camSetFOV 0.85;  
 
 lastsync = time - 3;
 
 charselection = true;
-playMusic  "npIntro";
-uisleep 15;
+//playMusic  "npIntro";
+uisleep 0.2;
 
 [
 	[
-		["Jest rok 2053.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],	
-		["Przybyłeś do Atlantis County.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"]
-	]
+		["Jest rok 2053.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",7],	
+		["Przybyłeś do Atlantis County.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",7]
+	],
+	0, 0.75
 ] spawn BIS_fnc_typeText;
 
 
-_dummy = "C_man_polo_2_F" createVehicleLocal [7751.45,2128.59,0.00131226];
+
+_dummy = "C_man_polo_2_F" createVehicleLocal [3259.66,3509.55,0.00143433];
 _dummy hideobject true;
-_dummy setpos [7551.45,2128.59,0.00131226];
-_dummy setdir 162;
+_dummy setpos [3269.4,3463.97,0.00143433];
+_dummy setdir 174;
 _dummy setFace (face player);
 client_kcCamera camSettarget _dummy; 
-client_kcCamera camCommit 120;
+client_kcCamera camCommit 30;
 
 uisleep 10;
 
 
 _script = [
 	[
-		["Teraz pora na wybranie swojej ścieżki.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>"],
-		["Stwórz swoje zycie!","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>"]
-	]
+		["Teraz pora na wybranie swojej ścieżki.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",7],
+		["Stwórz swoje nowe życie","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>",7]
+	],
+	0, 0.75
 ] spawn BIS_fnc_typeText;
 
 waitUntil { scriptDone _script };
 
 
-_male = "C_man_polo_2_F" createVehicleLocal [7550.1,2128.08,0.00133705];
-removeuniform _male;
+_male = "C_man_polo_2_F" createVehicleLocal [3270.4,3463.81,0.00143433];
+removeuniform w;
 _male allowdamage false;
 _male forceAdduniform "U_C_Poloshirt_stripped";
-_male setdir 160;  
-_male setpos [7550.1,2128.08,0.00133705];
+_male setdir 174;  
+_male setpos [3270.4,3463.81,0.00143433];
 
-_female = "C_man_polo_2_F" createVehicleLocal [7552.45,2128.59,0.00131226];
+_female = "C_man_polo_2_F" createVehicleLocal [3268,3463.58,0.00143433];
 _female allowdamage false;
 _female forceAdduniform "female_default_1";
-_female setdir 158;  
-_female setpos [7552.45,2128.59,0.00131226];
+_female setdir 174;  
+_female setpos [3268,3463.58,0.00143433];
 _female setFace (face player);
-uisleep 15;
+uisleep 5;
 
 _script = [
 	[
-		["Wybierz swoją płeć","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
-		["Może ona być zmieniona później, ale może wymagać operacji.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
-	]
+		["Wybierz swoją płeć","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",7],
+		["Może ona być zmieniona później, ale może wymagać operacji.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",7]
+	],
+	0, 0.75
 ] spawn BIS_fnc_typeText;
 
 
@@ -81,18 +86,20 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Witaj na atlantisnetwork.pl!","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
-		["Używaj przycisku windows w celu interakcji ze wszystkim.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
-	]
+		["Witaj na atlantisnetwork.pl!","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",7],
+		["Używaj przycisku windows w celu interakcji ze wszystkim.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",7]
+	],
+	0, 0.75
 ] spawn BIS_fnc_typeText;
 
 waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Zacznij od interakcji z przyczepą.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>"],
-		["Masz tam listy. Baw się dobrze.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>"]
-	]
+		["Zacznij od interakcji z przyczepą.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",7],
+		["Masz tam listy. Baw się dobrze.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",7]
+	],
+	0, 0.75
 ] spawn BIS_fnc_typeText;
 
 removeAllItems player;
