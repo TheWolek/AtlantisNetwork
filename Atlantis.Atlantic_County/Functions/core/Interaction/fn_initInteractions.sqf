@@ -1036,6 +1036,11 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
+		["(getPlayerUID player IN tempgangmoro) && position player [2421.72,4169.12,0.00143433] < 20"],
+		["Wyposażenie gangu", "closedialog 0; createdialog 'gang_equipment'; ['gang_gunstore'] spawn client_fnc_LoadStore;",3]
+	],
+
+	[
 		["myjob == 'Ems' && typeof cursorobject == 'land_POP_Hospital' && !imrestrained"],
 		["Wyposażenie EMS", "closedialog 0; createdialog 'ems_equipment'; ['ems_uniformstore'] spawn client_fnc_LoadStore;",3]
 	],

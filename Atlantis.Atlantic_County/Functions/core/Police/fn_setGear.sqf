@@ -57,11 +57,11 @@ if(myjob == "Cop") then {
 
 	// komediant
 	if(_level == 12) then { 
-		player forceAddUniform "asp_chief12";		
+		player forceAddUniform "dbo_PD_Chief";		
 	};	
 	//zastępca
 	if(_level == 11) then { 
-		player forceAddUniform "asp_deputychief11";
+		player forceAddUniform "dbo_PD_Deputy";
 	};	
 
 	// patrol bureau
@@ -103,86 +103,86 @@ if(myjob == "Cop") then {
 
 		if(female) then { 
 			if(_level == 1) then {
-				player forceAddUniform "asp_cadet1";
+				player forceAddUniform "dbo_PD_Cadet";
 				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 2) then {				
-				player forceAddUniform "asp_trooper2";
+				player forceAddUniform "dbo_PD_Trooper";
 				player addHeadgear "Campaign_Hat_Light"; 
 			};				
 			if(_level == 3) then {				
-				player forceadduniform "asp_seniortrooper3"; 
+				player forceadduniform "dbo_PD_Senior"; 
 				player addHeadgear "Campaign_Hat_Light";  
 			};
 			if(_level == 4) then {				
-				player forceadduniform "asp_mastertrooper4";
+				player forceadduniform "dbo_PD_Master";
 				player addHeadgear "Campaign_Hat_Light";
 			};
 			if(_level == 5) then {				
-				player forceadduniform "asp_coropral";
+				player forceadduniform "dbo_PD_Corporal";
 				player addHeadgear "Campaign_Hat_Light";
 			};
 			if(_level == 6) then {
-				player forceadduniform "asp_sergeant6"; 
+				player forceadduniform "dbo_PD_Sergeant"; 
 				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 7) then {				
-				player forceAddUniform "asp_lieutenant7";
+				player forceAddUniform "dbo_PD_Lieutenant";
 				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 8) then {
-				player forceAddUniform "asp_colonel8";
+				player forceAddUniform "dbo_PD_Captain";
 				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 9) then {
-				player forceAddUniform "asp_captain9";
+				player forceAddUniform "dbo_PD_Inspector";
 				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 10) then {
-				player forceAddUniform "asp_major10";
+				player forceAddUniform "dbo_PD_Mayor";
 				player addHeadgear "Campaign_Hat_Light"; 
 			};
 
 		} else { 
 			switch (_level) do {
 				case 1: {
-					player forceAddUniform "asp_cadet1";
+					player forceAddUniform "dbo_PD_Cadet";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 2: {
-					player forceAddUniform "asp_trooper2";
+					player forceAddUniform "dbo_PD_Trooper";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 3: {
-					player forceAddUniform "asp_seniortrooper3";
+					player forceAddUniform "dbo_PD_Senior";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 4: {
-					player forceAddUniform "asp_mastertrooper4";
+					player forceAddUniform "dbo_PD_Master";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 5: {
-					player forceAddUniform "asp_corporal5";
+					player forceAddUniform "dbo_PD_Corporal";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 6: {
-					player forceAddUniform "asp_sergeant6";
+					player forceAddUniform "dbo_PD_Sergeant";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 7: {
-					player forceAddUniform "asp_lieutenant7";
+					player forceAddUniform "dbo_PD_Lieutenant";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 8: {
-					player forceAddUniform "asp_colonel8";
+					player forceAddUniform "dbo_PD_Captain";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 9: {
-					player forceAddUniform "asp_captain9";
+					player forceAddUniform "dbo_PD_Inspector";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 				case 10: {
-					player forceAddUniform "asp_major10";
+					player forceAddUniform "dbo_PD_Mayor";
 					player addHeadgear "Campaign_Hat_Light";
 				};
 			};
@@ -358,86 +358,86 @@ if(myjob == "Cop") then {
 		if(female) then { 
 			
 			if(_level == 1) then {
-				player forceAddUniform "asp_ia13";
+				player forceAddUniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";		
 			};
 			if(_level == 2) then {				
-				player forceAddUniform "asp_ia13";
+				player forceAddUniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";
 			};				
 			if(_level == 3) then {	
-				player forceAddUniform "asp_ia13";
+				player forceAddUniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 4) then {		
-				player forceAddUniform "asp_ia13";
+				player forceAddUniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 5) then {	
-				player forceAddUniform "asp_ia13";
+				player forceAddUniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 6) then {
-				player forceadduniform "asp_ia13";
+				player forceadduniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 7) then {				
-				player forceAddUniform "asp_ia13";
+				player forceAddUniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 8) then {
-				player forceAddUniform "asp_ia13";
+				player forceAddUniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 9) then {				
-				player forceAddUniform "asp_ia13";
+				player forceAddUniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 10) then {
-				player forceAddUniform "asp_ia13";
+				player forceAddUniform "dbo_AIA_Probie";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
 
 		} else { 
 			switch (_level) do {
 				case 1: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 2: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 3: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 4: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 5: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 6: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 7: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 8: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 9: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 				case 10: {
-					player forceAddUniform "asp_ia13";
+					player forceAddUniform "dbo_AIA_Probie";
 					player addHeadgear "Campaign_Hat_Dark";
 				};
 			};
@@ -966,6 +966,7 @@ if(myjob == "Legal") then {
 	format["GearLog: %1 (%2) took LEGAL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 
 	if(_level >= 9) then { player forceAddUniform "KAEL_SUITS_BR_Judge"; };
+	if(_level < 9) then { player forceAddUniform "dbo_DOJ_Officer"; };
 
 };
 

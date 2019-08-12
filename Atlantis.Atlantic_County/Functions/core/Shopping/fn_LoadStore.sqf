@@ -810,19 +810,24 @@ if(_condition == "police_uniformstore") then {
 	_police_uniformstore = [
 		["EF_HMP_1",nil,1,3,1],
 		["EF_HMP_2",nil,1,3,1],
-		["asp_cadet1",nil,1,3,1],
-		["asp_trooper2",nil,1,3,1],
-		["asp_seniortrooper3",nil,1,3,1],
-		["asp_mastertrooper4",nil,1,3,1],
-		["asp_corporal5",nil,1,3,1],
-		["asp_sergeant6",nil,1,3,1],
-		["asp_lieutenant7",nil,1,3,1],
-		["asp_colonel8",nil,1,3,1],
-		["asp_captain9",nil,1,3,1],
-		["asp_major10",nil,1,3,1],
+		["dbo_PD_Cadet",nil,1,3,1],
+		["dbo_PD_Trooper",nil,1,3,1],
+		["dbo_PD_Senior",nil,1,3,1],
+		["dbo_PD_Master",nil,1,3,1],
+		["dbo_PD_Corporal",nil,1,3,1],
+		["dbo_PD_Sergeant",nil,1,3,1],
+		["dbo_PD_Lieutenant",nil,1,3,1],
+		["dbo_PD_Lieutenant_fto",nil,1,3,1],
+		["dbo_PD_Captain",nil,1,3,1],
+		["dbo_PD_Captain_fto",nil,1,3,1],
+		["dbo_PD_Inspector",nil,1,3,1],
+		["dbo_PD_Mayor",nil,1,3,1],
 		["asp_deputychief11",nil,1,3,1],
 		["asp_chief12",nil,1,3,1],
-		["asp_ia13",nil,1,3,1],
+		["dbo_AIA_Probie",nil,1,3,1],
+		["dbo_AIA_Inspector",nil,1,3,1],
+		["dbo_AIA_Deputy",nil,1,3,1],
+		["dbo_AIA_Chief",nil,1,3,1],
 		["dtdev_swat_1uni",nil,1,3,1],
 		["dtdev_swat_2uni",nil,1,3,1]
 	];
@@ -1264,24 +1269,10 @@ if(_condition == "ems_misc") then {
 if(_condition == "gang_gunstore") then {
 
 	_gunStorePistols = [
-
-		["RH_m9",nil,2500,1],
-        ["RH_g17",nil,3000,1],
-        ["RH_uspm",nil,4000,1],
-		["RH_kimber_nw",nil,7500,1],
-		["RH_tec9",nil,11000,1],
-        ["RH_bull",nil,13000,1],
-        ["RH_Deaglem",nil,15000,1],
-        ["hlc_smg_MP5N",nil,17000,1],
-        ["RH_m4",nil,40000,1],
-		["RH_ar10",nil,55000,1],
-		["hlc_rifle_g3a3",nil,60000,1],
-		["hlc_rifle_M1903A1_unertl",nil,90000,1],
-		["arifle_mas_ww2_mos",nil,160000,1],
-		["optic_LRPS",nil,5000,3],		
-		["arifle_mas_ww2_ppsh",nil,20000,1],
-		["arifle_mas_ww2_tommy",nil,16000,1],
-		["arifle_mas_ww2_sten",nil,15000,1]
+		["RH_g18",nil,8000,1],
+		["RH_muzi",nil,16000,1],
+		["RH_Deagles",nil,30000,1],
+		["RH_kimber_nw",nil,5000,1]
 
 	];
 
@@ -1295,9 +1286,8 @@ if(_condition == "gang_gunstore") then {
 if(_condition == "gang_veststore") then {
 
 	_gang_veststoree = [
-        ["TRYK_V_ArmorVest_Delta",nil,8500,3,3],
-		["TAC_V_tacv1_BK",nil,4500,3,3],
-		["EF_SHF_BK",nil,700,3,3]
+        ["V_TacVest_camo",nil,30000,3,3],
+		["V_Press_F",nil,40000,3,3]
 
 
 
@@ -1312,14 +1302,7 @@ if(_condition == "gang_veststore") then {
 if(_condition == "gang_uniformstore") then {
 
 	_gang_uniformstore = [
-		["vvv_hazmat",nil,4500,3,1],
-		["vvv_traje_mafioso_F_1",nil,1600,3,1],
-        ["vvv_traje_ejecutivo_1",nil,1400,3,1],
-		["vvv_character_funcionario_1",nil,2000,3,1],
-		["vvv_traje_jackoy5",nil,1200,3,1],
-		["Gsg9_AirUniform_black",nil,900,3,1],
-		["cg_invisbp",nil,9000,4,2],
-		["B_Bergen_dgtl_F",nil,10000,4,2]
+		["TRYK_U_B_OD_OD_CombatUniform",nil,500,3,1]
 
 	];
 
@@ -1333,18 +1316,7 @@ if(_condition == "gang_uniformstore") then {
 if(_condition == "gang_glassesstore") then {
 
 	_gang_glassesstore = [
-        ["G_Bandanna_tan",nil,1,3,4],
-        ["G_Bandanna_blk",nil,1,3,4],
-        ["G_bandanna_aviator",nil,1,3,4],
-        ["G_Bandanna_oli",nil,1,3,4],
-        ["G_Balaclava_blk",nil,1,3,4],
-        ["G_Balaclava_TI_blk_F",nil,1,3,4],
-        ["Balaclava_Black_Gsg9",nil,1,3,4],
-        ["G_Aviator",nil,1,3,4],
-        ["G_AirPurifyingRespirator_01_F",nil,1,3,4],
-        ["G_WirelessEarpiece_F",nil,1,3,4],
-        ["G_Spectacles_Tinted",nil,1,3,4]
-
+        ["G_Balaclava_TI_blk_F",nil,100,3,4]
 
 	];
 
@@ -1356,9 +1328,7 @@ if(_condition == "gang_glassesstore") then {
 if(_condition == "gang_headgearstore") then {
 
 	_gang_headgearstore = [
-		["H_Hat_brown",nil,300,3,5],
-		["H_Hat_grey",nil,300,3,5],
-		["H_Hat_tan",nil,300,3,5]
+		["TAC_SF10H",nil,1000,3,5],
 	];
 
 	{
@@ -1369,12 +1339,7 @@ if(_condition == "gang_headgearstore") then {
 if(_condition == "gang_misc") then {
 
 	_gang_misc = [
-		["NP_drillitem",nil,20000,3],
-		["CG_HackingTool",nil,9000,3],
-		["CG_Lockpick",nil,1000,3],
-		["NP_DrugTable",nil,6500,3],
-		["DemoCharge_Remote_Mag",nil,60000,3],
- 		["RH_m9qd",nil,1900,3]
+		["TAC_LBT_LEGAB2_OD",nil,300,3]
 
 
 	];
