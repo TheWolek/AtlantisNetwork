@@ -273,7 +273,6 @@ class CfgFunctions
 			class sharehousefinish {};
 
 			class upgradeHouse {};
-			class playerselect {};
 			class playerselectfinish {};
 			class updatePrices {};
 			class clothesupdate2 {};
@@ -457,6 +456,7 @@ class CfgFunctions
 			class miscVariables {};
 			class loadingscreen {};
 			class karmaPhoneInit {};
+			class playerselect {};
 		};
 
 		class Interaction

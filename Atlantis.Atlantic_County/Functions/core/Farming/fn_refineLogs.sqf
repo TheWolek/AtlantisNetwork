@@ -33,6 +33,9 @@ if(vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) 
 		["Przetwarzasz drewno, stój w miejscu!", true] spawn domsg;
 	};
 } forEach attachedObjects vehspawned;
+if(! (3 in licenseArray)) then {
+	["Nie wytworzyłeś więcej drewna, ponieważ nie posiadasz licencji drwala. Możesz ją zakupić w CentreLinku.",true] spawn domsg;
+};
 ["Przetworzone drewno zostało włożone do twojego plecaka", true] spawn domsg;  
 totalLogs = 0;
 

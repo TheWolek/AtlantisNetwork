@@ -8,12 +8,12 @@ if(_type == 0) then {
         ["Prawo jazdy kat D",700,21],
         ["Patent motorowodny",3850,18],
         ["Licencja pilota",7500,6],
-        ["Licencja na broń klasy 1",6250,1]
+        ["Licencja na broń klasy 1",6250,1],
         //["Class 2 Weapons",125000,22],
         //["Oil Trade",50000,7],
         //["Fishing",3850,4]        
-        ["Mining",700,2],
-        ["Logging",700,3]
+        ["Licencja Górnika",700,2],
+        ["Licencja Drwala",700,3]
 
     ];
 
