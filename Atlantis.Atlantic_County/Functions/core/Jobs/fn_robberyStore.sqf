@@ -5,7 +5,7 @@ _amount = 0;
 
 if(count currentcop == 0) exitwith { ["Bez policji nie ma zabawy!", true] spawn domsg; };
 
-if(_shop getVariable["robbing",FALSE]) exitwith { ["Ktoś napad na ten sklep!", true] spawn domsg; }; 
+if(_shop getVariable["robbing",FALSE]) exitwith { ["Ktoś napada na ten sklep!", true] spawn domsg; }; 
 
 if(isNil "robbedStores2") then { robbedstores2 = []; rs2modifier = 0; };
 

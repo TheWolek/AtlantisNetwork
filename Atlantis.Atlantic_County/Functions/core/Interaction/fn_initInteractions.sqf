@@ -486,7 +486,7 @@ NoPixel_InteractionMenuItems = [
 		[" !imrestrained && !(player getVariable ['surrender', false]) "],
 		["Ulecz się", " [player] spawn client_fnc_medicUpdater; ",1]
 	],
-
+/*
 	[
 		["bedactive"],
 		["Upuść łóżko", "[] spawn client_fnc_dropbed;",1]
@@ -506,7 +506,7 @@ NoPixel_InteractionMenuItems = [
 		[" typeof cursorobject == 'land_POP_Hospital' && myjob == 'EMS'"],
 		["Łóżko", "[false] spawn client_fnc_spawnbed;",1]
 	],
-
+*/
 
 	[
 		[" typeof cursorobject == 'land_POP_Hospital'"],
@@ -639,7 +639,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" (CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'Ship') && player distance CursorTarget < 11 && CursorTarget in current_cars && !imrestrained && !attachedcar"],
-		["Pophnij", "[] spawn Client_fnc_pushveh",2]
+		["Popchnij", "[] spawn Client_fnc_pushveh",2]
 	],
 	
 	[
@@ -702,7 +702,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" !isNil{cursorTarget getVariable 'evidenceInformation'} && myJob == 'Cop' && player IN currentDetectives"],
-		["Zbierz dowody", "['Zbieram  dowody',5,client_fnc_evidence,0,'AinvPknlMstpSnonWnonDnon_medic_1',[cursorobject],'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask; ",2]	
+		["Zbierz dowody", "['Zbieram  dowody',30,client_fnc_evidence,0,'AinvPknlMstpSnonWnonDnon_medic_1',[cursorobject],'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask; ",2]	
 	],
 
 	[
@@ -1036,6 +1036,11 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
+		["myjob == 'Ems' && typeof cursorobject == 'land_POP_Hospital' && !imrestrained"],
+		["Wyposażenie EMS", "closedialog 0; createdialog 'ems_equipment'; ['ems_uniformstore'] spawn client_fnc_LoadStore;",3]
+	],
+
+	[
 		["myjob == 'COP' && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters'] && !imrestrained && player distance [1355.1,997.385,4.41015] <8 && player in currentMarshals"],
 		["Zielona naszywka", "[player,'usms_sog_patch_g'] call BIS_fnc_setUnitInsignia;",3]
 	],
@@ -1152,7 +1157,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["(typeof CursorTarget IN ['Land_Centrelink','Land_CommonwealthBank','Land_Bank_DED_House_01_F'] || str CursorObject find 'mcl_atm' > -1) && ( Mayor || Psenate || (player getVariable 'legal' == 10) ) && !imrestrained"],
+		["(typeof CursorTarget IN ['Land_Centrelink','Land_CommonwealthBank','Land_Bank_DED_House_01_F'] || str CursorObject find 'mcl_atm' > -1) && ( Mayor || Psenate || (player getVariable 'legal' == 10) ) && !imrestrained && myJob IN ['Legal']"],
 		["Govt Bank", "[player] remoteExec['Client_fnc_openGovtATM',2]",4]
 	],
 
@@ -1412,17 +1417,17 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Wezwij prokuratora", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentDA, format['%1 wezwał prokuratora na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
+		["Wezwij prokuratora", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentDA, format['%1 wezwał prokuratora na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Atlantis County'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
 	],
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Wezwij adwokata", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentPubDefs, format['%1 wezwał adwokata ba komendę. Napisz do niego w celu potwierdzenia.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2];  ", 4]
+		["Wezwij adwokata", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg;  [currentPubDefs, format['%1 wezwał adwokata ba komendę. Napisz do niego w celu potwierdzenia.',name player], 'Atlantis County'] remoteExec ['server_fnc_sendMessage', 2];  ", 4]
 	],
 
 	[
 		[" myJob IN ['Cop'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']"],
-		["Wezwij sędziego", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg; [currentjudges, format['%1 wezwał sędziego na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Silver Lake'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
+		["Wezwij sędziego", " ['Wezwanie wysłane pomyślnie.', true] spawn domsg; [currentjudges, format['%1 wezwał sędziego na komendę. Napisz do niego w celu potwierdzenia.',name player], 'Atlantis County'] remoteExec ['server_fnc_sendMessage', 2]; ", 4]
 	],
 
 	[

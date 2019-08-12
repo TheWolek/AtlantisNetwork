@@ -247,10 +247,10 @@ if (_booli) then {
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 
 	/*
-	_insertstr = format ["insertMail:%1:%2:%3:%4", format["Hello %1. As you may have already known, Silver Lake is currently at a war with the United States of America ever since we have seceded. Thus, we regret to announce that American spies infiltrated our country and destroyed much of our data including text messages, any stored emails, and bank accounts. As an apology, we have credited all citizens $500,000.00. We are trying to negotiate peace but the belligerent country has no intent to cooperate. There have been rumors of destruction of our newly formed nation. We urge you to remain calm at all times and to remain civil as the United States Navy is occupying our Harbors. Thank you and good luck. - Mayor.",name _player], "Announcement", "Silver Lake", getplayeruid _player];
+	_insertstr = format ["insertMail:%1:%2:%3:%4", format["Hello %1. As you may have already known, Atlantis County is currently at a war with the United States of America ever since we have seceded. Thus, we regret to announce that American spies infiltrated our country and destroyed much of our data including text messages, any stored emails, and bank accounts. As an apology, we have credited all citizens $500,000.00. We are trying to negotiate peace but the belligerent country has no intent to cooperate. There have been rumors of destruction of our newly formed nation. We urge you to remain calm at all times and to remain civil as the United States Navy is occupying our Harbors. Thank you and good luck. - Mayor.",name _player], "Announcement", "Atlantis County", getplayeruid _player];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 
-	_insertstr = format ["insertMessage:%1:%2:%3:%4", "Hi, this is your first text message, welcome to the Silver Lake Verizon network!", format ["SMS from %1", name _player], "Verizon", getplayeruid _player];
+	_insertstr = format ["insertMessage:%1:%2:%3:%4", "Hi, this is your first text message, welcome to the Atlantis County Verizon network!", format ["SMS from %1", name _player], "Verizon", getplayeruid _player];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 	*/
 

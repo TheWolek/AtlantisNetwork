@@ -804,7 +804,7 @@ if(myJob == "EMS") then {
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Oase_ID_Card_Police";
+	//	player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
@@ -835,7 +835,7 @@ if(myJob == "EMS") then {
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Oase_ID_Card_Police";
+		//player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 

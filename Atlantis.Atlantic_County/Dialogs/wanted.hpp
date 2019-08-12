@@ -36,7 +36,7 @@ class yn_Menu {
 		class YESOption : RSCButton {
 
 			idc = 9995;
-			text = "YES";
+			text = "TAK";
 			onButtonClick = "closedialog 0; JuryDuty = true;"; 
 			x = 0.40029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
@@ -48,7 +48,7 @@ class yn_Menu {
 		class noOption : RSCButton {
 
 			idc = 9996;
-			text = "NO";
+			text = "NIE";
 			onButtonClick = "closedialog 0; JuryDuty = false;";
 			x = 0.511518 * safezoneW + safezoneX;
 			y = 0.706043 * safezoneH + safezoneY;
@@ -106,7 +106,7 @@ class licenseCheck {
 
 		class PurchaseOption : RSCButton {
 			idc = 9995;
-			text = "Search";
+			text = "Szukaj";
 			onButtonClick = "[] spawn client_fnc_searchLicense;"; 
 			x = 0.40029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
@@ -116,7 +116,7 @@ class licenseCheck {
 
 		class CloseOption : RSCButton {
 			idc = 9996;
-			text = "Close";
+			text = "Zamknij";
 			onButtonClick = "closedialog 0;";
 			x = 0.511518 * safezoneW + safezoneX;
 			y = 0.706043 * safezoneH + safezoneY;
@@ -318,7 +318,7 @@ class wanted {
 
 		class ViewHome : client_RscButtonMenu { 
 			idc = 1145;
-			text = "Lokalizacja domu";
+			text = "Znajdź dom";
 			onButtonClick = "[] spawn client_fnc_viewhouse;";
 			x = 0.406091 * safezoneW + safezoneX;
 			y = 0.73892 * safezoneH + safezoneY;
@@ -328,7 +328,7 @@ class wanted {
 
 		class ViewShop : client_RscButtonMenu { 
 			idc = 1146;
-			text = "Lokalizacja sklepu";
+			text = "Znajdź sklep";
 			onButtonClick = "[] spawn client_fnc_viewshop;";
 			x = 0.506084 * safezoneW + safezoneX;
 			y = 0.73892 * safezoneH + safezoneY;
@@ -338,7 +338,7 @@ class wanted {
 
 		class ViewOffice : client_RscButtonMenu { 
 			idc = 1147;
-			text = "Lokalizacja biura";
+			text = "Znajdź biuro";
 			onButtonClick = "[] spawn client_fnc_viewoffice;";
 			x = 0.6061161 * safezoneW + safezoneX;
 			y = 0.73892 * safezoneH + safezoneY;

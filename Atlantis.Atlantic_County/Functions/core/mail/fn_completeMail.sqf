@@ -6,4 +6,4 @@ mail = awaitingmail;
 
 awaitingmail = [];
 
-[player,"Witaj! Masz oczekujące listy. Możesz je odebrac na poczcie lub w domu.","Silver Lake"] remoteExec ["server_fnc_sendMessage",2];
+[player,"Witaj! Masz oczekujące listy. Możesz je odebrac na poczcie lub w domu.","Atlantis County"] remoteExec ["server_fnc_sendMessage",2];

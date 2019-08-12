@@ -94,6 +94,7 @@ if (_jobType == "security") exitwith {
 	//[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["dtdev_vest_security",1];
+	vehspawned addItemCargo ["vvv_character_agente_473",1];
 	["Przedmioty są w pojeździe, użyj ich.", true] spawn domsg;
 };
 

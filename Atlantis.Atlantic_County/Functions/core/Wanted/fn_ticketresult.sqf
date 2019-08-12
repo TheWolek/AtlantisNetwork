@@ -14,7 +14,7 @@ if!(_cashCheck) exitwith { [format["%1 - You do not have enough money to pay for
 
 [_status, name player, getplayeruid player] remoteExec ["Server_fnc_wantedRemove",2];
 //[_status select 0] remoteExec ["Server_fnc_acceptWarrant",2];
-[_status select 1, "Silver Lake", 0] remoteExec ["Server_fnc_wantedRemoveAll",2];
+[_status select 1, "Atlantis County", 0] remoteExec ["Server_fnc_wantedRemoveAll",2];
 
 [_status select 4] call Client_fnc_removeCash;
 ["govtBank", _status select 4, "Add"] remoteExec["server_fnc_setValue",2];
