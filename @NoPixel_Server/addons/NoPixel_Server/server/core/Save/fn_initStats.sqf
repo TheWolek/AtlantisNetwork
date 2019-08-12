@@ -217,9 +217,9 @@ if (_booli) then {
 
 	_name = name _player;
 	_items = getunitloadout _player;
-	_cash = 100;
+	_cash = 0;
 	//_bank = 1500;
-	_bank = 2000;
+	_bank = 7500;
 	_cop = 0;
 	_ems = 0;
 	_mafia = 0;
