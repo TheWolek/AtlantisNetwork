@@ -14,7 +14,7 @@ if(_shop IN robbedstores2) exitwith { ["W tym sklepie nie ma więcej pieniędzy!
 _shop setvariable ["robbing",true,true];
 //rs2modifier = rs2modifier + 1;
 //if(rs2modifier > count currentcop) then { rs2modifier = count currentcop; };
-if(count currnetcop > 4) then {
+if(count currentcop > 4) then {
 	rs2modifier = rs2modifier + 300;
 } else {
 	rs2modifier = rs2modifier + 100;
@@ -47,7 +47,7 @@ while{true} do {
 //	["Add","Karma",random(3),"Stress"] call client_fnc_sustain;
 	_counter = _counter + 0.1;
 	//if((_distpolice - _counter) < 0.2) exitwith {};
-	if(_counter => 30) exitWith {}; //5 min 5*60*0.1
+	if(_counter >= 30) exitWith {}; //5 min 5*60*0.1
 };
 
 robbedstores2 pushback _shop; 

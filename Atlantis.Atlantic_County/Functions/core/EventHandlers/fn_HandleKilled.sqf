@@ -177,7 +177,7 @@ if(_fuck != _you) then {
 
 
 		
-	};
+	
 } else {
 	shooting_death = false;
 	
@@ -199,7 +199,7 @@ _unit spawn
 {
 	private["_RespawnBtn","_Timer"];
 	disableSerialization;
-	maxTime = time + (client_respawn_timer * 60);
+	//maxTime = time + (client_respawn_timer * 60);
 	waitUntil {round(maxTime - time) <= 0 OR isNull _this};
 	createdialog "deathscreen";
 	_Timer = ((findDisplay 7300) displayCtrl 7301);

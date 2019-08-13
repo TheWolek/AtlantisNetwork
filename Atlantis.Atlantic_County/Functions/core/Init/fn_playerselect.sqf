@@ -35,7 +35,7 @@ _dummy setpos [3269.4,3463.97,0.00143433];
 _dummy setdir 174;
 _dummy setFace (face player);
 client_kcCamera camSettarget _dummy; 
-client_kcCamera camCommit 30;
+client_kcCamera camCommit 60;
 
 uisleep 10;
 
@@ -43,7 +43,7 @@ uisleep 10;
 _script = [
 	[
 		["Stwórz od nowa swoje życie!","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",5],
-		["Poznaj gagsterską stronę tego stanu, zarabiaj gruby szmal robiąc nielegalne rzeczy,","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>",5],
+		["Poznaj gagsterską stronę tego stanu, zarabiaj gruby szmal robiąc nielegalne rzeczy,","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t><br/>",5],
 		["Albo stań po stronie prawa i zacznij pracę jako policjant, ratownik lub prawnik!","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>",8]
 	],
 	0, 0.75
@@ -98,7 +98,7 @@ waitUntil { scriptDone _script };
 _script = [
 	[
 		["Zacznij od interakcji z przyczepą. Masz tam listy, garaż, schowek i crafting.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",5],
-		["Zajrzyj do skrzynki na listy, znajdziesz tam krótki opis gry.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",5],
+		["Zajrzyj do skrzynki na listy, znajdziesz tam krótki opis gry.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t><br/>",5],
 		["W razie problemów nasza administracja chętnie ci pomoże. Baw się dobrze!","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",10]
 	],
 	0, 0.75

@@ -308,14 +308,26 @@ if(_condition == "clothing") then {
 if(_condition == "backpack") then {
 
 	_clothing = [
-		["EF_FBAG_BK",nil,100,4,2],
-		["EF_FBAG_HB_BK",nil,100,4,2],
-		["EF_FBAG_SL_BK",nil,100,4,2],
-		["TRYK_B_Alicepack",nil,100,4,2],
-		["TRYK_B_Coyotebackpack",nil,100,4,2],
-		["TRYK_B_Coyotebackpack_OD",nil,100,4,2],
-		["TRYK_B_Carryall_blk",nil,100,4,2],
-		["B_Messenger_Black_f",nil,100,4,2]
+		["EF_SQBAG_BK",nil,2000,4,2],
+		["koilbatman_1",nil,1500,4,2],
+		["B_Messenger_Black_f",nil,1000,4,2],
+		["TRYK_B_Coyotebackpack_OD",nil,2000,4,2],
+		["koilbp_10",nil,1000,4,2],
+		["koilbp_11",nil,2000,4,2],
+		["koilbp_12",nil,1500,4,2],
+		["koileagle",nil,2000,4,2],
+		["koileminem_1",nil,2000,4,2],
+		["koilbp_13",nil,2000,4,2],
+		["koilbp_18",nil,2000,4,2],
+		["B_Carryall_oli",nil,2500,4,2],
+		["B_AssaultPack_blk",nil,1500,4,2],
+		["kaelsuits",nil,2500,4,2],
+		["TRYK_B_Coyotebackpack_BLK",nil,3000,4,2],
+		["TRYK_B_Coyotebackpack",nil,3000,4,2],
+		["TRYK_B_Coyotebackpack_WH",nil,3000,4,2],
+		["TRYK_B_Carryall_blk",nil,2500,4,2],
+		["TRYK_B_Kitbag_blk",nil,3000,4,2],
+		["B_mas_ww2_Bergen_uk",nil,4000,4,2]
 	];
 
 	{

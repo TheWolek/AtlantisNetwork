@@ -39,8 +39,10 @@ _civilianVehicle = [
 	["d3s_Kawasaki_Ninja_H2R",122500],
 	["d3s_Suzuki_Hayabusa",150000],
 	["d3s_oka",7000],
+	["d3s_giulietta_16",7000],
 	["d3s_beetle_04",9500],
 	["d3s_vesta_15",13500],
+	["d3s_e89_12",11040],
 	["d3s_e38_98",19500],
 	["d3s_crown_98",22500],
 	["d3s_wrx_17",29500],
@@ -68,7 +70,8 @@ _civilianVehicle = [
 	["d3s_tahoe_ltz_08",35500],
 	["d3s_explorer_13",43500],
 	["d3s_cayenne_16",65500],
-	["d3s_bentayga_18",56500]
+	["d3s_bentayga_18",56500],
+	["d3s_fiesta_16",20000]
 
 ];
 
