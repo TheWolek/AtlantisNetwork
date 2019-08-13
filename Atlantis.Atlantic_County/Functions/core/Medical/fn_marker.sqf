@@ -57,7 +57,7 @@ if (_type == "ALL") then {
 		_marker9 setMarkerShapeLocal "ICON";
 		_marker9 setMarkerTypeLocal "RMarkers_garage";
 
-	} forEach [[938.832,1207.01,0.00143862]];
+	} forEach [[938.832,1207.01,0.00143862],[5455.6,4086.16,0.00144005]];
 	{
 		_marker11 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker11 setMarkerShapeLocal "ICON";

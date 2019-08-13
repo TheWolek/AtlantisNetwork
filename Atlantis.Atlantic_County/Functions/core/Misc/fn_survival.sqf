@@ -26,7 +26,7 @@ Survival Koil
 			[format["Dostałeś wypłatę w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 
 			if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
-				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
+				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam atlantisnetwork.pl",str _bonus],true] spawn domsg;
 				[_bonus,true,true] call Client_fnc_addMoneyToBank;
 			} else {
 				[format["Przegapiłeś swoje $%1, ponieważ nie masz atlantisnetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
@@ -43,7 +43,7 @@ Survival Koil
 			[format["Dostałeś zasiłek dla bezrobotnych w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 
 			if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
-				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
+				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam atlantisnetwork.pl",str _bonus],true] spawn domsg;
 				[_bonus,true,true] call Client_fnc_addMoneyToBank;
 			} else {
 				[format["Przegapiłeś swoje $%1, ponieważ nie masz atlantisnetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
@@ -78,10 +78,10 @@ Survival Koil
 		paycheck = 55 + paycheck;
 	
 		if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
-			[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam AltantisNetwork.pl",str _bonus],true] spawn domsg;
+			[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam atlantisnetwork.pl",str _bonus],true] spawn domsg;
 			[_bonus,true,true] call Client_fnc_addMoneyToBank;
 		} else {
-			[format["Przegapiłeś swoje $%1, ponieważ nie masz AtlantisNetwork w nazwie na steam",str _bonus],true] spawn domsg;
+			[format["Przegapiłeś swoje $%1, ponieważ nie masz atlantisnetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
 		};
 
 		_govJobs = ["DA","Legal","doc","Cop","EMS"];
