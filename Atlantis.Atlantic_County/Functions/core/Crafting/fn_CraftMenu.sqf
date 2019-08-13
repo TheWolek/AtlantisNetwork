@@ -43,7 +43,7 @@ _PistolMags = [1,1,0,0,0];
 	_iMafiaClasses = [
 	//small auto
 		//"CUP_hgun_MicroUzi",
-		"RH_muzi"		
+		//"RH_muzi"		
 	];
 
 if(myJob == "Mafia" && player getvariable "Mafia" >= 6) then {
@@ -134,49 +134,6 @@ _foodlist = [
 ];
 
 _clothing1 = [
-		"vvv_character_rock1",
-		"vvv_character_rock2",
-		"vvv_character_rock3",
-		"vvv_character_rock4",
-		"vvv_ropa_comun_f_1",
-		"vvv_ropa_comun_f_2",
-		"vvv_ropa_comun_f_3",
-		"vvv_ropa_comun_f_4",
-		"vvv_ropa_comun_f_5",
-		"vvv_ropa_comun_f_6",
-		"vvv_ropa_comun_f_7",
-		"vvv_ropa_comun_f_8",
-		"vvv_ropa_comun_f_9",
-		"vvv_ropa_comun_f_10",
-		"KAEL_SUITS_BR_F14",
-		"KAEL_SUITS_BR_F12",
-		"KAEL_SUITS_BR_F3",
-		"KAEL_SUITS_BR_F",
-		"KAEL_SUITS_BR_F35",
-		"KAEL_SUITS_BR_F34",
-		"vvv_traje_motox_02",
-		"vvv_traje_motox_02_2",
-		"vvv_traje_motox_02_3",
-		"vvv_traje_motox_02_4",
-		"vvv_traje_motox_02_5",
-		"vvv_traje_motox_02_6",
-		"vvv_traje_motox_02_7",
-		"vvv_traje_motox_02_8",
-		"vvv_character_sport",
-		"vvv_character_sport_2",
-		"vvv_character_sport_3",
-		"vvv_character_sport_4",
-		"vvv_character_sport_5",
-		"vvv_character_sport_6",
-		"vvv_character_sport_7",
-		"vvv_character_sport_8",
-		"vvv_character_sport_9",
-		"vvv_character_sport_10",
-		"vvv_character_sport_11",
-		"vvv_character_sport_12",
-		"vvv_character_sport_13",
-		"TRYK_HRP_USMC",
-		"TRYK_HRP_khk",
 		"EF_FEM_3",
 		"EF_FEM_4",
 		"EF_FEM_4_2LPBPS",
@@ -189,9 +146,6 @@ _clothing1 = [
 		"EF_FEM_5",
 		"EF_FEM_6",
 		"EF_FEM_3_42",
-		"I_FEM_AAF_long",
-		"O_FEM_CSAT_Long",
-		"B_FEM_NATO_long",
 		"EF_FEM_3_5B",
 		"EF_FEM_3_5BP",
 		"EF_FEM_3_5VP",
@@ -208,35 +162,7 @@ _clothing1 = [
 
 
 _clothing2 = [
-		"vvv_traje_jackoy",
-		"vvv_traje_jackoy2",
-		"vvv_traje_jackoy3",
-		"vvv_traje_jackoy4",
-		"vvv_traje_jackoy5",
-		"vvv_traje_jackoy6",
-		"vvv_traje_jackoy7",
-		"vvv_traje_jackoy8",
-		"vvv_character_agente_47",
-		"vvv_character_agente_474",
-		"vvv_character_agente_475",
-		"vvv_elena_fisher",
-		"vvv_elena_fisher2",
-		"vvv_elena_fisher3",
-		"vvv_elena_fisher4",
-		"vvv_elena_fisher5",
-		"vvv_elena_fisher6",
-		"vvv_elena_fisher7",
-		"vvv_elena_fisher8",
-		"vvv_elena_fisher9",
-		"vvv_elena_fisher10",
-		"vvv_elena_fisher11",
-		"vvv_elena_fisher12",
-		"vvv_elena_fisher13",
-		"vvv_elena_fisher14",
-		"vvv_elena_fisher15",
-		"vvv_elena_fisher16",
-		"vvv_character_wandelina",
-		"vvv_character_jennifer"
+		
 ];
 
 
