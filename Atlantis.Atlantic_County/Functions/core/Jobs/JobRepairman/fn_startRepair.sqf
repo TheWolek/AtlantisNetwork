@@ -8,7 +8,6 @@ if(isnil "taskrunning") then { taskrunning = false; };
 myjob = "Repairman";
 format ["Job_Log: %1 started working as %2",name player,myjob] remoteExecCall["diag_log",2];
 [] call client_fnc_hudwork;
-[] spawn client_fnc_startRepair;
 
 private ["_warning","_JobBase"];
 if(!taskrunning) then {

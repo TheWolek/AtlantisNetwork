@@ -65,4 +65,4 @@ if(typeName _receiver == "OBJECT") exitWith {
 
 
 
-diag_log format ["inserting mail %1", _player];
+diag_log format ["inserting mail %1", name _player];

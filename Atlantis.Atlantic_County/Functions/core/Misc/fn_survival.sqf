@@ -75,7 +75,7 @@ Survival Koil
 
 		if (paycheck > _level_default) then { paycheck = _level_default; };
 
-		paycheck = 55 + paycheck;
+		paycheck = 200 + paycheck;
 	
 		if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
 			[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam atlantisnetwork.pl",str _bonus],true] spawn domsg;

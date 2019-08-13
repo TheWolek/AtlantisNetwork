@@ -145,6 +145,7 @@ class CfgFunctions
 			class adminupdateplayer {};
 			class adminESP {};
 			class nametags {};
+			class createvehicle {};
 		};		
 
 		class police {
@@ -171,6 +172,10 @@ class CfgFunctions
 			class medicSiren2 {};
 			class returnrifle {};
 			class checklicensePlate {};
+			class tazed {};
+			class teargas {};
+			class checkfingerp {};
+			class frisk {};
 		};
 
 		class Wanted {
@@ -545,7 +550,6 @@ class CfgFunctions
 			class hackCar {};
 			class hackCarDisable {};
 			class hackCarDisplay {};
-			class frisk {};
 			class lootsetup {};
 			class lootdrop {};
 			class closedialogs {};
@@ -558,7 +562,6 @@ class CfgFunctions
 			class vehinforeturn {};
 			class pee {};
 			class pee2 {};
-			class teargas {};
 			class vomit {};
 			class gunholster {};
 			class seatbelts {};
@@ -573,7 +576,6 @@ class CfgFunctions
 			class promotionstart {};
 			class promotionfirst {};
 			class hideobjectnear {};
-			class createvehicle {};
 			class setvariable {};
 			class medicRequest {};
 			class requestMedic {};
@@ -615,10 +617,8 @@ class CfgFunctions
 			class unblindfold {};
 			class attemptKO {};
 			class successKO {};	
-			class tazed {};
 			class sharphit {};
 			class blunthit {};
-			class checkfingerp {};
 			class say3D {};
 			class nearestSound {};
 		};

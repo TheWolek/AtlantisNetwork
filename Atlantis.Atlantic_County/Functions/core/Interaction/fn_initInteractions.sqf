@@ -1333,7 +1333,7 @@ NoPixel_InteractionMenuItems = [
 	],
 	
 	[
-		[" myJob IN ['Legal'] && (player getVariable 'legal' >= 9) && (player distance [825.717,1634.34,0.00143814] < 20 ) "],
+		[" myJob IN ['Legal'] && (player distance [825.717,1634.34,0.00143814] < 20 ) "],
 		["Uniform DOJ", "['basic'] call client_fnc_setGear",4]
 	],
 	

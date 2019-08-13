@@ -21,8 +21,8 @@ uisleep 5;
 
 [
 	[
-		["Jest rok 2053.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",7],	
-		["Przybyłeś do Atlantis County.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",7]
+		["Jest rok 2053.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",5],	
+		["Przybyłeś do stanu Atlantis.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",7]
 	],
 	0, 0.75
 ] spawn BIS_fnc_typeText;
@@ -42,8 +42,9 @@ uisleep 10;
 
 _script = [
 	[
-		["Teraz pora na wybranie swojej ścieżki.","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",7],
-		["Stwórz swoje nowe życie","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>",7]
+		["Stwórz od nowa swoje życie!","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",5],
+		["Poznaj gagsterską stronę tego stanu, zarabiaj gruby szmal robiąc nielegalne rzeczy,","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>",5],
+		["Albo stań po stronie prawa i zacznij pracę jako policjant, ratownik lub prawnik!","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>",8]
 	],
 	0, 0.75
 ] spawn BIS_fnc_typeText;
@@ -68,8 +69,8 @@ uisleep 5;
 
 _script = [
 	[
-		["Wybierz swoją płeć","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",7],
-		["Może ona być zmieniona później, ale może wymagać operacji.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",7]
+		["Wybierz swoją płeć","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",5],
+		["Pamiętaj, zmiana płci wymaga operacji.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",7]
 	],
 	0, 0.75
 ] spawn BIS_fnc_typeText;
@@ -86,7 +87,7 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Witaj na atlantisnetwork.pl!","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",7],
+		["Witaj na AtlantisNetwork!","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",5],
 		["Używaj przycisku windows w celu interakcji ze wszystkim.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",7]
 	],
 	0, 0.75
@@ -96,8 +97,9 @@ waitUntil { scriptDone _script };
 
 _script = [
 	[
-		["Zacznij od interakcji z przyczepą.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",7],
-		["Masz tam listy. Baw się dobrze.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",7]
+		["Zacznij od interakcji z przyczepą. Masz tam listy, garaż, schowek i crafting.","<t align = 'center' shadow = '1' size = '0.5'>%1</t><br/>",5],
+		["Zajrzyj do skrzynki na listy, znajdziesz tam krótki opis gry.","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",5],
+		["W razie problemów nasza administracja chętnie ci pomoże. Baw się dobrze!","<t align = 'center' shadow = '1' size = '0.4' font='PuristaBold'>%1</t>",10]
 	],
 	0, 0.75
 ] spawn BIS_fnc_typeText;
