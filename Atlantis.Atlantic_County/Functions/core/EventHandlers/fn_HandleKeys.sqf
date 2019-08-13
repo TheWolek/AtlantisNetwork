@@ -501,15 +501,14 @@ switch (_code) do
 	case 74:
 	{
 		if (_ctrlKey && _shift && myjob IN ["Cop","Ems","DA","DOJ"] && !imRestrained && "itemPanicButton" IN items player) then {
-				[] spawn { 	
-					["itemPanicButton",0] spawn client_fnc_removeitem;
-					playSound "panicbutton";
-					sleep 2;
-					[player,name player,getPos player] remoteExec ["client_fnc_recivePB",-2];
+			[] spawn { 	
+				["itemPanicButton",0] spawn client_fnc_removeitem;
+				playSound "panicbutton";
+				sleep 2;
+				[player,name player,getPos player] remoteExec ["client_fnc_recivePB",-2];
 
-				};
-			} else {["Nie masz panic buttona!", false] spawn domsg; };
-		};
+			};
+		} else {["Nie masz panic buttona!", false] spawn domsg; };
 	};
 };
 
