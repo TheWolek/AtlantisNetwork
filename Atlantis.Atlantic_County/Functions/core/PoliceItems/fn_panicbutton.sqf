@@ -6,8 +6,8 @@ params [
 
 if(isNull _player) exitWith {};
 
-_backupmsg = createMarkerLocal [("_backupmsg" + (_player getVariable "badgenumber")), getPos _player];
-_backupmsg setMarkerTypeLocal = "mil_warning";
+_backupmsg = createMarkerLocal [(_player getVariable "badgenumber"), getPos _player];
+_backupmsg setMarkerTypeLocal "mil_warning";	
 _backupmsg setMarkerColorLocal "colorRed";
 _backupmsg setMarkerTextLocal format["panic button %1",_player getVariable "badgenumber"];
 

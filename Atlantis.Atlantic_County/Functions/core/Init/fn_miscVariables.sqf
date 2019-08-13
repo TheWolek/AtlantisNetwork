@@ -113,6 +113,7 @@ myWarrants = 0;
 mapHint = true;
 atlantis_siren_active = false;
 atlantis_siren2_active = false;
+panicbuttonUsed = false;
 tempgangmoro = ["76561198196444347","76561198208351973","76561198096159122","76561198132966103","76561198142844939","76561198155298525","76561198208077967","76561198280578328"];
 
 client_fnc_cameraflash = compileFinal "
