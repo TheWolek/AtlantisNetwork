@@ -136,7 +136,7 @@ if (str _jobtype find "Kurier" > -1) exitwith {
 };
 
 if (str _jobtype find "Kierowca Autobusu" > -1) exitwith {
-	[] spawn client_fnc_startBus;
+	[] spawn client_fnc_signupBus;
 	currentBusDrivers pushback _player;
 	publicvariable "currentBusDrivers";
 };

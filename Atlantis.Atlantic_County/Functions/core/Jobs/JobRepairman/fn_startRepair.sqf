@@ -8,6 +8,8 @@ if(isnil "taskrunning") then { taskrunning = false; };
 myjob = "Repairman";
 format ["Job_Log: %1 started working as %2",name player,myjob] remoteExecCall["diag_log",2];
 [] call client_fnc_hudwork;
+[] spawn client_fnc_startRepair;
+
 private ["_warning","_JobBase"];
 if(!taskrunning) then {
 
@@ -45,7 +47,7 @@ if(!taskrunning) then {
 				if(player distance ((playertasks select 0) select 0) < 15) then {
 
 					["Dotarłeś na miejsce - szukaj uszkodzonych obiektów!", true] spawn domsg;
-					paycheck = paycheck + 80;
+					paycheck = paycheck + 200;
 					playertasks deleteat 0;
 					uisleep 3;
 					deletemarkerlocal format["job%1",getPlayerUID player];

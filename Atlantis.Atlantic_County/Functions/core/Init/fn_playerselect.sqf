@@ -119,6 +119,7 @@ player linkItem "ItemCompass";
 player linkItem "Itemwatch";
 player additem "cg_tabletd";
 player assignitem "cg_tabletd";
+player addBackpack "B_AssaultPack_cbr";
 
 ["Add","license",0] call client_fnc_sustain;
 

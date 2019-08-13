@@ -304,13 +304,20 @@ class CfgFunctions
 		class JobTaxi {
 			file = "Functions\core\Jobs\JobTaxi";
 			class startTaxi {};
-			class startBus {};
 		};
 		class JobTowTruck {
 			file = "Functions\core\Jobs\JobTowTruck";
 			class startTowTruck {};
+		};	
+		class JobBus {
+			file = "Functions\core\Jobs\JobBus";
+			class signupBus {};
+			class startBus {};
+		};
+		class JobRepairman {
+			file = "Functions\core\Jobs\JobRepairman";
 			class startrepair {};
-		};		
+		};
 		class JobNews {
 			file = "Functions\core\Jobs\JobNews";
 			class startNews {};

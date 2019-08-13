@@ -45,7 +45,7 @@ if(!taskrunning) then {
 
 				if(player distance ((playertasks select 0) select 0) < 15) then {
 					["Dotarłeś na miejsce - patroluj okolicę w celu szukania przestępców- nie strzelaj do nich, zadzwoń po policję!", true] spawn domsg;
-					paycheck = paycheck + 55;
+					paycheck = paycheck + 210;
 					playertasks deleteat 0;
 					uisleep 3;
 					deletemarkerlocal format["job%1",getPlayerUID player];
