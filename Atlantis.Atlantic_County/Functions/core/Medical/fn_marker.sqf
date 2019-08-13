@@ -4,8 +4,8 @@ params["_type"];
 if (_type == "ALL") then {
     _marker1 = createMarkerLocal [format["tempmarker_%1",random 10000], myhouse];
     _marker1 setMarkerShapeLocal "ICON";
-    _marker1 setMarkerTypeLocal "HRP_icon_builder";
-    _marker1 setMarkerTextLocal "My Home";
+    _marker1 setMarkerTypeLocal "RMarkers_Home";
+    _marker1 setMarkerTextLocal "Mój dom";
     _marker2 = createMarkerLocal [format["tempmarker_%1",random 10000], getMarkerPos format["%1",(getPlayerUID player)]];
     _marker2 setMarkerShapeLocal "ICON";
     _marker2 setMarkerTypeLocal "hd_dot";
@@ -21,7 +21,7 @@ if (_type == "ALL") then {
 	{
 		_marker4 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker4 setMarkerShapeLocal "ICON";
-		_marker4 setMarkerTypeLocal "HRP_icon_General_Store";
+		_marker4 setMarkerTypeLocal "RMarkers_Shop";
 		_marker4 setMarkerText "Donuts";
 
 	} forEach (nearestobjects[player,["land_cg_dunkinbronuts"],30000]);
@@ -37,19 +37,19 @@ if (_type == "ALL") then {
 	{
 		_marker6 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker6 setMarkerShapeLocal "ICON";
-		_marker6 setMarkerTypeLocal "HRP_icon_Gun_Store";
+		_marker6 setMarkerTypeLocal "RMarkers_Pistolet";
 	} forEach (nearestobjects[player,["Land_buildingGunStore1"],30000]);
 	{
 		_marker7 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker7 setMarkerShapeLocal "ICON";
-		_marker7 setMarkerTypeLocal "HRP_icon_General_Store";
+		_marker7 setMarkerTypeLocal "RMarkers_Shop";
 		_marker7 setMarkerTextLocal "General";
 
 	} forEach (nearestobjects[player,["Land_Coffee_DED_Coffee_02_F","Land_Coffee_DED_Coffee_01_F"],30000]);		
 	{
 		_marker8 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker8 setMarkerShapeLocal "ICON";
-		_marker8 setMarkerTypeLocal "HRP_icon_exotic_car";
+		_marker8 setMarkerTypeLocal "RMarkers_Sedan";
 
 	} forEach (nearestobjects[player,["Land_ModernShowroom"],30000]);
 	{
@@ -61,8 +61,7 @@ if (_type == "ALL") then {
 	{
 		_marker11 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker11 setMarkerShapeLocal "ICON";
-		_marker11 setMarkerTypeLocal "HRP_icon_helicopter";
-		_marker11 setMarkerColorLocal "ColorGreen";
+		_marker11 setMarkerTypeLocal "RMarkers_Helicopter";
 
 	} forEach (nearestobjects[player,["Land_Hangar_F"],30000]);
 	/*
@@ -78,7 +77,7 @@ if (_type == "ALL") then {
 	{
 		_marker13 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker13 setMarkerShapeLocal "ICON";
-		_marker13 setMarkerTypeLocal "HRP_icon_General_Store";
+		_marker13 setMarkerTypeLocal "RMarkers_Shop";
 		_marker13 setMarkerText "Pizza";	
 
 	} forEach (nearestobjects[player,["land_cg_dexters"],30000]);
@@ -142,45 +141,35 @@ if (_type == "ALL") then {
 		};
 	} forEach playableUnits;							
     _arr = [
-        ["Przetwarzanie",[5576.34,3327.53,0]],
-        ["Oczyszczanie skór",[4856.32,897.653,0]],
-        ["Skup dóbr",[3159.32,2470.09,0]],
-        ["Przetwarzanie ryb",[7463.44,1864,0]],
-        ["Skup rzadkich przedmiotów", [1733.81,3723.2,0.00170898]],
-        ["Skup ryb", [3174.16,2281.33,0.00141549]],
-        ["Ulepszanie domów",[855.632,1092.4,0.00143909]]
+        ["Przetwarzanie",[5576.34,3327.53,0],"RMarkers_usine"],
+        ["Oczyszczanie skór",[4856.32,897.653,0],"RMarkers_usine"],
+        ["Skup dóbr",[3159.32,2470.09,0],"HRP_icon_Trade"],
+        ["Przetwarzanie ryb",[7463.44,1864,0],"RMarkers_usine"],
+        ["Skup rzadkich przedmiotów", [1733.81,3723.2,0.00170898],"HRP_icon_Trade"],
+        ["Skup ryb", [3174.16,2281.33,0.00141549],"HRP_icon_Trade"],
+        ["Ulepszanie domów",[855.632,1092.4,0.00143909],"RMarkers_Building"]
     ];
 
 	{
 		_marker20 = createMarkerLocal [format["tempmarker_%1",random 10000], _x select 1];
 		_marker20 setMarkerShapeLocal "ICON";
-		_marker20 setMarkerTypeLocal "hd_dot";
-		_marker20 setMarkerColorLocal "ColorGreen";
+		_marker20 setMarkerTypeLocal (_x select 2);
 		_marker20 setMarkerTextLocal (_x select 0);
 
 	} forEach _arr;
     _arr = [
-		["Kasyno",[933.723,1289.9,0.00143957]],
-        ["Sąd stanowy", [817.614,1637.97,0.00143766]],
-        //["Police Station", [8297.44,3002.32,0.00143814]],
-        //["DoC Atlantis County", [5576.06,6191.3,0.00143433]],
-        //["Silver Rush Hotel & Casino", [4821.5,2123.88,0.00143957]],
-        ["Nightclub", [800.329,1389.63,0.00143814]],
-        //["SLFD Atlantis County North", [9574.12,4165.42,0.00143814]],
-        ["Szpital", [3263.96,3608.9,0.00143433]]
-		//["Jail", [6884.91,4046.69,0.00143433]],
-        //["SLFD Colchester", [8524.93,6642.69,-0.269258]],
-        //["Atlantis County City Concert Hall", [6736.5,1780.16,0.00144172]],
-		//["Muscle Beach Gym", [7523.95,2239.83,0.00143814]],
-		//["Impound Lot", [3419.04,4382.06,0.00144196]]
-		//["Bank of Atlantis County", [8805.49,7242.14,0.00143814]]
+		["Kasyno",[933.723,1289.9,0.00143957],"BanqueEuro"],
+        ["Sąd stanowy", [817.614,1637.97,0.00143766],"HRP_icon_court"],
+        ["Nightclub", [800.329,1389.63,0.00143814],"RMarkers_Bar"],
+        ["", [3263.96,3608.9,0.00143433],"RMarkers_Hospital"], //Hospital
+        ["", [1340.53,985.628,0.00143909],"RMarkers_Police_Station"] //PD
     ];
 
 	{
 		_marker21 = createMarkerLocal [format["tempmarker_%1",random 10000], _x select 1];
 		_marker21 setMarkerShapeLocal "ICON";
-		_marker21 setMarkerTypeLocal "hd_dot";
-		_marker21 setMarkerColorLocal "ColorGreen";
+		_marker21 setMarkerTypeLocal (_x select 2);
+		//_marker21 setMarkerColorLocal "ColorGreen";
 		_marker21 setMarkerTextLocal (_x select 0);
 
 	} forEach _arr;	
@@ -195,9 +184,8 @@ if (_type == "ALL") then {
 if(_type == "Home") then {
     _marker1 = createMarkerLocal [format["tempmarker_%1",random 10000], myhouse];
     _marker1 setMarkerShapeLocal "ICON";
-    _marker1 setMarkerTypeLocal "HRP_icon_builder";
-    _marker1 setMarkerColorLocal "ColorGreen";
-    _marker1 setMarkerTextLocal "My Home";
+    _marker1 setMarkerTypeLocal "RMarkers_Home";
+    _marker1 setMarkerTextLocal "Mój dom";
 
 };
 
@@ -234,8 +222,7 @@ if(_type == "Dunkin") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerColorLocal "ColorGreen";
+		_marker setMarkerTypeLocal "RMarkers_Shop";
 		_marker setMarkerText "Donuts";
 
 	} forEach (nearestobjects[player,["land_cg_dunkinbronuts"],30000]);
@@ -268,8 +255,7 @@ if(_type == "Gun") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "HRP_icon_Gun_Store";
-		_marker setMarkerText "Gun Store";
+		_marker setMarkerTypeLocal "RMarkers_Pistolet";
 	} forEach (nearestobjects[player,["Land_buildingGunStore1"],30000]);
 };
 
@@ -277,7 +263,7 @@ if(_type == "General") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "hd_dot";
+		_marker setMarkerTypeLocal "RMarkers_Shop";
 		_marker setMarkerText "General Store";
 
 	} forEach (nearestobjects[player,["Land_Coffee_DED_Coffee_02_F","Land_Coffee_DED_Coffee_01_F"],30000]);
@@ -287,7 +273,7 @@ if(_type == "Carshop") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "hd_dot";
+		_marker setMarkerTypeLocal "RMarkers_Sedan";
 		_marker setMarkerText "Car Shop";
 
 	} forEach (nearestobjects[player,["Land_ModernShowroom"],30000]);
@@ -307,8 +293,7 @@ if(_type == "Airshop") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerColorLocal "ColorGreen";
+		_marker setMarkerTypeLocal "RMarkers_Helicopter";
 		_marker setMarkerText "Airshop";
 
 	} forEach (nearestobjects[player,["Land_Hangar_F"],30000]);
@@ -413,51 +398,41 @@ if(_type == "Offices") then {
 
 if(_type == "Processing") then {
     _arr = [
-        ["Przetwarzanie",[5576.34,3327.53,0]],
-        ["Oczyszczanie skór",[4856.32,897.653,0]],
-        ["Skup dóbr",[3159.32,2470.09,0]],
-        ["Przetwarzanie ryb",[7463.44,1864,0]],
-        ["Skup rzadkich przedmiotów", [1733.81,3723.2,0.00170898]],
-        ["Skup ryb", [3174.16,2281.33,0.00141549]],
-        ["Ulepszanie domów",[855.632,1092.4,0.00143909]]
+        ["Przetwarzanie",[5576.34,3327.53,0],"RMarkers_usine"],
+        ["Oczyszczanie skór",[4856.32,897.653,0],"RMarkers_usine"],
+        ["Skup dóbr",[3159.32,2470.09,0],"HRP_icon_Trade"],
+        ["Przetwarzanie ryb",[7463.44,1864,0],"RMarkers_usine"],
+        ["Skup rzadkich przedmiotów", [1733.81,3723.2,0.00170898],"HRP_icon_Trade"],
+        ["Skup ryb", [3174.16,2281.33,0.00141549],"HRP_icon_Trade"],
+        ["Ulepszanie domów",[855.632,1092.4,0.00143909],"RMarkers_Building"]
     ];
 
 	{
-		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], _x select 1];
-		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerColorLocal "ColorGreen";
-		_marker setMarkerTextLocal (_x select 0);
+		_marker20 = createMarkerLocal [format["tempmarker_%1",random 10000], _x select 1];
+		_marker20 setMarkerShapeLocal "ICON";
+		_marker20 setMarkerTypeLocal (_x select 2);
+		_marker20 setMarkerTextLocal (_x select 0);
 
 	} forEach _arr;
 };
 
 if(_type == "Misc") then {
     _arr = [
-		["Kasyno",[933.723,1289.9,0.00143957]],
-        ["Sąd stanowy", [817.614,1637.97,0.00143766]],
-        //["Police Station", [8297.44,3002.32,0.00143814]],
-        //["DoC Atlantis County", [5576.06,6191.3,0.00143433]],
-        //["Silver Rush Hotel & Casino", [4821.5,2123.88,0.00143957]],
-        ["Nightclub", [800.329,1389.63,0.00143814]],
-        //["SLFD Atlantis County North", [9574.12,4165.42,0.00143814]],
-        ["Szpital", [3263.96,3608.9,0.00143433]]
-		//["Jail", [6884.91,4046.69,0.00143433]],
-        //["SLFD Colchester", [8524.93,6642.69,-0.269258]],
-        //["Atlantis County City Concert Hall", [6736.5,1780.16,0.00144172]],
-		//["Muscle Beach Gym", [7523.95,2239.83,0.00143814]],
-		//["Impound Lot", [3419.04,4382.06,0.00144196]]
-		//["Bank of Atlantis County", [8805.49,7242.14,0.00143814]]
+		["Kasyno",[933.723,1289.9,0.00143957],"BanqueEuro"],
+        ["Sąd stanowy", [817.614,1637.97,0.00143766],"HRP_icon_court"],
+        ["Nightclub", [800.329,1389.63,0.00143814],"RMarkers_Bar"],
+        ["", [3263.96,3608.9,0.00143433],"RMarkers_Hospital"], //Hospital
+        ["", [1340.53,985.628,0.00143909],"RMarkers_Police_Station"] //PD
     ];
 
 	{
-		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], _x select 1];
-		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerColorLocal "ColorGreen";
-		_marker setMarkerTextLocal (_x select 0);
+		_marker21 = createMarkerLocal [format["tempmarker_%1",random 10000], _x select 1];
+		_marker21 setMarkerShapeLocal "ICON";
+		_marker21 setMarkerTypeLocal _x select 2;
+		//_marker21 setMarkerColorLocal "ColorGreen";
+		_marker21 setMarkerTextLocal (_x select 0);
 
-	} forEach _arr;
+	} forEach _arr;	
 };
 
 waitUntil { sleep 1; !visibleMap };

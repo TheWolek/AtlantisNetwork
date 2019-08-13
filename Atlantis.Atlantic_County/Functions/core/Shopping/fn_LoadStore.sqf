@@ -623,7 +623,7 @@ if(_condition == "police_gunstore") then {
 
 	_dtulr = [
 		["RH_sbr9",nil,900,1]
-		];
+	];
 
 	if(player getvariable "cop" >= 1) then {
 		{
@@ -1334,7 +1334,7 @@ if(_condition == "gang_glassesstore") then {
 if(_condition == "gang_headgearstore") then {
 
 	_gang_headgearstore = [
-		["TAC_SF10H",nil,1000,3,5],
+		["TAC_SF10H",nil,1000,3,5]
 	];
 
 	{

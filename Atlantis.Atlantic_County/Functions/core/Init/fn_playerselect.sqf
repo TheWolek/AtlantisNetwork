@@ -17,7 +17,7 @@ lastsync = time - 3;
 
 charselection = true;
 //playMusic  "npIntro";
-uisleep 3;
+uisleep 5;
 
 [
 	[

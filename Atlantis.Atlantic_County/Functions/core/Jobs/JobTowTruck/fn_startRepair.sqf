@@ -59,7 +59,7 @@ if(!taskrunning) then {
 
 					if(_level_check > 599) then { _amount = _level_check / 7; };
 						
-					_amount = (round(_amount) + 20);
+					_amount = (round(_amount) + 100);
 
 					if(_amount > 0) then {
 						if(_amount > 220) then { _amount = 220; };
