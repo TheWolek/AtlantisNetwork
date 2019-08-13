@@ -559,7 +559,12 @@ if(_condition == "glasses") then {
 		["G_Lady_Dark",nil,120,3,4],
 		["G_Lady_Blue",nil,120,3,4],
 		["G_Lowprofile",nil,120,3,4],
-		["G_Combat",nil,120,3,4]
+		["G_Combat",nil,120,3,4],
+		["G_Bandanna_khk",nil,500,3,4],
+		["G_Bandanna_aviator",nil,500,3,4],
+		["G_Bandanna_shades",nil,500,3,4],
+		["G_Bandanna_sport",nil,500,3,4],
+		["G_Balaclava_blk",nil,800,3,4]		
 	];
 
 	{
@@ -991,6 +996,7 @@ if(_condition == "police_misc") then {
 		["RH_eotech553",nil,10,3],
 		["RH_spr_mbs",nil,10,3],
 		["hlc_muzzle_Agendasix",nil,10,3],
+		["itemsjoint",nil,10,3],
 		["ToolKit",nil,10,3]
 	];
 
@@ -1270,7 +1276,7 @@ if(_condition == "gang_gunstore") then {
 
 	_gunStorePistols = [
 		["RH_g18",nil,8000,1],
-		["RH_muzi",nil,16000,1],
+		["RH_muzi",nil,20000,1],
 		["RH_Deagles",nil,30000,1],
 		["RH_kimber_nw",nil,5000,1]
 

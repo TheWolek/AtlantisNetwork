@@ -5,7 +5,6 @@ if (_type == "ALL") then {
     _marker1 = createMarkerLocal [format["tempmarker_%1",random 10000], myhouse];
     _marker1 setMarkerShapeLocal "ICON";
     _marker1 setMarkerTypeLocal "HRP_icon_builder";
-    _marker1 setMarkerColorLocal "ColorGreen";
     _marker1 setMarkerTextLocal "My Home";
     _marker2 = createMarkerLocal [format["tempmarker_%1",random 10000], getMarkerPos format["%1",(getPlayerUID player)]];
     _marker2 setMarkerShapeLocal "ICON";
@@ -17,14 +16,12 @@ if (_type == "ALL") then {
 		_marker3 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker3 setMarkerShapeLocal "ICON";
 		_marker3 setMarkerTypeLocal "HRP_icon_Bank";
-		_marker3 setMarkerColorLocal "ColorGreen";
 
 	} forEach (nearestobjects[player,["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_Kangaro0_Bank_01_F"],30000]);
 	{
 		_marker4 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker4 setMarkerShapeLocal "ICON";
 		_marker4 setMarkerTypeLocal "HRP_icon_General_Store";
-		_marker4 setMarkerColorLocal "ColorGreen";
 		_marker4 setMarkerText "Donuts";
 
 	} forEach (nearestobjects[player,["land_cg_dunkinbronuts"],30000]);
@@ -41,27 +38,24 @@ if (_type == "ALL") then {
 		_marker6 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker6 setMarkerShapeLocal "ICON";
 		_marker6 setMarkerTypeLocal "HRP_icon_Gun_Store";
-		_marker6 setMarkerColorLocal "ColorGreen";
 	} forEach (nearestobjects[player,["Land_buildingGunStore1"],30000]);
 	{
 		_marker7 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker7 setMarkerShapeLocal "ICON";
 		_marker7 setMarkerTypeLocal "HRP_icon_General_Store";
-		_marker7 setMarkerColorLocal "ColorGreen";
+		_marker7 setMarkerTextLocal "General";
 
 	} forEach (nearestobjects[player,["Land_Coffee_DED_Coffee_02_F","Land_Coffee_DED_Coffee_01_F"],30000]);		
 	{
 		_marker8 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker8 setMarkerShapeLocal "ICON";
 		_marker8 setMarkerTypeLocal "HRP_icon_exotic_car";
-		_marker8 setMarkerColorLocal "ColorGreen";
 
 	} forEach (nearestobjects[player,["Land_ModernShowroom"],30000]);
 	{
 		_marker9 = createMarkerLocal [format["tempmarker_%1",random 10000], _x];
 		_marker9 setMarkerShapeLocal "ICON";
-		_marker9 setMarkerTypeLocal "HRP_icon_Garage";
-		_marker9 setMarkerColorLocal "ColorGreen";
+		_marker9 setMarkerTypeLocal "RMarkers_garage";
 
 	} forEach [[938.832,1207.01,0.00143862]];
 	{
@@ -85,31 +79,25 @@ if (_type == "ALL") then {
 		_marker13 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker13 setMarkerShapeLocal "ICON";
 		_marker13 setMarkerTypeLocal "HRP_icon_General_Store";
-		_marker13 setMarkerColorLocal "ColorGreen";
 		_marker13 setMarkerText "Pizza";	
 
 	} forEach (nearestobjects[player,["land_cg_dexters"],30000]);
 	{
 		_marker14 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker14 setMarkerShapeLocal "ICON";
-		_marker14 setMarkerTypeLocal "hd_dot";
-		_marker14 setMarkerColorLocal "ColorGreen";
-		_marker14 setMarkerText "Bar";
+		_marker14 setMarkerTypeLocal "RMarkers_Bar";
 
 	} forEach (nearestobjects[player,["Land_buildingBar1"],30000]);
 	{
 		_marker15 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker15 setMarkerShapeLocal "ICON";
-		_marker15 setMarkerTypeLocal "hd_dot";
-		_marker15 setMarkerColorLocal "ColorGreen";
-		_marker15 setMarkerText "McDildos";
+		_marker15 setMarkerTypeLocal "RMarkers_Fries";
 
 	} forEach (nearestobjects[player,["Land_Market_DED_Market_01_F"],30000]);
 	{
 		_marker16 = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker16 setMarkerShapeLocal "ICON";
 		_marker16 setMarkerTypeLocal "hd_dot";
-		_marker16 setMarkerColorLocal "ColorGreen";
 		_marker16 setMarkerText "Barber";
 
 	} forEach (nearestobjects[player,["Land_buildingBarbers1"],30000]);
@@ -238,7 +226,6 @@ if(_type == "Bank") then {
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
 		_marker setMarkerTypeLocal "HRP_icon_Bank";
-		_marker setMarkerColorLocal "ColorGreen";
 
 	} forEach (nearestobjects[player,["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_Kangaro0_Bank_01_F"],30000]);
 };
@@ -281,8 +268,7 @@ if(_type == "Gun") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerColorLocal "ColorGreen";
+		_marker setMarkerTypeLocal "HRP_icon_Gun_Store";
 		_marker setMarkerText "Gun Store";
 	} forEach (nearestobjects[player,["Land_buildingGunStore1"],30000]);
 };
@@ -292,7 +278,6 @@ if(_type == "General") then {
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
 		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerColorLocal "ColorGreen";
 		_marker setMarkerText "General Store";
 
 	} forEach (nearestobjects[player,["Land_Coffee_DED_Coffee_02_F","Land_Coffee_DED_Coffee_01_F"],30000]);
@@ -303,7 +288,6 @@ if(_type == "Carshop") then {
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], getpos _x];
 		_marker setMarkerShapeLocal "ICON";
 		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerColorLocal "ColorGreen";
 		_marker setMarkerText "Car Shop";
 
 	} forEach (nearestobjects[player,["Land_ModernShowroom"],30000]);
@@ -313,8 +297,7 @@ if(_type == "Garage") then {
 	{
 		_marker = createMarkerLocal [format["tempmarker_%1",random 10000], _x];
 		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerColorLocal "ColorGreen";
+		_marker setMarkerTypeLocal "RMarkers_garage";
 		_marker setMarkerText "Garage";
 
 	} forEach [[938.832,1207.01,0.00143862]];

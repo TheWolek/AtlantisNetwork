@@ -93,15 +93,15 @@ if((_this select 0) == 1) exitwith {
 		_vehicle addItemCargoGlobal ["Toolkit", 1];
 		
 		if(myJob IN ["Cop","doc"]) then {
-			_vehicle addItemCargoGlobal ["np_woodbarrierlongpolice",4];
-			_vehicle addItemCargoGlobal ["np_WoodBarrierShortPoliceLightsOn",4];
-			_vehicle addItemCargoGlobal ["np_TrafficConeOrange",4];
+			_vehicle addItemCargoGlobal ["np_woodbarrierlongpolice",8];
+			_vehicle addItemCargoGlobal ["np_WoodBarrierShortPoliceLightsOn",8];
+			_vehicle addItemCargoGlobal ["np_TrafficConeOrange",6];
 		};
 
 		if(myJob IN ["EMS"]) then {
-			_vehicle addItemCargoGlobal ["np_WoodBarrierLongRed",4];
-			_vehicle addItemCargoGlobal ["np_WoodBarrierShortRedLightsOn",4];
-			_vehicle addItemCargoGlobal ["np_TrafficConeRed",4];
+			_vehicle addItemCargoGlobal ["np_WoodBarrierLongRed",8];
+			_vehicle addItemCargoGlobal ["np_WoodBarrierShortRedLightsOn",8];
+			_vehicle addItemCargoGlobal ["np_TrafficConeRed",6];
 		};
 
 	};
