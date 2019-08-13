@@ -10,7 +10,7 @@ if(typeof _object == "plp_ct_HighSecMediumBlack") then {
 
 	//["Add","Karma", random (15) ,"Stress"] call client_fnc_sustain;
 
-	_cashadded = 12534 + (count currentcop * 824) + random 1;
+	_cashadded = 20000 + (count currentcop * 1250) + random 1;
 } else {
 
 	//["Add","Karma", random (20) ,"Stress"] call client_fnc_sustain;
