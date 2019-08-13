@@ -91,7 +91,7 @@ while {true} do {
 			_counter = _counter + 1;
 			_stopTime = _stopTime + 15;
 			playSound3D ["cg_mission_files\sounds\npdrillfailing.ogg", player, false, getPosAtL _thedrill, 1, 1, 45];
-			["The drill is stuck.", true] spawn domsg;
+			["Wiertarka wymaga naprawy", true] spawn domsg;
 			uisleep 15;
 			
 
