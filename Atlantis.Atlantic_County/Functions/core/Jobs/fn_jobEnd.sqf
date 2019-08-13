@@ -3,6 +3,8 @@ if(_this select 0 == 1) then {
 	_playerGear = player getVariable "lastSave";
 	player setunitloadout _playerGear;
 	[] spawn client_fnc_hangup;
+	player setVariable["badgeNumber", ""];
+	player setVariable["coplevel",nil,true];
 };
 if(myjob in["Mafia"]) then {
 	[] spawn client_fnc_hangup;
@@ -10,8 +12,6 @@ if(myjob in["Mafia"]) then {
 [player,"don_empty"] call BIS_fnc_setUnitInsignia;
 format ["Job_Log: %1 stopped working as %2",name player,myjob] remoteExecCall["diag_log",2];
 myjob = "none";
-player setVariable["badgeNumber", ""];
-player setVariable["coplevel",nil,true];
 taskrunning = false;
 dispatch = false;
 playertasks = [];

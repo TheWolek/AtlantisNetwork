@@ -217,6 +217,8 @@ if (_booli) then {
 
 	_name = name _player;
 	_items = getunitloadout _player;
+	//additional backpack for new players
+	_items set[5,["B_AssaultPack_cbr",[]]];
 	_cash = 0;
 	//_bank = 1500;
 	_bank = 7500;

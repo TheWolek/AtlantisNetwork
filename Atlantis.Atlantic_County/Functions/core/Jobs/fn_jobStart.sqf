@@ -163,6 +163,18 @@ if (str _jobtype find "Legal Aid" > -1) exitwith {
 
 if (str _jobtype find "Legal" > -1) exitwith {
 
+	[player, "getunitloadout", getunitloadout player] remoteExec ["Server_fnc_setVariable",2];
+	[_player, 0, getplayeruid _player, name _player] remoteexec ["Server_fnc_statSave",2];
+	removeAllItems player;
+	removeAllContainers player;
+	removeAllWeapons player;
+	removeAllAssignedItems player;
+	removeUniform player;
+	removeVest player;
+	removeBackpack player;
+	removeGoggles player;
+	removeHeadgear player;	
+
 	[] remoteExec ["client_fnc_startLegal",_player];
 
 	if(player getvariable "legal" == 1) then {
