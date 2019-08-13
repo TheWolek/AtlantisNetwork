@@ -1,4 +1,4 @@
-_shop = currentcursortarget;
+_shop = cursorObject;
 _pos = getpos _shop;
 _stolen = 0;
 _amount = 0;
@@ -12,14 +12,18 @@ if(isNil "robbedStores2") then { robbedstores2 = []; rs2modifier = 0; };
 if(_shop IN robbedstores2) exitwith { ["W tym sklepie nie ma więcej pieniędzy!", true] spawn domsg; };
 
 _shop setvariable ["robbing",true,true];
-rs2modifier = rs2modifier + 1;
-if(rs2modifier > count currentcop) then { rs2modifier = count currentcop; };
-
+//rs2modifier = rs2modifier + 1;
+//if(rs2modifier > count currentcop) then { rs2modifier = count currentcop; };
+if(count currnetcop > 4) then {
+	rs2modifier = rs2modifier + 300;
+} else {
+	rs2modifier = rs2modifier + 100;
+};
 
 _counter = 0;
-_distpolice = round((player distance [8263.31,3011.19,0.00143814]) / 2000);
+//_distpolice = round((player distance [1340.72,1000.15,0]) / 2000);
 
-if(_distpolice < 2) then { _distpolice=2; };
+//if(_distpolice < 2) then { _distpolice=2; };
 
 _failure = false;
 
@@ -38,18 +42,19 @@ while{true} do {
 	_dist = player distance _shop;
 	if ((player getVariable["dead",FALSE]) || currentWeapon player == "" || currentWeapon player == "Binocular" || currentWeapon player == "Rangefinder" || _dist >= 10) exitwith { _failure = true; };
 	sleep 2;
-	_stolen = random(10) + _counter;
+	_stolen = round(random(10));
 	[_stolen,false,true] call Client_fnc_addMoneyToPlayer; 
 //	["Add","Karma",random(3),"Stress"] call client_fnc_sustain;
 	_counter = _counter + 0.1;
-	if((_distpolice - _counter) < 0.2) exitwith {}; 
+	//if((_distpolice - _counter) < 0.2) exitwith {};
+	if(_counter => 30) exitWith {}; //5 min 5*60*0.1
 };
 
 robbedstores2 pushback _shop; 
 
 if(!_failure) then {
-	_amount =  (rs2modifier * _counter) * random(500);
-	_amount = _amount + ((count currentcop) * 3);
+	_amount =  (rs2modifier * _counter);
+	_amount = _amount + ((count currentcop) * 200);
 	[_amount,false,true] call Client_fnc_addMoneyToPlayer; 
 	[format["Okradłeś ten sklep na %1",(_amount+_stolen) call client_fnc_numberText], true] spawn domsg;
 	format["Robbery_Log: %1 robbed store for %2",player, _amount+_stolen] remoteExecCall["diag_log",2];
