@@ -9,7 +9,7 @@ if(_type == 1) then { drugcount = drugcount + _number; } else { drugcount = drug
 
 publicVariable "drugcount";
 
-if(drugcount >= 375) then {
+if(drugcount >= 50) then {
 
 		drugcount = 0;
 		publicVariable "drugcount";
@@ -36,7 +36,7 @@ if(drugcount >= 375) then {
 
 } else {
 
-	[format["%1 narkotyków dodane do zrzutu narkotyków (Wymagane 375)", drugcount], true] remoteExec["domsg", currentMafia];
+	[format["%1 narkotyków dodane do zrzutu narkotyków (Wymagane 50)", drugcount], true] remoteExec["domsg", currentMafia];
 
 };
 

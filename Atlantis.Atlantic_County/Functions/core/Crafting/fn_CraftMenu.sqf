@@ -56,8 +56,6 @@ if(myJob == "Mafia" && player getvariable "Mafia" >= 6) then {
 
 		"hlc_rifle_hk53RAS",
 
-		"RH_M4sbr",
-
 		"hlc_rifle_rpk74n",
 
 		"arifle_mas_ww2_ppsh"
@@ -72,7 +70,6 @@ if(myJob == "Biker" && player getvariable "Biker" >= 6) then {
 
 		"RH_tec9",
 
-	//
 		"arifle_mas_ww2_sten",
 
 		"bnae_M97_virtual"
