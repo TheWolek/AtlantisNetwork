@@ -326,34 +326,34 @@ if(_type == "license") then {
 
 		if( !(_amount IN licenseArray) ) then {
 
-			if(_amount == 0) then { [getplayeruid player, 0, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś prawo jazdy kat. B.",false] spawn domsg; };
-			if(_amount == 1) then { [getplayeruid player, 1, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję na broń Klasy 1.",false] spawn domsg;  };
-			if(_amount == 2) then { [getplayeruid player, 2, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję górnika.",false] spawn domsg;  };
-			if(_amount == 3) then { [getplayeruid player, 3, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję drwala.",false] spawn domsg; };
-			if(_amount == 4) then { [getplayeruid player, 4, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję rybaka.",false] spawn domsg; };
-			if(_amount == 5) then { [getplayeruid player, 5, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś prawo jazdy kat. C.",false] spawn domsg; };
-			if(_amount == 6) then { [getplayeruid player, 6, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję Pilota.",false] spawn domsg; };
-			if(_amount == 7) then { [getplayeruid player, 7, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję handlarza oleju.",false] spawn domsg; };
-			if(_amount == 8) then { [getplayeruid player, 8, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję Licencja Dowódcy SWAT.",false] spawn domsg; };
-			if(_amount == 9) then { [getplayeruid player, 9, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję Licencja SWAT.",false] spawn domsg; };
-			if(_amount == 10) then { [getplayeruid player, 10, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję Dowódcy nurków PD.",false] spawn domsg; };
-			if(_amount == 11) then { [getplayeruid player, 11, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję nurka PD.",false] spawn domsg; };
-			if(_amount == 12) then { [getplayeruid player, 12, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję Dowódcy AIR PD.",false] spawn domsg; };
-			if(_amount == 13) then { [getplayeruid player, 13, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję AIR PD.",false] spawn domsg; };
-			if(_amount == 14) then { [getplayeruid player, 14, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję DoC CRT Leader Certification.",false] spawn domsg; };
-			if(_amount == 15) then { [getplayeruid player, 15, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję DoC CRT Certification.",false] spawn domsg; };
-			if(_amount == 16) then { [getplayeruid player, 16, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję DoC Air Leader Certification.",false] spawn domsg; };
-			if(_amount == 17) then { [getplayeruid player, 17, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję DoC Air Certification.",false] spawn domsg; };
-			if(_amount == 18) then { [getplayeruid player, 18, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś patent motorowodny.",false] spawn domsg; };
-			if(_amount == 19) then { [getplayeruid player, 19, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś Członkostwo Kasyna.",false] spawn domsg; };
-			if(_amount == 20) then { [getplayeruid player, 20, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś Bar Certification.",false] spawn domsg; };
-			if(_amount == 21) then { [getplayeruid player, 21, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś prawo jazdy kat. D",false] spawn domsg; };
-			if(_amount == 22) then { [getplayeruid player, 22, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję na broń Klasy 2.",false] spawn domsg; };
-			if(_amount == 23) then { [getplayeruid player, 23, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję Licencja Dowódcy AIR PD.",false] spawn domsg; };
-			if(_amount == 24) then { [getplayeruid player, 24, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję Licencja AIR FD.",false] spawn domsg; };
-			if(_amount == 25) then { [getplayeruid player, 25, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję FD Scuba Leader Certification.",false] spawn domsg; };
-			if(_amount == 26) then { [getplayeruid player, 26, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję Licencja Nurka FD.",false] spawn domsg; };
-			if(_amount == 27) then { [getplayeruid player, 27, 1] remoteExec ["server_fnc_licenses",2]; ["Otrzymaeś licencję Prawnika.",false] spawn domsg; };
+			if(_amount == 0) then { [getplayeruid player, 0, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś prawo jazdy kat. B.",false] spawn domsg; };
+			if(_amount == 1) then { [getplayeruid player, 1, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję na broń Klasy 1.",false] spawn domsg;  };
+			if(_amount == 2) then { [getplayeruid player, 2, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję górnika.",false] spawn domsg;  };
+			if(_amount == 3) then { [getplayeruid player, 3, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję drwala.",false] spawn domsg; };
+			if(_amount == 4) then { [getplayeruid player, 4, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję rybaka.",false] spawn domsg; };
+			if(_amount == 5) then { [getplayeruid player, 5, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś prawo jazdy kat. C.",false] spawn domsg; };
+			if(_amount == 6) then { [getplayeruid player, 6, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Pilota.",false] spawn domsg; };
+			if(_amount == 7) then { [getplayeruid player, 7, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję handlarza oleju.",false] spawn domsg; };
+			if(_amount == 8) then { [getplayeruid player, 8, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja Dowódcy SWAT.",false] spawn domsg; };
+			if(_amount == 9) then { [getplayeruid player, 9, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja SWAT.",false] spawn domsg; };
+			if(_amount == 10) then { [getplayeruid player, 10, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Dowódcy nurków PD.",false] spawn domsg; };
+			if(_amount == 11) then { [getplayeruid player, 11, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję nurka PD.",false] spawn domsg; };
+			if(_amount == 12) then { [getplayeruid player, 12, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Dowódcy AIR PD.",false] spawn domsg; };
+			if(_amount == 13) then { [getplayeruid player, 13, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję AIR PD.",false] spawn domsg; };
+			if(_amount == 14) then { [getplayeruid player, 14, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję DoC CRT Leader Certification.",false] spawn domsg; };
+			if(_amount == 15) then { [getplayeruid player, 15, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję DoC CRT Certification.",false] spawn domsg; };
+			if(_amount == 16) then { [getplayeruid player, 16, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję DoC Air Leader Certification.",false] spawn domsg; };
+			if(_amount == 17) then { [getplayeruid player, 17, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję DoC Air Certification.",false] spawn domsg; };
+			if(_amount == 18) then { [getplayeruid player, 18, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś patent motorowodny.",false] spawn domsg; };
+			if(_amount == 19) then { [getplayeruid player, 19, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś Członkostwo Kasyna.",false] spawn domsg; };
+			if(_amount == 20) then { [getplayeruid player, 20, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś Bar Certification.",false] spawn domsg; };
+			if(_amount == 21) then { [getplayeruid player, 21, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś prawo jazdy kat. D",false] spawn domsg; };
+			if(_amount == 22) then { [getplayeruid player, 22, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję na broń Klasy 2.",false] spawn domsg; };
+			if(_amount == 23) then { [getplayeruid player, 23, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja Dowódcy AIR PD.",false] spawn domsg; };
+			if(_amount == 24) then { [getplayeruid player, 24, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja AIR FD.",false] spawn domsg; };
+			if(_amount == 25) then { [getplayeruid player, 25, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję FD Scuba Leader Certification.",false] spawn domsg; };
+			if(_amount == 26) then { [getplayeruid player, 26, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja Nurka FD.",false] spawn domsg; };
+			if(_amount == 27) then { [getplayeruid player, 27, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Prawnika.",false] spawn domsg; };
 
 			licenseArray = licenseArray + [_amount];
 			
