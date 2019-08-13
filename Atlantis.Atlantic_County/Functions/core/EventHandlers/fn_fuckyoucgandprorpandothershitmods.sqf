@@ -85,7 +85,7 @@ if (_item == "CG_Spikes_Collapsed" && vehicle player == player) then { [] spawn 
 
 if (_item == "NP_SatchelCharge") then { [] spawn client_fnc_ied; closeDialog 0; };
 
-if (_item == "itemPanicButton") then { playSound "panicbutton";	sleep 2; [player,name player,getPos player] remoteExec ["client_fnc_recivePB",-2]; [_item,0] spawn client_fnc_removeitem; closeDialog 0; };
+if (_item == "itemsjoint") then { playSound "panicbutton";	sleep 2; [player,name player,getPos player] remoteExec ["client_fnc_recivePB",-2]; [_item,0] spawn client_fnc_removeitem; closeDialog 0; };
 
 false
 

@@ -43,7 +43,7 @@ _PistolMags = [1,1,0,0,0];
 	_iMafiaClasses = [
 	//small auto
 		//"CUP_hgun_MicroUzi",
-		"RH_muzi"		
+		//"RH_muzi"		
 	];
 
 if(myJob == "Mafia" && player getvariable "Mafia" >= 6) then {

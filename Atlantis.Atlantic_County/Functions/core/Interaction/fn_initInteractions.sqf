@@ -1036,7 +1036,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["(getPlayerUID player IN tempgangmoro) && position player [2421.72,4169.12,0.00143433] < 20"],
+		["getPlayerUID player IN tempgangmoro && player distance [2421.72,4169.12,0.00143433] < 20"],
 		["Wyposażenie gangu", "closedialog 0; createdialog 'gang_equipment'; ['gang_gunstore'] spawn client_fnc_LoadStore;",3]
 	],
 
