@@ -498,14 +498,16 @@ switch (_code) do
 		};
   	};
 
+	//panic button
 	case 74:
 	{
 		if (_ctrlKey && _shift && myjob IN ["Cop","Ems","DA","DOJ"] && !imRestrained && "itemsjoint" IN items player) then {
 			[] spawn { 	
-				["itemsjoint",0] spawn client_fnc_removeitem;
+				//["itemsjoint",0] spawn client_fnc_removeitem;
 				playSound "panicbutton";
 				sleep 2;
-				[player,name player,getPos player] remoteExec ["client_fnc_recivePB",-2];
+				//[player,name player,getPos player] remoteExec ["client_fnc_recivePB",-2];
+				[] spawn client_fnc_panicbuttonUse;
 
 			};
 		};
