@@ -5,7 +5,7 @@ petroleo < string to object
 private["_n","_i"];
 
 _barArray = ["np_fishmeat"];
-_priceArray = [7];
+_priceArray = [80];
 
 
 if(isNil "globalProtection") then { globalProtection = 0; };
