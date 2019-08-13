@@ -158,6 +158,8 @@ _vehicle setvariable ["information",_car,true];
 
 	if (_vehicle isKindOf "Car") then {
 
+		_vehicle addItemCargoGlobal ["Toolkit", 1];
+
 		if (str _className find "vory_" > -1 || str _className find "vv_" > -1 || str _className find "VV_" > -1 ) then {
 			[_vehicle, [_carColor,_carFinish], _wheelColor, _windowTint, _headlightTint] remoteExec ["ivory_fnc_initVehicle",2];
 			[_vehicle, _numberPlate] remoteExec ["ivory_fnc_setLicense",2];

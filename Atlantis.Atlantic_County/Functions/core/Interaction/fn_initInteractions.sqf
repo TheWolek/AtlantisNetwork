@@ -1466,12 +1466,12 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["myjob == 'none' && (player getvariable 'legal') > 0 && (player distance [825.717,1634.34,0.00143814] < 20 ) && !(Senator || Mayor)"],
-		["START DOJ", "[player,'Legal'] spawn client_fnc_jobstart;",4]
+		["START DOJ", "[] call client_fnc_setlastsave; [player,'Legal'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
 		["myjob == 'Legal' && (player distance [825.717,1634.34,0.00143814] < 20 )"],
-		["STOP DOJ", "[0] call client_fnc_jobEnd",4]
+		["STOP DOJ", "[1] call client_fnc_jobEnd",4]
 	],
 
 	[

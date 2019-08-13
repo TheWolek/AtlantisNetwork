@@ -96,6 +96,8 @@ class CfgFunctions
 			class spikestripeffect {};
 			class useBarrier {}; 
 			class placeBarrier {};
+			class panicbuttonUse {};
+			class panicbutton {};
 		};
 
 		class Drugs {
