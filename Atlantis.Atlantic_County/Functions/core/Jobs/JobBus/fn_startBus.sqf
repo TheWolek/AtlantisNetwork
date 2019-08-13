@@ -97,7 +97,7 @@ if(!taskrunning && myjob == "bus") then {
 				if(player distance ((playertasks select 0) select 0) < 15) then {
 
 					["Dotarłeś na miejsce, poczekaj kilka sekund na pasażerów!", true] spawn domsg;
-					paycheck = paycheck + 135;
+					paycheck = paycheck + 210;
 
 					_pia = [[879.369,1243.55,0.00143862],[905.404,1312.68,0.00143862],[905.935,1442.87,0.00143862],[886.391,1594.08,0.00143862],[828.526,1384.84,0.00148296],[921.855,1049.77,0.00143862],[1313.29,1047.68,0.00143862],[2737.64,787.643,0.00143909],[1001.46,1254.86,0.00143862],[976.321,1531.3,0.00143862],[2823.74,3278.46,0.00143433],[3286.95,3430.25,0.00143433],[3272.24,3571.42,0.00143433],[3314.7,3739.4,0.00143433],[3427.12,3545.56,0.00143433],[3226.14,2556.36,0.00143886]] FIND ((playertasks select 0) select 0);
 
@@ -118,7 +118,7 @@ if(!taskrunning && myjob == "bus") then {
 					if(_level_check > 299 && _level_check < 600) then { _amount = _level_check / 5; };
 					if(_level_check > 599) then { _amount = _level_check / 4; };
 
-					_amount = round(_amount);
+					_amount = round(_amount) + 50;
 
 					if(_amount > 0) then {
 						if(_amount > 150) then { _amount = 150; };

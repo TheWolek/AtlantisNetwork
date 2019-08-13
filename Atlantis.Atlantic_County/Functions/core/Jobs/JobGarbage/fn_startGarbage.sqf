@@ -70,7 +70,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 			if(((playertasks select 0) select 1) == "bin") then {
 				["bin"] spawn client_fnc_collectGarbage;
 				_warnings = 0;
-				paycheck = paycheck + 130;
+				paycheck = paycheck + 200;
 				playertasks deleteat 0;
 				_garbagelevel = _garbagelevel + 1;
 
@@ -80,7 +80,7 @@ while{taskrunning  && myjob == "TrashMan" } do {
 				if(_level_check > 299 && _level_check < 600) then { _amount = _level_check / 7; };
 				if(_level_check > 599) then { _amount = _level_check / 5; };
 				["add","Karma",3,"Śmieciarz"] call client_fnc_sustain;
-				_amount = round(_amount);
+				_amount = round(_amount) + 50;
 				if(_amount > 0) then {
 					if(_amount > 150) then { _amount = 150; };
 					[ format["Dostałeś dodatkową wypłatę w wysokości %1!", _amount call client_fnc_numberText] , false ] spawn domsg;	
