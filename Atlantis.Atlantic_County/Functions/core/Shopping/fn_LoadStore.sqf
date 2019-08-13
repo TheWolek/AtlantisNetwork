@@ -1059,8 +1059,7 @@ if(_condition == "mafia_gunstore") then {
 		["RH_ar10",nil,55000,1],
 		["hlc_rifle_g3a3",nil,60000,1],
 		["hlc_rifle_M1903A1_unertl",nil,90000,1],
-		["arifle_mas_ww2_mos",nil,160000,1],
-		["optic_LRPS",nil,5000,3],		
+		["arifle_mas_ww2_mos",nil,160000,1],	
 		["arifle_mas_ww2_ppsh",nil,20000,1],
 		["arifle_mas_ww2_tommy",nil,16000,1],
 		["arifle_mas_ww2_sten",nil,15000,1]
@@ -1156,6 +1155,11 @@ if(_condition == "mafia_misc") then {
 		["CG_Lockpick",nil,1000,3],
 		["NP_DrugTable",nil,6500,3],
 		["DemoCharge_Remote_Mag",nil,60000,3],
+		["RH_compm2",nil,2000,3],
+		["RH_compm2l",nil,2000,3],
+		["RH_cmore",nil,2000,3],
+		["RH_barska_rds",nil,2000,3],		
+		["optic_LRPS",nil,5000,3],		
  		["RH_m9qd",nil,1900,3]
 
 
@@ -1275,10 +1279,6 @@ if(_condition == "ems_misc") then {
 if(_condition == "gang_gunstore") then {
 
 	_gunStorePistols = [
-		["RH_g18",nil,8000,1],
-		["RH_muzi",nil,20000,1],
-		["RH_Deagles",nil,30000,1],
-		["RH_kimber_nw",nil,5000,1]
 
 	];
 
