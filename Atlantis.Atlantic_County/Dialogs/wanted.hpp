@@ -207,7 +207,7 @@ class wanted {
 
 		class APB : client_RscButtonMenu {
 			idc = 1400;
-			text = "Utwórz poszukiwanego";
+			text = "Ogłoszenie";
 			onButtonClick = "[] spawn client_fnc_addAPB;";
 			x = 0.406091 * safezoneW + safezoneX;
 			y = 0.663346 * safezoneH + safezoneY;
