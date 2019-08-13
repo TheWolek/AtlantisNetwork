@@ -17,7 +17,7 @@ lastsync = time - 3;
 
 charselection = true;
 //playMusic  "npIntro";
-uisleep 0.2;
+uisleep 3;
 
 [
 	[
@@ -54,16 +54,16 @@ waitUntil { scriptDone _script };
 _male = "C_man_polo_2_F" createVehicleLocal [3270.4,3463.81,0.00143433];
 removeuniform w;
 _male allowdamage false;
-_male forceAdduniform "U_C_Poloshirt_stripped";
+_male forceAdduniform "TRYK_shirts_DENIM_WH";
 _male setdir 174;  
 _male setpos [3270.4,3463.81,0.00143433];
 
 _female = "C_man_polo_2_F" createVehicleLocal [3268,3463.58,0.00143433];
 _female allowdamage false;
-_female forceAdduniform "female_default_1";
+_female forceAdduniform "EF_FEM_3_77R2";
 _female setdir 174;  
 _female setpos [3268,3463.58,0.00143433];
-_female setFace (face player);
+_female setFace ("Fem_8");
 uisleep 5;
 
 _script = [
