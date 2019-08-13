@@ -2,17 +2,11 @@
 //[_location] remoteExec ["client_fnc_startSecurity",_player];
 //[getpos player,] remoteExec ["client_fnc_startGarbage",_player];
 // use lexus with directionals only.
-if(myjob != "none" && myjob != "bus") exitwith { ["Masz już pracę!", true] spawn domsg; };
-
-if(isnil "taskrunning") then { taskrunning = false; };
-
-myjob = "bus";
-format ["Job_Log: %1 started working as %2",name player,myjob] remoteExecCall["diag_log",2];
-[] call client_fnc_hudwork; 
+//file: fn_startBus
 
 private ["_warning","_JobBase"];
 
-if(!taskrunning) then {
+if(!taskrunning && myjob == "bus") then {
 
 	[] spawn {
 		playertasks = [];
@@ -154,7 +148,7 @@ if(!taskrunning) then {
 
 };
 
-if(taskrunning) then { 
+if(taskrunning && myjob == "bus") then { 
 	playertasks pushback [_this select 0,_this select 1]; 
 	_nearPlayers = player nearEntities ["man", 30]; {_nearplayers pushback _x; }foreach crew vehicle player; [format["%1 is the next stop!",((playertasks select 0) select 1)],false] remoteexec ["domsg",_nearPlayers];
 };

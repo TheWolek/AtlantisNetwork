@@ -24,3 +24,4 @@ player setVariable["loaded", 1, false];
 
 player linkitem "ItemMap";
 player linkitem "cg_tabletd";
+player addBackpack "B_AssaultPack_cbr";
