@@ -610,7 +610,6 @@ class CfgFunctions
 			class restrain {};
 			class unrestrain {};
 			class startpatdown {};	
-			class checkPulse {};	
 			class blindfold {};
 			class houselight {};
 			class houselock {};
