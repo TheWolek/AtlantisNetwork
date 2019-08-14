@@ -5,7 +5,7 @@ petroleo < string to object
 private["_n","_i","_localProtection"];
 
 _barArray = ["np_copperbar1","np_ironbar1","np_silverbar1","NP_Wood","CG_OilCanister"];
-_priceArray = [40,80,150,120,400];
+_priceArray = [40,80,150,60,400];
 
 if(isNil "globalProtection") then { globalProtection = 0; };
 if(globalProtection != 0) exitwith { ["Błąd - W trakcie przetwarzania", true] spawn domsg; };
@@ -29,12 +29,12 @@ _cashTotal = 0;
 		[_value,true,true] call Client_fnc_addMoneyToPlayer;
 		_cashTotal = _cashTotal + _value;
 		_i = _i - 1;
-		playSound3D ["CG_Jobs\sounds\mining\mineF2.ogg", player, false, getPosasl player, 31, 1, 15];
 		sleep 0.25;
 		if(dialog) then { closedialog 0; };
 	};
 
 	_n = _n + 1;
+	playSound3D ["CG_Jobs\sounds\mining\mineF2.ogg", player, false, getPosasl player, 31, 1, 15];
 
 } foreach _barArray;
 

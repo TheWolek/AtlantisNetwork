@@ -65,7 +65,8 @@ if(count currentEMS > 0) then {
 	};
 
 	//[_unit, "UnconsciousReviveDefault"] remoteExec["switchMove"];
-	[player, "DeadState"] remoteExec ["client_fnc_animSync"];
+	//[player, "DeadState"] remoteExec ["client_fnc_animSync"];
+	_unit playMoveNow "DeadState";
 
 	while{true} do {
 		sleep 1;

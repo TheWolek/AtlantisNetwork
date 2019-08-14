@@ -4,7 +4,7 @@
 	Description: Takes bet, spins slots, determines if win, pays
 
 */
-private["_slot","_slot1","_slot2","_slot3","_winnings","_slotcash","_betamt","_display","_winning"];
+private["_slot","_slot1","_slot2","_slot3","_winnings","_slotcash","_betamt","_display"];
 _betamt = param [0,1,[0]];
 if(casinoVault < 5000) exitwith { ["Fundusze w kasynie są zbyt małe", true] spawn domsg; };
 _cashcheck = [1,_betamt*(1+casinoRate/100)] call client_fnc_checkmoney;
@@ -202,25 +202,25 @@ packet = nil;
 	
 if(_slotcash*((0.75)+((1-casinoRate/100)/5)) > _casinoVault) then {
 	
-	_winning = _casinoVault;
+	_winnings = _casinoVault;
 
-	[format["Wygrałeś %1 na jednorękim bandycie, ale otrzymałeś tylko %2, ponieważ skończyły sie pieniądze w kasynie.", _slotcash call client_fnc_numberText, _winning call client_fnc_numberText],false] spawn domsg;
+	[format["Wygrałeś %1 na jednorękim bandycie, ale otrzymałeś tylko %2, ponieważ skończyły sie pieniądze w kasynie.", _slotcash call client_fnc_numberText, _winnings call client_fnc_numberText],false] spawn domsg;
 	
-	["casinoVault",_winning, "Remove",true] remoteexec ["server_fnc_setValue",2];
+	["casinoVault",_winnings, "Remove",true] remoteexec ["server_fnc_setValue",2];
 
 } else {
 
-	_winning = _slotcash;
+	_winnings = _slotcash;
 
-	[format["Wygrałeś %1 na jednorękim bandycie.", _winning call client_fnc_numberText],false] spawn domsg;
+	[format["Wygrałeś %1 na jednorękim bandycie.", _winnings call client_fnc_numberText],false] spawn domsg;
 
-	["casinoVault",_winning*((0.75)+((1-casinoRate/100)/5)), "Remove",true] remoteexec ["server_fnc_setValue",2];
+	["casinoVault",_winnings*((0.75)+((1-casinoRate/100)/5)), "Remove",true] remoteexec ["server_fnc_setValue",2];
 
 };
 
-[_winning,true,true] call Client_fnc_addMoneyToPlayer;
+[_winnings,true,true] call Client_fnc_addMoneyToPlayer;
 
-["casinoVault", format["%1 (%2) won %3 and received %4 from the slots machine and the casino lost %5.", name player, getplayeruid player, _slotcash call client_fnc_numberText, _winning call client_fnc_numberText, _winning*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+["casinoVault", format["%1 (%2) won %3 and received %4 from the slots machine and the casino lost %5.", name player, getplayeruid player, _slotcash call client_fnc_numberText, _winnings call client_fnc_numberText, _winnings*((0.75)+((1-casinoRate/100)/5)) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
 
 
