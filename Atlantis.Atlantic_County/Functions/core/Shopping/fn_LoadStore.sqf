@@ -38,6 +38,7 @@ if(_condition == "rarefish") then {
 			["epic_fishing_rod",nil,25,1],
 			["legendary_fishing_rod",nil,38,1],
 
+	/*
 			["Masque_Alien1",nil,12,3,5],
 			["Masque_Anonymous",nil,12,3,5],
 			["Masque_Chains",nil,12,3,5],
@@ -74,7 +75,7 @@ if(_condition == "rarefish") then {
 			["Masque_Hoxton",nil,12,3,5],
 			["Masque_Incendiaire",nil,12,3,5],
 			["Masque_Dallas",nil,12,3,5],
-
+*/
 			
 			["H_ALFR_Metal_Facemask_gry",nil,12,3,5],
 			["H_ALFR_Metal_Facemask_oli",nil,12,3,5],

@@ -604,7 +604,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["(vehicle player) == player && CursorTarget in Current_Cars && (cursortarget getVariable['salecheck',FALSE]) "],
-		["Przestań kraść", "CursorTarget setvariable ['sale',nil,true]; CursorTarget setvariable ['salecheck',nil,true];",2]
+		["Anuluj aukcje", "CursorTarget setvariable ['sale',nil,true]; CursorTarget setvariable ['salecheck',nil,true];",2]
 	],
 
 	[
@@ -1015,6 +1015,12 @@ NoPixel_InteractionMenuItems = [
 ////////////////////////////////////
 ///////////////////////////////////
 //////////////////////////////////
+
+	[
+		["getpos player distance [3188.12,3577.67,0.00144958] < 5"],
+		["Autobus do Atlantis City", "closedialog 0; [] spawn client_fnc_bus;",3]
+	],
+
 	[
 		[" getpos player distance [801.153,1391.25,0.00143814] < 5"],
 		["Nightclub Bar", "closedialog 0; createdialog 'food_menu'; ['nbar'] spawn client_fnc_LoadStore;",3]
