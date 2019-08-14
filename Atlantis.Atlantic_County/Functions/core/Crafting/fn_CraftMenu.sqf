@@ -104,7 +104,7 @@ _iMafiaMags = [1,1,1,1,1];
 
 
 _itemList = [
-	"NP_DrugTable","NP_GrowingPlot","CG_Dynamite","CG_C4","CG_Engine","CG_wheel","CG_HackingTool","CG_Lockpick","CG_MetalWire","NP_drillitem","np_SatchelCharge","np_goldscanner","np_tequila","murshun_cigs_matches","murshun_cigs_cigpack"
+	"NP_DrugTable","NP_GrowingPlot","CG_Dynamite","CG_Lockpick","NP_drillitem"
 ];
 
 

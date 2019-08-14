@@ -551,7 +551,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["CursorTarget in current_cars && myjob IN ['Cop','Fire','EMS'] && !imrestrained && count (crew currentcursortarget) > 0 "],
+		["myjob IN ['Cop','Fire','EMS'] && !imrestrained && count (crew currentcursortarget) > 0 "],
 		["Wyciągnij ludzi", " ['Wyciągam graczy',8,'client_fnc_pulloutplayers',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask ",2]
 	],
 

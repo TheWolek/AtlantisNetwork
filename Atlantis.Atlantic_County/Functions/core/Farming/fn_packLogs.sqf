@@ -3,7 +3,7 @@ Pack Logs trees by koil
 */
 
 	if( vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) exitwith { ["Twoja ciężarówka jest za daleko!", true] spawn domsg; }; 
-	if(totalLogs >= 7) exitwith { ["Ciężarówka jest pełna", true] spawn domsg; };
+	if(totalLogs >= 17) exitwith { ["Ciężarówka jest pełna", true] spawn domsg; };
 	mylog = createVehicle ["Land_WoodPile_large_F", position player, [], 0, "NONE"];
 
 	totalLogs = totalLogs + 1;

@@ -23,10 +23,10 @@ if(vehSpawned distance player > 15 || isNil {vehSpawned} || isnull vehSpawned ) 
 		//player additem "NP_Wood";	
 		//vehspawned addItemCargo ["NP_WOOD",8];
 		if(3 in licenseArray) then {
-			_random = round (random(12)) + 7;
+			_random = round (random(5)) + 4;
 			for "_i" from 0 to _random do { player additem "NP_WOOD"; };
 		} else {
-			for "_i" from 0 to 7 do { player additem "NP_WOOD"; };
+			for "_i" from 0 to 4 do { player additem "NP_WOOD"; };
 		};
 		sleep 2;
 		if(dialog) then { closedialog 0; };
