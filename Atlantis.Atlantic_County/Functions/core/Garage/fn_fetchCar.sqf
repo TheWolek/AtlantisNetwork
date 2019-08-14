@@ -77,29 +77,6 @@ if((_this select 0) == 1) exitwith {
 
 	if(myJob == "doc") then {
 		_cost = 50;
-		switch (typeOf _vehicle) do {
-			case "d3s_fseries_17_EMS": { 
-				_vehicle setObjectTextureGlobal [0,"\colors\d3s_f550\1.paa"];
-				_vehicle setObjectTextureGlobal [1,"\colors\d3s_f550\2.paa"];
-			};
-			case "d3s_fseries_17_TOW": { 
-				_vehicle setObjectTextureGlobal [0,"\colors\d3s_f550\1.paa"];
-			};
-			case "d3s_fseries_17_Rescue": { 
-				_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];
-				_vehicle setObjectTextureGlobal[1,"#(rgb,8,8,3)color(0.5,0,0,1)"];
-			};
-			case "d3s_cla_15_EMS": { 
-				_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];
-			};
-			case "d3s_g500_18_EMS": { 
-				_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];
-			};
-			case "d3s_svr_17_EMS": { 
-				_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];
-			};
-
-		};
 
 		_vehicle setVariable ["docCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
 		lastGovtUseCar = time + 300;
@@ -107,6 +84,13 @@ if((_this select 0) == 1) exitwith {
 
 	if(myJob == "EMS") then {
 		_cost = 50;
+		if (typeOf _vehicle == "d3s_fseries_17_EMS" ) then {_vehicle setObjectTextureGlobal [0,"\colors\d3s_f550\1.paa"];	_vehicle setObjectTextureGlobal [1,"\colors\d3s_f550\2.paa"];};
+		if (typeOf _vehicle == "d3s_fseries_17_TOW" ) then {_vehicle setObjectTextureGlobal [0,"\colors\d3s_f550\1.paa"];};
+		if (typeOf _vehicle == "d3s_fseries_17_Rescue" ) then {	_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];	_vehicle setObjectTextureGlobal[1,"#(rgb,8,8,3)color(0.5,0,0,1)"];};
+		if (typeOf _vehicle == "d3s_cla_15_EMS" ) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];};
+		if (typeOf _vehicle == "d3s_g500_18_EMS" ) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];};
+		if (typeOf _vehicle == "d3s_svr_17_EMS" ) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];};
+
 		_vehicle setVariable ["emsCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
 	};
 

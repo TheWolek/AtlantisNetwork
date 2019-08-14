@@ -48,6 +48,14 @@ switch (_code) do
 
 		};
 	};
+	//skok twoja pierdolona mać zajebie kurwa valdora i zrucham mu starą
+	case 47:
+	{
+	    if(!_shift && !_alt && _ctrlKey) then
+	    {
+			player spawn client_fnc_jumpScript;
+	    };
+	};
 	case 61:
 	{
 	

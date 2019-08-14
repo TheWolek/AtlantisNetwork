@@ -970,7 +970,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["cursorObject getVariable['raretrader',false]"],
-		["Trade Rare Pelt", "closedialog 0; [] spawn client_fnc_rarePelt;",3]
+		["Wymień rzadkie futro", "closedialog 0; [] spawn client_fnc_rarePelt;",3]
 	],
 
 	[
@@ -1603,7 +1603,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["( typeof CursorTarget == 'Rabbit_F' || str CursorObject find 'cock_' > -1 ) && getdammage cursorobject == 1"],
+		["( typeof CursorObject == 'Rabbit_F' || str CursorObject find 'cock_' > -1 ) && getdammage cursorobject == 1"],
 		["Oskóruj zająca", "deletevehicle CurrentCursorTarget; player additem 'np_upelt'; ['Oskórowałeś zawierze!', true] spawn domsg; ",4]
 	],
 

@@ -142,7 +142,7 @@ if (_type == "ALL") then {
 	} forEach playableUnits;							
     _arr = [
         ["Przetwarzanie",[5576.34,3327.53,0],"RMarkers_usine"],
-        ["Oczyszczanie skór",[4856.32,897.653,0],"RMarkers_usine"],
+        ["Oczyszczanie skór",[4805.48,909.664,0],"RMarkers_usine"],
         ["Skup dóbr",[3159.32,2470.09,0],"HRP_icon_Trade"],
         ["Przetwarzanie ryb",[7463.44,1864,0],"RMarkers_usine"],
         ["Skup rzadkich przedmiotów", [1733.81,3723.2,0.00170898],"HRP_icon_Trade"],
@@ -399,7 +399,7 @@ if(_type == "Offices") then {
 if(_type == "Processing") then {
     _arr = [
         ["Przetwarzanie",[5576.34,3327.53,0],"RMarkers_usine"],
-        ["Oczyszczanie skór",[4856.32,897.653,0],"RMarkers_usine"],
+        ["Oczyszczanie skór",[4805.48,909.664,0],"RMarkers_usine"],
         ["Skup dóbr",[3159.32,2470.09,0],"HRP_icon_Trade"],
         ["Przetwarzanie ryb",[7463.44,1864,0],"RMarkers_usine"],
         ["Skup rzadkich przedmiotów", [1733.81,3723.2,0.00170898],"HRP_icon_Trade"],
