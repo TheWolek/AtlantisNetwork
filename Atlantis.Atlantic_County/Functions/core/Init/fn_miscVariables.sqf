@@ -23,6 +23,7 @@ myjob = "none";
 houseinvitation = ObjNull;
 RadioConnections = [];
 RadioConnected = [];
+latestWanted = [];
 fires = [];
 adminESP = false;
 attachedbarrier = false;
@@ -110,6 +111,12 @@ speedChecked = false;
 myTickets = 0;
 myWarrants = 0;
 mapHint = true;
+atlantis_siren_active = false;
+atlantis_siren2_active = false;
+panicbuttonUsed = false;
+MaxTime = 300;
+tempgangmoro = [];
+//tempgangmoro = ["76561198196444347","76561198208351973","76561198096159122","76561198132966103","76561198142844939","76561198155298525","76561198208077967","76561198280578328"];
 
 client_fnc_cameraflash = compileFinal "
 	ppEffect = ppEffectCreate ['ColorCorrections',2500];
@@ -195,23 +202,39 @@ client_fnc_restrained = compileFinal
 		uisleep 1;
 	};
 ";
+client_fnc_restrainfront = compileFinal
+"
+	attachedplayer = false;
+	imRestrained = true;
+	player playActionNow 'Foski_Cuff_Front';
+	uisleep 0.05;
+
+";
+client_fnc_unrestrainfront = compileFinal
+"
+	attachedplayer = false;
+	imRestrained = true;
+	player playActionNow 'Foski_UnCuff_Front';
+	uisleep 0.05;
+
+";
 
 client_fnc_unrestrained = compileFinal
 "
 	imRestrained = false;
 	player switchMove """";
-	player setVariable ['surrender', nil, false];
+	player setVariable ['surrender', nil, true];
 ";
 
 KK_fnc_forceRagdoll = compileFinal
 "
 	if (vehicle player != player || godMode) exitWith {};
-	private ""_rag"";
+	private '_rag';
 	godMode = true;
 	player allowdamage false;
-	_rag = ""Land_Can_V3_F"" createVehicleLocal [0,0,0];
+	_rag = 'Land_Can_V3_F' createVehicleLocal [0,0,0];
 	_rag setMass 1e10;
-	_rag attachTo [player, [0,0,0], ""Spine3""];
+	_rag attachTo [player, [0,0,0], 'Spine3'];
 	_rag setVelocity [0,0,5];
 	detach _rag;
 	0 = _rag spawn {

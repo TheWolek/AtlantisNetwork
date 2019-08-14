@@ -4,11 +4,11 @@ _chance = random(100);
 
 if(isNil "robbedStores") then { robbedstores = []; };
 
-if(_shop IN robbedstores) exitwith { ["This shop has nothing left for you!", true] spawn domsg; };
+if(_shop IN robbedstores) exitwith { ["Ten sklep nie ma nic więcej, co można ukraść!", true] spawn domsg; };
 
 if(_chance > 85) then {
 
-	["Add","Karma",random(1),"Stress"] call client_fnc_sustain;
+//	["Add","Karma",random(1),"Stress"] call client_fnc_sustain;
 
 	[player] remoteexec ["server_fnc_robberyCall",2];
 
@@ -22,7 +22,7 @@ if(_chance > 85) then {
 
 		while {true} do {
 
-			if(modifier == 0) exitwith { ["Your store rampage has ended", true] spawn domsg; };
+			if(modifier == 0) exitwith { ["Twoja seria napadów zakończyła się", true] spawn domsg; };
 			uisleep 20;
 			modifier = modifier - 1;
 
@@ -40,7 +40,7 @@ if(_chance > 85) then {
 
 		if(_amount < 0) then { _amount = 5; };
 
-		robbedstores pushback _shop; [format["You just robbed this Store for: %1",_amount], true] spawn domsg; [_amount,false,true] call Client_fnc_addMoneyToPlayer; 
+		robbedstores pushback _shop; [format["Okradłeś ten sklep na %1",_amount], true] spawn domsg; [_amount,false,true] call Client_fnc_addMoneyToPlayer; 
 
 	};
 

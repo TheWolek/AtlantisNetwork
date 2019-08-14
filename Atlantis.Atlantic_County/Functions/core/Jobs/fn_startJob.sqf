@@ -9,7 +9,7 @@ lbClear _list;
 _jobs = [];
 
 if(count currentMailmen < 3) then {
-_Jobs pushback "Fedex Worker"; 
+_Jobs pushback "Kurier"; 
 };
 
 if(count currentSecurity < 2) then {
@@ -17,49 +17,54 @@ _Jobs pushback "Security";
 };
 
 if(count currentTrashman < 3) then {
-_Jobs pushback "Garbage Man"; 
+_Jobs pushback "Śmieciarz"; 
 };
 
+/*
 if(count currentNewsMan < 3) then {
 _Jobs pushback "News Reporter"; 
 };
+*/
 
 if(count currentRepairmen < 7) then {
-_Jobs pushback "Repairman"; 
+_Jobs pushback "Mechanik"; 
 };
 
 if(count currentBusDrivers < 4) then {
-_Jobs pushback "Bus Driver"; 
+_Jobs pushback "Kierowca Autobusu"; 
 };
 
 
 if(count currentTaxiDrivers < 7) then {
-_Jobs pushback "Taxi Driver"; 
+_Jobs pushback "Taksówkarz"; 
 };
 
+/*
 if(count currentTowTruckDrivers < 5) then {
 _Jobs pushback "Tow Truck Driver"; 
 };
+*/
 
 _FUCKYOU = FALSE;
 {
 	if( isnull _x ) then { _FUCKYOU = TRUE; };
 }foreach serverRadioPlayers;
-
+/*
 IF(_FUCKYOU) THEN {	
 	_jobs pushback "Radio Presenter";
 };
+*/
 
-if(_jobs isequalto []) then { _jobs = ["No Jobs Available"]; };
+if(_jobs isequalto []) then { _jobs = ["Brak dostęponych prac"]; };
 
 {
-	_list lbAdd format["Job: %1",_x];
+	_list lbAdd format["Praca: %1",_x];
 	_list lbSetdata [(lbSize _list)-1,str(_x)];
 } foreach _jobs;
 
-_list lbAdd "Job: Wood Logging";
+_list lbAdd "Praca: Drwal";
 _job = "Wood Logging";
 _list lbSetdata [(lbSize _list)-1,str(_job)];
 
-["Remember, farming jobs require backpacks - most jobs come with a vehicle, you can access it by windows keying this building once you have a job.", true] spawn domsg;
+["Pamiętaj, prace polegające na zbieraniu wymagają plecaka. Możesz wypożyczyć pojazdu klikając windows na centrelinku.", true] spawn domsg;
 

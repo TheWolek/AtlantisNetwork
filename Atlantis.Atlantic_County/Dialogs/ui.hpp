@@ -606,7 +606,7 @@ class HUDhealth1
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\health1.paa";
+			text = "\dialogs\icons\health1.paa";
 		};
 	};
 };
@@ -642,7 +642,7 @@ class HUDhealth2
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\health2.paa";
+			text = "\dialogs\icons\health2.paa";
 		};
 	};
 };
@@ -678,7 +678,7 @@ class HUDhealth3
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\health3.paa";
+			text = "\dialogs\icons\health3.paa";
 		};
 	};
 };
@@ -714,7 +714,7 @@ class HUDFood
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_hunger.paa";
+			text = "\dialogs\icons\np_hunger.paa";
 		};
 	};
 };
@@ -750,7 +750,7 @@ class HUDThirst
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_thirst.paa";
+			text = "\dialogs\icons\np_thirst.paa";
 		};
 	};
 };
@@ -786,7 +786,7 @@ class HUDAddiction
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_healthiness.paa";
+			text = "\dialogs\icons\np_healthiness.paa";
 		};
 	};
 };
@@ -821,7 +821,7 @@ class HUDBattery
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_battery.paa";
+			text = "\dialogs\icons\np_battery.paa";
 		};
 	};
 };
@@ -854,7 +854,7 @@ class HUDWork
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_work.paa";
+			text = "\dialogs\icons\np_work.paa";
 		};
 	};
 };
@@ -891,7 +891,7 @@ class HUDseat
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_seatbelt.paa";
+			text = "\dialogs\icons\np_seatbelt.paa";
 		};
 	};
 };
@@ -964,7 +964,7 @@ class HUDgun
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_gun.paa";
+			text = "\dialogs\icons\np_gun.paa";
 		};
 	};
 };
@@ -1072,7 +1072,7 @@ class HUDmarijuana
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_marijuana.paa";
+			text = "\dialogs\icons\np_marijuana.paa";
 		};
 	};
 };
@@ -1108,7 +1108,7 @@ class HUDcocaine
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_cocaine.paa";
+			text = "\dialogs\icons\np_cocaine.paa";
 		};
 	};
 };
@@ -1143,7 +1143,7 @@ class HUDmeth
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_meth.paa";
+			text = "\dialogs\icons\np_meth.paa";
 		};
 	};
 };
@@ -1180,7 +1180,7 @@ class HUDheroin
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_heroin.paa";
+			text = "\dialogs\icons\np_heroin.paa";
 		};
 	};
 };
@@ -1215,7 +1215,7 @@ class HUDenergy
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\np_dialogs1\icons\np_energy.paa";
+			text = "\dialogs\icons\np_energy.paa";
 		};
 	};
 };

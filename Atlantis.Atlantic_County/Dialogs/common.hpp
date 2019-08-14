@@ -102,7 +102,7 @@
 
 class RscButtonSilent
 {
-	access = 0;
+	
 	type = 1;
 	text = "";
 	colorText[] = 
@@ -219,7 +219,7 @@ class RscText
 		1,
 		1
 	};
-	access = 0;
+	
 	type = 0;
 	idc = -1;
 	text = "";
@@ -281,7 +281,6 @@ class RscStructuredText
 		shadow = 1;
 	};
 	shadow = 1;
-	access = 1;
 	type = 13;
 	font = "EtelkaNarrowMediumPro";
 	idc = -1;
@@ -311,7 +310,7 @@ class RscPicture
 		1,
 		1
 	};
-	access = 0;
+	
 	type = 0;
 	idc = -1;
 	style = 48;
@@ -379,7 +378,7 @@ class RscEdit
 		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",
 		1
 	};
-	access = 0;
+	
 	type = 2;
 	x = 0;
 	y = 0;
@@ -517,7 +516,7 @@ class RscCombo
 			1
 		};
 	};
-	access = 0;
+	
 	type = 4;
 	maxHistoryDelay = 1;
 	colorSelectBackground[] = 
@@ -679,7 +678,7 @@ class RscListBox
 		};
 		autoScrollEnabled = 1;
 	};
-	access = 0;
+	
 	type = 5;
 	w = 0.4;
 	h = 0.4;
@@ -782,7 +781,7 @@ class RscButton
 		0.09,
 		1
 	};
-	access = 0;
+	
 	type = 1;
 	text = "";
 	period = 1.2;
@@ -806,7 +805,7 @@ class RscButtonInv
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
+	
 	type = 1;
 	text = "";
 	colorText[] = 
@@ -1152,7 +1151,7 @@ class RscSlider
 		1,
 		1
 	};
-	access = 0;
+	
 	type = 3;
 	style = 1024;
 	w = 0.3;
@@ -1637,7 +1636,7 @@ class RscControlsGroup
 
 class RscObject 
 {
-	access = 0;
+	
 	direction[] = {0,0,1};
 	scale = 1;
 	shadow = 0;
@@ -1648,7 +1647,7 @@ class RscObject
 
 class RscMapControl 
 {
-	access = 0;
+	
 	type = 101;
 	idc = 51;
 	style = 48;
@@ -2024,7 +2023,7 @@ class RscMapControl
 
 
 class RscListNBox : RscListbox {
-	access = 0;
+	
 	type = CT_LISTNBOX;// 102; 
 	style =ST_MULTI;
 	w = 0.4;   h = 0.4; 
@@ -2330,7 +2329,7 @@ class client_RscButton
 
 class client_RscButtonSilent
 {
-	access = 0;
+	
 	type = 1;
 	text = "";
 	colorText[] = 
@@ -2959,7 +2958,7 @@ class client_RscHitZones {
 
 class client_RscMapControl 
 {
-	access = 0;
+	
 	type = 101;
 	idc = 51;
 	style = 48;

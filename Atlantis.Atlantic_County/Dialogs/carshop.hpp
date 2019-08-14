@@ -24,7 +24,7 @@ class buycar {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\carMenu.paa";
+			text = "\dialogs\Images\carMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -79,7 +79,7 @@ class buycar {
 
 		class Saveranks : client_RscButtonMenu {
 			idc = 1115;
-			text = "Buy Car";
+			text = "Kup";
 			onButtonClick = "[] call client_fnc_carShopBuy;";
 			x = 0.85;
 			y = 0.95;
@@ -114,7 +114,7 @@ class upgradecar {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\carMenu.paa";
+			text = "\dialogs\Images\carMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -230,7 +230,7 @@ class upgradecar {
 
 		class Saveranks : client_RscButtonMenu {
 			idc = 1115;
-			text = "Upgrade Car";
+			text = "Ulepsz";
 			onButtonClick = "[] call client_fnc_upgradeShopBuy;";
 			x = 0.85;
 			y = 0.95;
@@ -255,7 +255,7 @@ class charselect {
 		{
 			idc = 1500;
 			sizeEx = 0.033;
-			text = "FEMALE";
+			text = "KOBIETA";
 			onButtonClick = "[""Female""] spawn client_fnc_playerselectFinish;";		
 			x = 0.405 * safezoneW + safezoneX;
 			y = 0.76 * safezoneH + safezoneY;
@@ -270,7 +270,7 @@ class charselect {
 		{
 			idc = 1501;
 			sizeEx = 0.033;
-			text = "MALE";
+			text = "MĘŻCZYZNA";
 			onButtonClick = "[""Male""] spawn client_fnc_playerselectFinish;";		
 			x = 0.53 * safezoneW + safezoneX;
 			y = 0.76 * safezoneH + safezoneY;
@@ -311,7 +311,7 @@ class koiladmin {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\AdminMenu.paa";
+			text = "\dialogs\Images\AdminMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;

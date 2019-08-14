@@ -56,7 +56,7 @@ _varcontainer = _container getvariable "antidupecontainer";
 //if the variable exists, we know someones using it, so we close it.
 if( ( _container != player || _container isKindOf "Car" || _container isKindOf "Ship" || _container isKindOf "Air" ) && !(isNil "_varcontainer") ) exitwith {
 
-	["This container is being used.", false] spawn domsg;
+	["To inventory jest w użyciu.", false] spawn domsg;
 
 	//if somehow we broke it and we are the owner, we will reset it and allow access again. Just incase lag or dbl click breaks something.
 
@@ -98,10 +98,16 @@ if( ( _container != player || _container isKindOf "Car" || _container isKindOf "
 
 };
 
+if (_container isKindOf "Man" && !alive _container) exitWith {
+	["Nie możesz przeszukiwać ciał",false] spawn domsg;
+	handle = true;
+	handle;
+};
+
 
 if(_container isKindOf "Car" && {(locked _container) == 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["You're not allowed to open the vehicles inventory while it's locked.", false] spawn domsg;
+		["Nie możesz otworzyć inventory pojazdu, jeśli jest zablokowany.", false] spawn domsg;
 	handle = true;
 	handle;
 	};
@@ -109,7 +115,7 @@ if(_container isKindOf "Car" && {(locked _container) == 2}) exitWith {
 
 if(_container isKindOf "Ship" && {(locked _container) == 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["You're not allowed to open the vehicles inventory while it's locked.", false] spawn domsg;
+		["Nie możesz otworzyć inventory pojazdu, jeśli jest zablokowany.", false] spawn domsg;
 	handle = true;
 	handle;
 	};
@@ -117,7 +123,7 @@ if(_container isKindOf "Ship" && {(locked _container) == 2}) exitWith {
 
 if(_container isKindOf "Air" && {(locked _container) == 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["You're not allowed to open the vehicles inventory while it's locked.", false] spawn domsg;
+		["Nie możesz otworzyć inventory pojazdu, jeśli jest zablokowany.", false] spawn domsg;
 	handle = true;
 	handle;
 	};
@@ -125,7 +131,7 @@ if(_container isKindOf "Air" && {(locked _container) == 2}) exitWith {
 
 if(_container isKindOf "LandVehicle" && {(locked _container) == 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["You're not allowed to open the vehicles inventory while it's locked.", false] spawn domsg;
+		["Nie możesz otworzyć inventory pojazdu, jeśli jest zablokowany.", false] spawn domsg;
 	handle = true;
 	handle;
 	};
@@ -133,7 +139,7 @@ if(_container isKindOf "LandVehicle" && {(locked _container) == 2}) exitWith {
 
 if(_container isKindOf "MotorCycle" && {(locked _container) == 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["You're not allowed to open the vehicles inventory while it's locked.", false] spawn domsg;
+		["Nie możesz otworzyć inventory pojazdu, jeśli jest zablokowany.", false] spawn domsg;
 	handle = true;
 	handle;
 	};

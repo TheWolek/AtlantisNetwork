@@ -1,16 +1,19 @@
+//file: setGear
 params["_type"];
 
 
 _freq = 0;
-
+[player,"don_empty"] call BIS_fnc_setUnitInsignia;
 [player, "govtbank"] remoteExec ["client_fnc_getremotevar",2];
 waitUntil { !isNil "packet"; };
 
 currentDetectives = currentDetectives - [player];
 currentMarshals = currentMarshals - [player];
+currentAIA = currentAIA - [player];
 
 publicVariable "currentDetectives";
 publicVariable "currentMarshals";
+publicVariable "currentAIA";
 
 if(_type == "uav") exitwith {
 	player addWeapon "B_UavTerminal";
@@ -31,7 +34,7 @@ if(_type == "water") exitwith {
 
 if(myJob IN ['Cop','doc'] && lastGovtUseWeapon > time) exitWith {
 
-	["You recently got gear out, please wait 5 minutes.", true] spawn domsg;
+	["Ostatnio pobrałeś sprzęt, poczekaj 5 minut.", true] spawn domsg;
 
 };
 
@@ -52,13 +55,13 @@ if(myjob == "Cop") then {
 
 	_level = player getVariable "cop";
 
-	// commissioner
-	if(_level == 10) then { 
-		player forceAddUniform "TRYK_U_B_wh_blk_Rollup_CombatUniform";		
+	// komediant
+	if(_level == 12) then { 
+		player forceAddUniform "dbo_PD_Chief";		
 	};	
-
-	if(_level == 9) then { 
-		player forceAddUniform "silver_lake_fbi";
+	//zastępca
+	if(_level == 11) then { 
+		player forceAddUniform "dbo_PD_Deputy";
 	};	
 
 	// patrol bureau
@@ -67,41 +70,32 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odzaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		format["GearLog: %1 (%2) took PATROL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
-		if (_level == 5) then { 
-			player addBackpack "AM_PoliceBelt";
-		} else {
-			player addBackpack "AM_PoliceBelt"; 
-		};
+		player addBackpack "AM_PoliceBelt";
 
-
+		//player addItem "ItemMap";
 		player linkItem "ItemMap";
+		//player addItem "ItemCompass";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		//player addItem "Oase_ID_Card_Police";
+		player linkItem "Oase_ID_Card_Police";
+		//player addItem "ItemGPS";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
-		if(packet > 100000) then {
 
-			player additemtobackpack "RH_uspm";
+		player additemtobackpack "RH_uspm";
+		player additemtobackpack "Toolkit";
 
 			for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 			for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
 			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
-
-		} ELSE {
-			player additemtobackpack "RH_g17";
-
-			for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
-			for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
-			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
-			{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
-
-		};
 
 		player addweapon "taser";
 		player addweapon "cg_baton";
@@ -109,68 +103,88 @@ if(myjob == "Cop") then {
 
 		if(female) then { 
 			if(_level == 1) then {
-				player forceAddUniform "female_police";
-				player addHeadgear "Campaign_Hat"; 
+				player forceAddUniform "dbo_PD_Cadet";
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 2) then {				
-				player forceAddUniform "female_police";
-				player addHeadgear "Campaign_Hat"; 
+				player forceAddUniform "dbo_PD_Trooper";
+				player addHeadgear "Campaign_Hat_Light"; 
 			};				
 			if(_level == 3) then {				
-				player forceadduniform "female_police2"; 
-				player addHeadgear "Campaign_Hat_black";  
+				player forceadduniform "dbo_PD_Senior"; 
+				player addHeadgear "Campaign_Hat_Light";  
 			};
 			if(_level == 4) then {				
-				player forceadduniform "female_police2";
-				player addHeadgear "Campaign_Hat_black";
+				player forceadduniform "dbo_PD_Master";
+				player addHeadgear "Campaign_Hat_Light";
+			};
+			if(_level == 5) then {				
+				player forceadduniform "dbo_PD_Corporal";
+				player addHeadgear "Campaign_Hat_Light";
 			};
 			if(_level == 6) then {
-				player forceadduniform "female_police2"; 
-				player addHeadgear "Campaign_Hat_trooper"; 
+				player forceadduniform "dbo_PD_Sergeant"; 
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 7) then {				
-				player forceAddUniform "Campaign_Hat_trooper";
-				player addHeadgear "EF_Fcap_PB"; 
+				player forceAddUniform "dbo_PD_Lieutenant";
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 			if(_level == 8) then {
-				player forceAddUniform "Campaign_Hat_trooper";
-				player addHeadgear "EF_Fcap_PB"; 
+				player forceAddUniform "dbo_PD_Captain";
+				player addHeadgear "Campaign_Hat_Light"; 
+			};
+			if(_level == 9) then {
+				player forceAddUniform "dbo_PD_Inspector";
+				player addHeadgear "Campaign_Hat_Light"; 
+			};
+			if(_level == 10) then {
+				player forceAddUniform "dbo_PD_Mayor";
+				player addHeadgear "Campaign_Hat_Light"; 
 			};
 
 		} else { 
-			if(_level == 1) then {
-				player forceAddUniform "silver_lake_statepolice";
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 2) then {
-				player forceAddUniform "silver_lake_statepolice";
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 3) then {
-				player forceadduniform "silver_lake_police"; 
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 4) then {			
-				player forceadduniform "silver_lake_police"; 
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 5) then { 
-				player forceadduniform "sl_client_c4_swat3_W"; 
-				player addVest "EF_BSF";
-				player removeweapon "cg_baton";
-				player additemtobackpack "Press_Mic_CNN_F";
-			};
-			if(_level == 6) then {	
-				player forceadduniform "silver_lake_police"; 
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 7) then {		
-				player forceAddUniform "silver_lake_fbi";
-				player addHeadgear "EF_Mcap_PB"; 
-			};
-			if(_level == 8) then {
-				player forceAddUniform "silver_lake_fbi";
-				player addHeadgear "EF_Mcap_PB"; 
+			switch (_level) do {
+				case 1: {
+					player forceAddUniform "dbo_PD_Cadet";
+					player addHeadgear "Campaign_Hat_Light";
+				};
+				case 2: {
+					player forceAddUniform "dbo_PD_Trooper";
+					player addHeadgear "Campaign_Hat_Light";
+				};
+				case 3: {
+					player forceAddUniform "dbo_PD_Senior";
+					player addHeadgear "Campaign_Hat_Light";
+				};
+				case 4: {
+					player forceAddUniform "dbo_PD_Master";
+					player addHeadgear "Campaign_Hat_Light";
+				};
+				case 5: {
+					player forceAddUniform "dbo_PD_Corporal";
+					player addHeadgear "Campaign_Hat_Light";
+				};
+				case 6: {
+					player forceAddUniform "dbo_PD_Sergeant";
+					player addHeadgear "Campaign_Hat_Light";
+				};
+				case 7: {
+					player forceAddUniform "dbo_PD_Lieutenant";
+					player addHeadgear "Campaign_Hat_Light";
+				};
+				case 8: {
+					player forceAddUniform "dbo_PD_Captain";
+					player addHeadgear "Campaign_Hat_Light";
+				};
+				case 9: {
+					player forceAddUniform "dbo_PD_Inspector";
+					player addHeadgear "Campaign_Hat_Light";
+				};
+				case 10: {
+					player forceAddUniform "dbo_PD_Mayor";
+					player addHeadgear "Campaign_Hat_Light";
+				};
 			};
 		};
 	};
@@ -181,142 +195,251 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		format["GearLog: %1 (%2) took DTU loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
-		player addBackpack "sl_client_c_carryall_invisible"; 
+		player addBackpack "AM_PoliceBelt";
 
+		//player addItem "ItemMap";
 		player linkItem "ItemMap";
+		//player addItem "ItemCompass";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		//player addItem "Oase_ID_Card_Police";
+		player linkItem "Oase_ID_Card_Police";
+		//player addItem "ItemGPS";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
-	if(packet > 100000) then {
-
 		player additemtobackpack "RH_uspm";
+		player additemtobackpack "Toolkit";
 
 		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
-
 		for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
 
-	} ELSE {
-			player additemtobackpack "RH_g17";
-
-			for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
-
-			for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
-			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
-		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
-
-	};
-
 		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
+		currentDetectives pushBack player;
+		publicVariable "currentDetectives";
 
 
 		if(female) then { 
 			
 			if(_level == 1) then {
-				player forceAddUniform "EF_FEM_4_2";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "hoodie_dtu_2";
 			};
 			if(_level == 2) then {				
-				player forceAddUniform "EF_FEM_4_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "hoodie_dtu_2";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};				
 			if(_level == 3) then {	
-				player forceAddUniform "EF_FEM_4_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "hoodie_dtu_2";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 4) then {		
-				player forceAddUniform "EF_FEM_4_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "hoodie_dtu_2";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 5) then {	
-				player forceAddUniform "EF_FEM_4_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "hoodie_dtu_2";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 6) then {
-				player forceadduniform "EF_FEM_4_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceadduniform "hoodie_dtu_1";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 7) then {				
-				player forceAddUniform "EF_FEM_4_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "hoodie_dtu_1";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 			if(_level == 8) then {
-				player forceAddUniform "EF_FEM_4_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "hoodie_dtu_1";
+				player addHeadgear "TRYK_R_CAP_BLK";
+			};
+			if(_level == 9) then {				
+				player forceAddUniform "hoodie_dtu_1";
+				player addHeadgear "TRYK_R_CAP_BLK";
+			};
+			if(_level == 10) then {
+				player forceAddUniform "hoodie_dtu_3";
+				player addHeadgear "TRYK_R_CAP_BLK";
 			};
 
 		} else { 
+			switch (_level) do {
+				case 1: {
+					player forceAddUniform "hoodie_dtu_2";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+				case 2: {
+					player forceAddUniform "hoodie_dtu_2";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+				case 3: {
+					player forceAddUniform "hoodie_dtu_2";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+				case 4: {
+					player forceAddUniform "hoodie_dtu_2";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+				case 5: {
+					player forceAddUniform "hoodie_dtu_2";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+				case 6: {
+					player forceAddUniform "hoodie_dtu_1";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+				case 7: {
+					player forceAddUniform "hoodie_dtu_1";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+				case 8: {
+					player forceAddUniform "hoodie_dtu_1";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+				case 9: {
+					player forceAddUniform "hoodie_dtu_1";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+				case 10: {
+					player forceAddUniform "hoodie_dtu_3";
+					player addHeadgear "TRYK_R_CAP_BLK";
+				};
+			};
+
+		};
+	};
+	// aia 
+	//wy jesteście oddział wewnętrzny a nie KURWA POLICJA
+	if(_type == "aia") then {
+
+		_freq = 33.3; // do ustalenia z komediantem
+
+		_cost = ((_level) * 10);
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
+		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
+		format["GearLog: %1 (%2) took AIA loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
+
+		player addBackpack "AM_PoliceBelt";
+
+		//player addItem "ItemMap";
+		player linkItem "ItemMap";
+		//player addItem "ItemCompass";
+		player linkItem "ItemCompass";
+		//player addItem "Oase_ID_Card_Police";
+		player linkItem "Oase_ID_Card_Police";
+		//player addItem "ItemGPS";
+		player linkItem "ItemGPS";
+		player linkitem "cg_tabletd";
+		player additemtobackpack "RH_uspm";
+		player additemtobackpack "Toolkit";
+
+		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
+		for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
+		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
+		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","Press_Mic_CNN_F"];
+
+		player addweapon "taser";
+		player addweapon "cg_baton";
+		player addWeapon "Binocular";
+		currentAIA pushBack player;
+		publicVariable "currentAIA";
+
+		//sprzęt do zmiany na jakiś co im dobro zrobi
+		if(female) then { 
+			
 			if(_level == 1) then {
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";		
 			};
-			if(_level == 2) then {
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+			if(_level == 2) then {				
+				player forceAddUniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";
+			};				
+			if(_level == 3) then {	
+				player forceAddUniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
-			if(_level == 3) then {
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
-			};
-			if(_level == 4) then {	
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+			if(_level == 4) then {		
+				player forceAddUniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 5) then {	
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
-			if(_level == 6) then {	
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+			if(_level == 6) then {
+				player forceadduniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
-			if(_level == 7) then {	
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+			if(_level == 7) then {				
+				player forceAddUniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";
 			};
 			if(_level == 8) then {
-				player forceAddUniform "EF_HMP_2";
-				player addVest "EF_BLT_M1B";
-				currentDetectives pushBack player;
-				publicVariable "currentDetectives";
+				player forceAddUniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";
+			};
+			if(_level == 9) then {				
+				player forceAddUniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";
+			};
+			if(_level == 10) then {
+				player forceAddUniform "dbo_AIA_Probie";
+				player addHeadgear "Campaign_Hat_Dark";
+			};
+
+		} else { 
+			switch (_level) do {
+				case 1: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
+				case 2: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
+				case 3: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
+				case 4: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
+				case 5: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
+				case 6: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
+				case 7: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
+				case 8: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
+				case 9: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
+				case 10: {
+					player forceAddUniform "dbo_AIA_Probie";
+					player addHeadgear "Campaign_Hat_Dark";
+				};
 			};
 
 		};
@@ -326,45 +449,38 @@ if(myjob == "Cop") then {
 	if(_type == "marshal") then {
 
 		_freq = 33.5;
-
+		[player,"usms_sog_patch_g"] call BIS_fnc_setUnitInsignia;
 		if(count currentMarshals > 5) exitWith { ["There are too many Marshals on duty.", true] spawn domsg; };
 
 		currentMarshals pushBack player;
 		publicVariable "currentMarshals";
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		format["GearLog: %1 (%2) took MARSHAL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
 		player addBackpack "AM_PoliceBelt"; 
 
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
-	if(packet > 100000) then {
-
 		player additemtobackpack "RH_uspm";
+		player additemtobackpack "Toolkit";
 
-		for "_i" from 1 to 6 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
+		for "_i" from 1 to 8 do {player addItemToBackPack "RH_16Rnd_40cal_usp"; };
 
 		for "_i" from 1 to 10 do {player addItemToBackPack "vvv_np_magazine_taser"; };
 		for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
 		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-	} ELSE {
-			player additemtobackpack "RH_g17";
 
-			for "_i" from 1 to 3 do {player addItemToBackPack "RH_17Rnd_9x19_g17"; };
-
-			for "_i" from 1 to 3 do {player addItemToBackPack "vvv_np_magazine_taser"; };
-			for "_i" from 1 to 1 do {player addItemToBackPack "nonlethal_swing"; };
-		{ player additemtobackpack _x; } foreach ["CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
-
-	};
+	
 		player addweapon "taser";
 		player addweapon "cg_baton";
 		player addWeapon "Binocular";
@@ -392,6 +508,12 @@ if(myjob == "Cop") then {
 				player forceAddUniform "EF_FEM_3_3G";
 			};
 			if(_level == 8) then {
+				player forceAddUniform "EF_FEM_3_3G";
+			};
+			if(_level == 9) then {				
+				player forceAddUniform "EF_FEM_3_3G";
+			};
+			if(_level == 10) then {
 				player forceAddUniform "EF_FEM_3_3G";
 			};
 
@@ -420,6 +542,12 @@ if(myjob == "Cop") then {
 			if(_level == 8) then {
 				player forceAddUniform "EF_HMMSL_2";
 			};
+			if(_level == 9) then {				
+				player forceadduniform "EF_HMMSL_2"; 
+			};
+			if(_level == 10) then {
+				player forceAddUniform "EF_HMMSL_2";
+			};
 
 		};
 	};
@@ -430,35 +558,38 @@ if(myjob == "Cop") then {
 		_freq = 33.3;
 
 		_cost = 5000;
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
-		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 
-		player forceAddUniform "sl_client_c4_swat_W";
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
+		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
+		format["GearLog: %1 (%2) took SWAT loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
+
+		player forceAddUniform "dtdev_swat_1uni";
 		
-		player addBackpack "AM_POLICEBELT";
+		player addBackpack "AM_PoliceBelt"; 
 
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
 
 		player addHeadgear "TRYK_H_PASGT_BLK";
 		player addGoggles "Balaclava_Blk_Plain";
-
-		for "_i" from 1 to 9 do {player addItemTobackpack "29rnd_300BLK_STANAG";};
-		for "_i" from 1 to 4 do {player addItemTobackpack "SUPER_Flash";};
+		[player,"swat_patch"] call BIS_fnc_setUnitInsignia;		
+		for "_i" from 1 to 9 do {player addItemTobackpack "RH_30Rnd_556x45_M855A1";};
+		//for "_i" from 1 to 4 do {player addItemTobackpack "SUPER_Flash";};
 		for "_i" from 1 to 9 do {player addItemToBackpack "RH_16Rnd_40cal_usp";};	
 
 		{ player additemtobackpack _x; } foreach ["ToolKit","CG_Spikes_Collapsed","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-		player addWeapon "hlc_rifle_vendimus";
+		player addWeapon "RH_M4sbr_b";
 		player addWeapon "RH_uspm";
-
-		player addPrimaryWeaponItem "optic_MRCO";
+		player additemtobackpack "Toolkit";
+		player addPrimaryWeaponItem "RH_compm2l";
 
 	};
 
@@ -497,9 +628,10 @@ if(myjob == "doc") then {
 		_freq = 33.2;
 
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		format["GearLog: %1 (%2) took PRISON loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
 		player addBackpack "AM_PoliceBelt";
 
@@ -531,7 +663,7 @@ if(myjob == "doc") then {
 
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
@@ -611,9 +743,10 @@ if(myjob == "doc") then {
 		_freq = 33.2;
 
 		_cost = 5000;
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove", false] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		format["GearLog: %1 (%2) took CRT loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
 		player forceAddUniform "sl_client_c4_swat_W";
 		
@@ -622,7 +755,7 @@ if(myjob == "doc") then {
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
@@ -662,26 +795,29 @@ if(myJob == "EMS") then {
 		_freq = 33.1;
 		
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		format["GearLog: %1 (%2) took FIRE loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
 		player addWeapon "Binocular";
-
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+	//	player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
 		_level = player getVariable "fire";
-		player forceAddUniform "vvv_traje_bombero_2";
-		player addBackpack "sl_client_c_medic";
+		player forceAddUniform "U_C_CBRN_Suit_01_Blue_F";
+		player addBackpack "B_SCBA_01_F";
+		player addVest "V_Safety_yellow_F";
+		player addGoggles "G_RegulatorMask_F";
 		{ player additemtobackpack _x; } foreach ["cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i","cg_atf_bandage_i"];
 
-		for "_i" from 1 to 10 do {player addItemToBackPack "Manguera_magazine";};
+		//for "_i" from 1 to 10 do {player addItemToBackPack "Manguera_magazine";};
 
-		player addweapon "fireextinguisher";
+		//player addweapon "fireextinguisher";
 	};
 
 
@@ -690,14 +826,16 @@ if(myJob == "EMS") then {
 		_freq = 33.1;
 		
 		_cost = ((_level) * 10);
-		[format["The government paid %1 for your loadout.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za twoje wyposażenie.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Twój numer odznaki: %1",player getVariable "badgenumber"], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		format["GearLog: %1 (%2) took EMS loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
+		format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, _cost call client_fnc_numberText] remoteExecCall["diag_log",2];
 
 		player addWeapon "Binocular";
 		player linkItem "ItemMap";
 		player linkItem "ItemCompass";
-		player linkItem "Itemwatch";
+		//player linkItem "Oase_ID_Card_Police";
 		player linkItem "ItemGPS";
 		player linkitem "cg_tabletd";
 
@@ -714,22 +852,43 @@ if(myJob == "EMS") then {
 			if(_level == 9) then { player forceAddUniform "female_ems7"; };
 			if(_level == 10) then { player forceAddUniform "female_ems7"; };
 		} else { 
-
-		    if(_level == 1) then { player forceAddUniform "CG_EMS1"; };
-			if(_level == 2) then { player forceAddUniform "CG_EMS2"; };
-			if(_level == 3) then { player forceAddUniform "EMT_uni1"; };
-			if(_level == 4) then { player forceAddUniform "SEMT_uni1"; };
-			if(_level == 5) then { player forceAddUniform "paramedic_uni1"; };
-			if(_level == 6) then { player forceAddUniform "sparamedic_uni1"; };
-			if(_level == 7) then { player forceAddUniform "Lieutenant_uni1"; };
-			if(_level == 8) then { player forceAddUniform "Captain_uni1"; };
-			if(_level == 9) then { player forceAddUniform "Chief_uni1"; };
-			if(_level == 10) then { player forceAddUniform "Commissioner_uni1"; };
+			switch (_level) do {
+				case 1: {
+					player forceAddUniform "CG_EMS1";
+				};
+				case 2: {
+					player forceAddUniform "CG_EMS2";
+				};
+				case 3: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 4: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 5: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 6: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 7: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 8: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 9: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+				case 10: {
+					player forceAddUniform "U_C_Paramedic_01_F";
+				};
+			};
 
 		};
 
 		player addGoggles "Masque_Chirurgical";
-		player addBackpack "sl_client_c_medic";
+		player addBackpack "B_Messenger_IDAP_F";
 		{ player additemtobackpack _x; } foreach ["cg_atf_bandage_i","cg_atf_bandage_i"];
 	};
 };
@@ -737,21 +896,22 @@ if(myJob == "EMS") then {
 if(myjob == "Mafia") then {
 
     _freq = 72.1;
+	format["GearLog: %1 (%2) took MAFIA loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 
 	_level = player getVariable "Mafia";
 	
-	if(_level >= 1 && _level <= 2) then { player forceAddUniform "sl_client_c_suit_W_O_D"; };
+	if(_level >= 1 && _level <= 2) then { player forceAddUniform "TRYK_SUITS_BLK_F"; };
 
-	if(_level >= 3 && _level <= 5) then { player addHeadgear "H_Hat_brown"; };
+	if(_level >= 3 && _level <= 5) then { player addHeadgear "TRYK_SUITS_BLK_F"; };
 
-	if(_level >= 6 && _level <= 9) then { player addHeadgear "H_Hat_tan"; };
+	if(_level >= 6 && _level <= 9) then { player addHeadgear "TRYK_SUITS_BLK_F"; };
 
 	if(_level == 10 ) then { player addHeadgear "H_Hat_grey"; };
 
 	if(_level >= 3 && _level <= 10 && female) then { 
-		player forceAddUniform "sl_client_c_suitmafia_W";
+		player forceAddUniform "TRYK_SUITS_BLK_F";
 	} else { 
-		player forceAddUniform "sl_client_c_suitmafia_W";
+		player forceAddUniform "TRYK_SUITS_BLK_F";
 	};
 
 };
@@ -803,8 +963,10 @@ if(myjob == "Mobster") then {
 if(myjob == "Legal") then {
 
 	_level = player getVariable "Legal";
+	format["GearLog: %1 (%2) took LEGAL loadout.", name player, getplayeruid player] remoteExecCall["diag_log",2];
 
 	if(_level >= 9) then { player forceAddUniform "KAEL_SUITS_BR_Judge"; };
+	if(_level < 9) then { player forceAddUniform "dbo_DOJ_Officer"; };
 
 };
 

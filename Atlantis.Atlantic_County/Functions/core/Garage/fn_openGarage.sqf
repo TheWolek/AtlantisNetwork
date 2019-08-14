@@ -11,6 +11,11 @@ if (player distance myhouse < 30) then {
 	_type = "Car";
 };
 
+if (player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30 || typeof _object IN ['Land_ModernShowroom']) then {
+	createDialog "garage";
+	_type = "Car";
+};
+
 if (str _object find "hangar" > -1 ) then { 
 	createdialog "garage"; 
 	_type = "Air";
@@ -29,8 +34,8 @@ _garage = player getVariable "garage";
 {
 	_class = _x select 1;
 	_vehicleName = [_class] call Client_fnc_getVehicleName; 
-	_Color = _x select 2;
-	_colorName = getText(configFile >> "cfgIvoryTextures" >> _Color >> "displayName");
+	//_Color = _x select 2;
+	//_colorName = getText(configFile >> "cfgIvoryTextures" >> _Color >> "displayName");
 	_license = _x select 0;
 	_availability = _x select 7;
 	if(_availability == 1) then {
@@ -46,7 +51,7 @@ _garage = player getVariable "garage";
 		};
 
 		if (_class isKindOf "Car" && _type == "Car") exitWith {
-			_veh = lbAdd [1500, format["%1 %2 [%3]", _colorName, _vehicleName, toUpper(_license)] ];
+			_veh = lbAdd [1500, format["%1 [%2]", _vehicleName, toUpper(_license)] ];
 			lbSetData [1500, _veh, format["%1",Str(_x)]];
 		};
 	};

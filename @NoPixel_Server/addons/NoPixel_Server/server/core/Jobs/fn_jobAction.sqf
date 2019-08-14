@@ -5,11 +5,11 @@ _sender = _this select 1;
 _jobType = _this select 2;
 _message = _this select 3;
 
-diag_log ["job action %1", _sender];
+diag_log format ["job action %1", _sender];
 
 _units = [];
 
-if (_jobType == "Fedex Worker") exitwith {
+if (_jobType == "Kurier") exitwith {
 	if(currentmailmen isequalto []) exitwith { [] remoteExec ["client_fnc_completemail",_sender]; };
 	_units = currentmailmen;
 	_selection = _units call BIS_fnc_selectRandom;

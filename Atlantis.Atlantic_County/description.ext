@@ -1,22 +1,29 @@
 #include "Functions.hpp"
 #include "Dialogs\Dialogs.hpp"
-//#include "infiSTAR_AdminMenu.hpp"
+#include "infiSTAR_AdminMenu.hpp"
 
 class RscTitles
 {
 	#include "dialogs\ui.hpp"
 };
 
-enableDebugConsole = 1;
+enableDebugConsole[] = {"76561198071999873","76561198084548281"};
 
-disableChannels[] = {0,1,2,3,4};
+disableChannels[] = {
+	{0,true,true},
+	{1,false,true},
+	{2,true,true},
+	{3,true,true},
+	{4,true,true},
+	{5,true,true}
+};
 
 respawn = "BASE";
 disabledAI = 1;
-author = "Koil,RetroRP Devs";
-onLoadName = "Retro Roleplay";
-onLoadMission = "retrorp.net";
-loadScreen =  "SL_Client\Textures\Dialogs\Loading\loading_screen.paa";
+author = "TheWolek, DonTheDev";
+onLoadName = "Atlantis Network";
+onLoadMission = "AtlantisNetwork.pl";
+loadScreen =  "\dtdev_marshal_service_stuff\UI\icon.paa";
 respawndelay = 99999;
 
 wreckLimit = 2;
@@ -575,6 +582,36 @@ class CfgSounds
 		sound[] = {"@cg_mission_files\sounds\vomit.ogg", 1, 1};
 		titles[] = {};
 	};	
+	class cop_siren_wail //4.394
+	{
+		name = "cop_siren_wail";
+		sound[] = {"@atlantis_sirens\cop\wail.ogg", 1, 1};
+		titles[] = {};
+	};	
+	class cop_siren_warning //0.054
+	{
+		name = "cop_siren_warning";
+		sound[] = {"@atlantis_sirens\cop\warning.ogg", 1, 1};
+		titles[] = {};
+	};	
+	class cop_siren_yelp //0.349
+	{
+		name = "cop_siren_yelp";
+		sound[] = {"@atlantis_sirens\cop\yelp.ogg", 1, 1};
+		titles[] = {};
+	};	
+	class ems_siren_wail //5.2
+	{
+		name = "ems_siren_wail";
+		sound[] = {"@atlantis_sirens\ems\wail.ogg", 1, 1};
+		titles[] = {};
+	};	
+	class ems_siren_warning //0.946
+	{
+		name = "ems_siren_warning";
+		sound[] = {"@atlantis_sirens\ems\warning.ogg", 1, 1};
+		titles[] = {};
+	};
 };
 
 

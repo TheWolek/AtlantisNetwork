@@ -35,7 +35,7 @@ if(count mychairs > 6) then {
 
 _totalallowed = player getvariable "houselevel";
 _totalallowed = _totalallowed * 3;
-if(count mychairs > _totalallowed && count attachedobjects player == 0) exitwith { ["Too much furniture", true] spawn domsg; };
+if(count mychairs > _totalallowed && count attachedobjects player == 0) exitwith { ["Za dużo mebli!", true] spawn domsg; };
 
 
 if(_type == 1) exitwith {

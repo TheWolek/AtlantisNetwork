@@ -93,6 +93,15 @@ disableSerialization;
 
 	if!(_old isEqualTo  currentMarshals) then { publicvariable "currentMarshals"; };
 
+	_old =  currentAIA;
+
+	for "_i" from 0 to 20 step 1 do {
+		_pia =  currentAIA FIND objNull;  
+		 currentAIA deleteAT _pia;  
+	};
+
+	if!(_old isEqualTo  currentAIA) then { publicvariable "currentAIA"; };
+
 
  
 	_old =  currentMafia;
@@ -316,26 +325,26 @@ disableSerialization;
 
 _allJobs = [
 
-	["Police Dispatch",currentPoliceDispatch],
-	["Fire/EMS Dispatch",currentMedicDispatch],
+	["Policja",currentPoliceDispatch],
+	["Pogotowie Ratunkowe",currentMedicDispatch],
+	
+	["Ochrona",currentSecurity],
+	["Mechanik",currentRepairmen],
 
-	["Security",currentSecurity],
-	["Repairmen",currentRepairmen],
-
-	["Judges",currentJudges],
-	["Lawyers",currentLawyers],
-	["Paralegals",currentParalegals],
+	["Sędziowie",currentJudges],
+	["Prawnicy",currentLawyers],
+	["Asystent prawny",currentParalegals],
 
 	["Public Defender",currentPubDefs],
-	["Prosecutors",currentDA],
+	["Prokuratorzy",currentDA],
 
-	["Senator",currentSenators],
-	["Mayor",currentMayor],
+	["Senatorzy",currentSenators],
+	["Burmistrz",currentMayor],
 	
-	["Mail Men",currentMailmen],
-	["Tow Trucks",currentTowTruckDrivers],
-	["News Worker",currentNewsMan],
-	["Bus Drivers",currentBusDrivers],
+	["Kurier",currentMailmen],
+	["Holownik",currentTowTruckDrivers],
+	["Prezenter",currentNewsMan],
+	["Kierowca Autobusus",currentBusDrivers],
 	["Taxi",currentTaxiDrivers]
 	
 ];

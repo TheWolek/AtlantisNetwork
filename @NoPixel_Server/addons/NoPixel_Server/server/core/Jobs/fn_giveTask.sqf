@@ -5,7 +5,7 @@ _position = _this select 0;
 _type = _this select 1;
 _input = _this select 2;
 
-diag_log ["give task %1", _type];
+diag_log format ["give task %1", _type];
 
 if(_type == "News") exitwith {
 	if(count currentNewsMan == 0) exitWith {};

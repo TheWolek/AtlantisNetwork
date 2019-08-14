@@ -4,10 +4,12 @@ _checkstr = format ["existPlayerInfo:%1", _uid];
 _check = [0, _checkstr] call ExternalS_fnc_ExtDBquery;
 _booli = (_check select 0) select 0;
 
-diag_log ["init stats %1", _uid];
+diag_log format ["init stats %1", _uid];
 
 
 if (_booli) then {
+
+	diag_log format["init exisiting %1", _uid];
 
 	_fetchstr = format ["getMessages:%1", _uid];
 	_fetch = [_fetchstr, 2] call ExternalS_fnc_ExtDBasync;
@@ -51,9 +53,11 @@ if (_booli) then {
 
 	///////////////////////////////////////////////////////// REMOVE AFTER WIPE ////////////////////////////////////////////////////////////
 
+	/*
 	if(count _statuses == 13) then {
 		_statuses pushBack 0; // tax
 	};
+	*/
 	
 	if(count (_statuses select 0) == 17) then {
 		(_statuses select 0) pushBack 0; // tax
@@ -158,7 +162,7 @@ if (_booli) then {
 
 	_mayor = false;
 
-	if(_uid == currentMayorGUID) then { _mayor = true; theMayor = _player; };
+	//if(_uid == currentMayorGUID) then { _mayor = true; theMayor = _player; };
 	if(_mayor) then { _houselevel = 3; _player setVariable ["houselevel", _houselevel, false]; };
 
 	_house = [0,0,0];
@@ -209,11 +213,15 @@ if (_booli) then {
 
 } else {
 
+	diag_log format["init new %1", _uid];
+
 	_name = name _player;
 	_items = getunitloadout _player;
-	_cash = 100;
+	//additional backpack for new players
+	_items set[5,["B_AssaultPack_cbr",[]]];
+	_cash = 0;
 	//_bank = 1500;
-	_bank = 2000;
+	_bank = 7500;
 	_cop = 0;
 	_ems = 0;
 	_mafia = 0;
@@ -241,10 +249,10 @@ if (_booli) then {
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 
 	/*
-	_insertstr = format ["insertMail:%1:%2:%3:%4", format["Hello %1. As you may have already known, Silver Lake is currently at a war with the United States of America ever since we have seceded. Thus, we regret to announce that American spies infiltrated our country and destroyed much of our data including text messages, any stored emails, and bank accounts. As an apology, we have credited all citizens $500,000.00. We are trying to negotiate peace but the belligerent country has no intent to cooperate. There have been rumors of destruction of our newly formed nation. We urge you to remain calm at all times and to remain civil as the United States Navy is occupying our Harbors. Thank you and good luck. - Mayor.",name _player], "Announcement", "Silver Lake", getplayeruid _player];
+	_insertstr = format ["insertMail:%1:%2:%3:%4", format["Hello %1. As you may have already known, Atlantis County is currently at a war with the United States of America ever since we have seceded. Thus, we regret to announce that American spies infiltrated our country and destroyed much of our data including text messages, any stored emails, and bank accounts. As an apology, we have credited all citizens $500,000.00. We are trying to negotiate peace but the belligerent country has no intent to cooperate. There have been rumors of destruction of our newly formed nation. We urge you to remain calm at all times and to remain civil as the United States Navy is occupying our Harbors. Thank you and good luck. - Mayor.",name _player], "Announcement", "Atlantis County", getplayeruid _player];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 
-	_insertstr = format ["insertMessage:%1:%2:%3:%4", "Hi, this is your first text message, welcome to the Silver Lake Verizon network!", format ["SMS from %1", name _player], "Verizon", getplayeruid _player];
+	_insertstr = format ["insertMessage:%1:%2:%3:%4", "Hi, this is your first text message, welcome to the Atlantis County Verizon network!", format ["SMS from %1", name _player], "Verizon", getplayeruid _player];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 	*/
 
@@ -255,10 +263,12 @@ if (_booli) then {
 	
 	[_player] spawn Server_fnc_initStats;
 
-	_startercars = ["ivory_190e","ivory_gti"];
+	_startercars = ["d3s_fiesta_16","d3s_e38_98","d3s_focus_14_ST","d3s_beetle_04"];
 	_class = selectRandom _startercars;
 	//add a test car for every spawn!
-	_Color = "black"; _finish = "glossy"; _rims = "default"; _windows = 0; _Lights = 0; _owner = getplayeruid _player; _licensePlate = "FrstCar"; _statuses = 1; 
+	_colors = ["\colors\oxford_white.paa","\colors\hyper_blue.paa","\colors\bronze_fire.paa","\colors\austin_yellow.paa"];
+	_color = selectRandom _colors;
+	_finish = "glossy"; _rims = "default"; _windows = 0; _Lights = 0; _owner = getplayeruid _player; _licensePlate = "FrstCar"; _statuses = 1; 
 	[_licensePlate, _class, _color, _finish, _rims, _windows, _lights, _owner, _statuses, "Add", _player] spawn Server_fnc_garageUpdate;
 
 };

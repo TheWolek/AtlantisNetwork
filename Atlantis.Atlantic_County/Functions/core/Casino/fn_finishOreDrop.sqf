@@ -38,7 +38,7 @@ if(!_success) exitwith {};
 _oreArray = ["np_goldbar2"];
 
 if(isNil "globalProtection") then { globalProtection = 0; };
-if(globalProtection != 0) exitwith { ["Error - Already processing", true] spawn domsg; };
+if(globalProtection != 0) exitwith { ["Błąd - W trakcie przetwarzania", true] spawn domsg; };
 _localProtection = 0;
 
 _thecargo = getmagazineCargo mobsterVehicle;
@@ -82,7 +82,7 @@ globalProtection = 0;
 deletevehicle theGunner;
 _price = (_totalvalue*1000);
 
-[format["%1 will be transferred to the casino vault as soon as the pirates have confirmed the grade of the gold.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
+[format["%1 zostanie przesłane po sprawdzeniu jakości złota przez piratów.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
 
 [_price] spawn {
 
@@ -91,7 +91,7 @@ _price = (_totalvalue*1000);
 	uiSleep (400+(random 400));
 
 	["casinoVault", _price, "Add",true] remoteexec ["server_fnc_setValue",2];
-	["casinoVault", format["%1 (%2) has transferred %3 into the casino vault from the boat.", name player, getplayeruid player, _price call client_fnc_numberText]] remoteexec ["server_fnc_log",2];
+	format["MoneyLog: %1 (%2) has transfered %3 into the casino vault from the boat", name player, getPlayerUID player, _price call client_fnc_numberText] remoteExecCall["diag_log",2];
 
 	[format["%1 has been transferred to the casino vault.", _price call client_fnc_numberText], true] remoteExec ["domsg",currentMobster];
 

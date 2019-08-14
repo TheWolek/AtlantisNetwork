@@ -1,3 +1,3 @@
 player setvariable ["JailTracked",nil,true]; 
 
-["GPS tracker disabled", true] spawn domsg;
+["Śledzenie GPS wyłączone", true] spawn domsg;

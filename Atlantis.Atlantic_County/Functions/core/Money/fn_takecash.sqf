@@ -8,17 +8,17 @@ closedialog 0;
 
 if(typeof _object == "plp_ct_HighSecMediumBlack") then {
 
-	["Add","Karma", random (15) ,"Stress"] call client_fnc_sustain;
+	//["Add","Karma", random (15) ,"Stress"] call client_fnc_sustain;
 
-	_cashadded = 12534 + (count currentcop * 824) + random 1;
+	_cashadded = 20000 + (count currentcop * 1250) + random 1;
 } else {
 
-	["Add","Karma", random (20) ,"Stress"] call client_fnc_sustain;
+	//["Add","Karma", random (20) ,"Stress"] call client_fnc_sustain;
 
 	_cashadded = 73323 + (count currentcop * 1131) + random 1;
 };
 
 mybank = ObjNull;
 
-[_cash] call Client_fnc_addCash;
-[format["You have stole %1.",_cashadded call client_fnc_numberText], true] spawn domsg;
+[_cashadded,true,true] call Client_fnc_addMoneyToPlayer; 
+[format["Ukradłeś %1.",_cashadded call client_fnc_numberText], true] spawn domsg;

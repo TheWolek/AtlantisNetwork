@@ -6,8 +6,8 @@ if(isNil "cashWithdraw") then { cashWithdraw = 0; };
 if(isNil "cashWithdrawTime") then { cashWithdrawTime = time; };
 
 if(cashWithdrawTime + 600 < time) then { cashWithdraw = 0; };
-if(!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F"]) && cashWithdraw + _amount > 5000 && cashWithdrawTime + 600 > time && !(_bankType IN [4,6]) ) exitWith { 
-	[format["You can only withdraw up to $5,000.00 for every 10 minutes from an ATM. You have currently withdrawn %1. To withdraw more cash, go to a Bank or wait %2.", cashWithdraw call client_fnc_numberText, [cashWithdrawTime + 600 - time, "MM:SS"] call BIS_fnc_secondsToString], true] spawn domsg; 
+if(!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F"]) && cashWithdraw + _amount > 10000 && cashWithdrawTime + 600 > time && !(_bankType IN [4,6]) ) exitWith { 
+	[format["Możesz wypłacić do $10,000.00 w ciągu 10 minut z bankomatu. Obecnie wpłaciłeś %1. W celu wpłacienia więcej udaj się do banku lub poczekaj %2.", cashWithdraw call client_fnc_numberText, [cashWithdrawTime + 600 - time, "MM:SS"] call BIS_fnc_secondsToString], true] spawn domsg; 
 };
 
 closeDialog 0;
@@ -23,14 +23,14 @@ if (_amount > 0) then
 			
 			[_amount] call Client_fnc_removeBank;
 			[_amount,true,true] call Client_fnc_addMoneyToPlayer;
-			[format["You successfully withdrew %1", _amount call client_fnc_numberText], true] spawn domsg;
+			[format["Wypłaciłeś %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashWithdraw = cashWithdraw + _amount; cashWithdrawTime = time; };
 
-			["personalBank", format["%1 (%2) withdrew %3 from his/her bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			format["MoneyLog: %1 (%2) withdrew %3 from bank account. Bank: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, player getVariable "cashinbank", player getVariable "cashinhand"] remoteExecCall["diag_log",2];
 			
 		} else {
 		
-			["You do not have enough bank balance!", true] spawn domsg;
+			["Stan konta jest zbyt niski!", true] spawn domsg;
 		
 		};
 	};
@@ -46,14 +46,14 @@ if (_amount > 0) then
 			
 			["mafiaBank", _amount, "Remove"] remoteexec ["server_fnc_setValue",2];
 			[_amount,true,true] call Client_fnc_addMoneyToPlayer;
-			[format["You successfully withdrew %1", _amount call client_fnc_numberText], true] spawn domsg;
+			[format["Wypłaciłeś %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashWithdraw = cashWithdraw + _amount; cashWithdrawTime = time; };
 
-			["mafiaBank", format["%1 (%2) withdrew %3 from the Mafia bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+			format["MoneyLog: %1 (%2) withdrew %3 from the Mafia bank account. Bank: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, str MafiaBank, player getVariable "cashinhand"] remoteExecCall["diag_log",2];
 			
 		} else {
 		
-			["You do not have enough bank balance!", true] spawn domsg;
+			["Stan konta jest zbyt niski!", true] spawn domsg;
 		
 		};
 		packet = nil;
@@ -70,14 +70,14 @@ if (_amount > 0) then
 			
 			["govtBank", _amount, "Remove"] remoteexec ["server_fnc_setValue",2];
 			[_amount,true,true] call Client_fnc_addMoneyToPlayer;
-			[format["You successfully withdrew %1", _amount call client_fnc_numberText], true] spawn domsg;
+			[format["Wypłaciłeś %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashWithdraw = cashWithdraw + _amount; cashWithdrawTime = time; };
 
-			["govtBank", format["%1 (%2) withdrew %3 from the Government bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2]; 
+			format["MoneyLog: %1 (%2) withdrew %3 from the gov bank account. Bank: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, str govtBank, player getVariable "cashinhand"] remoteExecCall["diag_log",2];
 			
 		} else {
 		
-			["You do not have enough bank balance!", true] spawn domsg;
+			["Stan konta jest zbyt niski!", true] spawn domsg;
 		
 		};
 		packet = nil;
@@ -95,14 +95,14 @@ if (_amount > 0) then
 			
 			["bikerBank", _amount, "Remove"] remoteexec ["server_fnc_setValue",2];
 			[_amount,true,true] call Client_fnc_addMoneyToPlayer;
-			[format["You successfully withdrew %1", _amount call client_fnc_numberText], true] spawn domsg;
+			[format["Wypłaciłeś %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashWithdraw = cashWithdraw + _amount; cashWithdrawTime = time; };
 
-			["bikerBank", format["%1 (%2) withdrew %3 from the Biker bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2]; 
+		 format["%1 (%2) withdrew %3 from the Biker bank account.", name player, getplayeruid player, _amount call client_fnc_numberText] remoteExecCall["diag_log",2];
 			
 		} else {
 		
-			["You do not have enough bank balance!", true] spawn domsg;
+			["Stan konta jest zbyt niski!", true] spawn domsg;
 		
 		};
 		packet = nil;
@@ -120,12 +120,13 @@ if(_bankType == 4) then {
 			
 			["casinoVault",_amount, "Remove",true] remoteexec ["server_fnc_setValue",2];
 			[_amount,true,true] call Client_fnc_addMoneyToPlayer;
-			[format["You successfully withdrew %1", _amount call client_fnc_numberText], true] spawn domsg;
-			["casinoVault", format["%1 (%2) withdrew %3 from the Casino vault.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2]; 
+			[format["Wypłaciłeś %1", _amount call client_fnc_numberText], true] spawn domsg;
+			
+			format["MoneyLog: %1 (%2) withdrew %3 from the Casino vault. Vault: %4; Cash: %5", name player, getPlayerUID player, _amount call client_fnc_numberText, str casinoVault, player getVariable "cashinhand"]  remoteExecCall["diag_log",2];
 			
 		} else {
 		
-			["You do not have enough bank balance!", true] spawn domsg;
+			["Stan konta jest zbyt niski!", true] spawn domsg;
 	
 		};
 		packet = nil;
@@ -144,14 +145,13 @@ if(_bankType == 4) then {
 			
 			["mobsterBank", _amount, "Remove"] remoteexec ["server_fnc_setValue",2];
 			[_amount,true,true] call Client_fnc_addMoneyToPlayer;
-			[format["You successfully withdrew %1", _amount call client_fnc_numberText], true] spawn domsg;
+			[format["Wypłaciłeś %1", _amount call client_fnc_numberText], true] spawn domsg;
 			if (!(typeOf cursorObject IN ["Land_CommonwealthBank","Land_Bank_DED_House_01_F","Land_buildingsCasino2"])) then { cashWithdraw = cashWithdraw + _amount; cashWithdrawTime = time; };
 
-			["mobsterBank", format["%1 (%2) withdrew %3 from the Mobster bank account.", name player, getplayeruid player, _amount call client_fnc_numberText]] remoteExec ["server_fnc_log",2]; 
 			
 		} else {
 
-			["You do not have enough bank balance!", true] spawn domsg;
+			["Stan konta jest zbyt niski!", true] spawn domsg;
 		
 		};
 		packet = nil;
@@ -169,12 +169,12 @@ if(_bankType == 4) then {
 			
 			[_amount] call Client_fnc_removeStash;
 			[_amount,false,true] call Client_fnc_addMoneyToPlayer;
-			[format["You successfully withdrew %1", _amount call client_fnc_numberText], true] spawn domsg;
+			[format["Wypłaciłeś %1", _amount call client_fnc_numberText], true] spawn domsg;
 
 			
 		} else {
 		
-			["You do not have enough bank balance!", true] spawn domsg;
+			["Stan konta jest zbyt niski!", true] spawn domsg;
 		
 		};
 

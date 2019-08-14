@@ -15,7 +15,7 @@ class giveCash
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Amount"; //--- ToDo: Localize;
+			text = "Ilość"; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.34606 * safezoneH + safezoneY;
 			w = 0.09625 * safezoneW;
@@ -24,7 +24,7 @@ class giveCash
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Give"; //--- ToDo: Localize;
+			text = "Daj"; //--- ToDo: Localize;
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.57697 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;
@@ -54,7 +54,7 @@ class loanMenu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -98,7 +98,7 @@ class loanMenu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\loanMenu.paa";
+			text = "\dialogs\Images\loanMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -118,7 +118,7 @@ class loanMenu {
 
 		class LockVoteOption : client_RscButtonMenu {
 			idc = 9995;
-			text = "Accept";
+			text = "Akceptuj";
 			onButtonClick = "[] spawn client_fnc_acceptLoan;";
 			x = 0.40029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
@@ -128,7 +128,7 @@ class loanMenu {
 
 		class CloseOption : client_RscButtonMenu {
 			idc = 9996;
-			text = "Decline";
+			text = "Odrzuć";
 			onButtonClick = "closedialog 0;";
 			x = 0.511518 * safezoneW + safezoneX;
 			y = 0.706043 * safezoneH + safezoneY;
@@ -150,7 +150,7 @@ class LoanShark {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -194,7 +194,7 @@ class LoanShark {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\LoanShark.paa";
+			text = "\dialogs\Images\LoanShark.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -204,7 +204,7 @@ class LoanShark {
 		class ExtraInfo: client_RscStructuredText
 		{
 			idc = 1001;
-			text = "Loan Information"; //--- ToDo: Localize;
+			text = "Informacje o pożyczce"; //--- ToDo: Localize;
 			
 			colorBackground[] = {0, 0, 0, 0.4};
 			x = 0.5 * safezoneW + safezoneX;
@@ -238,7 +238,7 @@ class LoanShark {
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Set Money"; //--- ToDo: Localize;
+			text = "Wysokość pożyczki"; //--- ToDo: Localize;
 			x = 0.40029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
@@ -280,7 +280,7 @@ class giveLoan
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Give"; //--- ToDo: Localize;
+			text = "Daj"; //--- ToDo: Localize;
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.64697 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;
@@ -292,7 +292,7 @@ class giveLoan
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Amount"; //--- ToDo: Localize;
+			text = "Wysokość pożyczki"; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.34606 * safezoneH + safezoneY;
 			w = 0.09625 * safezoneW;
@@ -311,7 +311,7 @@ class giveLoan
 		class RscText_1001: RscText
 		{
 			idc = 1001;
-			text = "Reason"; //--- ToDo: Localize;
+			text = "Powód"; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.44606 * safezoneH + safezoneY;
 			w = 0.09625 * safezoneW;
@@ -330,7 +330,7 @@ class giveLoan
 		class RscText_1002: RscText
 		{
 			idc = 1002;
-			text = "Date Due"; //--- ToDo: Localize;
+			text = "Data końcowa"; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.54606 * safezoneH + safezoneY;
 			w = 0.09625 * safezoneW;

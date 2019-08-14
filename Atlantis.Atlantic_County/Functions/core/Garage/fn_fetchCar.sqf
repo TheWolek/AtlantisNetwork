@@ -19,7 +19,7 @@ _car = lbData [1500, _currentitemindex];
 
 lbDelete [1500, _currentitemindex];
 
-_car = call compile format["%1", _car]; 
+_car = call compile _car; 
 
 if((_this select 0) == 1) exitwith { 
 	_vehicle = _car createvehicle getpos player; 
@@ -65,19 +65,32 @@ if((_this select 0) == 1) exitwith {
 	};
 	
 	if(myJob == "Cop") then {
-		_cost = 50;
-		_vehicle setVariable ["pdCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
-		lastGovtUseCar = time + 300;
+			_cost = 50;
+			if (typeof _vehicle IN ["GM_SWAT_TAHOE","chvwT6_raid","d3s_f10_12_UNM"]) then {
+				["Ten samochód nie ma GPS", false] spawn domsg; 
+			} else 	{
+				if (typeOf _vehicle IN ["d3s_taurus_FPI_10","d3s_taurus_UNM_10"]) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0,0,0,1)"]};
+				_vehicle setVariable ["pdCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
+				lastGovtUseCar = time + 300;
+			};
 	};
 
 	if(myJob == "doc") then {
 		_cost = 50;
+
 		_vehicle setVariable ["docCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
 		lastGovtUseCar = time + 300;
 	};
 
 	if(myJob == "EMS") then {
 		_cost = 50;
+		if (typeOf _vehicle == "d3s_fseries_17_EMS" ) then {_vehicle setObjectTextureGlobal [0,"\colors\d3s_f550\1.paa"];	_vehicle setObjectTextureGlobal [1,"\colors\d3s_f550\2.paa"];};
+		if (typeOf _vehicle == "d3s_fseries_17_TOW" ) then {_vehicle setObjectTextureGlobal [0,"\colors\d3s_f550\1.paa"];};
+		if (typeOf _vehicle == "d3s_fseries_17_Rescue" ) then {	_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];	_vehicle setObjectTextureGlobal[1,"#(rgb,8,8,3)color(0.5,0,0,1)"];};
+		if (typeOf _vehicle == "d3s_cla_15_EMS" ) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];};
+		if (typeOf _vehicle == "d3s_g500_18_EMS" ) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];};
+		if (typeOf _vehicle == "d3s_svr_17_EMS" ) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0.5,0,0,1)"];};
+
 		_vehicle setVariable ["emsCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
 	};
 
@@ -86,27 +99,28 @@ if((_this select 0) == 1) exitwith {
 	}; 
 
 	if( _vehicle isKindOf "Car") then {
-		_vehicle addItemCargoGlobal ["CG_wheel", 3];
+		_vehicle addItemCargoGlobal ["Toolkit", 1];
 		
 		if(myJob IN ["Cop","doc"]) then {
-			_vehicle addItemCargoGlobal ["np_woodbarrierlongpolice",4];
-			_vehicle addItemCargoGlobal ["np_WoodBarrierShortPoliceLightsOn",4];
-			_vehicle addItemCargoGlobal ["np_TrafficConeOrange",4];
+			_vehicle addItemCargoGlobal ["np_woodbarrierlongpolice",8];
+			_vehicle addItemCargoGlobal ["np_WoodBarrierShortPoliceLightsOn",8];
+			_vehicle addItemCargoGlobal ["np_TrafficConeOrange",6];
 		};
 
 		if(myJob IN ["EMS"]) then {
-			_vehicle addItemCargoGlobal ["np_WoodBarrierLongRed",4];
-			_vehicle addItemCargoGlobal ["np_WoodBarrierShortRedLightsOn",4];
-			_vehicle addItemCargoGlobal ["np_TrafficConeRed",4];
+			_vehicle addItemCargoGlobal ["np_WoodBarrierLongRed",8];
+			_vehicle addItemCargoGlobal ["np_WoodBarrierShortRedLightsOn",8];
+			_vehicle addItemCargoGlobal ["np_TrafficConeRed",6];
 		};
 
 	};
 
 
 	if(_cost > 0) then {
-		[format["The government paid %1 for that vehicle.",_cost call client_fnc_numberText], true] spawn domsg;
+		[format["Rząd zapłacił %1 za ten pojazd.",_cost call client_fnc_numberText], true] spawn domsg;
 		["govtBank", _cost, "Remove"] remoteExec["server_fnc_setValue",2];
-		["govtBank", format["%1 (%2) removed %3 into the Government bank account.", name player, getplayeruid player, (_cost) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+		format["MoneyLog: %1 (%2) added %3 into the gov bank account.", name player, getplayeruid player, (_cost) call client_fnc_numberText] remoteExecCall["diag_log",2];
+
 	};
 
 	closedialog 0;
@@ -145,13 +159,15 @@ if(_status == 0) then {
 
 
 [_vehicle, "information", _car] remoteExec ["Server_fnc_setVariable",2];
-_vehicle setvariable ["information",_car,false];
+_vehicle setvariable ["information",_car,true];
 
 [_vehicle, _carColor, _carFinish, _wheelColor, _windowTint, _headlightTint, _className, _numberPlate] spawn {
 	params["_vehicle", "_carColor", "_carFinish", "_wheelColor", "_windowTint", "_headlightTint", "_className", "_numberPlate"];
 	uiSleep 1;
 
 	if (_vehicle isKindOf "Car") then {
+
+		_vehicle addItemCargoGlobal ["Toolkit", 1];
 
 		if (str _className find "vory_" > -1 || str _className find "vv_" > -1 || str _className find "VV_" > -1 ) then {
 			[_vehicle, [_carColor,_carFinish], _wheelColor, _windowTint, _headlightTint] remoteExec ["ivory_fnc_initVehicle",2];
@@ -166,6 +182,9 @@ _vehicle setvariable ["information",_car,false];
 		if (str _className find "nopixel_" > -1 ) then {
 			[_vehicle, [_carColor,_carFinish]] remoteexec ["client_fnc_initVehicle",2];
 		};
+
+		_vehicle setObjectTexture[0,_carColor];
+
 	};
 };
 

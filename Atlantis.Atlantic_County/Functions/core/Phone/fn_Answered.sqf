@@ -1,5 +1,5 @@
 playSound "cgphone_click";
-["Person entered your call!", false] spawn domsg; 
+["Osoba dołączyła do twojej rozmowy!", false] spawn domsg; 
 	if(myjob == "Radio") exitwith {};
 if(myJob IN ["doc","Cop","EMS","Fire","Biker"]) then {
 

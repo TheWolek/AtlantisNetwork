@@ -17,24 +17,24 @@ processingjobs = true;
 _jobcount = count currentMailmen;
 
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Fedex Worker"; 
+	activeJobs pushback "Kurier"; 
 };
 
 _jobcount = count currentsecurity;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Security"; 
+	activeJobs pushback "Ochrona"; 
 };
 
 
 _jobcount = count currentTowTruckDrivers;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Tow Truck Driver"; 
@@ -43,16 +43,16 @@ while{true} do {
 
 _jobcount = count currentTrashMan;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Garbage Man"; 
+	activeJobs pushback "Śmieciarz"; 
 };
 
 
 _jobcount = count currentNewsMan;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "News Reporter"; 
@@ -61,25 +61,25 @@ while{true} do {
 
 _jobcount = count currentRepairmen;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Repairman"; 
+	activeJobs pushback "Mechanik"; 
 };
 
 
 _jobcount = count currentTaxiDrivers;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
-	activeJobs pushback "Taxi Driver"; 
+	activeJobs pushback "Taksówkarz"; 
 };
 
 
 _jobcount = count currentLegalAid;
 while{true} do { 
-	diag_log ["job adding %1", _jobcount];
+	diag_log format ["job adding %1", _jobcount];
 	if(_jobcount > 4) exitwith {}; 
 	_jobcount = _jobcount + 1; 
 	activeJobs pushback "Legal Aid"; 

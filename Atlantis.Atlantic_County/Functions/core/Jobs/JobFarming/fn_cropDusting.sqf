@@ -1,9 +1,9 @@
-if(myjob != "none" && myjob != "cropdusting") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none" && myjob != "cropdusting") exitwith { ["Masz już pracę!", true] spawn domsg; };
 
 if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "cropdusting";
-
+format ["Job_Log: %1 started working as %2",name player,myjob] remoteExecCall["diag_log",2];
 [] call client_fnc_hudwork;
 
 private ["_warning","_JobBase"];
@@ -40,7 +40,8 @@ if(!taskrunning) then {
 
 				if(_warnings > 30) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
+					format ["Job_Log: %1 has been laid off from %2",name player,myjob] remoteExecCall["diag_log",2];
 				};
 
 				if(vehspawned distance player > 30) then { _warnings = _warnings + 1; };
@@ -72,7 +73,7 @@ if(!taskrunning) then {
 
 					if(_amount > 0) then {
 						if(_amount > 150) then { _amount = 150; };
-						[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+						[ format["Otrzymałeś dodatkową wypłate w wysokości %1!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 						[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 					};
 

@@ -16,7 +16,7 @@ class client_PhoneCallPP_Menu
 		class phoneMain: RscPicture
 		{
 			idc = 85441;
-			text = "\np_dialogs1\Images\anonphonepng.paa";
+			text = "\dialogs\Images\anonphonepng.paa";
 			style = 2096;
 			x = 0;
 			y = 0;
@@ -99,7 +99,7 @@ class client_PhoneCall_Menu
 		class CallButton : client_RscButtonMenu {
 
 			idc = -1;
-			text = "Call";
+			text = "Dzwoń";
 			colorBackground[] = {0,0.535294117647059,0.2725490196078431,0.7};
 			onButtonClick = "[0] spawn client_fnc_CallSomebody;";
 			x = 0.52;
@@ -189,7 +189,7 @@ class client_RadioCall_Menu
 		class CallButton : client_RscButtonMenu {
 
 			idc = -1;
-			text = "Connect";
+			text = "Połącz";
 			colorBackground[] = {0,0.535294117647059,0.2725490196078431,0.7};
 			onButtonClick = "[] spawn client_fnc_radioConnectCall;";
 			x = 0.52;

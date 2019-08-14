@@ -1,7 +1,4 @@
 _player = _this select 0;
-
-diag_log ["leave job %1", _player];
-
 //jobs that can happen inside jobs, so, if found, keep searching.
 
 
@@ -46,6 +43,12 @@ if (_player IN currentCop) exitwith {
 		_pia = currentMarshals find _player;
 		currentMarshals deleteAt _pia;
 		publicvariable "currentMarshals";
+	};
+
+	if (_player IN currentAIA) then {  
+		_pia = currentAIA find _player;
+		currentAIA deleteAt _pia;
+		publicvariable "currentAIA";
 	};
 	
 };

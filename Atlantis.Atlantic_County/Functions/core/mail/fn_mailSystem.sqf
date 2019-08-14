@@ -1,16 +1,4 @@
 //	[_location,_sender,_jobType,_message] remoteExec ["client_fnc_mailSystem",_player];
-if(myjob != "none" && myjob != "mail") exitwith { ["You already have a job!", true] spawn domsg; };
-
-if(isnil "taskrunning") then { taskrunning = false; };
-
-
-
-myjob = "mail";
-[] call client_fnc_hudwork;
-private ["_warning","_JobBase","_housing"];
-
-
-
 
 if(!taskrunning) then {
 
@@ -36,14 +24,14 @@ if(!taskrunning) then {
 
 				if(_warnings > 10) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 				};
 				uisleep 3;
 			} else {
 
 				if(_warnings > 10) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 				};
 
 
@@ -54,7 +42,7 @@ if(!taskrunning) then {
 					["You successfully finished that job!", true] spawn domsg;
 
 
-					["add","Karma",1,"Fedex Worker"] call client_fnc_sustain;
+					["add","Karma",1,"Kurier"] call client_fnc_sustain;
 					_level_check = (client_level_array select 1);
 					_amount = 0;
 					if(_level_check > 10 && _level_check < 300) then { _amount = _level_check / 10; };
@@ -65,7 +53,7 @@ if(!taskrunning) then {
 
 					if(_amount > 0) then {
 						if(_amount > 250) then { _amount = 250; };
-						[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+						[ format["Otrzymałeś dodatkową wypłate w wysokości %1!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 						[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 					};
 

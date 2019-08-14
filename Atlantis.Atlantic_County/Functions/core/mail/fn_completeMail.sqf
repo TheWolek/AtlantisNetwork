@@ -1,4 +1,4 @@
-["You've got Mail!", true] spawn doquickmsg;
+["Otrzymałeś list!", true] spawn doquickmsg;
 
 awaitingmail append mail;
 
@@ -6,4 +6,4 @@ mail = awaitingmail;
 
 awaitingmail = [];
 
-[player,"Hello! You have new mail awaiting you. You can pick it up from either the post office or your home.","Silver Lake"] remoteExec ["server_fnc_sendMessage",2];
+[player,"Witaj! Masz oczekujące listy. Możesz je odebrac na poczcie lub w domu.","Atlantis County"] remoteExec ["server_fnc_sendMessage",2];

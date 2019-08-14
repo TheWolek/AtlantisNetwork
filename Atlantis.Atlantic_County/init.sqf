@@ -13,20 +13,25 @@ if (isServer) then {
 	BGJoinableGames = []; 
 	PUBLICVARIABLE "BGJOINABLEGAMES";
 	[] spawn {
-		sleep 3; 
-		["currentMayorGUID", true] call server_fnc_getValue;
-		["currentSenatorsGUID", true] call server_fnc_getValue;
-		["currentPresidentSenateGUID", true] call server_fnc_getValue;
-		["casinoRate", true] spawn server_fnc_getValue;
-		["taxRate", true] spawn server_fnc_getValue;
+		sleep 3;
+		currentmayorguid = "76561198180954621";
+		publicVariable "currentmayorguid";
+		//["currentMayorGUID", true] call server_fnc_getValue;
+		//["currentSenatorsGUID", true] call server_fnc_getValue;
+		//["currentPresidentSenateGUID", true] call server_fnc_getValue;
+		//["casinoRate", true] spawn server_fnc_getValue;
+		//["taxRate", true] spawn server_fnc_getValue;
+		//missionNamespace setVariable ["taxRate", 100];
+		taxRate = 1;
+		publicVariable "taxRate"; 
 		
-		["mafiaStash"] spawn server_fnc_getValue;
-		["bikerStash"] spawn server_fnc_getValue;
-		["mobsterStash"] spawn server_fnc_getValue;
+		//["mafiaStash"] spawn server_fnc_getValue;
+		//["bikerStash"] spawn server_fnc_getValue;
+		//["mobsterStash"] spawn server_fnc_getValue;
 		["govtBank"] spawn server_fnc_getValue;
 		["mafiaBank"] spawn server_fnc_getValue;
-		["bikerBank"] spawn server_fnc_getValue;
-		["mobsterBank"] spawn server_fnc_getValue;
+		//["bikerBank"] spawn server_fnc_getValue;
+		//["mobsterBank"] spawn server_fnc_getValue;
 		["casinoVault",true] spawn server_fnc_getValue;
 
 		[] spawn server_fnc_casinoSetup;
@@ -36,14 +41,14 @@ if (isServer) then {
 		[] spawn client_fnc_horseOdds;
 
 	};
-	[] spawn client_fnc_billboardSetup;
+	//[] spawn client_fnc_billboardSetup;
 	[server_fnc_addJob, 120] execFSM "\NoPixel_server\call.fsm";
 	[Server_fnc_cleanup, 4200] execFSM "\NoPixel_server\call.fsm";
 	[Server_fnc_checktime, 600] execFSM "\NoPixel_server\call.fsm";
 
 	[client_fnc_lottoRun, 3600] execFSM "\NoPixel_server\call.fsm";
 	[client_fnc_horseRace, 600] execFSM "\NoPixel_server\call.fsm";
-	[client_fnc_goldFarming, 300] execFSM "\NoPixel_server\call.fsm";
+	//[client_fnc_goldFarming, 300] execFSM "\NoPixel_server\call.fsm";
 	[client_fnc_camsetup, 1200] execFSM "\NoPixel_server\call.fsm";
 
 	//[client_fnc_carEvent, 5500 + random(7500)] execFSM "\NoPixel_server\call.fsm";
@@ -51,7 +56,7 @@ if (isServer) then {
 
 	GarageVariableWhore = "Flag_US_F" createVehicle [0,1,0];
 
-	evidenceBox = createVehicle ["plp_ct_FootlockerBrown", [8259.15,3033.15,0.00143814], [], 0, "CAN_COLLIDE"]; 
+	evidenceBox = createVehicle ["plp_ct_FootlockerBrown", [1350.15,976.3,2], [], 0, "CAN_COLLIDE"]; 
 	evidenceBox setDir 228.054;
 	publicVariable "evidenceBox";
 
@@ -70,12 +75,12 @@ if (isServer) then {
 
 	THETV = "nopixel_tools_tv1" createvehicle [0,0,0];
 	publicvariable "THETV";
-	_vehicle = "ivory_wrx" createvehicle [0,0,0];
-	[_vehicle, ["black","matte"], "black", 1, 1] call client_fnc_ivoryInitVehicle;
-	[_vehicle, "FuckYou", "ivory"] call client_fnc_numberPlate;
+	//_vehicle = "ivory_wrx" createvehicle [0,0,0];
+	//[_vehicle, ["black","matte"], "black", 1, 1] call client_fnc_ivoryInitVehicle;
+	//[_vehicle, "FuckYou", "ivory"] call client_fnc_numberPlate;
 
 	uisleep 0.05;
-	deletevehicle _vehicle;
+	//deletevehicle _vehicle;
 
 	setDate [2015, 3, 3, 06, 0];  
 	0 setovercast 0.15;  
@@ -187,28 +192,29 @@ if (isServer) then {
 
 	waitUntil {!isNull (findDisplay 46)};
 
-	_vehicle = "ivory_wrx" createvehiclelocal [0,0,0];
-	[_vehicle, ["black","matte"], "black", 1, 1] call client_fnc_ivoryInitVehicle;
-	[_vehicle, "FuckYou", "ivory"] call client_fnc_numberPlate;
+	//_vehicle = "ivory_wrx" createvehiclelocal [0,0,0];
+	//[_vehicle, ["black","matte"], "black", 1, 1] call client_fnc_ivoryInitVehicle;
+	//[_vehicle, "FuckYou", "ivory"] call client_fnc_numberPlate;
 
 	uisleep 0.05;
-	deletevehicle _vehicle;
+	//deletevehicle _vehicle;
 
 	[Client_fnc_HudEffects, 3] execFSM "call.fsm";
 	
-	[Client_fnc_Survival, 300] execFSM "call.fsm";
+	[Client_fnc_Survival, 600] execFSM "call.fsm";
 
 	[client_fnc_seatbelts, 1] execFSM "call.fsm";
 
 	420 cutRsc ["playerHUD","PLAIN"];
 
-
+	/*
 	if(uniform player == "" && female) then {
 		player forceadduniform "female_default_1";
 	};
 	if(uniform player == "" && male) then {
 		player forceadduniform "female_default_1";
 	};
+	*/
 	
 	client_seatwarn = false;
 	client_seatbelt = false;
@@ -239,12 +245,13 @@ if (isServer) then {
 	};
 
 	//hintC format["8 March 2017\n\nHello %1,\n\nThank you for participating in the testing phase for the beta release of NoPixel.\n\nOur developers have been working tirelessly on the update and would politely ask if you, as players of NoPixel, to please take this time now to meticulously and carefully test these development changes and report suggestions and/or bugs to the website. There have been a significant change in the code and we require the testing of the public in order to see what bugs can be discovered and the effect on the economy. Following this beta testing, there will be a final update and wipe to complete the official beta release. The website will have more information on the updates to come.\n\nWe hope you enjoy the substantial amount of money credited to your bank accounts and hope you will use it for strenuous testing. \n\nYours,\nNoPixel Staff", name player];
-
+	/*
 	if (getplayeruid player == currentMayorGUID) then {
 		Mayor = true;
 		currentMayor pushback player;
 		publicVariable "currentMayor";
 	};
+	
 	if (getplayeruid player IN currentSenatorsGUID) then {
 		Senator = true;
 		currentSenators pushback player;
@@ -253,6 +260,7 @@ if (isServer) then {
 	if (getplayeruid player == currentPresidentSenateGUID) then {
 		Psenate = true;
 	};
+	*/
 
 	waituntil { !(isnull (finddisplay 46)) };
 
@@ -264,5 +272,122 @@ if (isServer) then {
 
 	uisleep 5;
 	player setVariable["loaded", nil, false];
+	showchat true;
+
+	if (isNil "TFAR_fnc_isTeamSpeakPluginEnabled") exitwith {
+	
+	999999 cutText ["Task Force Radio is not running on your computer. Please re-sync and retry","BLACK FADED"];
+	999999 cutFadeOut 99999999;
+	if (player getvariable "taskfr") then {
+		player setvariable ["taskfr",false,true];
+	};
+};
+
+
+_uidarr = ["76561198084548281","76561198071999873"];
+_adminuid = getplayeruid player;
+if(_adminuid in _uidarr) then {
+	_isadmin = true;
+} else {
+	_isadmin = false;
+};
+
+_TFenabled = [] call TFAR_fnc_isTeamSpeakPluginEnabled;
+
+if (!(_TFenabled) && !(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
+
+	while {!([] call TFAR_fnc_isTeamSpeakPluginEnabled)} do {
+		
+		titleText ["Please enable Task Force Radio in your TS3 Plugins! || TS3 -> Settings -> Plugins", "BLACK"];
+		sleep 2;
+		if (player getvariable "taskfr") then {
+		player setvariable ["taskfr",false,true];
+		};
+	};
+};
+
+Dvid_TFEnabled = true;
+Dvid_onTsServer = "AtlantisNETWORK.PL | Official Teamspeak | Serwer RolePlay" == (call TFAR_fnc_getTeamSpeakServerName); ///////////////////////Edit This line (the channel at the top of your TS (where you right click and "Edit Virtual Server"), yes, get the name of that goes here)
+Dvid_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
+titleText ["Task Force Radio loaded succesfully","BLACK IN"];
+
+[] spawn {
+	
+
+	while {true} do {
+	
+				_uidarr = ["76561198084548281","76561198071999873"];
+				_adminuid = getplayeruid player;
+				if(_adminuid in _uidarr) then {
+					_isadmin = true;
+				} else {
+					_isadmin = false;
+				};
+						
+				
+					_TFenabled = [] call TFAR_fnc_isTeamSpeakPluginEnabled;
+					if ((!(_TFenabled)) && (Dvid_TFEnabled)) then {
+					if (!(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
+						titleText ["Please enable Task Force Radio in your TS3 Plugins! || TS3 -> Settings -> Plugins", "BLACK"];
+						Dvid_TFEnabled = false;
+					};
+							if (player getvariable "taskfr") then {
+								player setvariable ["taskfr",false,true];
+							};
+					};
+					
+					_onTsServer = "AtlantisNETWORK.PL | Official Teamspeak | Serwer RolePlay" == (call TFAR_fnc_getTeamSpeakServerName); //////////////////////Edit too pls, or dont but it wont work if you dont
+					if (!(_onTsServer)) then {
+					if (!(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
+						titleText ["Please join the teamspeak server! Adress: here", "BLACK"];
+						Dvid_onTsServer = false;
+					};
+						if (player getvariable "taskfr") then {
+							player setvariable ["taskfr",false,true];
+						};
+					} else {
+						if (!(Dvid_onTsServer)) then {
+						if (!(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
+							titleText ["TS server check completed. Welcome!","BLACK IN"];
+							Dvid_onTsServer = true;
+							};
+						if (!(player getvariable "taskfr")) then {
+							player setvariable ["taskfr",true,true];
+						};
+						};
+					};
+					
+					_onChannel = "TaskForceRadio" == (call TFAR_fnc_getTeamSpeakChannelName);
+					if (!(_onChannel)) then {
+					if (!(getplayeruid player in ["76561198084548281","76561198071999873"])) then {
+						titleText ["Please reload the plugin to join the TFR channel || Settings -> Plugins -> Reload All", "BLACK"];
+						Dvid_onChannel = false;
+					};
+						if (player getvariable "taskfr") then {
+							player setvariable ["taskfr",false,true];
+						};
+					} else {
+						if (!(Dvid_onChannel)) then {
+							titleText ["TS channel check completed. Welcome!","BLACK IN"];
+							Dvid_onChannel = true;
+						if (!(player getvariable "taskfr")) then {
+							player setvariable ["taskfr",true,true];
+						};
+						};
+					};
+					
+					
+					if ((_TFenabled) && (!(Dvid_TFEnabled))) then {
+						titleText ["Plugin enabled, welcome back!","BLACK IN"];
+						Dvid_TFEnabled = true;
+						if (!(player getvariable "taskfr")) then {
+							player setvariable ["taskfr",true,true];
+						};
+					};
+				
+				sleep 2;	
+			};
+
+};
 
 };

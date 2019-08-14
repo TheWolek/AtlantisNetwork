@@ -9,7 +9,7 @@ class ATMGovt
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -55,7 +55,7 @@ class ATMGovt
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -68,7 +68,7 @@ class ATMGovt
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.25;
+			y = 0.23;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -77,7 +77,7 @@ class ATMGovt
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.35;
+			y = 0.33;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -161,7 +161,7 @@ class ATMmafia
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -207,7 +207,7 @@ class ATMmafia
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -220,7 +220,7 @@ class ATMmafia
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.25;
+			y = 0.23;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -229,7 +229,7 @@ class ATMmafia
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.35;
+			y = 0.33;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -313,7 +313,7 @@ class ATMbiker
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -359,7 +359,7 @@ class ATMbiker
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -372,7 +372,7 @@ class ATMbiker
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.25;
+			y = 0.23;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -381,7 +381,7 @@ class ATMbiker
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.35;
+			y = 0.33;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -465,7 +465,7 @@ class ATMMobster
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -511,7 +511,7 @@ class ATMMobster
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -524,7 +524,7 @@ class ATMMobster
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.25;
+			y = 0.23;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -533,7 +533,7 @@ class ATMMobster
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.35;
+			y = 0.33;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -617,7 +617,7 @@ class CasinoVault
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -663,7 +663,7 @@ class CasinoVault
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -676,7 +676,7 @@ class CasinoVault
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.25;
+			y = 0.23;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -685,7 +685,7 @@ class CasinoVault
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.35;
+			y = 0.33;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -771,7 +771,7 @@ class ATM
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -817,7 +817,7 @@ class ATM
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -830,7 +830,7 @@ class ATM
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.25;
+			y = 0.23;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -839,7 +839,7 @@ class ATM
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.35;
+			y = 0.33;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -924,7 +924,7 @@ class DirtyMoney
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -970,7 +970,7 @@ class DirtyMoney
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ATMMenu.paa";
+			text = "\dialogs\Images\ATMMenu.paa";
 			x = -0.25;
 			y = -0.25;
 			w = 1.5;
@@ -983,7 +983,7 @@ class DirtyMoney
 			idc = 1002;
 			text = ""; //--- ToDo: Localize; balance
 			x = 0.17;
-			y = 0.25;
+			y = 0.23;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
@@ -992,7 +992,7 @@ class DirtyMoney
 			idc = 1004;
 			text = ""; //--- ToDo: Localize; cash balance
 			x = 0.17;
-			y = 0.35;
+			y = 0.33;
 			w = 0.09875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};

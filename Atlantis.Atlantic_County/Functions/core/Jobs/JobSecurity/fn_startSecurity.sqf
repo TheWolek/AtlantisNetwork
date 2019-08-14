@@ -1,12 +1,12 @@
 //[_location] remoteExec ["client_fnc_startSecurity",_player];
 //[getpos player,] remoteExec ["client_fnc_startGarbage",_player];
 // use lexus with directionals only.
-if(myjob != "none" && myjob != "Security") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none" && myjob != "Security") exitwith { ["Masz już pracę!", true] spawn domsg; };
 
 if(isnil "taskrunning") then { taskrunning = false; };
 
 myjob = "security";
-
+format ["Job_Log: %1 started working as %2",name player,myjob] remoteExecCall["diag_log",2];
 [] call client_fnc_hudwork; 
 
 private ["_warning","_JobBase"];
@@ -23,12 +23,12 @@ if(!taskrunning) then {
 		while{taskrunning && myjob == "security"} do {
 			uisleep 3;
 			if(playertasks isequalto []) then {
-				["You have no current jobs, please patrol a city and keep an eye on shops!", true] spawn domsg;
+				["Nie masz aktualnych zadań, patroluj miasto i miej oko na sklepy!", true] spawn domsg;
 				uisleep 60;
 
 				if(_warnings > 10) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 				};
 
 
@@ -36,7 +36,7 @@ if(!taskrunning) then {
 
 				if(_warnings > 10) then { 
 					taskrunning = false; 
-					["You have been laid off from your job!", true] spawn domsg; 
+					["Zostałeś zwolniony z pracy!", true] spawn domsg; 
 				};
 
 				if(player distance vehspawned > 30) then { _warnings = _warnings + 1; };
@@ -44,8 +44,8 @@ if(!taskrunning) then {
 
 
 				if(player distance ((playertasks select 0) select 0) < 15) then {
-					["You have arrived, patrol the area for suspects - do not shoot, you are here to check for problems and call the police if needed!", true] spawn domsg;
-					paycheck = paycheck + 55;
+					["Dotarłeś na miejsce - patroluj okolicę w celu szukania przestępców- nie strzelaj do nich, zadzwoń po policję!", true] spawn domsg;
+					paycheck = paycheck + 210;
 					playertasks deleteat 0;
 					uisleep 3;
 					deletemarkerlocal format["job%1",getPlayerUID player];
@@ -68,7 +68,7 @@ if(!taskrunning) then {
 
 
 				} else {
-					["A store robbery has occured!: Job Type - Security", true] spawn domsg;	
+					["Doszło do kradzieży!: Typ pracy - ochrona", true] spawn domsg;	
 					[((playertasks select 0) select 0)] call client_fnc_jobMarker;			
 					uisleep 3;
 				};

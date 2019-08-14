@@ -8,7 +8,7 @@ switch (_code) do
 {
 	case 59: 
 	{
-		if(!(adminLevel >= 7)) exitWith {};
+		if(!(adminLevel >= 1)) exitWith {};
 
 		if (!_shift && !_ctrlKey && !_alt) then {
 			if(!isNull(findDisplay 1444)) exitWith {};
@@ -27,12 +27,13 @@ switch (_code) do
 	case 57:
 	{
 		if(EM_allowed) then { EM_Allowed = false; };
-        if(isNil "jumpActionTime") then { jumpActionTime = 0; };
+        /*if(isNil "jumpActionTime") then { jumpActionTime = 0; };
         if( (time - jumpActionTime) > 2 && !client_istazed && !imrestrained && (animationState player) != "unconscious" && (animationState player) != "Incapacitated" && (animationState player) != "deadstate") then {
             jumpActionTime = time;
             player spawn client_fnc_jumpScript;
             _handled = true;
         };
+		*/
 		if(!ClientInterrupted) then {
 			ClientInterrupted = true;
 		};
@@ -46,6 +47,14 @@ switch (_code) do
 			};
 
 		};
+	};
+	//skok twoja pierdolona mać zajebie kurwa valdora i zrucham mu starą
+	case 47:
+	{
+	    if(!_shift && !_alt && _ctrlKey) then
+	    {
+			player spawn client_fnc_jumpScript;
+	    };
 	};
 	case 61:
 	{
@@ -203,6 +212,8 @@ switch (_code) do
 	{
 		if(!(myJob IN ["EMS","Cop","doc"])) then {
 			[] spawn client_fnc_playermapMarkers;
+			waitUntil{visiblemap};
+			["All"] spawn client_fnc_marker;
 		} else {
 			if(myJob == "EMS") then {
 				[] spawn client_fnc_mapMarkers;
@@ -214,7 +225,7 @@ switch (_code) do
 		};
 	};
 
-	case 3:
+	case 5:
 	{
 		if(isNil "LoggedIn") then { LoggedIn = false; };
 		if(LoggedIN) then { _relpos = player getRelPos [10, 0]; player setpos _relpos; };
@@ -258,6 +269,7 @@ switch (_code) do
         }; 
     };
 
+	//1 taser, 
 	case 2:
 	{
 
@@ -272,7 +284,7 @@ switch (_code) do
 						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "RH_uspm"; player addweapon "RH_uspm"; player selectweapon "RH_uspm"; player addItemToBackPack "vvv_np_magazine_taser";
 						444 cutRsc ["HUDguncop","PLAIN"]; 
 					} else {
-						["ERROR: No USP Pistol in backpack", true] spawn domsg;
+						["Błąd: Brak pistoletu USP w plecaku", true] spawn domsg;
 					};
 					
 				};
@@ -285,7 +297,7 @@ switch (_code) do
 						player action ["SwitchWeapon", player, player, 400]; uisleep 2.1; player removeitem "taser"; player addweapon "taser"; player selectweapon "taser"; player addItemToBackpack "RH_16Rnd_40cal_usp";
 						444 cutRsc ["HUDtasercop","PLAIN"]; 
 					} else {
-						["ERROR: No Taser in backpack", true] spawn domsg;
+						["Błąd: Brak Paralizatora w plecaku", true] spawn domsg;
 					};
 
 				};
@@ -317,7 +329,8 @@ switch (_code) do
 		};
 	};
 	
-	case 25:
+	//Shift+O fadeSound
+	case 24:
 	{
 	    if(_shift && !_alt && !_ctrlKey && !busyPlayer) then
 	    {
@@ -325,24 +338,100 @@ switch (_code) do
 			if (!client_fadeSound) then 
 			{
 				1 fadeSound 0.1;
-				["Your sound has been lowered.", false] spawn domsg;
+				["Włożyłeś zatyczki do uszu.", false] spawn domsg;
 				client_fadesound = true;
 			}
 			else
 			{
 				1 fadeSound 1;
-				["Your sound has returned to normal.", false] spawn domsg;
+				["Wyjąłeś zatyczki z uszu", false] spawn domsg;
 				client_fadesound = false;
 			};
 	        _handle = true;
 	    };
 	};
 
+	//powalenie  
+	case 34:
+	{
+		if(_shift && !_ctrlKey  && currentWeapon player == "" && myjob =="Cop" && cursorObject isKindOf "Man" && !imrestrained ) then {
+			[cursorObject] call client_fnc_tackleAction;
+			_handle = true;
+		};
+  	};
+
+//F Key (Yelp & Sirens)
+	case 33: {
+
+		if(_shift && !_ctrlKey) then {
+            if(myjob == "Cop" && {vehicle player != player} && {!atlantis_siren2_active} && {((driver vehicle player) == player)}) then {
+                [] spawn {
+                    atlantis_siren2_active = true;
+					sleep 1.2;
+                    atlantis_siren2_active = false;
+                };
+                _veh = vehicle player;
+                if (isNil {_veh getVariable "siren2"}) then {_veh setVariable ["siren2",false,true];};
+                if ((_veh getVariable "siren2")) then {
+					["Yelp OFF", false] spawn domsg; 		
+                    _veh setVariable["siren2",false,true];
+                } else {
+					["Yelp ON", false] spawn domsg; 	
+                    _veh setVariable["siren2",true,true];
+					[_veh] remoteExec ["client_fnc_copsiren2",-2];
+                };
+            };
+        };
+
+		if(_shift && !_ctrlKey) then {
+            if(myjob == "EMS" && {vehicle player != player} && {!atlantis_siren2_active} && {((driver vehicle player) == player)}) then {
+                [] spawn {
+                    atlantis_siren2_active = true;
+					sleep 1.2;
+                    atlantis_siren2_active = false;
+                };
+                _veh = vehicle player;
+                if (isNil {_veh getVariable "siren2"}) then {_veh setVariable ["siren2",false,true];};
+                if ((_veh getVariable "siren2")) then {
+					["Warning OFF", false] spawn domsg; 		
+                    _veh setVariable["siren2",false,true];
+                } else {
+					["Warning ON", false] spawn domsg; 	
+                    _veh setVariable["siren2",true,true];
+					[_veh] remoteExec ["client_fnc_medicSiren2",-2];
+                };
+            };
+        };
+
+		if (_ctrlKey && !_shift) then {
+			if (myjob IN ["Cop","EMS"] && {vehicle player != player} && {!atlantis_siren_active} && {((driver vehicle player) == player)}) then {
+				[] spawn {
+					atlantis_siren_active = true;
+					sleep 4.7;
+					atlantis_siren_active = false;
+				};
+
+				_veh = vehicle player;
+				if (isNil {_veh getVariable "siren"}) then {_veh setVariable ["siren",false,true];};
+				if ((_veh getVariable "siren")) then {
+					["Wail OFF", false] spawn domsg; 		
+					_veh setVariable ["siren",false,true];
+				} else {
+					["Wail ON", false] spawn domsg; 		
+					_veh setVariable ["siren",true,true];
+					if(myjob =="Cop") then {
+						[_veh] remoteExec ["client_fnc_copSiren",-2];
+					} else {
+						[_veh] remoteExec ["client_fnc_medicSiren",-2];
+					};
+				};
+			};
+		};
+	};	
 
 
 
-
-
+	//Shift+5
 	case 6:
 	{
 
@@ -357,7 +446,7 @@ switch (_code) do
 						spikeAntispam = false;
 					};	
 					deletevehicle _spikeStrips;
-					["You picked up some spike strips!", false] spawn domsg; 
+					["Podniosłeś kolczatki!", false] spawn domsg; 
 					player additem "CG_Spikes_Collapsed";
 			};
 
@@ -371,6 +460,7 @@ switch (_code) do
 		};
 	};
 	
+	//surrender Shift+6
 	case 7:
 	{
 		if (_shift) then { _handle = true; };
@@ -382,7 +472,7 @@ switch (_code) do
 				[] spawn client_fnc_keyBusyPlayer;
 				if (player getVariable ["surrender", false]) then
 				{
-					player setVariable ["surrender", nil, false];
+					player setVariable ["surrender", nil, true];
 				} else
 				{
 					[] spawn client_fnc_surrender;
@@ -400,7 +490,7 @@ switch (_code) do
 	    };
 	};
 
-	//Holster / recall weapon.
+	//Holster / recall weapon. Shift+H Ctrl+H
 	case 35:
 	{
 		if(_shift && !_ctrlKey && currentWeapon player != "") then {
@@ -415,6 +505,21 @@ switch (_code) do
 			};
 		};
   	};
+
+	//panic button
+	case 74:
+	{
+		if (_ctrlKey && _shift && myjob IN ["Cop","Ems","DA","DOJ"] && !imRestrained && "itemsjoint" IN items player) then {
+			[] spawn { 	
+				//["itemsjoint",0] spawn client_fnc_removeitem;
+				playSound "panicbutton";
+				sleep 2;
+				//[player,name player,getPos player] remoteExec ["client_fnc_recivePB",-2];
+				[] spawn client_fnc_panicbuttonUse;
+
+			};
+		};
+	};
 };
 
 _handle;

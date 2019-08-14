@@ -9,7 +9,7 @@ Refine Logs trees by koil
 			_sound = round(random 5);
 			playSound3D ["CG_Jobs\sounds\mining\mineF2.ogg", player, false, getPosasl player, 31, 1, 15];
 			sleep 1.5;
-			["You are refining Metal, stay still!", true] spawn domsg;
+			["Przetwarzasz metal, stój w miejscu!", true] spawn domsg;
 
 			_chance = (floor random 2);
 			switch (_chance) do
@@ -30,4 +30,4 @@ Refine Logs trees by koil
 
 		};
 	} forEach attachedObjects vehspawned;
-	["Refined Metal placed in inventory", true] spawn domsg;  
+	["Przetworzony metal został włożony do twojego plecaka", true] spawn domsg;  

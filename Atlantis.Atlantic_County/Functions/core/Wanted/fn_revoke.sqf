@@ -5,7 +5,7 @@ _remove = call compile format["%1",(lbData[9001,(lbCurSel 9001)])];
 closedialog 0;
 
 if(_remove == 0) then {
-	_licenseName = "Driver's License";
+	_licenseName = "Prawo Jazdy";
 };
 
 if(_remove == 3) then {
@@ -13,51 +13,51 @@ if(_remove == 3) then {
 };
 
 if(_remove == 2) then {
-	_licenseName = "Mining License";
+	_licenseName = "Licencja górnika";
 };
 
 if(_remove == 3) then {
-	_licenseName = "Logging License";
+	_licenseName = "Licencja drwala";
 };
 
 if(_remove == 4) then {
-	_licenseName = "Fishing License";
+	_licenseName = "Licencja rybaka";
 };
 
 if(_remove == 5) then {
-	_licenseName = "Truck License";
+	_licenseName = "Prawo Jazdy na ciężarówki";
 };
 
 if(_remove == 6) then {
-	_licenseName = "Pilot's License";
+	_licenseName = "Licencja pilota";
 };
 
 if(_remove == 7) then {
-	_licenseName = "Oil Trade License";
+	_licenseName = "Licencja handlarza oleju";
 };
 
 if(_remove == 8) then {
-	_licenseName = "PD SWAT Leader Certification";
+	_licenseName = "Licencja Dowódcy SWAT";
 };
 
 if(_remove == 9) then {
-	_licenseName = "PD SWAT Certification";
+	_licenseName = "Licencja SWAT";
 };
 
 if(_remove == 10) then {
-	_licenseName = "PD Scuba Leader Certification";
+	_licenseName = "Licencja Dowódcy nurków PD";
 };
 
 if(_remove == 11) then {
-	_licenseName = "PD Scuba Certification";
+	_licenseName = "Licencja nurka PD";
 };
 
 if(_remove == 12) then {
-	_licenseName = "PD Air Leader Certification";
+	_licenseName = "Licencja Dowódcy AIR PD";
 };
 
 if(_remove == 13) then {
-	_licenseName = "PD Air Certification";
+	_licenseName = "Licencja AIR PD";
 };
 
 if(_remove == 14) then {
@@ -77,11 +77,11 @@ if(_remove == 17) then {
 };
 
 if(_remove == 18) then {
-	_licenseName = "Boat License";
+	_licenseName = "Patent motorowodny";
 };
 
 if(_remove == 19) then {
-	_licenseName = "Casino Membership";
+	_licenseName = "Członkostwo Kasyna";
 };
 
 if(_remove == 20) then {
@@ -97,11 +97,11 @@ if(_remove == 22) then {
 };
 
 if(_remove == 23) then {
-	_licenseName = "FD Air Leader Certification";
+	_licenseName = "Licencja Dowódcy AIR FD";
 };
 
 if(_remove == 24) then {
-	_licenseName = "FD Air Certification";
+	_licenseName = "Licencja AIR FD";
 };
 
 if(_remove == 25) then {
@@ -109,12 +109,12 @@ if(_remove == 25) then {
 };
 
 if(_remove == 26) then {
-	_licenseName = "FD Scuba Certification";
+	_licenseName = "Licencja Nurka FD";
 };
 
 if(_remove == 27) then {
-	_licenseName = "Paralegal License";
+	_licenseName = "Licencja prawnika";
 };
 
-
-["license", format["%1 (%2) revoked a(n) %3 from %4 (%5).", name player, getplayeruid player, _licenseName, name currentcursortarget, getplayeruid currentcursortarget]] remoteExec ["server_fnc_log",2];
+format["LicenseLog: %1 (%2) revoked a(n) %3 from %4 (%5).", name player, getplayeruid player, _licenseName, name cursorObject, getPlayerUID cursorObject] remoteExecCall["diag_log",2];
+//["license", format["%1 (%2) revoked a(n) %3 from %4 (%5).", name player, getplayeruid player, _licenseName, name currentcursortarget, getplayeruid currentcursortarget]] remoteExec ["server_fnc_log",2];

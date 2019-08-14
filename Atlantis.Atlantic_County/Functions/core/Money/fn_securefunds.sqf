@@ -6,5 +6,5 @@ _cash = 1000 + (count currentcop * 500);
 
 [_cash] call Client_fnc_addCash;
 
-[format["You secured the cash and were paid %1.",_cashadded], true] spawn domsg;
+[format["Odzyskałeś pieniądze i dostałeś wypłatę w wysokości %1.",_cashadded], true] spawn domsg;
 

@@ -13,7 +13,7 @@ while{_doorkick > 0} do {
 	if(_locked != 2) exitwith { _failed = true; };
 
 	sleep 1;
-	["You are kicking out the windows %1 time remaining.",_doorkick, true] spawn domsg;
+	["Wykopujesz okna, zostało jescze %1.",_doorkick, true] spawn domsg;
 	_vehspeed = speed (vehicle player);
 	if(_vehspeed > 0) exitwith { _failed = true; };
 };

@@ -2,9 +2,9 @@ params ["_vehspawn","_endmission","_mafia","_veh"];
 private["_mafiaVehic","_bikerVehicle"];
 
 current_cars pushback _veh;
-["A mission has been updated.", true] spawn domsg;
+["Misja została zaktualizowana.", true] spawn domsg;
 
-[_vehspawn,"Drug Delivery Pickup","Location", player] spawn client_fnc_hudHelper;
+[_vehspawn,"Pojazd z narkotykami","Location", player] spawn client_fnc_hudHelper;
 
 endOfmission = _endmission;
 
@@ -20,7 +20,7 @@ if(myJob == "Biker") then {
 while {true} do {
 
 	if( player distance _vehspawn < 15 || speed _veh > 10 || isNull _veh ) exitwith {
-		[_endmission,"Drug Delivery Drop Off","Location", player] spawn client_fnc_hudHelper;
+		[_endmission,"Miejsce dostarczenia narkotyków","Location", player] spawn client_fnc_hudHelper;
 	};
 	sleep 1;
 };

@@ -21,59 +21,59 @@ _list = _display displayCtrl 9001;
 _licenses = licenseArray;
 
 if(0 IN _licenses) then {
-	_list lbAdd "Driver's License";
+	_list lbAdd "Prawo Jazdy kat B";
 };
 
 if(1 IN _licenses) then {
-	_list lbAdd "Class 1 Weapons License";
+	_list lbAdd "Licencja na broń klasy 1";
 };
 
 if(2 IN _licenses) then {
-	_list lbAdd "Mining License";
+	_list lbAdd "Licencja górnika";
 };
 
 if(3 IN _licenses) then {
-	_list lbAdd "Logging License";
+	_list lbAdd "Licencja drwala";
 };
 
 if(4 IN _licenses) then {
-	_list lbAdd "Fishing License";
+	_list lbAdd "Licencja rybaka";
 };
 
 if(5 IN _licenses) then {
-	_list lbAdd "Truck License";
+	_list lbAdd "Prawo Jazdy kat C";
 };
 
 if(6 IN _licenses) then {
-	_list lbAdd "Pilot's License";
+	_list lbAdd "Licencja pilota";
 };
 
 if(7 IN _licenses) then {
-	_list lbAdd "Oil Trade License";
+	_list lbAdd "Licencja handlarza oleju";
 };
 
 if(8 IN _licenses) then {
-	_list lbAdd "PD SWAT Leader Certification";
+	_list lbAdd "Licencja Dowódcy SWAT";
 };
 
 if(9 IN _licenses) then {
-	_list lbAdd "PD SWAT Certification";
+	_list lbAdd "Licencja SWAT";
 };
 
 if(10 IN _licenses) then {
-	_list lbAdd "PD Scuba Leader Certification";
+	_list lbAdd "Licencja Dowódcy nurków PD";
 };
 
 if(11 IN _licenses) then {
-	_list lbAdd "PD Scuba Certification";
+	_list lbAdd "Licencja nurka PD";
 };
 
 if(12 IN _licenses) then {
-	_list lbAdd "PD Air Leader Certification";
+	_list lbAdd "Licencja Dowódcy AIR PD";
 };
 
 if(13 IN _licenses) then {
-	_list lbAdd "PD Air Certification";
+	_list lbAdd "Licencja AIR PD";
 };
 
 if(14 IN _licenses) then {
@@ -93,11 +93,11 @@ if(17 IN _licenses) then {
 };
 
 if(18 IN _licenses) then {
-	_list lbAdd "Boat License";
+	_list lbAdd "Patent motorowodny";
 };
 
 if(19 IN _licenses) then {
-	_list lbAdd "Casino Membership";
+	_list lbAdd "Członkostwo Kasyna";
 };
 
 if(20 IN _licenses) then {
@@ -105,19 +105,19 @@ if(20 IN _licenses) then {
 };
 
 if(21 IN _licenses) then {
-	_list lbAdd "Bus License";
+	_list lbAdd "Prawo jazdy kat D";
 };
 
 if(22 IN _licenses) then {
-	_list lbAdd "Class 2 Weapons License";
+	_list lbAdd "Licencja na broń klasy 2";
 };
 
 if(23 IN _licenses) then {
-	_list lbAdd "FD Air Leader Certification";
+	_list lbAdd "Licencja Dowódcy AIR FD";
 };
 
 if(24 IN _licenses) then {
-	_list lbAdd "FD Air Certification";
+	_list lbAdd "Licencja AIR FD";
 };
 
 if(25 IN _licenses) then {
@@ -125,9 +125,9 @@ if(25 IN _licenses) then {
 };
 
 if(26 IN _licenses) then {
-	_list lbAdd "FD Scuba Certification";
+	_list lbAdd "Licencja Nurka FD";
 };
 
 if(27 IN _licenses) then {
-	_list lbAdd "Paralegal License";
+	_list lbAdd "Licencja prawnika";
 };

@@ -25,19 +25,19 @@ _cost = call compile format["%1", (_status select 2)];
 
 _totalprice = _cost * _Quantity;
 
-if(_totalprice == 0 || _totalprice < 0) exitwith { ["You can not purchase an item that costs $0.00", true] spawn domsg; };
+if(_totalprice == 0 || _totalprice < 0) exitwith { ["Nie możesz kupić przedmiotu za $0.00", true] spawn domsg; };
 _error = false;
 
 if(_typebuy == "fish") then {
 	_rarefish = {_x IN ["Fish_Mackerel_7", "Fish_Tuna_7", "Fish_Trout_Rare", "Fish_Shark_Rare"]} count magazines player;
-	if(_rarefish < _totalprice) exitwith { ["Not enough Fish!", true] spawn domsg; _error = true; };
+	if(_rarefish < _totalprice) exitwith { ["Nie wystarczająca ilość ryb!", true] spawn domsg; _error = true; };
 };
 
 
 
 if(_typebuy == "standard") then {
 	_cashcheck = [1,_totalprice] call client_fnc_checkmoney;
-	if!(_cashCheck) then { [format["%1 - You do not have enough money to pay for this!",_totalprice call client_fnc_numberText], true] spawn domsg; _error = true; };	
+	if!(_cashCheck) then { [format["%1 - Nie masz wystarczająco pieniędzy!",_totalprice call client_fnc_numberText], true] spawn domsg; _error = true; };	
 };
 
 if(_error) exitwith {};
@@ -48,7 +48,7 @@ if(_error) exitwith {};
 player allowdamage false;
 
 if(isNil "shopholder") then {
-	shopholder = "plp_ct_woodboxlightbig" createVehicleLocal (getpos player);  
+	shopholder = "plp_ct_woodboxlightsmall" createVehicleLocal (getpos player);  
 };
 player disablecollisionwith shopholder;
 shopholder setpos (getposATL player);	
@@ -112,14 +112,19 @@ if(_typebuy == "standard") then {
 
 	[_totalPrice] call Client_fnc_removeCash;
 	["govtBank", _totalPrice-(_totalPrice/(1+taxRate/100)), "Add"] remoteExec["server_fnc_setValue",2];
-	["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_totalPrice-(_totalPrice/(1+taxRate/100))) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	//["govtBank", format["%1 (%2) added %3 into the Government bank account.", name player, getplayeruid player, (_totalPrice-(_totalPrice/(1+taxRate/100))) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 };
 
 if(_item IN  ["np_tequila","murshun_cigs_lighter","murshun_cigs_cigpack"]) then {
 	["bikerBank", _totalPrice, "Add"] remoteexec ["server_fnc_setValue",2];
 };
 
-[format["You bought %1 of %2 for %3 - check the box at your feet.",_quantity, _item, _totalprice call client_fnc_numberText],true] spawn domsg;
+if(_item == "cg_tabletd") then {
+	["By wziąć tablet przenieś go do plecaka",true] spawn domsg;
+};
+
+[format["Kupiłeś %1 %2 za %3. Zobacz skrzynkę pod twoimi nogami.",_quantity, _item, _totalprice call client_fnc_numberText],true] spawn domsg;
+format["Money_Log: %1 (%2) bought %3 %4 for %5",name player, getplayeruid player, _quantity, _item, _totalprice] remoteExecCall["diag_log",2];
 
 _totalTickets = 0;
 _handle = false;
@@ -133,7 +138,7 @@ if (time >= wantedTimer + 300 && count currentMarshals > 0) then {
 
         [getPos player, "Spotted Wanted Person", "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
         wantedTimer = time;
-        [format["Dispatch to %1: A wanted person has been spotted at %2 buying items.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg",currentMarshals];
+        [format["Dyspozytor do %1: Poszukiwana osoba została zauważona %2 kupując przedmioty.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg",currentMarshals];
                 
     };
 };

@@ -12,7 +12,7 @@ class vote_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -56,7 +56,7 @@ class vote_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\votingMenu.paa";
+			text = "\dialogs\Images\votingMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -122,7 +122,7 @@ class placefurniture {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\rentshop.paa";
+			text = "\dialogs\Images\rentshop.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -185,7 +185,7 @@ class rentshop {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\rentshop.paa";
+			text = "\dialogs\Images\rentshop.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -250,7 +250,7 @@ class tax_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\settaxMenu.paa";
+			text = "\dialogs\Images\settaxMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -314,7 +314,7 @@ class bill_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\settaxMenu.paa";
+			text = "\dialogs\Images\settaxMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -378,7 +378,7 @@ class payTax_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\settaxMenu.paa";
+			text = "\dialogs\Images\settaxMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -638,7 +638,7 @@ class shop_update {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\updateShopMenu.paa";
+			text = "\dialogs\Images\updateShopMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -648,7 +648,7 @@ class shop_update {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -767,7 +767,7 @@ class Shop_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ShopMenu.paa";
+			text = "\dialogs\Images\ShopMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -777,7 +777,7 @@ class Shop_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -887,8 +887,8 @@ class GUN_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GunMenu.paa";
-			x = 0.275605 * safezoneW + safezoneX;
+			text = "\dialogs\Images\GunMenu.paa";
+			x = 0.025625 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
 			h = 0.747851 * safezoneH;
@@ -897,7 +897,7 @@ class GUN_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -933,7 +933,7 @@ class GUN_Menu {
 			idc = 9001;
 			text = "";
 			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
-			x = 0.311121 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
 			h = 0.343181 * safezoneH;
@@ -943,7 +943,7 @@ class GUN_Menu {
 			idc = 9993;
 			text = "";
 			onButtonClick = "[""gunstore""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -953,7 +953,7 @@ class GUN_Menu {
 			idc = 9994;
 			text = "";
 			onButtonClick = "[""veststore""] spawn client_fnc_loadStore;"; 
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -963,7 +963,7 @@ class GUN_Menu {
 			idc = 9995;
 			text = "Purchase";
 			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -973,7 +973,7 @@ class GUN_Menu {
 			idc = 9996;
 			text = "Close";
 			onButtonClick = "closedialog 0;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0878542 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -989,7 +989,621 @@ class GUN_Menu {
 	};
 };
 
+class police_equipment {
+	idd = 9999;
+	name= "police_equipment";
+	onLoad = "[] spawn client_fnc_storesetup";
+	onunload = "dialog_open = false; deletevehicle cockbag; client_kcCamera cameraEffect [""TERMINATE"",""BACK""]; camDestroy client_kcCamera;";
+	movingEnable = 0;
+	enableSimulation = 1;
 
+	class controls {
+
+		class BASE
+		{    
+			shadow = 0;
+			type = 0;
+			style = 2096;
+			sizeEx = 1;
+			font = "PuristaMedium";
+			colorBackground[] = {};
+			colorText[] = {};
+			tooltipColorText[] = {1,1,1,1};
+			tooltipColorBox[] = {1,1,1,1};
+			tooltipColorShade[] = {0,0,0,0.65};
+			idc = 191911;
+			text = "\atlantis_client\police_store.paa";
+			x = 0.025625 * safezoneW + safezoneX;
+			y = 0.126074 * safezoneH + safezoneY;
+			w = 0.447732 * safezoneW;
+			h = 0.747851 * safezoneH;
+		};  
+
+		class HideButton
+		{
+		    colorBorder[] = {0,0,0,0.05};
+		    
+		    type = CT_BUTTON;
+		    text = "";
+		    colorText[] = {1, 1, 1, 0};
+		    colorActive[] = {1, 1, 1, 0};
+		    colorTextSelect[] = {1, 1, 1, 0};
+		    colorDisabled[] = {1, 1, 1, 0};
+		    colorBackground[] = {0, 0, 0, 0};
+		    colorBackgroundActive[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", 0.05};
+		    colorBackgroundDisabled[] = {0, 0, 0, 0.5};
+		    colorFocused[] = {0, 0, 0, 0};
+		    colorShadow[] = {0, 0, 0, 0};
+		    soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+		    soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+		    soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
+		    soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+		    style = 2;
+		    x = 0;
+		    y = 0;
+		    w = 0.055589;
+		    h = 0.039216;
+		    shadow = 0;
+		    font = "PuristaMedium";
+		    sizeEx = 0.02921;
+		    offsetX = 0.003;
+		    offsetY = 0.003;
+		    offsetPressedX = 0.002;
+		    offsetPressedY = 0.002;
+		    borderSize = 0.01;
+		};
+
+		class ShopList : client_RscListBox 
+		{
+			idc = 9001;
+			text = "";
+			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
+			x = 0.0611 * safezoneW + safezoneX;
+			y = 0.293241 * safezoneH + safezoneY;
+			w = 0.178 * safezoneW;
+			h = 0.343181 * safezoneH;
+		};
+
+		class gunOption : HideButton {
+			idc = 9992;
+			text = "";
+			onButtonClick = "[""police_gunstore""] spawn client_fnc_loadStore;";
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.660497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class uniformOption : HideButton {
+			idc = 9993;
+			text = "";
+			onButtonClick = "[""police_uniformstore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.683497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class vestOption : HideButton {
+			idc = 9994;
+			text = "";
+			onButtonClick = "[""police_veststore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.706497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+		class HeadgearOption : HideButton {
+			idc = 9995;
+			text = "";
+			onButtonClick = "[""police_headgearstore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.729497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};
+		class glassesOption : HideButton {
+			idc = 9996;
+			text = "";
+			onButtonClick = "[""police_glassesstore""] spawn client_fnc_loadStore;"; 
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.660497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};				
+		class MiscOption : HideButton {
+			idc = 9997;
+			text = "";
+			onButtonClick = "[""police_misc""] spawn client_fnc_loadStore;"; 
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.683497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class PurchaseOption : HideButton {
+			idc = 9998;
+			text = "Purchase";
+			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;";
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.706497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.023 * safezoneH;
+		};	
+
+		class CloseOption : HideButton {
+			idc = 10001;
+			text = "Close";
+			onButtonClick = "closedialog 0;";
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.729497 * safezoneH + safezoneY;
+			w = 0.0878542 * safezoneW;
+			h = 0.023 * safezoneH;
+		};	
+	};
+};
+//mafia
+class mafia_equipment {
+	idd = 9999;
+	name= "mafia_equipment";
+	onLoad = "[] spawn client_fnc_storesetup";
+	onunload = "dialog_open = false; deletevehicle cockbag; client_kcCamera cameraEffect [""TERMINATE"",""BACK""]; camDestroy client_kcCamera;";
+	movingEnable = 0;
+	enableSimulation = 1;
+
+	class controls {
+
+		class BASE
+		{    
+			shadow = 0;
+			type = 0;
+			style = 2096;
+			sizeEx = 1;
+			font = "PuristaMedium";
+			colorBackground[] = {};
+			colorText[] = {};
+			tooltipColorText[] = {1,1,1,1};
+			tooltipColorBox[] = {1,1,1,1};
+			tooltipColorShade[] = {0,0,0,0.65};
+			idc = 191911;
+			text = "\atlantis_client\mafia_store.paa";
+			x = 0.025625 * safezoneW + safezoneX;
+			y = 0.126074 * safezoneH + safezoneY;
+			w = 0.447732 * safezoneW;
+			h = 0.747851 * safezoneH;
+		};  
+
+		class HideButton
+		{
+		    colorBorder[] = {0,0,0,0.05};
+		    
+		    type = CT_BUTTON;
+		    text = "";
+		    colorText[] = {1, 1, 1, 0};
+		    colorActive[] = {1, 1, 1, 0};
+		    colorTextSelect[] = {1, 1, 1, 0};
+		    colorDisabled[] = {1, 1, 1, 0};
+		    colorBackground[] = {0, 0, 0, 0};
+		    colorBackgroundActive[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", 0.05};
+		    colorBackgroundDisabled[] = {0, 0, 0, 0.5};
+		    colorFocused[] = {0, 0, 0, 0};
+		    colorShadow[] = {0, 0, 0, 0};
+		    soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+		    soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+		    soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
+		    soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+		    style = 2;
+		    x = 0;
+		    y = 0;
+		    w = 0.055589;
+		    h = 0.039216;
+		    shadow = 0;
+		    font = "PuristaMedium";
+		    sizeEx = 0.02921;
+		    offsetX = 0.003;
+		    offsetY = 0.003;
+		    offsetPressedX = 0.002;
+		    offsetPressedY = 0.002;
+		    borderSize = 0.01;
+		};
+
+		class ShopList : client_RscListBox 
+		{
+			idc = 9001;
+			text = "";
+			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
+			x = 0.0611 * safezoneW + safezoneX;
+			y = 0.293241 * safezoneH + safezoneY;
+			w = 0.178 * safezoneW;
+			h = 0.343181 * safezoneH;
+		};
+
+		class gunOption : HideButton {
+			idc = 9992;
+			text = "";
+			onButtonClick = "[""mafia_gunstore""] spawn client_fnc_loadStore;";
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.660497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class uniformOption : HideButton {
+			idc = 9993;
+			text = "";
+			onButtonClick = "[""mafia_uniformstore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.683497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class vestOption : HideButton {
+			idc = 9994;
+			text = "";
+			onButtonClick = "[""mafia_veststore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.706497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+		class HeadgearOption : HideButton {
+			idc = 9995;
+			text = "";
+			onButtonClick = "[""mafia_headgearstore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.729497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};
+		class glassesOption : HideButton {
+			idc = 9996;
+			text = "";
+			onButtonClick = "[""mafia_glassesstore""] spawn client_fnc_loadStore;"; 
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.660497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};				
+		class MiscOption : HideButton {
+			idc = 9997;
+			text = "";
+			onButtonClick = "[""mafia_misc""] spawn client_fnc_loadStore;"; 
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.683497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class PurchaseOption : HideButton {
+			idc = 9998;
+			text = "Purchase";
+			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;";
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.706497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.023 * safezoneH;
+		};	
+
+		class CloseOption : HideButton {
+			idc = 10001;
+			text = "Close";
+			onButtonClick = "closedialog 0;";
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.729497 * safezoneH + safezoneY;
+			w = 0.0878542 * safezoneW;
+			h = 0.023 * safezoneH;
+		};	
+	};
+};
+//gang
+class gang_equipment {
+	idd = 9999;
+	name= "gang_equipment";
+	onLoad = "[] spawn client_fnc_storesetup";
+	onunload = "dialog_open = false; deletevehicle cockbag; client_kcCamera cameraEffect [""TERMINATE"",""BACK""]; camDestroy client_kcCamera;";
+	movingEnable = 0;
+	enableSimulation = 1;
+
+	class controls {
+
+		class BASE
+		{    
+			shadow = 0;
+			type = 0;
+			style = 2096;
+			sizeEx = 1;
+			font = "PuristaMedium";
+			colorBackground[] = {};
+			colorText[] = {};
+			tooltipColorText[] = {1,1,1,1};
+			tooltipColorBox[] = {1,1,1,1};
+			tooltipColorShade[] = {0,0,0,0.65};
+			idc = 191911;
+			text = "\atlantis_client\gang_store.paa";
+			x = 0.025625 * safezoneW + safezoneX;
+			y = 0.126074 * safezoneH + safezoneY;
+			w = 0.447732 * safezoneW;
+			h = 0.747851 * safezoneH;
+		};  
+
+		class HideButton
+		{
+		    colorBorder[] = {0,0,0,0.05};
+		    
+		    type = CT_BUTTON;
+		    text = "";
+		    colorText[] = {1, 1, 1, 0};
+		    colorActive[] = {1, 1, 1, 0};
+		    colorTextSelect[] = {1, 1, 1, 0};
+		    colorDisabled[] = {1, 1, 1, 0};
+		    colorBackground[] = {0, 0, 0, 0};
+		    colorBackgroundActive[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", 0.05};
+		    colorBackgroundDisabled[] = {0, 0, 0, 0.5};
+		    colorFocused[] = {0, 0, 0, 0};
+		    colorShadow[] = {0, 0, 0, 0};
+		    soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+		    soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+		    soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
+		    soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+		    style = 2;
+		    x = 0;
+		    y = 0;
+		    w = 0.055589;
+		    h = 0.039216;
+		    shadow = 0;
+		    font = "PuristaMedium";
+		    sizeEx = 0.02921;
+		    offsetX = 0.003;
+		    offsetY = 0.003;
+		    offsetPressedX = 0.002;
+		    offsetPressedY = 0.002;
+		    borderSize = 0.01;
+		};
+
+		class ShopList : client_RscListBox 
+		{
+			idc = 9001;
+			text = "";
+			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
+			x = 0.0611 * safezoneW + safezoneX;
+			y = 0.293241 * safezoneH + safezoneY;
+			w = 0.178 * safezoneW;
+			h = 0.343181 * safezoneH;
+		};
+
+		class gunOption : HideButton {
+			idc = 9992;
+			text = "";
+			onButtonClick = "[""gang_gunstore""] spawn client_fnc_loadStore;";
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.660497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class uniformOption : HideButton {
+			idc = 9993;
+			text = "";
+			onButtonClick = "[""gang_uniformstore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.683497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class vestOption : HideButton {
+			idc = 9994;
+			text = "";
+			onButtonClick = "[""gang_veststore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.706497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+		class HeadgearOption : HideButton {
+			idc = 9995;
+			text = "";
+			onButtonClick = "[""gang_headgearstore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.729497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};
+		class glassesOption : HideButton {
+			idc = 9996;
+			text = "";
+			onButtonClick = "[""gang_glassesstore""] spawn client_fnc_loadStore;"; 
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.660497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};				
+		class MiscOption : HideButton {
+			idc = 9997;
+			text = "";
+			onButtonClick = "[""gang_misc""] spawn client_fnc_loadStore;"; 
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.683497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class PurchaseOption : HideButton {
+			idc = 9998;
+			text = "Purchase";
+			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;";
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.706497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.023 * safezoneH;
+		};	
+
+		class CloseOption : HideButton {
+			idc = 10001;
+			text = "Close";
+			onButtonClick = "closedialog 0;";
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.729497 * safezoneH + safezoneY;
+			w = 0.0878542 * safezoneW;
+			h = 0.023 * safezoneH;
+		};	
+	};
+};
+//ems
+class ems_equipment {
+	idd = 9999;
+	name= "ems_equipment";
+	onLoad = "[] spawn client_fnc_storesetup";
+	onunload = "dialog_open = false; deletevehicle cockbag; client_kcCamera cameraEffect [""TERMINATE"",""BACK""]; camDestroy client_kcCamera;";
+	movingEnable = 0;
+	enableSimulation = 1;
+
+	class controls {
+
+		class BASE
+		{    
+			shadow = 0;
+			type = 0;
+			style = 2096;
+			sizeEx = 1;
+			font = "PuristaMedium";
+			colorBackground[] = {};
+			colorText[] = {};
+			tooltipColorText[] = {1,1,1,1};
+			tooltipColorBox[] = {1,1,1,1};
+			tooltipColorShade[] = {0,0,0,0.65};
+			idc = 191911;
+			text = "\atlantis_client\ems_store.paa";
+			x = 0.025625 * safezoneW + safezoneX;
+			y = 0.126074 * safezoneH + safezoneY;
+			w = 0.447732 * safezoneW;
+			h = 0.747851 * safezoneH;
+		};  
+
+		class HideButton
+		{
+		    colorBorder[] = {0,0,0,0.05};
+		    
+		    type = CT_BUTTON;
+		    text = "";
+		    colorText[] = {1, 1, 1, 0};
+		    colorActive[] = {1, 1, 1, 0};
+		    colorTextSelect[] = {1, 1, 1, 0};
+		    colorDisabled[] = {1, 1, 1, 0};
+		    colorBackground[] = {0, 0, 0, 0};
+		    colorBackgroundActive[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", 0.05};
+		    colorBackgroundDisabled[] = {0, 0, 0, 0.5};
+		    colorFocused[] = {0, 0, 0, 0};
+		    colorShadow[] = {0, 0, 0, 0};
+		    soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+		    soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+		    soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
+		    soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+		    style = 2;
+		    x = 0;
+		    y = 0;
+		    w = 0.055589;
+		    h = 0.039216;
+		    shadow = 0;
+		    font = "PuristaMedium";
+		    sizeEx = 0.02921;
+		    offsetX = 0.003;
+		    offsetY = 0.003;
+		    offsetPressedX = 0.002;
+		    offsetPressedY = 0.002;
+		    borderSize = 0.01;
+		};
+
+		class ShopList : client_RscListBox 
+		{
+			idc = 9001;
+			text = "";
+			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
+			x = 0.0611 * safezoneW + safezoneX;
+			y = 0.293241 * safezoneH + safezoneY;
+			w = 0.178 * safezoneW;
+			h = 0.343181 * safezoneH;
+		};
+
+		class gunOption : HideButton {
+			idc = 9992;
+			text = "";
+			onButtonClick = "[""ems_gunstore""] spawn client_fnc_loadStore;";
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.660497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class uniformOption : HideButton {
+			idc = 9993;
+			text = "";
+			onButtonClick = "[""ems_uniformstore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.683497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class vestOption : HideButton {
+			idc = 9994;
+			text = "";
+			onButtonClick = "[""ems_veststore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.706497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+		class HeadgearOption : HideButton {
+			idc = 9995;
+			text = "";
+			onButtonClick = "[""ems_headgearstore""] spawn client_fnc_loadStore;"; 
+			x = 0.061029 * safezoneW + safezoneX;
+			y = 0.729497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};
+		class glassesOption : HideButton {
+			idc = 9996;
+			text = "";
+			onButtonClick = "[""ems_glassesstore""] spawn client_fnc_loadStore;"; 
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.660497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};				
+		class MiscOption : HideButton {
+			idc = 9997;
+			text = "";
+			onButtonClick = "[""ems_misc""] spawn client_fnc_loadStore;"; 
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.683497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.0231907 * safezoneH;
+		};	
+
+		class PurchaseOption : HideButton {
+			idc = 9998;
+			text = "Purchase";
+			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;";
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.706497 * safezoneH + safezoneY;
+			w = 0.0867957 * safezoneW;
+			h = 0.023 * safezoneH;
+		};	
+
+		class CloseOption : HideButton {
+			idc = 10001;
+			text = "Close";
+			onButtonClick = "closedialog 0;";
+			x = 0.15229 * safezoneW + safezoneX;
+			y = 0.729497 * safezoneH + safezoneY;
+			w = 0.0878542 * safezoneW;
+			h = 0.023 * safezoneH;
+		};	
+	};
+};
 
 
 class Food_Menu {
@@ -1013,7 +1627,7 @@ class Food_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\FoodMenu.paa";
+			text = "\dialogs\Images\FoodMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -1023,7 +1637,7 @@ class Food_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1122,7 +1736,7 @@ class GeneralStore_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GeneralStoreMenu.paa";
+			text = "\dialogs\Images\GeneralStoreMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -1132,7 +1746,7 @@ class GeneralStore_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1231,8 +1845,8 @@ class RareFish_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\RareFishMenu.paa";
-			x = 0.275605 * safezoneW + safezoneX;
+			text = "\dialogs\Images\RareFishMenu.paa";
+			x = 0.025625 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
 			h = 0.747851 * safezoneH;
@@ -1241,7 +1855,7 @@ class RareFish_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1277,7 +1891,7 @@ class RareFish_Menu {
 			idc = 9001;
 			text = "";
 			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
-			x = 0.311121 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
 			h = 0.343181 * safezoneH;
@@ -1287,7 +1901,7 @@ class RareFish_Menu {
 			idc = 9995;
 			text = "Purchase";
 			onButtonClick = "[""fish""] spawn client_fnc_purchaseAI;"; 
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1297,7 +1911,7 @@ class RareFish_Menu {
 			idc = 9996;
 			text = "Close";
 			onButtonClick = "closedialog 0;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0878542 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1329,8 +1943,8 @@ class Clothing_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\ClothingMenu.paa";
-			x = 0.275605 * safezoneW + safezoneX;
+			text = "\dialogs\Images\ClothingMenu.paa";
+			x = 0.025625 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
 			h = 0.747851 * safezoneH;
@@ -1339,7 +1953,7 @@ class Clothing_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1375,7 +1989,7 @@ class Clothing_Menu {
 			idc = 9001;
 			text = "";
 			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
-			x = 0.311121 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
 			h = 0.343181 * safezoneH;
@@ -1385,7 +1999,7 @@ class Clothing_Menu {
 			idc = 9993;
 			text = "Clothing";
 			onButtonClick = "[""clothing""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -1395,7 +2009,7 @@ class Clothing_Menu {
 			idc = 9994;
 			text = "Backpack";
 			onButtonClick = "[""backpack""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -1405,7 +2019,7 @@ class Clothing_Menu {
 			idc = 9995;
 			text = "Purchase";
 			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;"; 
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1415,7 +2029,7 @@ class Clothing_Menu {
 			idc = 9996;
 			text = "Close";
 			onButtonClick = "closedialog 0;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0878542 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1449,8 +2063,8 @@ class HairDresser_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\HairDresserMenu.paa";
-			x = 0.275605 * safezoneW + safezoneX;
+			text = "\dialogs\Images\HairDresserMenu.paa";
+			x = 0.025625 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
 			h = 0.747851 * safezoneH;
@@ -1459,7 +2073,7 @@ class HairDresser_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -1495,7 +2109,7 @@ class HairDresser_Menu {
 			idc = 9001;
 			text = "";
 			onLBSelChanged = "[] spawn client_fnc_clothesUpdate;";
-			x = 0.311121 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
 			h = 0.343181 * safezoneH;
@@ -1505,7 +2119,7 @@ class HairDresser_Menu {
 			idc = 9993;
 			text = "Glasses";
 			onButtonClick = "[""Glasses""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.061029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -1515,7 +2129,7 @@ class HairDresser_Menu {
 			idc = 9994;
 			text = "Head";
 			onButtonClick = "[""head""] spawn client_fnc_loadStore;";
-			x = 0.311029 * safezoneW + safezoneX;
+			x = 0.0611 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.0231907 * safezoneH;
@@ -1525,7 +2139,7 @@ class HairDresser_Menu {
 			idc = 9995;
 			text = "Purchase";
 			onButtonClick = "[""standard""] spawn client_fnc_purchaseAI;"; 
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1535,7 +2149,7 @@ class HairDresser_Menu {
 			idc = 9996;
 			text = "Close";
 			onButtonClick = "closedialog 0;";
-			x = 0.40229 * safezoneW + safezoneX;
+			x = 0.15229 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0878542 * safezoneW;
 			h = 0.023 * safezoneH;
@@ -1566,7 +2180,7 @@ class wallet_Menu {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\WalletMenu.paa";
+			text = "\dialogs\Images\WalletMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -1576,7 +2190,7 @@ class wallet_Menu {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};

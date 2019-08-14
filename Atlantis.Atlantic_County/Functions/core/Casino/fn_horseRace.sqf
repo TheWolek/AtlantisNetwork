@@ -77,7 +77,7 @@ while {_race} do {
 				_winner SET [2,_newpoints];
 				horseodds SET [_pia,_winner];
 				if(count _nearCasino != 0) then {
-					[format["%1 came 1st in the horse races.",_horse select 0],false] REMOTEEXEC ["DOMSG",_nearCasino];
+					[format["%1 zajął 1. miejsce na wyścigach koni.",_horse select 0],false] REMOTEEXEC ["DOMSG",_nearCasino];
 
 					if(_foreachindex == 0) then { [5,5,_x select 0] remoteexec ["horsey1",_nearCasino]; };
 					if(_foreachindex == 1) then { [5,5,_x select 0] remoteexec ["horsey2",_nearCasino]; };
@@ -100,7 +100,7 @@ while {_race} do {
 				_winner SET [2,_newpoints];
 				horseodds SET [_pia,_winner];
 				if(count _nearCasino != 0) then {
-				[format["%1 came 2nd in the horse races.",_horse select 0],false] REMOTEEXEC ["DOMSG",_nearCasino];
+				[format["%1 zajął 2. miejsce na wyścigach koni.",_horse select 0],false] REMOTEEXEC ["DOMSG",_nearCasino];
 
 				if(_foreachindex == 0) then { [4,4,_x select 0] remoteexec ["horsey1",_nearCasino]; };
 				if(_foreachindex == 1) then { [4,4,_x select 0] remoteexec ["horsey2",_nearCasino]; };
@@ -124,7 +124,7 @@ while {_race} do {
 				_winner SET [2,_newpoints];
 				horseodds SET [_pia,_winner];
 				if(count _nearCasino != 0) then {
-				[format["%1 came 3rd in the horse races.",_horse select 0],false] REMOTEEXEC ["DOMSG",_nearCasino];			
+				[format["%1 zajął 3. miejsce na wyścigach koni.",_horse select 0],false] REMOTEEXEC ["DOMSG",_nearCasino];			
 
 
 				if(_foreachindex == 0) then { [2,2,_x select 0] remoteexec ["horsey1",_nearCasino]; };
@@ -214,7 +214,7 @@ horseRacers = [];
 while{_numbercount < 7} do {
 
 	_newHorse = horseOdds call BIS_fnc_selectRandom;
-	if !(_newHorse IN horseRacers) then { _pia = horseOdds FIND _newHorse; if(_newHorse select 1 > 4) then { _roll = random(100); if (_roll > 75) then { _injury = (_newHorse select 1) * 0.25; _newhorse SET[1,_newhorse]; horseOdds SET [_pia,_newHorse]; [format["%1 received an injury and has lower odds.",_newhorse select 0], true] remoteexec ["domsg",_nearCasino]; }; }; _numberCount = _numberCount + 1; horseRacers pushback _newHorse; };
+	if !(_newHorse IN horseRacers) then { _pia = horseOdds FIND _newHorse; if(_newHorse select 1 > 4) then { _roll = random(100); if (_roll > 75) then { _injury = (_newHorse select 1) * 0.25; _newhorse SET[1,_newhorse]; horseOdds SET [_pia,_newHorse]; [format["%1 dostał kontuzji i obniżył szanse.",_newhorse select 0], true] remoteexec ["domsg",_nearCasino]; }; }; _numberCount = _numberCount + 1; horseRacers pushback _newHorse; };
 
 };
 raceType = [0,1,2,3] call bis_fnc_selectrandom;

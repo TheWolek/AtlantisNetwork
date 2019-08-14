@@ -2,7 +2,28 @@
 
 _whatdo = _this select 0;
 
-_textures = getArray(configfile >> "CfgIvoryTextures" >> "defaulttextures");
+_textures = [
+	["Oxford white","\colors\oxford_white.paa"],
+	["Marina blue","\colors\marina_blue.paa"],
+	["Hyper blue","\colors\hyper_blue.paa"],
+	["Deep blue","\colors\deep_blue.paa"],
+	["Imperial blue","\colors\imperial_blue.paa"],
+	["Green pearl","\colors\green_pearl.paa"],
+	["Green gem","\colors\green_gem.paa"],
+	["Ignot silver","\colors\ignot_silver.paa"],
+	["Silverstone","\colors\silverstone.paa"],
+	["champagne quartz","\colors\champagne_quartz.paa"],
+	["Kodial brown","\colors\kodial_brown.paa"],
+	["bronze fire","\colors\bronze_fire.paa"],
+	["Almandine brown","\colors\almandine_brown.paa"],
+	["Ruby red","\colors\ruby_red.paa"],
+	["Red hot","\colors\red_hot.paa"],
+	["Austin yellow","\colors\austin_yellow.paa"],
+	["Sakhir orange","\colors\sakhir_orange.paa"],
+	["Sterling gray","\colors\sterling_gray.paa"],
+	["Tuxedo black","\colors\tuxedo_black.paa"],
+	["Obsidian black","\colors\obsidian_black.paa"]
+];
 _finishes = [["Glossy",0]];
 
 
@@ -12,53 +33,55 @@ _farmingVehicles = ["vvv_DOD_RamSRT_civ","jf_caprice_wagon"];
 //remember to use this array in the mafia selling script & ALSO THE CAR UPDATE SCRIPT.
 _civilianVehicle = [
 	// type 1
-	["ivory_190e",3300],
-	["ivory_gti",6000],	
-	["ivory_e36",8000],
+	["d3s_KTM_1290_Super_Duke",82500],
+	["d3s_Ducati_Monster_1200_S",95500],
+	["d3s_Aprilia_Tuono_V4_1100_RR",100500],
+	["d3s_Kawasaki_Ninja_H2R",122500],
+	["d3s_Suzuki_Hayabusa",150000],
+	["d3s_oka",7000],
+	["d3s_giulietta_16",7000],
+	["d3s_beetle_04",9500],
+	["d3s_vesta_15",13500],
+	["d3s_e89_12",11040],
+	["d3s_e38_98",19500],
+	["d3s_crown_98",22500],
+	["d3s_wrx_17",29500],
+	["d3s_taurus_eco_10",30500],
+	["d3s_is_16",33500],
+	["d3s_f87_17",42500],
+	["d3s_charger_15",49500],
+	["d3s_f87_17_ACH",53500],
+	["d3s_savana_05",56000],
+	["d3s_vklasse_17",60500],
+	["d3s_challenger_15_SP",68500],
+	["d3s_ctsv_16",73500],
+	["d3s_civic_17",78500],
+	["d3s_srthellcat_15",89500],
+	["d3s_C63_14",95500],
+	["d3s_continentalGT_18",101500],
+	["d3s_camaro_16",115500],
+	["d3s_boss_15_payback",127500],
+	["d3s_amazing_ACS8_17",192500],
+	["d3s_asterion_15",225500],
+	["d3s_LaFerrari_14",295500],
+	["d3s_ghost_18_EWB",551500],
+	["d3s_durango_18",35500],
+	["d3s_escalade_16_pt",45500],
+	["d3s_tahoe_ltz_08",35500],
+	["d3s_explorer_13",43500],
+	["d3s_cayenne_16",65500],
+	["d3s_bentayga_18",56500],
+	["d3s_fiesta_16",20000]
 
-	// type 3
-	["ivory_gt500",22000],
-
-	// type 4
-	["ivory_rs4",40000],
-	["ivory_isf",42000],
-	["ivory_m3",46000],
-
-	// type 5
-	["ivory_evox",55000],
-	["ivory_wrx",56000],	
-	["ivory_elise",59000],	
-	["ivory_supra",62000],	
-	["ivory_r34",60000],
-	// type 6
-	["ivory_suburban",70000],
-	["ivory_c",102000],	
-	["ivory_r8",120000],
-	["ivory_r8_spyder",125000],
-	["ivory_911",120000],
-	["ivory_supra_topsecret",140000],	
-	["ivory_lp560",170000],	
-	["ivory_mp4",195000],
-
-	// type 7
-	["ivory_lfa",265000],
-	["ivory_f1",320000],
-	["ivory_rev",340000],
-	["ivory_veyron",390000],
-	["ivory_ccx",450000]
 ];
 
 if(str CursorObject find "embarcadero" > -1) then {
 	_type = "BOAT";
 	_civilianVehicle = [
-		["B_Boat_Transport_01_F",5500],
-		["sab_boat",12600],
-		["sab_boat_2",12600],
-		["sab_boat_3",12600],
-		["sab_boat_4",12600],
-		["C_Scooter_Transport_01_F",12600],
-		["C_Boat_Transport_02_F",223000],		
-		["red_searay_14_white",1500000]
+		["B_Lifeboat",20000],
+		["C_Scooter_Transport_01_F",15000],
+		["C_Boat_Transport_02_F",100000],		
+		["C_Boat_Civil_01_F",150000]
 	];
 };
 
@@ -66,14 +89,10 @@ if(str CursorObject find "embarcadero" > -1) then {
 if(str CursorObject find "hangar" > -1) then {
 	_type = "AIR";
 	_civilianVehicle = [
-		["r_hotairballoon",500000],
-		["C_Plane_Civil_01_F",650000],
-		["C_Plane_Civil_01_racing_F",650000],		
-		["sab_FAAllegro",650000],
-		["sab_katana",750000],
-		["sab_albatrosb2_civ",750000],
-		["sab_piper5",750000],
-		["sab_an12_4",850000]
+		["B_Heli_Light_01_F",100000],
+		["d3s_AS_365",300000],
+		["C_Plane_Civil_01_F",550000],
+		["C_Plane_Civil_01_racing_F",550000]
 	];
 };
 
@@ -105,9 +124,9 @@ if(_whatdo == "NEW") then {
 	_list = _display displayCtrl 1501;
 	lbClear _list;
 	{
-		_TextureDisplayName = getText(configFile >> "CfgIvoryTextures" >> _x >> "displayName");
-		_list lbAdd format["%1",_TextureDisplayName];
-		_list lbSetdata [(lbSize _list)-1,str(_x)];
+		//_TextureDisplayName = getText(configFile >> "CfgIvoryTextures" >> _x >> "displayName");
+		_list lbAdd format["%1",_x select 0];
+		_list lbSetdata [(lbSize _list)-1,_x select 1];
 	} foreach _textures;
 
 	_list = _display displayCtrl 1502;
@@ -133,8 +152,8 @@ _selectedvehicle = _selectedvehicle select 0;
 
 _index = lbCurSel (1501);
 _status = lbData[1501, _index];
-_SELECTEDCOLOR = call compile format["%1", _status];
-_SELECTEDCOLOR = getText(configfile >> "CfgIvoryTextures" >> _SELECTEDCOLOR >> "texture");
+_SELECTEDCOLOR = _status;
+//_SELECTEDCOLOR = getText(configfile >> "CfgIvoryTextures" >> _SELECTEDCOLOR >> "texture");
 
 _index = lbCurSel (1502);
 _status = lbData[1502, _index];
@@ -151,9 +170,10 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 	player allowdamage false;
 	_dir = 180;
 
+	//[1060.8,4128.42,0.00143909] airfield pos
 	if(_SELECTEDVEHICLE iskindof "car") then {
-		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [9720.13,827.599,25];
-		spawnedvehicle setpos [9720.13,827.599,0.5];
+		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [1060.8,4128.42,1];
+		spawnedvehicle setpos [1060.8,4128.42,1];
 		spawnedvehicle setdir _dir;
 	};
 
@@ -165,8 +185,8 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 	};
 
 	if(_SELECTEDVEHICLE iskindof "Air") then {
-		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [3282.51,914.667,1.24039];
-		spawnedvehicle setpos [3282.51,914.667,1.24039];
+		spawnedvehicle = _SELECTEDVEHICLE createvehiclelocal [1060.8,4128.42,0.00143909];
+		spawnedvehicle setpos [1060.8,4128.42,0.00143909];
 		_dir = 180;
 		spawnedvehicle setdir _dir;
 	};
@@ -175,7 +195,7 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 
 	spawnedvehicle allowdamage false;
 	client_kcCamera camSetTarget spawnedvehicle;
-	client_kcCamera camSetRelPos [2.7,1,0.25];
+	client_kcCamera camSetRelPos [4,1,2];
 	client_kcCamera camSetFOV .99;
 	client_kcCamera camCommit 0;
 
@@ -184,7 +204,7 @@ if(_whatdo == "CAR" || isNil "spawnedvehicle") then {
 	player allowDamage true;
 };
 
-if(spawnedvehicle iskindof "car" && !isNil "spawnedvehicle") then {
+if((spawnedvehicle iskindof "car" || spawnedvehicle iskindof "air") && !isNil "spawnedvehicle") then {
 	spawnedVehicle setObjectMaterial [0, _SELECTEDFINISH];
 
 	spawnedVehicle setObjectTexture	[0, _SELECTEDCOLOR];

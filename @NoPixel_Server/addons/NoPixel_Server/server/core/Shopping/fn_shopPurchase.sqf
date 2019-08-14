@@ -5,11 +5,10 @@ _player = _this select 0;
 _item = _this select 1;
 _quantity = _this select 2;
 _quantity = call compile format["%1", _quantity];
-_shop = nearestObjects [_player, ["Land_buildingCommercial1","Land_buildingCommercial2"], 30];
+/*_shop = nearestObjects [_player, ["Land_buildingCommercial1","Land_buildingCommercial2"], 30];
 _shop = _shop select 0;
-_shopplayer = _shop getVariable "shop";
-
-diag_log ["store purchase %1", _player];
+_shopplayer = _shop getVariable "shop";*/
+_shopplayer = currentshopowner;
 
 
 
@@ -18,7 +17,7 @@ if(isNull _shopplayer) exitwith {}; //guess they logged out, need to cancel it h
 _shopcontent = _shopplayer getVariable "shopcontent";
 
 _cash = _player getVariable "cashinhand";
-_cash = call compile format["%1", _cash];
+_cash = call compile _cash;
 
 _myweapons = (_shopcontent select 0); 
 _mymagazines = (_shopcontent select 1); 
@@ -36,14 +35,14 @@ if(true) then {
 		_itemcount = (_myweapons select 1) select _location;
 		_price = (_myweapons select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
 
-		if(_newcount < 0) exitwith { _ERROR = "Not enough of that item."; };
-		if(_cash < _totalprice) exitwith { _ERROR = "Not enough cash."; };
+		if(_newcount < 0) exitwith { _ERROR = "Za mało tego przedmiotu."; };
+		if(_cash < _totalprice) exitwith { _ERROR = "Za mało pieniędzy."; };
 
 		if(_newcount == 0) then {
 			//remove the item, its quantity and price here if there is none left after purchase.
@@ -66,14 +65,14 @@ if(true) then {
 		_itemcount =  (_mymagazines select 1) select _location;
 		_price = (_mymagazines select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
 
-		if(_newcount < 0) exitwith { _ERROR = "Not enough of that item."; };
-		if(_cash < _totalprice) exitwith { _ERROR = "Not enough cash."; };
+		if(_newcount < 0) exitwith { _ERROR = "Za mało tego przedmiotu."; };
+		if(_cash < _totalprice) exitwith { _ERROR = "Za mało pieniędzy."; };
 
 		if(_newcount == 0) then {
 			//remove the item, its quantity and price here if there is none left after purchase.
@@ -97,14 +96,14 @@ if(true) then {
 		_itemcount =  (_myitems select 1) select _location;
 		_price = (_myitems select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
 
-		if(_newcount < 0) exitwith { _ERROR = "Not enough of that item."; };
-		if(_cash < _totalprice) exitwith { _ERROR = "Not enough cash."; };
+		if(_newcount < 0) exitwith { _ERROR = "Za mało tego przedmiotu."; };
+		if(_cash < _totalprice) exitwith { _ERROR = "Za mało pieniędzy."; };
 
 		if(_newcount == 0) then {
 			//remove the item, its quantity and price here if there is none left after purchase.
@@ -127,14 +126,14 @@ if(true) then {
 		_itemcount = (_mybackpacks select 1) select _location;
 		_price = (_mybackpacks select 2) select _location;
 
-		_itemcount =  call compile format["%1", _itemcount];
-		_price = call compile format["%1", _price];
+		_itemcount =  call compile _itemcount;
+		_price = call compile _price;
 
 		_newcount = _itemcount - _quantity;
 		_totalprice = _quantity * _price;
 
-		if(_newcount < 0) exitwith { _ERROR = "Not enough of that item."; };
-		if(_cash < _totalprice) exitwith { _ERROR = "Not enough cash."; };	
+		if(_newcount < 0) exitwith { _ERROR = "Za mało tego przedmiotu."; };
+		if(_cash < _totalprice) exitwith { _ERROR = "Za mało pieniędzy."; };	
 
 		if(_newcount == 0) then {
 			//remove the item, its quantity and price here if there is none left after purchase.
@@ -155,14 +154,15 @@ if(_ERROR == "Success") exitwith {
 	//shop owner setting
 	_shopcontent = [_myweapons,_mymagazines,_myitems,_mybackpacks];
 	_shopplayer setVariable ["shopcontent",_shopcontent,false];
-	
-	[_quantity, _item, _totalprice,_type,_shopcontent] remoteExec ["client_fnc_payShopOwner",_shopplayer];
+	//wysyła hajs i info do właściciela shlepu
+	[_quantity, _item, _totalprice,_type,_shopcontent, _player] remoteExec ["client_fnc_payShopOwner",_shopplayer];
 
 	//database changes
 	_updatestr = format ["updateShop:%1:%2", _shopcontent, getPlayerUID _shopplayer];
 	_update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
 
 	//player purchase success
+	//wysyła info z "rachunkiem" do klienta sklepu
 	[_quantity, _item, _totalprice, _type] remoteExec ["client_fnc_confirmPurchase",_player];
 };
 

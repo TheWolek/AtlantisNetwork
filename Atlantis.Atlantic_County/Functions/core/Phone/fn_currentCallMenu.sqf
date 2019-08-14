@@ -1,4 +1,4 @@
-if(!callInProgress) exitwith { ["You are not in a call!", false] spawn domsg;  };
+if(!callInProgress) exitwith { ["Nie jesteś w rozmowie!", false] spawn domsg;  };
 closedialog 0;
 private["_display","_list","_side"];
 disableSerialization;

@@ -32,7 +32,7 @@ if(isNil "_status") exitwith {};
 _selectedmessage = mail select _status;
 
 _Btn4 = _display displayCtrl 9110;
-_Btn4 ctrlSetStructuredText parsetext format["<t color='#33CC33'>TITLE: %1<br/>SENDER: %2<br/>DATE: %3</t><br/><br/><t color='#ffffff'>%4</t>", _selectedmessage select 1, _selectedmessage select 2, _selectedmessage select 3, _selectedmessage select 0];
+_Btn4 ctrlSetStructuredText parsetext format["<t color='#33CC33'>Tytuł: %1<br/>Nadawca: %2<br/>Data: %3</t><br/><br/><t color='#ffffff'>%4</t>", _selectedmessage select 1, _selectedmessage select 2, _selectedmessage select 3, _selectedmessage select 0];
 _btn4 ctrlCommit 0;
 
 [_Btn4] call BIS_fnc_ctrlFitToTextHeight;

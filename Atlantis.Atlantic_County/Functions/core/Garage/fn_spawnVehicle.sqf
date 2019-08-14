@@ -26,6 +26,8 @@ clearMagazineCargoGlobal _vehicle;
 clearWeaponCargoGlobal _vehicle;
 clearItemCargoGlobal _vehicle;
 
+Current_Cars pushBack _vehicle;
+
 
 if(str CurrentCursorTarget find 'otros' < 0 && str CurrentCursorTarget find 'garaje' < 0 && str CurrentCursorTarget find 'tallerdepinturaabandonado' < 0 && str CurrentCursorTarget find 'hangar' < 0 && str CurrentCursorTarget find 'embarcadero' < 0) exitWith {};
 
@@ -42,9 +44,9 @@ if (time >= wantedTimer + 300 && count currentMarshals > 0) then {
 		_nearest sort true;
 		_nearest = (_nearest select 0) select 1;
 
-		[getPos player, format["Spotted Wanted Person with a(n) %1", _vehiclename], "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
+		[getPos player, format["Poszukiwana osoba była widziana poruszając się %1", _vehiclename], "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
 		wantedTimer = time;
-		[format["Dispatch to %1: A wanted person has been spotted at %2 taking out a(n) %3.", _nearest getVariable "badgeNumber", mapGridPosition getPos player, _vehiclename], true] remoteExec ["domsg",currentMarshals];
+		[format["Wezwanie do %1: Poszukiwana osoba była widziana w okolicach %2 wyciągając %3 z garażu.", _nearest getVariable "badgeNumber", mapGridPosition getPos player, _vehiclename], true] remoteExec ["domsg",currentMarshals];
 		
     };
 };

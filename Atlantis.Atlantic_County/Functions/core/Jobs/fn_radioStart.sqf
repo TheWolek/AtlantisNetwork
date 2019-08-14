@@ -1,7 +1,7 @@
 _pia = serverRadioPlayers FIND objNull;
 
-if(_pia == -1) exitwith { ["Sorry, 5 radio stations are already active.", true] spawn domsg; }; //howd they get here? slow clicker virgin or w/e.
-if(myJob != "none") exitwith { ["You already have a paying job!", true] spawn domsg; };
+if(_pia == -1) exitwith { ["% stacji radiowych już pracuje.", true] spawn domsg; }; //howd they get here? slow clicker virgin or w/e.
+if(myJob != "none") exitwith { ["Juz masz pracę!", true] spawn domsg; };
 serverRadioPlayers SET [_pia,player];
 
 publicVariable "serverRadioPlayers";
@@ -22,7 +22,7 @@ callInProgress = false;
 myCallOwner = player;
 player setVariable ["tf_unable_to_use_radio", false];
 call TFAR_fnc_HideHint;
-["You are on a radio station!", false] spawn domsg;
+["Jesteś na stacji radiowej!", false] spawn domsg;
 
 myJob = "Radio";
 
@@ -55,7 +55,7 @@ if(!taskrunning) then {
 
 			if(_amount > 0) then {
 				if(_amount > 150) then { _amount = 150; };
-				[ format["You got paid an extra %1 cash in pocket!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
+				[ format["Dostałeś dodatkową wypłatę w wysokości %1!", _amount call client_fnc_numberText ] , false ] spawn domsg;	
 				[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 			};
 

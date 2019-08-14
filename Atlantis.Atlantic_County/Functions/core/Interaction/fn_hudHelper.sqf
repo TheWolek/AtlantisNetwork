@@ -46,7 +46,7 @@ if(_type == "Location") exitwith {
 			if(player distance _myposition <= 25 && myJob IN ["Cop","doc"]) then {
 				[150] call client_fnc_addMoneyToBank;
 
-				[format["You have received an extra %1 for arriving on scene.", 150 call client_fnc_numberText], true] spawn domsg;
+				[format["Otrzymałeś dodatkowe %1 za dotarcie na miejsce.", 150 call client_fnc_numberText], true] spawn domsg;
 			};
 			
 			[[_player, _randomint], { params["_player","_randomint"]; deletemarker format["location%1%2", getPlayerUID _player, _randomint]; }] remoteExec ["bis_fnc_spawn", _group];
@@ -73,7 +73,7 @@ if(_type == "Job") exitwith {
 	{
 		mydistanceJob = floor( getpos player distance mypositionJob );     
 		mydistanceJob = format ["%1 | %2m",mytextJob, mydistanceJob];
-		drawIcon3D ["\np_dialogs1\draw3dicon\job.paa", [1,1,1,1], mypositionJob, 1, 1, 5, mydistanceJob, 1, 0.036, "PuristaLight"];  
+		drawIcon3D ["\dialogs\draw3dicon\job.paa", [1,1,1,1], mypositionJob, 1, 1, 5, mydistanceJob, 1, 0.036, "PuristaLight"];  
 		if(player distance mypositionjob < 20) exitwith { ["Job", "onEachFrame"] call BIS_fnc_removeStackedEventHandler; player say "racebeep1"; };
 	}] call BIS_fnc_addStackedEventHandler;
 

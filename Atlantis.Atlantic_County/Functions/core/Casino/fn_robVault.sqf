@@ -8,7 +8,7 @@ _cash = _casinoVault * (0.3 + 0.01*(count currentMobster) + 0.01*(count currentC
 vaultTimer = vaultTimer + 3600;
 publicVariable "vaultTimer";
 
-[format["You have stolen %1 from the casino vault.", _cash call client_fnc_numberText], true] spawn domsg;
+[format["Ukradłeś %1 ze skarbca kasyna.", _cash call client_fnc_numberText], true] spawn domsg;
 
 [_cash] call client_fnc_addMoneyToPlayer;
 ["casinoVault", _cash, "Remove",true] remoteExec["server_fnc_setValue", 2];

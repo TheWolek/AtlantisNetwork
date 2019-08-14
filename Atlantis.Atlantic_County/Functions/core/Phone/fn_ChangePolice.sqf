@@ -7,4 +7,4 @@ callInProgress = false;
 myCallOwner = player;
 player setVariable ["tf_unable_to_use_radio", false];
 call TFAR_fnc_HideHint;
-["You are on the Police Freq!", false] spawn domsg;
+	["Jesteś na częstotliwości PD!", false] spawn domsg;

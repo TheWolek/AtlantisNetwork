@@ -25,4 +25,4 @@ if ( !(_backpack isEqualTo [[],[]]) ) then {
         { evidenceBox addBackpackCargoGlobal [( _backpack select 0 ) select _forEachIndex,( _backpack select 1 ) select _forEachindex]; } forEach ( _backpack select 0 );
 };
 
-["You have seized the weapons and items.", true] spawn domsg;
+["Skonfiskowałeś bronie i rzeczy.", true] spawn domsg;

@@ -6,7 +6,7 @@ if (!safetyloot) exitwith {};
 
 _uid = getPlayerUID _player;
 
-diag_log ["store %1", _uid];
+diag_log format ["store %1", _uid];
 
 if(_uid in activeshopcrates) exitwith {};
 activeshopcrates pushback _uid;
@@ -15,9 +15,9 @@ activeshopcrates pushback _uid;
 if (count _officer > 0) then { _spawnLocation = _officer; } else { _spawnLocation = _player; };
 _holder = createVehicle ["plp_ct_woodboxlightbig", ASLtoATL (AGLtoASL (_spawnLocation modeltoworld[0,2,0])), [], 0, "can_Collide"];  
 
-["Your crate is ready, people can not use your shop while this is happening.", false] remoteExec ["domsg",_player];
+["Twoja skrzynka jest gotowa, ludzie nie mogą używać twojego sklepu podczas zaopatrywania", false] remoteExec ["domsg",_player];
 
-["You can change prices once the items are stored in a few minutes.", false] remoteExec ["domsg",_player];
+["Możesz zmienić ceny, gdy przedmioty będą zmagazynowane.", false] remoteExec ["domsg",_player];
 
 _shopcontent = _player getVariable "shopcontent";
 

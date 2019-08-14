@@ -1,10 +1,11 @@
 // send the location and job here 
 //[player,"job"] remoteExec ["server_fnc_jobStart",2];
+//file: jobStart
 
 _player = _this select 0;
 _jobtype = _this select 1;
 
-diag_log ["job starting %1 - %2", _player,_jobtype];
+diag_log format ["job starting %1 (%2) - %3", name _player, getplayeruid _player, _jobtype];
 
 if (str _jobtype find "Cop" > -1) exitwith {   
 	if(count currentCop < 15) then {
@@ -15,7 +16,7 @@ if (str _jobtype find "Cop" > -1) exitwith {
 		publicvariable "currentCop";
 		//make a group and add them? easier for map locations / gps tracking.
 	} else {
-		["Too many on duty",true] remoteexec ["domsg",_player];
+		["Zbyt dużo osób na służbie",true] remoteexec ["domsg",_player];
 	};
 };
 
@@ -28,7 +29,7 @@ if (str _jobtype find "EMS" > -1) exitwith {
 		publicvariable "currentEMS";
 	} else {
 		//return error.
-		["Too many on duty",true] remoteexec ["domsg",_player];
+		["Zbyt dużo osób na służbie",true] remoteexec ["domsg",_player];
 	};
 };
 
@@ -39,7 +40,7 @@ if (str _jobtype find "Mafia" > -1) exitwith {
 		publicvariable "currentMafia";
 	} else {
 		//return error.
-		["Too many on duty",true] remoteexec ["domsg",_player];
+		["Zbyt dużo osób na służbie",true] remoteexec ["domsg",_player];
 	};	
 };
 
@@ -73,21 +74,21 @@ if (str _jobtype find "Fire Dispatch" > -1) exitwith {
 	//[] spawn server_fnc_addJob;
 };
 
-if (str _jobtype find "Fedex Worker" > -1) exitwith {
-	[] remoteExec ["client_fnc_mailSystem",_player];
+if (str _jobtype find "Kurier" > -1) exitwith {
+	[] remoteExec ["client_fnc_signupMail",_player];
 	currentmailmen pushback _player;
 	publicvariable "currentMailMen";
 	//[] spawn server_fnc_addJob;
 };
 
-if (str _jobtype find "Taxi Driver" > -1) exitwith {
+if (str _jobtype find "Taksówkarz" > -1) exitwith {
 	[] remoteExec ["client_fnc_startTaxi",_player];
 	currentTaxiDrivers pushback _player;
 	publicvariable "currentTaxiDrivers";
 	//[] spawn server_fnc_addJob;
 };
 
-if (str _jobtype find "Security" > -1) exitwith {
+if (str _jobtype find "Ochrona" > -1) exitwith {
 	[] remoteExec ["client_fnc_startSecurity",_player];
 	currentsecurity pushback _player;
 	publicvariable "currentSecurity";
@@ -159,7 +160,7 @@ if (str _jobtype find "Tow Truck Driver" > -1) exitwith {
 	//[] spawn server_fnc_addJob;
 };
 
-if (str _jobtype find "Garbage Man" > -1) exitwith {
+if (str _jobtype find "Śmieciarz" > -1) exitwith {
 	[] remoteExec ["client_fnc_startGarbage",_player];
 	currentTrashMan pushback _player;
 	publicvariable "currentTrashman";

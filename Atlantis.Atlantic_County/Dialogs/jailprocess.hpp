@@ -19,7 +19,7 @@ class jailprocess {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\wantedMenu.paa";
+			text = "\dialogs\Images\wantedMenu.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -30,7 +30,7 @@ class jailprocess {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.35};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0.7};
@@ -66,7 +66,7 @@ class jailprocess {
 		class Reason : Client_RscEdit 
 		{
 			idc = 1111;
-			text = "Reason";
+			text = "Powód";
 			autocomplete = "";
 			sizeEx = 0.05;
 			x = 0.25; 
@@ -89,7 +89,7 @@ class jailprocess {
 
 		class HomeOption : hidebutton {
 			idc = 1115;
-			text = "Process";
+			text = "Wyślij";
 			onButtonClick = "[] call client_fnc_processjail;";
 			x = 0.55;
 			y = 0.45;
@@ -138,7 +138,7 @@ class carPrice {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.35};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0.7};
@@ -174,7 +174,7 @@ class carPrice {
 		class Reason : Client_RscEdit 
 		{
 			idc = 1111;
-			text = "Price";
+			text = "Cena";
 			autocomplete = "";
 			sizeEx = 0.05;
 			x = 0.25; 
@@ -185,7 +185,7 @@ class carPrice {
 
 		class HomeOption : hidebutton {
 			idc = 1115;
-			text = "Process";
+			text = "Przetwórz";
 			onButtonClick = "[] call client_fnc_auctionSellCar;";
 			x = 0.55;
 			y = 0.45;

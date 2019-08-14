@@ -2,11 +2,11 @@ _shoppos = _this select 0;
 _player = _this select 1;
 _marker = _this select 2;
 
-diag_log ["rent office %1", _player];
+diag_log format ["rent office %1", _player];
 
 if(isNil "rentedshops") then { rentedshops = []; };
 
-if(_shoppos IN rentedshops) exitwith { ["This shop is already rented, find one with out a marker!",true] remoteexec ["domsg",_player]; };
+if(_shoppos IN rentedshops) exitwith { ["Ten sklep jest juz wynajęty, znajdż budynek bez znacznika!",true] remoteexec ["domsg",_player]; };
 
 rentedshops pushback _shoppos;
 

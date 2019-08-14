@@ -43,7 +43,7 @@ _PistolMags = [1,1,0,0,0];
 	_iMafiaClasses = [
 	//small auto
 		//"CUP_hgun_MicroUzi",
-		"RH_muzi"		
+		//"RH_muzi"		
 	];
 
 if(myJob == "Mafia" && player getvariable "Mafia" >= 6) then {
@@ -55,8 +55,6 @@ if(myJob == "Mafia" && player getvariable "Mafia" >= 6) then {
 		"RH_tec9",
 
 		"hlc_rifle_hk53RAS",
-
-		"RH_M4sbr",
 
 		"hlc_rifle_rpk74n",
 
@@ -72,7 +70,6 @@ if(myJob == "Biker" && player getvariable "Biker" >= 6) then {
 
 		"RH_tec9",
 
-	//
 		"arifle_mas_ww2_sten",
 
 		"bnae_M97_virtual"
@@ -134,49 +131,6 @@ _foodlist = [
 ];
 
 _clothing1 = [
-		"vvv_character_rock1",
-		"vvv_character_rock2",
-		"vvv_character_rock3",
-		"vvv_character_rock4",
-		"vvv_ropa_comun_f_1",
-		"vvv_ropa_comun_f_2",
-		"vvv_ropa_comun_f_3",
-		"vvv_ropa_comun_f_4",
-		"vvv_ropa_comun_f_5",
-		"vvv_ropa_comun_f_6",
-		"vvv_ropa_comun_f_7",
-		"vvv_ropa_comun_f_8",
-		"vvv_ropa_comun_f_9",
-		"vvv_ropa_comun_f_10",
-		"KAEL_SUITS_BR_F14",
-		"KAEL_SUITS_BR_F12",
-		"KAEL_SUITS_BR_F3",
-		"KAEL_SUITS_BR_F",
-		"KAEL_SUITS_BR_F35",
-		"KAEL_SUITS_BR_F34",
-		"vvv_traje_motox_02",
-		"vvv_traje_motox_02_2",
-		"vvv_traje_motox_02_3",
-		"vvv_traje_motox_02_4",
-		"vvv_traje_motox_02_5",
-		"vvv_traje_motox_02_6",
-		"vvv_traje_motox_02_7",
-		"vvv_traje_motox_02_8",
-		"vvv_character_sport",
-		"vvv_character_sport_2",
-		"vvv_character_sport_3",
-		"vvv_character_sport_4",
-		"vvv_character_sport_5",
-		"vvv_character_sport_6",
-		"vvv_character_sport_7",
-		"vvv_character_sport_8",
-		"vvv_character_sport_9",
-		"vvv_character_sport_10",
-		"vvv_character_sport_11",
-		"vvv_character_sport_12",
-		"vvv_character_sport_13",
-		"TRYK_HRP_USMC",
-		"TRYK_HRP_khk",
 		"EF_FEM_3",
 		"EF_FEM_4",
 		"EF_FEM_4_2LPBPS",
@@ -189,9 +143,6 @@ _clothing1 = [
 		"EF_FEM_5",
 		"EF_FEM_6",
 		"EF_FEM_3_42",
-		"I_FEM_AAF_long",
-		"O_FEM_CSAT_Long",
-		"B_FEM_NATO_long",
 		"EF_FEM_3_5B",
 		"EF_FEM_3_5BP",
 		"EF_FEM_3_5VP",
@@ -208,35 +159,7 @@ _clothing1 = [
 
 
 _clothing2 = [
-		"vvv_traje_jackoy",
-		"vvv_traje_jackoy2",
-		"vvv_traje_jackoy3",
-		"vvv_traje_jackoy4",
-		"vvv_traje_jackoy5",
-		"vvv_traje_jackoy6",
-		"vvv_traje_jackoy7",
-		"vvv_traje_jackoy8",
-		"vvv_character_agente_47",
-		"vvv_character_agente_474",
-		"vvv_character_agente_475",
-		"vvv_elena_fisher",
-		"vvv_elena_fisher2",
-		"vvv_elena_fisher3",
-		"vvv_elena_fisher4",
-		"vvv_elena_fisher5",
-		"vvv_elena_fisher6",
-		"vvv_elena_fisher7",
-		"vvv_elena_fisher8",
-		"vvv_elena_fisher9",
-		"vvv_elena_fisher10",
-		"vvv_elena_fisher11",
-		"vvv_elena_fisher12",
-		"vvv_elena_fisher13",
-		"vvv_elena_fisher14",
-		"vvv_elena_fisher15",
-		"vvv_elena_fisher16",
-		"vvv_character_wandelina",
-		"vvv_character_jennifer"
+		
 ];
 
 
@@ -385,7 +308,7 @@ if((_this select 0) == "FRESH") exitwith {
 
 };
 
-if(isNil "_status") exitwith { ["Error with Selection!", true] spawn domsg; };
+if(isNil "_status") exitwith { ["Błąd w wyborze!", true] spawn domsg; };
 
 
 	_btn2 ctrlShow true;
@@ -455,7 +378,7 @@ if(_status == "Quality Clothing") exitwith {
 
 
 if(isNil "shopholder") then {
-	shopholder = "plp_ct_woodboxlightbig" createVehicleLocal (getpos player);  
+	shopholder = "plp_ct_woodboxlightsmall" createVehicleLocal (getpos player);  
 };
 
 if((_this select 0) == "CRAFT") exitwith {
@@ -496,7 +419,7 @@ if(_status IN _clothing1 || _status IN _clothing2 || _status IN _foodlist) then 
 		_checkCost = _cost;
 
 		_amountcurrent = {_x == "NP_FoodPart"} count magazines player;
-		if(_amountcurrent < _checkCost) exitwith { ["Not enough resources", true] spawn domsg; _error = true; };
+		if(_amountcurrent < _checkCost) exitwith { ["Za mało zasobów", true] spawn domsg; _error = true; };
 
 		if(_error) exitwith {};
 
@@ -516,7 +439,7 @@ if(_status IN _clothing1 || _status IN _clothing2 || _status IN _foodlist) then 
 		_checkCost = _cost;
 
 		_amountcurrent = {_x == "NP_Pelt"} count magazines player;
-		if(_amountcurrent < _checkCost) exitwith { ["Not enough resources", true] spawn domsg; _error = true; };
+		if(_amountcurrent < _checkCost) exitwith { ["Za mało zasobów", true] spawn domsg; _error = true; };
 
 		if(_error) exitwith {};
 
@@ -542,7 +465,7 @@ if(_status IN _clothing1 || _status IN _clothing2 || _status IN _foodlist) then 
 		_checkCost = _cost select _n;
 
 		_amountcurrent = {_x == (_materials select _n)} count magazines player;
-		if(_amountcurrent < _checkCost) exitwith { ["Not enough resources", true] spawn domsg; _error = true; };
+		if(_amountcurrent < _checkCost) exitwith { ["Za mało zasobów", true] spawn domsg; _error = true; };
 		_n = _n + 1;
 
 	} foreach _cost;
@@ -600,7 +523,7 @@ if(_error) exitwith {};
 	player disablecollisionwith shopholder;
 	shopholder setpos (getposATL player);	
 
-	[format["You have crafted a %1",_status], true] spawn domsg;
+	[format["Wytworzyłeś %1",_status], true] spawn domsg;
 	closedialog 0;
 };
 
@@ -623,7 +546,7 @@ if((_this select 0) == "CRAFTMAG") exitwith {
 		_checkCost = _cost select _n;
 
 		_amountcurrent = {_x == (_materials select _n)} count magazines player;
-		if(_amountcurrent < _checkCost) exitwith { ["Not enough resources", true] spawn domsg; _error = true; };
+		if(_amountcurrent < _checkCost) exitwith { ["Za mało zasobów", true] spawn domsg; _error = true; };
 		_n = _n + 1;
 
 	} foreach _cost;
@@ -653,15 +576,15 @@ if((_this select 0) == "CRAFTMAG") exitwith {
 	_level_check = (client_level_array select 12);
 	if(_level_check > -1 && _level_check < 300) then { 	
 		shopholder addmagazineCargoGlobal [_magazineclass,3];
-		[format["You have crafted 3 mags for a %1",_status], true] spawn domsg; 
+		[format["Wytworzyłeś 3 magazynki do %1",_status], true] spawn domsg; 
 	};
 	if(_level_check > 299 && _level_check < 600) then { 
 		shopholder addmagazineCargoGlobal [_magazineclass,4];
-		[format["You have crafted 4 mags for a %1",_status], true] spawn domsg; 
+		[format["Wytworzyłeś 4 magazynki do %1",_status], true] spawn domsg; 
 	};
 	if(_level_check > 599) then { 	
 		shopholder addmagazineCargoGlobal [_magazineclass,5];
-		[format["You have crafted 5 mags for a %1",_status], true] spawn domsg; 
+		[format["Wytworzyłeś 5 magazynki do %1",_status], true] spawn domsg; 
 	};
 
 	closedialog 0;

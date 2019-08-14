@@ -7,6 +7,8 @@ Survival Koil
 	waitUntil { !isNil "packet"; };
 	_govtbank = packet;
 	packet=nil;
+	_bonus = 80;
+	showchat true;
 
 	if(isNil "paycheck") then { paycheck = 0; };
 
@@ -21,7 +23,14 @@ Survival Koil
 			if(Mayor) then { _addition = 10 + _random; paycheck = paycheck + (22*_addition); };
 			if(Senator) then { _addition = 10 + _random; paycheck = paycheck + (20*_addition); };
 
-			[format["You received a government check for %1 and also %2 tax payable.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Dostałeś wypłatę w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+
+			if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
+				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam atlantisnetwork.pl",str _bonus],true] spawn domsg;
+				[_bonus,true,true] call Client_fnc_addMoneyToBank;
+			} else {
+				[format["Przegapiłeś swoje $%1, ponieważ nie masz atlantisnetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
+			};
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
 
@@ -31,7 +40,14 @@ Survival Koil
 
 			paycheck = 35 + paycheck + _random;
 
-			[format["You received an unemployment check for %1 and also %2 income tax payable.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Dostałeś zasiłek dla bezrobotnych w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+
+			if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
+				[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam atlantisnetwork.pl",str _bonus],true] spawn domsg;
+				[_bonus,true,true] call Client_fnc_addMoneyToBank;
+			} else {
+				[format["Przegapiłeś swoje $%1, ponieważ nie masz atlantisnetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
+			};
 
 			["add","Karma",1,"Default"] call client_fnc_sustain;
 		};
@@ -59,16 +75,23 @@ Survival Koil
 
 		if (paycheck > _level_default) then { paycheck = _level_default; };
 
-		paycheck = 55 + paycheck;
+		paycheck = 200 + paycheck;
+	
+		if(profileNameSteam find tolower "atlantisnetwork.pl" > -1) then {
+			[format["Dostałeś bonus w wysokości $%1, ponieważ masz w nazwie na steam atlantisnetwork.pl",str _bonus],true] spawn domsg;
+			[_bonus,true,true] call Client_fnc_addMoneyToBank;
+		} else {
+			[format["Przegapiłeś swoje $%1, ponieważ nie masz atlantisnetwork.pl w nazwie na steam",str _bonus],true] spawn domsg;
+		};
 
 		_govJobs = ["DA","Legal","doc","Cop","EMS"];
 
 		if(_govtbank < 100000 && myjob IN _govJobs) then {
 			_rate = 0.85;
 			paycheck = paycheck * _rate;
-			[format["You received a government check for %1 instead of %2 because of low funds and also %3 income tax payable.", paycheck call client_fnc_numberText, (paycheck/_rate) call client_fnc_numberText, ((paycheck)*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Dostałeś wypłatę w wysokości %1 zamiast %2 z powodu niskiego budżetu i %3 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck/_rate) call client_fnc_numberText, ((paycheck)*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 		} else {
-			[format["You received a government check for %1 and also %2 income tax payable.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
+			[format["Dostałeś wypłatę w wysokości %1 i %2 podatku do zapłacenia.", paycheck call client_fnc_numberText, (paycheck*(taxRate/100)) call client_fnc_numberText], false] spawn domsg;
 		};
 
 		["add","Karma",1,"Default"] call client_fnc_sustain;
@@ -77,7 +100,7 @@ Survival Koil
 
 
 	["govtBank", (paycheck/10), "Remove"] remoteExec["server_fnc_setValue",2]; // remove paycheck from government
-	["govtBank", format["%1 (%2) removed %3 into the Government bank account because of salary.", name player, getplayeruid player, (paycheck/10) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
+	//["govtBank", format["%1 (%2) removed %3 into the Government bank account because of salary.", name player, getplayeruid player, (paycheck/10) call client_fnc_numberText]] remoteExec ["server_fnc_log",2];
 	[paycheck,true,true] call Client_fnc_addMoneyToBank; // add paycheck to player
 
 	(player getvariable "statuses") set [13, call compile ([((player getvariable "statuses") select 13) + paycheck*(taxRate/100), 1, 2, false] call CBA_fnc_formatNumber) ]; // add unpaid tax
@@ -96,7 +119,7 @@ if( client_marijuana > 0 || client_cocaine > 0 || client_meth > 0 || client_hero
 
 	["Remove","drug",1] call client_fnc_sustain;
 
-	["Remove","Karma",5,"Stress"] call client_fnc_sustain;
+	//["Remove","Karma",5,"Stress"] call client_fnc_sustain;
 };
 
 ["Remove","Drink",0.75] call client_fnc_sustain; 

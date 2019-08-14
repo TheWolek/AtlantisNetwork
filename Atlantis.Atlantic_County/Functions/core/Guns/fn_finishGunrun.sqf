@@ -1,7 +1,7 @@
 _oreArray = ["CG_Heroin"];
 
 if(isNil "globalProtection") then { globalProtection = 0; };
-if(globalProtection != 0) exitwith { ["Error - Already processing", true] spawn domsg; };
+if(globalProtection != 0) exitwith { ["Błąd - W trakcie przetwarzania", true] spawn domsg; };
 _localProtection = 0;
 
 _thecargo = getWeaponCargo missionVehicle;
@@ -46,6 +46,6 @@ _biker_cash = _totalValue * 500;
 
 ["bikerBank", _biker_cash, "Add"] remoteexec ["server_fnc_setValue",2];
 
-[format["The Bikers just scored %1 from a gun run.",_biker_cash call client_fnc_numberText], true] remoteexec ["domsg",-2];
+[format["Gang motocyklowy zarobił %1 z przemytu broni.",_biker_cash call client_fnc_numberText], true] remoteexec ["domsg",-2];
 
 deletevehicle missionvehicle;

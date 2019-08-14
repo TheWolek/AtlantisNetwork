@@ -1,4 +1,4 @@
-if(count currentcop < 3) exitwith { ["Not enough police", true] spawn domsg; };
+if(count currentcop < 3) exitwith { ["Za mało policjantów na służbie", true] spawn domsg; };
 
 _total = 0;
 

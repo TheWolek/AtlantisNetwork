@@ -29,6 +29,7 @@ class CfgFunctions
 			class rentRoom {};
 			class dumpOre {};
 			class finishOreDrop {};
+			class lockCasino {};
 
 		};		
 		class Phone
@@ -95,12 +96,14 @@ class CfgFunctions
 			class spikestripeffect {};
 			class useBarrier {}; 
 			class placeBarrier {};
+			class panicbuttonUse {};
+			class panicbutton {};
 		};
 
 		class Drugs {
 			file = "Functions\core\Drugs";
 			class drinkTequila {};
-			class drugJob {}; 
+			//class drugJob {}; 
 			class druginit {};
 			class useDrug {};
 			class dumpDrugs {};
@@ -142,6 +145,7 @@ class CfgFunctions
 			class adminupdateplayer {};
 			class adminESP {};
 			class nametags {};
+			class createvehicle {};
 		};		
 
 		class police {
@@ -150,7 +154,7 @@ class CfgFunctions
 			class setGear {};
 			class sendintox {};
 			class seizeObjects {};
-			class payDTU {};
+			//class payDTU {};
 			class raidshop {};
 			class raidhouse {};
 			class setlastsave {};
@@ -159,6 +163,19 @@ class CfgFunctions
 			class viewhouse {};
 			class viewshop {};
 			class viewoffice {};
+			class crashTackled {};
+			class tackleAction {};
+			class copSiren {};
+			class copSiren2 {};
+			class copSiren3 {};
+			class medicSiren {};
+			class medicSiren2 {};
+			class returnrifle {};
+			class checklicensePlate {};
+			class tazed {};
+			class teargas {};
+			class checkfingerp {};
+			class frisk {};
 		};
 
 		class Wanted {
@@ -201,6 +218,7 @@ class CfgFunctions
 			class acceptBail {};
 			class removeBail {};
 			class closeBail {};
+			class addTicket {};
 		};
 
 		class Mail {
@@ -210,6 +228,7 @@ class CfgFunctions
 			class openMail {};
 			class completeMail {};
 			class mailSystem {};
+			class signupMail {};
 		};
 
 		class jobFactions {
@@ -262,13 +281,11 @@ class CfgFunctions
 			class sharehousefinish {};
 
 			class upgradeHouse {};
-			class playerselect {};
 			class playerselectfinish {};
 			class updatePrices {};
 			class clothesupdate2 {};
 			class clothesUpdate {};
 			class storeSetup {};
-			class storeSetup2 {};
 			class openShop {};
 			class purchaseAI {};
 			class confirmPurchase {};
@@ -293,13 +310,21 @@ class CfgFunctions
 		class JobTaxi {
 			file = "Functions\core\Jobs\JobTaxi";
 			class startTaxi {};
-			class startBus {};
 		};
 		class JobTowTruck {
 			file = "Functions\core\Jobs\JobTowTruck";
 			class startTowTruck {};
+		};	
+		class JobBus {
+			file = "Functions\core\Jobs\JobBus";
+			class signupBus {};
+			class startBus {};
+			class bus {};
+		};
+		class JobRepairman {
+			file = "Functions\core\Jobs\JobRepairman";
 			class startrepair {};
-		};		
+		};
 		class JobNews {
 			file = "Functions\core\Jobs\JobNews";
 			class startNews {};
@@ -359,7 +384,6 @@ class CfgFunctions
 		{
 			file = "Functions\core\Mayor";
 			class paymayor {};
-			class setmayor {};
 			class lockvote {};
 			class loadvote {};
 			class settax {};
@@ -448,6 +472,7 @@ class CfgFunctions
 			class miscVariables {};
 			class loadingscreen {};
 			class karmaPhoneInit {};
+			class playerselect {};
 		};
 
 		class Interaction
@@ -506,6 +531,7 @@ class CfgFunctions
 		class Misc
 		{
 			file = "Functions\core\Misc";
+			class recivePB {};
 			class jumpscript {};
 			class giveLicense {};
 			class grabBody {};
@@ -515,8 +541,8 @@ class CfgFunctions
 			class dance {};
 			class getTint {};
 			class evidence {};
+			class destroyEvidence {};
 			class checkBank {};
-			class lockCasino {};
 			class lockNightclub {};
 			class IED {};
 			class IEDdetonate {};
@@ -526,7 +552,6 @@ class CfgFunctions
 			class hackCar {};
 			class hackCarDisable {};
 			class hackCarDisplay {};
-			class frisk {};
 			class lootsetup {};
 			class lootdrop {};
 			class closedialogs {};
@@ -539,7 +564,6 @@ class CfgFunctions
 			class vehinforeturn {};
 			class pee {};
 			class pee2 {};
-			class teargas {};
 			class vomit {};
 			class gunholster {};
 			class seatbelts {};
@@ -554,7 +578,6 @@ class CfgFunctions
 			class promotionstart {};
 			class promotionfirst {};
 			class hideobjectnear {};
-			class createvehicle {};
 			class setvariable {};
 			class medicRequest {};
 			class requestMedic {};
@@ -589,16 +612,16 @@ class CfgFunctions
 			class restrain {};
 			class unrestrain {};
 			class startpatdown {};	
-			class checkPulse {};	
 			class blindfold {};
 			class houselight {};
 			class houselock {};
 			class unblindfold {};
 			class attemptKO {};
 			class successKO {};	
-			class tazed {};
 			class sharphit {};
 			class blunthit {};
+			class say3D {};
+			class nearestSound {};
 		};
 		class Money
 		{
@@ -615,8 +638,6 @@ class CfgFunctions
 			class loanUpdate {};
 			class numberText {};
 			class addcashmayor {};
-			//class addBank {};
-			//class addcash {};
 			class addMoneyToBank {};
 			class addMoneyToPlayer {};
 			class addMoneyToStash {};

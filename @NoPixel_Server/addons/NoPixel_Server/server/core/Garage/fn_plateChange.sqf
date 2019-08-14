@@ -8,11 +8,11 @@ _checkstr = format ["existLicense:%1", _plate];
 _check = [0, _checkstr] call ExternalS_fnc_ExtDBquery;
 _booli = (_check select 0) select 0;
 
-diag_log ["license change - %1 - %2", _player, _plate];
+diag_log format ["license change - %1 - %2", _player, _plate];
 
 if(_booli) then {
 	//already existsch
-	["That plate already exists", true] remoteexec ["domsg",_player];
+	["Ten numer rejestracyjny już istnieje!", true] remoteexec ["domsg",_player];
 } else {
 	//insertlicense	
 	_checkstr = format ["updateLicense:%1:%2", _plate, _oldPlate];

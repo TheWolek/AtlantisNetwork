@@ -14,7 +14,7 @@ class racetimes {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -58,7 +58,7 @@ class racetimes {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\laptime.paa";
+			text = "\dialogs\Images\laptime.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -111,7 +111,7 @@ class fillvehicle
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GasMenu.paa";
+			text = "\dialogs\Images\GasMenu.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;
@@ -122,7 +122,7 @@ class fillvehicle
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -165,7 +165,7 @@ class fillvehicle
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fill Vehicle"; //--- ToDo: Localize;
+			text = "Napełnij pojazd"; //--- ToDo: Localize;
 			x = 0.401967 * safezoneW + safezoneX;
 			y = 0.703346 * safezoneH + safezoneY;
 			w = 0.0899712 * safezoneW;
@@ -205,7 +205,7 @@ class garage2
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GarageMenu.paa";
+			text = "\dialogs\Images\GarageMenu.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;
@@ -216,7 +216,7 @@ class garage2
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -258,7 +258,7 @@ class garage2
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fetch Car"; //--- ToDo: Localize;
+			text = "Wyjmij pojazd"; //--- ToDo: Localize;
 			x = 0.315 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
 			w = 0.09 * safezoneW;
@@ -296,7 +296,7 @@ class garage3
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GarageMenu.paa";
+			text = "\dialogs\Images\GarageMenu.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;
@@ -307,7 +307,7 @@ class garage3
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -349,7 +349,7 @@ class garage3
 		class RscButton_1600: HideButton
 		{
 			idc = 1600;
-			text = "Fetch Work Car"; //--- ToDo: Localize;
+			text = "Wyjmij pojazd służbowy"; //--- ToDo: Localize;
 			x = 0.315 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
 			w = 0.09 * safezoneW;
@@ -389,7 +389,7 @@ class garage
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GarageMenu.paa";
+			text = "\dialogs\Images\GarageMenu.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;
@@ -400,7 +400,7 @@ class garage
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -485,7 +485,7 @@ class EnterLicense {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\EnterLicense.paa";
+			text = "\dialogs\Images\EnterLicense.paa";
 			x = 0.275605 * safezoneW + safezoneX;
 			y = 0.126074 * safezoneH + safezoneY;
 			w = 0.447732 * safezoneW;
@@ -495,7 +495,7 @@ class EnterLicense {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -578,7 +578,7 @@ class garageplates
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\GaragePlates.paa";
+			text = "\dialogs\Images\GaragePlates.paa";
 			x = 0.279839 * safezoneW + safezoneX;
 			y = 0.128274 * safezoneH + safezoneY;
 			w = 0.440323 * safezoneW;
@@ -589,7 +589,7 @@ class garageplates
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};

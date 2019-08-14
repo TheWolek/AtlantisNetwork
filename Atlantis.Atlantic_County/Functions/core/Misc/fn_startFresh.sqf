@@ -12,13 +12,14 @@ removeHeadgear player;
 
 if(deadPhase == 1) then {
 
-    ["You woke up and can recall what happened from when you were paralyzed.", true] spawn domsg;
+    ["Odzyskałeś władzę w kończynach i pamiętasz co się działo, gdy byłeś sparaliżowany.", true] spawn domsg;
+	["By dostać się do Atlantis City możesz wezwać taksówkę lub iść na przystanek i pojechać busem", true] spawn domsg;
 
 };
 
 if(deadPhase == 2) then {
 
-    ["You woke up, but have no recollection of any recent memories while you were unconscious.", true] spawn domsg;
+    ["Obudziłeś się, ale nie pamiętasz co się działo.", true] spawn domsg;
 
 };
 
@@ -27,11 +28,11 @@ deadphase = 0;
 godmode = false;
 detach player;
 
-player setpos [9588.23,4136.39,0.00143814];
+player setpos [3248.15,3621.51,0.00143433];
 
-player setdir 210;
+player setdir 147;
 
-player adduniform "U_C_Poloshirt_stripped";
+player forceadduniform "U_C_Poloshirt_stripped";
 
 player linkItem "ItemMap";
 player linkItem "ItemCompass";

@@ -11,7 +11,7 @@ _jobName = param [3,"",[""]];
 
 
 	//["add","Karma",1,"MoneyOwed"] call client_fnc_sustain;
-	//["add","Karma",1,"Fedex Worker"] call client_fnc_sustain;
+	//["add","Karma",1,"Kurier"] call client_fnc_sustain;
 	//["remove","Karma",1,"Default"] call client_fnc_sustain;
 if(_type == "Karma") then {
 
@@ -28,13 +28,13 @@ if(_type == "Karma") then {
 
 	};
 
-	if(_jobName == "Fedex Worker") then {
+	if(_jobName == "Kurier") then {
 		_arraySelection = 1;
 
 		if (_adjust == "Add") then {
-			["You just gained Fedex Experience!.",false] spawn doquickmsg;
+			["Zyskałeś doświadczenie zawodowe!",false] spawn doquickmsg;
 		} else {
-			["You just lost Fedex experience..",false] spawn doquickmsg;
+			["Straciłeś doświadczenie zawodowe..",false] spawn doquickmsg;
 		};
 
 	};//
@@ -43,9 +43,9 @@ if(_type == "Karma") then {
 		_arraySelection = 2;
 
 		if (_adjust == "Add") then {
-			["You just gained Security Experience!.",false] spawn doquickmsg;
+			["Zyskałeś doświadczenie zawodowe!",false] spawn doquickmsg;
 		} else {
-			["You just lost Security experience..",false] spawn doquickmsg;
+			["Straciłeś doświadczenie zawodowe..",false] spawn doquickmsg;
 		};
 
 	};
@@ -54,9 +54,9 @@ if(_type == "Karma") then {
 		_arraySelection = 3;
 
 		if (_adjust == "Add") then {
-			["You just gained Radio Experience!.",false] spawn doquickmsg;
+			["Zyskałeś doświadczenie zawodowe!",false] spawn doquickmsg;
 		} else {
-			["You just lost Radio experience..",false] spawn doquickmsg;
+			["Straciłeś doświadczenie zawodowe..",false] spawn doquickmsg;
 		};
 
 	};//
@@ -65,20 +65,20 @@ if(_type == "Karma") then {
 		_arraySelection = 4;
 
 		if (_adjust == "Add") then {
-			["You just gained Tow Experience!.",false] spawn doquickmsg;
+			["Zyskałeś doświadczenie zawodowe!",false] spawn doquickmsg;
 		} else {
-			["You just lost Tow experience..",false] spawn doquickmsg;
+			["Straciłeś doświadczenie zawodowe..",false] spawn doquickmsg;
 		};
 
 	};//
 
-	if(_jobName == "Garbage Man") then {
+	if(_jobName == "Śmieciarz") then {
 		_arraySelection = 5;
 
 		if (_adjust == "Add") then {
-			["You just gained Garbage Experience!.",false] spawn doquickmsg;
+			["Zyskałeś doświadczenie zawodowe!",false] spawn doquickmsg;
 		} else {
-			["You just lost Garbage experience..",false] spawn doquickmsg;
+			["Straciłeś doświadczenie zawodowe..",false] spawn doquickmsg;
 		};
 
 	};//
@@ -87,9 +87,9 @@ if(_type == "Karma") then {
 		_arraySelection = 6;
 
 		if (_adjust == "Add") then {
-			["You just gained News Experience!.",false] spawn doquickmsg;
+			["Zyskałeś doświadczenie zawodowe!",false] spawn doquickmsg;
 		} else {
-			["You just lost News experience..",false] spawn doquickmsg;
+			["Straciłeś doświadczenie zawodowe..",false] spawn doquickmsg;
 		};
 
 	};//
@@ -98,9 +98,9 @@ if(_type == "Karma") then {
 		_arraySelection = 7;
 
 		if (_adjust == "Add") then {
-			["You just gained Repairman Experience!.",false] spawn doquickmsg;
+			["Zyskałeś doświadczenie zawodowe!",false] spawn doquickmsg;
 		} else {
-			["You just lost Repairman experience..",false] spawn doquickmsg;
+			["Straciłeś doświadczenie zawodowe..",false] spawn doquickmsg;
 		};
 
 
@@ -110,22 +110,22 @@ if(_type == "Karma") then {
 		_arraySelection = 8;
 
 		if (_adjust == "Add") then {
-			["You just gained Farming Experience!.",false] spawn doquickmsg;
+			["YZyskałeś doświadczenie zawodowe!",false] spawn doquickmsg;
 		} else {
-			["You just lost Farming experience..",false] spawn doquickmsg;
+			["Straciłeś doświadczenie zawodowe..",false] spawn doquickmsg;
 		};
 
 
 	};//
 
-	if(_jobName == "Taxi Driver") then {
+	if(_jobName == "Taksówkarz") then {
 		_arraySelection = 9;
 
 
 		if (_adjust == "Add") then {
-			["You just gained Public Transport Experience!.",false] spawn doquickmsg;
+			["Zyskałeś doświadczenie zawodowe!",false] spawn doquickmsg;
 		} else {
-			["You just lost Public Transport experience..",false] spawn doquickmsg;
+			["Straciłeś doświadczenie zawodowe...",false] spawn doquickmsg;
 		};
 
 
@@ -136,9 +136,9 @@ if(_type == "Karma") then {
 
 
 		if (_adjust == "Add") then {
-			["You just gained Agility!.",false] spawn domsg;
+			["Zyskałeś zwinność!.",false] spawn domsg;
 		} else {
-			["You just lost your Agility..",false] spawn domsg;
+			["Utraciłeś zwinność..",false] spawn domsg;
 		};
 
 
@@ -149,9 +149,9 @@ if(_type == "Karma") then {
 
 
 		if (_adjust == "Add") then {
-			["You just gained Strength!.",false] spawn domsg;
+			["zyskałeś siłę!.",false] spawn domsg;
 		} else {
-			["You just lost Strength..",false] spawn domsg;
+			["Straciłeś siłę..",false] spawn domsg;
 		};
 
 
@@ -161,9 +161,9 @@ if(_type == "Karma") then {
 		_arraySelection = 12;
 
 		if (_adjust == "Add") then {
-			["You just gained Intellect!.",false] spawn domsg;
+			["Zyskałeś intelekt!.",false] spawn domsg;
 		} else {
-			["You just lost Intellect..",false] spawn domsg;
+			["Straciłeś intelekt..",false] spawn domsg;
 		};
 
 	};
@@ -173,9 +173,9 @@ if(_type == "Karma") then {
 
 
 		if (_adjust == "Add") then {
-			["You just gained Stamina!.",false] spawn domsg;
+			["Zyskałeś wytrzymałość!.",false] spawn domsg;
 		} else {
-			["You just lost Stamina..",false] spawn domsg;
+			["Straciłeś wytrzymałość..",false] spawn domsg;
 		};
 
 
@@ -186,10 +186,10 @@ if(_type == "Karma") then {
 
 
 		if (_adjust == "Add") then {
-			["You just gained Weight!.",false] spawn domsg;
+			["Ulałeś się!.",false] spawn domsg;
 			
 		} else {
-			["You just lost Weight..",false] spawn domsg;
+			["Schudłeś..",false] spawn domsg;
 		};
 
 
@@ -199,9 +199,9 @@ if(_type == "Karma") then {
 		_arraySelection = 15;
 
 		if (_adjust == "Add") then {
-			["You gained Stress!",false] spawn domsg;
+			["Twój stres się zwiekszył!",false] spawn domsg;
 		} else {
-			["You lost Stress!",false] spawn domsg;
+			["Twój stres się zmniejszył!",false] spawn domsg;
 		};
 
 	};
@@ -256,7 +256,7 @@ if(_type == "Karma") then {
 
 
 if(_type == "Food") then {
-	if(_adjust == "Add") then { [format["+%1 Food",_amount],true] spawn domsg; client_hunger = client_hunger + _amount; if (vehicle player == player) then { player playmove "vvv_anim_eat"; }; };
+	if(_adjust == "Add") then { [format["+%1 Jedzenie",_amount],true] spawn domsg; client_hunger = client_hunger + _amount; if (vehicle player == player) then { player playmove "vvv_anim_eat"; }; };
 	if(_adjust == "Remove") then { client_hunger = client_hunger - _amount; };
 	if(client_hunger > 100) then {client_hunger = 100;};
 	if(client_hunger < 0) then {client_hunger = 0;};
@@ -266,7 +266,7 @@ if(_type == "Food") then {
 };
 
 if(_type == "Drink") then {
-	if(_adjust == "Add") then { [format["+%1 Drink",_amount],true] spawn domsg; client_thirst = client_thirst + _amount; if (vehicle player == player) then { player playmove "vvv_anim_drink"; }; };
+	if(_adjust == "Add") then { [format["+%1 Picie",_amount],true] spawn domsg; client_thirst = client_thirst + _amount; if (vehicle player == player) then { player playmove "vvv_anim_drink"; }; };
 	if(_adjust == "Remove") then { client_thirst = client_thirst - _amount; };
 	if(client_thirst > 100) then {client_thirst = 100;};
 	if(client_thirst < 0) then {client_thirst = 0;};
@@ -301,7 +301,7 @@ if(_type == "unhealthiness") then {
 	if(client_unhealthiness > 100) then { client_unhealthiness = 100;};
 	if(client_unhealthiness < 0) then { client_unhealthiness = 0;};	
 	if(client_unhealthiness > 60) then {
-		["You are currently very unhealthy", true] spawn domsg;
+		["Jesteś bardzo zdrowy", true] spawn domsg;
 		_roll = 100 - client_unhealthiness;
 		_chance = random(_roll);
 		_wtf = _chance + client_unhealthiness;
@@ -326,34 +326,34 @@ if(_type == "license") then {
 
 		if( !(_amount IN licenseArray) ) then {
 
-			if(_amount == 0) then { [getplayeruid player, 0, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Driver's License.",false] spawn domsg; };
-			if(_amount == 1) then { [getplayeruid player, 1, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Class 1 Weapons License.",false] spawn domsg;  };
-			if(_amount == 2) then { [getplayeruid player, 2, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Mining License.",false] spawn domsg;  };
-			if(_amount == 3) then { [getplayeruid player, 3, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Logging License.",false] spawn domsg; };
-			if(_amount == 4) then { [getplayeruid player, 4, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Fishing License.",false] spawn domsg; };
-			if(_amount == 5) then { [getplayeruid player, 5, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Truck License.",false] spawn domsg; };
-			if(_amount == 6) then { [getplayeruid player, 6, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Pilot's License.",false] spawn domsg; };
-			if(_amount == 7) then { [getplayeruid player, 7, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Oil Trade License.",false] spawn domsg; };
-			if(_amount == 8) then { [getplayeruid player, 8, 1] remoteExec ["server_fnc_licenses",2]; ["You received a PD SWAT Leader Certification.",false] spawn domsg; };
-			if(_amount == 9) then { [getplayeruid player, 9, 1] remoteExec ["server_fnc_licenses",2]; ["You received a PD SWAT Certification.",false] spawn domsg; };
-			if(_amount == 10) then { [getplayeruid player, 10, 1] remoteExec ["server_fnc_licenses",2]; ["You received a PD Scuba Leader Certification.",false] spawn domsg; };
-			if(_amount == 11) then { [getplayeruid player, 11, 1] remoteExec ["server_fnc_licenses",2]; ["You received a PD Scuba Certification.",false] spawn domsg; };
-			if(_amount == 12) then { [getplayeruid player, 12, 1] remoteExec ["server_fnc_licenses",2]; ["You received a PD Air Leader Certification.",false] spawn domsg; };
-			if(_amount == 13) then { [getplayeruid player, 13, 1] remoteExec ["server_fnc_licenses",2]; ["You received a PD Air Certification.",false] spawn domsg; };
-			if(_amount == 14) then { [getplayeruid player, 14, 1] remoteExec ["server_fnc_licenses",2]; ["You received a DoC CRT Leader Certification.",false] spawn domsg; };
-			if(_amount == 15) then { [getplayeruid player, 15, 1] remoteExec ["server_fnc_licenses",2]; ["You received a DoC CRT Certification.",false] spawn domsg; };
-			if(_amount == 16) then { [getplayeruid player, 16, 1] remoteExec ["server_fnc_licenses",2]; ["You received a DoC Air Leader Certification.",false] spawn domsg; };
-			if(_amount == 17) then { [getplayeruid player, 17, 1] remoteExec ["server_fnc_licenses",2]; ["You received a DoC Air Certification.",false] spawn domsg; };
-			if(_amount == 18) then { [getplayeruid player, 18, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Boat License.",false] spawn domsg; };
-			if(_amount == 19) then { [getplayeruid player, 19, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Casino Membership.",false] spawn domsg; };
-			if(_amount == 20) then { [getplayeruid player, 20, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Bar Certification.",false] spawn domsg; };
-			if(_amount == 21) then { [getplayeruid player, 21, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Bus License.",false] spawn domsg; };
-			if(_amount == 22) then { [getplayeruid player, 22, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Class 2 Weapons License.",false] spawn domsg; };
-			if(_amount == 23) then { [getplayeruid player, 23, 1] remoteExec ["server_fnc_licenses",2]; ["You received a FD Air Leader Certification.",false] spawn domsg; };
-			if(_amount == 24) then { [getplayeruid player, 24, 1] remoteExec ["server_fnc_licenses",2]; ["You received a FD Air Certification.",false] spawn domsg; };
-			if(_amount == 25) then { [getplayeruid player, 25, 1] remoteExec ["server_fnc_licenses",2]; ["You received a FD Scuba Leader Certification.",false] spawn domsg; };
-			if(_amount == 26) then { [getplayeruid player, 26, 1] remoteExec ["server_fnc_licenses",2]; ["You received a FD Scuba Certification.",false] spawn domsg; };
-			if(_amount == 27) then { [getplayeruid player, 27, 1] remoteExec ["server_fnc_licenses",2]; ["You received a Paralegal License.",false] spawn domsg; };
+			if(_amount == 0) then { [getplayeruid player, 0, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś prawo jazdy kat. B.",false] spawn domsg; };
+			if(_amount == 1) then { [getplayeruid player, 1, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję na broń Klasy 1.",false] spawn domsg;  };
+			if(_amount == 2) then { [getplayeruid player, 2, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję górnika.",false] spawn domsg;  };
+			if(_amount == 3) then { [getplayeruid player, 3, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję drwala.",false] spawn domsg; };
+			if(_amount == 4) then { [getplayeruid player, 4, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję rybaka.",false] spawn domsg; };
+			if(_amount == 5) then { [getplayeruid player, 5, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś prawo jazdy kat. C.",false] spawn domsg; };
+			if(_amount == 6) then { [getplayeruid player, 6, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Pilota.",false] spawn domsg; };
+			if(_amount == 7) then { [getplayeruid player, 7, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję handlarza oleju.",false] spawn domsg; };
+			if(_amount == 8) then { [getplayeruid player, 8, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja Dowódcy SWAT.",false] spawn domsg; };
+			if(_amount == 9) then { [getplayeruid player, 9, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja SWAT.",false] spawn domsg; };
+			if(_amount == 10) then { [getplayeruid player, 10, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Dowódcy nurków PD.",false] spawn domsg; };
+			if(_amount == 11) then { [getplayeruid player, 11, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję nurka PD.",false] spawn domsg; };
+			if(_amount == 12) then { [getplayeruid player, 12, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Dowódcy AIR PD.",false] spawn domsg; };
+			if(_amount == 13) then { [getplayeruid player, 13, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję AIR PD.",false] spawn domsg; };
+			if(_amount == 14) then { [getplayeruid player, 14, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję DoC CRT Leader Certification.",false] spawn domsg; };
+			if(_amount == 15) then { [getplayeruid player, 15, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję DoC CRT Certification.",false] spawn domsg; };
+			if(_amount == 16) then { [getplayeruid player, 16, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję DoC Air Leader Certification.",false] spawn domsg; };
+			if(_amount == 17) then { [getplayeruid player, 17, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję DoC Air Certification.",false] spawn domsg; };
+			if(_amount == 18) then { [getplayeruid player, 18, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś patent motorowodny.",false] spawn domsg; };
+			if(_amount == 19) then { [getplayeruid player, 19, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś Członkostwo Kasyna.",false] spawn domsg; };
+			if(_amount == 20) then { [getplayeruid player, 20, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś Bar Certification.",false] spawn domsg; };
+			if(_amount == 21) then { [getplayeruid player, 21, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś prawo jazdy kat. D",false] spawn domsg; };
+			if(_amount == 22) then { [getplayeruid player, 22, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję na broń Klasy 2.",false] spawn domsg; };
+			if(_amount == 23) then { [getplayeruid player, 23, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja Dowódcy AIR PD.",false] spawn domsg; };
+			if(_amount == 24) then { [getplayeruid player, 24, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja AIR FD.",false] spawn domsg; };
+			if(_amount == 25) then { [getplayeruid player, 25, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję FD Scuba Leader Certification.",false] spawn domsg; };
+			if(_amount == 26) then { [getplayeruid player, 26, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Licencja Nurka FD.",false] spawn domsg; };
+			if(_amount == 27) then { [getplayeruid player, 27, 1] remoteExec ["server_fnc_licenses",2]; ["otrzymałeś licencję Prawnika.",false] spawn domsg; };
 
 			licenseArray = licenseArray + [_amount];
 			
@@ -364,35 +364,35 @@ if(_type == "license") then {
 	if(_adjust == "Remove") then { 
 
 		if( (_amount IN licenseArray) ) then {
-				
-			if(_amount == 0) then { [getplayeruid player, 0, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Driver's License.",false] spawn domsg; };
-			if(_amount == 1) then { [getplayeruid player, 1, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Class 1 Weapons License.",false] spawn domsg; };
-			if(_amount == 2) then { [getplayeruid player, 2, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Mining License.",false] spawn domsg; };
-			if(_amount == 3) then { [getplayeruid player, 3, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Logging License.",false] spawn domsg; };
-			if(_amount == 4) then { [getplayeruid player, 4, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Fishing License.",false] spawn domsg; };
-			if(_amount == 5) then { [getplayeruid player, 5, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Truck License.",false] spawn domsg; };
-			if(_amount == 6) then { [getplayeruid player, 6, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Pilot's License.",false] spawn domsg; };
-			if(_amount == 7) then { [getplayeruid player, 7, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Oil Trade License.",false] spawn domsg; };
-			if(_amount == 8) then { [getplayeruid player, 8, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your PD SWAT Leader Certification.",false] spawn domsg; };
-			if(_amount == 9) then { [getplayeruid player, 9, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your PD SWAT Certification.",false] spawn domsg; };
-			if(_amount == 10) then { [getplayeruid player, 10, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your PD Scuba Leader Certification.",false] spawn domsg; };
-			if(_amount == 11) then { [getplayeruid player, 11, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your PD Scuba Certification.",false] spawn domsg; };
-			if(_amount == 12) then { [getplayeruid player, 12, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your PD Air Leader Certification.",false] spawn domsg; };
-			if(_amount == 13) then { [getplayeruid player, 13, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your PD Air Certification.",false] spawn domsg; };
-			if(_amount == 14) then { [getplayeruid player, 14, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your DoC CRT Leader Certification.",false] spawn domsg; };
-			if(_amount == 15) then { [getplayeruid player, 15, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your DoC CRT Certification.",false] spawn domsg; };
-			if(_amount == 16) then { [getplayeruid player, 16, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your DoC Air Leader Certification.",false] spawn domsg; };
-			if(_amount == 17) then { [getplayeruid player, 17, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your DoC Air Certification.",false] spawn domsg; };
-			if(_amount == 18) then { [getplayeruid player, 18, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Boat License.",false] spawn domsg; };
-			if(_amount == 19) then { [getplayeruid player, 19, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Casino Membership.",false] spawn domsg; };
-			if(_amount == 20) then { [getplayeruid player, 20, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Bar Certification.",false] spawn domsg; };
-			if(_amount == 21) then { [getplayeruid player, 21, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Bus License.",false] spawn domsg; };
-			if(_amount == 22) then { [getplayeruid player, 22, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Class 2 Weapons License.",false] spawn domsg; };
-			if(_amount == 23) then { [getplayeruid player, 23, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your FD Air Leader Certification.",false] spawn domsg; };
-			if(_amount == 24) then { [getplayeruid player, 24, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your FD Air Certification.",false] spawn domsg; };
-			if(_amount == 25) then { [getplayeruid player, 25, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your FD Scuba Leader Certification.",false] spawn domsg; };
-			if(_amount == 26) then { [getplayeruid player, 26, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your FD Scuba Certification.",false] spawn domsg; };
-			if(_amount == 27) then { [getplayeruid player, 27, 2] remoteExec ["server_fnc_licenses",2]; ["You lost your Paralegal License.",false] spawn domsg; };
+
+			if(_amount == 0) then { [getplayeruid player, 0, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś prawo jazdy.",false] spawn domsg; };
+			if(_amount == 1) then { [getplayeruid player, 1, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję na broń Klasy 1.",false] spawn domsg;  };
+			if(_amount == 2) then { [getplayeruid player, 2, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję na kopanie.",false] spawn domsg;  };
+			if(_amount == 3) then { [getplayeruid player, 3, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję drwala.",false] spawn domsg; };
+			if(_amount == 4) then { [getplayeruid player, 4, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję rybaka.",false] spawn domsg; };
+			if(_amount == 5) then { [getplayeruid player, 5, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś prawo jazdy na ciężarówki.",false] spawn domsg; };
+			if(_amount == 6) then { [getplayeruid player, 6, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Pilota.",false] spawn domsg; };
+			if(_amount == 7) then { [getplayeruid player, 7, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję handlarza oleju.",false] spawn domsg; };
+			if(_amount == 8) then { [getplayeruid player, 8, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Licencja Dowódcy SWAT.",false] spawn domsg; };
+			if(_amount == 9) then { [getplayeruid player, 9, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Licencja SWAT.",false] spawn domsg; };
+			if(_amount == 10) then { [getplayeruid player, 10, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Dowódcy nurków PD.",false] spawn domsg; };
+			if(_amount == 11) then { [getplayeruid player, 11, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję nurka PD.",false] spawn domsg; };
+			if(_amount == 12) then { [getplayeruid player, 12, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Dowódcy AIR PD.",false] spawn domsg; };
+			if(_amount == 13) then { [getplayeruid player, 13, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję AIR PD.",false] spawn domsg; };
+			if(_amount == 14) then { [getplayeruid player, 14, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję DoC CRT Leader Certification.",false] spawn domsg; };
+			if(_amount == 15) then { [getplayeruid player, 15, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję DoC CRT Certification.",false] spawn domsg; };
+			if(_amount == 16) then { [getplayeruid player, 16, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję DoC Air Leader Certification.",false] spawn domsg; };
+			if(_amount == 17) then { [getplayeruid player, 17, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję DoC Air Certification.",false] spawn domsg; };
+			if(_amount == 18) then { [getplayeruid player, 18, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś patent motorowodny.",false] spawn domsg; };
+			if(_amount == 19) then { [getplayeruid player, 19, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś Członkostwo kasyna.",false] spawn domsg; };
+			if(_amount == 20) then { [getplayeruid player, 20, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś Bar Certification.",false] spawn domsg; };
+			if(_amount == 21) then { [getplayeruid player, 21, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Bus License.",false] spawn domsg; };
+			if(_amount == 22) then { [getplayeruid player, 22, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję na broń Klasy 2.",false] spawn domsg; };
+			if(_amount == 23) then { [getplayeruid player, 23, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Dowódcy AIR FD.",false] spawn domsg; };
+			if(_amount == 24) then { [getplayeruid player, 24, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję AIR FD.",false] spawn domsg; };
+			if(_amount == 25) then { [getplayeruid player, 25, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję FD Scuba Leader Certification.",false] spawn domsg; };
+			if(_amount == 26) then { [getplayeruid player, 26, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Nurka FD.",false] spawn domsg; };
+			if(_amount == 27) then { [getplayeruid player, 27, 2] remoteExec ["server_fnc_licenses",2]; ["Utraciłeś licencję Prawnika.",false] spawn domsg; };
 
 
 			licenseArray = licenseArray - [_amount];
@@ -421,8 +421,8 @@ if(_type == "drug") then {
 	if(client_heroin > 0) then { client_heroin = client_heroin - 1; if(client_heroin == 0) then { player setUnitRecoilCoefficient 2.8; }; if(client_heroin == 1) then { 432 cutRsc ["HUDheroin","PLAIN"]; [player,18] spawn drug_heroin_effects; };  };
 	if(client_energy > 0) then { client_energy = client_energy - 1; if(client_energy == 0) then { player enablefatigue true; player enablestamina true; }; if(client_energy == 1) then { 433 cutRsc ["HUDenergy","PLAIN"]; };  };
 	if(client_drunk > 0) then { client_drunk = client_drunk - 1; [player,15] spawn drug_beer_effects; };
-	if(client_donuts > 0) then { client_donuts = client_donuts - 1; if(client_donuts == 0) then { player setCustomAimCoef 1; player setUnitRecoilCoefficient 1.5; ["Your stomach grumbles", true] spawn domsg; }; };		
-	if(extraCash > 0) then { extraCash = extraCash - 1; if(extraCash == 0) then { ["You no longer feel Charasmatic..",false] spawn domsg; }; };
+	if(client_donuts > 0) then { client_donuts = client_donuts - 1; if(client_donuts == 0) then { player setCustomAimCoef 1; player setUnitRecoilCoefficient 1.5; ["Burczy ci w brzuchu", true] spawn domsg; }; };		
+	if(extraCash > 0) then { extraCash = extraCash - 1; if(extraCash == 0) then { ["Nie czujesz się już charyzmatyczny..",false] spawn domsg; }; };
 };
 
 _mydrugeffects = [client_marijuana,client_cocaine,client_meth,client_heroin,client_energy];

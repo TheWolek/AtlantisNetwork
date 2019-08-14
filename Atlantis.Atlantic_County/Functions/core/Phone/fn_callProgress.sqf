@@ -15,7 +15,7 @@ if(count trackedby > 0) then {
 		_total = myCallOwner getVariable "PhonecallNumber";
 		playSound "cgphone_static";
 		_total = 1;
-		[format["You were just charged %1 dollars for this call!",_total], false] spawn domsg;
+		[format["Ta rozmowa kosztowała %1 $ !",_total], false] spawn domsg;
 		[_total] spawn client_fnc_removecash;
 		sleep 140;
 	};
@@ -27,8 +27,8 @@ if(count trackedby > 0) then {
 		if( isNull myCallOwner ) exitwith { [] call client_fnc_resetcall; };
 		_total = myCallOwner getVariable "PhonecallNumber";	
 		if( _total < 2 && myjob != "Radio" ) exitwith { [] call client_fnc_resetcall; };
-		if( deadPlayer && myCallOwner != player && myjob != "Radio" ) exitwith { ["Call Dropped (You were downed)", false] spawn domsg; [] call client_fnc_hangup };	
-		if( client_battery < 5 && myjob != "Radio" ) exitwith { ["Call Dropped (Low Battery)", false] spawn domsg; [] call client_fnc_hangup };	
+		if( deadPlayer && myCallOwner != player && myjob != "Radio" ) exitwith { ["Rozmowa rozłączona (jesteś nieprzytomny)", false] spawn domsg; [] call client_fnc_hangup };	
+		if( client_battery < 5 && myjob != "Radio" ) exitwith { ["Rozmowa rozłączona (niski stan baterii)", false] spawn domsg; [] call client_fnc_hangup };	
 		sleep 5;
 	};
 };

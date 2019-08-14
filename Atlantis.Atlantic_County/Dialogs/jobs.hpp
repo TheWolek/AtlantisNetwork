@@ -11,7 +11,7 @@ class job_update {
 		class HideButton
 		{
 		    colorBorder[] = {0,0,0,0.05};
-		    access = 0;
+		    
 		    type = CT_BUTTON;
 		    text = "";
 		    colorText[] = {1, 1, 1, 0};
@@ -56,7 +56,7 @@ class job_update {
 			tooltipColorBox[] = {1,1,1,1};
 			tooltipColorShade[] = {0,0,0,0.65};
 			idc = 191911;
-			text = "\np_dialogs1\Images\CentreLinkMenu.paa";
+			text = "\dialogs\Images\CentreLinkMenu.paa";
 			x = 0.277722 * safezoneW + safezoneX;
 			y = 0.104079 * safezoneH + safezoneY;
 			w = 0.444557 * safezoneW;
@@ -68,7 +68,7 @@ class job_update {
 		class JobList : client_RscListBox 
 		{
 			idc = 9001;
-			text = "Connecting to Job Search..";
+			text = "Łączenie z wyszukiwaniem pracy..";
 			x = 0.339114 * safezoneW + safezoneX;
 			y = 0.282244 * safezoneH + safezoneY;
 			w = 0.32168 * safezoneW;

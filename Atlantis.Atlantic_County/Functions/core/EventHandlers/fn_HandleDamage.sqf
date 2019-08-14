@@ -18,7 +18,7 @@ if(deadPlayer) exitwith {
 		
 		[] spawn {
 
-			cutText ["YOU ARE NOW UNCONSCIOUS. YOU ARE NOT ABLE TO TALK.","PLAIN"]; 
+			cutText ["JESTEŚ NIEPRZYTOMNY. NIE MOŻESZ MÓWIĆ.","PLAIN"]; 
 			sleep 10;
 			0 cutFadeOut 5;
 

@@ -11,15 +11,15 @@ _message = "";
 
 if(_drunk > 0 || _marijuana > 0 || _heroin > 0 || _cocaine > 0 || _meth > 0) then {
 
-    if(_drunk > 0) then { _message = _message + format["Alcohol: %1. ", _drunk]; };
-    if(_marijuana > 0) then { _message = _message + format["Marijuana: %1. ", _marijuana]; };
-    if(_heroin > 0) then { _message = _message + format["Heroin: %1. ", _heroin]; };
-    if(_cocaine > 0) then { _message = _message + format["Cocaine: %1. ", _cocaine]; };
-    if(_meth > 0) then { _message = _message + format["Meth: %1. ", _meth]; };
+    if(_drunk > 0) then { _message = _message + format["Alkohol: %1. ", _drunk]; };
+    if(_marijuana > 0) then { _message = _message + format["Marihuana: %1. ", _marijuana]; };
+    if(_heroin > 0) then { _message = _message + format["Heroina: %1. ", _heroin]; };
+    if(_cocaine > 0) then { _message = _message + format["Kocaina: %1. ", _cocaine]; };
+    if(_meth > 0) then { _message = _message + format["Meta: %1. ", _meth]; };
 
 } else {
 
-    _message = "Person is not intoxicated in any way.";
+    _message = "Osoba nie jest niczym odurzona.";
 
 };
 

@@ -1,5 +1,5 @@
 private["_witnesses"];
-
+_uid = getPlayerUID player;
 _evidence = _this select 0;
 _info = _evidence getVariable "evidenceInformation"; 
 
@@ -13,19 +13,20 @@ switch(_info select 10) do {
 
     case 1: {
 
-       [format["Upon analysis, it was discovered that a person shot somebody with a(n) %1. Witnessed by %2.", _info select 6, _witnesses], true] remoteExec ["domsg", player];
-
+        [format["Po przeanalizowaniu dowodów, doszedłeś do wniosku, że ktoś postrzelił kogoś używając %1. Świadek: %2.", _info select 6, _witnesses], true] remoteExec ["domsg", player];
+        format ["Evidence_log: %1 (UID %2) discovered that a person shot somebody with a(n) %3. Witnessed by %4.", player, _uid , _info select 6, _witnesses] remoteExecCall["diag_log",2]; 
     };
 
     case 2: {
 
-        [format["Upon analysis, it was discovered that a person strip searched somebody. Witnessed by %1. ", _witnesses], true] remoteExec ["domsg", player];
-
+        [format["Po przeanalizowaniu dowodów, doszedłeś do wniosku, że ktos dokonał rabunku. Świadek: %1. ", _witnesses], true] remoteExec ["domsg", player];
+        format ["Evidence_log: %1 (UID %2) discovered that a person strip searched somebody. Witnessed by %4.", player, _uid , _witnesses] remoteExecCall["diag_log",2]; 
     };
 
     case 3: {
 
-        [format["Upon analysis, it was discovered that a person robbed a store using a(n) %1. Witnessed by %2.", _info select 6, _witnesses], true] remoteExec ["domsg", player];
+        [format["Po przeanalizowaniu dowodów, doszedłeś do wniosku, ktoś dokonał napadu na sklep używając %1. Świadek: %2.", _info select 6, _witnesses], true] remoteExec ["domsg", player];
+        format ["Evidence_log: %1 (UID %2) discovered that a person robbed a store using a(n) %3. Witnessed by %4.", player, _uid , _info select 6, _witnesses] remoteExecCall["diag_log",2];        
 
     };
 

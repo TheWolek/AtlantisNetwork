@@ -16,7 +16,7 @@ if(!isNil "vehspawned") then {
 };
 
 [10] call Client_fnc_removeBank;
-["You have been charged $10.00 for renting a Job Vehicle.", true] spawn domsg;
+["Zapłąciłeś $10.00 za wynajem samochodu służbowego.", true] spawn domsg;
 
 _jobType = myjob;
 
@@ -39,12 +39,12 @@ if (_jobType == "Biker") exitwith {
 };
 
 if (_jobType == "Wood Logging") exitwith {
-	vehspawned = createVehicle ["jonzie_log_truck", [0,0,(random(500) + 3)], [], 0, "NONE"];
+	vehspawned = createVehicle ["d3s_next", [0,0,(random(500) + 3)], [], 0, "NONE"];
 	[vehspawned] spawn client_fnc_spawnvehicle;
-	[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
+	//[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE",1];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "mail") exitwith {
@@ -58,65 +58,66 @@ if (_jobType == "mail") exitwith {
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE_BLKboots_nk_blk",1];	
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "trashman") exitwith {	
-	vehspawned = createVehicle ["jf_dump", [0,0,(random(500) + 3)], [], 0, "NONE"];	
+	vehspawned = createVehicle ["chbom", [0,0,(random(500) + 3)], [], 0, "NONE"];	
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE_BLKboots_nk_blk",1];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "repairman") exitwith {	
 
 	_level_check = (client_level_array select 7);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["nopixel_mrfixit", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["nopixel_mrfixit", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["nopixel_mrfixit", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_titan_17_TAR", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_titan_17_TAR", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_titan_17_TAR", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
-	[vehspawned, ["white","Glossy"]] spawn client_fnc_initVehicle;
+	//[vehspawned, ["white","Glossy"]] spawn client_fnc_initVehicle;
 	[vehspawned] spawn client_fnc_spawnvehicle;	
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE",1];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "security") exitwith {
 
 	_level_check = (client_level_array select 2);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["ivory_isf_security", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["ivory_isf_security", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["ivory_isf_security", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_200_VX_16", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_200_VX_16", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_gls63amg_17", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
-	[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
+	//[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
-	vehspawned addItemCargo ["sl_client_c3_security_W",1];
-	["You have some items in the truck, use them.", true] spawn domsg;
+	vehspawned addItemCargo ["dtdev_vest_security",1];
+	vehspawned addItemCargo ["vvv_character_agente_473",1];
+	["Przedmioty są w pojeździe, użyj ich.", true] spawn domsg;
 };
 
 if (_jobType == "towtruck") exitwith {
 
 	_level_check = (client_level_array select 4);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["red_towtruck_08_black", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["red_towtruck_08_black", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["red_towtruck_08_black", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_fseries_17_TOW", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_fseries_17_TOW", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_fseries_17_TOW", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
-	[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
+	//[vehspawned, ["white","Glossy"]] remoteexec ["client_fnc_initVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 	vehspawned addItemCargo ["TRYK_OVERALL_SAGE_BLKboots_nk_blk",1];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "NewsMan") exitwith {	
 
 	_level_check = (client_level_array select 6);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["nopixel_news_van_original", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["nopixel_news_van_original", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["nopixel_news_van_original", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_savana_05", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_savana_05", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_vklasse_17", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	clearmagazinecargoGlobal (vehspawned);
@@ -125,18 +126,18 @@ if (_jobType == "NewsMan") exitwith {
 	vehspawned addWeaponCargo ["Press_Cam_F",2];
 	_microphone = ["Press_Mic_AAN_F", "Press_Mic_BBC_F", "Press_Mic_CNN_F", "Press_Mic_ARD_F", "Press_Mic_ZDF_F"] call BIS_fnc_selectRandom;
 	vehspawned addWeaponCargo [_microphone,2];
-	["You have some items in the truck, use them!", true] spawn domsg;
+	["Przedmioty są w pojeździe, użyj ich!", true] spawn domsg;
 };
 
 if (_jobType == "taxi") exitwith {	
 
 	_level_check = (client_level_array select 9);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["ivory_cv_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["ivory_rs4_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["red_gs350_13_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["d3s_camry_18_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["d3s_camry_18_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["d3s_cherokee_18_taxi", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
-	[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
+	//[vehspawned] remoteexec ["client_fnc_ivoryInitVehicle",2];
 	current_cars pushback vehspawned; uisleep 1;
 };
 
@@ -149,12 +150,12 @@ if (_jobType == "cropdusting") exitwith {
 if (_jobType == "bus") exitwith {	
 
 	_level_check = (client_level_array select 9);
-	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
-	if(_level_check > 599) then { vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > -1 && _level_check < 300) then { vehspawned = createVehicle ["agora_ratp", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 299 && _level_check < 600) then { vehspawned = createVehicle ["agora_ratp", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
+	if(_level_check > 599) then { vehspawned = createVehicle ["agora_tcl", [0,0,(random(500) + 3)], [], 0, "NONE"]; };
 
 
-	vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"];
+	//vehspawned = createVehicle ["jf_bus", [0,0,(random(500) + 3)], [], 0, "NONE"];
 
 	[vehspawned] spawn client_fnc_spawnvehicle;
 	current_cars pushback vehspawned; uisleep 1;

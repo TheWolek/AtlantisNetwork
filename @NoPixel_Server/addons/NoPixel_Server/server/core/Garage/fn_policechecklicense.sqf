@@ -8,7 +8,7 @@ _check = [0, _checkstr] call ExternalS_fnc_ExtDBquery;
 _booli = (_check select 0) select 0;
 
 
-diag_log ["license check police: %1 %2", _officer, _plate];
+diag_log format ["license check police: %1 %2", _officer, _plate];
 
 if(_booli) then {
 
@@ -22,7 +22,7 @@ if(_booli) then {
 
 	_owner = _owner call BIS_fnc_getUnitByUid;
 
-	[format["License: %1 - Car: %2 - Color: %3 - Owner: %4",toUpper(_fetch select 0),getText(configFile >> "cfgVehicles" >> (_fetch select 1) >> "displayName"),(_fetch select 2),name _owner], true] remoteexec ["domsg",_officer];
+	[format["Rejestracja: %1 - Pojazd: %2 - Właścicel: %3",toUpper(_fetch select 0),getText(configFile >> "cfgVehicles" >> (_fetch select 1) >> "displayName"),name _owner], true] remoteexec ["domsg",_officer];
 } else {
-	["This plate returned no results in the DMV database.", true] remoteexec ["domsg",_officer];
+	["Ten numer rejestracyjny nie zwrócił żadnego wynniku z bazy pojazdów", true] remoteexec ["domsg",_officer];
 };

@@ -7,19 +7,22 @@ detach player;
 
 if(deadPhase == 1) then {
 
-    ["You woke up and can recall what happened from when you were paralyzed.", true] spawn domsg;
+    ["Odzyskałeś władzę w kończynach i pamiętasz co się działo, gdy byłeś sparaliżowany.", true] spawn domsg;
 
 };
 
 if(deadPhase == 2) then {
 
-    ["You woke up, but have no recollection of any recent memories while you were unconscious.", true] spawn domsg;
+    ["Obudziłeś się, ale nie pamiętasz co się działo.", true] spawn domsg;
 
 };
 
 sleep 1;
 deadphase = 0;
+player setVariable ["dead",false,true];
 player setVariable ["tf_voiceVolume", 1, true];
+TF_speak_volume_level = "normal";
+showchat true;
 inGameUISetEventHandler ["Action", ""];
 
 "colorCorrections" ppEffectEnable true;    

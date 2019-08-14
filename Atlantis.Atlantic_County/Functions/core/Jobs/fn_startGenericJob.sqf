@@ -1,5 +1,5 @@
 _data = _this select 0;
-if(myjob != "none") exitwith { ["You already have a job!", true] spawn domsg; };
+if(myjob != "none") exitwith { ["Masz już pracę!", true] spawn domsg; };
 
 if(isnil "taskrunning") then { taskrunning = false; };
 

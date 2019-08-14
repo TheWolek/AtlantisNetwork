@@ -1,4 +1,4 @@
-if ( !(0 IN licensearray) ) exitWith { ["You must have a Driver's License.", false] spawn domsg; };
+if ( !(0 IN licensearray) ) exitWith { ["Musisz mieć Prawo Jazdy.", false] spawn domsg; };
 
 createDialog "garage";
 

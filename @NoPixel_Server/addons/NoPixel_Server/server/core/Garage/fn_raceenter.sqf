@@ -1,8 +1,8 @@
 params["_player"];
 private ["_f1cars"];
 if(isNil "racequeue") then { racequeue = true; racecontestents = []; raceprogress = false; racecount = 0; };
-if(raceprogress) exitwith { ["Race already in progress, sorry!",true] remoteexec ["domsg",_player]; };
-if(racecount == 24) exitwith { ["Race is full, sorry!",true] remoteexec ["domsg",_player]; };
+if(raceprogress) exitwith { ["Wyścig już trwa",true] remoteexec ["domsg",_player]; };
+if(racecount == 24) exitwith { ["W wyścigu nie ma więcej miejsc",true] remoteexec ["domsg",_player]; };
 
 if(_player IN racecontestents) exitwith { ["You are in this race!",true] remoteexec ["domsg",_player]; };
 
@@ -14,13 +14,13 @@ racecount = racecount + 1;
 
 
 if(racecount == 1) then {
-	["A F1 is starting in 3 minutes",true] remoteexec ["domsg",-2];
+	["Wyścig F1 startuje za 3 minuty",true] remoteexec ["domsg",-2];
 	uisleep 60;
-	["A F1 is starting in 2 minutes",true] remoteexec ["domsg",-2];
+	["Wyścig F1 startuje za 2 minuty",true] remoteexec ["domsg",-2];
 	uisleep 60;
-	["A F1 is starting in 1 minutes",true] remoteexec ["domsg",-2];
+	["Wyścig F1 startuje za 1 minutę",true] remoteexec ["domsg",-2];
 	uisleep 60;
-	["A F1 is starting NOW",true] remoteexec ["domsg",-2];
+	["Wyścig F1 startuje teraz",true] remoteexec ["domsg",-2];
 
 	[] remoteexec ["client_fnc_dorace",racecontestents];	
 	raceprogress = true;

@@ -1,5 +1,4 @@
 params ["_ct"];
-
 _pia = Current_Cars find _ct;
 Current_Cars deleteAt _pia;
 
