@@ -28,10 +28,6 @@ if(myJob == "Legal") then {
 		_garage pushBack "d3s_c63_14";
 	};
 
-	if(player getVariable "legal" >= 3) then {
-		_garage pushBack "d3s_s560_18";
-		_garage pushback "d3s_g63amg_18";
-	};
 };
 
 if(myJob == "Cop") then {
