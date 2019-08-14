@@ -166,13 +166,12 @@ NoPixel_InteractionMenuItems = [
 		["player distance [923.081,1285.73,0.00143957] < 25"], 
 		["Lottery $1K", "[] spawn client_fnc_lottoBuy;",5] 
 	],
-	*/
 
 	[ 
 		["player distance [922.831,1293.87,0.00144005] < 25"], 
 		["Slots $100-$1K", "[] spawn client_fnc_slotsStart; ",5] 
 	],
-	//
+	*/
 
 	[
 		["typeof CursorTarget == 'Land_Market_DED_Market_03_F'"],
