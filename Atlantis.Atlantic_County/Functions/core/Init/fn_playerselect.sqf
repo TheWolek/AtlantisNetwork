@@ -43,7 +43,7 @@ uisleep 10;
 _script = [
 	[
 		["Stwórz od nowa swoje życie!","<t align = 'center' shadow = '1' size = '0.5' font='PuristaBold'>%1</t><br/>",5],
-		["Poznaj gagsterską stronę tego stanu, zarabiaj gruby szmal robiąc nielegalne rzeczy,","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t><br/>",5],
+		["Poznaj gangsterską stronę tego stanu, zarabiaj gruby szmal robiąc nielegalne rzeczy,","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t><br/>",5],
 		["Albo stań po stronie prawa i zacznij pracę jako policjant, ratownik lub prawnik!","<t align = 'center' shadow = '1' font='PuristaBold' size = '0.5'>%1</t>",8]
 	],
 	0, 0.75
