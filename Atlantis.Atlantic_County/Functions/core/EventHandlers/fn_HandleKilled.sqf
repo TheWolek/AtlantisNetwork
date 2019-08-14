@@ -18,7 +18,9 @@ for [{_x=1},{_x<=25},{_x=_x+1}] do {
 
 cutText ["JESTEŚ SPARALIŻOWANY. MOŻESZ MÓWIĆ, ALE NIE JESTEŚ W STANIE SIĘ RUSZYĆ","PLAIN"];
 
-[_unit] remoteExec ["server_fnc_requestMedic", 2];
+if(count currentEMS > 0) then {
+	[_unit] remoteExec ["server_fnc_requestMedic", 2];
+};
 
 [_unit, vehicle _unit, _headshot] spawn {
 	params["_unit","_vehicle","_headshot"];
@@ -63,7 +65,7 @@ cutText ["JESTEŚ SPARALIŻOWANY. MOŻESZ MÓWIĆ, ALE NIE JESTEŚ W STANIE SIĘ
 	};
 
 	//[_unit, "UnconsciousReviveDefault"] remoteExec["switchMove"];
-	[_unit, "DeadState"] remoteExec ["client_fnc_animSync"];
+	[player, "DeadState"] remoteExec ["client_fnc_animSync"];
 
 	while{true} do {
 		sleep 1;
@@ -103,7 +105,7 @@ if(_length < 5) then { _length = 5; };
 if(!(myJob IN ['Cop','EMS','doc'])) then {
 	client_respawn_timer = _length;
 } else {
-	client_respawn_timer = 5;
+	client_respawn_timer = 10;
 };
 
 _unit setVariable["dead",true,true];

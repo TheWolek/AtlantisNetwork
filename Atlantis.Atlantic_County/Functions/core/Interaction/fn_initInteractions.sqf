@@ -1017,7 +1017,7 @@ NoPixel_InteractionMenuItems = [
 //////////////////////////////////
 
 	[
-		["getpos player distance [3188.12,3577.67,0.00144958] < 5"],
+		["getpos player distance [3188.12,3577.67,0.00144958] < 10"],
 		["Autobus do Atlantis City", "closedialog 0; [] spawn client_fnc_bus;",3]
 	],
 
