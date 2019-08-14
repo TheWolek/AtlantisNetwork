@@ -8,7 +8,7 @@ switch (_code) do
 {
 	case 59: 
 	{
-		if(!(adminLevel >= 7)) exitWith {};
+		if(!(adminLevel >= 1)) exitWith {};
 
 		if (!_shift && !_ctrlKey && !_alt) then {
 			if(!isNull(findDisplay 1444)) exitWith {};

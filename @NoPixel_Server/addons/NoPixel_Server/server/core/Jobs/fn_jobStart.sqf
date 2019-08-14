@@ -75,7 +75,7 @@ if (str _jobtype find "Fire Dispatch" > -1) exitwith {
 };
 
 if (str _jobtype find "Kurier" > -1) exitwith {
-	[] remoteExec ["client_fnc_mailSystem",_player];
+	[] remoteExec ["client_fnc_signupMail",_player];
 	currentmailmen pushback _player;
 	publicvariable "currentMailMen";
 	//[] spawn server_fnc_addJob;

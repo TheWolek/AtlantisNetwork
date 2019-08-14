@@ -130,7 +130,7 @@ if (str _jobtype find "DA" > -1) exitwith {
 
 
 if (str _jobtype find "Kurier" > -1) exitwith {
-	[] spawn client_fnc_mailSystem;
+	[] spawn client_fnc_signupmail;
 	currentmailmen pushback _player;
 	publicvariable "currentMailMen";	
 };

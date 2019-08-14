@@ -228,6 +228,7 @@ class CfgFunctions
 			class openMail {};
 			class completeMail {};
 			class mailSystem {};
+			class signupMail {};
 		};
 
 		class jobFactions {

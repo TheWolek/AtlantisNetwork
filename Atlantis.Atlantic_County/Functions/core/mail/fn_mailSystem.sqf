@@ -1,16 +1,4 @@
 //	[_location,_sender,_jobType,_message] remoteExec ["client_fnc_mailSystem",_player];
-if(myjob != "none" && myjob != "mail") exitwith { ["Masz już pracę!", true] spawn domsg; };
-
-if(isnil "taskrunning") then { taskrunning = false; };
-
-
-
-myjob = "mail";
-[] call client_fnc_hudwork;
-private ["_warning","_JobBase","_housing"];
-
-
-
 
 if(!taskrunning) then {
 
