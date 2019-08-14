@@ -78,14 +78,10 @@ _civilianVehicle = [
 if(str CursorObject find "embarcadero" > -1) then {
 	_type = "BOAT";
 	_civilianVehicle = [
-		["B_Boat_Transport_01_F",5500],
-		["sab_boat",12600],
-		["sab_boat_2",12600],
-		["sab_boat_3",12600],
-		["sab_boat_4",12600],
-		["C_Scooter_Transport_01_F",12600],
-		["C_Boat_Transport_02_F",223000],		
-		["red_searay_14_white",1500000]
+		["B_Lifeboat",20000],
+		["C_Scooter_Transport_01_F",15000],
+		["C_Boat_Transport_02_F",100000],		
+		["C_Boat_Civil_01_F",150000]
 	];
 };
 
