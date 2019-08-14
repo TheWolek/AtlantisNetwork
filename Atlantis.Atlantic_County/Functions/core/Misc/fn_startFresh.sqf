@@ -13,6 +13,7 @@ removeHeadgear player;
 if(deadPhase == 1) then {
 
     ["Odzyskałeś władzę w kończynach i pamiętasz co się działo, gdy byłeś sparaliżowany.", true] spawn domsg;
+	["By dostać się do Atlantis City możesz wezwać taksówkę lub iść na przystanek i pojechać busem", true] spawn domsg;
 
 };
 
@@ -27,11 +28,11 @@ deadphase = 0;
 godmode = false;
 detach player;
 
-player setpos [9588.23,4136.39,0.00143814];
+player setpos [3248.15,3621.51,0.00143433];
 
-player setdir 210;
+player setdir 147;
 
-player adduniform "U_C_Poloshirt_stripped";
+player forceadduniform "U_C_Poloshirt_stripped";
 
 player linkItem "ItemMap";
 player linkItem "ItemCompass";

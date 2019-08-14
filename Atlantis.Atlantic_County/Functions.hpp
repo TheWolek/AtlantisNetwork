@@ -318,6 +318,7 @@ class CfgFunctions
 			file = "Functions\core\Jobs\JobBus";
 			class signupBus {};
 			class startBus {};
+			class bus {};
 		};
 		class JobRepairman {
 			file = "Functions\core\Jobs\JobRepairman";
