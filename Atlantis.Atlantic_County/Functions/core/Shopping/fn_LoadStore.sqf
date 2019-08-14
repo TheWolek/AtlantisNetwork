@@ -271,7 +271,16 @@ if(_condition == "backpack") then {
 		["TRYK_B_Coyotebackpack_WH",nil,3000,4,2],
 		["TRYK_B_Carryall_blk",nil,2500,4,2],
 		["TRYK_B_Kitbag_blk",nil,3000,4,2],
-		["B_mas_ww2_Bergen_uk",nil,4000,4,2]
+		["B_mas_ww2_Bergen_uk",nil,4000,4,2],
+		["TAC_BP_Butt_B",nil,600,4,2],
+		["TAC_BP_Butt_Khaki",nil,600,4,2],
+		["TAC_BP_Butt_OD",nil,600,4,2],
+		["TAC_BP_buttB_B",nil,1000,4,2],
+		["TAC_BP_buttB_Khaki",nil,1000,4,2],
+		["TAC_BP_buttB_OD",nil,1000,4,2],
+		["TAC_BP_KAR_B",nil,800,4,2],
+		["TAC_BP_KAR_L",nil,800,4,2],
+		["TAC_BP_KAR_R",nil,800,4,2]
 	];
 
 	{
