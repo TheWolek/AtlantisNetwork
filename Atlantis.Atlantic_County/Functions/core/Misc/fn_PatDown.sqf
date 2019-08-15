@@ -160,7 +160,7 @@ _GroundWeaponHolder setVariable ["evidenceInformation", [_returnkeys, name _retu
 		_nearest = (_nearest select 0) select 1;
 
 		[getPos _player, "Napad","Location", currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-		[format["Wezwanie do %1: Doszło do napadu w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _player], true] remoteExec ["domsg", currentDetectives];
+		[format["Wezwanie do %1: Doszło do napadu w okolicach %2.",name _nearest, mapGridPosition getPos _player], true] remoteExec ["domsg", currentDetectives];
 	};
 
 };

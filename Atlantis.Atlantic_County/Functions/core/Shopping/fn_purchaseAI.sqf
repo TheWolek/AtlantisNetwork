@@ -138,7 +138,7 @@ if (time >= wantedTimer + 300 && count currentMarshals > 0) then {
 
         [getPos player, "Spotted Wanted Person", "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
         wantedTimer = time;
-        [format["Dyspozytor do %1: Poszukiwana osoba została zauważona %2 kupując przedmioty.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg",currentMarshals];
+        [format["Dyspozytor do %1: Poszukiwana osoba została zauważona %2 kupując przedmioty.",name _nearest, mapGridPosition getPos player], true] remoteExec ["domsg",currentMarshals];
                 
     };
 };

@@ -51,7 +51,7 @@ if(typeof _obj == "Land_buildingsCasino2" && (player distance (_obj modelToWorld
 		_nearest = (_nearest select 0) select 1;
 
 		[_pos, "Napad", "Location", currentCop-currentMarshals-currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-		[format["Wezwanie do %1: Dochodzi do kradzieży w  %2.", _nearest getVariable "badgeNumber", mapGridPosition _pos], true] remoteExec ["domsg", currentCop];
+		[format["Wezwanie do %1: Dochodzi do kradzieży w  %2.",name _nearest", mapGridPosition _pos], true] remoteExec ["domsg", currentCop];
 	};
 
 	if(count currentMobster > 0) then {

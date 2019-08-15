@@ -46,7 +46,7 @@ if (time >= wantedTimer + 300 && count currentMarshals > 0) then {
 
 		[getPos player, format["Poszukiwana osoba była widziana poruszając się %1", _vehiclename], "Location", currentMarshals] remoteExec ["client_fnc_hudHelper", _nearest];
 		wantedTimer = time;
-		[format["Wezwanie do %1: Poszukiwana osoba była widziana w okolicach %2 wyciągając %3 z garażu.", _nearest getVariable "badgeNumber", mapGridPosition getPos player, _vehiclename], true] remoteExec ["domsg",currentMarshals];
+		[format["Wezwanie do %1: Poszukiwana osoba była widziana w okolicach %2 wyciągając %3 z garażu.", name _nearest, mapGridPosition getPos player, _vehiclename], true] remoteExec ["domsg",currentMarshals];
 		
     };
 };

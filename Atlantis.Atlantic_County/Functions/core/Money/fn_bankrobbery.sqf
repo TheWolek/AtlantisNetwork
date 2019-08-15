@@ -38,7 +38,7 @@ if(_type == 1) then {
 		_nearest = (_nearest select 0) select 1;
 
 		[getpos player, "Napad na bank", "Location", currentCop] remoteExec ["client_fnc_hudHelper", _nearest];
-		[format["Wezwanie do %1: Dochodzi do napadu na bank w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
+		[format["Wezwanie do %1: Dochodzi do napadu na bank w okolicach %2.",name _nearest, mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
 	};
 } else {
 	_thedrill attachTo [cursorObject, [2.4, 1.3, 0] ]; 
@@ -52,7 +52,7 @@ if(_type == 1) then {
 		_nearest = (_nearest select 0) select 1;
 
 		[getpos player, "Napad na bank", "Location", currentCop] remoteExec ["client_fnc_hudHelper", _nearest];
-		[format["Wezwanie do %1: Dochodzi do napadu na bank centralny w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
+		[format["Wezwanie do %1: Dochodzi do napadu na bank centralny w okolicach %2.",name _nearest, mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
 	};
 };
 
