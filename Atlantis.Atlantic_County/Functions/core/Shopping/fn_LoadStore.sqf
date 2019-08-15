@@ -1329,24 +1329,24 @@ if(_condition == "ems_veststore") then {
 if(_condition == "ems_uniformstore") then {
 
 	_ems_uniformstore = [
-		["CG_EMS6",nil,500,3,1],
-		["CG_EMS5",nil,500,3,1],
-		["CG_EMS9",nil,500,3,1],
-		["CG_EMS8",nil,500,3,1],
-		["CG_EMS7",nil,500,3,1],
-		["CG_EMS10",nil,500,3,1],
-		["CG_EMS4",nil,500,3,1],
-		["CG_EMS3",nil,500,3,1],
-		["CG_EMS2",nil,500,3,1],
-		["CG_EMS1",nil,500,3,1],
-		["EF_MKJKT_EMS",nil,500,3,1],
-		["female_ems",nil,500,3,1],
-		["vvv_traje_doctor",nil,500,3,1],
-		["cg_invisbp",nil,300,4,2],
-        ["EF_BLT_MEMS",nil,150,4,2],
-		["V_RebreatherB",nil,150,4,2],
-		["TRYK_B_Medbag",nil,250,4,2],
-		["TRYK_B_Medbag_OD",nil,250,4,2]
+		["CG_EMS6",nil,1,3,1],
+		["CG_EMS5",nil,1,3,1],
+		["CG_EMS9",nil,1,3,1],
+		["CG_EMS8",nil,1,3,1],
+		["CG_EMS7",nil,1,3,1],
+		["CG_EMS10",nil,1,3,1],
+		["CG_EMS4",nil,1,3,1],
+		["CG_EMS3",nil,1,3,1],
+		["CG_EMS2",nil,1,3,1],
+		["CG_EMS1",nil,1,3,1],
+		["EF_MKJKT_EMS",nil,1,3,1],
+		["female_ems",nil,1,3,1],
+		["vvv_traje_doctor",nil,1,3,1],
+		["cg_invisbp",nil,1,4,2],
+        ["EF_BLT_MEMS",nil,1,4,2],
+		["V_RebreatherB",nil,1,4,2],
+		["TRYK_B_Medbag",nil,1,4,2],
+		["TRYK_B_Medbag_OD",nil,1,4,2]
 
 	];
 
@@ -1374,14 +1374,14 @@ if(_condition == "ems_glassesstore") then {
 if(_condition == "ems_headgearstore") then {
 
 	_ems_headgearstore = [
-		["EF_Mcap_EMSB",nil,300,3,5],
-		["H_Hat_brown",nil,300,3,5],
-		["H_Hat_grey",nil,300,3,5],
-		["H_Cap_marshal",nil,300,3,5],
-		["H_Hat_tan",nil,300,3,5],
-		["H_Beret_02",nil,300,3,5],
-		["H_Beret_Colonel",nil,300,3,5],
-		["Kio_Capital_Hat",nil,300,3,5]
+		["EF_Mcap_EMSB",nil,1,3,5],
+		["H_Hat_brown",nil,1,3,5],
+		["H_Hat_grey",nil,1,3,5],
+		["H_Cap_marshal",nil,1,3,5],
+		["H_Hat_tan",nil,1,3,5],
+		["H_Beret_02",nil,1,3,5],
+		["H_Beret_Colonel",nil,1,3,5],
+		["Kio_Capital_Hat",nil,1,3,5]
 	];
 
 	{
