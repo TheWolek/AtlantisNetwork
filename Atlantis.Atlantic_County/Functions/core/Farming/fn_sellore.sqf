@@ -5,7 +5,7 @@ petroleo < string to object
 private["_n","_i","_localProtection"];
 
 _barArray = ["np_copperbar1","np_ironbar1","np_silverbar1","NP_Wood","CG_OilCanister"];
-_priceArray = [40,80,150,60,400];
+_priceArray = [40,80,150,18,400];
 
 if(isNil "globalProtection") then { globalProtection = 0; };
 if(globalProtection != 0) exitwith { ["Błąd - W trakcie przetwarzania", true] spawn domsg; };
