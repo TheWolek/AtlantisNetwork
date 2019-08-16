@@ -43,7 +43,7 @@ while{true} do {
 	if ((player getVariable["dead",FALSE]) || currentWeapon player == "" || currentWeapon player == "Binocular" || currentWeapon player == "Rangefinder" || _dist >= 10) exitwith { _failure = true; };
 	sleep 2;
 	_stolen = round(random(10));
-	[_stolen,false,true] call Client_fnc_addMoneyToPlayer; 
+	[_stolen,true,true] call Client_fnc_addMoneyToPlayer; 
 //	["Add","Karma",random(3),"Stress"] call client_fnc_sustain;
 	_counter = _counter + 0.1;
 	//if((_distpolice - _counter) < 0.2) exitwith {};
@@ -55,7 +55,7 @@ robbedstores2 pushback _shop;
 if(!_failure) then {
 	_amount =  (rs2modifier * _counter);
 	_amount = _amount + ((count currentcop) * 200);
-	[_amount,false,true] call Client_fnc_addMoneyToPlayer; 
+	[_amount,true,true] call Client_fnc_addMoneyToPlayer; 
 	[format["Okradłeś ten sklep na %1",(_amount+_stolen) call client_fnc_numberText], true] spawn domsg;
 	format["Robbery_Log: %1 robbed store for %2",player, _amount+_stolen] remoteExecCall["diag_log",2];
 

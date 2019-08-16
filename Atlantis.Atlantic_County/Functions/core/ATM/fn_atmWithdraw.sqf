@@ -168,7 +168,7 @@ if(_bankType == 4) then {
 		{
 			
 			[_amount] call Client_fnc_removeStash;
-			[_amount,false,true] call Client_fnc_addMoneyToPlayer;
+			[_amount,true,true] call Client_fnc_addMoneyToPlayer;
 			[format["Wypłaciłeś %1", _amount call client_fnc_numberText], true] spawn domsg;
 
 			

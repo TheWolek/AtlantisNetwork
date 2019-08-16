@@ -15,7 +15,7 @@ class CfgFunctions
 	{
 		class Save
 		{
-			file = "server/core/Save";
+			file = "NoPixel_Server\server\core\Save";
 			class autolock {};
 			class paintball {};
             class bank {};	
@@ -57,7 +57,7 @@ class CfgFunctions
 
 		class Shopping
 		{
-			file = "server/core/Shopping";
+			file = "NoPixel_Server\server\core\Shopping";
             class retreiveStore {};
             class retreiveStoreShopper {};
             class shopPurchase {};
@@ -67,7 +67,7 @@ class CfgFunctions
 
 		class Wanted
 		{
-			file = "server/core/Wanted";
+			file = "NoPixel_Server\server\core\Wanted";
             class wantedList {};
             class wantedListMine {};
             class wantedRemove {};
@@ -83,7 +83,7 @@ class CfgFunctions
 
 		class Housing
 		{
-			file = "server/core/Housing";
+			file = "NoPixel_Server\server\core\Housing";
             class retreiveHouse {};	
 			class gangStashSetup {};
 			class retreiveGang {};
@@ -92,7 +92,7 @@ class CfgFunctions
 
 		class Mayor
 		{
-			file = "server/core/Mayor";
+			file = "NoPixel_Server\server\core\Mayor";
 			class paymayor {};
             class mayorsetup {};
             class mayorupdate {};	
@@ -100,7 +100,7 @@ class CfgFunctions
 
 		class Garage
 		{
-			file = "server/core/Garage";
+			file = "NoPixel_Server\server\core\Garage";
 			class UpdateCarOwner {};
 			class upgradeVehicle {};
 			class getVehInfo {};
@@ -116,7 +116,7 @@ class CfgFunctions
 
 		class Jobs
 		{
-			file = "server/core/Jobs";
+			file = "NoPixel_Server\server\core\Jobs";
 			class radioSetup {};
 			class refreshjobs {};
 			class drugjob {};
@@ -140,7 +140,7 @@ class CfgFunctions
 	{
 		class ExtDB
 		{
-			file = "External/ExtDB";
+			file = "NoPixel_Server\External\ExtDB";
 			class ExtDBasync {};
             class ExtDBinit {};
 			class ExtDBstrip {};

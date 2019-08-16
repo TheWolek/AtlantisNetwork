@@ -88,6 +88,11 @@ NoPixel_InteractionMenuItems = [
 	],
 	*/
 
+	[ 
+		["myjob == 'Mafia' && player distance [946.936,1274.69,0.00144005] < 15"], 
+		["Dealer", "[] spawn client_fnc_dumpDrugs; ",5] 
+	],
+
 	[
 		["typeof CursorTarget == 'Land_Market_DED_Market_03_F'"],
 		["Make Advert $100", "closedialog 0; createdialog 'client_Advertise';", 5]

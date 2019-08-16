@@ -1219,14 +1219,14 @@ if(_condition == "mafia_veststore") then {
 if(_condition == "mafia_uniformstore") then {
 
 	_mafia_uniformstore = [
-		["vvv_hazmat",nil,4500,3,1],
+		["vvv_hazmat",nil,2250,3,1],
 		["vvv_traje_mafioso_F_1",nil,1600,3,1],
         ["vvv_traje_ejecutivo_1",nil,1400,3,1],
 		["vvv_character_funcionario_1",nil,2000,3,1],
 		["vvv_traje_jackoy5",nil,1200,3,1],
 		["Gsg9_AirUniform_black",nil,900,3,1],
-		["cg_invisbp",nil,9000,4,2],
-		["B_Bergen_dgtl_F",nil,10000,4,2]
+		["cg_invisbp",nil,4500,4,2],
+		["B_Bergen_dgtl_F",nil,5000,4,2]
 
 	];
 
@@ -1276,11 +1276,11 @@ if(_condition == "mafia_headgearstore") then {
 if(_condition == "mafia_misc") then {
 
 	_mafia_misc = [
-		["NP_drillitem",nil,20000,3],
-		["CG_HackingTool",nil,9000,3],
-		["CG_Lockpick",nil,1000,3],
-		["NP_DrugTable",nil,6500,3],
-		["DemoCharge_Remote_Mag",nil,60000,3],
+		["NP_drillitem",nil,15000,3],
+		["CG_HackingTool",nil,6750,3],
+		["CG_Lockpick",nil,750,3],
+		["NP_DrugTable",nil,4875,3],
+		["DemoCharge_Remote_Mag",nil,45000,3],
 		["RH_compm2",nil,2000,3],
 		["RH_compm2l",nil,2000,3],
 		["RH_cmore",nil,2000,3],

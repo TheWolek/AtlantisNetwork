@@ -76,7 +76,7 @@ if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 ||
 };
 
 if ( (str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [6407.09,5816.01,0.00143814] < 220 ) then {   
-	if(_rock IN mymetal) exitwith { ["Nie ma więcej zasobów w tej skale!", true] spawn domsg;  };
+	//if(_rock IN mymetal) exitwith { ["Nie ma więcej zasobów w tej skale!", true] spawn domsg;  };
 	_sound = round(random 5);
 	switch(_sound) do {
 		case 0: {
@@ -105,16 +105,17 @@ if ( (str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 |
 	};
 
 	if(_findchance > 45) then {	
-		mymetal pushback _rock;
+		/*mymetal pushback _rock;
 		[_rock] spawn {
 			params["_rock"];
 			uisleep 600;
 			mymetal = mymetal - [_rock];
 		};
+		*/
 
 		 _myOre = "np_copperore1";
-		 if(_findchance =< 70 && _findchance > 45) then { _myOre = "np_copperore1"; };
-		 if(_findchance =< 90 && _findchance > 70) then { _myOre = "np_ironore1"; };
+		 if(_findchance <= 70 && _findchance > 45) then { _myOre = "np_copperore1"; };
+		 if(_findchance <= 90 && _findchance > 70) then { _myOre = "np_ironore1"; };
 		 if(_findchance > 90) then { _myOre = "np_silverore1"; };
 
 
