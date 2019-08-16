@@ -56,7 +56,7 @@ if (isServer) then {
 
 	GarageVariableWhore = "Flag_US_F" createVehicle [0,1,0];
 
-	evidenceBox = createVehicle ["plp_ct_FootlockerBrown", [1350.15,976.3,2], [], 0, "CAN_COLLIDE"]; 
+	evidenceBox = createVehicle ["plp_ct_FootlockerBrown", [6978.6,4033.71,1], [], 0, "CAN_COLLIDE"]; 
 	evidenceBox setDir 228.054;
 	publicVariable "evidenceBox";
 
