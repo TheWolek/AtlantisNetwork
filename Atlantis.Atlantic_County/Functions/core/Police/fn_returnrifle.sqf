@@ -16,6 +16,6 @@ if (_attachment3 == "bnae_bipod_v2_virtual") then {
 	_cashrifle = _cashrifle + 300;
 };
 
-[_cashrifle,false,true] call Client_fnc_addMoneyToPlayer;
+[_cashrifle,true,true] call Client_fnc_addMoneyToPlayer;
 
 [format["Otrzymałeś %1 $ za zwrócenie karabinu do magazynu!", _cashrifle call client_fnc_numberText], true] spawn domsg;

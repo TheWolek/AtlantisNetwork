@@ -514,7 +514,6 @@ switch (_code) do
 				//["itemsjoint",0] spawn client_fnc_removeitem;
 				playSound "panicbutton";
 				sleep 2;
-				//[player,name player,getPos player] remoteExec ["client_fnc_recivePB",-2];
 				[] spawn client_fnc_panicbuttonUse;
 
 			};

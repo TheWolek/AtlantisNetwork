@@ -40,7 +40,7 @@ if(_chance > 85) then {
 
 		if(_amount < 0) then { _amount = 5; };
 
-		robbedstores pushback _shop; [format["Okradłeś ten sklep na %1",_amount], true] spawn domsg; [_amount,false,true] call Client_fnc_addMoneyToPlayer; 
+		robbedstores pushback _shop; [format["Okradłeś ten sklep na %1",_amount], true] spawn domsg; [_amount,true,true] call Client_fnc_addMoneyToPlayer; 
 
 	};
 

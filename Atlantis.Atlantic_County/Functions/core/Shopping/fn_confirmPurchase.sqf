@@ -26,4 +26,4 @@ switch (_type) do {
 
 [_totalPrice, true] call Client_fnc_removeCash;
 
-["SuccessTitleOnly", [format["Store! Test Message", _item,]]] call client_fnc_addTemplateToast;
+["SuccessTitleOnly", [format["Store! Test Message", _item]]] call client_fnc_addTemplateToast;

@@ -9,7 +9,7 @@ if(_type == 1) then { drugcount = drugcount + _number; } else { drugcount = drug
 
 publicVariable "drugcount";
 
-if(drugcount >= 50) then {
+if(drugcount >= 200) then {
 
 		drugcount = 0;
 		publicVariable "drugcount";
