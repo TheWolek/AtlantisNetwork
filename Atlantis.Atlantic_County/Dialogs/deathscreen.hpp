@@ -67,7 +67,7 @@ class DeathScreen
 			y = 0.1216 * safezoneH + safezoneY;
 			w = (20 / 40);
 			h = (1 / 25);
-			onButtonClick = "[player] remoteExec ['server_fnc_requestMedic', 2];";
+			onButtonClick = "[] spawn client_fnc_requestMedicAction;";
 			text = "Request Medic";
 			colorBackground[] = {0, 0, 0, 1};
 			class Attributes 

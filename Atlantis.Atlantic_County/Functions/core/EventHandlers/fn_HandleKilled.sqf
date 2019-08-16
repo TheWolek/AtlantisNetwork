@@ -173,10 +173,12 @@ _unit spawn
 	"colorCorrections" ppEffectAdjust [1, 1, -0.003, [0.0, 0.0, 0.0, 1.0], [0, 0, 0, 1],  [0, 0, 0, 0.0]];  
 	"colorCorrections" ppEffectCommit 5; 
 	if(!deadplayer) exitwith { closedialog 0; };
+	/*
 	if(shooting_death && round(maxTime - time) <= 0) exitwith { 
 		closeDialog 0; 
 		[] call client_fnc_startFresh; 
-	};			
+	};	
+	*/		
 };
 
 [_unit] spawn
