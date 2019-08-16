@@ -54,91 +54,6 @@ NoPixel_InteractionMenuItemsMap = [
 	[ 
 		["visibleMap"], 
 		["Biura", " ['Offices'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Bank", " ['Bank'] spawn client_fnc_marker; ",5] 
-	],
-
-	[ 
-		["visibleMap"], 
-		["Centrelink", " ['Centrelink'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Dunkin Bronut", " ['Dunkin'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Verizon", " ['Verizon'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["CPN", " ['Gas'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Sklep z bronią", " ['Gun'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Sklep wielobranżowy", " ['General'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Kiesta", " ['Carshop'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Garaż", " ['Garage'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Air Shop & Garage", " ['Airshop'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Boat Shop & Garage", " ['Boatshop'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Pizzaria", " ['Pizzaria'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Bar", " ['Bar'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Fryzjer", " ['Barber'] spawn client_fnc_marker; ",5] 
-	],
-
-	[ 
-		["visibleMap"], 
-		["McDildos", " ['McDildos'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Przetwórki", " ['Processing'] spawn client_fnc_marker; ",5] 
-	],
-	
-	[ 
-		["visibleMap"], 
-		["Różne", " ['Misc'] spawn client_fnc_marker; ",5] 
 	]
 ];
 
@@ -1008,7 +923,7 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof CursorObject IN ['Land_buildingBar1','Land_Pub_A'] "],
+		["typeof CursorObject IN ['Land_buildingBar1','Land_Pub_A','plp_bo_BeachBar'] "],
 		["Bar", "closedialog 0; createdialog 'food_menu'; ['bar'] spawn client_fnc_LoadStore;",3]
 	],
 ////////////////////////////////////
@@ -1016,7 +931,7 @@ NoPixel_InteractionMenuItems = [
 //////////////////////////////////
 
 	[
-		["getpos player distance [3188.12,3577.67,0.00144958] < 10"],
+		["getpos player distance [3188.12,3577.67,0.00144958] < 10 || getpos player distance [3273.55,3574.82,0] < 10"],
 		["Autobus do Atlantis City", "closedialog 0; [] spawn client_fnc_bus;",3]
 	],
 
