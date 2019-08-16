@@ -3,7 +3,7 @@ class DeathScreen
 	idd = 7300;
 	name = "client_Death_Screen";
 	movingEnabled = 0;
-	onload = "_MedicBtn = ((findDisplay 7300) displayCtrl 7303);_MedicBtn ctrlEnable true;";
+	//onload = "_MedicBtn = ((findDisplay 7300) displayCtrl 7303);_MedicBtn ctrlEnable true;";
 	enableSimulation = 1;
 	
 	class controlsBackground
@@ -12,16 +12,47 @@ class DeathScreen
 	
 	class Controls
 	{
-
+		class MedicsOnline : client_RscButtonMenu
+		{
+			idc = 7304;
+			text = "Medics: 1";
+			x = 0.000874975 * safezoneW + safezoneX;
+			y = 0.0556 * safezoneH + safezoneY;
+			w = (20 / 40);
+			h = (1 / 25);
+			onButtonClick = "";
+			colorBackground[] = {0, 0, 0, 0.7};
+			class Attributes 
+			{
+				align = "center";
+			};
+		};
+		
+		class MedicsNearby : client_RscButtonMenu
+		{
+			idc = 7305;
+			text = "Nearby: No";
+			x = 0.000874975 * safezoneW + safezoneX;
+			y = 0.0776 * safezoneH + safezoneY;
+			w = (20 / 40);
+			h = (1 / 25);
+			onButtonClick = "";
+			colorBackground[] = {0, 0, 0, 0.7};
+			class Attributes 
+			{
+				align = "center";
+			};
+		};
+		
 		class RespawnBtn : client_RscButtonMenu
 		{
 			idc = 7302;
-			x = 0.445885 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
-			w = 0.0878542 * safezoneW;
-			h = 0.0461907 * safezoneH;
+			x = 0.000874975 * safezoneW + safezoneX;
+			y = 0.0996 * safezoneH + safezoneY;
+			w = (20 / 40);
+			h = (1 / 25);
 			text = "Respawn";
-			onButtonClick = "closeDialog 0; [] call client_fnc_startFresh;";
+			onButtonClick = "closeDialog 0; [] call client_fnc_startFresh; ";
 			colorBackground[] = {0, 0, 0, 1};
 			class Attributes 
 			{
@@ -29,28 +60,32 @@ class DeathScreen
 			};
 		};
 		
-		class respawnTime : client_RscStructuredText
+		class MedicBtn : client_RscButtonMenu
+		{
+			idc = 7303;
+			x = 0.000874975 * safezoneW + safezoneX;
+			y = 0.1216 * safezoneH + safezoneY;
+			w = (20 / 40);
+			h = (1 / 25);
+			onButtonClick = "[player] remoteExec ['server_fnc_requestMedic', 2];";
+			text = "Request Medic";
+			colorBackground[] = {0, 0, 0, 1};
+			class Attributes 
+			{
+				align = "center";
+			};
+		};
+		
+		class respawnTime : client_RscButtonMenu
 		{
 			idc = 7301;
-			type = 13;
-			style = 0;
-			text = "Jesteś poważnie ranny!";
-			size = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-			colorText[] = {1, 1, 1, 1.0};
-			class Attributes {
-				font = "PuristaMedium";
-				color = "#ffffff";
-				align = "center";
-				shadow = 1;
-			};			
-
-			sizeEx = 0.030;
-			x = 0.275605 * safezoneW + safezoneX;
-			y = 0.456074 * safezoneH + safezoneY;
-			w = 0.447732 * safezoneW;
-			h = 0.047851 * safezoneH;
-			colorBackground[] = {0, 0, 0, 0};
+			text = "";
+			x = 0.000874975 * safezoneW + safezoneX;
+			y = 0.0226 * safezoneH + safezoneY;
+			w = (20 / 40);
+			h = (1 / 25);
+			onButtonClick = "";
+			colorBackground[] = {0, 0, 0, 1};
 		};
-
 	};
 };

@@ -23,6 +23,9 @@ if(deadPhase == 2) then {
 
 };
 
+showCinemaBorder false;
+client_kcCamera cameraEffect ["TERMINATE","BACK"];
+camDestroy client_kcCamera;
 deadPlayer = false;
 deadphase = 0;
 godmode = false;
@@ -31,6 +34,7 @@ detach player;
 player setpos [3248.15,3621.51,0.00143433];
 
 player setdir 147;
+TF_speak_volume_level = "normal";
 
 player forceadduniform "U_C_Poloshirt_stripped";
 

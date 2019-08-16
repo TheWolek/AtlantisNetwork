@@ -30,13 +30,13 @@ if(_statementsent == 4) then {
 if(_statementsent == 5) then {
 	[_target,true] remoteExec ["hideobjectglobal", 2]; 
 	_target setvariable ["admingod",true,true];
-	format["Admin_Log: %1 (%2) enabled inisibility %3 (%4)",name player, getplayeruid player, name _target, getplayeruid _target] remoteExecCall["diag_log",2];
+	format["Admin_Log: %1 (%2) enabled invisibility %3 (%4)",name player, getplayeruid player, name _target, getplayeruid _target] remoteExecCall["diag_log",2];
 };
 
 if(_statementsent == 6) then {
 	[_target,false] remoteExec ["hideobjectglobal", 2]; 
 	_target setvariable ["admingod",nil,true];
-	format["Admin_Log: %1 (%2) disabled inisibility %3 (%4)",name player, getplayeruid player, name _target, getplayeruid _target] remoteExecCall["diag_log",2];
+	format["Admin_Log: %1 (%2) disabled invisibility %3 (%4)",name player, getplayeruid player, name _target, getplayeruid _target] remoteExecCall["diag_log",2];
 };
 
 if(_statementsent == 7) then {

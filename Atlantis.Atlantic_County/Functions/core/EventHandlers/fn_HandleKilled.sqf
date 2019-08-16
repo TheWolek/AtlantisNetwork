@@ -18,13 +18,14 @@ for [{_x=1},{_x<=25},{_x=_x+1}] do {
 
 cutText ["JESTEŚ SPARALIŻOWANY. MOŻESZ MÓWIĆ, ALE NIE JESTEŚ W STANIE SIĘ RUSZYĆ","PLAIN"];
 
+/*
 if(count currentEMS > 0) then {
 	[_unit] remoteExec ["server_fnc_requestMedic", 2];
 };
+*/
 
 [_unit, vehicle _unit, _headshot] spawn {
 	params["_unit","_vehicle","_headshot"];
-	private["_anim"];
 	
 	if(_vehicle != _unit) then {
 		
@@ -50,33 +51,13 @@ if(count currentEMS > 0) then {
 	};
 
 	waitUntil {animationstate _unit != "UnconsciousReviveDefault"};
-	
-	if(_headshot == 1) then {
-		_anim = selectRandom [
-			"UnconsciousReviveHead_A","UnconsciousReviveHead_B","UnconsciousReviveHead_C"
-		];
-	} else {
-		_anim = selectRandom [
-			"UnconsciousReviveArms_A","UnconsciousReviveArms_B","UnconsciousReviveArms_C",
-			"UnconsciousReviveBody_A","UnconsciousReviveBody_B",
-			"UnconsciousReviveDefault_A","UnconsciousReviveDefault_B",
-			"UnconsciousReviveLegs_A","UnconsciousReviveLegs_B"
-		];
-	};
-
-	//[_unit, "UnconsciousReviveDefault"] remoteExec["switchMove"];
-	//[player, "DeadState"] remoteExec ["client_fnc_animSync"];
-	_unit playMoveNow "DeadState";
 
 	while{true} do {
-		sleep 1;
-
 		_unit setOxygenRemaining 1;
+		if( vehicle player == player && animationstate player != "deadstate" ) then {  [player,"DeadState"] remoteExec ["client_fnc_animsync"]; };
 
 		if (round(maxTime - time) > 0) then {
-			hintSilent parsetext format["<t size='0.75'>Respawn</t><br/>Możesz się zrespić za %1",[(maxTime - time),"MM:SS"] call BIS_fnc_secondsToString];
-		} else {
-			hint "";
+			//hintSilent parsetext format["<t size='0.75'>Respawn</t><br/>Możesz się zrespić za %1",[(maxTime - time),"MM:SS"] call BIS_fnc_secondsToString];
 		};
 
 		//if(animationState player != "UnconsciousReviveDefault" ) then { [_unit, "UnconsciousReviveDefault"] remoteExec["switchMove"]; sleep 5; };
@@ -85,6 +66,7 @@ if(count currentEMS > 0) then {
 		if(!deadPlayer) exitwith {
 			[_unit, "UnconsciousOutProne"] remoteExec["switchMove"];
 		};
+		sleep 1;
 	};
 };
 
@@ -153,6 +135,19 @@ if(_fuck != _you) then {
 	format["DeathLog: %1 (%2) was downed of an unknown reason.", name _unit, getplayeruid _unit] remoteExecCall["diag_log",2];
 };
 
+client_kcCamera = "CAMERA" camCreate (getPosATl player);
+showCinemaBorder true;
+client_kcCamera cameraEffect ["Internal","Back"];
+createDialog "deathscreen";
+client_kcCamera camSetTarget _unit;
+client_kcCamera camSetRelPos [0,22,22];
+client_kcCamera camSetFov .5;
+client_kcCamera camSetFocus [50,0];
+client_kcCamera camCommit 0;
+(findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == (_this select 1)) then {true}"];
+_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
+_RespawnBtn ctrlEnable false;
+
 [] spawn {
 	sleep 10;
 	0 cutFadeOut 5;
@@ -165,14 +160,15 @@ _unit spawn
 {
 	private["_RespawnBtn","_Timer"];
 	disableSerialization;
-	maxTime = time + (client_respawn_timer * 60);
-	waitUntil {round(maxTime - time) <= 0 OR isNull _this};
-	createdialog "deathscreen";
-	_Timer = ((findDisplay 7300) displayCtrl 7301);
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
+	_Timer = ((findDisplay 7300) displayCtrl 7301);
+	maxTime = time + (client_respawn_timer * 60);
+	_RespawnBtn ctrlEnable false;
+	waitUntil {_Timer ctrlSetText format["Możesz się odrodzić za: %1",[(maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; round(maxTime - time) <= 0 OR isNull _this};
 	_RespawnBtn ctrlEnable true;
-	(findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == (_this select 1)) then {true}"];
-	_Timer ctrlSetText "Twój czas się skończył. Naciśnij guzik respawn, aby obudzić się w szpitalu.";
+	//createdialog "deathscreen";
+	//(findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == (_this select 1)) then {true}"];
+	_Timer ctrlSetText "Możesz się już odrodzić";
 	"colorCorrections" ppEffectEnable true;     
 	"colorCorrections" ppEffectAdjust [1, 1, -0.003, [0.0, 0.0, 0.0, 1.0], [0, 0, 0, 1],  [0, 0, 0, 0.0]];  
 	"colorCorrections" ppEffectCommit 5; 
@@ -186,8 +182,10 @@ _unit spawn
 [_unit] spawn
 {
 	params ["_unit"];
-	while { deadPlayer } do { uisleep 0.05; };
+	while { deadPlayer } do { client_kcCamera camSetTarget _unit; client_kcCamera camSetRelPos [0,22,22]; client_kcCamera camCommit 0; uisleep 0.05; };
 	sleep 1;
+	life_deathCamera cameraEffect ["TERMINATE","BACK"];
+	camDestroy life_deathCamera;
 	_unit setVariable["dead",nil,true];
 	imrestrained = false;
 };

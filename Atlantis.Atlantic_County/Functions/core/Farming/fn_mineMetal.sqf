@@ -31,7 +31,7 @@ if(player getVariable["JailTracked",FALSE] && cursorobject distance player < 25)
 */
 
 if((getposATL player) distance (getposATL _rock) > 25) exitwith {};
-if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [4957.66,689.13,0.00144005] < 300) then {   
+if ((str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 || str _rock find "Cover_" > -1) && player distance [7129.52,1949.58,0.00154495] < 300) then {   
 	if(_rock IN myoil) exitwith { ["Nie ma więcej zasobów w tej skale!", true] spawn domsg; };
 	_sound = round(random 5);
 	switch(_sound) do {
@@ -98,23 +98,25 @@ if ( (str _rock find ": w_sharprock" > -1 || str _rock find ": bluntrock" > -1 |
 			playSound3D ["CG_Jobs\sounds\mining\mine1.ogg", player, false, getPosasl player, 3, 1, 15];
 		};		 				 				 		
 	};
-	 _findchance = round(random 20);
+	 _findchance = round(random 100);
 
-	if(_findchance < 2) then {			
+	if(_findchance < 10) then {			
 		["Add","Karma",1,"Strength"] call client_fnc_sustain;
 	};
 
-	if(_findchance > 9) then {	
+	if(_findchance > 45) then {	
 		mymetal pushback _rock;
 		[_rock] spawn {
 			params["_rock"];
 			uisleep 600;
 			mymetal = mymetal - [_rock];
 		};
+
 		 _myOre = "np_copperore1";
-		 if(_findchance < 14 && _findchance > 9) then { _myOre = "np_copperore1"; };
-		 if(_findchance < 19 && _findchance > 15) then { _myOre = "np_ironore1"; };
-		 if(_findchance > 18) then { _myOre = "np_silverore1"; };
+		 if(_findchance =< 70 && _findchance > 45) then { _myOre = "np_copperore1"; };
+		 if(_findchance =< 90 && _findchance > 70) then { _myOre = "np_ironore1"; };
+		 if(_findchance > 90) then { _myOre = "np_silverore1"; };
+
 
 		_level_check = (client_level_array select 11);
 		if(_level_check > -1 && _level_check < 300) then { player additem _myOre; };

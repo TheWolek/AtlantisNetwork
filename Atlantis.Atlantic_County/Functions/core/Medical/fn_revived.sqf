@@ -3,6 +3,9 @@ deadplayer = false;
 im_dead = false; 
 closedialog 0;
 detach player;
+showCinemaBorder false;
+client_kcCamera cameraEffect ["TERMINATE","BACK"];
+camDestroy client_kcCamera;
 ["set",0.25] call Client_Fnc_DoHealth;
 
 if(deadPhase == 1) then {

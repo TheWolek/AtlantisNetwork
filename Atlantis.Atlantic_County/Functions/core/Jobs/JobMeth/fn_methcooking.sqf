@@ -31,7 +31,7 @@ if(isNull mydt) exitwith {};
 
 _randomValue = round(random 2) + 3;
 
-if(uniform player == "sl_client_c4_hazmat_W") then { _randomValue = _randomValue + _randomValue; };
+if(uniform player == "U_C_CBRN_Suit_01_White_F") then { _randomValue = _randomValue + _randomValue; };
 
 if(myDrugValue < 50) then { myDrugValue = 50; };
 _item = format["CG_MethBag%1", myDrugValue];
