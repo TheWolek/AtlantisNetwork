@@ -10,15 +10,15 @@ if(_type == 1) then {
     _message = [];
 
     if(myJob IN ['Cop']) then {
-        _message pushBack format["PD Badge [%1]", player getVariable "badgeNumber"];
+        _message pushBack format["Odznaka ASP: %1", name player];
     };
 
     if(myJob IN ['EMS']) then {
-        _message pushBack format["FD Badge [%1]", player getVariable "badgeNumber"];
+        _message pushBack format["Odznaka EMS: %1", name player];
     };
 
     if(myJob IN ['doc']) then {
-        _message pushBack format["DoC Badge [%1]", player getVariable "badgeNumber"];
+        _message pushBack format["Odznaka DOC: %1", name player];
     };
 
     if(0 IN licenseArray) then {

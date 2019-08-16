@@ -35,7 +35,7 @@ if(count currentCop > 0) then {
 	_nearest = (_nearest select 0) select 1;
 
 	[_pos, "Napad na sklep", "Location", currentCop-currentMarshals-currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-	[format["Wezwanie do %1: Trwa napad na sklep w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition _pos], true] remoteExec ["domsg", currentCop-currentMarshals-currentDetectives];
+	[format["Wezwanie do %1: Trwa napad na sklep w okolicach %2.", name _nearest, mapGridPosition _pos], true] remoteExec ["domsg", currentCop-currentMarshals-currentDetectives];
 };
 
 while{true} do {
@@ -70,7 +70,7 @@ if(count currentCop > 0) then {
 	_nearest = (_nearest select 0) select 1;
 
 	[_pos, "Napad na sklep - podejrzany uciekł", "Location", currentCop-currentMarshals-currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-	[format["Wezwanie do %1: Podejrzany o napad w okolicach %2 uciekł ze miejsca napadu.", _nearest getVariable "badgeNumber", mapGridPosition _pos], true] remoteExec ["domsg",currentCop-currentMarshals-currentDetectives];
+	[format["Wezwanie do %1: Podejrzany o napad w okolicach %2 uciekł ze miejsca napadu.",name _nearest, mapGridPosition _pos], true] remoteExec ["domsg",currentCop-currentMarshals-currentDetectives];
 };
 
 _shop setvariable ["robbing",nil,true];
@@ -102,7 +102,7 @@ if(_amount > 10 || _stolen > 10) then {
 			_nearest = (_nearest select 0) select 1;
 
 			[getPos _GroundWeaponHolder, "Napad na sklep","Location", currentDetectives] remoteExec ["client_fnc_hudHelper", _nearest];
-			[format["Wezwanie do %1: Doszło do napadu na sklep w okolicach %2.", _nearest getVariable "badgeNumber", mapGridPosition getPos _GroundWeaponHolder], true] remoteExec ["domsg", currentDetectives];
+			[format["Wezwanie do %1: Doszło do napadu na sklep w okolicach %2.",name _nearest, mapGridPosition getPos _GroundWeaponHolder], true] remoteExec ["domsg", currentDetectives];
 		};
 	};
 	

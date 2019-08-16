@@ -20,12 +20,12 @@ _markers = [];
 
 {
 	if (player IN currentDocDispatch && count (crew _x) > 0 && count (crew _x select {_x IN currentDoc && "ItemGPS" in assignedItems _x}) > 0) then {
-		_passengers = " (" + ((crew _x select {_x IN currentDoc && "ItemGPS" in assignedItems _x} apply {name _x + " " + (_x getVariable "badgeNumber")}) joinString ", ") + ")";
+		_passengers = " (" + ((crew _x select {_x IN currentDoc && "ItemGPS" in assignedItems _x} apply {name _x }) joinString ", ") + ")";
 	} else { 
 		_passengers = "";
 	};
 	if (player IN currentPoliceDispatch && count (crew _x) > 0 && count (crew _x select {_x IN currentCop && "ItemGPS" in assignedItems _x}) > 0) then {
-		_passengers = " (" + ((crew _x select {_x IN currentCop && "ItemGPS" in assignedItems _x} apply {name _x + " " + (_x getVariable "badgeNumber")}) joinString ", ") + ")";
+		_passengers = " (" + ((crew _x select {_x IN currentCop && "ItemGPS" in assignedItems _x} apply {name _x}) joinString ", ") + ")";
 	} else { 
 		_passengers = "";
 	};
@@ -92,26 +92,26 @@ _markers = [];
 		_marker setMarkerTextLocal "Bank Robbery";
 		_markers pushBack [_marker,_x];
 	};
-	if ( _x in currentcop && "ItemGPS" in assignedItems _x && player IN currentPoliceDispatch && _x == vehicle _x) then {
+	if ( _x in currentcop && "ItemGPS" in assignedItems _x && _x == vehicle _x) then {
 		_marker = createMarkerLocal [format["%1_PD_UNIT",getplayeruid _x],visiblePosition _x];
 		_marker setMarkerColorLocal "ColorBlue";
 		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerTextLocal format["%1 %2", name _x, _x getVariable "badgeNumber"];
+		_marker setMarkerTextLocal format["%1", name _x];
 		_markers pushBack [_marker,_x];
 	};
 
-	if ( _x in currentdoc && "ItemGPS" in assignedItems _x && player IN currentPoliceDispatch && _x == vehicle _x) then {
+	if ( _x in currentdoc && "ItemGPS" in assignedItems _x && _x == vehicle _x) then {
 		_marker = createMarkerLocal [format["%1_DOC_UNIT",getplayeruid _x],visiblePosition _x];
 		_marker setMarkerColorLocal "ColorKhaki";
 		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerTextLocal format["%1 %2", name _x, _x getVariable "badgeNumber"];
+		_marker setMarkerTextLocal format["%1", name _x];
 		_markers pushBack [_marker,_x];
 	};
-	if ( _x in currentems && "ItemGPS" in assignedItems _x && player IN currentPoliceDispatch && _x == vehicle _x) then {
+	if ( _x in currentems && "ItemGPS" in assignedItems _x && _x == vehicle _x) then {
 		_marker = createMarkerLocal [format["%1_EMS_UNIT",getplayeruid _x],visiblePosition _x];
 		_marker setMarkerColorLocal "ColorGreen";
 		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerTextLocal format["%1 %2", name _x, _x getVariable "badgeNumber"];
+		_marker setMarkerTextLocal format["%1", name _x];
 		_markers pushBack [_marker,_x];
 	};
 } foreach PlayableUnits;

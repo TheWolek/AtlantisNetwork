@@ -20,7 +20,7 @@ _markers = [];
 
 {
 	if (player IN currentMedicDispatch && count (crew _x) > 0 && count (crew _x select {_x IN currentEMS && "ItemGPS" in assignedItems _x}) > 0) then {
-		_passengers = " (" + ((crew _x select {_x IN currentEMS && "ItemGPS" in assignedItems _x} apply {name _x + " " + (_x getVariable "badgeNumber")}) joinString ", ") + ")";
+		_passengers = " (" + ((crew _x select {_x IN currentEMS && "ItemGPS" in assignedItems _x} apply {name _x}) joinString ", ") + ")";
 	} else { 
 		_passengers = "";
 	};
@@ -45,7 +45,7 @@ _markers = [];
 		_marker = createMarkerLocal [format["%1_EMS_UNIT",getplayeruid _x],visiblePosition _x];
 		_marker setMarkerColorLocal "ColorGreen";
 		_marker setMarkerTypeLocal "hd_dot";
-		_marker setMarkerTextLocal format["%1 %2", name _x, _x getVariable "badgeNumber"];
+		_marker setMarkerTextLocal format["%1", name _x,];
 		_markers pushBack [_marker,_x];
 	};
 } foreach PlayableUnits;
