@@ -68,7 +68,6 @@ if(myJob == "Cop") then {
 
 	if(player getVariable "cop" >= 7) then {
 		_garage pushback "d3s_vklasse_17_UNM";
-        _garage pushback "d3s_savana_PSV";
         _garage pushback "GM_SIO_CHARGER_SRT";
         _garage pushback "GM_SIO_CTSV";
 		_garage pushback "d3s_f10_12_UNM";		
@@ -78,6 +77,7 @@ if(myJob == "Cop") then {
 		_garage pushback "GM_SWAT_TAHOE";
 		_garage pushback "d3s_f10_12_UNM";
 		_garage pushback "d3s_taurus_UNM_10";
+        _garage pushback "d3s_savana_PSV";		
 
 	};
 	/*
