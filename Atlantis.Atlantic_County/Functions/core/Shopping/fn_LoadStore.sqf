@@ -1514,7 +1514,7 @@ lbClear _list;
 	_list lbSetdata [(lbSize _list)-1, str([_class,_item select 1, _price,_type,_classtype,_addedprice])];
 	_list lbSetPicture [(lbSize _list)-1,_item select 2];
 
-	if(_condition == "gunstore" || _condition =="police_gunstore" || _condition =="mafia_gunstore") then {
+	if(_condition == "gunstore" || _condition =="police_gunstore" || _condition =="mafia_gunstore" || _condition =="gang_gunstore") then {
 		_price = 10;
 
 		_addedprice = (_price / 100) * taxRate;
