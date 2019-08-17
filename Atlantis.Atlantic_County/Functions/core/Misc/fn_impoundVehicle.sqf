@@ -36,8 +36,8 @@ if(myjob == "towtruck") then {
 				_targetowner = name _targetowner;
 			};
 
-			[_targetowner, _targetid, name player, getplayeruid player, "Impounded vehicle", 2, 0, 1, 1000] remoteexec ["server_fnc_addcriminal",2];
-			[_targetid, format["Twój %1 został odholowony z powodu złamania przepisów. Możesz go odebrac na parkingu pojazdu odholowanych i musisz zapłacić karę w sądzie", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Atlantis County", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
+			//[_targetowner, _targetid, name player, getplayeruid player, "Impounded vehicle", 2, 0, 1, 1000] remoteexec ["server_fnc_addcriminal",2];
+			//[_targetid, format["Twój %1 został odholowony z powodu złamania przepisów. Możesz go odebrac na parkingu pojazdu odholowanych i musisz zapłacić karę w sądzie", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Atlantis County", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
 
 
 	};
@@ -59,8 +59,8 @@ if(myjob == "towtruck") then {
 					_targetowner = name _targetowner;
 				};
 
-				[_targetowner, _targetid, name player, getplayeruid player, "Impounded vehicle", 2, 0, 1, 1000] remoteexec ["server_fnc_addcriminal",2];
-				[_targetid, format["Twój %1 został odholowony z powodu złamania przepisów. Możesz go odebrac na parkingu pojazdu odholowanych i musisz zapłacić karę w sądzie.", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Atlantis County", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
+				//[_targetowner, _targetid, name player, getplayeruid player, "Impounded vehicle", 2, 0, 1, 1000] remoteexec ["server_fnc_addcriminal",2];
+				//[_targetid, format["Twój %1 został odholowony z powodu złamania przepisów. Możesz go odebrac na parkingu pojazdu odholowanych i musisz zapłacić karę w sądzie.", getText(configFile >> "cfgVehicles" >> typeOf currentcursortarget >> "displayName")], "Atlantis County", "Impounded Car"] remoteExec ["server_fnc_sendMail",2];
 
 			};
 		["who cares",0,currentcursortarget,player] remoteExec ["Server_fnc_updateCarStatus",2];  
