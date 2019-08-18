@@ -165,7 +165,7 @@ class np_ticketpolice
 		class IssueTicket: hidebutton
 		{
 			idc = 1600;
-			onButtonClick = "[] spawn client_fnc_writeticket;";
+			onButtonClick = "[] spawn client_fnc_writeticketDon;";
 			x = 0.466787 * safezoneW + safezoneX;
 			y = 0.611298 * safezoneH + safezoneY;
 			w = 0.0666835 * safezoneW;
