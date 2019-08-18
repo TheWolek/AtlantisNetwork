@@ -54,7 +54,7 @@ class np_ticketcivilian
 		class PayTicket: hidebutton
 		{
 			idc = 1600;
-			onButtonClick = "[""paid""] spawn client_fnc_ticketresult;";
+			onButtonClick = "[""paid""] spawn client_fnc_ticketresultDon;";
 			x = 0.466787 * safezoneW + safezoneX;
 			y = 0.611298 * safezoneH + safezoneY;
 			w = 0.0666835 * safezoneW;
@@ -63,7 +63,7 @@ class np_ticketcivilian
 		class RefuseTicket: hidebutton
 		{
 			idc = 1601;
-			onButtonClick = "[""refused""] spawn client_fnc_ticketresult;";
+			onButtonClick = "[""refused""] spawn client_fnc_ticketresultDon;";
 			x = 0.466529 * safezoneW + safezoneX;
 			y = 0.656389 * safezoneH + safezoneY;
 			w = 0.0666835 * safezoneW;
