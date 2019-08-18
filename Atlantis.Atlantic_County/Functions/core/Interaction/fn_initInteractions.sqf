@@ -567,7 +567,7 @@ NoPixel_InteractionMenuItems = [
 	],
 	
 	[
-		[" (CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Car') && CursorTarget in Current_Cars && ( (myhouse distance getpos player < 50 || getpos player distance [872.141,1450.32,0.00143909] < 50 || getpos player distance [5477.27,3964.86,0.00143814] < 50 || player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'embarcadero' > -1}) > 0 || count (nearestobjects[player,['Land_Hangar_F'],50]) > 0 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'taller' > -1}) > 0) || (myJob IN ['Cop','doc'] && count (nearestObjects[player,['land_jf_sheriff_station_01'],50]) > 0 ) || (myJob == 'EMS' && count (nearestObjects[player,['Land_buildingsfiredept1','land_POP_Hospital'],50]) > 0) || (myJob == 'Mafia' && count (nearestObjects[player,['Land_em_mansion_01'],50]) > 0) || (myJob == 'Biker' && count (nearestObjects[player,['Land_buildingsNightclub2'],50]) > 0) || (myJob == 'Mobster' && count (nearestObjects[player,['Land_buildingsCasino2'],50]) > 0) ) && !imrestrained && !attachedcar"],
+		[" (CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Car') && CursorTarget in Current_Cars && ( (myhouse distance getpos player < 50 || getpos player distance [872.141,1450.32,0.00143909] < 50 || getpos player distance [5477.27,3964.86,0.00143814] < 50 || player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'embarcadero' > -1}) > 0 || count (nearestobjects[player,['Land_Hangar_F'],50]) > 0 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'taller' > -1}) > 0) || (myJob IN ['Cop','doc'] && count (nearestObjects[player,['land_jf_sheriff_station_01'],50]) > 0 ) || (myJob == 'EMS' && count (nearestObjects[player,['Land_buildingsfiredept1','land_POP_Hospital'],50]) > 0) || (myJob == 'Mafia' && count (nearestObjects[player,['Land_vvv_np_maison1'],50]) > 0) || (myJob == 'Biker' && count (nearestObjects[player,['Land_buildingsNightclub2'],50]) > 0) || (myJob == 'Mobster' && count (nearestObjects[player,['Land_buildingsCasino2'],50]) > 0) ) && !imrestrained && !attachedcar"],
 		["Schowaj", "['Chowam pojazd',10, 'Client_fnc_storeCar',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 
@@ -1012,7 +1012,7 @@ NoPixel_InteractionMenuItems = [
 	],
 */
 	[
-		[" ( (myJob IN ['Cop','doc'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) || (myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital'])) || (myJob == 'Mafia' && (typeof cursorobject == 'Land_em_mansion_01')) || (myJob == 'Biker' && (typeof cursorobject == 'Land_buildingsNightclub2')) || (myJob == 'Mobster' && (typeof cursorobject == 'Land_buildingsCasino2')) || (( myJob IN ['Cop','doc','EMS'] ) && ( str CursorObject find 'em_heliport' > -1 || str CursorObject find 'embarcadero' > -1 )) || (Mayor && player distance myhouse < 30) || (myJob == 'Legal' && player getVariable 'legal' > 5 && (typeof cursorobject == 'Land_buildingscourthouse'))) && !imrestrained "],
+		[" ( (myJob IN ['Cop','doc'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) || (myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital'])) || (myJob == 'Mafia' && (typeof cursorobject == 'Land_vvv_np_maison1')) || (myJob == 'Biker' && (typeof cursorobject == 'Land_buildingsNightclub2')) || (myJob == 'Mobster' && (typeof cursorobject == 'Land_buildingsCasino2')) || (( myJob IN ['Cop','doc','EMS'] ) && ( str CursorObject find 'em_heliport' > -1 || str CursorObject find 'embarcadero' > -1 )) || (Mayor && player distance myhouse < 30) || (myJob == 'Legal' && player getVariable 'legal' > 5 && (typeof cursorobject == 'Land_buildingscourthouse'))) && !imrestrained "],
 		["Garaż pracy", "[CursorObject] call client_fnc_opengaragepolice;  ",3]
 	],
 
@@ -1119,7 +1119,7 @@ NoPixel_InteractionMenuItems = [
 
 /*
 	[
-		["((myjob == 'Cop' && typeof CursorTarget == 'Land_em_mansion_01' && player getVariable 'Cop' > 4))"],
+		["((myjob == 'Cop' && typeof CursorTarget == 'Land_vvv_np_maison1' && player getVariable 'Cop' > 4))"],
 		["Przeszukaj schowek", "['Skrzynka zniknie za 1 minutę!', true] spawn domsg; [player, ""Mafia""] remoteExec ['server_fnc_retreivegang',2]",4]
 	],
 
