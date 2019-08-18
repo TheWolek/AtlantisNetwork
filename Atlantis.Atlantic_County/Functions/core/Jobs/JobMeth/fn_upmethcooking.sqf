@@ -11,10 +11,11 @@ if(requiredOutput == _required) then {
 	if(_required == "Release") then { playSound3D ["CG_Jobs\sounds\meth\drugPressure.ogg", player, false, getPosasl player, 2, 1, 15]; };
 } else { 
 	myDrugValue = myDrugValue - 10; 
-	["Oops!",false] spawn doquickmsg;
+	["Ups!",false] spawn doquickmsg;
 	_randomValue = random 30;
 	playSound3D ["CG_Jobs\sounds\meth\drugBoil.ogg", player, false, getPosasl player, 5, 1, 15];
 	playSound3D ["CG_Jobs\sounds\meth\drugPressure.ogg", player, false, getPosasl player, 5, 1, 15];
+		"SmokeShell" createvehicle (getPosatl player); 	
 	if(_randomValue < 3) exitwith { 
 		"R_60mm_HE" createvehicle (getPosatl player); 
 		["Oj, chyba coś zjebałeś...", true] spawn domsg; 

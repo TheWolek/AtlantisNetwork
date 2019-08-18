@@ -45,7 +45,7 @@ _marker = createMarkerlocal [_markername, _pos];
 _marker setMarkerShapelocal "ICON";
 _marker setMarkerTypelocal "hd_dot";
 _marker setMarkerColorlocal "ColorBlue";
-_marker setMarkerTextlocal "Drop Off Vehicle Location";	
+_marker setMarkerTextlocal "Miejsce dostarczenia pojazdu";	
 
 _count = 0;
 while{true} do {
@@ -61,7 +61,7 @@ while{true} do {
 		_licensePlate = "Testing"; 
 
 		_statuses = 1; 
-		[_licensePlate, typeof _vehicle, "white", "matte", _rims, 0, 0, _owner, 1, "Add", _player] remoteExec ["Server_fnc_garageUpdate",2];
+		[_licensePlate, typeof _vehicle, "\colors\oxford_white.paa", "glossy", _rims, 0, 0, _owner, 1, "Add", _player] remoteExec ["Server_fnc_garageUpdate",2];
 
 	};
 	_count = _count + 1; 

@@ -25,7 +25,7 @@ if (isServer) then {
 		taxRate = 1;
 		publicVariable "taxRate"; 
 		
-		//["mafiaStash"] spawn server_fnc_getValue;
+		["mafiaStash"] spawn server_fnc_getValue;
 		//["bikerStash"] spawn server_fnc_getValue;
 		//["mobsterStash"] spawn server_fnc_getValue;
 		["govtBank"] spawn server_fnc_getValue;
@@ -51,7 +51,7 @@ if (isServer) then {
 	//[client_fnc_goldFarming, 300] execFSM "\NoPixel_server\call.fsm";
 	[client_fnc_camsetup, 1200] execFSM "\NoPixel_server\call.fsm";
 
-	//[client_fnc_carEvent, 5500 + random(7500)] execFSM "\NoPixel_server\call.fsm";
+	[client_fnc_carEvent, 5500 + random(7500)] execFSM "\NoPixel_server\call.fsm";
 	[client_fnc_lootdrop, 1500 + random(7500)] execFSM "\NoPixel_server\call.fsm";
 
 	GarageVariableWhore = "Flag_US_F" createVehicle [0,1,0];
