@@ -1437,7 +1437,7 @@ if(_condition == "gang_veststore") then {
 if(_condition == "gang_uniformstore") then {
 
 	_gang_uniformstore = [
-		["TRYK_U_B_OD_OD_CombatUniform",nil,500,3,1]
+		["TRYK_U_B_BLK",nil,500,3,1]
 
 	];
 
@@ -1451,7 +1451,7 @@ if(_condition == "gang_uniformstore") then {
 if(_condition == "gang_glassesstore") then {
 
 	_gang_glassesstore = [
-        ["G_Balaclava_TI_blk_F",nil,100,3,4]
+        ["G_Bandanna_aviator",nil,100,3,4]
 
 	];
 
@@ -1463,7 +1463,7 @@ if(_condition == "gang_glassesstore") then {
 if(_condition == "gang_headgearstore") then {
 
 	_gang_headgearstore = [
-		["TAC_SF10H",nil,1000,3,5]
+		["TRYK_UA_CAP",nil,1000,3,5]
 	];
 
 	{
@@ -1474,7 +1474,7 @@ if(_condition == "gang_headgearstore") then {
 if(_condition == "gang_misc") then {
 
 	_gang_misc = [
-		["TAC_LBT_LEGAB2_OD",nil,300,3]
+		["koilbp_10",nil,300,3]
 
 
 	];
