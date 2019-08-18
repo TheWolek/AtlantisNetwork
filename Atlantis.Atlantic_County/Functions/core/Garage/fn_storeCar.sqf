@@ -11,7 +11,10 @@ if(!isnil "_information") then {
 	_newfuel = fuel _ct;
 	_information SET [10,_newfuel];
 	_information SET [11,_newdamage];
+	_information SEt [7,1];
 	[_newdamage,_newfuel,_license] remoteexec ["server_fnc_updateCarDamages",2];
+
+	[_license,1,cursorObject,player] remoteExec ["Server_fnc_updateCarStatus",2];
 
 	_garage pushBack _information;
 

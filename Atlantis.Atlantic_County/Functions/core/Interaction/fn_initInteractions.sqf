@@ -476,7 +476,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["myjob == 'towtruck' && (CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'AIR' || CursorTarget isKindOf 'BOAT' || CursorTarget isKindOf 'SHIP' || CursorTarget isKindOf 'TANK') && ((getpos player) distance [7603.34,6311.1,0.00143814] < 30) && !(CursorTarget IN current_cars) "],
-		["Odholuj", " ['Odholowuję',5,'client_fnc_impoundVehicle',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\repair.ogg'] spawn client_fnc_dotask ",2]
+		["Odholuj", "[""who cares"",0,cursorObject,player] remoteExec [""Server_fnc_updateCarStatus"",2];",2]
 	],
 
 	/*
@@ -488,12 +488,12 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["myjob IN ['Cop','EMS','doc'] && (CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'AIR' || CursorTarget isKindOf 'BOAT' || CursorTarget isKindOf 'SHIP' || CursorTarget isKindOf 'TANK') && count currenttowtruckdrivers > 0"],
-		["Odholuj", " ['Odholowuję',300,'client_fnc_impoundVehicle',player,'AinvPknlMstpSnonWnonDnon_medic_1',[CurrentCursorTarget,1],'cg_mission_files\sounds\repair.ogg'] spawn client_fnc_dotask ",2]
+		["Odholuj", " [""who cares"",0,cursorObject,player] remoteExec [""Server_fnc_updateCarStatus"",2]; ",2]
 	],
 
 	[
 		["myjob IN ['Cop','EMS','doc'] && (CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'AIR' || CursorTarget isKindOf 'BOAT' || CursorTarget isKindOf 'SHIP' || CursorTarget isKindOf 'TANK') && count currenttowtruckdrivers == 0"],
-		["Odholuj", " ['Odholowuję',30,'client_fnc_impoundVehicle',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\repair.ogg'] spawn client_fnc_dotask ",2]
+		["Odholuj", "[""who cares"",0,cursorObject,player] remoteExec [""Server_fnc_updateCarStatus"",2];",2]
 	],
 
 	[

@@ -24,7 +24,6 @@ sleep 1;
 deadphase = 0;
 player setVariable ["dead",false,true];
 player setVariable ["tf_voiceVolume", 1, true];
-TF_speak_volume_level = "normal";
 showchat true;
 inGameUISetEventHandler ["Action", ""];
 

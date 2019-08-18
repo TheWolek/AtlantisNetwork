@@ -34,7 +34,6 @@ detach player;
 player setpos [3248.15,3621.51,0.00143433];
 
 player setdir 147;
-TF_speak_volume_level = "normal";
 
 player forceadduniform "U_C_Poloshirt_stripped";
 
