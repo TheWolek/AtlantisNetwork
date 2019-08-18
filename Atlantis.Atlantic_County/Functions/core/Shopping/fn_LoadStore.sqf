@@ -1392,7 +1392,8 @@ if(_condition == "ems_headgearstore") then {
 if(_condition == "ems_misc") then {
 
 	_ems_misc = [
-		["cg_atf_bandage_i",nil,1,3]
+		["cg_atf_bandage_i",nil,1,3],
+		["CG_ATF_First_Aid_Kit_i",nil,1,3]
 	];
 
 	{
