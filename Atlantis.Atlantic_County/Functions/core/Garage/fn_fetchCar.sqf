@@ -69,7 +69,7 @@ if((_this select 0) == 1) exitwith {
 			if (typeof _vehicle IN ["GM_SWAT_TAHOE","chvwT6_raid","d3s_f10_12_UNM"]) then {
 				["Ten samochód nie ma GPS", false] spawn domsg; 
 			} else 	{
-				if (typeOf _vehicle IN ["d3s_taurus_FPI_10","d3s_taurus_UNM_10"]) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0,0,0,1)"]};
+				if (typeOf _vehicle IN ["d3s_taurus_FPI_10","d3s_taurus_UNM_10","d3s_ctsv_16_police","d3s_civic_17_COP","d3s_f86_15_COP"]) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0,0,0,1)"]};
 				_vehicle setVariable ["pdCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
 				lastGovtUseCar = time + 300;
 			};
@@ -153,7 +153,7 @@ _vehicle allowdamage false;
 
 //changing the vehicle to non-impounded
 if(_status == 0) then { 
-	[_numberPlate,1,_vehicle,player] remoteExec ["Server_fnc_updateCarStatus",2];
+	[_numberPlate,0,_vehicle,player] remoteExec ["Server_fnc_updateCarStatus",2];
 	_car SET [7,1];
 };
 

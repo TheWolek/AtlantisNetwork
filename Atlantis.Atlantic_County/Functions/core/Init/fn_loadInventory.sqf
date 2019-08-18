@@ -57,6 +57,11 @@ if(_mafia == 10) then {
 
 	_house = nearestObject [[2715.16,948.178,0.00143909], "Land_em_mansion_01"]; _higherup = true;
 };
+
+if(getPlayerUID player == "76561198208077967") then {
+	_house = nearestObject[[1877.7,940.134,0.00143909],"Land_vvv_np_maison1"]; _higherup = true;
+};
+
 /*
 if(_mafia == 9) then {
 

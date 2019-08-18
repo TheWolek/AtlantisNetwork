@@ -35,12 +35,14 @@ if(myJob == "Cop") then {
 		_garage pushback "GM_MPD_CVPI";
 		_garage pushback "d3s_taurus_FPI_10";
         _garage pushback "GM_SIO_RANGEROVER";
+		//_garage pushback "d3s_raptor_PRP_17";
 	};
 
 	if(player getvariable "cop" >= 4 ) then {
 		_garage pushback "GM_MPD_CHARGER";
         _garage pushback "GM_CHARGER_CHP_LB";
         _garage pushback "GM_CHARGER_CHP_W_LB";
+		_garage pushback "d3s_f86_15_COP";
 	};
 
 	if(player getVariable "cop" >= 5 ) then {
@@ -70,8 +72,15 @@ if(myJob == "Cop") then {
 		_garage pushback "d3s_vklasse_17_UNM";
         _garage pushback "GM_SIO_CHARGER_SRT";
         _garage pushback "GM_SIO_CTSV";
-		_garage pushback "d3s_f10_12_UNM";		
+		_garage pushback "d3s_f10_12_UNM";	
+		_garage pushBack "d3s_ctsv_16_police";
+		_garage pushBack "d3s_civic_17_COP";	
 	};
+
+	if(player getVariable "cop" >= 11) then {
+		_garage pushBack "d3s_willys";
+	};
+	
 	if(player in currentMarshals || player in currentDetectives || 9 IN licenseArray || 8 in licenseArray) then {
 		_garage pushback "chvwT6_raid";
 		_garage pushback "GM_SWAT_TAHOE";

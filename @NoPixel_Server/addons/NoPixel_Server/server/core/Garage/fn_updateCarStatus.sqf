@@ -37,15 +37,14 @@ _update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
 
 //its being impouned here
 if(_status == 0) then {
-	if(_testplayer == _player) exitwith {deletevehicle _object; };
-	_information SET [7,0];
-
-	["garage", _information] remoteExec ["client_fnc_setVariable",_player];
-
-	deletevehicle _object; 
-} else {
 	_information SET [7,1];
-	_currentCars = _player getvariable "usedgarage";
+	["garage", _information] remoteExec ["client_fnc_setVariable",_player];
+	deletevehicle _object; 
+};
+
+if(_status == 1) then {
+	_information SET [7,0];
+	_currentCars = _player getvariable ["usedgarage",[]];
 	_currentCars pushback _information;
 	_player setvariable ["usedgarage",_currentCars,false];
 };
