@@ -62,16 +62,12 @@ if(getPlayerUID player == "76561198208077967") then {
 	_house = nearestObject[[1877.7,940.134,0.00143909],"Land_vvv_np_maison1"]; _higherup = true;
 };
 
+
 /*
-if(_mafia == 9) then {
-
-	//_house = nearestObject [[9736.28,3629.54,0.00143814], "Land_ark_bg_maison1"]; _higherup = true;
-	_houselevel = 3;
-};
-
 if(_cop == 10) then {
-	_house = nearestObject [[9626,3578.7,0.00143814], "Land_ark_bg_maison1"]; _higherup = true;
+	_house = nearestObject [[9626,3578.7,0.00143814], "Land_vvv_np_maison1"]; _higherup = true;
 };
+
 
 if(_cop == 9) then {
 
