@@ -225,6 +225,9 @@ if (isServer) then {
 
 	waituntil { (player getvariable "loaded") == 4 };
 
+	if(hasInterface) then {
+		[] execVM "briefing.sqf";
+	};
 
 	["MyID", "OnSpeak", {
 
