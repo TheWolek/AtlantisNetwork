@@ -7,7 +7,7 @@ Survival Koil
 	waitUntil { !isNil "packet"; };
 	_govtbank = packet;
 	packet=nil;
-	_bonus = 80;
+	_bonus = 150;
 	showchat true;
 
 	if(isNil "paycheck") then { paycheck = 0; };

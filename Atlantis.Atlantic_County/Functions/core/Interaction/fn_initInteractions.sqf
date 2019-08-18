@@ -502,6 +502,11 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
+		["myjob IN ['Cop'] && (CursorTarget isKindOf 'Car' || CursorTarget isKindOf 'AIR' || CursorTarget isKindOf 'BOAT' || CursorTarget isKindOf 'SHIP' || CursorTarget isKindOf 'TANK')"],
+		["Wystaw mandat", " ['Wypisuję mandat',10,'client_fnc_ticketvehicle',cursorObject,'vvv_anim_ticket',[cursorObject],'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",2]
+	],
+
+	[
 		["(getpos player) distance [7604.7,6315.58,0.00143814] < 40 && player getvariable 'Mafia' > 0 "],
 		["Sprzedaj", " ['Sprzedaję pojazd',60,'client_fnc_sellVehicle',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\repair.ogg'] spawn client_fnc_dotask ",2]
 	],

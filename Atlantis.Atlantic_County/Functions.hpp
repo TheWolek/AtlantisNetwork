@@ -219,6 +219,9 @@ class CfgFunctions
 			class removeBail {};
 			class closeBail {};
 			class addTicket {};
+			class taketicketDon {};
+			class ticketresultDon {};
+			class writeticketDon {};
 		};
 
 		class Mail {

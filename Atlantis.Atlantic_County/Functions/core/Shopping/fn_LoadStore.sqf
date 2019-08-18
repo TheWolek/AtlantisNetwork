@@ -1173,22 +1173,22 @@ if(_condition == "mafia_gunstore") then {
 
 	_gunStorePistols = [
 
-		["RH_m9",nil,2500,1],
-        ["RH_g17",nil,3000,1],
-        ["RH_uspm",nil,4000,1],
-		["RH_kimber_nw",nil,7500,1],
-		["RH_tec9",nil,11000,1],
-        ["RH_bull",nil,13000,1],
-        ["RH_Deaglem",nil,15000,1],
+		["RH_m9",nil,2000,1],
+        ["RH_g17",nil,2500,1],
+        ["RH_uspm",nil,3400,1],
+		["RH_kimber_nw",nil,5000,1],
+		["RH_tec9",nil,7000,1],
+        ["RH_bull",nil,9000,1],
+        ["RH_Deaglem",nil,12000,1],
         ["hlc_smg_MP5N",nil,17000,1],
-        ["RH_m4",nil,40000,1],
-		["RH_ar10",nil,55000,1],
-		["hlc_rifle_g3a3",nil,60000,1],
-		["hlc_rifle_M1903A1_unertl",nil,90000,1],
-		["arifle_mas_ww2_mos",nil,160000,1],	
-		["arifle_mas_ww2_ppsh",nil,20000,1],
-		["arifle_mas_ww2_tommy",nil,16000,1],
-		["arifle_mas_ww2_sten",nil,15000,1]
+        ["RH_m4",nil,32000,1],
+		["RH_ar10",nil,43000,1],
+		["hlc_rifle_g3a3",nil,48000,1],
+		["hlc_rifle_M1903A1_unertl",nil,70000,1],
+		["arifle_mas_ww2_mos",nil,128000,1],	
+		["arifle_mas_ww2_ppsh",nil,16000,1],
+		["arifle_mas_ww2_tommy",nil,13000,1],
+		["arifle_mas_ww2_sten",nil,12000,1]
 
 	];
 
@@ -1219,14 +1219,14 @@ if(_condition == "mafia_veststore") then {
 if(_condition == "mafia_uniformstore") then {
 
 	_mafia_uniformstore = [
-		["vvv_hazmat",nil,2250,3,1],
-		["vvv_traje_mafioso_F_1",nil,1600,3,1],
-        ["vvv_traje_ejecutivo_1",nil,1400,3,1],
-		["vvv_character_funcionario_1",nil,2000,3,1],
-		["vvv_traje_jackoy5",nil,1200,3,1],
-		["Gsg9_AirUniform_black",nil,900,3,1],
-		["cg_invisbp",nil,4500,4,2],
-		["B_Bergen_dgtl_F",nil,5000,4,2]
+		["vvv_hazmat",nil,1100,3,1],
+		["vvv_traje_mafioso_F_1",nil,800,3,1],
+        ["vvv_traje_ejecutivo_1",nil,700,3,1],
+		["vvv_character_funcionario_1",nil,1000,3,1],
+		["vvv_traje_jackoy5",nil,600,3,1],
+		["Gsg9_AirUniform_black",nil,450,3,1],
+		["cg_invisbp",nil,2250,4,2],
+		["B_Bergen_dgtl_F",nil,2500,4,2]
 
 	];
 
@@ -1276,17 +1276,17 @@ if(_condition == "mafia_headgearstore") then {
 if(_condition == "mafia_misc") then {
 
 	_mafia_misc = [
-		["NP_drillitem",nil,15000,3],
-		["CG_HackingTool",nil,6750,3],
-		["CG_Lockpick",nil,750,3],
-		["NP_DrugTable",nil,4875,3],
-		["DemoCharge_Remote_Mag",nil,45000,3],
-		["RH_compm2",nil,2000,3],
-		["RH_compm2l",nil,2000,3],
-		["RH_cmore",nil,2000,3],
-		["RH_barska_rds",nil,2000,3],		
-		["optic_LRPS",nil,5000,3],		
- 		["RH_m9qd",nil,1900,3]
+		["NP_drillitem",nil,12000,3],
+		["CG_HackingTool",nil,3000,3],
+		["CG_Lockpick",nil,300,3],
+		["NP_DrugTable",nil,2500,3],
+		["DemoCharge_Remote_Mag",nil,22500,3],
+		["RH_compm2",nil,1500,3],
+		["RH_compm2l",nil,1500,3],
+		["RH_cmore",nil,1500,3],
+		["RH_barska_rds",nil,1500,3],		
+		["optic_LRPS",nil,3000,3],		
+ 		["RH_m9qd",nil,1600,3]
 
 
 	];
@@ -1405,6 +1405,9 @@ if(_condition == "ems_misc") then {
 if(_condition == "gang_gunstore") then {
 
 	_gunStorePistols = [
+		["RH_fnp45",nil,4000,1],
+		["RH_cz75",nil,3000,1],
+        ["RH_Deaglem",nil,25000,1]		
 
 	];
 
@@ -1511,7 +1514,7 @@ lbClear _list;
 	_list lbSetdata [(lbSize _list)-1, str([_class,_item select 1, _price,_type,_classtype,_addedprice])];
 	_list lbSetPicture [(lbSize _list)-1,_item select 2];
 
-	if(_condition == "gunstore" || _condition =="police_gunstore" || _condition =="mafia_gunstore") then {
+	if(_condition == "gunstore" || _condition =="police_gunstore" || _condition =="mafia_gunstore" || _condition =="gang_gunstore") then {
 		_price = 10;
 
 		_addedprice = (_price / 100) * taxRate;

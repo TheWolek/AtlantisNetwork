@@ -183,7 +183,7 @@ _vehicle setvariable ["information",_car,true];
 			[_vehicle, [_carColor,_carFinish]] remoteexec ["client_fnc_initVehicle",2];
 		};
 
-		_vehicle setObjectTexture[0,_carColor];
+		_vehicle setObjectTextureGlobal[0,_carColor];
 
 	};
 };
