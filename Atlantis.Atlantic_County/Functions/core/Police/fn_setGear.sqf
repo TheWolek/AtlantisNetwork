@@ -231,86 +231,106 @@ if(myjob == "Cop") then {
 		if(female) then { 
 			
 			if(_level == 1) then {
-				player forceAddUniform "hoodie_dtu_2";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 			};
 			if(_level == 2) then {				
-				player forceAddUniform "hoodie_dtu_2";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";
 			};				
 			if(_level == 3) then {	
-				player forceAddUniform "hoodie_dtu_2";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";		
 			};
 			if(_level == 4) then {		
-				player forceAddUniform "hoodie_dtu_2";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 			};
 			if(_level == 5) then {	
-				player forceAddUniform "hoodie_dtu_2";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 			};
 			if(_level == 6) then {
-				player forceadduniform "hoodie_dtu_1";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 			};
 			if(_level == 7) then {				
-				player forceAddUniform "hoodie_dtu_1";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";		
 			};
 			if(_level == 8) then {
-				player forceAddUniform "hoodie_dtu_1";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 			};
 			if(_level == 9) then {				
-				player forceAddUniform "hoodie_dtu_1";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 			};
 			if(_level == 10) then {
-				player forceAddUniform "hoodie_dtu_3";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
 				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 			};
 
 		} else { 
 			switch (_level) do {
 				case 1: {
-					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 				case 2: {
-					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 				case 3: {
-					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 				case 4: {
-					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 				case 5: {
-					player forceAddUniform "hoodie_dtu_2";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 				case 6: {
-					player forceAddUniform "hoodie_dtu_1";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 				case 7: {
-					player forceAddUniform "hoodie_dtu_1";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 				case 8: {
-					player forceAddUniform "hoodie_dtu_1";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 				case 9: {
-					player forceAddUniform "hoodie_dtu_1";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 				case 10: {
-					player forceAddUniform "hoodie_dtu_3";
-					player addHeadgear "TRYK_R_CAP_BLK";
+				player forceAddUniform "TRYK_shirts_DENIM_R_Sleeve";
+				player addHeadgear "TRYK_R_CAP_BLK";
+				player addGoggles "G_Bandanna_blk";	
 				};
 			};
 
