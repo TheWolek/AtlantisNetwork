@@ -71,7 +71,19 @@ if((_this select 0) == 1) exitwith {
 			} else 	{
 				if (typeOf _vehicle IN ["d3s_taurus_FPI_10","d3s_taurus_UNM_10","d3s_ctsv_16_police","d3s_civic_17_COP","d3s_f86_15_COP"]) then {_vehicle setObjectTextureGlobal[0,"#(rgb,8,8,3)color(0,0,0,1)"]};
 				_vehicle setVariable ["pdCar", format["UNIT %1%2", player getVariable "badgeNumber", selectRandom _random], true];
-				lastGovtUseCar = time + 120;
+				//lastGovtUseCar = time + 120;
+			};
+
+			//limited garage
+			_handler = garagehandler getVariable["currentcopvehicles",[]];
+			if(typeof _vehicle in _handler) then {
+				["Brak pojazdu w garażu",true] spawn domsg;
+			} else {
+				_update = [];
+				_update pushback typeof _vehicle;
+				
+				_handler = _handler + _update;
+				garagehandler setVariable["currentcopvehicles",_handler,true];
 			};
 	};
 

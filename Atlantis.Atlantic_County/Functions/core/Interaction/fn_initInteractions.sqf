@@ -193,12 +193,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["(player distance [825.717,1634.34,0.00143814] < 20 )"],
+		["typeof cursorObject == 'Land_courthouse'"],
 		["Zapłać podatek", "createdialog 'payTax_Menu';",1]
 	],
 
 	[
-		["(player distance [825.717,1634.34,0.00143814] < 20 )"],
+		["typeof cursorObject == 'Land_courthouse'"],
 		["Podatek", " [format['Masz dług w wysokości %1, a stawka podatkowa wynosi %2%3.', ((player getVariable 'statuses') select 13) call client_fnc_numberText, taxRate, '%'], true]  spawn domsg; ",1]
 	],
 /*
@@ -1022,7 +1022,7 @@ NoPixel_InteractionMenuItems = [
 	],
 */
 	[
-		[" ( (myJob IN ['Cop','doc'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) || (myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital'])) || (myJob == 'Mafia' && (typeof cursorobject == 'Land_vvv_np_maison1')) || (myJob == 'Biker' && (typeof cursorobject == 'Land_buildingsNightclub2')) || (myJob == 'Mobster' && (typeof cursorobject == 'Land_buildingsCasino2')) || (( myJob IN ['Cop','doc','EMS'] ) && ( str CursorObject find 'em_heliport' > -1 || str CursorObject find 'embarcadero' > -1 )) || (Mayor && player distance myhouse < 30) || (myJob == 'Legal' && player getVariable 'legal' > 5 && (typeof cursorobject == 'Land_buildingscourthouse'))) && !imrestrained "],
+		[" ( (myJob IN ['Cop','doc'] && typeof cursorobject IN ['Land_PoliceStation','Land_ScriptOase_PoliceHeadquarters']) || (myjob == 'EMS' && (typeof cursorobject IN ['Land_buildingsfiredept1','land_POP_Hospital'])) || (myJob == 'Mafia' && (typeof cursorobject == 'Land_vvv_np_maison1')) || (myJob == 'Biker' && (typeof cursorobject == 'Land_buildingsNightclub2')) || (myJob == 'Mobster' && (typeof cursorobject == 'Land_buildingsCasino2')) || (( myJob IN ['Cop','doc','EMS'] ) && ( str CursorObject find 'em_heliport' > -1 || str CursorObject find 'embarcadero' > -1 )) || (Mayor && player distance myhouse < 30) || (myJob == 'Legal' && (typeof cursorobject == 'Land_courthouse'))) && !imrestrained "],
 		["Garaż pracy", "[CursorObject] call client_fnc_opengaragepolice;  ",3]
 	],
 
@@ -1077,12 +1077,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		[" myJob IN ['Legal'] && player getVariable 'legal' >= 6 && (player distance [825.717,1634.34,0.00143814] < 20 ) && ( vehicle player == player ) && !imrestrained "],
+		[" myJob IN ['Legal'] && typeof cursorObject == 'Land_courthouse' && ( vehicle player == player ) && !imrestrained "],
 		["System DOJ", "createdialog 'wanted3';",4]
 	],
 
 	[
-		[" (player distance [825.717,1634.34,0.00143814] < 20 ) && ( vehicle player == player ) && !imrestrained "],
+		["typeof cursorObject == 'Land_courthouse' && ( vehicle player == player ) && !imrestrained "],
 		["Lista poszukiwanych", "createdialog 'wanted2';",4]
 	],
 
@@ -1273,7 +1273,7 @@ NoPixel_InteractionMenuItems = [
 	],
 	
 	[
-		[" myJob IN ['Legal'] && (player distance [825.717,1634.34,0.00143814] < 20 ) "],
+		[" myJob IN ['Legal'] && typeof cursorObject == 'Land_courthouse' "],
 		["Uniform DOJ", "['basic'] call client_fnc_setGear",4]
 	],
 	
@@ -1405,12 +1405,12 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["myjob == 'none' && (player getvariable 'legal') > 0 && (player distance [825.717,1634.34,0.00143814] < 20 ) && !(Senator || Mayor)"],
+		["myjob == 'none' && (player getvariable 'legal') > 0 && typeof cursorObject == 'Land_courthouse' && !(Senator || Mayor)"],
 		["START DOJ", "[] call client_fnc_setlastsave; [player,'Legal'] spawn client_fnc_jobstart;",4]
 	],
 
 	[
-		["myjob == 'Legal' && (player distance [825.717,1634.34,0.00143814] < 20 )"],
+		["myjob == 'Legal' && typeof cursorObject == 'Land_courthouse'"],
 		["STOP DOJ", "[1] call client_fnc_jobEnd",4]
 	],
 
