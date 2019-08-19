@@ -384,6 +384,7 @@ class CfgFunctions
 			class sendrevive {};		
 			class revived {};
 			class requestMedicAction {};
+			class sendzgon {};
 		};
 		class Mayor
 		{
