@@ -15,12 +15,12 @@ if(requiredOutput == _required) then {
 	_randomValue = random 30;
 	playSound3D ["CG_Jobs\sounds\meth\drugBoil.ogg", player, false, getPosasl player, 5, 1, 15];
 	playSound3D ["CG_Jobs\sounds\meth\drugPressure.ogg", player, false, getPosasl player, 5, 1, 15];
-		"SmokeShell" createvehicle (getPosatl player); 	
+	"SmokeShellYellow" createvehicle (getPosatl player); 	
 	if(_randomValue < 3) exitwith { 
 		"R_60mm_HE" createvehicle (getPosatl player); 
 		["Oj, chyba coś zjebałeś...", true] spawn domsg; 
 		cookingMeth = false;
-		[(getpos player)] remoteexec ["server_fnc_firestart",2];
+		//[(getpos player)] remoteexec ["server_fnc_firestart",2];
 		player removeaction myAction1;
 		player removeaction myAction2;
 		player removeaction myAction3;
