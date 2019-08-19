@@ -152,7 +152,7 @@ if(myJob == "EMS") then {
 		_garage pushback "d3s_cla_15_EMS";
 	};
 
-	if((player getvariable "ems" == 8 || 25 IN licenseArray || 26 IN licenseArray) ) then { 
+	if((player getvariable "ems" >= 8 || 25 IN licenseArray || 26 IN licenseArray) ) then { 
 		_garage pushback "B_CBS_WaterShadow730_F";
 		_garage pushback "B_Boat_Transport_01_F";
 		_garage pushback "C_Scooter_Transport_01_F";
@@ -160,7 +160,8 @@ if(myJob == "EMS") then {
 		_garage pushback "B_T_Lifeboat";
 	};
 
-	if((player getvariable "ems" == 10 || 23 IN licenseArray || 24 IN licenseArray)  ) then {
+	if((player getvariable "ems" >= 9 || 23 IN licenseArray || 24 IN licenseArray)  ) then {
+		_garage pushback "B_Heli_Light_01_F";
 		_garage pushback "C_hh60j_unarmed_F";
 	};
 	
