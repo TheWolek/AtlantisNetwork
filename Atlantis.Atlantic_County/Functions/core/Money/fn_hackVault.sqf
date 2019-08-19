@@ -22,6 +22,14 @@ if(typeof cursorObject == "") then { //wpisac
 	uisleep 120;
 
 	vaultOpen = true;
+	MoneyPile1 = round(random(400));
+	MoneyPile2 = round(random(400));
+	MoneyPile3 = round(random(400));
+	MoneyPile4 = round(random(400));
+	publicVariable "MoneyPile1";
+	publicVariable "MoneyPile2";
+	publicVariable "MoneyPile3";
+	publicVariable "MoneyPile4";
 	VaultHacking = false;
 	publicVariable "vaulthacking";
 

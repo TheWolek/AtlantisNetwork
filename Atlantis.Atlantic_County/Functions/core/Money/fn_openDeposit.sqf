@@ -2,7 +2,7 @@
 //dodac interakcje na pozycje i item
 _deposit = cursorObject;
 _pos = _this select 0; //[1] spawn client_fnc_openDeposit itd do 6 wedlug numerow depozytow
-if("" in magazines player) then { //zmienic
+if("" in magazines player && vaultOpen) then { //zmienic
 	_caltT = 0;
 	player playmove "vvv_anim_lockpick";
 	while {true} do {
