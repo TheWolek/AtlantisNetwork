@@ -1156,6 +1156,7 @@ if(_condition == "police_misc") then {
 		["cg_atf_bandage_i",nil,5,3],
 		["CG_ATF_First_Aid_Kit_i",nil,50,3],		
 		["CG_Spikes_Collapsed",nil,50,3],
+		["CG_Lockpick",nil,8000,3],
 		["ItemMap",nil,1,3],
 		["ItemCompass",nil,1,3],
 		["Oase_ID_Card_Police",nil,1,3],
