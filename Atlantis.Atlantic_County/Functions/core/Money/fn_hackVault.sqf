@@ -41,8 +41,8 @@ if(typeof cursorObject == "") then { //wpisac
 		_nearest sort true;
 		_nearest = (_nearest select 0) select 1;
 
-		[getpos player, "Napad na bank federalny", "Location", currentCop] remoteExec ["client_fnc_hudHelper", _nearest];
-		[format["Wezwanie do %1: Dochodzi do napadu na bank federalny",name _nearest], true] remoteExec ["domsg", currentCop];
+		[getpos player, "Napad na bank centralny", "Location", currentCop] remoteExec ["client_fnc_hudHelper", _nearest];
+		[format["Wezwanie do %1: Dochodzi do napadu na bank centralny",name _nearest], true] remoteExec ["domsg", currentCop];
 	};
 
 	_marker = createMarker ["FbankRobbery",getpos _vault];

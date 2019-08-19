@@ -41,7 +41,7 @@ if(_type == 1) then {
 		[format["Wezwanie do %1: Dochodzi do napadu na bank w okolicach %2.",name _nearest, mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
 	};
 } else {
-	_thedrill attachTo [cursorObject, [2.4, 1.3, 0] ]; 
+	_thedrill attachTo [cursorObject, [2.4, 1.3, 0] ]; //zmienic jesli trzeba
 	_thedrill setdir 267;
 
 	["Bank of Atlantis County is currently being robbed, keep away!", true] remoteExec ["domsg", -2];
@@ -52,7 +52,7 @@ if(_type == 1) then {
 		_nearest = (_nearest select 0) select 1;
 
 		[getpos player, "Napad na bank", "Location", currentCop] remoteExec ["client_fnc_hudHelper", _nearest];
-		[format["Wezwanie do %1: Dochodzi do napadu na bank centralny w okolicach %2.",name _nearest, mapGridPosition getPos player], true] remoteExec ["domsg", currentCop];
+		[format["Wezwanie do %1: Dochodzi do napadu na bank centralny.",name _nearest], true] remoteExec ["domsg", currentCop];
 	};
 };
 
@@ -124,7 +124,12 @@ while {true} do {
 
 if(_success) then {
 	["Przewierciłeś zamek, masz dostęp do skrytki!", true] spawn domsg;
-	bankrobber = 4;
+	
+	if(typeof _thebankcontainer == "plp_ct_HighSecMediumBlack") then {
+		bankrobber = 4;
+	} else {
+		VaultCrateOpen = true;
+	};
 
 	deleteVehicle _thedrill;
 		
