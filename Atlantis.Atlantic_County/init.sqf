@@ -41,6 +41,7 @@ if (isServer) then {
 		[] spawn client_fnc_horseOdds;
 
 	};
+	garagehandler setVariable["currentcopvehicles",[],true];
 	//[] spawn client_fnc_billboardSetup;
 	[server_fnc_addJob, 120] execFSM "\NoPixel_server\call.fsm";
 	[Server_fnc_cleanup, 4200] execFSM "\NoPixel_server\call.fsm";

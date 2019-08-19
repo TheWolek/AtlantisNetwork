@@ -5,6 +5,14 @@ Current_Cars deleteAt _pia;
 _garage = player getVariable "garage";
 _information = _ct getVariable "information";
 
+if(myjob == "cop") then {
+	_update = [];
+	_update pushback typeof _ct;
+	_handler = garagehandler getVariable["currentcopvehicles",[]];
+	_handler = _handler - _update;
+	garagehandler setVariable["currentcopvehicles",_handler,true]; 
+};
+
 if(!isnil "_information") then {
 	_license = _information select 0;
 	_newdamage = ((getAllHitPointsDamage _ct) select 2);
