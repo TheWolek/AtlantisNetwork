@@ -270,6 +270,7 @@ switch (_code) do
     };
 
 	//1 taser, 
+	/*
 	case 2:
 	{
 
@@ -305,6 +306,7 @@ switch (_code) do
 			_handle = true;	
 		};	
 	};
+	*/
 
 	case 219:
 	{
