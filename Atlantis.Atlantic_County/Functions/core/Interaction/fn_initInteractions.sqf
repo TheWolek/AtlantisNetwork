@@ -573,18 +573,18 @@ NoPixel_InteractionMenuItems = [
 	
 	[
 		[" (CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Car') && CursorTarget in Current_Cars && ( (myhouse distance getpos player < 50 || getpos player distance [872.141,1450.32,0.00143909] < 50 || getpos player distance [5477.27,3964.86,0.00143814] < 50 || player distance [933.33,1239.42,0.00143862] < 30 || player distance [5457.34,4074.5,0.00143909] < 30 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'embarcadero' > -1}) > 0 || count (nearestobjects[player,['Land_Hangar_F'],50]) > 0 || count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'taller' > -1}) > 0) || (myJob IN ['Cop','doc'] && count (nearestObjects[player,['land_jf_sheriff_station_01'],50]) > 0 ) || (myJob == 'EMS' && count (nearestObjects[player,['Land_buildingsfiredept1','land_POP_Hospital'],50]) > 0) || (myJob == 'Mafia' && count (nearestObjects[player,['Land_vvv_np_maison1'],50]) > 0) || (myJob == 'Biker' && count (nearestObjects[player,['Land_buildingsNightclub2'],50]) > 0) || (myJob == 'Mobster' && count (nearestObjects[player,['Land_buildingsCasino2'],50]) > 0) ) && !imrestrained && !attachedcar"],
-		["Schowaj", "['Chowam pojazd',10, 'Client_fnc_storeCar',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
+		["Schowaj", "['Chowam pojazd',10, 'Client_fnc_storeCar',player,'AinvPknlMstpSnonWnonDnon_medic_1',cursorObject,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 
 	
 	[
 		[" (CursorTarget isKindOf 'Air' || CursorTarget isKindOf 'Car') && CursorTarget in Current_Cars && ( count (cursorTarget getvariable ['information',[]]) == 0 && myJob != 'none' ) && !imrestrained"],
-		["Schowaj", "['Chowam pojazd',15, 'Client_fnc_storeCar',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
+		["Schowaj", "['Chowam pojazd',15, 'Client_fnc_storeCar',player,'AinvPknlMstpSnonWnonDnon_medic_1',cursorObject,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 
 	[
 		[" (CursorTarget isKindOf 'Boat' || CursorTarget isKindOf 'Ship') && CursorTarget in Current_Cars && !imrestrained && count (nearestterrainobjects[player,['BUILDING'],50] select {str _x find 'embarcadero' > -1}) > 0"],
-		["Schowaj", "['Chowam pojazd',25, 'Client_fnc_storeCar',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
+		["Schowaj", "['Chowam pojazd',25, 'Client_fnc_storeCar',player,'AinvPknlMstpSnonWnonDnon_medic_1',cursorObject,'cg_sndimg\sounds\repair.ogg'] spawn client_fnc_dotask",2]
 	],
 
 
