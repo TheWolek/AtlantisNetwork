@@ -1247,6 +1247,11 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
+		["myJob IN ['Cop'] && !dispatch && (player getvariable 'cop') > 0 "],
+		["Zmiana Kodu", "[] spawn client_fnc_codeChange;",4]
+	],
+
+	[
 		[" myJob IN ['Cop'] && !dispatch && (player getvariable 'cop') > 0 "],
 		["Centrala", "[player,'Police Dispatch'] spawn client_fnc_jobstart;",4]
 	],

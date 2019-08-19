@@ -177,6 +177,8 @@ class CfgFunctions
 			class checkfingerp {};
 			class frisk {};
 			class anprSpeedRadar {};
+			class codeChange {};
+			class codeSet {};
 		};
 
 		class Wanted {

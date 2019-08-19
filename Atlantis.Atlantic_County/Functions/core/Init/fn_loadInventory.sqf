@@ -309,6 +309,10 @@ if(client_energy > 0) then {
 	player enablestamina false;
 };
 
+if(CurrentCode != "Zielony") then {
+	[format["Aktualny kod na wyspie - %1",Currentcode]] spawn domsg;
+};
+
 
 
 

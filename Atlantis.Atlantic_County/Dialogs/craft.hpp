@@ -348,4 +348,68 @@ class PayTicket_Menu {
 	};
 };
 
+class SelectCode {
+	idd = 1111;
+	name= "SelectCode";
+	movingEnable = 0;
+	enableSimulation = 1;
+
+	class controlsBackground {
+	
+		class MainBackground: client_RscText {
+			colorBackground[] = {0.1058823529411765,0.1058823529411765,0.1058823529411765,0.8};
+			idc = -1;
+			x = 0.05; 
+			y = 0.05;
+			w = 0.50; 
+			h = 0.6;
+		};
+	};
+
+
+	class controls {
+		
+		class Title : client_RscTitle {
+
+			idc = 1112;
+			text = "Wybierz kod";
+			x = 0.05;
+			y = 0.05;
+			w = 0.6;
+			h = (1 / 25);
+		};
+		
+
+		class CraftList : client_RscListBox 
+		{
+			idc = 1113;
+			text = "";
+			x = 0.10; 
+			y = 0.10;
+			w = 0.4; 
+			h = 0.5;
+		};
+
+		class HomeOption : client_RscButtonMenu {
+			idc = 1115;
+			text = "Wybierz";
+			onButtonClick = "[] spawn client_fnc_codeSet;";
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.65;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};	
+
+		class CraftOption : client_RscButtonMenu {
+			idc = 1116;
+			text = "Zamknij";
+			onButtonClick = "closedialog 0;";
+			x = -0.06 + (13.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.65;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};	
+	};
+};
+
 

@@ -56,6 +56,10 @@ drugcount2 = 0;
 
 vaultTimer = 0;
 
+CurrentCode = "Zielony";
+
+publicVariable "currentCode";
+
 publicvariable "robbedBanks";
 
 publicvariable "vaultTimer";
