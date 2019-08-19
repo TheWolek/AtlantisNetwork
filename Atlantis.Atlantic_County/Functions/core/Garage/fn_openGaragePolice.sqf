@@ -88,6 +88,7 @@ if(myJob == "Cop") then {
 		_garage pushback "d3s_taurus_UNM_10";
         _garage pushback "d3s_savana_PSV";		
         _garage pushback "d3s_fseries_17_P3E";		
+        _garage pushback "d3s_teslaS_16_Mark_42";		
 
 	};
 	/*

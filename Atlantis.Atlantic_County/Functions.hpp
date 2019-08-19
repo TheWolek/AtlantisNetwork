@@ -176,6 +176,7 @@ class CfgFunctions
 			class teargas {};
 			class checkfingerp {};
 			class frisk {};
+			class anprSpeedRadar {};
 		};
 
 		class Wanted {

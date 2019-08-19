@@ -519,6 +519,11 @@ switch (_code) do
 			};
 		};
 	};
+	case 38: {
+		if(_shift && myjob == "Cop" && (vehicle player != player) && {((driver vehicle player) == player)}) then {
+			[] call client_fnc_anprSpeedRadar;
+		};
+	};
 };
 
 _handle;
