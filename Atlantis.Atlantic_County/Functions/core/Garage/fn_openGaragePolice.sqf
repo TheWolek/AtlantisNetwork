@@ -20,10 +20,11 @@ if(_num == 0) then { _num = 1; };
 if(myJob == "Legal") then {
 	if(player getVariable "legal" >= 1) then {
 		_garage pushBack "d3s_malibu_18_LT";
-		_garage pushBack "d3s_malibu_18_LT";
+		_garage pushback "d3s_tahoe_ltz_08";
 	};
 
 	if(player getVariable "legal" >= 2) then {
+		_garage pushback "d3s_explorer_13";
 		_garage pushBack "d3s_xe_15";
 		_garage pushBack "d3s_c63_14";
 	};
