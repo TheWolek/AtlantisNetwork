@@ -21,14 +21,17 @@ if(_response == "paid") then {
 	if (_new < 0) then { 
 		_response = "refused";
 		_responseReason = "Za mało pieniędzy w banku.";
+		[format["nie mogłeś zapłacić mandatu, ponieważ nie masz $%1 na swoim koncie bankowym",_amount], true] spawn domsg;
 	};
 };
 
 if(_response == "refused") then {
 	[format["Nie zapłacono: %1",_responseReason], false] remoteExec ["domsg",_cop];
+	[format["Odmówiłeś zapłaty mandatu w wyskości $%1",_amount],true] spawn domsg;
 } else { 
 	[_amount] call Client_fnc_removeBank;
 	[format["Mandat został zapłacony przez: %1",name player], false] remoteExec ["domsg",_cop];
+	[format["Zapłaciłeś mandat w wysokości $%1",_amount],true] spawn domsg;
 	["Remove","Karma",50] call client_fnc_sustain;
 	["Add",_amount] remoteexec ["server_fnc_updateGovtBank",2];
 
