@@ -762,6 +762,16 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
+		[" isPlayer CursorTarget && CursorTarget isKindOf 'Man', (animationstate CurrentCursorTarget) == 'amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon' || (animationstate CurrentCursorTarget) == 'Incapacitated' || (animationstate CurrentCursorTarget) == 'AmovPercMstpSnonWnonDnon_Ease' || (animationstate CurrentCursorTarget) == 'Acts_AidlPsitMstpSsurWnonDnon_loop' && !imrestrained && !(cursorObject getVariable'tf_voiceVolume' == 0)"],
+		["Zaknebluj", " cursorObject setVariable ['tf_voiceVolume', 0, true];; ['Zostałeś zakneblowany',true] remoteexec ['domsg',cursorObject];",2]
+	],
+
+	[
+		[" isPlayer CursorTarget && CursorTarget isKindOf 'Man', (animationstate CurrentCursorTarget) == 'amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon' || (animationstate CurrentCursorTarget) == 'Incapacitated' || (animationstate CurrentCursorTarget) == 'AmovPercMstpSnonWnonDnon_Ease' || (animationstate CurrentCursorTarget) == 'Acts_AidlPsitMstpSsurWnonDnon_loop' && !imrestrained && cursorObject getVariable 'tf_voiceVolume' == 0"],
+		["Wyjmij knebel", " cursorObject setVariable ['tf_voiceVolume', 1, true];; ['Zostałeś zakneblowany',true] remoteexec ['domsg',cursorObject];",2]
+	],
+
+	[
 		[" isPlayer CursorTarget && CursorTarget isKindOf 'Man' && !imrestrained", "(headgear CurrentCursorTarget) == 'mgsr_headbag' "],
 		["Zdejmij worek", " ['Zdejmuje worek',5,'client_fnc_unblindfold',CurrentCursorTarget,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_sndimg\sounds\blindfold.ogg'] spawn client_fnc_dotask",2]
 	],
