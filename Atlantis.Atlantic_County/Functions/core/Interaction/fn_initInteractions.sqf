@@ -140,6 +140,8 @@ NoPixel_InteractionMenuItems = [
 		["Radio 5", "[4] spawn client_fnc_changeCarRadio; ",5] 
 	],
 
+
+
 	[ 
 		[" typeof CursorTarget IN ['Land_buildingsCasino2','Land_buildingsbasement1','Land_buildingsNightclub2','Land_buildingsJailCellBlock1','land_jf_sheriff_station_01'] && myJob IN ['Cop'] "], 
 		["Wyważ", " [] spawn client_fnc_lockpick; ",5] 
@@ -387,11 +389,6 @@ NoPixel_InteractionMenuItems = [
 	[
 		["CursorTarget getVariable['dead',FALSE] && (myjob == 'EMS' || myJob == 'Fire')"],
 		["Uratuj", "['Przeprowadzam RKO',15,'client_fnc_sendRevive',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",1]
-	],
-
-	[
-		["CursorTarget getVariable['dead',FALSE] && (myjob == 'EMS' || myJob == 'Fire')"],
-		["ZGON", "['Stwierdzam Zgon',15,'client_fnc_startFresh',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",1]
 	],
 /*
 	[
@@ -1062,13 +1059,13 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof cursorObject == 'Land_Market_DED_Market_03_F' && player distance [793.413,1550.11,0.204577] < 10"],
-		["Wymień telefon", "closedialog 0; [] call client_fnc_checkPhone; trackedby = [];",3]
+		["typeof CursorTarget == 'Land_Market_DED_Market_03_F'"],
+		["Replace Phone", "closedialog 0; [] call client_fnc_checkPhone; trackedby = [];",3]
 	],
 
 	[
-		["typeof cursorObject == 'Land_Market_DED_Market_03_F' && player distance [793.413,1550.11,0.204577] < 10"],
-		["Naładuj telefon", "closedialog 0; ['add','battery',200] call client_fnc_sustain;",3]
+		["typeof CursorTarget == 'Land_Market_DED_Market_03_F'"],
+		["Recharge Phone", "closedialog 0; ['add','battery',200] call client_fnc_sustain;",3]
 	],
 
 
