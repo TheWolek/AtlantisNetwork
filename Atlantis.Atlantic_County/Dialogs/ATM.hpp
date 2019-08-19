@@ -70,7 +70,7 @@ class ATMGovt
 			x = 0.17;
 			y = 0.23;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 		class RscText_1004: RscText
 		{
@@ -79,7 +79,7 @@ class ATMGovt
 			x = 0.17;
 			y = 0.33;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 
 		class RscEdit_1400: RscEdit
@@ -222,7 +222,7 @@ class ATMmafia
 			x = 0.17;
 			y = 0.23;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 		class RscText_1004: RscText
 		{
@@ -231,7 +231,7 @@ class ATMmafia
 			x = 0.17;
 			y = 0.33;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 
 		class RscEdit_1400: RscEdit
@@ -374,7 +374,7 @@ class ATMbiker
 			x = 0.17;
 			y = 0.23;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 		class RscText_1004: RscText
 		{
@@ -383,7 +383,7 @@ class ATMbiker
 			x = 0.17;
 			y = 0.33;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 
 		class RscEdit_1400: RscEdit
@@ -526,7 +526,7 @@ class ATMMobster
 			x = 0.17;
 			y = 0.23;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 		class RscText_1004: RscText
 		{
@@ -535,7 +535,7 @@ class ATMMobster
 			x = 0.17;
 			y = 0.33;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 
 		class RscEdit_1400: RscEdit
@@ -678,7 +678,7 @@ class CasinoVault
 			x = 0.17;
 			y = 0.23;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 		class RscText_1004: RscText
 		{
@@ -687,7 +687,7 @@ class CasinoVault
 			x = 0.17;
 			y = 0.33;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 
 		class RscEdit_1400: RscEdit
@@ -832,7 +832,7 @@ class ATM
 			x = 0.17;
 			y = 0.23;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 		class RscText_1004: RscText
 		{
@@ -841,7 +841,7 @@ class ATM
 			x = 0.17;
 			y = 0.33;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 
 		class RscEdit_1400: RscEdit
@@ -985,7 +985,7 @@ class DirtyMoney
 			x = 0.17;
 			y = 0.23;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 		class RscText_1004: RscText
 		{
@@ -994,7 +994,7 @@ class DirtyMoney
 			x = 0.17;
 			y = 0.33;
 			w = 0.09875 * safezoneW;
-			h = 0.0329871 * safezoneH;
+			h = 0.038 * safezoneH;
 		};
 
 		class RscEdit_1400: RscEdit
