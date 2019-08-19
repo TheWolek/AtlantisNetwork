@@ -393,7 +393,7 @@ class SelectCode {
 		class HomeOption : client_RscButtonMenu {
 			idc = 1115;
 			text = "Wybierz";
-			onButtonClick = "[] spawn client_fnc_codeSet;";
+			onButtonClick = "closedialog 0; [] spawn client_fnc_codeSet;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.65;
 			w = (6.25 / 40);

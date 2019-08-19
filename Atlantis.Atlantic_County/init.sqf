@@ -278,6 +278,11 @@ if (isServer) then {
 	player setVariable["loaded", nil, false];
 	showchat true;
 
+	
+	if(CurrentCode != "Zielony") then {
+		[format["Aktualny kod na wyspie - %1",Currentcode]] spawn domsg;
+	};
+
 	if (isNil "TFAR_fnc_isTeamSpeakPluginEnabled") exitwith {
 	
 	999999 cutText ["Task Force Radio is not running on your computer. Please re-sync and retry","BLACK FADED"];

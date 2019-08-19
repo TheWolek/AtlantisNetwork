@@ -1,6 +1,6 @@
 //file: codeSet
-_list = (findDisplay 1111) displayCtrl 1113;
-_code = lbCurSel _list;
+//_list = (findDisplay 1111) displayCtrl 1113;
+_code = (findDisplay 1111) displayCtrl 1113 lbData lbCurSel 1113;
 
 [format["Ustanowiłeś kod %1",_code],true] spawn domsg;
 CurrentCode = format["%1",_code];
