@@ -76,15 +76,14 @@ if((_this select 0) == 1) exitwith {
 
 			//limited garage
 			_handler = garagehandler getVariable["currentcopvehicles",[]];
-			if(typeof _vehicle in _handler) then {
+			if(typeof _vehicle in _handler) exitWith {
 				["Brak pojazdu w garażu",true] spawn domsg;
-			} else {
-				_update = [];
-				_update pushback typeof _vehicle;
-				
-				_handler = _handler + _update;
-				garagehandler setVariable["currentcopvehicles",_handler,true];
 			};
+
+			_update = [];
+			_update pushback typeof _vehicle;	
+			_handler = _handler + _update;
+			garagehandler setVariable["currentcopvehicles",_handler,true];
 	};
 
 	if(myJob == "doc") then {
