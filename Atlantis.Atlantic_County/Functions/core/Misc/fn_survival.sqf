@@ -63,8 +63,8 @@ Survival Koil
 		if(myJob == "EMS") then { _addition = player getvariable "EMS"; _addition = _addition + _random; paycheck = paycheck + (16*_addition); };
 		if(myJob == "Cop") then { _addition = player getvariable "Cop"; _addition = _addition + _random; paycheck = paycheck + (16*_addition); };
 		if(myJob == "doc") then { _addition = player getvariable "doc"; _addition = _addition + _random; paycheck = paycheck + (16*_addition); };
-		if(myJob == "Legal") then { _addition = player getvariable "legal"; _addition = _addition + _random; paycheck = paycheck + (18*_addition); };
-		if(myJob == "DA") then { _addition = player getvariable "DA"; _addition = _addition + _random; paycheck = paycheck + (18*_addition); };
+		if(myJob == "Legal") then { _addition = player getvariable "legal"; _addition = _addition + _random; paycheck = paycheck + (26*_addition); };
+		if(myJob == "DA") then { _addition = player getvariable "DA"; _addition = _addition + _random; paycheck = paycheck + (26*_addition); };
 
 		_level_default = (client_level_array select 0);
 		_level_default = round((_level_default / 10) + 175);
