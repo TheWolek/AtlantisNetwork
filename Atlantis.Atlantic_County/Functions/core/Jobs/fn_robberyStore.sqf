@@ -14,10 +14,9 @@ if(_shop IN robbedstores2) exitwith { ["W tym sklepie nie ma więcej pieniędzy!
 _shop setvariable ["robbing",true,true];
 //rs2modifier = rs2modifier + 1;
 //if(rs2modifier > count currentcop) then { rs2modifier = count currentcop; };
-if(count currentcop > 4) then {
-	rs2modifier = rs2modifier + 300;
-} else {
-	rs2modifier = rs2modifier + 100;
+_policecount = count currentcop;
+for "_i" from 0 to _policecount do {
+	rs2modifier = rs2modifier + 75;
 };
 
 _counter = 0;
@@ -28,6 +27,10 @@ _counter = 0;
 _failure = false;
 
 [player] remoteexec ["server_fnc_robberyCall",2];
+_marker = createMarker[format["robbery%1",round(random(100))], getpos _shop];
+_marker setMarkerShape "ICON";
+_marker setMarkerType "Warning";
+_marker setMarkerText "UWAGA!! NAPAD NA SKLEP UWAGA!!";
 
 if(count currentCop > 0) then {
 	_nearest = currentCop apply {[player distance getPos _x, _x]};
@@ -41,27 +44,30 @@ if(count currentCop > 0) then {
 while{true} do {
 	_dist = player distance _shop;
 	if ((player getVariable["dead",FALSE]) || currentWeapon player == "" || currentWeapon player == "Binocular" || currentWeapon player == "Rangefinder" || _dist >= 10) exitwith { _failure = true; };
+	if(_failure) exitWith{ ["Przestałeś napadać!",true] spawn domsg;};
 	sleep 2;
 	_stolen = round(random(10));
 	[_stolen,true,true] call Client_fnc_addMoneyToPlayer; 
+	[format["+ $%1",_stolen],false] spawn domsg;
 //	["Add","Karma",random(3),"Stress"] call client_fnc_sustain;
-	_counter = _counter + 0.1;
+	_counter = _counter + 1;
 	//if((_distpolice - _counter) < 0.2) exitwith {};
-	if(_counter >= 30) exitWith {}; //5 min 5*60*0.1
+	if(_counter >= 150) exitWith {}; //5 min 5*60/2
 };
 
 robbedstores2 pushback _shop; 
 
 if(!_failure) then {
-	_amount =  (rs2modifier * _counter);
-	_amount = _amount + ((count currentcop) * 200);
+	_amount =  (rs2modifier * (_counter / 10));//5*100 *  (150/10)
 	[_amount,true,true] call Client_fnc_addMoneyToPlayer; 
 	[format["Okradłeś ten sklep na %1",(_amount+_stolen) call client_fnc_numberText], true] spawn domsg;
 	format["Robbery_Log: %1 robbed store for %2",player, _amount+_stolen] remoteExecCall["diag_log",2];
+	deleteMarker _marker;
 
 } else { 
 	[format["Okradłeś ten sklep na %1",_stolen call client_fnc_numberText], true] spawn domsg;
 	format["Robbery_Log: %1 robbed store for %2",player, _stolen] remoteExecCall["diag_log",2];
+	deleteMarker _marker;
 };
 
 if(count currentCop > 0) then {
