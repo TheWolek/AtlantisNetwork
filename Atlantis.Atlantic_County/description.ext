@@ -32,6 +32,7 @@ wreckRemovalMinTime = 10;
 
 skipLobby = 1;
 joinUnassigned = -1;
+forceRotorLibSimulation = 1;
 
 class Header
 {
