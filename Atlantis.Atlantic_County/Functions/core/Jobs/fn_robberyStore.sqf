@@ -29,7 +29,7 @@ _failure = false;
 [player] remoteexec ["server_fnc_robberyCall",2];
 _marker = createMarker[format["robbery%1",round(random(100))], getpos _shop];
 _marker setMarkerShape "ICON";
-_marker setMarkerType "Warning";
+_marker setMarkerType "mil_warning";
 _marker setMarkerText "UWAGA!! NAPAD NA SKLEP UWAGA!!";
 
 if(count currentCop > 0) then {
@@ -41,14 +41,18 @@ if(count currentCop > 0) then {
 	[format["Wezwanie do %1: Trwa napad na sklep w okolicach %2.", name _nearest, mapGridPosition _pos], true] remoteExec ["domsg", currentCop-currentMarshals-currentDetectives];
 };
 
+_counter2 = 0;
 while{true} do {
 	_dist = player distance _shop;
 	if ((player getVariable["dead",FALSE]) || currentWeapon player == "" || currentWeapon player == "Binocular" || currentWeapon player == "Rangefinder" || _dist >= 10) exitwith { _failure = true; };
 	if(_failure) exitWith{ ["Przestałeś napadać!",true] spawn domsg;};
 	sleep 2;
 	_stolen = round(random(10));
-	[_stolen,true,true] call Client_fnc_addMoneyToPlayer; 
-	[format["+ $%1",_stolen],false] spawn domsg;
+	[_stolen,true,true] call Client_fnc_addMoneyToPlayer;
+	_counter2 = _counter2 + _stolen; 
+	if(_counter2 % 2 == 0) then {
+		[format["+ $%1",_stolen],false] spawn domsg;
+	};
 //	["Add","Karma",random(3),"Stress"] call client_fnc_sustain;
 	_counter = _counter + 1;
 	//if((_distpolice - _counter) < 0.2) exitwith {};

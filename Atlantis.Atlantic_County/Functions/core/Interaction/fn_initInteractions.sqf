@@ -393,7 +393,7 @@ NoPixel_InteractionMenuItems = [
 
 	[
 		["CursorTarget getVariable['dead',FALSE] && (myjob == 'EMS' || myJob == 'Fire')"],
-		["Zgon", "['Stwierdzam zgon',5,'client_fnc_sendDeath',player,'vvv_anim_ticket',cursorObject,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",1]
+		["Zgon", "[cursorObject] spawn client_fnc_sendDeath; 'vvv_anim_ticket',cursorObject,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",1]
 	],
 /*
 	[

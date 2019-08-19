@@ -1,9 +1,9 @@
 //file: codeSet
 //_list = (findDisplay 1111) displayCtrl 1113;
-_code = (findDisplay 1111) displayCtrl 1113 lbData lbCurSel 1113;
+_code = ((findDisplay 1111) displayCtrl 1113) lbData lbCurSel 1113;
 
 [format["Ustanowiłeś kod %1",_code],true] spawn domsg;
-CurrentCode = format["%1",_code];
+CurrentCode = _code;
 publicVariable "CurrentCode";
 _str = format["Aktualny kod na wyspie - %1",currentCode];
 [_str, true] remoteExec ["domsg",-2];

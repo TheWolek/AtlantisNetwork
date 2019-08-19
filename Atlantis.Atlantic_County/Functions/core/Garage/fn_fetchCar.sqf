@@ -22,9 +22,15 @@ lbDelete [1500, _currentitemindex];
 _car = call compile _car; 
 
 if((_this select 0) == 1) exitwith { 
+	_handler = garagehandler getVariable["currentcopvehicles",[]];
+	if(typeof _vehicle in _handler) exitWith {
+		["Brak pojazdu w garażu",true] spawn domsg;
+	};
+
 	_vehicle = _car createvehicle getpos player; 
-	_vehicle allowdamage false; 
+	_vehicle allowdamage false;
 	[_vehicle] call client_fnc_spawnvehicle;
+
 	_vehicle allowdamage true;
 	Current_Cars pushBack _vehicle;
 
@@ -75,7 +81,6 @@ if((_this select 0) == 1) exitwith {
 			};
 
 			//limited garage
-			_handler = garagehandler getVariable["currentcopvehicles",[]];
 			_update = [];
 			_update pushback typeof _vehicle;	
 			_handler = _handler + _update;
@@ -195,12 +200,7 @@ _vehicle setvariable ["information",_car,true];
 	};
 };
 
-
-if(myjob == "cop" && typeof _vehicle in _handler) exitWith {
-	["Brak pojazdu w garażu",true] spawn domsg;
-} else {
-	[_vehicle] call client_fnc_spawnvehicle;
-};
+[_vehicle] call client_fnc_spawnvehicle;
 _vehicle allowdamage true;
 Current_Cars pushBack _vehicle;
 [getPlayerUID player, "usedgarage", Current_Cars] remoteExec ["Server_fnc_setVariable",2];

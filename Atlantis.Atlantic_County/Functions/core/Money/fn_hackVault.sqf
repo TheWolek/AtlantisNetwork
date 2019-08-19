@@ -47,7 +47,7 @@ if(typeof cursorObject == "") then { //wpisac
 
 	_marker = createMarker ["FbankRobbery",getpos _vault];
 	_marker setMarkerShape "ICON";
-	_marker setMarkerType "Warrning";
+	_marker setMarkerType "mil_warning";
 	_marker setMarkerText "UWAGA!! NAPAD NA BANK UWAGA!!"
 	_marker setMarkerColor "colorRed";
 

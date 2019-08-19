@@ -55,7 +55,9 @@ if(count currentEMS > 0) then {
 	while{true} do {
 		_unit setOxygenRemaining 1;
 		if( vehicle player == player && animationstate player != "deadstate" ) then {  [player,"DeadState"] remoteExec ["client_fnc_animsync"]; };
-
+		if(player getVariable["Death",false]) then {
+			cutText ["Medyk stwierdził zgon. Po upływie czasu odrodzisz się.","PLAIN"];
+		};
 		if (round(maxTime - time) > 0) then {
 			//hintSilent parsetext format["<t size='0.75'>Respawn</t><br/>Możesz się zrespić za %1",[(maxTime - time),"MM:SS"] call BIS_fnc_secondsToString];
 		};
@@ -173,12 +175,10 @@ _unit spawn
 	"colorCorrections" ppEffectAdjust [1, 1, -0.003, [0.0, 0.0, 0.0, 1.0], [0, 0, 0, 1],  [0, 0, 0, 0.0]];  
 	"colorCorrections" ppEffectCommit 5; 
 	if(!deadplayer) exitwith { closedialog 0; };
-	/*
-	if(shooting_death && round(maxTime - time) <= 0) exitwith { 
+	if(player getVariable["Death",false]) exitwith { 
 		closeDialog 0; 
 		[] call client_fnc_startFresh; 
-	};	
-	*/		
+	};			
 };
 
 [_unit] spawn
