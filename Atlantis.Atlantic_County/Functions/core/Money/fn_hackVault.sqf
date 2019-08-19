@@ -8,7 +8,7 @@ if(typeof cursorObject == "") then { //wpisac
 	publicVariable "vaultHacking";
 	playSound3D ["CG_Jobs\sounds\jailbreak\hacking.ogg", player, false, (getposasl player), 1, 1, 25];
 	_calcT = 0;
-	player playmove "vvv_anim_lockpick"
+	player playmove "vvv_anim_lockpick";
 	while {true} do {
 		if(animationstate player != "vvv_anim_lockpick") then { player playmove "vvv_anim_lockpick"; };
 		_calcT = _calcT + 1;
