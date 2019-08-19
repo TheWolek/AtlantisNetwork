@@ -47,6 +47,8 @@ if (_item == "CG_Dynamite") then { [] spawn client_fnc_dynamiteFishing; [_item,8
 
 if (_item == "CG_HackingTool") then { [] spawn client_fnc_hackdoor; closeDialog 0; };
 
+if (_item == "CG_hackingTool" && player distance [3337.36,3737.36,10.6562] < 6) then { [] spawn client_fnc_hackVault; closeDialog 0; };
+
 if (_item == "CG_MetalWire") then { [] spawn client_fnc_sendhook; closeDialog 0; };
 
 if (_item == "CG_Lockpick") then { [] spawn client_fnc_lockpick; closeDialog 0; };
