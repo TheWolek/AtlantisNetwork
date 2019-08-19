@@ -2,6 +2,8 @@
 Start Fresh when you completely die
 */
 
+closeDialog 0;
+
 removeAllItems player;
 removeAllContainers player;
 removeAllWeapons player;

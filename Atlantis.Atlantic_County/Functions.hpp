@@ -386,6 +386,8 @@ class CfgFunctions
 			class sendrevive {};		
 			class revived {};
 			class requestMedicAction {};
+			class startFresh {};
+			class sendDeath {};
 		};
 		class Mayor
 		{
@@ -591,7 +593,6 @@ class CfgFunctions
 			class setcasinorate {};
 			class fullHeal {};
 			class getDoor {};
-			class startFresh {};
 			class getMagazineName {};
 			class getWeaponName {};
 			class deathscreen {};
