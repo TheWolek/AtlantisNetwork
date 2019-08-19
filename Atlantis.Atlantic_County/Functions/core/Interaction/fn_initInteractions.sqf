@@ -390,6 +390,11 @@ NoPixel_InteractionMenuItems = [
 		["CursorTarget getVariable['dead',FALSE] && (myjob == 'EMS' || myJob == 'Fire')"],
 		["Uratuj", "['Przeprowadzam RKO',15,'client_fnc_sendRevive',player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",1]
 	],
+
+	[
+		["CursorTarget getVariable['dead',FALSE] && (myjob == 'EMS' || myJob == 'Fire')"],
+		["Zgon", "['Stiwerdzam Zgon',5,'client_fnc_sendDeath',player,'vvv_anim_ticket',cursorObject,'cg_mission_files\sounds\patdown1.ogg'] spawn client_fnc_dotask",1]
+	],
 /*
 	[
 		[" !imrestrained && count (nearestobjects[player,['Man'],5]-[player]) > 0  && !(player getVariable ['surrender', false])"],
@@ -1244,6 +1249,11 @@ NoPixel_InteractionMenuItems = [
 	[
 		["!busyPlayer && !imrestrained && !clientarrested && player distance myhouse < 30"],
 		["Crafting", "createdialog 'client_Craft_Menu'",4]
+	],
+
+	[
+		["myJob IN ['Cop'] && !dispatch && (player getvariable 'cop') > 0 "],
+		["Zmiana Kodu", "[] spawn client_fnc_codeChange;",4]
 	],
 
 	[
