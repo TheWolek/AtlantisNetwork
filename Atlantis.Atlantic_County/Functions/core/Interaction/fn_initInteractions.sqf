@@ -1059,13 +1059,13 @@ NoPixel_InteractionMenuItems = [
 	],
 
 	[
-		["typeof CursorTarget == 'Land_Market_DED_Market_03_F'"],
-		["Replace Phone", "closedialog 0; [] call client_fnc_checkPhone; trackedby = [];",3]
+		["typeof cursorObject == 'Land_Market_DED_Market_03_F'"],
+		["Wymień telefon", "closedialog 0; [] call client_fnc_checkPhone; trackedby = [];",3]
 	],
 
 	[
-		["typeof CursorTarget == 'Land_Market_DED_Market_03_F'"],
-		["Recharge Phone", "closedialog 0; ['add','battery',200] call client_fnc_sustain;",3]
+		["typeof cursorObject == 'Land_Market_DED_Market_03_F'"],
+		["Naładuj telefon", "closedialog 0; ['add','battery',200] call client_fnc_sustain;",3]
 	],
 
 
