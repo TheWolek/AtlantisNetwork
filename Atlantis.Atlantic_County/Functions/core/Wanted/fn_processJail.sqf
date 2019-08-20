@@ -10,7 +10,7 @@ _evidence = 1;
 
 if ( _length <= 0 ) exitWith { ["Długość musi wynosić minimum 0 lat.", true] spawn domsg; };
 if ( _length > 10 && getpos player distance [8242.13,3019.17,0] < 600 ) exitWith { ["Must be at most 10 years at Jail.", true] spawn domsg; };
-if ( _length > 90 ) exitWith { ["Długość musi wynosić maksymalnie 90 lat.", true] spawn domsg; };
+if ( _length > 360 ) exitWith { ["Długość musi wynosić maksymalnie 360 lat.", true] spawn domsg; };
 
 [_length, _reason, CurrentCursorTarget,true] remoteExec ["server_fnc_jailsetup",2];
 [_suspect,_suspectID,_officer,_officerID,_reason,0,_evidence,0,_length,"","","Atlantis County", 0] remoteexec ["server_fnc_addcriminal",2];
